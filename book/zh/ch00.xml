@@ -42,94 +42,49 @@ url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>)五年
 Subversion 是一个开源版本控制系统，从零开始编写，旨在（并且确实在一段时间内）取代 CVS，成为开源社区首选的<foreignphrase>事实上的</foreignphrase>版本控制系统。<footnote><para>Subversion 最终被 Git 取代，Git 是实现"分布式版本控制"的几个系统之一，这种工作方式比 Subversion 的集中式模型更适合协作开发。</para></footnote>该项目于 2000 年初由我的雇主 CollabNet (<ulink
 url="http://www.collab.net/" >http://www.collab.net/</ulink>) 启动，谢天谢地，CollabNet 从一开始就明白如何将其作为真正的协作式、分布式工作来运行。我们很早就获得了很多开发者的支持；如今该项目的大多数开发者都不是 CollabNet 的员工。</para>
 
-<para>Subversion is in many ways a classic example of an open source
-project, and I ended up drawing on it more heavily than I originally
-expected. This was partly a matter of convenience: whenever I needed
-an example of a particular phenomenon, I could usually call one up
-from Subversion right off the top of my head. But it was also a
-matter of verification. Although I am involved in many other free software
-projects to varying degrees, and talk to colleagues
-involved in many more, one quickly realizes when writing for print
-that all assertions need to be fact-checked. I didn't want to make
-statements about events in other projects based only on what I could
-read in their public discussion archives. If someone were to try
-that with Subversion, I knew, she'd be right about half the time and
-wrong the other half. So when drawing inspiration or examples from a
-project with which I didn't have direct experience, I tried to first
-talk to an informant there, someone I could trust to explain what was
-really going on.</para>
+<para>Subversion 在很多方面都是开源项目的典型例子，我最终对它的依赖比我最初预期的要重得多。这部分是为了方便：每当我需要一个特定现象的例子时，我通常可以立即从 Subversion 中想起一个。但这也是验证的问题。虽然我在不同程度上参与了许多其他自由软件项目，并与参与更多项目的同事交谈，但在为印刷品写作时，人们很快就会意识到所有断言都需要事实核查。我不想仅仅基于我在其他项目的公开讨论档案中读到的内容来对这些项目中的事件做出陈述。我知道，如果有人试图对 Subversion 这样做，她大约有一半时间是对的，另一半时间是错的。所以当从我没有直接经验的项目中汲取灵感或例子时，我试图首先与那里的知情人交谈，找到我可以信任的人来解释真正发生了什么。</para>
 
-<para>While Subversion was my full time job from 2000-2006, I've been
-involved in free software for more than twenty-five years. Other projects and organizations that have influenced
-this book include:</para>
+<para>虽然 Subversion 是我 2000-2006 年的全职工作，但我参与自由软件已经超过二十五年了。影响这本书的其他项目和组织包括：</para>
 
 <itemizedlist>
-  <listitem><para>The GNU Emacs text editor project at the Free
-            Software Foundation.</para>
+  <listitem><para>自由软件基金会的 GNU Emacs 文本编辑器项目。</para>
   </listitem>
-  <listitem><para>Concurrent Versions System (CVS), which I worked on
-            intensely in 1994&ndash;1995 with Jim Blandy and was
-            involved with intermittently for a few years afterwards.</para>
+  <listitem><para>并发版本系统 (CVS)，我在 1994-1995 年与 Jim Blandy 一起密集工作，之后的几年中断断续续地参与其中。</para>
   </listitem>
-  <listitem><para>The collection of open source projects known as the
-            Apache Software Foundation, especially the Apache Portable
-            Runtime (APR) and Apache HTTP Server.</para> 
+  <listitem><para>被称为 Apache 软件基金会的开源项目集合，特别是 Apache 可移植运行时库 (APR) 和 Apache HTTP 服务器。</para> 
   </listitem>
-  <listitem><para>The Launchpad.net project at Canonical, Ltd.</para> 
+  <listitem><para>Canonical 有限公司的 Launchpad.net 项目。</para> 
   </listitem>
-  <listitem><para>Code for America and O'Reilly Media, which gave me
-            an inside view on open source civic technology development
-            starting in 2010, and kindly kept me in the loop after I
-            became a full-time consultant at Open Tech Strategies, LLC
-            around 2012.</para>
+  <listitem><para>Code for America 和 O'Reilly Media，它们让我从 2010 年开始了解开源公民技术开发的内部视角，并在我于 2012 年左右成为 Open Tech Strategies, LLC 的全职顾问后，仍然友善地让我保持联系。</para>
   </listitem>
-  <listitem><para>The many open source anti-surveillance and
-            censorship-circumvention tools supported by the Open
-            Internet Tools Project (OpenITP.org) and by the Open
-            Technology Institute at the New America Foundation.</para>
+  <listitem><para>由开放互联网工具项目 (OpenITP.org) 和新美国基金会的开放技术研究所支持的许多开源反监视和规避审查工具。</para>
   </listitem>
-  <listitem><para>Checkbook NYC, the municipal financial transparency
-            software released by the New York City Office of the
-            Comptroller.</para>
+  <listitem><para>Checkbook NYC，由纽约市审计长办公室发布的市政财务透明度软件。</para>
   </listitem>
-  <listitem><para>The Arches Project, an open source geospatial web
-            application for inventorying and helping protect cultural
-            heritage sites (e.g., historic buildings, archaeological
-            sites, etc), created by the Getty Conservation Institute
-            and World Monuments Fund.</para>
+  <listitem><para>Arches 项目，一个开源地理空间 Web 应用程序，用于清点和帮助保护文化遗产地点（例如历史建筑、考古遗址等），由 Getty 保护研究所和世界古迹基金会创建。</para>
   </listitem>
-  <listitem><para>OpenOffice.org / LibreOffice.org, the Berkeley
-            Database from Sleepycat, and MySQL Database; I have not been
-            involved with these projects personally, but have observed
-            them and, in some cases, talked to people there.</para> 
+  <listitem><para>OpenOffice.org / LibreOffice.org、来自 Sleepycat 的 Berkeley 数据库和 MySQL 数据库；我个人没有参与这些项目，但观察过它们，在某些情况下与那里的人交谈过。</para> 
   </listitem>
-  <listitem><para>Likewise various projects at the Mozilla Corporation,
-            including but not limited to the Firefox web browser.</para>
+  <listitem><para>同样还有 Mozilla 公司的各种项目，包括但不限于 Firefox 网络浏览器。</para>
   </listitem>
-  <listitem><para>GNU Debugger (GDB) (likewise).</para>
+  <listitem><para>GNU 调试器 (GDB) （同样）。</para>
   </listitem>
-  <listitem><para>The Debian Project (likewise).</para>
+  <listitem><para>Debian 项目（同样）。</para>
   </listitem>
-  <listitem><para>The Hypothes.is Project (likewise).</para>
+  <listitem><para>Hypothes.is 项目（同样）。</para>
   </listitem>
 </itemizedlist>
 
-<para>This is far from a complete list. Many of the client
-projects I work with through our consulting practice at Open Tech
-Strategies, LLC have also influenced this book, and like most open source
-programmers, I keep loose tabs on a variety of different projects of
-interest to me, just to have a sense of the general state of things.
-I haven't named all of them here, but they are mentioned in the text
-where appropriate.</para>
+<para>这远不是一个完整的列表。我通过我们在 Open Tech Strategies, LLC 的咨询实践合作的许多客户项目也影响了这本书，像大多数开源程序员一样，我会松散地关注各种我感兴趣的不同项目，只是为了了解事物的总体状态。我没有在这里列出所有这些项目，但在文本中的适当位置会提到它们。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="acknowledgements">
-<title>Acknowledgements</title>
+<title>致谢</title>
 
 <sect2 id="acknowledgements-1st-ed">
-<title>For the first edition (2005)</title>
+<title>第一版致谢 (2005)</title>
 
 <para>This book took four times longer to write than I thought it
 would, and for much of that time felt rather like a grand piano

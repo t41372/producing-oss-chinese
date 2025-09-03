@@ -1,49 +1,18 @@
 <chapter id="introduction">
 
-<title>Introduction</title>
+<title>介绍</title>
 
 <simplesect>
 
-<para>Free software&nbsp;&mdash;&nbsp;open source
-software<footnote><para>The terms are synonymous, as mentioned in
-<!-- I thought I was going to have to add the xrefstyle="the %t"
-     attribute to the xref below, but DocBook knew that the target was
-     a chapter-like thing not a section-like thing and didn't add any
-     words, so the "the" in the running text is enough. -->
-the <xref linkend="preface"/>.  See <xref
-linkend="free-vs-open-source"/> for
-more.</para></footnote>&nbsp;&mdash;&nbsp;has become the backbone of
-modern information technology.  It runs on your phone, on your laptop
-and desktop computers, and in embedded microcontrollers for household
-appliances, automobiles, industrial machinery and countless other
-devices that we too often forget even have software.  Open source is
-especially prevalent on the servers that provide online services on
-the Internet.  Every time you send an email, visit a web site, or call
-up some information on your smartphone, a significant portion of the
-activity is handled by open source software.</para>
+<para>自由软件&nbsp;&mdash;&nbsp;开源软件<footnote><para>这些术语是同义的，正如在<xref linkend="preface"/>中提到的。更多内容请参见<xref
+linkend="free-vs-open-source"/>。</para></footnote>&nbsp;&mdash;&nbsp;已经成为现代信息技术的支柱。它运行在你的手机上，在你的笔记本电脑和台式机上，以及家用电器、汽车、工业机械和无数其他设备的嵌入式微控制器中，我们常常忘记这些设备甚至都有软件。开源在提供互联网在线服务的服务器上尤其普遍。每次你发送电子邮件、访问网站或在智能手机上查找信息时，大部分活动都是由开源软件处理的。</para>
 
-<para>Yet it is also largely invisible, even to many of the people who
-work in technology.  Open source's nature is to fade into the
-background and go unnoticed<footnote><para>See "Spot The Pattern: Commoditization", by James Vasile, at
-<ulink url="https://blog.opentechstrategies.com/2019/10/commoditization/" 
->https://blog.opentechstrategies.com/2019/10/commoditization/</ulink></para></footnote> except by those whose work touches it
-directly.  It is the oxygen of computing.  We all breathe, but few
-of us stop to think about where the air comes from.</para>
+<para>然而它在很大程度上是不可见的，甚至对许多在技术领域工作的人来说也是如此。开源的本质是隐退到背景中，不被注意<footnote><para>参见 James Vasile 的"发现模式：商品化"，网址：<ulink url="https://blog.opentechstrategies.com/2019/10/commoditization/" 
+>https://blog.opentechstrategies.com/2019/10/commoditization/</ulink></para></footnote>，除了那些工作直接接触到它的人。它是计算的氧气。我们都在呼吸，但很少有人停下来思考空气从何而来。</para>
 
-<para>If you've read this far, though, you're already one of the
-people who wonders where the oxygen comes from, and probably want to
-create some yourself.</para>
+<para>不过，如果你已经读到这里，那么你已经是那些想知道氧气从何而来的人之一，并且可能想要自己创造一些。</para>
 
-<para>This book will examine not only how to do open source right, but
-how to do it wrong, so you can recognize and correct problems early.
-My hope is that after reading it, you will have a repertory of
-techniques not just for avoiding common pitfalls, but for dealing with
-the growth and maintenance of a successful project.  Success is not a
-zero-sum game, and this book is not about winning or getting ahead of
-the competition.  Indeed, an important part of running an open source
-project is working smoothly with other, related projects.  In the long
-run, every successful project contributes to the well-being of the
-overall, worldwide body of free software.</para>
+<para>这本书将不仅探讨如何正确地做开源，还会探讨如何做错，这样你就能及早识别和纠正问题。我希望读完这本书后，你将拥有一套技术，不仅可以避免常见的陷阱，还可以处理成功项目的增长和维护。成功不是零和游戏，这本书不是关于获胜或领先于竞争对手。实际上，运营开源项目的重要部分是与其他相关项目顺利合作。从长远来看，每个成功的项目都有助于全世界自由软件整体的福祉。</para>
 
 <para>It would be tempting to say that when free software projects
 fail, they do so for the same sorts of reasons proprietary software
