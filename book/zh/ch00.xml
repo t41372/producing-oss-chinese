@@ -1,73 +1,26 @@
 <preface id="preface">
-<title>Preface</title>
+<title>序言</title>
   
 <!-- ======================== SECTION ============================== -->
 <sect1 id="why">
-<title>Why Write This Book?</title>
+<title>为什么要写这本书？</title>
 
-<para>At parties, people no longer give me a blank stare when I tell
-them I work in open source software. "Oh, yes&nbsp;&mdash;&nbsp;like Linux?"
-they say. I nod eagerly in agreement. "Yes, exactly! That's what I
-do." It's nice not to be completely fringe anymore. In the past, the
-next question was usually fairly predictable: "How do you make money
-doing that?" To answer, I'd summarize the economics of free software:
-that there are organizations in whose interest it is to have certain
-software exist, but that they don't need to sell copies, they just
-want to make sure the software is available and maintained, as a tool
-instead of as a rentable monopoly.</para>
+<para>在聚会上，当我告诉别人我从事开源软件工作时，他们不再一脸茫然了。"哦，是的&nbsp;&mdash;&nbsp;就像 Linux？"
+他们说。我热切地点头同意。"是的，就是这样！这就是我做的。" 不再是完全边缘化的感觉真好。过去，下一个问题通常很好预测："你怎么靠这个赚钱？" 为了回答这个问题，我会总结自由软件的经济学：有些组织需要某些软件存在，但他们不需要销售拷贝，他们只是想确保软件可用且得到维护，作为一种工具而不是可出租的垄断。</para>
 
-<para>The next question is not always about money, though. The
-business case for open source software<footnote><para>The terms "open
-source software" and "free software" are essentially synonymous in
-this context; they are discussed more in <xref
-linkend="free-vs-open-source"/>.</para></footnote> is no longer so
-mysterious, and even non-programmers already understand&nbsp;&mdash;&nbsp;or at
-least are not surprised&nbsp;&mdash;&nbsp;that there are people employed at it
-full time. Instead, the next question is often "<emphasis>Oh, what's
-that like?</emphasis>"</para>
+<para>不过，下一个问题并不总是关于金钱。开源软件<footnote><para>"开源软件" 和 "自由软件" 这两个词在这里基本上是同义的；在 <xref
+linkend="free-vs-open-source"/> 中有更多讨论。</para></footnote>的商业逻辑不再那么神秘，即使是非程序员也已经理解&nbsp;&mdash;&nbsp;或者至少不会感到惊讶&nbsp;&mdash;&nbsp;有人全职从事这项工作。相反，下一个问题经常是"<emphasis>哦，那是什么感觉？</emphasis>"</para>
 
-<para>I didn't have a satisfactory answer ready, and the harder I
-tried to come up with one, the more I realized how complex a topic it
-really is. Running a free software project is not exactly like
-running a business (imagine having to constantly negotiate the nature
-of your product with a group of random people of diverse motivations
-and interests, most of whom you've never met!).
-Nor, for various reasons, is it exactly like running a
-traditional non-profit organization, nor a government. It has
-similarities to all these things, but I have slowly come to the
-conclusion that free software is <foreignphrase>sui
-generis</foreignphrase>. There are many things with which it can be
-usefully compared, but none with which it can be equated. Indeed,
-even the assumption that free software projects can be "run" is a
-stretch. A free software project can be <emphasis>started</emphasis>,
-and it can be influenced by interested parties.
-But its assets cannot be made the property of any single owner, and as
-long as there are people somewhere&nbsp;&mdash;&nbsp;anywhere&nbsp;&mdash;&nbsp;interested in
-continuing it, it can never be unilaterally shut down. Everyone has
-infinite power; everyone has no power. It's an interesting situation.</para>
+<para>我没有准备好令人满意的答案，而且我越是努力想出一个答案，就越意识到这个话题有多么复杂。运营一个自由软件项目不完全像经营一家企业（想象一下，必须与一群动机和兴趣各异的陌生人不断协商你的产品特性，而你从未见过他们中的大多数人！）。
+由于各种原因，它也不完全像经营一个传统的非营利组织，也不像政府。它与所有这些事物都有相似性，但我慢慢得出结论，自由软件是 <foreignphrase>sui
+generis</foreignphrase>（独特的）。有很多事物可以与之进行有用的比较，但没有一个可以与之等同。实际上，甚至假设自由软件项目可以被"运营"都是一种延伸。自由软件项目可以被<emphasis>启动</emphasis>，
+也可以被利益相关方影响。
+但它的资产不能成为任何单一所有者的财产，只要在某个地方&nbsp;&mdash;&nbsp;任何地方&nbsp;&mdash;&nbsp;有人对继续这个项目感兴趣，它就永远不会被单方面关闭。每个人都有无限的权力；每个人都没有权力。这是一个有趣的情况。</para>
 
-<para>That is why I wanted to write this book in the first place, and,
-a decade later, wanted to update it. Free software projects have
-evolved a distinct culture, an ethos in which the liberty to make the
-software do anything one wants is a central tenet. Yet the result of
-this liberty is not a scattering of individuals each going their own
-separate way with the code, but enthusiastic collaboration and frequent compromise. 
-Indeed, competence at cooperation itself is one of the most highly valued
-skills in free software. To manage these projects is to engage in a
-kind of hypertrophied cooperation, where one's ability not only to
-work with others but to come up with new ways of working together can
-result in tangible benefits to the software and the community that develops it. This book attempts to
-describe the techniques by which this may be done. It is by no means
-complete, but it is at least a beginning.</para>
+<para>这就是我最初想要写这本书的原因，十年后又想要更新它。自由软件项目已经发展出一种独特的文化，一种以让软件做任何想做的事情的自由为核心原则的精神。然而，这种自由的结果不是个人各自带着代码走向不同的方向，而是热情的协作和频繁的妥协。
+事实上，合作能力本身就是自由软件中最受重视的技能之一。管理这些项目就是参与一种超强的合作，在这种合作中，一个人不仅要与他人合作，还要想出新的合作方式，这可以为软件和开发它的社区带来实实在在的好处。这本书试图描述实现这一目标的技术。它绝不完整，但至少是一个开始。</para>
 
-<para>Good free software is a worthy goal in itself, and I hope that
-readers who come looking for ways to achieve it will be satisfied with
-what they find here. But beyond that I also hope to convey something
-of the sheer pleasure to be had from working with a motivated team of
-open source developers, and from interacting with users in the
-wonderfully direct way that open source encourages. Participating in
-a successful free software project is a deep pleasure, and ultimately
-that's what keeps the whole system going.</para>
+<para>好的自由软件本身就是一个有价值的目标，我希望那些来寻找实现它的方法的读者会对他们在这里找到的内容感到满意。但除此之外，我也希望传达与积极的开源开发者团队合作，以及以开源鼓励的那种奇妙直接的方式与用户互动所带来的纯粹快乐。参与一个成功的自由软件项目是一种深深的快乐，最终这就是维持整个系统运转的动力。</para>
 
 </sect1>
 
