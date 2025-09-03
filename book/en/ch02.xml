@@ -1,0 +1,2478 @@
+<chapter id="getting-started">
+
+<title>Getting Started</title>
+
+<simplesect>
+
+<para>Starting a free software project is a twofold task.  The
+software needs to acquire users, and to acquire developers.  These two
+needs are not necessarily in conflict, but the interaction between
+them adds some complexity to a project's initial presentation.  Some
+information is useful for both audiences, some is useful only for one
+or the other.  Both kinds of information should subscribe to the
+<firstterm>principle of scaled presentation</firstterm>: the degree of detail presented at
+each stage should correspond to the amount of time and effort put in
+by the reader at that stage.  More effort should always result in more
+reward.  When effort and reward do not correlate reliably, people
+lose faith and stop investing effort.</para>
+
+<para>The corollary to this is that <emphasis>appearances
+matter</emphasis>.  Programmers, in particular, often don't like to
+believe this.  Their love of substance over form is almost a point of
+professional pride.  It's no accident that so many programmers exhibit
+an antipathy for marketing and public relations work, nor that
+professional graphic designers are often horrified at the designs
+programmers come up with on their own.</para>
+
+<para>This is a pity, because there are situations where form
+<emphasis>is</emphasis> substance, and project presentation is one of
+them.  For example, the very first thing a visitor learns about a
+project is what its home page looks like.  This information is
+absorbed before any of the actual content on the site is
+comprehended&nbsp;&mdash;&nbsp;before any of the text has been read or links
+clicked on.  However unjust it may be, people cannot stop themselves
+from forming an immediate first impression.  The site's appearance
+signals what kind of care was taken in organizing the project's
+presentation.  Humans have extremely sensitive antennae for detecting
+the investment of care.  Most of us can tell in one quick glance whether a
+home page was thrown together quickly or was given serious thought.
+This is the first piece of information your project puts out, and the
+impression it creates will carry over to the rest of the project by
+association.</para>
+
+<para>Thus, while much of this chapter talks about the content your
+project should start out with, remember that its look and feel matter
+too.  Because the project web site has to work for two different types
+of visitors&nbsp;&mdash;&nbsp;users and developers&nbsp;&mdash;&nbsp;special attention
+must be paid to clarity and directedness.  Although this is not the
+place for a general treatise on web design, one principle is important
+enough to deserve mention, particularly when the site serves multiple
+(if overlapping) audiences: people should have a rough idea where a
+link goes before clicking on it.  For example, it should be obvious
+<emphasis>from looking at the links</emphasis> to user documentation
+that they lead to user documentation, and not to, say, developer
+documentation.  Running a project is partly about supplying
+information, but it's also about supplying comfort.  The mere presence
+of certain standard offerings, in expected places, reassures users and
+developers who are deciding whether they want to get involved.  It
+says that this project has its act together, has anticipated the
+questions people will ask, and has made an effort to answer them in a
+way that requires minimal exertion on the part of the asker.  By
+giving off this aura of preparedness, the project sends out a message:
+"Your time will not be wasted if you get involved," which is exactly
+what people need to hear.</para>
+
+<sidebar id="user-vs-developer">
+<title>What We Mean by Users and Developers</title>
+<para>The terms <firstterm>user</firstterm> and
+<firstterm>developer</firstterm> here refer to someone's relationship
+to the open source software project in question, not to her identity
+in the world at large.</para>
+
+<para>For example, if the open source project is a Javascript library
+intended for use in web development, and someone is using the library
+as part of her work building web sites, then she is a "user" of the
+library (even though professionally her title might be "software
+developer").  But if she starts contributing bugfixes and enhancements
+back <firstterm>upstream</firstterm>&nbsp;&mdash;&nbsp;that is, back into the project
+&nbsp;&mdash;&nbsp;then, to the extent that she becomes involved in the project's
+maintenance, she is also a "developer" of the project.</para>
+
+<para>It's common for developers in an open source projects to be
+users as well, but it's not always the case.  Especially with large
+projects started by organizations to meet enterprise-scale software
+needs, the developers may not always be direct users of the software,
+although they are usually somehow connected with the team that deploys that
+software within their organization.</para>
+
+<para>In projects meant primarily for programmers, the boundary
+between user and developer is very porous: <emphasis>every</emphasis>
+user is a potential developer.  But even in projects meant for
+non-technical people, some percentage of the users are still potential
+developers.  Open source projects should be run in such a way as to
+make that transition available to anyone who's interested.</para>
+</sidebar>
+
+<para>If you use a "canned hosting" site (see <xref
+linkend="canned-hosting"/>), one advantage of that
+choice is that those sites have a default layout that is similar from
+project to project and is pretty well-suited to presenting a project
+to the world.  That layout can be customized, within certain
+boundaries, but the default design prompts you to include the
+information visitors are most likely to be looking for.</para>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="look-around">
+<title>But First, Look Around</title>
+
+<para>Before starting an open source project, there is one important
+caveat:</para>
+
+<para>Always look around to see if there's an existing project that
+does what you want.  The chances are pretty good that whatever problem
+you want solved now, someone else wanted solved before you.  If they
+did solve it, and released their code under a free license, then
+there's no reason for you to reinvent the wheel today.  There are
+exceptions, of course: if you want to start a project as an
+educational experience, pre-existing code won't help; or maybe the
+project you have in mind is so specialized that you know there is zero
+chance anyone else has done it.  But generally, there's no point not
+looking, and the payoff can be huge.<footnote><para>If the usual
+Internet search engines don't turn up anything, another good place to
+look is the Free Software Foundation's directory of free software at
+<ulink url="https://directory.fsf.org/"
+>https://directory.fsf.org/</ulink>, which the FSF actively
+maintains.</para></footnote></para>
+
+<para>Even if you don't find exactly what you were looking for, you
+might find something so close that it makes more sense to join that
+project and add functionality to it than to start from scratch yourself.
+See <xref linkend="evaluating-oss-projects"/> for a
+discussion of how to evaluate an existing open source project
+quickly.</para>
+
+</sect2>
+
+</simplesect>
+
+
+<!-- ========================== SECTION =========================== -->
+<sect1 id="starting-from-what-you-have">
+<title>Starting From What You Have</title>
+
+<para>You've looked around, found that nothing out there really fits
+your needs, and decided to start a new project.</para>
+
+<para>What now?</para>
+
+<para>The hardest part about launching a free software project is
+transforming a private vision into a public one.  You or your
+organization may know perfectly well what you want, but expressing
+that goal comprehensibly to the world is a fair amount of work.  It is
+essential, however, that you take the time to do it.  You and the
+other founders must decide what the project is really about&nbsp;&mdash;&nbsp;that
+is, decide its limitations, what it <emphasis>won't</emphasis> do as
+well as what it will&nbsp;&mdash;&nbsp;and write up a mission
+statement.<footnote><para>See <xref
+linkend="mission-statement"/>.</para></footnote>  This
+part is usually not too hard, though it can sometimes reveal unspoken
+assumptions and even disagreements about the nature of the project,
+which is fine: better to resolve those now than later.  The next step
+is to package up the project for public consumption, and this is,
+basically, pure drudgery.</para>
+
+<para>What makes it so laborious is that it consists mainly of
+organizing and documenting things everyone already
+knows&nbsp;&mdash;&nbsp;"everyone", that is, who's been involved in the project so 
+far.  Thus, for the people doing the work, there is no immediate
+benefit.  They do not need a <filename>README</filename> file giving
+an overview of the project, nor a design document.
+They do not need an organized code tree conforming to the
+informal but widespread standards of software source distributions.
+Whatever way the source code is arranged is fine for them, because
+they're already accustomed to it anyway, and if the code runs at all,
+they know how to use it.  It doesn't even matter, for them, if the
+fundamental architectural assumptions of the project remain
+undocumented; they're already familiar with those too.</para>
+
+<para>Newcomers, on the other hand, need all these things.  Fortunately,
+they don't need them all at once.  It's not necessary for you to
+provide every possible resource before taking a project public.  In a
+perfect world, perhaps, every new open source project would start out
+life with a thorough design document, a complete user manual (with
+special markings for features planned but not yet implemented),
+beautifully and portably packaged code capable of running on any
+computing platform, and so on.  In reality, taking care of all these
+loose ends would be prohibitively time-consuming, and anyway, it's
+work that one can reasonably hope others will help with once the
+project is under way.</para>
+
+<para>What <emphasis>is</emphasis> necessary, however, is to put enough
+investment into presentation that newcomers can get past the
+initial obstacle of unfamiliarity.  Think of it as the first step in a
+bootstrapping process, to bring the project to a kind of minimum
+activation energy.  I've heard this threshold called the
+<firstterm>hacktivation energy</firstterm>: the amount of energy a
+newcomer must put in before she starts getting something back.  The
+lower a project's hacktivation energy, the better.  Your first task is
+bring the hacktivation energy down to a level that encourages people
+to get involved.</para>
+
+<para>Each of the following subsections describes one aspect
+of starting a new project.  They are presented roughly in the order
+that a new visitor would encounter them, though of course the order in
+which you actually implement them might be different.  You can treat
+them as a checklist.  When starting a project, just go down the list
+and make sure you've got each item covered, or at least that you're
+comfortable with the potential consequences if you've left one
+out.</para>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="choosing-a-name">
+<title>Choose a Good Name</title>
+
+<para>Put yourself in the shoes of someone who's just heard about your
+project, perhaps by having stumbled across it while searching for
+software to solve some problem.  The first thing they'll encounter is
+the project's name.</para>
+
+<para>A good name will not automatically make your project successful,
+and a bad name will not doom it.<footnote><para>Well, a
+<emphasis>really</emphasis> bad name probably could do that, but we
+start from the assumption that no one here is actively trying to make
+their project fail.</para></footnote>  However, a bad name can slow
+down adoption of the
+project, either because people don't take it seriously, or because
+they simply have trouble remembering it.</para>
+
+<para>A good name:
+
+<itemizedlist>
+  <listitem><para>Gives some idea what the project does, or at least
+            is related in an obvious way, such that if one knows the
+            name and knows what the project does, the name will come
+            quickly to mind thereafter.</para>
+  </listitem>
+  <listitem><para>Is easy to remember.  Here, there is no getting
+            around the fact that English has become the default
+            language of the Internet: "easy to remember" usually means
+            "easy for someone who can read English to remember."</para>
+  </listitem>
+  <listitem><para>Does not depend on native or high-level fluency in
+            English, nor on a particular regional pronunciation.
+            Names that are puns, for example, do not always travel well.
+            If the pun is particularly compelling and memorable, it
+            may still be worth it; just keep in mind that not everyone
+            who sees the name will hear it in their head in the same
+            way.</para>
+  </listitem>
+  <listitem><para>Is not the same as some other project's name, and
+            does not infringe on any trademarks.  This is just good
+            manners, as well as good legal sense.  You don't want to
+            create identity confusion.  It's hard enough to keep track
+            of everything that's available on the Net already, without
+            different things having the same name.</para>
+
+            <para>The resources mentioned earlier in
+            <xref linkend="look-around"/> are useful in
+            discovering whether another project already has the name
+            you're thinking of.  For the U.S., trademark searches are
+            available at <ulink url="http://www.uspto.gov/"
+            >http://www.uspto.gov/</ulink>.</para> 
+  </listitem>
+  <listitem><para>If possible, is available as a domain name in the
+            <systemitem>.com</systemitem>,
+            <systemitem>.net</systemitem>, and
+            <systemitem>.org</systemitem> top-level domains.  You
+            should pick one, probably <systemitem>.org</systemitem>,
+            to advertise as the official home site for the project;
+            the other two should forward there and are simply to
+            prevent third parties from creating identity confusion
+            around the project's name.  Even if you intend to host the
+            project at some other site (see
+            <xref linkend="hosting"/>), you
+            can still register project-specific domains and forward
+            them to the hosting site.  It helps users a lot to have a
+            simple URL to remember.<footnote><para>The importance of
+            top-level domain names seems to be declining.  A number of
+            projects now have just their name in the
+            <systemitem>.io</systemitem> TLD, for example, and don't
+            bother with <systemitem>.com</systemitem>,
+            <systemitem>.net</systemitem>, or
+            <systemitem>.org</systemitem>.  I can't predict what the
+            brand psychology of domain names will be in the future, so
+            just use your judgement, and if you can get the name in
+            all the important TLDs, do so.</para></footnote></para>
+  </listitem>
+  <listitem><para>If possible, is available as a username on <ulink
+            url="https://twitter.com/" >https://twitter.com/</ulink> and other
+            microblog sites.  See <xref linkend="own-the-name"/> for
+            more on this and its relationship to the domain name.</para>
+  </listitem>
+</itemizedlist>
+
+</para>
+
+<sect3 id="own-the-name">
+<title>Own the Name in the Important Namespaces</title>
+
+<para>For large projects, it is a good idea to own the project's name
+in as many of the relevant namespaces on the Internet as you can.  By
+namespaces, I mean not just the global Domain Name System, but also online
+services in which the account name (username) is the publicly visible
+handle by which people refer to the project.  If you have the same
+name in all the places where people would look for you, you make it
+easier for people to sustain a mild interest in the project until
+they're ready to become more involved.</para>
+
+<para>For example, the Gnome free desktop project has the <ulink
+url="https://gnome.org/" >https://gnome.org/</ulink> domain
+name,<footnote><para>They didn't manage to get gnome.com or gnome.net,
+but that's okay&nbsp;&mdash;&nbsp;if you only have one, and it's .org,
+it's fine.  That's usually the first one people look for when they're
+seeking the open source project of that name.  If they couldn't get
+"gnome.org" itself, a typical solution would be to get
+"gnomeproject.org" instead, and many projects solve the problem that
+way.</para></footnote> the <ulink url="https://twitter.com/gnome"
+>https://twitter.com/gnome</ulink> Twitter handle, the <ulink
+url="https://github.com/gnome" >https://github.com/gnome</ulink> username at
+GitHub.com,<footnote><para>While the authoritative copy of Gnome's source code
+is at <ulink url="https://git.gnome.org/" >https://git.gnome.org/</ulink>, they
+maintain a mirror at GitHub, since so many developers are already
+familiar with GitHub.</para></footnote> and on the Libera.chat IRC
+network (see <xref linkend="chat"/>) they have the channel
+<code>#gnome</code>, although they also maintain their own IRC servers
+(where they control the channel namespace, of course).</para>
+
+<para>All this makes the Gnome project splendidly easy to find: it's
+usually right where a potential contributor would expect it to be.  Of
+course, Gnome is a large and complex project with thousands of
+contributors and many subdivisions; the advantage to Gnome of being
+easy to find is greater than it would be for a newer project, since by
+now there are so many ways to get involved in Gnome.  But it will
+certainly never <emphasis>harm</emphasis> your project to own its name
+in as many of the relevant namespaces as it can, and it can sometimes
+help.  So when you start a project, think about what its online handle
+should be and register that handle with the online services you think
+you're likely to care about.  The ones mentioned above are probably a
+good initial list, but you may know others that are relevant for the
+particular subject area of your project.</para>
+
+</sect3>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="mission-statement">
+<title>Have a Clear Mission Statement</title>
+
+<para>Once they've found the project's home site, the next thing people
+will look for is a quick description or mission statement, so they can
+decide (within 30 seconds) whether or not they're interested in
+learning more.  This should be prominently placed on the front page,
+preferably right under the project's name.</para>
+
+<para>The description should be concrete, limiting, and above all,
+short.  Here's an example of a good one, from <ulink
+url="https://hadoop.apache.org/" >https://hadoop.apache.org/</ulink>:</para>
+
+  <blockquote>
+  <para><emphasis>The Apache™ Hadoop® project develops open-source
+  software for reliable, scalable, distributed computing.</emphasis></para>
+
+  <para><emphasis>The Apache Hadoop software library is a framework
+  that allows for the distributed processing of large data sets across
+  clusters of computers using simple programming models. It is
+  designed to scale up from single servers to thousands of machines,
+  each offering local computation and storage. Rather than rely on
+  hardware to deliver high-availability, the library itself is
+  designed to detect and handle failures at the application layer, so
+  delivering a highly-available service on top of a cluster of
+  computers, each of which may be prone to failures.</emphasis></para>
+  </blockquote>
+
+<para>In just four sentences, they've hit all the high points, largely
+by drawing on the reader's prior knowledge.  That's an important
+point: it's okay to assume a minimally informed reader with a baseline
+level of technical preparedness.  A reader who doesn't know what "clusters" and
+"high-availability" mean in this context probably can't make much use
+of Hadoop anyway, so there's no point writing for a reader who knows
+any less than that.  The phrase "designed to detect and handle
+failures at the application layer" will stand out to engineers who
+have experience with large-scale computing clusters&nbsp;&mdash;&nbsp;when they
+see those words, they'll know that the people behind Hadoop understand
+that world, and the first-time visitor will thus be likely to give
+Hadoop further consideration.</para>
+
+<para>Those who remain interested after reading the mission statement
+will next want to see more details, perhaps some user or developer
+documentation, and eventually will want to download something.  But
+before any of that, they'll need to be sure it's open source.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="state-freedom">
+<title>State That the Project is Free</title>
+
+<para><emphasis>The front page must make it unambiguously clear that
+the project is open source.</emphasis> This may seem obvious, but you
+would be surprised how many projects forget to do it.  I have seen
+free software project web sites where the front page not only did not
+say which particular free license the software was distributed under,
+but did not even state outright that the software was free at all.
+Sometimes the crucial bit of information was relegated to the
+Downloads page, or the Developers page, or some other place that
+required one more mouse click to get to.  In extreme cases, the
+license was not given anywhere on the web site at all&nbsp;&mdash;&nbsp;the only
+way to find it was to download the software and look at a license file
+inside.</para>
+
+<para>Please don't make this mistake.  Such an omission can lose many
+potential developers and users.  State up front, in or near the
+mission statement, that the project is "free software" or "open source
+software", and give the exact license.  A quick guide to choosing a
+license is given in
+<xref linkend="license-quickstart"/>, and
+licensing issues are discussed in detail in <xref
+linkend="legal"/>.</para>
+
+<para>By this point, our hypothetical visitor has
+determined&nbsp;&mdash;&nbsp;probably in a minute or less&nbsp;&mdash;&nbsp;that she's
+interested in spending, say, at least five more minutes investigating
+this project.  The next sections describe what she should encounter in
+those five minutes.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="features-and-requirements">
+<title>Features and Requirements List</title>
+
+<para>There should be a brief list of the features the software
+supports (if something isn't completed yet, you can still list it, but
+put "<emphasis>planned</emphasis>" or
+"<emphasis>in&nbsp;progress</emphasis>" next to it), and the kind of
+computing environment required to run the software.  Think of the
+features/requirements list as what you would give to someone asking
+for a quick summary of the software.  It is often just a logical
+expansion of the mission statement.  For example, the mission
+statement might say:</para>
+
+  <blockquote>
+  <para><emphasis>Scanley is an open source full-text indexer and
+  search engine with a rich API, for use by programmers in providing
+  search services for large collections of text files.</emphasis></para>
+  </blockquote>
+
+<para>The features and requirements list would give the details,
+clarifying the mission statement's scope:</para>
+
+  <blockquote>
+    <para><emphasis>Features:</emphasis></para>
+    <itemizedlist>
+      <listitem><para><emphasis>Searches plain text, HTML, JSON,
+                XML, and other formats</emphasis></para>
+      </listitem>
+      <listitem><para><emphasis>Word or phrase searching</emphasis></para>
+      </listitem>
+      <listitem><para><emphasis>(planned) Fuzzy matching</emphasis></para>
+      </listitem>
+      <listitem><para><emphasis>(planned) Incremental index 
+                updates</emphasis></para>
+      </listitem>
+      <listitem><para><emphasis>(planned) Indexing of remote web
+                sites</emphasis></para>
+      </listitem>
+    </itemizedlist>
+    <para><emphasis>Requirements:</emphasis></para>
+    <itemizedlist>
+      <listitem><para><emphasis>Python 3.9 or higher</emphasis></para>
+      </listitem>
+      <listitem><para><emphasis>Enough disk space to hold the indexes
+                (approximately 2x original data size)</emphasis></para>
+      </listitem>
+    </itemizedlist>
+  </blockquote>
+
+<para>With this information, readers can quickly get a feel for
+whether this software might be what they're looking for, and they can
+consider getting involved as developers too.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="development-status">
+<title>Development Status</title>
+
+<para>Visitors usually want to know how a project is doing.  For new
+projects, they want to know the gap between the project's promise and
+current reality.  For mature projects, they want to know how actively
+it is maintained, how often it puts out new releases, how responsive
+it is to bug reports, etc.</para>
+
+<para>There are a couple of different ways to provide answers to
+these questions.  One is to have a development status page, listing
+the project's near-term goals and what kinds of expertise are expected
+from participating developers at the current stage.  The page
+can also give a history of past releases, with feature lists, so
+visitors can get an idea of how the project defines "progress", and
+how quickly it makes progress according to that definition.  Some
+projects structure their development status page as a roadmap that
+includes the future: past events are shown on the dates they actually
+happened, future ones on the approximate dates the project hopes they
+will happen.</para>
+
+<para>The other way&nbsp;&mdash;&nbsp;not mutually exclusive with the
+first, and in fact probably best done in combination with
+it&nbsp;&mdash;&nbsp;is to have various automatically-maintained
+counters and indicators embedded in the project's front page and/or
+its developer landing page, showing various pieces of information
+that, in the aggregate, give a sense of the project's development
+status and progress.  For example, an Announcements or News panel
+showing recent news items, a Twitter or other microblog stream showing
+notices that match the project's designated hashtags, a timeline of
+recent releases, a panel showing recent activity in the bug tracker
+(bugs filed, bugs responded to), another showing mailing list or
+discussion forum activity, etc.  Each such indicator should be a
+gateway to further information of its type: for example, clicking on
+the "recent bugs" panel should take one to the full bug tracker, or at
+least to an expanded view into bug tracker activity.</para>
+
+<para>Really, there are two slightly different meanings of
+"development status" being conflated here.  One is the formal sense:
+where does the project stand in relation to its stated goals, and how
+fast is it making progress.  The other is less formal but just as
+useful: how active is this project?  Is stuff going on?  Are there
+people here, getting things done?  Often that latter notion is what a
+visitor is most interested in.  Whether or not a project met its most
+recent milestone is often not as interesting as the more
+fundamental question of whether it has an active community of
+developers around it.</para>
+
+<!-- For link compatibility with a now-obsolete sidebar ID. -->
+<anchor id="launchpad-status-indicators" />
+
+<para>These two notions of development status are, of course, related,
+and a well-presented project shows both kinds.  The information can be
+divided between the project's front page (show enough there to give an
+overview of both types of development status) and a more
+developer-oriented page.</para>
+
+<sect3 id="development-status-honesty">
+<title>Development Status Should Always Reflect Reality</title>
+
+<para>Don't be afraid of looking unready, and never give in to the
+temptation to inflate or hype the development status.  Everyone knows that
+software evolves by stages; there's no shame in saying "This is alpha
+software with known bugs.  It runs, and works at least some of the
+time, but use at your own risk."  Such language won't scare away the
+kinds of developers you need at that stage.  One of the
+worst things a project can do is attract users before the software is
+ready for them.  A reputation for instability or bugginess is very
+hard to shake, once acquired.  Conservatism pays off in the long
+run; it's always better for the software to be
+<emphasis>more</emphasis> stable than the user expected rather than less, and
+pleasant surprises produce the best kind of word-of-mouth.</para>
+
+<sidebar id="alpha-and-beta">
+  <title>Alpha and Beta</title>
+  <para>The term <firstterm>alpha</firstterm> usually means a first
+  release, with which users can get real work done and which has all
+  the intended functionality, but which also has known bugs.  The main
+  purpose of alpha software is to generate feedback, so the developers
+  know what to work on.  Alpha releases are generally free to change
+  APIs and functionality.</para>
+
+  <para>The next stage, <firstterm>beta</firstterm>, means the
+  software's APIs are finalized and its serious known bugs fixed, but
+  it has not yet been tested enough to certify for production release.
+  The purpose of beta software is to either become the official
+  release, assuming no bugs are found, or provide detailed feedback to
+  the developers so they can reach the official release quickly.  In a
+  series of beta releases, APIs and functionality should not change
+  except when absolutely necessary.</para>
+</sidebar>
+
+</sect3>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="downloads">
+<title>Downloads</title>
+
+<!-- This section probably needs to be rewritten, because there's so
+     much software, especially Javascript, that is distributed
+     straight from GitHub.  To a first approximation, source packaging
+     is important for something you expect an OS packager to
+     repackage; otherwise, it may be a luxury.  Not sure whether this
+     footnote for JS can be used or not:
+
+     <footnote><para>This is still true even for Javascript packages
+     that are deployed as minified, continuously available downloads
+     from a canonical URL.  Minified JS downloads are equivalent to an
+     executable form.  They're not what a developer would hack on to
+     fix a bug&nbsp;&mdash;&nbsp;for that, you need developer-friendly
+     source code.  You also need .</para></footnote>
+-->
+
+<para>The software should be downloadable as source code in standard
+formats.  When a project is first getting started, binary (executable)
+packages are not necessary, unless the software has such complicated
+build requirements or dependencies that merely getting it to run would
+be a lot of work for most people.  (But if this is the case, the
+project is going to have a hard time attracting developers
+anyway!)</para>
+
+<para>The distribution mechanism should be as convenient, standard,
+and low-overhead as possible.  If you were trying to eradicate a
+disease, you wouldn't distribute the medicine in such a way that it
+requires a non-standard syringe size to administer.  Likewise,
+software should conform to standard build and installation methods;
+the more it deviates from the standards, the more potential users and
+developers will give up and go away confused.</para>
+
+<para>That sounds obvious, but many projects don't bother to
+standardize their installation procedures until very late in the game,
+telling themselves they can do it any time: <emphasis>"We'll sort all
+that stuff out when the code is closer to being ready."</emphasis>
+What they don't realize is that by putting off the boring work of
+finishing the build and installation procedures, they are actually
+making the code take longer to get ready&nbsp;&mdash;&nbsp;because they
+discourage developers who might otherwise have contributed to the
+code, if only they could build and test it.  Most insidiously, the
+project won't even <emphasis>know</emphasis> it's
+losing all those developers, because the process is an accumulation of
+non-events: someone visits a web site, downloads the software, tries
+to build it, fails, gives up and goes away.  Who will ever know it
+happened, except the person themselves?  No one working on the project
+will realize that someone's interest and good will have been silently
+squandered.</para>
+
+<para>Boring work with a high payoff should always be done early, and
+significantly lowering the project's barrier to entry through good
+packaging brings a very high payoff.</para>
+
+<para>When you release a downloadable package, give it a unique
+version number, so that people can compare any two releases and know
+which supersedes the other.  That way they can report bugs against a
+particular release (which helps respondents to figure out if the bug
+is already fixed or not).  A detailed discussion of version
+numbering can be found in <xref linkend="release-numbering"/>, and the
+details of standardizing build and installation procedures are covered
+in <xref linkend="packaging"/>.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="vc-and-bug-tracker-access">
+<title>Version Control and Bug Tracker Access</title>
+
+<para>Downloading source packages is fine for those who just want to
+install and use the software, but it's not enough for those who want
+to debug or add new features.  Nightly source snapshots can help, but
+they're still not fine-grained enough for a thriving development
+community.  People need real-time access to the latest sources, and a
+way to submit changes based on those sources.</para>
+
+<para>The solution is to use a version control
+system&nbsp;&mdash;&nbsp;specifically, an online, publicly-accessible
+version controlled repository, from which anyone can check out the
+project's materials and subsequently get updates.  A version control
+repository is a sign&nbsp;&mdash;&nbsp;to both users and developers&nbsp;&mdash;&nbsp;that
+this project is making an effort to give people what they need to
+participate.  As of this writing, many open source projects use <ulink
+url="https://github.com/" >https://github.com/</ulink>, which offers unlimited
+free public version control hosting for open source projects.  While
+GitHub is not the only choice, nor even the only good choice, it's a
+reasonable one for most projects<footnote><para>Although GitHub is
+based on Git, a popular open source version control system, the code
+that runs GitHub's web services is not itself open source.  Whether
+this matters for your project is a complex question, and is addressed
+in more depth in <xref linkend="canned-hosting"/></para></footnote>.
+Version control infrastructure is discussed in detail in <xref
+linkend="vc"/>.</para>
+
+<para>The same goes for the project's bug tracker.  The importance of
+a bug tracking system lies not only in its day-to-day usefulness to
+developers, but in what it signifies for project observers.  For many
+people, an accessible bug database is one of the strongest signs that
+a project should be taken seriously&nbsp;&mdash;&nbsp;and the higher
+the number of bugs in
+the database, the <emphasis>better</emphasis> the project looks.  That
+might seem counterintuitive, but remember that the number of bug
+reports filed really depends mostly on two things: the number of people
+using the software and the convenience with which those people can report bugs.
+Any software of sufficient size and complexity has an
+essentially arbitrary number of bugs waiting to be discovered.  The
+real question is, how well will the project do at receiving, recording, and
+prioritizing those bugs?  A project with a large and well-maintained
+bug database ("well-maintained" meaning bugs are responded to promptly, duplicate bugs
+are unified, etc) therefore makes a much better impression than a project
+with no bug database or with a nearly empty database.</para>
+
+<para>Of course, if your project is just getting started, then the bug
+database will contain very few bugs, and there's not much you can do
+about that.  But if the status page emphasizes the project's youth,
+and if people looking at the bug database can see that most filings
+have taken place recently, they can extrapolate from that the project
+still has a healthy <emphasis>rate</emphasis> of filings, and they
+will not be unduly alarmed by the low absolute number of bugs
+recorded.<footnote><para>For a more thorough argument that bug reports
+should be treated as good news, see <ulink
+url="http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/"
+>http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/</ulink>,
+which is about how the accumulation of bug reports does
+<emphasis>not</emphasis> represent technical debt (in the sense of
+<ulink url="https://en.wikipedia.org/wiki/Technical_debt"
+>https://en.wikipedia.org/wiki/Technical_debt</ulink>) but rather
+user engagement.</para></footnote></para>
+
+<para>Note that bug trackers are often used to track not only software
+defects, but also enhancement requests, documentation changes, pending tasks,
+and more.  The details of running a bug tracker are covered in
+<xref linkend="bug-tracker"/>, so I won't
+go into them here.  The important thing from a presentation point of
+view is mainly to <emphasis>have</emphasis> a bug tracker and to use it&nbsp;&mdash;&nbsp;and to make
+sure that it is easy to find.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="communications-channels">
+<title>Communications Channels</title>
+
+<para>Visitors usually want to know how to reach the human beings
+involved with the project.  Provide the addresses of mailing lists,
+chat rooms, and any other forums where others
+involved with the software can be reached.<footnote><para>See <xref
+linkend="technical-infrastructure"/>.</para></footnote>
+Make it clear that you and
+the other maintainers of the project are subscribed to these mailing
+lists, so people see there's a way to give feedback that will reach
+the developers.  Your presence on the lists does not imply a
+commitment to answer all questions or implement all feature requests.
+In the long run, probably only a fraction of users will use the forums
+anyway, but the others will be comforted to know that they
+<emphasis>could</emphasis> if they ever needed to.</para>
+
+<para>In the early stages of a project, there's usually no need to have
+separate user and developer forums.  It's much better to have everyone
+involved with the software talking together, in one "room."  Among
+early adopters, the distinction between developer and user is often
+fuzzy; to the extent that the distinction can be made, the ratio of
+developers to users is usually much higher in the early days of the
+project than later on.  While you can't assume that every early
+adopter is a programmer who wants to hack on the software, you can
+assume that they are at least interested in following development
+discussions and in getting a sense of the project's direction.</para>
+   
+<para>As this chapter is only about getting a project started, it's
+enough merely to say that these communications forums need to exist.
+Later, in <xref linkend="growth"/>, we'll examine where
+and how to set up such forums, the ways in which they might need
+moderation or other management, and how, when the time comes, to
+separate user forums from developer forums without creating an
+unbridgeable gulf.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="developer-guidelines">
+<title>Developer Guidelines</title>
+
+<para>If someone is considering contributing to the project, she'll
+look for developer guidelines.  Developer guidelines are not so much
+technical as social: they explain how the developers interact with
+each other and with the users, and ultimately how things get
+done.</para>
+
+<para>This topic is covered in detail in
+<xref linkend="written-rules"/>, but the basic
+elements of developer guidelines are:
+
+<itemizedlist>
+  <listitem><para>pointers to forums for interaction with other
+            developers</para> 
+  </listitem>
+  <listitem><para>instructions on how to report bugs and submit
+            patches</para>
+  </listitem>
+  <listitem><para>some indication of <emphasis>how</emphasis>
+            development is usually done and how decisions are
+            made&nbsp;&mdash;&nbsp;is the project a benevolent dictatorship, a
+            democracy, or something else</para>
+  </listitem>
+</itemizedlist>
+
+No pejorative sense is intended by "dictatorship", by the way.  It's
+perfectly okay to run a tyranny where one particular developer has
+veto power over all changes.  Many successful projects work this way.
+The important thing is that the project come right out and say so.  A
+tyranny pretending to be a democracy will turn people off; a tyranny
+that says it's a tyranny will do fine as long as the tyrant is
+competent and trusted.  (See <xref linkend="forkability"/>
+for why dictatorship in open source projects doesn't have the same
+implications as dictatorship in other areas of life.)</para>
+  
+<para><ulink
+url="http://subversion.apache.org/docs/community-guide/"
+>http://subversion.apache.org/docs/community-guide/</ulink>
+is an example of particularly thorough developer guidelines; the
+LibreOffice guidelines at <ulink
+url="https://wiki.documentfoundation.org/Development"
+>https://wiki.documentfoundation.org/Development</ulink> are also a good
+example.</para>
+
+<para>If the project has a written Code of Conduct (see <xref
+linkend="code-of-conduct"/>), then the developer guidelines should
+link to it.</para>
+
+<para>The separate issue of providing a programmer's introduction to
+the software is discussed in <xref
+linkend="developer-documentation"/>.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="documentation">
+<title>Documentation</title>
+
+<para>Documentation is essential.  There needs to be
+<emphasis>something</emphasis> for people to read, even if it's
+rudimentary and incomplete.  This falls squarely into the "drudgery"
+category referred to earlier, and is often the first area where a new
+open source project falls down.  Coming up with a mission statement
+and feature list, choosing a license, summarizing development
+status&nbsp;&mdash;&nbsp;these are all relatively small tasks, which can be
+definitively completed and usually need not be revisited once done.
+Documentation, on the other hand, is never really finished, which may
+be one reason people sometimes delay starting it at all.</para>
+
+<para>Insidiously, documentation's utility to
+those writing it is the inverse of its utility to those reading
+it.  The most important documentation for initial users is the basics:
+how to quickly set up the software, an overview of how it works,
+perhaps some guides to doing common tasks.  Yet these are exactly the
+things the <emphasis>writers</emphasis> of the documentation know all
+too well&nbsp;&mdash;&nbsp;so well that it can be difficult for them to see
+things from the reader's point of view, and to laboriously spell out
+the steps that (to the writers) seem so obvious as to be unworthy of
+mention.</para>
+
+<para>There's no magic solution to this problem.  Someone just needs
+to sit down and write the stuff, and then, most importantly,
+incorporate feedback from readers.  Use a simple, easy-to-edit format
+such as Markdown, HTML, plain text, ReStructuredText, or
+Asciidoc&nbsp;&mdash;&nbsp;something that's convenient for lightweight,
+quick improvements on the spur of the moment.<footnote><para>Don't
+worry too much about choosing the right format the first time.  If you
+change your mind later, you can always do an automated conversion
+using Pandoc (<ulink url="https://pandoc.org/"
+>https://pandoc.org/</ulink>).</para></footnote>  This is not only to remove any
+overhead that might impede the original writers from making
+incremental improvements, but also for those who join the project
+later and want to work on the documentation.</para>
+
+<para>One way to ensure basic initial documentation gets done is to
+limit its scope in advance.  That way, writing it at least won't feel
+like an open-ended task.  A good rule of thumb is that it should meet
+the following minimal criteria:</para>
+
+<itemizedlist>
+  <listitem><para>Tell the reader clearly how much technical
+            expertise they're expected to have.</para>
+  </listitem>
+  <listitem><para>Describe clearly and thoroughly how to set up
+            the software, and tell the user how to run some sort of
+            diagnostic test or simple command to confirm that
+            they've set things up correctly.  Startup
+            documentation is in some ways more important than
+            actual usage documentation.  The more effort someone has
+            invested in installing and getting started with the
+            software, the more persistent she'll be in figuring out
+            advanced functionality that's not well-documented.
+            When people abandon, they abandon early; therefore,
+            it's the earliest stages, like installation, that need
+            the most support.</para>
+  </listitem>
+  <listitem><para>Give one tutorial-style example of how to do a
+            common task.  Obviously, many examples for many tasks
+            would be even better, but if time is limited, pick one
+            task and walk through it thoroughly.  Once someone
+            sees that the software <emphasis>can</emphasis> be
+            used for one thing, they'll start to explore what else
+            it can do on their own&nbsp;&mdash;&nbsp;and, if you're lucky,
+            start filling in the documentation themselves.  Which
+            brings us to the next point...</para>
+  </listitem>
+  <listitem><para>Label the areas where the documentation is known
+            to be incomplete.  By showing the readers that you are
+            aware of its deficiencies, you align yourself with
+            their point of view.  Your empathy reassures them that
+            they won't struggle to convince the project of
+            what's important.  These labels needn't represent
+            promises to fill in the gaps by any particular date&nbsp;&mdash;&nbsp;it's
+            equally legitimate to treat them as open
+            requests for help.</para>
+  </listitem>
+</itemizedlist>
+
+<para>The last point is of wider importance, actually, and can be
+applied to the entire project, not just the documentation.  An
+accurate accounting of known deficiencies is the norm in the open
+source world.  You don't have to exaggerate the project's
+shortcomings, just identify them scrupulously and dispassionately when
+the context calls for it (whether in the documentation, in the bug
+tracking database, or on a mailing list discussion).  No one will
+treat this as defeatism on the part of the project, nor as a
+commitment to solve the problems by a certain date, unless the project
+makes such a commitment explicitly.  Since anyone who uses the
+software will discover the deficiencies for themselves, it's much
+better for them to be psychologically prepared&nbsp;&mdash;&nbsp;then the
+project will look like it has a solid knowledge of how it's
+doing.</para>
+
+<sidebar id="faq-maintenance">
+  <!-- For link compatibility with the old sidebar ID. -->
+  <anchor id="starting-a-faq" />
+  <title>Maintaining a FAQ</title>
+
+  <para>A <firstterm>FAQ</firstterm> ("Frequently Asked Questions"
+  document) can be one of the best investments a project makes in
+  terms of educational payoff.  FAQs are highly tuned to the questions
+  users and developers actually ask&nbsp;&mdash;&nbsp;as opposed to the questions
+  you might have <emphasis>expected</emphasis> them to ask&nbsp;&mdash;&nbsp;and
+  therefore, a well-maintained FAQ tends to give those who consult it
+  exactly what they're looking for.  The FAQ is often the first place
+  users look when they encounter a problem, often even in preference
+  to the official manual, and it's probably the document in your
+  project most likely to be linked to from other sites.</para>
+
+  <para>Unfortunately, you cannot make the FAQ at the start of the
+  project.  Good FAQs are not written, they are grown.  They are by
+  definition reactive documents, evolving over time in response to
+  the questions people ask about the software.  Since it's impossible
+  to correctly anticipate those questions, it is impossible to sit
+  down and write a useful FAQ from scratch.</para>
+
+  <para>Therefore, don't waste your time trying to.  You may, however,
+  find it useful to set up a mostly blank FAQ template with just a few
+  questions and answers, so there will
+  be an obvious place for people to contribute questions and answers
+  after the project is under way.  At this stage, the most important
+  property is not completeness, but <emphasis>convenience</emphasis>:
+  if the FAQ is easy to
+  add to, people will add to it.  (Proper FAQ maintenance is a
+  non-trivial and intriguing problem: see <xref
+  linkend="manager-is-not-owner"/>,
+  <xref linkend="wikis"/>, and <xref
+  linkend="all-as-archives"/>.)</para>
+</sidebar>
+
+<sect3 id="documentation-availability">
+<title>Availability of Documentation</title>
+
+<para>Documentation should be available from two places: online
+(directly from the web site), <emphasis>and</emphasis> in the
+downloadable distribution of the software (see
+<xref linkend="packaging"/>).  It needs to be
+online, in browsable form, for two reasons: one, people often read
+documentation <emphasis>before</emphasis> downloading software for the
+first time, as a way of helping them decide whether to download at
+all, and two, Internet search engines will often give results that
+land people directly in the docs.  But documentation 
+should also be accompany the software, on the principle that downloading
+should supply (i.e., make locally accessible) everything one needs to
+use the package.</para>
+
+<para>For online documentation, make sure that there is a link that
+brings up the <emphasis>entire</emphasis> documentation in one HTML
+page (put a note like "monolithic" or "all-in-one" or "single large
+page" next to the link, so people know that it might take a while to
+load).  This is useful because people often want to search for a
+specific word or phrase across the entire documentation.  Generally,
+they already know what they're looking for; they just can't remember
+what section it's in.  For such people, nothing is more frustrating
+than encountering one HTML page for the table of contents, then a
+different page for the introduction, then a different page for
+installation instructions, etc.  When the pages are broken up like
+that, their browser's search function is useless.  The separate-page
+style is useful for those who already know what section they need, or
+who want to read the entire documentation from front to back in
+sequence.  But this is not necessarily the most common way
+documentation is accessed.  Often, someone who is basically
+familiar with the software is coming back to search for a specific
+word or phrase, and to fail to provide them with a single, searchable
+document would only make their lives harder.</para>
+
+</sect3>
+
+<sect3 id="developer-documentation">
+<title>Developer Documentation</title>
+
+<para>Developer documentation is written by programmers to help other
+programmers
+understand the code, so they can repair and extend it.  This is
+somewhat different from the <emphasis>developer guidelines</emphasis>
+discussed earlier, which are more social than technical.  Developer
+guidelines tell programmers how to get along with each other;
+developer documentation tells them how to get along with the code
+itself.  The two are often packaged together in one document for
+convenience (as with the <ulink
+url="https://subversion.apache.org/docs/community-guide/"
+>https://subversion.apache.org/docs/community-guide/</ulink> example given
+earlier), but they don't have to be.</para>
+
+<para>Although developer documentation can be very helpful, there's no
+reason to delay a release to do it.  As long as the original authors
+are available (and willing) to answer questions about the code, that's
+enough to start with.  In fact, having to answer the same questions
+over and over is a common motivation for writing documentation.  But
+even before it's written, determined contributors will still manage to
+find their way around the code.  The force that drives people to spend
+time learning a codebase is that the code does something useful for
+them.  If people have faith in that, they will take the time to figure
+things out; if they don't have that faith, no amount of developer
+documentation will get or keep them.</para>
+
+<para>So if you have time to write documentation for only one
+audience, write it for users.  All user documentation is, in effect,
+developer documentation as well; any programmer who's going to work on
+a piece of software will need to be familiar with how to use it too.
+Later, when you see programmers asking the same questions over and
+over, take the time to write up some separate documents just for
+them.</para>
+
+<para>Some projects use wikis for their initial documentation, or even
+as their primary documentation.  In my experience, this works best
+if the wiki is actively maintained by a few people who agree on how
+the documentation is to be organized and what sort of "voice" it
+should have.  See
+<xref linkend="wikis"/> for
+more.</para>
+
+<para>If the infrastructure aspects of documentation workflow seem
+daunting, consider using <ulink url="https://readthedocs.org/"
+>https://readthedocs.org/</ulink>.  Many projects now depend on it to automate
+the process of presenting their documentation online.  The site takes
+care of format conversion, integration with the project's version
+control repository (so that documentation rebuilds happen
+automatically), and various other mundane tasks, so that you and your
+contributors can focus on content.</para>
+
+</sect3>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="examples-and-demos">
+<!-- For link compatibility with the old section ID. -->
+<anchor id="example-output" />
+<title>Demos, Screenshots, Videos, and Example Output</title>
+
+<!-- For link compatibility with an old sidebar ID. -->
+<anchor id="screenshots" />
+<para>If the project involves a graphical user interface, or if it
+produces graphical or otherwise distinctive output, put some samples
+up on the project web site.  In the case of an interface, this means
+screenshots or, better yet, a brief (4 minutes or fewer) video with
+subtitles or a narrator.  For output, it might be screenshots or just
+sample files to download.  For web-based software, the gold standard
+is a demo site, of course, assuming the software is amenable to
+that.</para>
+
+<para>The main thing is to cater to people's desire for instant
+gratification in the way they are most likely to expect.  A single
+screenshot or video can be more convincing than paragraphs of
+descriptive text and mailing list chatter, because it is proof
+that the software <emphasis>works</emphasis>.  The code may still be
+buggy, it may be hard to install, it may be incompletely documented,
+but image-based evidence shows people that if one puts in enough effort,
+one can get it to run.</para>
+
+<sidebar id="video-brevity">
+  <title>Keep Videos Brief, and <emphasis>Say</emphasis> They're
+  Brief</title>
+  <para>If you have a video demonstration of your project, keep the
+  video under 4 minutes long, and make sure people can see the
+  duration <emphasis>before</emphasis> they click on it.  This is in
+  keeping with the "principle of scaled presentation" mentioned
+  at the beginning of this chapter: make the decision to watch the video an easy
+  one by removing as much risk as possible.  Visitors are more likely to click on
+  a link that says "Watch our 3 minute video" than on one that just
+  says "Watch our video", because in the former case they know what
+  they're getting into before they click&nbsp;&mdash;&nbsp;and they'll
+  watch it better, because they've mentally prepared the necessary
+  amount of attention commitment beforehand, and thus won't tire mid-way
+  through the video.</para>
+  <para>As to where the four-minute limit came from: it's a scientific
+  fact, determined through many attempts by the same experimental
+  subject (who shall remain unnamed) to watch project videos.  The
+  limit does not apply to tutorials or other instructional material,
+  of course; it's just for introductory videos.</para>
+  <para>In case you don't already have preferred software for
+  recording desktop interaction videos: If you use the GNOME 3 desktop
+  manager, you can use its built-in screen recording capability (see
+  <ulink
+  url="https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en#screencast"
+  >https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en#screencast</ulink>&nbsp;&mdash;&nbsp;essentially,
+  do
+  <keycap>Ctl</keycap>+<keycap>Alt</keycap>+<keycap>Shift</keycap>+<keycap>R</keycap>
+  to start recording, and then do
+  <keycap>Ctl</keycap>+<keycap>Alt</keycap>+<keycap>Shift</keycap>+<keycap>R</keycap>
+  again to stop).  There are many open source video editors; <filename>OpenShot</filename>
+  has been fine for post-capture editing in my experience.</para>
+</sidebar>
+  
+</sect2>
+
+<para>There are many other things you could put on the project web
+site, if you have the time, or if for one reason or another they are
+especially appropriate: a news page, a project history page, a related
+links page, a site-search feature, a donations link, etc.  None of
+these are necessities at startup time, but keep them in mind for the
+future.</para>
+
+<sect2 id="hosting">
+<title>Hosting</title>
+
+<!-- For link compatibility with the old section id. -->
+<anchor id="starting-with-canned-hosting" />
+
+<para>Where on the Internet should you put the project's materials?</para>
+
+<para>A web site, obviously&nbsp;&mdash;&nbsp;but the full answer
+is a little more complicated than that.</para>
+
+<para>Many projects distinguish between their primary public user-facing
+web site&nbsp;&mdash;&nbsp;the one with the pretty pictures and the
+"About" page and the gentle introductions and videos and guided tours
+and all that stuff&nbsp;&mdash;&nbsp;and their developers' site, where
+everything's grungy and full of closely-spaced text in monospace fonts
+and impenetrable abbreviations.</para>
+
+<para>In the early stages of
+your project it is not so important to distinguish between these two
+audiences.  Most of the interested visitors you get will be
+developers, or at least people who are comfortable trying out new
+code.  Over time, you may find it makes sense to have a user-facing
+site (of course, if your project is a code library, those "users"
+might be other programmers) and a somewhat separate collaboration area
+for those interested in participating in development.  The
+collaboration site would have the code repository, bug tracker,
+development wiki, links to development mailing lists, etc.  The two
+sites should link to each other, and in particular it's important that
+the user-facing site make it clear that the project is open source and
+where the open source development activity can be
+found.</para>
+
+<para>In the past, many projects set up the developer site and
+infrastructure themselves.  Over the last decade or so, however, most
+open source projects&nbsp;&mdash;&nbsp;and almost all the new
+ones&nbsp;&mdash;&nbsp;just use one of the "canned hosting" sites that
+have sprung up to offer these services for free to open source
+projects.  By far the most popular such site, as of early 2018,
+is GitHub (<ulink url="https://github.com/" >https://github.com/</ulink>), and
+if you don't have a strong preference about where to host, you should
+probably just choose GitHub; many developers are already familiar with
+it and have personal accounts there.  See <xref
+linkend="canned-hosting"/> for a more detailed
+discussion of the questions to consider when choosing a canned hosting
+site and for an overview of the most popular ones.</para>
+
+</sect2>
+
+</sect1>
+
+
+<!-- ======================== SECTION ============================== -->
+<sect1 id="license-quickstart">
+<title>Choosing a License and Applying It</title>
+
+<para>This section is intended to be a very quick, very rough guide to
+choosing a license.  Read <xref linkend="legal"/> to understand
+the detailed legal implications of the different licenses, and how the
+license you choose can affect people's ability to mix your software
+with other software.</para>
+
+<sidebar id="fsf-and-osi-approved">
+  <title>Synonyms: "free software license", "FSF-approved", "open
+  source license", and "OSI-approved"</title>
+
+  <para>The terms "free software license" and "open source license"
+  are essentially synonymous, and I treat them so throughout this
+  book.</para>
+
+  <para>Technically, the former term refers to licenses confirmed by
+  the Free Software Foundation as meeting the "four freedoms"
+  of the Free Software Definition (FSD, see <ulink
+  url="https://www.gnu.org/philosophy/free-sw.html"
+  >https://www.gnu.org/philosophy/free-sw.html</ulink>), while the latter term refers
+  to licenses approved by the Open Source Initiative as meeting the
+  Open Source Definition (OSD, see <ulink url="https://opensource.org/osd"
+  >https://opensource.org/osd</ulink>).  However, if you read the FSD
+  and the OSD, it becomes obvious that the two definitions delineate the
+  same freedoms&nbsp;&mdash;&nbsp;which is not surprising, given the
+  historical background explained in <xref
+  linkend="free-vs-open-source"/>.  The inevitable, and in
+  some sense deliberate, result is that the two organizations have
+  approved the same set of licenses.<footnote><para>There actually <emphasis>are</emphasis>
+  some minor differences between the sets of approved licenses, but
+  they are not significant for our purposes&nbsp;&mdash;&nbsp;or
+  indeed for most practical purposes.  In some cases, one or the other
+  organization has simply not gotten around to considering a given
+  license, usually a license that is not widely-used anyway.  There
+  are also a few rarely-used licenses that have clauses that formally
+  conflict with the letter, if not the spirit, of one or the other
+  definition.
+  <!--
+  I don't want to take up space in the book with it, but for the
+  record, here is the conversation in which Alexandre Oliva provided
+  me with the excellent example of the above phenomenon that follows,
+  as well as educated me more generally in how the FSD and OSD can
+  differ in certain cases.  This conversation happened on Identi.ca on
+  2020-12-28: https://identi.ca/kfogel/note/MnzhERnORzW3cEyIU7xe_A.
+  
+    Me:
+    > I dislike the phrase "open source alternative to X" and try not to
+    > use it.
+    > 
+    > Casting something as an "alternative" sets up an obvious
+    > center/periphery dynamic that in this case is damaging to what I
+    > care about. For some of us, it's not an alternative: it's the
+    > first choice.
+  
+    Alexandre:
+    > this comment would have been a 'like' if you'd written "free
+    > software" instead ;-)
+  
+    Me:
+    > Hey, Alexandre.  Had I done that, my comment would have been
+    > disconnected from my actual experience: I frequently encounter the
+    > phrase "open source alternative to" and only rarely encounter the
+    > phrase "free software alternative to".  I was talking about a
+    > phrase that others use that I decline to use, not a phrase of my
+    > choosing that I either do or don't use.
+    > 
+    > (I consider the terms synonymous anyway, and have ever since the
+    > term "open source" was coined for this usage, but that's a much
+    > more complex discussion of course.
+    > https://opensource.org/faq#free-software has some of the
+    > background on why one might choose this interpretation.)
+  
+    Alexandre:
+    > *nod*, I suppose our circles and feeds are different indeed, and
+    > the phrase you encounter more often, or the one that annoys you
+    > more, is different from mine ;-) still, the point was that I'd
+    > have related more strongly with what you wrote had your experience
+    > been more like mine.  that was what I meant to express.  the
+    > negative feelings that "free software alternative to X" bring
+    > about in me are largely similar to those you described.  and yeah,
+    > when it comes to the software proper, the terms are very nearly
+    > synonymous, differing only in nearly-irrelevant corner cases.
+    > they do often convey alignment or ignorance, since when it comes
+    > to philosophies, they express very different positions.  as a
+    > quote, it carries meanings intended by those you're quoting, but
+    > that doesn't make me like it ;-) enjoyable holidays and a happier
+    > gnu year!
+  
+    Me:
+    > :-)  Yes, I understand.
+    > 
+    > I've actually always wondered about those alleged corner cases.
+    > The FSF definition of software freedom and the OSI definition of
+    > open source *look* logically equivalent to me.  Some people have
+    > claimed that there are licenses that are open source but not free
+    > or vice versa — well, the Sybase Open Watcom License [1] is the
+    > only specific claim I've heard made — and I've always wanted to
+    > get time to evaluate this claim myself.  I've not heard what the
+    > actual argument is, and there are certainly other occasions where
+    > I've heard someone make a claim that a certain license is/isn't
+    > Free/OSS, or is/isn't compatible with some other license, and then
+    > when I've examined the claim in detail I've found that I didn't
+    > agree, or at least that the claim wasn't obviously correct.
+    > 
+    > Now, even if the two terms were to describe the exact same set of
+    > licenses, they could still carry different connotations, of
+    > course, and for many people they do.  But my own position is that
+    > if the freedom is built in to the definition, then that freedom
+    > must inevitably become a connotation, whether people wanted it to
+    > or not.  (I think one can see this happening, at a gradual and
+    > evolutionary way, in public communications from the OSI itself
+    > over the years, too.)
+    > 
+    > Anyway, Happy Gnu Year to you too!
+    > 
+    > Best regards,
+    > -Karl
+    > 
+    > [1] https://opensource.org/licenses/Watcom-1.0
+  
+    Alexandre:
+    > the examples that first come to mind of non-equivalence and
+    > non-containment are:
+    > 
+    > * GNU autoconf; the license encompasses an additional permission
+    >   that must be dropped if certain modifications are made.  as a
+    >   result, in some cases you cannot distribute modified versions
+    >   under the same license you could receive the original program.
+    >   this requirement in the complete licensing conditions appears to
+    >   conflict with one of the bullets of the OSD, but it doesn't
+    >   render the software non-Free
+    > 
+    > * Tivoized software: the OSI directors, back when I consulted them
+    >   about this, didn't think that software distributed under
+    >   tivoization-like anti-modification technical constraints caused
+    >   it to fail to meet the OSD for the recipient, since they got the
+    >   sources in conditions that meet the OSD (and the FSD), though
+    >   the executable, in the tivoized scenario, is definitely non-Free
+    >   Software
+    > 
+    > though these are real, rather than purely academic corner cases,
+    > and they could apply to an arbitrarily large set of software one
+    > way or another, nobody seems to be too worried about the
+    > differences.  those who care about OSS don't seem to care that
+    > autoconf-like licensing isn't strictly compliant with the
+    > definition, since they fall back to the FSD anyway, and those who
+    > care more about FS worry about tivoized software, but apparently
+    > don't assign so much relevance to OSS or the OSD.  so in the end
+    > the FSD seems to serve as the ultimate definition for everyone,
+    > though those who accept tivoized software also accept other
+    > proprietary software
+  
+    Me:
+    > GNU Autoconf is just GPL (a combination of GPL-2.0 and GPL-3.0, it
+    > looks like — probably on a file-by-file basis for historical
+    > reasons).  There is a v3 exception that allows certain outputs
+    > (derivatives, as far as copyright law is concerned) to be
+    > distributed under other licenses, including proprietary licenses,
+    > but that doesn't make GNU Autoconf itself either non-free or
+    > non-open-source.  It just weakens its copyleft-ness a bit, but
+    > copyleft-ness is not required for FOSS.
+    > 
+    > Regarding tivo-ization, that's not an FSD-vs-OSD difference and it
+    > doesn't affect the covered licenses.  It's just a difference of
+    > interpretation, one that could be applied equally well to either
+    > the FSD or OSD.  The OSI's answer to the second point has always
+    > been that it's the license that's applied *to the source code*
+    > that matters.  In other words, it's not even meaningful to say
+    > that a binary is "free software" or "open source" in the absence
+    > of source code anyway, and if you do have the source code than
+    > *that's* the thing whose distribution under the license matters.
+    > 
+    > For the record, this is what happens every time I try to get a
+    > concrete example of any actual difference between "free software"
+    > and "open source software": it turns out it's either not a
+    > difference at all or it's a difference of interpretation that
+    > depends on the party doing the interpretation (i.e., not on the
+    > FSD or OSD itself).  In other words, the FSF interpreting the OSD
+    > would come to the same conclusion (in these situations) that they
+    > come to with the FSD, and the OSI interpreting the FSD would come
+    > to the same conclusion they come to with the OSD.
+    > 
+    > In more than 20 years, no has has yet shown me a license whose
+    > terms clearly match one definition but not the other.  I am fairly
+    > sure that no such license *can* logically exist, even in
+    > principle, and my attempts to find a disproof of this belief have
+    > thus far failed.
+    > 
+    > Well, I should correct one thing:
+    > 
+    > There may be instances where the FSF would come to a different
+    > conclusion, regarding a particular case, when interpreting the OSD
+    > instead of the FSD.  However, in the (rare) instances of this
+    > happening that I have observed, it has not been very convincing
+    > and I doubt a judge would agree with it :-).  That is, I think
+    > those differences of interpretation on the part of the FSF may be
+    > politically motivated rather than logically motivated.
+  
+    Alexandre:
+    > > GNU Autoconf is just GPL
+    > 
+    > not true.  any exceptions *are* part of the licensing conditions.
+    > that some part of the licensing conditions of a program is
+    > recognizable as a separate license doesn't make that the license
+    > of the program.  the license is the *complete* set of permissions
+    > and conditions, not a subset thereof.
+    > 
+    > > There is a v3 exception
+    > 
+    > that is part of the licensing conditions, and that cannot be
+    > extended to certain modified versions, which conflicts with
+    > requirements of the OSD.
+    > 
+    > that the OSD only looks at the license of the sources is exactly
+    > another fundamental difference that leads to different outcomes
+    > when assessing whether a program meets the OSS or meets the FSD.
+    > the latter looks at conditions imposed on users through technical
+    > means, in as much as they impose substantial limitations on the
+    > essential freedoms.
+    > 
+    > that the OSD attempted to establish objective conditions that
+    > model the FSD but failed to capture this is IMHO a bug in the OSD,
+    > that most people of OSS allegiance weasel out of by dismissing it
+    > as irrelevant, even when they admit the different would stand in
+    > the way of the so-called open source effect.  double-thinking at
+    > its best ;-)
+  
+    Me:
+    > Hunh.  I didn't fully understand this response, but you're
+    > unlikely to write something that doesn't make sense, so I'll
+    > ponder it more and see if I understand.  If I still don't
+    > understand it, then maybe at least I can distill down what I was
+    > saying in a more clear and precise way (which I wasn't doing here
+    > on identi.ca) and see where that goes.
+  
+    Alexandre:
+    > in short, I disputed the point that the additional permission was
+    > not an integral part of the autoconf license, as you'd suggested.
+    > the license is the complete set of applicable permissions and
+    > conditions, not just an identifiable and recognizable variant
+    > (subset?) thereof, even if those combined permissions and
+    > conditions allow the distribution under the variant.
+    > 
+    > indeed, the easy fix for the OSD would be to recognize and endorse
+    > such arrangements in which the program is licensed under
+    > conditions that allow the distribution under alternate terms that
+    > satisfy the definition
+  
+    Me:
+    > Ah, okay, this is about clause 3 of the OSD and its requirement of
+    > "same license".
+    > 
+    > However, in the case of Autoconf, is it not true that one can
+    > distribute Autoconf under exactly the same terms one received it
+    > under?  That is, one is not required to apply any of the
+    > exceptions offered in the Autoconf Configure Script Exception.
+    > The offer of exception is just there to allow a special kind of
+    > entangled derivative to be distributed — and in those cases in
+    > which the derivative is distributed under a set of terms that
+    > differs from Autoconf's original terms but is still FSD- and
+    > OSD-compliant, then downstreams get those new terms as well.
+    > 
+    > IOW, I see what you mean about the glitch in the OSD (I'd call it
+    > a bug), in which redistribution under
+    > different-but-still-OSD-compliant terms is not included in the
+    > definition.  So now I see that there is, in principle, a possible
+    > slight difference in the actual meanings of the two definitions —
+    > thank you! — but isn't Autoconf itself, as a distributed package,
+    > still OSD-compliant?
+    > 
+    > By analogy: someone might distribute software under the MIT
+    > license.  Then someone else might make a derivative work under
+    > different (perhaps even non-FOSS) terms.  But that wouldn't make
+    > the original software not be under MIT.  If I can receive Autoconf
+    > under a set of terms X, and I can redistribute it under the exact
+    > same set of terms X, and I can redistribute modified versions
+    > under the exact same set of terms X, then... isn't that satisfying
+    > OSD #3?
+    > 
+    > Oh, wait, maybe what you're saying is that, in the specific case
+    > of Autoconf, a recipient/redistributor may not expand the set of
+    > "Normally Copied Code" as defined in the exception?  Thus
+    > activating this clause in the exception: "You have permission to
+    > propagate output of Autoconf, even if such propagation would
+    > otherwise violate the terms of GPLv3. However, if by modifying
+    > Autoconf you cause any Ineligible Code of the version you received
+    > to become Normally Copied Code of your modified version, then you
+    > void this Exception for the resulting covered work. If you convey
+    > that resulting covered work, you must remove this Exception in
+    > accordance with the second paragraph of Section 7 of GPLv3."
+    > 
+    > Okay.  That's fascinating: it does indeed fail test #3 of the OSD.
+    > Though frankly I'll bet that's just an accident of drafting in the
+    > OSD and that no one at OSI would seriously object (semantics-wise)
+    > to simply fixing the OSD in the obvious way — though they might
+    > object on the grounds of perception of stability.  Still, though,
+    > you're right: drafting accident or not, there is a way in which
+    > the OSD differs substantively from the FSD, even though it's a
+    > rare corner case in practice.
+    > 
+    > Thanks, Alexandre.
+  
+    Alexandre:
+    > yup, you managed to figure out what I meant.  sorry I had you do
+    > the legwork, I didn't have the links handy and had to go by memory
+    > from a while ago.  I'm glad I didn't mess things up.
+    > 
+    > as I said, easy to fix in the OSD, if someone cared about it.  I
+    > sort of doubt anyone ever did, and discussing changing the OSD
+    > right now is probably riskier than ever for OSI, so I kind of
+    > doubt they'd undertake it
+  -->
+  For example, the OSD requires the license to
+  allow redistribution under the exact same terms the software
+  originally came with, instead of just under some set of
+  OSD-compliant terms, whereas the FSD goes the other way on this
+  question.  These differences are exotic edge cases, however.  For
+  any license you are likely to be using, the terms "OSI-approved" and
+  "FSF-approved" can be treated as implying each
+  other.</para></footnote></para>
+</sidebar>
+
+<para>There are a great many free software licenses to choose from.
+Most of them we needn't consider here, as they were written to satisfy
+the particular legal needs of some corporation or person, and wouldn't
+be appropriate for your project.  We will restrict ourselves to just
+the most commonly used licenses; in most cases, you will want to
+choose one of them.</para>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="license-quickstart-non-gpl">
+<title>The "Do Anything" Licenses</title>
+
+<para>If you're comfortable with your project's code potentially being
+used in proprietary programs, then use
+an <firstterm>MIT-style</firstterm> license.  It is the simplest of
+several minimal licenses that do little more than assert nominal
+copyright (without actually restricting copying) and specify that the
+code comes with no warranty.  See
+<xref linkend="license-choosing"/> for details.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="license-quickstart-gpl">
+<title>The GPL</title>
+
+<para>If you don't want your code to be used in proprietary programs,
+use the GNU General Public License, version 3 (<ulink
+url="https://www.gnu.org/licenses/gpl.html"
+>https://www.gnu.org/licenses/gpl.html</ulink>).  The GPL is probably the most
+widely recognized free software license in the world today.  This is
+in itself a big advantage, since many potential users and contributors
+will already be familiar with it, and therefore won't have to spend
+extra time to read and understand your license.  See <xref
+linkend="license-choosing-gpl"/> for details.</para>
+
+<sidebar>
+<para>If users interact with your code primarily over a
+network connection&nbsp;&mdash;&nbsp;that is, the software is usually part of a hosted
+service, rather than being distributed to run client-side&nbsp;&mdash;&nbsp;then consider
+using the <firstterm>GNU Affero GPL</firstterm> instead.  The AGPL is
+just the GPL with one extra clause establishing network accessibility
+as a form of distribution for the purposes of the license.  See <xref
+linkend="gnu-affero-gpl"/> for more.</para>
+</sidebar>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="license-quickstart-applying">
+<title>How to Apply a License to Your Software</title>
+
+<para>Once you've chosen a license, you'll need to apply it to the
+software.</para>
+
+<para>The first thing to do is state the license clearly on the
+project's front page.  You don't need to include the actual text of
+the license there; just give its name and make it link to the full
+license text on another page.  That tells the public what license you
+<emphasis>intend</emphasis> the software to be released
+under&nbsp;&mdash;&nbsp;but it's not quite sufficient for legal purposes.  The
+other step is that the software itself should include the
+license.</para>
+
+<para>The standard way to do this is to put the full license text in a
+file called <filename>LICENSE</filename> (or
+<filename>COPYING</filename>) included with the source code, and then
+at the top of each source file put a short notice in a comment, naming
+the copyright date, holder, and license, and saying where to find the
+full text of the license.</para>
+
+<para>There are many variations on this pattern, so we'll look at just
+one example here.  The GNU GPL says to put a notice like this at the
+top of each source file:</para>
+
+  <blockquote>
+    <para>Copyright (C) &lt;year&gt;  &lt;name of author&gt;</para>
+
+    <para>This program is free software: you can redistribute it
+    and/or modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation, either version 3 of
+    the License, or (at your option) any later version.</para>
+
+    <para>This program is distributed in the hope that it will be
+    useful, but WITHOUT ANY WARRANTY; without even the implied
+    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU General Public License for more details.</para>
+
+    <para>You should have received a copy of the GNU General Public
+    License along with this program.  If not, see
+    &lt;http://www.gnu.org/licenses/&gt;</para>
+  </blockquote>
+
+<para>It does not say specifically that the copy of the license you
+received along with the program is in the file
+<filename>COPYING</filename> or <filename>LICENSE</filename>, but
+that's where it's usually put.  (You could change the above notice to
+state that directly, but there's no real need to.)</para>
+
+<para>In general, the notice you put in each source file does not have
+to look exactly like the one above, as long as it starts with the same
+notice of copyright holder and date,<footnote><para>There is some
+leeway on exactly what the dates should indicate, and of course this
+book does not provide legal advice.  The strictest legal
+interpretation I've heard is that the date should show the years in
+which the file was modified for copyright purposes.  In other words,
+for a file modified in 2012, 2018, and 2021, you would write "2012,
+2018, 2021"&nbsp;&mdash;&nbsp;<emphasis>not</emphasis> "2012-2021",
+because the file wasn't modified in most of the years in that range.
+Some projects just use a range anyway, with one end being the file's
+creation year and the other end being the year of most recent
+modification, as that's so much shorter and easier.</para></footnote>
+states the name of the license, and
+makes clear where to view the full license terms.  It's always best to
+consult a lawyer, of course, if you can afford one.</para>
+
+</sect2>
+
+</sect1>
+
+<!-- ======================== SECTION ============================== -->
+<sect1 id="setting-tone">
+<title>Setting the Tone</title>
+
+<para>So far we've covered one-time tasks you do during project setup:
+picking a license, arranging the initial web site, etc.  But the most
+important aspects of starting a new project are dynamic.  Choosing a
+mailing list address is easy; ensuring that the list's conversations
+remain on-topic and productive is another matter entirely.  For
+example, if the project is being opened up after years of closed,
+in-house development, its development processes will change, and you
+will have to prepare the existing developers for that change.</para>
+
+<para>The first steps are the hardest, because precedents and
+expectations for future conduct have not yet been set.  Stability in a
+project does not come from formal policies, but from a shared,
+hard-to-pin-down collective wisdom that develops over time.  There are
+often written rules as well, but they tend to be essentially a
+distillation of the intangible, ever-evolving agreements that really
+guide the project.  The written policies do not define the project's
+culture so much as describe it, and even then only
+approximately.</para>
+
+<para>There are a few reasons why things work out this way.  Growth
+and high turnover are not as damaging to the accumulation of social
+norms as one might think.  As long as change does not happen
+<emphasis>too</emphasis> quickly, there is time for new arrivals to
+learn how things are done, and after they learn, they will help
+reinforce those ways themselves.  Consider how children's songs
+survive for centuries.  There are children today singing roughly the
+same rhymes as children did hundreds of years ago, even though there
+are no children alive now who were alive then.  Younger children hear
+the songs sung by older ones, and when they are older, they in turn
+will sing them in front of other younger ones.  The children are not
+engaging in a conscious program of transmission, of course, but the
+reason the songs survive is nonetheless that they are transmitted
+regularly and repeatedly.  The time scale of free software projects
+may not be measured in centuries (we don't know yet), but the dynamics
+of transmission are much the same.  The turnover rate is faster,
+however, and must be compensated for by a more active and deliberate
+transmission effort.</para>
+
+<para>This effort is aided by the fact that people generally show up
+expecting and looking for social norms.  That's just how humans are
+built.  In any group unified by a common endeavor, people who join
+instinctively search for behaviors that will mark them as part of the
+group.  The goal of setting precedents early is to make those
+"in-group" behaviors be ones that are useful to the project; once
+established, they will be largely self-perpetuating.</para>
+
+<para>Following are some examples of specific things you can do to set
+good precedents.  They're not meant as an exhaustive list, just as
+illustrations of the idea that setting a collaborative mood early
+helps a project tremendously.  Physically, every developer may be
+working separately, but you can do a lot to make
+them <emphasis>feel</emphasis> like they're all working together in
+the same room.  The more they feel this way, the more time they'll
+want to spend on the project.  I chose these particular examples
+because situations like these seem to come up in most open source
+projects, and should be seen as opportunities to start things off on
+the right foot.</para>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="avoid-private-discussions">
+<title>Avoid Private Discussions</title>
+
+<para>Even after you've taken the project public, you and the other
+founders will often find yourselves wanting to settle difficult
+questions by private communications among an inner circle.  This is
+especially true in the early days of the project, when there are so
+many important decisions to make, and, usually, few people
+qualified to make them.  All the obvious disadvantages of public
+discussions will loom palpably in front of you: the delay inherent in
+email conversations, the need to leave sufficient time for consensus
+to form, the hassle of dealing with naive newcomers who think they
+understand all the issues but actually don't (every project has these;
+sometimes they're next year's star contributors, sometimes they stay
+naive forever), the person who can't understand why you only want to
+solve problem X when it's obviously a subset of larger problem Y, and
+so on.  The temptation to make decisions behind closed doors and
+present them as <foreignphrase>faits accomplis</foreignphrase>, or at
+least as the firm recommendations of a united and influential voting
+block, will be very great.</para>
+
+<para>Don't do it.</para>
+
+<para>As slow and cumbersome as public discussion can be, it's
+almost always preferable in the long run.  Making important decisions
+in private is like spraying contributor repellent on your project.  No
+serious contributor would stick around for long in an environment where
+a secret council makes all the big decisions behind closed doors.  Furthermore, public
+discussion has beneficial side effects that will last beyond whatever
+ephemeral technical question was at issue:
+
+<itemizedlist>
+  <listitem>
+  <para>The discussion will help train and educate new developers.
+        You never know how many eyes are watching the conversation;
+        even if most people don't participate, many may be lurking
+        silently, gleaning information about the software.</para>
+  </listitem>
+  <listitem>
+  <para>The discussion will train <emphasis>you</emphasis> in the art
+        of explaining technical issues to people who are not as
+        familiar with the software as you are.  This is a skill that
+        requires practice, and you can't get that practice by talking
+        to people who already know what you know.</para>
+  </listitem>
+  <listitem>
+  <para>The discussion and its conclusions will be available in public
+        archives forever after, enabling future discussions to avoid
+        retracing the same steps.  See
+        <xref linkend="using-archives"/>.</para>
+  </listitem>
+</itemizedlist>
+
+</para>
+
+<para>Finally, there is the possibility that someone on the list may
+make a real contribution to the conversation, by coming up with an
+idea you never anticipated.  It's hard to say how likely this is; it
+just depends on the complexity of the code and degree of
+specialization required.  But if anecdotal evidence may be permitted,
+I would hazard that this is more likely than you might
+expect.  In the Subversion project, we (the founders) believed we
+faced a deep and complex set of problems, which we had been thinking
+about hard for several months, and we frankly doubted that anyone on
+the newly created mailing list was likely to make a real contribution
+to the discussion.  So we took the lazy route and started batting some
+technical ideas back and forth in private emails, until an observer of
+the project<footnote><para>Credit where credit is due: the observer
+was Brian Behlendorf, and he was correctly insistent about
+the general importance of keeping all discussions public unless there
+was a specific need for privacy.</para></footnote> caught wind of what
+was happening and asked for the discussions to be moved to the public
+list.  Rolling our eyes a bit, we did&nbsp;&mdash;&nbsp;and were stunned by the
+number of insightful comments and suggestions that quickly resulted.
+In many cases people offered ideas that had never even occurred to us.
+It turned out there were some <emphasis>very</emphasis> smart people
+on that list; they'd just been waiting for the right bait.  It's true
+that the ensuing discussions took longer than they would have if we
+had kept the conversation private, but they were so much more
+productive that it was well worth the extra time.</para>
+
+<para>Without descending into hand-waving generalizations like "the
+group is always smarter than the individual" (we've all met enough
+groups to know better), it must be acknowledged that there are certain
+activities at which groups excel.  Massive peer review is one of them;
+generating large numbers of ideas quickly is another.  The quality of
+the ideas depends on the quality of the thinking that went into them,
+of course, but you won't know what kinds of thinkers are out there
+until you stimulate them with a challenging problem.</para>
+
+<para>Naturally, there are some discussions that must be had
+privately; throughout this book we'll see examples of those.  But the
+guiding principle should always be: <emphasis>If there's no reason for
+it to be private, it should be public.</emphasis></para>
+
+<para>Making this happen requires action.  It's not enough merely to
+ensure that all your own posts go to the public list.  You also have
+to nudge other people's unnecessarily private conversations to the
+list too.  If someone tries to start a private discussion with you and
+there's no reason for it to be private, then it is incumbent on you to open
+the appropriate meta-discussion immediately.  Don't even comment on
+the original topic until you've either successfully steered the
+conversation to a public place, or ascertained that privacy really was
+needed.  If you do this consistently, people will catch on pretty
+quickly and start to use the public forums by
+default&nbsp;&mdash;&nbsp;and will promote this norm to others where
+necessary.</para>
+
+</sect2>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="prevent-rudeness">
+<title>Nip Rudeness in the Bud</title>
+
+<para>From the very start of your project's public existence, you
+should maintain a zero-tolerance policy toward rude or insulting
+behavior in its forums.  Zero-tolerance does not mean technical
+enforcement per se.  You don't have to remove people from the mailing
+list when they flame another subscriber, or take away their commit
+access because they made derogatory comments.  (In theory, you might
+eventually have to resort to such actions, but only after all other
+avenues have failed&nbsp;&mdash;&nbsp;which, by definition, isn't the case at the
+start of the project.)  Zero-tolerance simply means never letting bad
+behavior slide by unnoticed.  For example, when someone posts a
+technical comment mixed together with an <foreignphrase>ad
+hominem</foreignphrase> attack on some other developer in the project,
+it is imperative that your response address the <foreignphrase>ad
+hominem</foreignphrase> attack as a separate issue unto itself,
+separate from the technical content.</para>
+
+<para>It is unfortunately very easy, and all too typical, for
+constructive discussions to lapse into destructive flame wars.
+People will say things in email that they would never say
+face-to-face.  The topics of discussion only amplify this effect: in
+technical issues, people often feel there is a single right answer to
+most questions, and that disagreement with that answer can only be
+explained by ignorance, stupidity, or laziness.  It's a short distance from
+calling someone's technical proposal stupid to calling the person
+themselves stupid.  In fact, it's often hard to tell where technical
+debate leaves off and character attack begins, which is one reason why
+drastic responses or punishments are not a good idea.  Instead, when
+you think you see it happening, make a post that stresses the
+importance of keeping the discussion friendly, without accusing anyone
+of being deliberately poisonous.  Such "Nice Police" posts do have an
+unfortunate tendency to sound like a kindergarten teacher lecturing a
+class on good behavior:</para>
+
+    <blockquote>
+      <para><emphasis>First, let's please cut down on the
+      (potentially) ad hominem comments; for example, calling J's
+      design for the security layer "naive and ignorant of the basic
+      principles of computer security."  That may be true or it may
+      not, but in either case it's no way to have the discussion.  J
+      made his proposal in good faith.  If it has deficiencies, point
+      them out, and we'll fix them or get a new design.  I'm sure M
+      meant no personal insult to J, but the phrasing was unfortunate,
+      and we try to keep things constructive around here.
+      </emphasis></para>
+
+      <para><emphasis>Now, on to the proposal.  I think M was right
+      in saying that...</emphasis></para>
+    </blockquote>
+
+<para>As stilted as such responses sound, they have a noticeable
+effect.  If you consistently call out bad behavior, but don't demand
+an apology or acknowledgement from the offending party, then you leave
+people free to cool down and show their better side by behaving more
+decorously next time&nbsp;&mdash;&nbsp;and they will.</para>
+
+<para>One of the secrets of
+doing this successfully is to never make the meta-discussion the main
+topic.  It should always be an aside, a brief preface to the main
+portion of your response.  Point out in passing that "we don't do
+things that way around here," but then move on to the real content, so
+that you're giving people something on-topic to respond to.  If
+someone protests that they didn't deserve your rebuke, simply refuse
+to be drawn into an argument about it.  Either don't respond (if you
+think they're just letting off steam and don't require a response), or
+say you're sorry if you overreacted and that it's hard to detect
+nuance in email, then get back to the main topic.  Never, ever insist
+on an acknowledgement, whether public or private, from someone that
+they behaved inappropriately.  If they choose of their own volition to
+post an apology, that's great, but demanding that they do so will only
+cause resentment.</para>
+
+<para>The overall goal is to make good etiquette be seen as one of the
+"in-group" behaviors.  This helps the project, because developers can
+be driven away (even from projects they like and want to support) by
+flame wars.  You may not even know that they were driven away; someone
+might lurk on the mailing list, see that it takes a thick skin to
+participate in the project, and decide against getting involved at
+all.  Keeping forums friendly is a long-term survival strategy, and
+it's easier to do when the project is still small.  Once it's part of
+the culture, you won't have to be the only person promoting it.  It
+will be maintained by everyone.</para>
+
+</sect2>
+
+<sect3 id="code-of-conduct">
+<title>Codes of Conduct</title>
+
+<para>In the decade since the first edition of this book in 2006, it
+has become somewhat more common for open source projects, especially
+the larger ones, to adopt an explicit <firstterm>code of
+conduct</firstterm>.  I think this is a good trend.  As open source
+projects become, at long last, more diverse, the presence of a code of
+conduct can remind participants to think twice about whether a joke is
+going to be hurtful to some people, or whether&nbsp;&mdash;&nbsp;to
+pick a random example&nbsp;&mdash;&nbsp;it contributes to a welcoming
+and inclusive atmosphere when an open source image processing
+library's documentation just happens to use yet another picture of a
+pretty young woman to illustrate the behavior of a particular
+algorithm.  Codes of conduct remind participants that the maintenance
+of a respectful and welcoming environment is everyone's
+responsibility.</para>
+
+<para>An Internet search will easily find many examples of codes of
+conduct for open source projects.  The most popular one is probably
+the one at <ulink url="https://contributor-covenant.org/"
+>https://contributor-covenant.org/</ulink>, so naturally there's a positive
+feedback dynamic if you choose or adapt that one: more developers will be
+already familiar with it, plus you get its translations into other
+languages for free, etc.</para>
+
+<para>A code of conduct will <emphasis>not</emphasis> solve all the
+interpersonal problems in your project.  Furthermore, if it is
+misused, it has the potential to create new
+problems&nbsp;&mdash;&nbsp;it's always possible to find people who
+specialize in manipulating social norms and rules to harm a community
+rather than help it (see <xref linkend="difficult-people"/>), and
+if you're particularly unlucky some of those people may find their way
+into your project.  It is always up to the project leadership, by
+which I mean those whom others in the project tend to listen to the
+most, to enforce a code of conduct, and to see to it that a code of
+conduct is used wisely.  (See also <xref linkend="rudeness"/>.)</para>
+
+<para>Some participants may genuinely disagree with the need to adopt
+a code at all, and argue against it on the grounds that it could do
+more harm than good.  Even if you feel they're wrong, it is imperative
+that you help make sure they're able to state their view without being
+attacked for it.  After all, disagreeing with the need for a code of
+conduct is not the same as&nbsp;&mdash;&nbsp;is, in fact, entirely
+unrelated to&nbsp;&mdash;&nbsp; engaging in behavior that would be a
+violation of the proposed code of conduct.  Sometimes people confuse
+these two things, and need to be reminded of the
+distinction.<footnote><para>There's an excellent post by Christie
+Koehler at <ulink
+url="https://subfictional.com/2016/01/25/the-complex-reality-of-adopting-a-meaningful-code-of-conduct/"
+>https://subfictional.com/2016/01/25/the-complex-reality-of-adopting-a-meaningful-code-of-conduct/</ulink>
+discussing this in much more depth.</para></footnote></para>
+
+<para>In some projects, a code of conduct specifically for
+organizational or commercial participants&nbsp;&mdash;&nbsp;often one
+implies the other, but not always&nbsp;&mdash;&nbsp;may also be called
+for.  If you see organizational actors participating in your project
+in ways that might not be conducive to the project's long-term health,
+consider creating a <firstterm>Commercial Code of Conduct</firstterm>
+(<firstterm>CCoC</firstterm>, sometimes also expanded as
+<firstterm>Corporate Code of Conduct</firstterm>) or
+<firstterm>Organizational Code of Conduct</firstterm>
+(<firstterm>OCoC</firstterm>).  Two
+examples<footnote><para>Disclosure: My company was involved in
+drafting both.</para></footnote> are the <citetitle>General Guidelines
+for Commercial Entities and Others Deploying Arches</citetitle>
+(on <ulink url="https://www.archesproject.org/code-of-conduct/"
+>https://www.archesproject.org/code-of-conduct/</ulink>) and the
+Bytecode Alliance's <citetitle>Organizational Code of
+Conduct</citetitle> (which appears to still be a draft under
+consideration as of this writing, but the draft text is available at
+<ulink
+    url="https://github.com/bytecodealliance/rfcs/blob/main/ORG_CODE_OF_CONDUCT.md"
+>https://github.com/bytecodealliance/rfcs/blob/main/ORG_CODE_OF_CONDUCT.md</ulink>
+and is a representative example).</para>
+
+</sect3>
+
+<!-- ======================== subsection ============================== -->
+<sect2 id="code-review">
+<title>Practice Conspicuous Code Review</title>
+
+<para>One of the best ways to foster a productive development
+community is to get people looking at each others'
+code&nbsp;&mdash;&nbsp;ideally, to get them looking at each others'
+code <emphasis>changes</emphasis> as those changes arrive.
+<firstterm>Commit review</firstterm> (sometimes just called
+<firstterm>code review</firstterm>) is the practice of reviewing
+commits as they come in, looking for bugs and possible
+improvements.</para>
+
+<para>There are a couple of reasons to focus on reviewing changes,
+rather than on reviewing in-place code that's already in source files.  First,
+it just works better socially: when someone reviews your change, she
+is interacting with work you did recently.  That means if she comments
+on it right away, you will be maximally interested in hearing what she
+has to say; six months later, you might not feel as motivated to
+engage, and in any case might not remember the change very well.
+Second, looking at what changes in a codebase is a gateway to looking
+at the rest of the code anyway: reviewing a change
+often causes one to look at the surrounding code, at the affected
+callers and callees elsewhere, at related module interfaces,
+etc.<footnote><para>None of this is an argument against top-to-bottom
+code review, of course, for example to do a security audit.  But while
+that kind of review is important too, it's more of a generic
+development best practice, and is not as specifically relevant to
+running an open source project as change-by-change review
+is.</para></footnote></para>
+
+<para>Commit review thus serves several purposes simultaneously.  It's
+the most direct example of peer review in the open source world, and
+helps to maintain software quality.  Every bug that ships in
+a piece of software got there by being committed and not detected;
+therefore, the more eyes watch commits, the fewer bugs will ship.  But
+commit review also serves an indirect purpose: it confirms to people
+that what they do matters, because one obviously wouldn't take time to
+review a commit unless one cared about its effect.  People do their
+best work when they know that others will take the time to evaluate
+it.</para>
+
+<para>Reviews should be public.  Even on occasions when I have been
+sitting in the same physical room with another developer, and one of
+us has made a commit, we take care not to do the review verbally in
+the room, but to send it to the appropriate online review forum
+instead.  Everyone benefits from seeing the review happen.  People
+follow the commentary and sometimes find flaws in it; even when they
+don't, it still reminds them that review is an expected, regular
+activity, like washing the dishes or mowing the lawn.</para>
+
+<para>Some technical infrastructure is required to do change-by-change
+review effectively.  In particular, setting up commit notifications is
+extremely useful.  The effect of commit notifications is that every
+time someone commits a change to the central repository, an email or
+other subscribable notification goes out showing the log message and
+diffs (unless the diff is too large; see <xref
+linkend="vc-vocabulary-diff"/>, in <xref linkend="vc-vocabulary"/>).
+The review itself might take place on a mailing list, or in a review
+tool such as Gerrit or the GitHub "pull request" interface.  See <xref
+linkend="commit-notifications" /> for details.</para>
+
+<sect3 id="subversion-commit-review">
+<title>Case study</title>
+
+<para>In the Subversion project, we did not at first make a regular
+practice of code review.  There was no guarantee that every commit
+would be reviewed, though one might sometimes look over a change if
+one were particularly interested in that area of the code.  Bugs
+slipped in that really could and should have been caught.  A developer
+named Greg Stein, who knew the value of code review from past work,
+decided that he was going to set an example by reviewing every line of
+<emphasis>every single commit</emphasis> that went into the code
+repository.  Each commit anyone made was soon followed by an email to
+the developer's list from Greg, dissecting the commit, analyzing
+possible problems, and occasionally praising a clever bit of code.  Right
+away, he was catching bugs and non-optimal coding practices that would
+otherwise have slipped by without ever being noticed.  Pointedly, he
+never complained about being the only person reviewing every commit,
+even though it took a fair amount of his time, but he did sing the
+praises of code review whenever he had the chance.  Pretty soon, other
+people, myself included, started reviewing commits regularly too.</para>
+
+<para>What was our motivation?  It wasn't that Greg had consciously shamed
+us into it.  But he had proven that reviewing code was a valuable way
+to spend time, and that one could contribute as much to the project by
+reviewing others' changes as by writing new code.  Once he
+demonstrated that, it became expected behavior, to the point where any
+commit that didn't get some reaction would cause the committer to
+worry, and even ask on the list whether anyone had had a chance to
+review it yet.  Later, Greg got a job that didn't leave him as much
+time for Subversion, and had to stop doing regular reviews.  But by
+then, the habit was so ingrained for the rest of us as to seem that it
+had been going on since time immemorial.</para>
+
+</sect3>
+
+<para>Start doing reviews from the very first commit.  The sorts of
+problems that are easiest to catch by reviewing diffs are security
+vulnerabilities, memory leaks, insufficient comments or API
+documentation, off-by-one errors, caller/callee discipline mismatches,
+and other problems that require a minimum of surrounding context to
+spot.  However, even larger-scale issues such as failure to abstract
+repeated patterns to a single location become spottable after one has
+been doing reviews regularly, because the memory of past diffs informs
+the review of present diffs.</para>
+
+<para>Don't worry that you might not find anything to comment on, or
+that you don't know enough about every area of the code.  There will
+usually be something to say about almost every commit; even where you
+don't find anything to question, you may find something to praise.
+The important thing is to make it clear to every committer that what
+they do is seen and understood, that attention is being paid.  Of
+course, code review does not absolve programmers of the responsibility
+to review and test their changes before committing; no one should
+depend on code review to catch things she ought to have caught on her
+own.</para>
+
+</sect2>
+
+<!-- ======================== SECTION ============================== -->
+<sect2 id="be-open-from-day-one">
+<title>Be Open From Day One</title>
+
+<para>Start your project out in the open from the very first day.  The
+longer a project is run in a closed source manner, the harder it is to
+open source later.<footnote><para>This section started out as a blog
+post, <ulink
+url="http://archive.civiccommons.org/2011/01/be-open-from-day-one/index.html"
+>http://archive.civiccommons.org/2011/01/be-open-from-day-one/index.html</ulink>, though
+it's been edited a lot for inclusion here.</para>
+</footnote></para>
+
+<para>Being open source from the start doesn't mean your developers
+must immediately take on the extra responsibilities of community
+management.  People often think that "open source" means "strangers
+distracting us with questions", but that's
+optional&nbsp;&mdash;&nbsp;it's something you might do down the road,
+if and when it makes sense for your project.  It's under your control.
+There are still major advantages to be had by running the project out
+in open, publicly-visible forums from the beginning.  Conversely, the
+longer the project is run closed-source, the more difficult it will be
+to open up later.</para>
+
+<para>I think there's one underlying cause for this:</para>
+
+<para>At each step in a project, programmers face a choice: to do that
+step in a manner compatible with a hypothetical future open-sourcing,
+or do it in a manner incompatible with open-sourcing.  And every time
+they choose the latter, the project gets just a little bit harder to
+open source.</para>
+
+<para>The crucial thing is, they can't help choosing the latter
+occasionally&nbsp;&mdash;&nbsp;all the pressures of development propel
+them that way.  It's very difficult to give a future event the same
+present-day weight as, say, fixing the incoming bugs reported by the
+testers, or finishing that feature the customer just added to the
+spec.  Also, programmers struggling to stay on budget will inevitably
+cut corners here and there.  In Ward Cunningham's phrase, they will
+incur "technical debt" (<ulink
+url="https://en.wikipedia.org/wiki/Technical_debt"
+>https://en.wikipedia.org/wiki/Technical_debt</ulink>), with the
+intention of paying back that debt later.</para>
+
+<para>Thus, when it's time to open source, you'll suddenly find there
+are things like:</para>
+
+<itemizedlist>
+  <listitem>Customer-specific configurations and passwords checked
+            into the code repository;</listitem>
+  <listitem>Sample data constructed from live (and confidential)
+            information;</listitem>
+  <listitem>Bug reports containing sensitive information that cannot
+            be made public;</listitem>
+  <listitem>Comments in the code expressing perhaps overly-honest
+            reactions to the customer's latest urgent request;</listitem>
+  <listitem>Archives of correspondence among the developer team, in
+            which useful technical information is interleaved with
+            personal opinions not intended for strangers;</listitem>
+  <listitem>Licensing issues due to dependency libraries whose terms
+            might have been fine for internal deployment (or not even
+            that), but aren't compatible with open source
+            distribution;</listitem>
+  <listitem>Documentation written in the wrong format (e.g., that
+            proprietary internal wiki your department uses), with no
+            tool available to easily transform it into formats
+            appropriate for public distribution;</listitem>
+  <listitem>Non-portable build dependencies that only become apparent
+            when you try to move the software out of your internal
+            build environment;</listitem>
+  <listitem>Modularity violations that everyone knows need cleaning
+            up, but that there just hasn't been time to take care of
+            yet...</listitem>
+  <listitem>(This list could go on for a long time.)</listitem>
+</itemizedlist>
+
+<para>The problem isn't just the work of actually doing the cleanups;
+it's the extra decision-making they require.  For example, if
+sensitive material was checked into the code repository in the past,
+your team now faces a choice between cleaning it out of the historical
+revisions entirely, so you can open source the entire (sanitized)
+history, or just cleaning up the latest revision and open-sourcing
+from that (sometimes called a "top-skim").  Neither method is wrong or
+right&nbsp;&mdash;&nbsp;and that's the problem: now you've got one
+more discussion to have and one more decision to make.  In some
+projects, that decision gets made and reversed several times before
+the final release. The thrashing itself is part of the cost.</para>
+
+<sect3 id="avoid-exposure-events">
+<title>Waiting Just Creates an Exposure Event</title>
+
+<para>The other problem with opening up a developed codebase is that
+it creates a needlessly large exposure event.  Whatever issues there
+may be in the code (modularity corner-cutting, security
+vulnerabilities, etc), they are all exposed to public scrutiny at
+once&nbsp;&mdash;&nbsp;the open-sourcing event becomes an opportunity
+for the technical blogosphere to pounce on the code and see what they
+can find.</para>
+
+<para>Contrast that with the scenario where development was done in
+the open from the beginning: code changes come in one at a time, so
+problems are handled as they come up (and are often caught sooner,
+since there are more eyeballs on the code).  Because changes reach the
+public at a low, continuous rate of exposure, no one blames your
+development team for the occasional corner-cutting or flawed code
+checkin.  Everyone's been there, after all; these tradeoffs are
+inevitable in real-world development.  As long as the technical debt
+is properly recorded in "FIXME" comments and bug reports, and any
+security issues are addressed promptly, it's fine.  Yet if those same
+issues were to appear suddenly all at once, unsympathetic observers
+may jump on the aggregate exposure in a way they never would have if
+the issues had come up piecemeal in the normal course of
+development.</para>
+
+<para>(These concerns apply even more strongly to government software
+projects; see <xref linkend="starting-open-for-govs" />.)</para>
+
+</sect3>
+
+<para>The good news is that these are all unforced errors.  A project
+incurs little extra cost by avoiding them in the simplest way
+possible: by running in the open from Day One.</para>
+
+<para>"In the open" means the following things are publicly
+accessible, in standard formats, from the first day of the project:
+the code repository, bug tracker, design documents, user
+documentation, wiki (if any), and developer discussion forums. It also means
+the code and documentation are placed under an open source license, of
+course. And it means that your team's day-to-day work takes place in the
+publicly visible area.</para>
+
+<para>"In the open" does <emphasis>not</emphasis> have to mean: allowing strangers to check
+code into your repository (they're free to copy it into their own
+repository, if they want, and work with it there); allowing anyone to
+file bug reports in your tracker (you're free to choose your own QA
+process, and if allowing reports from strangers doesn't help you, you
+don't have to do it); reading and responding to every bug report
+filed, even if you do allow strangers to file; responding to every
+question people ask in the forums (even if you moderate them through);
+reviewing every patch or suggestion posted, when doing so may cost
+valuable development time; etc.</para>
+
+<para>Think of it this way: 
+
+  <blockquote>
+  <para><emphasis>You open source your code, not your time.</emphasis></para>
+  </blockquote>
+
+Your code is infinitely replicable; your time is not, and you may protect
+it however you need to.  You get to determine the point at which
+engaging with outside users and developers makes sense for your
+project.  In the long run it usually does, and most of this book is
+about how to do it effectively.  But the pace of engagement is always
+under your control.  Developing in the open does not change this, it
+just ensures that everything done in the project is, by definition,
+done in a way that's compatible with being open source.</para>
+
+</sect2>
+</sect1>
+
+<!-- ======================== SECTION ============================== -->
+<sect1 id="opening-closed-projects">
+<title>Opening a Formerly Closed Project</title>
+
+<para>It's best to
+avoid being in the situation of opening up a closed project in the
+first place; just start the project in the open if you can.  But if
+it's too late for that and you find yourself opening up an existing
+project, perhaps with active developers accustomed to working in a
+closed-source environment, there are certain common issues that tend
+to arise.  You can save a lot of time and trouble if you are prepared
+for them.</para>
+
+<para>Some of these issues are essentially mechanical, and for them
+<xref linkend="be-open-from-day-one"/> can serve as a checklist.  For
+example, if your code depends on proprietary libraries that are not
+part of the standard distribution of your target operating system(s),
+you will need to find open source replacements; if there is
+confidential content&nbsp;&mdash;&nbsp;e.g., unpublishable comments,
+passwords or site-specific configuration information that cannot
+easily be changed, confidential data belonging to third parties,
+etc&nbsp;&mdash;&nbsp;in the project's version control history, then
+you may have to release a "top-skim" version, that is, restart the
+version history afresh from the current version as of the moment you
+open source the code; and so on.</para>
+
+<para>But there can be social and managerial issues too, and they are
+often more significant in the long run than the mere mechanical
+concerns.  You need to make sure everyone on the development team
+understands that a big change is coming&nbsp;&mdash;&nbsp;and you
+need to understand how it's going to feel from their point of view.</para>
+
+<para>Try to imagine how the situation looks to them: formerly, all
+code and design decisions were made with a group of other programmers
+who knew the software more or less equally well, who all received the
+same pressures from the same management, and who all know each others'
+strengths and weaknesses.  Now you're asking them to expose their code
+to the scrutiny of random strangers, who will form judgements based
+only on the code, with no awareness of what business pressures may
+have forced certain decisions.  These strangers will ask lots of
+questions, questions that jolt the existing developers into realizing
+that the documentation they worked so hard on is
+<emphasis>still</emphasis> inadequate (this is inevitable).  To top it
+all off, the newcomers are unknown, faceless entities.  If one of your
+developers already feels insecure about his skills, imagine how that
+will be exacerbated when newcomers point out flaws in code he wrote,
+and worse, do so in front of his colleagues.  Unless you have a team
+of perfect coders, this is unavoidable&nbsp;&mdash;&nbsp;in fact, it will probably
+happen to all of them at first.  This is not because they're bad
+programmers; it's just that any program above a certain size has bugs,
+and peer review will spot some of those bugs (see
+<xref linkend="code-review"/>).
+At the same time, the newcomers
+themselves won't be subject to much peer review at first, since they
+can't contribute code until they're more familiar with the project.
+To your developers, it may feel like all the criticism is incoming,
+never outgoing.  Thus, there is the danger of a siege mentality taking
+hold among the old hands.</para>
+
+<para>The best way to prevent this is to warn everyone about what's
+coming, explain it, tell them that the initial discomfort is perfectly
+normal, and reassure them that it's going to get better.  Some of
+these warnings should take place privately, before the project is
+opened.  But you may also find it helpful to remind people on the
+public lists that this is a new way of development for the project,
+and that it will take some time to adjust.  The very best thing you
+can do is lead by example.  If you don't see your developers answering
+enough newbie questions, then just telling them to answer more isn't
+going to help.  They may not have a good sense of what warrants a
+response and what doesn't yet, or it could be that they don't have a
+feel for how to prioritize coding work against the new burden of
+external communications.  The way to get them to participate is to
+participate yourself.  Be on the public mailing lists, and make sure
+to answer some questions there.  When you don't have the
+expertise to field a question, then visibly hand it off to a developer
+who does&nbsp;&mdash;&nbsp;and watch to make sure she follows up with an answer,
+or at least a response.  It will naturally be tempting for the
+longtime developers to lapse into private discussions, since that's
+what they're used to.  Make sure you're subscribed to the internal
+mailing lists on which this might happen, so you can ask that such
+discussions be moved to the public lists right away.</para>
+
+<para>If you expect the newly-public project to start involving
+developers who are not paid directly for their
+work&nbsp;&mdash;&nbsp;and there are usually at least a few such
+developers on most successful open source
+projects&nbsp;&mdash;&nbsp;see <xref linkend="money"/> for discussion
+of how to mix paid and unpaid developers successfully.</para>
+
+</sect1>
+
+<!-- ======================== SECTION ============================== -->
+<sect1 id="announcing">
+<title>Announcing</title>
+
+<para>Once the project is presentable&nbsp;&mdash;&nbsp;not perfect, just
+presentable&nbsp;&mdash;&nbsp;you're ready to announce it to the world.</para>
+
+<para>This is a simpler process than you might expect.  First, set up
+the announcement pages at your project's home site, as described in
+<xref linkend="announcing-releases"/>).  Then, post announcements
+in the appropriate forums.  There are two kinds of forums: generic
+forums that display many kinds of new project announcements, and
+topic-specific forums where your project would be welcome news.</para>
+
+<para>Make sure the announcement includes key words and phrases that
+will help people find your project in search engines.  A good test is
+that if someone does a search for "open source foo bar baz", and your
+project is a credible offering for foo, bar, and baz, then it should
+be on the first page of results.  (Unless you have a lot of open
+source competitors&nbsp;&mdash;&nbsp;but you don't, because you read
+<xref linkend="look-around"/>, right?)</para>
+
+<para>As of early 2022, the best general forum for announcements is probably <ulink
+url="https://news.ycombinator.com/" >https://news.ycombinator.com/</ulink>.
+While you are welcome to submit your project there, note that it will
+have to successfully climb the word-of-mouth / upvote tree to get
+featured on the front page.  The subreddit forums related to <ulink
+url="https://www.reddit.com/r/opensource/"
+>https://www.reddit.com/r/opensource/</ulink>, <ulink
+url="https://www.reddit.com/r/programming/"
+>https://www.reddit.com/r/programming/</ulink>, and <ulink
+url="https://www.reddit.com/r/software/" >https://www.reddit.com/r/software/</ulink>
+work in a similar way.  While it's good news for your project if you
+can get mentioned in a place like that, I hesitate to contribute to
+the marketing arms race by suggesting any concrete steps to accomplish
+this.  Use your judgement and try not to spam.</para>
+
+<para>You might also consider submitting an entry for your project at
+the FSF's Free Software Directory <ulink url="https://directory.fsf.org/"
+>https://directory.fsf.org/</ulink>, though that is more about helping its
+long-term findability rather than about soliciting attention at the
+moment of launch.</para>
+
+<para>Topic-specific forums are probably where you'll get the
+most interest, of course.  Think of discussion forums where an
+announcement of your project would be on-topic and of
+interest&nbsp;&mdash;&nbsp;you might already be a member of some of
+them&nbsp;&mdash;&nbsp;and post there.  Be careful to make exactly
+<emphasis>one</emphasis> post per forum, and to direct people to your
+project's own discussion areas for follow-up discussion (when posting
+by email, you can do this by setting the
+<systemitem>Reply-to</systemitem> header).  Your announcement should
+be short and get right to the point, and the Subject line should make
+it clear that it is an announcement of a new project:</para>
+
+<screen>
+To: discuss@some.forum.about.search.indexers
+Subject: [ANNOUNCE] Scanley, a new open source full-text indexer.
+Reply-to: dev@scanley.org
+
+This is a one-time post to announce the creation of the Scanley
+project, an open source full-text indexer and search engine with a
+rich API, for use by programmers in providing search services for
+large collections of text files.  Scanley already has running code,
+is under active development, and is looking for both developers and
+testers.
+
+Home page: http://www.scanley.org/
+
+Features:
+   - Searches plain text, HTML, and XML
+   - Word or phrase searching
+   - (planned) Fuzzy matching
+   - (planned) Incremental updating of indexes
+   - (planned) Indexing of remote web sites
+   - (planned) Long-distance mind-reading
+
+Requirements:
+   - Python 3.9 or higher
+   - SQLite 3.34 or higher
+
+For more information, please come find us at scanley.org!
+
+Thank you,
+-J. Random
+</screen>
+
+<para>(See <xref linkend="publicity"/> for advice on announcing
+subsequent releases and other project events.)</para>
+
+<para>There is an ongoing debate in the free software world about
+whether it is necessary to begin with running code, or whether a
+project can benefit from being announced even during the
+design/discussion stage.  I used to think starting with running code
+was crucial, that it was what separated successful projects from toys,
+and that serious developers would only be attracted to software that
+already does something concrete.</para>
+
+<para>This turned out not to be the case.  In the Subversion project,
+we started with a design document, a core of interested and
+well-connected developers, a lot of fanfare, and
+<emphasis>no</emphasis> running code at all.  To my complete surprise,
+the project acquired active participants right from the beginning, and
+by the time we did have something running, there were quite a few
+developers already deeply involved.  Subversion is not the
+only example; the Mozilla project was also launched without running
+code, and is now a successful and popular web browser.</para>
+
+<para>On the evidence of this and other examples, I have to back away
+from the assertion that running code is absolutely necessary for
+launching a project.  Running code is still the best foundation for
+success, and a good rule of thumb would be to wait until you have it
+before announcing your project.<footnote><para>Note that
+<emphasis>announcing</emphasis> your project usually comes long after you
+have open sourced the code.  My advice to consider carefully the
+timing of your announcement should not be taken as advice to delay
+open sourcing the code&nbsp;&mdash;&nbsp;ideally, your project should
+be open source and publicly visible from the very first moment of its
+existence, and this is entirely independent of when you announce it.
+See <xref linkend="be-open-from-day-one"/> for
+more.</para></footnote>  However, there may be circumstances where
+announcing earlier makes sense.  I do think that at least a
+well-developed design document, or else some sort of code framework,
+is necessary&nbsp;&mdash;&nbsp;of course it may be revised based on public
+feedback, but there has to be something concrete, something more
+tangible than just good intentions, for people to sink their teeth
+into.</para>
+
+<para>Whenever you announce, don't expect a horde of participants to
+join the project immediately afterward.  Usually, the result of
+announcing is that you get a few casual inquiries, a few more people
+join your mailing lists, and aside from that, everything continues
+pretty much as before.  But over time, you will notice a gradual
+increase in participation from both new code contributors and users.</para>
+
+<para>Announcement is merely the planting of a seed.  It can take a long
+time for the news to spread.  If the project consistently rewards
+those who get involved, the news <emphasis>will</emphasis> spread,
+though, because people want to share when they've found something
+good.  If all goes well, the dynamics of exponential communications
+networks will slowly transform the project into a complex community,
+where you don't necessarily know everyone's name and can no longer
+follow every single conversation.  The next chapters are about working
+in that environment.</para>
+
+</sect1>
+
+</chapter>
+
+<!--
+local variables: 
+sgml-parent-document: ("book.xml" "chapter")
+end:
+-->
+

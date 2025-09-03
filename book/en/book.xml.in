@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE book SYSTEM "../tools/dtd/dblite.dtd"
+[
+<!ENTITY dedication SYSTEM "dedication.xml">
+<!ENTITY ch00       SYSTEM "ch00.xml">
+<!ENTITY ch01       SYSTEM "ch01.xml">
+<!ENTITY ch02       SYSTEM "ch02.xml">
+<!ENTITY ch03       SYSTEM "ch03.xml">
+<!ENTITY ch04       SYSTEM "ch04.xml">
+<!ENTITY ch05       SYSTEM "ch05.xml">
+<!ENTITY ch06       SYSTEM "ch06.xml">
+<!ENTITY ch07       SYSTEM "ch07.xml">
+<!ENTITY ch08       SYSTEM "ch08.xml">
+<!ENTITY ch09       SYSTEM "ch09.xml">
+<!ENTITY copyright  SYSTEM "copy.xml">
+]>
+
+<book id="poss" lang="en">
+<title>Producing Open Source Software</title>
+<subtitle>How to Run a Successful Free Software Project</subtitle>
+<subtitle>2nd Edition</subtitle>
+
+<bookinfo>
+  <!-- For some reason, the cdata in the 'edition' element doesn't
+       seem to be included in the output anywhere.  At least, if it
+       is, I haven't found it.  <shrug>  That's why we kluge the
+       version into the 'copyright' element later on.  But let's still
+       substitute in the right VC-based version number here, just in
+       case 'edition' ever does start showing up. --> 
+  <edition>2.__SEE ../aggrevision SCRIPT__</edition>
+  <isbn>ISBN: 0-596-00759-0</isbn>
+  <authorgroup>
+    <author><firstname>Karl</firstname><surname>Fogel</surname></author>
+  </authorgroup>
+  <editor><firstname>Andy</firstname><surname>Oram</surname></editor>
+  <!-- <pubdate>2005</pubdate> -->
+  <copyright><year>2005-2023</year><holder>Karl Fogel, under the CreativeCommons Attribution-ShareAlike (4.0) license.
+  <!-- This is an egregious kluge.  Since I don't know how to reference 
+       the text from <edition> element above and have it show up in
+       the right place in all the output formats, I just crowbar a
+       redundant version into the copyright section here.  At least
+       it'll show up that way.  It looks good in HTML and PDF; build
+       problems with EPUB are preventing me from checking that, but
+       based on an old EPUB I think it should be fine there too.  
+
+       So basically, as long as you have no morals nor sense of taste,
+       this solution is just fine. -->
+  <literallayout>Version: 2.__SEE ../aggrevision SCRIPT__</literallayout>
+  <literallayout>Home site: <ulink url="https://producingoss.com/" >https://producingoss.com/</ulink></literallayout>
+</holder></copyright>
+</bookinfo>
+
+<!-- External entity refs -->
+&dedication;
+&ch00;
+&ch01;
+&ch02;
+&ch03;
+&ch04;
+&ch05;
+&ch06;
+&ch07;
+&ch08;
+&ch09;
+&copyright;
+
+</book>
