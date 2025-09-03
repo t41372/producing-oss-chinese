@@ -1,100 +1,94 @@
-You will be working as a translator to translate the book **"Producing Open Source Software"** by Karl Fogel.
+你好，欢迎加入《Producing Open Source Software》（中文暂定名：《开源软件之道》）翻译项目！这份指南将帮助我们统一风格、高效协作。
 
-你的目标翻译语言是: 2025 年的简体中文。
+你的目标翻译语言是：**2025 年的简体中文**。
 
-### **1. Introduction: The Book's Purpose and Audience**
+## **1. 写在前面：这本书是讲啥的？给谁看？**
 
-At its core, **"Producing Open Source Software" is a practical handbook** on the human side of software development. It's not just about code; it's about successfully managing a community of volunteers to create, maintain, and grow a free software project.
+简单来说，《开源软件之道》就是一本**关于如何“搞人”的开源项目实战手册**。它讲的不只是代码，更是如何成功管理一个志愿者社区，从零到一地创建、维护并发展一个自由软件项目。
 
-* **Primary Goal:** To provide proven advice and practical techniques for running a successful open-source project.
-* **Target Audience:** The book is written for software developers, project managers, and anyone interested in starting or participating in an open-source project. The reader is assumed to have some technical background, but the book's main focus is on social structures, communication, and project governance.
+  * **核心目标 (Primary Goal):** 提供一套经过检验的、能落地的建议和技巧，手把手教你如何运营一个成功的开源项目。
+  * **目标读者 (Target Audience):** 本书面向所有软件开发者、项目经理，以及任何想发起或参与开源项目的朋友。我们默认读者有一定的技术背景，但书的重点其实在**社区文化、沟通协作和项目治理**这些“软技能”上。
 
-Your translation should reflect this purpose. It must be **clear, practical, and encouraging**, empowering the reader to lead their own project effectively.
+因此，你的译文也应该服务于这个目的：**清晰易懂、干货满满、鼓舞人心**，让每一位读者都有信心和能力去领导自己的项目。
 
-***
+-----
 
-### **2. Core Concepts and Open Source Culture**
+## **2. 核心概念：混开源圈的“黑话”与文化**
 
-To translate this book accurately, you must understand the cultural context of open source. Many translators might be working on just a few pages, so this context is crucial for consistency.
+要精准地翻译这本书，你必须先 get 开源社区的文化语境。很多译者可能只负责其中一小部分，所以理解这些背景知识对保持项目整体的“神韵”至关重要。
 
-* **Free Software vs. Open Source:** While often used interchangeably, Karl Fogel is precise. **"Free software"** (a term championed by Richard Stallman) emphasizes user freedom (the freedom to run, copy, distribute, study, change, and improve the software). **"Open source"** is a more pragmatic term that focuses on the development model's benefits, like reliability and collaboration. The book uses both, and the choice is often intentional. Try to preserve this nuance where possible.
-* **The "Benevolent Dictator":** This is a common governance model where a single project leader holds final decision-making authority. Fogel explains this is not about tyranny but about having a clear, efficient way to resolve disputes. Your translation should convey the "benevolent" (well-meaning) aspect of this role.
-* **Meritocracy:** In open source, influence is earned through contribution and competence, not titles or seniority. Good ideas can come from anywhere. The culture values **what you do**, not who you are.
-* **Transparency is Key:** Almost all communication—discussions, decisions, bug reports—happens in public forums like mailing lists or issue trackers. This transparency builds trust and creates a shared historical record.
-* **"Release Early, Release Often":** This mantra, coined by Eric S. Raymond, encourages developers to release their code to the public frequently to get feedback and bug reports quickly.
-* **Forking:** This is the act of taking a copy of a project's source code to start independent development on it. It's a fundamental right in open source and acts as a check on the project leaders' power.
+  * **自由软件 (Free Software) vs. 开源 (Open Source):** 这两个词经常被混用，但作者 Karl Fogel 分得很清。**“自由软件”** (由 Richard Stallman 倡导) 强调的是用户的**自由** (运行、复制、分发、学习、修改和改进软件的自由)。而\*\*“开源”\*\*则是一个更务实的说法，强调的是这种开发模式带来的好处，比如可靠性和协作效率。书中会交替使用这两个词，通常是刻意为之。翻译时，请尽可能保留这种细微差别。
+  * **“仁慈的独裁者” (The "Benevolent Dictator"):** 这是一种常见的项目治理模式，即由一个项目领导者拥有最终决策权。Fogel 解释说，这不是搞“一言堂”，而是为了在出现争议时，有一个清晰、高效的解决方案。你的翻译需要准确传达出这个角色“仁慈”(benevolent) 的一面，也就是其出发点是善意的。
+  * **精英主义/贤能主义 (Meritocracy):** 在开源世界，影响力是通过贡献和能力挣来的，而不是靠头衔或资历。好的想法可能来自任何一个角落。社区文化信奉的是\*\*“你做了什么” (what you do)，而不是“你是谁” (who you are)\*\*。一句话：**英雄不问出处，贡献才是王道**。
+  * **透明是王道 (Transparency is Key):** 几乎所有的沟通——无论是技术讨论、决策过程还是 Bug 报告——都在公共论坛（如邮件列表、Issue Tracker）上进行。这种透明度能建立信任，并为项目沉淀下一份宝贵的公共历史记录。
+  * **“早发布，勤发布” (Release Early, Release Often):** 这句由 Eric S. Raymond 提出的口号，鼓励开发者频繁地向公众发布代码，以便快速获得反馈和 Bug 报告。
+  * **Fork (分叉/另起炉灶):** 指的是拷贝一份项目的源代码，然后在其基础上开始独立地开发。这是开源赋予每个人的基本权利，也是对项目领导者权力的一种**有效制衡**。如果项目“跑偏”了，社区随时可以 “fork” 一份代码，另起炉灶。
 
+-----
 
+## **3. 本书结构：跟着项目生命周期走**
 
-***
+这本书的章节是按照一个项目的生命周期来组织的。了解这个脉络，能帮你更好地理解自己所翻译章节的上下文。
 
-### **3. Book Structure Overview**
+  * **第一部分：从零开始 (Getting Started):** 介绍项目的起步阶段——如何选择许可证、给项目取名，以及搭建好版本控制、网站、Bug 跟踪器等基础设施。
+  * **第二部分：技术硬核 (The Technical Side):** 讨论像版本控制（特别是 Subversion，但其理念同样适用于 Git）、Bug 跟踪器和自动化测试这类必备工具。
+  * **第三部分：管人理事 (Managing People):** 这是**本书的灵魂**。内容涵盖如何管理志愿者、构建沟通渠道、应对“有毒”的难缠人物 (poisonous people)，以及如何发展壮大社区。
+  * **第四部分：钱、法律和商业 (Money, Law, and Business):** 探讨那些不那么技术但同样重要的话题，比如项目资金、版权、商标，以及如何与商业公司打交道。
 
-The book guides the reader chronologically through the lifecycle of a project. Understanding this flow will help you place your specific section within the larger narrative.
+举个例子，如果你在翻译第三部分的内容，要记得，读者在第二部分里已经了解了相关的技术背景。
 
-* **Part I: Getting Started:** Covers the initial steps—choosing a license, naming the project, and setting up the basic infrastructure (version control, website, bug tracker).
-* **Part II: The Technical Side:** Discusses essential tools like version control (specifically Subversion, though the concepts apply to Git as well), bug trackers, and automated testing.
-* **Part III: Managing People:** This is the heart of the book. It covers managing volunteers, structuring communication, handling difficult personalities ("poisonous people"), and growing the community.
-* **Part IV: Money, Law, and Business:** Addresses the less technical but equally important aspects like funding, copyrights, trademarks, and interacting with corporations.
+-----
 
-If you are translating a chapter from Part III, for example, remember that the reader has already been introduced to the technical setup in Part II.
+## **4. 作者文风：我们要模仿的“内味儿”**
 
-***
+Karl Fogel 的写作风格是本书成功的关键。你的翻译也应该力求复制这种感觉。
 
-### **4. Author's Tone and Style**
+  * **权威但谦逊 (Authoritative but Humble):** Fogel 的建议源于他深厚的经验，但他从不摆架子。他总是将自己的建议作为一种“经验观察”来呈现，而不是不容置疑的“金科玉律”。翻译时，语气要像一个**资深大佬在耐心分享经验**，而不是高高在上地说教。
+  * **实用至上，直截了当 (Practical and Direct):** 语言风格非常干脆，直奔主题。请**避免使用过于学术化、官方化或“大厂黑话”式**的语言。
+  * **鼓励人心，感同身受 (Encouraging and Empathetic):** 作者非常理解运营一个志愿者项目的艰辛。字里行间应该让人感觉像是在听一位**充满智慧和经验的前辈**促膝长谈，为你指点迷津。
+  * **风格轻松，不拘一格 (Slightly Informal):** 书中会用一些类比和偶尔的幽默来让观点更接地气。你可以大胆地寻找**符合中文互联网语境的、功能对等的“梗”或说法**，但不必强求。
 
-Karl Fogel's writing style is a key part of the book's success. Your translation should aim to replicate it.
+-----
 
-* **Authoritative but Humble:** Fogel writes from deep experience, but he is never arrogant. He presents his advice as observations of what has worked, not as absolute laws.
-* **Practical and Direct:** The language is straightforward and to the point. Avoid overly academic, formal, or corporate-sounding language. Use contractions where it sounds natural in your target language.
-* **Encouraging and Empathetic:** The author understands the challenges of running a volunteer project. The tone should feel like advice from a wise and experienced mentor.
-* **Slightly Informal:** The book uses analogies and occasional humor to make points more accessible. Feel free to find culturally appropriate equivalents in your target language, but don't force it.
+## **5. 翻译规范：术语和格式的“铁律”**
 
-***
+多人协作，一致性是第一要务。请严格遵守以下规则。
 
-### **5. Translation Guidelines: Terminology and Formatting**
+#### **核心术语**
 
-Consistency is the most important goal when many translators are working together. Please follow these rules carefully.
+我们**必须**建立一个共享的、实时更新的术语表。项目经理会负责这件事。以下是一些初始指导原则：
 
-#### **Key Terminology**
+  * **技术术语：保持英文，不要翻译！** 那些已经成为全球开发者通用语的词汇，请务必保留英文原文。强行翻译会引起混淆，显得非常不专业。
+      * **正面清单：** `commit`, `fork`, `repository` (或 `repo`), `pull request` (或 `PR`), `branch`, `merge`, `bug`, `patch`, `release`, `API` 等。
+      * **一个简单的判断标准：** 如果一个词你会在命令行里敲进去 (`git commit`)，那就**绝对不要翻译**它。
+  * **软件和项目名称：** 永远保持原样（例如 `Subversion`, `Apache`, `Linux`, `GNU`）。
+  * **缩略词 (Acronyms):** 对于常见的缩略词，如 `FAQ` (Frequently Asked Questions) 或 `FOSS` (Free and Open Source Software)，在第一次出现时，应给出完整的中文翻译，并在括号中附上英文缩写。例如：“常见问题解答 (FAQ)”。之后再出现时，可直接使用缩写。
+  * **代码片段和网址 (URLs):** 任何代码块或 URL 中的内容都**严禁翻译**。请原样保留。
 
-A shared, live glossary of terms is **essential**. The project manager should set one up. Here are some initial guidelines:
+#### **格式**
 
-* **Do Not Translate Technical Jargon:** Terms that are part of the global developer vocabulary should remain in English. Translating them will cause confusion.
-    * **Examples:** `commit`, `fork`, `repository` (or `repo`), `pull request`, `branch`, `merge`, `bug`, `patch`, `release`, `API`.
-    * **Rule of Thumb:** If it's a command you'd type into a terminal (`git commit`), do not translate it.
-* **Software and Project Names:** Always keep these in their original form (e.g., `Subversion`, `Apache`, `Linux`, `GNU`).
-* **Acronyms:** For common acronyms like `FAQ` (Frequently Asked Questions) or `FOSS` (Free and Open Source Software), provide the full translated phrase followed by the acronym in parentheses on the first use, e.g., "Preguntas Frecuentes (FAQ)". After that, you can just use the acronym.
-* **Code Snippets and URLs:** Never translate content within code blocks or URLs. Preserve them exactly as they appear in the original text.
+  * **`等宽字体 (Monospaced Text)`:** 原文中使用等宽字体来表示命令、文件名和代码。请务必保留这种格式。
+  * **斜体和粗体 (Italics and Bold):** 请完全复制原文中用斜体表示强调、用粗体表示关键术语的用法。
 
-#### **Formatting**
+#### **文化差异和本地化**
 
-* **`Monospaced Text`:** The original uses monospaced fonts for commands, filenames, and code. Please preserve this formatting.
-* **Italics and Bold:** Replicate the original's use of italics for emphasis and bolding for key terms.
+  * **俗语和比喻 (Idioms and Metaphors):** Fogel 有时会用一些英文特有的习语。**千万不要直译！** 而是要找到一个在中文语境下功能对等的表达，能传递出相同的含义和感觉。
+      * *举例：* 如果原文说某个方法 "not rocket science" (不是火箭科学)，你应该翻译成类似“**没什么技术含量**”、“**小菜一碟**”或“**有手就行**”这种地道的说法，而不是生硬地翻译成“这不是火箭科学”。
 
-#### **Cultural Nuances**
+-----
 
-* **Idioms and Metaphors:** Fogel sometimes uses English-specific idioms. Do not translate these literally. Find a functionally equivalent expression in your target language that captures the same meaning and tone.
-    * *Example:* If the text says a certain approach is "not rocket science," translate it to an equivalent local phrase meaning "it's not very difficult."
-
-Thank you for your hard work in making this essential resource available to a wider audience. Your efforts will help countless software projects around the world succeed. 🌎✨
-
-
-你的目标翻译语言是: 2025 年的简体中文。可以使用 2025 年中文互联网 (知乎小红书哔哩哔哩微信抖音快手) 的表达方式，但不要太随意，别太抽象，翻译时采用原文的情绪。
-
-***
-
-### **6. 项目目录结构与翻译流程**
+## **6. 项目目录与翻译流程**
 
 为了方便协作和版本控制，我们采用了以下的目录结构：
 
-*   `book/en/`: 这个目录存放的是从官方 SVN 仓库下载的 **英文原文**。这里的文件是 **只读** 的，请不要修改它们。当你需要对照原文时，请参考这里的文件。
-*   `book/zh/`: 这是我们的 **中文翻译工作区**。所有的翻译工作都在这个目录下进行。我们已经将英文原文完整地复制了一份到这里。
+  * `book/en/`: 这个目录存放的是从官方 SVN 仓库下载的 **英文原文**。这里的文件是 **只读** 的，请不要修改它们。当你需要对照原文时，请参考这里的文件。
+  * `book/zh/`: 这是我们的 **中文翻译工作区**。所有的翻译工作都在这个目录下进行。我们已经将英文原文完整地复制了一份到这里。
 
 #### **如何开始翻译**
 
-1.  **选择文件**: 从 `book/zh/` 目录中选择一个你想要翻译的 `.xml` 文件 (例如 `ch01.xml`)。
-2.  **进行翻译**: 打开文件，你会看到类似下面的 XML 结构：
+1.  **认领文件**: 从 `book/zh/` 目录中选择一个你想要翻译的 `.xml` 文件 (例如 `ch01.xml`)。
+
+2.  **动手翻译**: 打开文件，你会看到类似下面的 XML 结构：
 
     ```xml
     <para>
@@ -102,7 +96,7 @@ Thank you for your hard work in making this essential resource available to a wi
     </para>
     ```
 
-    你需要做的是，将 `<para>` 和 `</para>` 标签之间的英文文本替换为简体中文译文：
+    你要做的就是，将 `<para>` 和 `</para>` 标签之间的英文文本替换为简体中文译文：
 
     ```xml
     <para>
@@ -110,8 +104,12 @@ Thank you for your hard work in making this essential resource available to a wi
     </para>
     ```
 
-3.  **注意事项**:
-    *   **不要修改 XML 标签**: 请务必保留所有的 XML 标签 (例如 `<para>`, `<emphasis>`, `<itemizedlist>` 等) 和它们的结构。只翻译标签之间的文本内容。
-    *   **保留英文术语**: 遵循第 5 节中的术语翻译准则，`commit`, `repository` 等技术术语应保留英文。
-    *   **提交你的工作**: 完成一个段落或章节的翻译后，请通过 Git 提交你的修改。
+3.  **注意事项** ⚠️:
 
+      * **不要修改 XML 标签**: 请务必保留所有的 XML 标签 (例如 `<para>`, `<emphasis>`, `<itemizedlist>` 等) 和它们的结构。**只翻译标签之间的文本内容**。
+      * **保留英文术语**: 遵循第 5 节中的术语翻译准则，`commit`, `repository` 等技术术语应保留英文。
+      * **提交你的工作**: 完成一个段落或章节的翻译后，请通过 Git 提交你的修改。
+
+-----
+
+感谢你为这个项目付出的努力，你的贡献将帮助全球无数的开源项目走向成功。让我们一起把这件有意义的事做好！ 🌎✨
