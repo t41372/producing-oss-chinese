@@ -13,6 +13,21 @@ Use AI to translate the entire book
 原作者: Karl Fogel
 
 
+## 这书不是有中文版吗？为什么还要让 AI 翻译
+
+这书的官方中文版翻译的烂到家了，我看到一半就受不了跑去看英文版了。句子翻译的乱七八糟，很多词翻译的也很奇怪，感觉像是早年的 Google 机器翻译。
+虽然我没这个精力手动翻译，但我们还有 AI 呀！
+
+AI 翻译很贵，但许多 coding agent，特别是 async coding agent，是按 requests 而非 token 计费的。不管你这个 task 跑了多久，他都只会吃掉一个 request 的额度。
+
+<img width="1717" height="726" alt="截圖 2025-09-03 下午4 36 45" src="https://github.com/user-attachments/assets/0f45512d-133a-4d04-a7df-939f91ae2f2a" />
+
+
+这对翻译整本书来说就很方便了()
+
+于是就有了这个仓库
+
+
 
 ## 一些相关的 prompt
 
