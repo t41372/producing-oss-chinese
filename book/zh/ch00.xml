@@ -1,122 +1,46 @@
 <preface id="preface">
-<title>Preface</title>
+<title>前言</title>
   
 <!-- ======================== SECTION ============================== -->
 <sect1 id="why">
-<title>Why Write This Book?</title>
+<title>为什么要写这本书？</title>
 
-<para>At parties, people no longer give me a blank stare when I tell
-them I work in open source software. "Oh, yes&nbsp;&mdash;&nbsp;like Linux?"
-they say. I nod eagerly in agreement. "Yes, exactly! That's what I
-do." It's nice not to be completely fringe anymore. In the past, the
-next question was usually fairly predictable: "How do you make money
-doing that?" To answer, I'd summarize the economics of free software:
-that there are organizations in whose interest it is to have certain
-software exist, but that they don't need to sell copies, they just
-want to make sure the software is available and maintained, as a tool
-instead of as a rentable monopoly.</para>
+<para>在聚会上，当我告诉别人我从事开源软件工作时，他们不再给我投来茫然的目光。"哦，是的&nbsp;&mdash;&nbsp;像 Linux 那样？"他们会说。我热切地点头同意。"是的，没错！这就是我做的。"不再完全处于边缘真是太好了。过去，下一个问题通常很容易预测："你是怎么靠那个赚钱的？"为了回答这个问题，我会总结自由软件的经济模式：有一些组织希望某些软件存在，但他们不需要销售副本，他们只是想确保软件可用且得到维护，将其作为工具而不是可出租的垄断产品。</para>
 
-<para>The next question is not always about money, though. The
-business case for open source software<footnote><para>The terms "open
-source software" and "free software" are essentially synonymous in
-this context; they are discussed more in <xref
-linkend="free-vs-open-source"/>.</para></footnote> is no longer so
-mysterious, and even non-programmers already understand&nbsp;&mdash;&nbsp;or at
-least are not surprised&nbsp;&mdash;&nbsp;that there are people employed at it
-full time. Instead, the next question is often "<emphasis>Oh, what's
-that like?</emphasis>"</para>
+<para>不过，下一个问题并不总是关于金钱。开源软件<footnote><para>术语"开源软件"和"自由软件"在这种语境下本质上是同义的；在<xref
+linkend="free-vs-open-source"/>中会有更多讨论。</para></footnote>的商业案例不再那么神秘，甚至非程序员也已经理解&nbsp;&mdash;&nbsp;或者至少不会感到惊讶&nbsp;&mdash;&nbsp;有人全职从事这项工作。相反，下一个问题往往是"<emphasis>哦，那是什么感觉？</emphasis>"</para>
 
-<para>I didn't have a satisfactory answer ready, and the harder I
-tried to come up with one, the more I realized how complex a topic it
-really is. Running a free software project is not exactly like
-running a business (imagine having to constantly negotiate the nature
-of your product with a group of random people of diverse motivations
-and interests, most of whom you've never met!).
-Nor, for various reasons, is it exactly like running a
-traditional non-profit organization, nor a government. It has
-similarities to all these things, but I have slowly come to the
-conclusion that free software is <foreignphrase>sui
-generis</foreignphrase>. There are many things with which it can be
-usefully compared, but none with which it can be equated. Indeed,
-even the assumption that free software projects can be "run" is a
-stretch. A free software project can be <emphasis>started</emphasis>,
-and it can be influenced by interested parties.
-But its assets cannot be made the property of any single owner, and as
-long as there are people somewhere&nbsp;&mdash;&nbsp;anywhere&nbsp;&mdash;&nbsp;interested in
-continuing it, it can never be unilaterally shut down. Everyone has
-infinite power; everyone has no power. It's an interesting situation.</para>
+<para>我当时没有准备好令人满意的答案，而且我越努力想出一个答案，就越意识到这个话题实际上有多复杂。运行一个自由软件项目与经营企业并不完全相同（想象一下，不得不与一群动机和兴趣各异的陌生人不断协商你产品的性质，其中大多数人你从未见过！）。
+由于各种原因，它也不完全像运行传统的非营利组织或政府。它与所有这些事物都有相似之处，但我慢慢得出结论，自由软件是<foreignphrase>独特的</foreignphrase>。有很多东西可以与它进行有效比较，但没有一个可以与之等同。实际上，甚至假设自由软件项目可以被"运行"都是一种延伸。自由软件项目可以被<emphasis>启动</emphasis>，可以被利益相关方影响。
+但其资产不能成为任何单一所有者的财产，只要在某个地方&nbsp;&mdash;&nbsp;任何地方&nbsp;&mdash;&nbsp;有人对继续它感兴趣，它就永远不会被单方面关闭。每个人都有无限的权力；每个人都没有权力。这是一个有趣的情况。</para>
 
-<para>That is why I wanted to write this book in the first place, and,
-a decade later, wanted to update it. Free software projects have
-evolved a distinct culture, an ethos in which the liberty to make the
-software do anything one wants is a central tenet. Yet the result of
-this liberty is not a scattering of individuals each going their own
-separate way with the code, but enthusiastic collaboration and frequent compromise. 
-Indeed, competence at cooperation itself is one of the most highly valued
-skills in free software. To manage these projects is to engage in a
-kind of hypertrophied cooperation, where one's ability not only to
-work with others but to come up with new ways of working together can
-result in tangible benefits to the software and the community that develops it. This book attempts to
-describe the techniques by which this may be done. It is by no means
-complete, but it is at least a beginning.</para>
+<para>这就是我当初想写这本书的原因，十年后又想更新它的原因。自由软件项目已经形成了一种独特的文化，一种以让软件做任何人想要的事情的自由为核心信条的风气。然而，这种自由的结果不是个体各自带着代码分道扬镳，而是热情的协作和频繁的妥协。
+实际上，协作本身的能力是自由软件中最受重视的技能之一。管理这些项目就是参与一种超常的协作，在这种协作中，一个人不仅要与他人合作，还要想出新的合作方式，这可以为软件和开发它的社区带来实实在在的好处。这本书试图描述实现这一目标的技术。它绝不是完整的，但至少是一个开始。</para>
 
-<para>Good free software is a worthy goal in itself, and I hope that
-readers who come looking for ways to achieve it will be satisfied with
-what they find here. But beyond that I also hope to convey something
-of the sheer pleasure to be had from working with a motivated team of
-open source developers, and from interacting with users in the
-wonderfully direct way that open source encourages. Participating in
-a successful free software project is a deep pleasure, and ultimately
-that's what keeps the whole system going.</para>
+<para>好的自由软件本身就是一个有价值的目标，我希望那些寻找实现方法的读者能对在这里找到的内容感到满意。但除此之外，我也希望传达一些与积极的开源开发者团队合作，以及以开源所鼓励的那种奇妙直接的方式与用户互动所带来的纯粹乐趣。参与一个成功的自由软件项目是一种深刻的快乐，最终这就是维持整个系统运转的原因。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="audience">
-<title>Who Should Read This Book?</title>
+<title>谁应该阅读这本书？</title>
 
-<para>This book is meant for managers and software developers who are
-considering starting an open source project, or who have started one
-and are wondering what to do now. It should also be helpful for
-people who just want to participate in an open source project but have
-never done so before.</para>
+<para>这本书是为那些考虑启动开源项目或已经启动项目但想知道现在该做什么的管理者和软件开发者而写的。对于那些只是想参与开源项目但以前从未参与过的人来说，它也应该很有帮助。</para>
 
-<para>The reader need not be a programmer, but should know basic
-software engineering concepts such as APIs, source code, compilers, and
-patches.</para>
+<para>读者不需要是程序员，但应该了解 API、源代码、编译器和补丁等基本软件工程概念。</para>
 
-<para>Prior experience with open source software, as either a user or
-a developer, is not necessary. Those who have worked in free software
-projects before will probably find at least some parts of the book a
-bit obvious, and may want to skip those sections. Because there's
-such a potentially wide range of audience experience, I've made an
-effort to label sections clearly, and to say when something can be
-skipped by those already familiar with the material.</para>
+<para>不需要有开源软件的先前经验，无论是作为用户还是开发者。那些以前在自由软件项目中工作过的人可能会发现这本书的至少某些部分有点显而易见，可能希望跳过这些部分。由于读者经验的潜在范围很广，我努力清楚地标记各个部分，并说明那些已经熟悉材料的人何时可以跳过某些内容。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="sources">
-<title>Sources</title>
+<title>资料来源</title>
 
-<para>Much of the raw material for the first edition of this book came
-from five years of working with the Subversion project (<ulink
-url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>).
-Subversion is an open source
-version control system, written from scratch, which was intended to (and did for a while) replace
-CVS as the <foreignphrase>de facto</foreignphrase> version control
-system of choice in the open source
-community.<footnote><para>Subversion was eventually supplanted by Git,
-one of several systems that implement "distributed version control",
-a style of working that is better suited to collaborative development
-than Subversion's centralized model.</para></footnote> The project was
-started by my employer, CollabNet (<ulink
-url="http://www.collab.net/" >http://www.collab.net/</ulink>), in early 2000,
-and thank goodness
-CollabNet understood right from the start how to run it as a truly
-collaborative, distributed effort. We got a lot of 
-developer buy-in early on; today the majority of developers on the
-project are not CollabNet employees.</para>
+<para>这本书第一版的大部分原始素材来自于与 Subversion 项目(<ulink
+url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>)五年的工作经验。
+Subversion 是一个开源版本控制系统，从零开始编写，旨在（并且确实在一段时间内）取代 CVS，成为开源社区首选的<foreignphrase>事实上的</foreignphrase>版本控制系统。<footnote><para>Subversion 最终被 Git 取代，Git 是实现"分布式版本控制"的几个系统之一，这种工作方式比 Subversion 的集中式模型更适合协作开发。</para></footnote>该项目于 2000 年初由我的雇主 CollabNet (<ulink
+url="http://www.collab.net/" >http://www.collab.net/</ulink>) 启动，谢天谢地，CollabNet 从一开始就明白如何将其作为真正的协作式、分布式工作来运行。我们很早就获得了很多开发者的支持；如今该项目的大多数开发者都不是 CollabNet 的员工。</para>
 
 <para>Subversion is in many ways a classic example of an open source
 project, and I ended up drawing on it more heavily than I originally
