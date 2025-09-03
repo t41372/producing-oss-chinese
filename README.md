@@ -13,6 +13,11 @@ Use AI to translate the entire book
 原作者: Karl Fogel
 
 
+
+## 一些相关的 prompt
+
+一些跟 setup 相关的 prompt 在下面。翻译用的 prompt 在 agents.md 里面。
+
 ### context doc prompt
 ```markdown
 We will be deligating the translation work of the book "Producing Open Source Software:
