@@ -1,28 +1,12 @@
 <chapter id="getting-started">
 
-<title>Getting Started</title>
+<title>入门</title>
 
 <simplesect>
 
-<para>Starting a free software project is a twofold task.  The
-software needs to acquire users, and to acquire developers.  These two
-needs are not necessarily in conflict, but the interaction between
-them adds some complexity to a project's initial presentation.  Some
-information is useful for both audiences, some is useful only for one
-or the other.  Both kinds of information should subscribe to the
-<firstterm>principle of scaled presentation</firstterm>: the degree of detail presented at
-each stage should correspond to the amount of time and effort put in
-by the reader at that stage.  More effort should always result in more
-reward.  When effort and reward do not correlate reliably, people
-lose faith and stop investing effort.</para>
+<para>启动一个自由软件项目是一项双重任务。软件需要获得用户，也需要获得开发者。这两个需求不一定相冲突，但它们之间的相互作用为项目的初始展示增加了一些复杂性。某些信息对两个受众都有用，某些信息只对其中一个有用。两种信息都应该遵循<firstterm>分层展示原则</firstterm>：每个阶段呈现的详细程度应该与读者在该阶段投入的时间和精力相对应。更多的努力应该总是带来更多的回报。当努力和回报没有可靠的相关性时，人们就会失去信心并停止投入努力。</para>
 
-<para>The corollary to this is that <emphasis>appearances
-matter</emphasis>.  Programmers, in particular, often don't like to
-believe this.  Their love of substance over form is almost a point of
-professional pride.  It's no accident that so many programmers exhibit
-an antipathy for marketing and public relations work, nor that
-professional graphic designers are often horrified at the designs
-programmers come up with on their own.</para>
+<para>这个推论是<emphasis>外观很重要</emphasis>。特别是程序员，往往不愿意相信这一点。他们对实质重于形式的热爱几乎是职业自豪感的一个要点。许多程序员表现出对营销和公关工作的反感并非偶然，专业图形设计师经常对程序员自己想出的设计感到恐惧也并非偶然。</para>
 
 <para>This is a pity, because there are situations where form
 <emphasis>is</emphasis> substance, and project presentation is one of

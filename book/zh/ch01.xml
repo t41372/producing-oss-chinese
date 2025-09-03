@@ -14,92 +14,27 @@ linkend="free-vs-open-source"/>。</para></footnote>&nbsp;&mdash;&nbsp;已经成
 
 <para>这本书将不仅探讨如何正确地做开源，还会探讨如何做错，这样你就能及早识别和纠正问题。我希望读完这本书后，你将拥有一套技术，不仅可以避免常见的陷阱，还可以处理成功项目的增长和维护。成功不是零和游戏，这本书不是关于获胜或领先于竞争对手。实际上，运营开源项目的重要部分是与其他相关项目顺利合作。从长远来看，每个成功的项目都有助于全世界自由软件整体的福祉。</para>
 
-<para>It would be tempting to say that when free software projects
-fail, they do so for the same sorts of reasons proprietary software
-projects do.  Certainly, free software has no monopoly on unrealistic
-requirements, vague specifications, poor staff management, ignoring
-user feedback, or any of the other hobgoblins already well known to
-the software industry.  There is a huge body of writing on these
-topics, and I will try not to duplicate it in this book.  Instead, I
-will attempt to describe the problems peculiar to free software.  When
-a free software project runs aground, it is often because the
-participants did not appreciate the unique problems of open source
-software development, even though they might be quite well-prepared
-for the familiar difficulties that afflict software development
-generally.</para>
+<para>很容易说当自由软件项目失败时，它们失败的原因与专有软件项目相同。当然，自由软件在不切实际的需求、模糊的规范、糟糕的员工管理、忽视用户反馈或软件行业已经众所周知的任何其他麻烦方面并没有垄断地位。关于这些主题有大量的著作，我会尽量不在这本书中重复。相反，我将尝试描述自由软件特有的问题。当自由软件项目搁浅时，往往是因为参与者没有意识到开源软件开发的独特问题，尽管他们可能对影响软件开发的熟悉困难做好了充分准备。</para>
 
-<para>One of the most common mistakes is unrealistic expectations
-about the benefits of open source itself.  An open license does not
-guarantee that hordes of active developers will suddenly devote their
-time to your project, nor does open-sourcing a troubled project
-automatically cure its ills.  In fact, quite the opposite: opening up
-a project can add whole new sets of complexities, and cost
-<emphasis>more</emphasis> in the short term than simply keeping it
-in-house.<footnote><para>In 2018 my partner James Vasile and I worked
-with the Mozilla Corporation on some research that eventually became
-the report <citetitle>Open Source Archetypes: A Framework For
-Purposeful Open Source</citetitle> (<ulink
+<para>最常见的错误之一是对开源本身的好处抱有不切实际的期望。开放许可并不能保证大量活跃的开发者会突然将他们的时间奉献给你的项目，开源一个有问题的项目也不会自动治愈其弊病。事实上，恰恰相反：开放项目可能会增加全新的复杂性，在短期内<emphasis>更加</emphasis>昂贵，而不是简单地保持内部开发。<footnote><para>2018年，我的合作伙伴 James Vasile 和我与 Mozilla 公司合作进行了一些研究，最终形成了报告《开源原型：有目的的开源框架》(<ulink
 url="https://opentechstrategies.com/archetypes"
->https://opentechstrategies.com/archetypes</ulink>).  That research and
-resultant report have been very helpful to us (and, so we hear,
-to others) in thinking about the <emphasis>strategic</emphasis> use of
-open source to achieve larger organizational purposes.  If you think
-that might be useful to you, then take a look at the report.  Since
-this book is not about those kinds of strategy questions
-<foreignphrase>per se</foreignphrase>, I don't discuss the archetypes
-much here.  However, they may be useful to you, in conjunction with
-this book, if the questions you're trying to answer are not only about
-<emphasis>how</emphasis> to run a successful open source project but
-about <emphasis>why</emphasis> to do so in the first
-place.</para></footnote></para>
+>https://opentechstrategies.com/archetypes</ulink>)。该研究和结果报告对我们（据我们所知，对其他人也是如此）在考虑<emphasis>战略性</emphasis>使用开源来实现更大的组织目标方面非常有帮助。如果你认为这可能对你有用，那么请查看报告。由于这本书<foreignphrase>本身</foreignphrase>不是关于那些策略问题的，我在这里不会过多讨论这些原型。但是，如果你试图回答的问题不仅是关于<emphasis>如何</emphasis>运行一个成功的开源项目，还有<emphasis>为什么</emphasis>要这样做，那么它们可能对你有用，可以与这本书结合使用。</para></footnote></para>
 
-<para>Opening up means arranging the code to be comprehensible to
-complete strangers, writing development documentation, and setting
-discussion forums and other collaboration tools (this is discussed in
-more detail in <xref linkend="technical-infrastructure"/>).</para>
+<para>开放意味着安排代码让完全陌生的人能够理解，编写开发文档，以及设置讨论论坛和其他协作工具（这在<xref linkend="technical-infrastructure"/>中有更详细的讨论）。</para>
 
-<para>All of this is work, and is pure overhead at first.  If any
-interested developers <emphasis>do</emphasis> show up, there is the
-added burden of answering their questions for a while before seeing
-any benefit from their presence.  As developer Jamie Zawinski said
-about the troubled early days of the Mozilla project:</para>
+<para>所有这些都是工作，一开始纯粹是开销。如果确实有感兴趣的开发者出现，在看到他们的存在带来任何好处之前，还有回答他们问题的额外负担。正如开发者 Jamie Zawinski 对 Mozilla 项目困难的早期所说的：</para>
 
     <blockquote>
-      <para><emphasis>Open source does work, but it is most definitely
-      not a panacea.  If there's a cautionary tale here, it is that
-      you can't take a dying project, sprinkle it with the magic pixie
-      dust of "open source," and have everything magically work
-      out. Software is hard.  The issues aren't that simple.</emphasis></para>
+      <para><emphasis>开源确实有效，但绝对不是万能药。如果这里有一个警示故事，那就是你不能拿一个濒死的项目，在上面撒上"开源"的魔法精灵粉，然后让一切神奇地解决。软件很难。问题没有那么简单。</emphasis></para>
 
-      <para>(from <emphasis role="bold"><ulink
+      <para>（来自 <emphasis role="bold"><ulink
       url="https://www.jwz.org/gruntle/nomo.html"
-      >https://www.jwz.org/gruntle/nomo.html</ulink></emphasis>)</para>
+      >https://www.jwz.org/gruntle/nomo.html</ulink></emphasis>）</para>
     </blockquote>
 
-<para>A related mistake is that of skimping on presentation and
-packaging, figuring that these can always be done later, when the
-project is well under way.  Presentation and packaging comprise a wide
-range of tasks, all revolving around the theme of clearing away
-distractions and cognitive barriers for newcomers&nbsp;&mdash;&nbsp;reducing the
-amount of work they need to do to get from wherever they are to "the
-next step" of engagement.  The web site has to look good, the
-software's compilation, packaging, and installation should be as
-automated as possible, etc.</para>
+<para>一个相关的错误是在展示和打包方面偷工减料，认为这些总是可以稍后完成，当项目进展顺利时。展示和打包包括广泛的任务，都围绕着为新手清除干扰和认知障碍的主题&nbsp;&mdash;&nbsp;减少他们从任何地方到参与的"下一步"需要做的工作量。网站必须看起来不错，软件的编译、打包和安装应该尽可能自动化，等等。</para>
 
-<para>Many programmers unfortunately treat this kind of work as being
-of secondary importance to the code itself.  There are a couple of
-reasons for this.  First, it can feel like busywork, because its
-benefits are most visible to those least familiar with the
-project&nbsp;&mdash;&nbsp;and vice versa: after all, the people who
-develop the code don't really need the packaging.  They already know
-how to install, administer, and use the software, because they wrote
-it.  Second, the skills required to do presentation and packaging well
-are often completely different from those required to write code.
-People tend to focus on what they're good at, even if it might serve
-the project better to spend a little time on something that suits them
-less.  <xref linkend="getting-started"/> discusses presentation and
-packaging in detail, and explains why it's crucial that they be a
-priority from the very start of the project.</para>
+<para>不幸的是，许多程序员将这种工作视为次要于代码本身的重要性。这有几个原因。首先，它可能感觉像是繁忙工作，因为它的好处对那些最不熟悉项目的人最明显&nbsp;&mdash;&nbsp;反之亦然：毕竟，开发代码的人并不真正需要打包。他们已经知道如何安装、管理和使用软件，因为他们编写了软件。其次，做好展示和打包所需的技能往往与编写代码所需的技能完全不同。人们倾向于专注于他们擅长的事情，即使花一点时间在不太适合他们的事情上可能更好地服务于项目。<xref linkend="getting-started"/>详细讨论了展示和打包，并解释了为什么从项目一开始就将它们作为优先事项是至关重要的。</para>
 
 <para>Next comes the fallacy that little or no project management is
 required in open source, or conversely, that the same management
