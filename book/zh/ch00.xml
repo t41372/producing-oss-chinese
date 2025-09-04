@@ -26,67 +26,26 @@ generis</foreignphrase>（独特的）。有很多事物可以与之进行有用
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="audience">
-<title>Who Should Read This Book?</title>
+<title>谁应该阅读这本书？</title>
 
-<para>This book is meant for managers and software developers who are
-considering starting an open source project, or who have started one
-and are wondering what to do now. It should also be helpful for
-people who just want to participate in an open source project but have
-never done so before.</para>
+<para>这本书面向正在考虑启动开源项目的管理者和软件开发者，或者已经启动了一个项目但不知道现在该做什么的人。对于那些只是想参与开源项目但从未做过的人来说，这本书也应该很有帮助。</para>
 
-<para>The reader need not be a programmer, but should know basic
-software engineering concepts such as APIs, source code, compilers, and
-patches.</para>
+<para>读者不必是程序员，但应该了解基本的软件工程概念，如 API、源代码、编译器和 patch。</para>
 
-<para>Prior experience with open source software, as either a user or
-a developer, is not necessary. Those who have worked in free software
-projects before will probably find at least some parts of the book a
-bit obvious, and may want to skip those sections. Because there's
-such a potentially wide range of audience experience, I've made an
-effort to label sections clearly, and to say when something can be
-skipped by those already familiar with the material.</para>
+<para>作为用户或开发者的开源软件经验不是必需的。那些以前在自由软件项目中工作过的人可能会发现本书的某些部分有点显而易见，可能想要跳过这些章节。由于读者的经验范围可能很广，我努力清楚地标记章节，并说明那些已经熟悉材料的人可以跳过什么时候。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="sources">
-<title>Sources</title>
+<title>资料来源</title>
 
-<para>Much of the raw material for the first edition of this book came
-from five years of working with the Subversion project (<ulink
-url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>).
-Subversion is an open source
-version control system, written from scratch, which was intended to (and did for a while) replace
-CVS as the <foreignphrase>de facto</foreignphrase> version control
-system of choice in the open source
-community.<footnote><para>Subversion was eventually supplanted by Git,
-one of several systems that implement "distributed version control",
-a style of working that is better suited to collaborative development
-than Subversion's centralized model.</para></footnote> The project was
-started by my employer, CollabNet (<ulink
-url="http://www.collab.net/" >http://www.collab.net/</ulink>), in early 2000,
-and thank goodness
-CollabNet understood right from the start how to run it as a truly
-collaborative, distributed effort. We got a lot of 
-developer buy-in early on; today the majority of developers on the
-project are not CollabNet employees.</para>
+<para>本书第一版的大部分原始材料来自与 Subversion 项目（<ulink
+url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>）合作的五年经验。
+Subversion 是一个开源版本控制系统，从头开始编写，旨在（并且确实在一段时间内）取代 CVS 成为开源社区首选的 <foreignphrase>de facto</foreignphrase> 版本控制系统。<footnote><para>Subversion 最终被 Git 取代，Git 是实现"分布式版本控制"的几个系统之一，这种工作方式比 Subversion 的中心化模式更适合协作开发。</para></footnote> 该项目由我的雇主 CollabNet（<ulink
+url="http://www.collab.net/" >http://www.collab.net/</ulink>）于 2000 年初启动，谢天谢地，CollabNet 从一开始就理解如何将其作为一个真正协作的分布式努力来运行。我们早期获得了很多开发者的支持；今天项目中的大多数开发者都不是 CollabNet 的员工。</para>
 
-<para>Subversion is in many ways a classic example of an open source
-project, and I ended up drawing on it more heavily than I originally
-expected. This was partly a matter of convenience: whenever I needed
-an example of a particular phenomenon, I could usually call one up
-from Subversion right off the top of my head. But it was also a
-matter of verification. Although I am involved in many other free software
-projects to varying degrees, and talk to colleagues
-involved in many more, one quickly realizes when writing for print
-that all assertions need to be fact-checked. I didn't want to make
-statements about events in other projects based only on what I could
-read in their public discussion archives. If someone were to try
-that with Subversion, I knew, she'd be right about half the time and
-wrong the other half. So when drawing inspiration or examples from a
-project with which I didn't have direct experience, I tried to first
-talk to an informant there, someone I could trust to explain what was
-really going on.</para>
+<para>Subversion 在很多方面都是开源项目的经典例子，我最终比最初预期的更多地借鉴了它。这部分是为了方便：每当我需要一个特定现象的例子时，我通常可以立即从 Subversion 中想起一个。但这也是为了验证。虽然我在不同程度上参与了许多其他自由软件项目，并与参与更多项目的同事交谈，但在为印刷品写作时，人们很快意识到所有断言都需要事实核查。我不想仅仅基于我能在他们的公共讨论档案中读到的内容对其他项目中的事件发表声明。我知道，如果有人试图用 Subversion 这样做，她有一半时间是对的，另一半时间是错的。所以当从我没有直接经验的项目中汲取灵感或例子时，我试图首先与那里的知情人交谈，一个我可以信任的人来解释真正发生了什么。</para>
 
 <para>While Subversion was my full time job from 2000-2006, I've been
 involved in free software for more than twenty-five years. Other projects and organizations that have influenced
