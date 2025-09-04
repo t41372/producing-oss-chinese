@@ -1,88 +1,26 @@
 <chapter id="introduction">
 
-<title>Introduction</title>
+<title>引言</title>
 
 <simplesect>
 
-<para>Free software&nbsp;&mdash;&nbsp;open source
-software<footnote><para>The terms are synonymous, as mentioned in
-<!-- I thought I was going to have to add the xrefstyle="the %t"
-     attribute to the xref below, but DocBook knew that the target was
-     a chapter-like thing not a section-like thing and didn't add any
-     words, so the "the" in the running text is enough. -->
-the <xref linkend="preface"/>.  See <xref
-linkend="free-vs-open-source"/> for
-more.</para></footnote>&nbsp;&mdash;&nbsp;has become the backbone of
-modern information technology.  It runs on your phone, on your laptop
-and desktop computers, and in embedded microcontrollers for household
-appliances, automobiles, industrial machinery and countless other
-devices that we too often forget even have software.  Open source is
-especially prevalent on the servers that provide online services on
-the Internet.  Every time you send an email, visit a web site, or call
-up some information on your smartphone, a significant portion of the
-activity is handled by open source software.</para>
+<para>自由软件&nbsp;&mdash;&nbsp;开源软件<footnote><para>这两个术语是同义的，如<xref linkend="preface"/>中所提到的。更多内容见<xref
+linkend="free-vs-open-source"/>。</para></footnote>&nbsp;&mdash;&nbsp;已经成为现代信息技术的支柱。它运行在你的手机上、笔记本电脑和台式机上，以及家用电器、汽车、工业机械和无数其他我们经常忘记甚至有软件的设备中的嵌入式微控制器上。开源在提供互联网在线服务的服务器上尤其普遍。每次你发送电子邮件、访问网站或在智能手机上查找信息时，活动的很大一部分都由开源软件处理。</para>
 
-<para>Yet it is also largely invisible, even to many of the people who
-work in technology.  Open source's nature is to fade into the
-background and go unnoticed<footnote><para>See "Spot The Pattern: Commoditization", by James Vasile, at
+<para>然而，即使对许多在技术领域工作的人来说，它也在很大程度上是不可见的。开源的本质是淡入背景，不被注意<footnote><para>参见 James Vasile 的 "Spot The Pattern: Commoditization"，网址：
 <ulink url="https://blog.opentechstrategies.com/2019/10/commoditization/" 
->https://blog.opentechstrategies.com/2019/10/commoditization/</ulink></para></footnote> except by those whose work touches it
-directly.  It is the oxygen of computing.  We all breathe, but few
-of us stop to think about where the air comes from.</para>
+>https://blog.opentechstrategies.com/2019/10/commoditization/</ulink></para></footnote>，除了那些工作直接接触它的人。它是计算的氧气。我们都在呼吸，但很少有人停下来思考空气从哪里来。</para>
 
-<para>If you've read this far, though, you're already one of the
-people who wonders where the oxygen comes from, and probably want to
-create some yourself.</para>
+<para>不过，如果你读到这里，你已经是那些想知道氧气从哪里来的人之一，并且可能想要自己创造一些。</para>
 
-<para>This book will examine not only how to do open source right, but
-how to do it wrong, so you can recognize and correct problems early.
-My hope is that after reading it, you will have a repertory of
-techniques not just for avoiding common pitfalls, but for dealing with
-the growth and maintenance of a successful project.  Success is not a
-zero-sum game, and this book is not about winning or getting ahead of
-the competition.  Indeed, an important part of running an open source
-project is working smoothly with other, related projects.  In the long
-run, every successful project contributes to the well-being of the
-overall, worldwide body of free software.</para>
+<para>本书将不仅研究如何正确地进行开源，还研究如何错误地进行，这样你就可以及早识别和纠正问题。我希望在阅读之后，你将拥有一系列技术，不仅可以避免常见陷阱，还可以处理成功项目的增长和维护。成功不是零和游戏，本书不是关于获胜或领先于竞争对手的。实际上，运行开源项目的一个重要部分是与其他相关项目顺利合作。从长远来看，每个成功的项目都为整个世界自由软件体系的福祉做出贡献。</para>
 
-<para>It would be tempting to say that when free software projects
-fail, they do so for the same sorts of reasons proprietary software
-projects do.  Certainly, free software has no monopoly on unrealistic
-requirements, vague specifications, poor staff management, ignoring
-user feedback, or any of the other hobgoblins already well known to
-the software industry.  There is a huge body of writing on these
-topics, and I will try not to duplicate it in this book.  Instead, I
-will attempt to describe the problems peculiar to free software.  When
-a free software project runs aground, it is often because the
-participants did not appreciate the unique problems of open source
-software development, even though they might be quite well-prepared
-for the familiar difficulties that afflict software development
-generally.</para>
+<para>人们很容易说，当自由软件项目失败时，它们失败的原因与专有软件项目相同。当然，自由软件在不切实际的需求、模糊的规范、糟糕的人员管理、忽视用户反馈或软件行业已经熟知的任何其他问题上并没有垄断。关于这些主题有大量的著作，我将尽量不在本书中重复它们。相反，我将尝试描述自由软件特有的问题。当自由软件项目搁浅时，通常是因为参与者没有理解开源软件开发的独特问题，即使他们可能为一般影响软件开发的熟悉困难做好了充分准备。</para>
 
-<para>One of the most common mistakes is unrealistic expectations
-about the benefits of open source itself.  An open license does not
-guarantee that hordes of active developers will suddenly devote their
-time to your project, nor does open-sourcing a troubled project
-automatically cure its ills.  In fact, quite the opposite: opening up
-a project can add whole new sets of complexities, and cost
-<emphasis>more</emphasis> in the short term than simply keeping it
-in-house.<footnote><para>In 2018 my partner James Vasile and I worked
-with the Mozilla Corporation on some research that eventually became
-the report <citetitle>Open Source Archetypes: A Framework For
-Purposeful Open Source</citetitle> (<ulink
+<para>最常见的错误之一是对开源本身的好处有不切实际的期望。开放许可证并不能保证大量活跃的开发者会突然把时间投入到你的项目中，开源一个陷入困境的项目也不会自动治愈它的弊病。实际上，恰恰相反：开放一个项目可能会增加全新的复杂性，短期内比简单地将其保持在内部<emphasis>花费更多</emphasis>。<footnote><para>2018 年，我的合作伙伴 James Vasile 和我与 Mozilla Corporation 合作进行了一些研究，最终成为报告《Open Source Archetypes: A Framework For
+Purposeful Open Source》（<ulink
 url="https://opentechstrategies.com/archetypes"
->https://opentechstrategies.com/archetypes</ulink>).  That research and
-resultant report have been very helpful to us (and, so we hear,
-to others) in thinking about the <emphasis>strategic</emphasis> use of
-open source to achieve larger organizational purposes.  If you think
-that might be useful to you, then take a look at the report.  Since
-this book is not about those kinds of strategy questions
-<foreignphrase>per se</foreignphrase>, I don't discuss the archetypes
-much here.  However, they may be useful to you, in conjunction with
-this book, if the questions you're trying to answer are not only about
-<emphasis>how</emphasis> to run a successful open source project but
-about <emphasis>why</emphasis> to do so in the first
-place.</para></footnote></para>
+>https://opentechstrategies.com/archetypes</ulink>）。这项研究和最终的报告对我们（据我们所听，对其他人也是如此）在思考开源的<emphasis>战略</emphasis>使用以实现更大的组织目标方面非常有帮助。如果你认为这对你可能有用，那就看看这个报告。由于本书本身不是关于这些战略问题，我在这里不会过多讨论这些原型。但是，结合本书，如果你试图回答的问题不仅是<emphasis>如何</emphasis>运行一个成功的开源项目，还包括<emphasis>为什么</emphasis>要这样做，它们可能对你有用。</para></footnote></para>
 
 <para>Opening up means arranging the code to be comprehensible to
 complete strangers, writing development documentation, and setting

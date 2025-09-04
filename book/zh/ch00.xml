@@ -47,9 +47,7 @@ url="http://www.collab.net/" >http://www.collab.net/</ulink>）于 2000 年初�
 
 <para>Subversion 在很多方面都是开源项目的经典例子，我最终比最初预期的更多地借鉴了它。这部分是为了方便：每当我需要一个特定现象的例子时，我通常可以立即从 Subversion 中想起一个。但这也是为了验证。虽然我在不同程度上参与了许多其他自由软件项目，并与参与更多项目的同事交谈，但在为印刷品写作时，人们很快意识到所有断言都需要事实核查。我不想仅仅基于我能在他们的公共讨论档案中读到的内容对其他项目中的事件发表声明。我知道，如果有人试图用 Subversion 这样做，她有一半时间是对的，另一半时间是错的。所以当从我没有直接经验的项目中汲取灵感或例子时，我试图首先与那里的知情人交谈，一个我可以信任的人来解释真正发生了什么。</para>
 
-<para>While Subversion was my full time job from 2000-2006, I've been
-involved in free software for more than twenty-five years. Other projects and organizations that have influenced
-this book include:</para>
+<para>虽然 Subversion 是我 2000-2006 年的全职工作，但我参与自由软件已经超过二十五年了。影响本书的其他项目和组织包括：</para>
 
 <itemizedlist>
   <listitem><para>The GNU Emacs text editor project at the Free
