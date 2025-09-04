@@ -1,32 +1,14 @@
 <chapter id="social-infrastructure">
 
-<title>Social and Political Infrastructure</title>
+<title>社会和政治基础设施</title>
 
 <simplesect>
 
-<para>The first questions people usually ask about free software are
-"How does it work?  What keeps a project running?  Who makes the
-decisions?"  I'm always dissatisfied with bland responses about
-meritocracy, the spirit of cooperation, running code speaking for itself, etc.
-The fact is, the question is not easy to answer.  Meritocracy,
-cooperation, and running code are all part of it, but they do little
-to explain how projects actually make decisions on a day-to-day basis, and say
-nothing about how conflicts are resolved.</para>
+<para>人们通常问关于自由软件的第一个问题是"它是如何工作的？什么让项目保持运行？谁做决定？" 我总是对关于精英制度、合作精神、运行代码本身说话等平淡回应感到不满。事实是，这个问题不容易回答。精英制度、合作和运行代码都是其中的一部分，但它们在解释项目实际上如何在日常基础上做决定方面作用很小，对冲突如何解决也只字未提。</para>
 
-<para>This chapter tries to show the structural properties
-successful projects have in common.  I mean "successful" not just in
-terms of technical quality, but in terms of operational health and
-survivability.  Operational health is the project's ongoing ability to
-incorporate new code contributions and new developers, and to be
-responsive to incoming bug reports.  Survivability is the project's
-ability to continue independently of any individual participant or
-sponsor&nbsp;&mdash;&nbsp;think of it as the likelihood that the project would
-continue even if all of its founding members were to move on to other
-things.<footnote><para>This is also known as the "<firstterm>Bus
-Factor</firstterm>", that is, how many participants would have to get hit by a bus
-(figuratively speaking) for the project to be unable to continue.  See
+<para>本章试图展示成功项目共有的结构性属性。我所说的"成功"不仅指技术质量，还指运营健康状况和生存能力。运营健康状况是项目持续整合新代码贡献和新开发者的能力，以及对传入 bug 报告的响应能力。生存能力是项目独立于任何个别参与者或赞助商继续存在的能力&nbsp;&mdash;&nbsp;可以将其视为即使所有创始成员都转向其他事情，项目仍会继续的可能性。<footnote><para>这也被称为"<firstterm>巴士系数</firstterm>"，即有多少参与者必须被巴士撞到（比喻意义上），项目才无法继续。参见
 <ulink url="https://en.wikipedia.org/wiki/Bus_factor"
-       >https://en.wikipedia.org/wiki/Bus_factor</ulink>.</para></footnote></para>
+       >https://en.wikipedia.org/wiki/Bus_factor</ulink>。</para></footnote></para>
 
 <para>There are various ways to achieve this kind of success.  Some
 involve a formal governance structure, by which debates are resolved,
