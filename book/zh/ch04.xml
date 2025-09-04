@@ -1,327 +1,88 @@
 <chapter id="social-infrastructure">
 
-<title>Social and Political Infrastructure</title>
+<title>社会与政治基础设施</title>
 
 <simplesect>
 
-<para>The first questions people usually ask about free software are
-"How does it work?  What keeps a project running?  Who makes the
-decisions?"  I'm always dissatisfied with bland responses about
-meritocracy, the spirit of cooperation, running code speaking for itself, etc.
-The fact is, the question is not easy to answer.  Meritocracy,
-cooperation, and running code are all part of it, but they do little
-to explain how projects actually make decisions on a day-to-day basis, and say
-nothing about how conflicts are resolved.</para>
+<para>人们通常对自由软件提出的第一个问题是：“它是如何运作的？是什么让一个项目持续运行？谁来做决定？”我对那些关于精英管理、合作精神、能运行的代码自己会说话之类的平淡回答总是不满意。事实是，这个问题不容易回答。精英管理、合作和能运行的代码都是其中的一部分，但它们几乎无法解释项目实际上是如何日常做出决定的，也完全没有说明冲突是如何解决的。</para>
 
-<para>This chapter tries to show the structural properties
-successful projects have in common.  I mean "successful" not just in
-terms of technical quality, but in terms of operational health and
-survivability.  Operational health is the project's ongoing ability to
-incorporate new code contributions and new developers, and to be
-responsive to incoming bug reports.  Survivability is the project's
-ability to continue independently of any individual participant or
-sponsor&nbsp;&mdash;&nbsp;think of it as the likelihood that the project would
-continue even if all of its founding members were to move on to other
-things.<footnote><para>This is also known as the "<firstterm>Bus
-Factor</firstterm>", that is, how many participants would have to get hit by a bus
-(figuratively speaking) for the project to be unable to continue.  See
-<ulink url="https://en.wikipedia.org/wiki/Bus_factor"
-       >https://en.wikipedia.org/wiki/Bus_factor</ulink>.</para></footnote></para>
+<para>本章试图展示成功项目共有的结构性特征。我所说的“成功”不仅指技术质量，也指运营健康和生存能力。运营健康是项目持续吸收新代码贡献和新开发者，并对收到的 bug 报告做出响应的能力。生存能力是项目独立于任何个体参与者或赞助商继续存在的能力——可以把它看作是即使所有创始成员都转向其他事情，项目仍能继续下去的可能性。<footnote><para>这也被称为“<firstterm>巴士系数 (Bus Factor)</firstterm>”，即需要有多少参与者被巴士撞到（比喻说法），项目才会无法继续。参见<ulink url="https://en.wikipedia.org/wiki/Bus_factor">https://en.wikipedia.org/wiki/Bus_factor</ulink>。</para></footnote></para>
 
-<para>There are various ways to achieve this kind of success.  Some
-involve a formal governance structure, by which debates are resolved,
-new developers are invited in (and sometimes out), new features
-planned, and so on.  Others use a less formal structure, but more
-personal self-restraint on the part of leaders, to produce an atmosphere of fairness that
-people can rely on as a <foreignphrase>de facto</foreignphrase> form
-of governance.  Both ways lead to the same result: a sense of
-institutional permanence, supported by habits and procedures that are
-well understood by everyone who participates.</para>
+<para>实现这种成功有多种方式。一些涉及正式的治理结构，通过它来解决争论，邀请新开发者加入（有时也请出），规划新功能等。另一些则使用不那么正式的结构，但领导者方面有更多的个人自我约束，以产生一种公平的氛围，人们可以依赖它作为一种<foreignphrase>事实上的</foreignphrase>治理形式。两种方式都导向相同的结果：一种制度上的永久感，由所有参与者都充分理解的习惯和程序所支持。</para>
 
 </simplesect>
 
 <sect1 id="forkability">
-<title>Forkability</title>
+<title>可分叉性</title>
 
-<para>The indispensable ingredient that binds developers together on a
-free software project, and makes them willing to compromise when
-necessary, is the code's <firstterm>forkability</firstterm>: the
-ability of anyone to take a copy of the source code and use it to
-start a competing project, known as a
-<firstterm>fork</firstterm>.<footnote><para>Meaning a "hard fork",
-not the unrelated "development fork" that is often a normal part of the
-development cycle.  See <xref
-linkend="dev-forks-vs-hard-forks"/> for more on this crucial
-distinction.</para></footnote></para>
+<para>将开发者们凝聚在一个自由软件项目中，并使他们在必要时愿意妥协的不可或缺的因素，是代码的<firstterm>可分叉性 (forkability)</firstterm>：即任何人都可以拿一份源代码的副本，并用它来启动一个竞争性项目，这被称为<firstterm>分叉 (fork)</firstterm>。<footnote><para>指“硬分叉”，而不是通常是开发周期正常一部分的无关的“开发分叉”。关于这一关键区别的更多信息，请参见<xref linkend="dev-forks-vs-hard-forks"/>。</para></footnote></para>
 
-<para>The paradoxical thing is that the <emphasis>possibility</emphasis> of
-forks is usually a much greater force in free software projects than
-actual forks are.  Actual forks are very rare.  Because a fork is usually bad for
-everyone (for reasons examined in detail in
-<xref linkend="forks"/>), the more serious
-the threat of a fork becomes, the more willing people are to
-compromise to avoid it.</para>
+<para>矛盾的是，分叉的<emphasis>可能性</emphasis>通常在自由软件项目中比实际的分叉是更大的力量。实际的分叉非常罕见。因为分叉通常对每个人都不好（原因在<xref linkend="forks"/>中有详细探讨），所以分叉的威胁越严重，人们就越愿意为了避免它而妥协。</para>
 
-<para>The potential for forks is the reason there
-are no true dictators in free software projects.  This may seem like a
-surprising claim, considering how common it is to hear someone called
-the "dictator" (sometimes softened to "benevolent dictator") in a
-given open source project.  But this kind of dictatorship is special,
-quite different from our conventional understanding of the word.
-Imagine a ruler whose subjects could copy her entire territory at any
-time and move to the copy to rule as they see fit.  Would not such a
-ruler govern very differently from one whose subjects were bound to
-stay under her rule no matter what she did?</para>
+<para>分叉的潜力是自由软件项目中没有真正独裁者的原因。这听起来可能令人惊讶，考虑到在给定的开源项目中，听到某人被称为“独裁者”（有时软化为“仁慈的独裁者”）是多么普遍。但这种独裁是特殊的，与我们对这个词的传统理解大相径庭。想象一个统治者，她的臣民可以随时复制她的整个领土，并搬到副本上去按他们认为合适的方式统治。这样的统治者治理的方式难道不会与一个无论她做什么，她的臣民都必须留在她统治下的统治者大相径庭吗？</para>
 
-<para>This is why even projects that are not formally organized as
-democracies are, in practice, democracies when it comes to important
-decisions.<footnote><para>Though note that this still leaves a lot of
-room for variety, and the goals of a project's main sponsors usually
-have a significant effect on the project's structure and operating
-processes.  As mentioned earlier in <xref linkend="introduction"/>,
-the report <citetitle>Open Source Archetypes: A Framework For
-Purposeful Open Source</citetitle> (<ulink
-url="https://opentechstrategies.com/archetypes"
->https://opentechstrategies.com/archetypes</ulink>), is worth consulting if
-you want to understand more about this.</para></footnote>
-Replicability implies forkability, and forkability implies
-consensus.  It may well be that everyone is willing to defer to one
-leader,<footnote><para>The most famous example is probably Linus
-Torvalds in Linux kernel development.</para></footnote> but this is
-because they <emphasis>choose</emphasis> to do so, in a situation
-where they really do have freedom of choice.</para>
+<para>这就是为什么即使那些没有正式组织成民主形式的项目，在实践中，当涉及到重要决策时也是民主的。<footnote><para>不过请注意，这仍然留下了很大的多样性空间，项目主要赞助商的目标通常对项目的结构和运营过程有显著影响。如前所述，在<xref linkend="introduction"/>中，报告《开源原型：一个有目的的开源框架》(<citetitle>Open Source Archetypes: A Framework For Purposeful Open Source</citetitle>)（<ulink url="https://opentechstrategies.com/archetypes">https://opentechstrategies.com/archetypes</ulink>）值得一读，如果你想更多地了解这方面。</para></footnote>可复制性意味着可分叉性，而可分叉性意味着共识。很可能每个人都愿意听从一位领导者，<footnote><para>最著名的例子可能是 Linux 内核开发中的 Linus Torvalds。</para></footnote>但这是因为他们<emphasis>选择</emphasis>这样做，在一个他们确实有选择自由的情况下。</para>
 
-<para>The nominal "dictator"
-has no magical hold over the project.  A key property of all open
-source licenses is that they do not give one party more power than any
-other in deciding how the code can be changed or used.  If the dictator
-were to suddenly start making bad decisions, there would be
-restlessness, followed eventually by revolt and a fork.  Except, of
-course, that things rarely get that far, because the dictator compromises
-first.</para>
+<para>名义上的“独裁者”对项目没有神奇的控制力。所有开源许可证的一个关键特性是，它们不给予任何一方比其他方在决定代码如何更改或使用方面更多的权力。如果独裁者突然开始做出糟糕的决定，就会出现不安，最终导致反抗和分叉。当然，事情很少发展到那一步，因为独裁者会先妥协。</para>
 
-<para>But just because forkability puts an upper limit on how much
-power anyone can exert in a project doesn't mean there aren't
-important differences in how projects are governed.  You don't want
-every decision to come down to the last-resort question of who might
-consider a fork.  That would get tiresome very quickly, and sap
-energy away from real work.  The next two sections examine different
-ways to organize projects such that most decisions go smoothly.  These
-two examples are somewhat idealized extremes; many projects fall
-somewhere along a continuum between them.</para>
+<para>但仅仅因为可分叉性为任何人在项目中能施加多大权力设定了上限，并不意味着项目治理方式没有重要差异。你不想让每个决定都归结到谁可能考虑分叉这个最后的手段问题上。那会很快变得令人厌烦，并消耗掉真正工作的精力。接下来的两节将探讨组织项目的不同方式，以使大多数决定都能顺利进行。这两个例子是某种程度上理想化的极端；许多项目介于它们之间的某个连续统一体上。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="benevolent-dictator">
-<title>Benevolent Dictators</title>
+<title>仁慈的独裁者</title>
 
 <!-- For link compatibility with a previous misspelling. -->
 <anchor id="benevolant-dictator" />
 
-<para>The <firstterm>benevolent dictator</firstterm> model is exactly
-what it sounds like: final decision-making authority rests with one
-person, who, by virtue of personality and experience, is expected
-to use it wisely.</para>
+<para>“<firstterm>仁慈的独裁者 (benevolent dictator)</firstterm>”模式正如其名：最终决策权在于一个人，凭借其个性和经验，人们期望他能明智地使用这一权力。</para>
 
-<para>Although "benevolent dictator" (or <firstterm>BD</firstterm>) is
-the standard term for this role, it would be better to think of it as
-"community-approved arbitrator" or "judge".  Generally, benevolent
-dictators do not actually make all the decisions, or even most of the
-decisions.  It's unlikely that one person could have enough expertise
-to make consistently good decisions across all areas of the project,
-and anyway, quality developers won't stay around unless they have some
-influence in the project.  Therefore, benevolent dictators
-commonly do not dictate much.  Instead, they let things work
-themselves out through discussion and experimentation whenever
-possible.  They participate in those discussions themselves, but as
-regular developers, often deferring to an area maintainer who has more
-expertise in the question at hand.  Only when it is clear that no consensus can be reached,
-and that most of the group <emphasis>wants</emphasis> someone to make
-a decision so that development can move on, does she put her foot
-down and say "This is the way it's going to be."  Reluctance to make
-decisions by fiat is a trait shared by almost all successful
-benevolent dictators; it is one of the reasons they manage to keep the
-role.</para>
+<para>尽管“仁慈的独裁者”（或<firstterm>BD</firstterm>）是这个角色的标准术语，但最好将其视为“社区认可的仲裁者”或“法官”。通常，仁慈的独裁者实际上并不做出所有决定，甚至不是大多数决定。一个人不太可能在项目的所有领域都拥有足够的专业知识来持续做出好的决定，而且无论如何，高质量的开发者如果不能在项目中有一些影响力，是不会留下来的。因此，仁慈的独裁者通常不会过多地独裁。相反，他们尽可能让事情通过讨论和实验自行解决。他们自己也参与这些讨论，但作为普通开发者，常常会听从在手头问题上有更多专业知识的领域维护者的意见。只有当明显无法达成共识，并且大多数团队成员<emphasis>希望</emphasis>有人做出决定以便开发可以继续时，她才会拍板说“就这么定了”。不愿意通过命令做决定是几乎所有成功的仁慈的独裁者共有的一个特质；这也是他们能保住这个角色的原因之一。</para>
 
 <sect2 id="benevolent-dictator-qualifications">
-<title>Who Can Be a Good Benevolent Dictator?</title>
+<title>谁能成为一个好的仁慈的独裁者？</title>
 
 <!-- For link compatibility with a previous misspelling. -->
 <anchor id="benevolant-dictator-qualifications" />
 
-<para>Being a BD requires a combination of traits.  It needs, first of
-all, a well-honed sensitivity to one's own influence in the project,
-which in turn brings self-restraint.  In the early stages of a
-discussion, one should not express opinions and conclusions with so
-much certainty that others feel like it's pointless to dissent.
-People must be free to air ideas, even stupid ideas.  It is inevitable
-that the BD will post a stupid idea from time to time too, of course,
-and therefore the role also requires an ability to recognize and
-acknowledge when one has made a bad decision&nbsp;&mdash;&nbsp;though this is
-really a trait that <emphasis>any</emphasis> good developer should
-have.  The
-difference is that the BD can afford to slip from time to time without
-worrying about long-term damage to her credibility.  Developers with
-less seniority may not feel so secure, so the BD should phrase
-critiques or contrary decisions with some sensitivity for how much
-weight her words carry, both technically and psychologically.</para>
+<para>成为一个 BD 需要多种特质的结合。首先，它需要对自己在项目中的影响力有敏锐的感知，这反过来又带来了自我约束。在讨论的早期阶段，不应以过于确定的方式表达意见和结论，以免让其他人觉得提出异议毫无意义。人们必须可以自由地发表想法，即使是愚蠢的想法。当然，BD 自己也难免会时不时地提出愚蠢的想法，因此这个角色也需要有能力认识到并承认自己做出了错误的决定——尽管这实际上是<emphasis>任何</emphasis>一个好的开发者都应该具备的特质。不同之处在于，BD 可以偶尔失误而不用担心对自己的信誉造成长期损害。资历较浅的开发者可能没有这种安全感，所以 BD 在提出批评或相反的决定时，应该对自己的话在技术上和心理上所携带的分量有所敏感。</para>
 
-<para>The BD does <emphasis>not</emphasis> need to have the sharpest
-technical skills of anyone in the project.  She must be skilled enough
-to work on the code herself, and to understand and comment on any
-change under consideration, but that's all.  The BD position is
-neither acquired nor held by virtue of intimidating coding skills.
-What <emphasis>is</emphasis> important is experience and overall
-design sense&nbsp;&mdash;&nbsp;not necessarily the ability to produce good
-design on demand, but the ability to recognize and endorse good
-design when encountered.</para>
+<para>BD <emphasis>不</emphasis>需要拥有项目中技术最顶尖的技能。她必须足够熟练，能够亲自从事代码工作，并能理解和评论任何正在考虑的变更，但仅此而已。BD 的地位既不是通过令人敬畏的编码技能获得的，也不是通过它来维持的。重要的<emphasis>是</emphasis>经验和整体设计感——不一定是按需产生好设计的能力，而是遇到好设计时能够识别和认可的能力。</para>
 
-<para>It is common for the benevolent dictator to be a founder of the
-project, but this is more a correlation than a cause.  The sorts of
-qualities that make one able to successfully start a
-project&nbsp;&mdash;&nbsp;technical competence, ability to persuade other people
-to join, and so on&nbsp;&mdash;&nbsp;are also the qualities a BD would need.  And
-of course, founders start out with a sort of automatic seniority,
-which can often be enough to make benevolent dictatorship by the
-founder be the path of least resistance for all concerned.</para>
+<para>仁慈的独裁者通常是项目的创始人，但这更多的是一种相关性而非因果关系。能够成功启动一个项目的那些品质——技术能力、说服他人加入的能力等等——也是一个 BD 所需要的品质。当然，创始人一开始就有一种天然的资历，这通常足以使创始人成为仁慈的独裁者成为所有相关方阻力最小的路径。</para>
 
-<para>Remember that the potential to fork goes both ways.  A BD can
-fork a project just as easily as anyone else, and some have
-occasionally done so, when they felt that the direction they wanted to
-take the project was different from where the majority of other
-developers wanted to go.  Because of forkability, it does not matter
-whether the benevolent dictator has control over the currently
-accepted authoritative project repository.  People sometimes talk of repository
-control as though it were the ultimate source of power in a project,
-but in fact it is irrelevant.  The ability to add or remove people's
-commit privileges for one project on a particular hosting site affects
-only that copy of the project on that site.  Prolonged abuse of that
-power, whether by the BD or someone else, would simply lead to
-developers moving over to a different copy of the project.</para>
+<para>请记住，分叉的潜力是双向的。一个 BD 可以像其他人一样轻松地分叉一个项目，而且有些 BD 偶尔也这样做过，当他们觉得他们想带项目走的方向与大多数其他开发者想走的方向不同时。因为可分叉性，仁慈的独裁者是否控制着当前公认的权威项目仓库并不重要。人们有时谈论仓库控制权，好像它是项目中最终的权力来源，但实际上它无关紧要。在一个特定的托管网站上为一个项目添加或移除某人的提交权限，只影响该网站上该项目的那个副本。长期滥用该权力，无论是 BD 还是其他人，只会导致开发者转移到项目的另一个副本上。</para>
 
 </sect2>
 
-<para>Whether your project should have a benevolent dictator, or would
-run better with some less centralized form of governance, largely
-depends on who is available to fill the role.  As a general rule, if
-it's simply obvious to everyone who should be the BD, then that's the
-way to go.  But if no candidate for BD is immediately obvious, then
-the project should probably use a decentralized decision-making
-process, as described in the next section.</para>
+<para>你的项目是否应该有一个仁慈的独裁者，或者用某种不那么集中的治理形式会运行得更好，很大程度上取决于谁能胜任这个角色。作为一般规则，如果谁应该成为 BD 对每个人来说都显而易见，那么就应该那样做。但如果没有明显的 BD 候选人，那么项目可能应该使用一种去中心化的决策过程，如下一节所述。</para>
 
 </sect1>
 
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="consensus-democracy">
-<title>Consensus-based Democracy</title>
+<title>基于共识的民主</title>
 
-<para>As projects get older, they tend to move away from the
-benevolent dictatorship model and toward more openly democratic
-systems.  This is not necessarily out of dissatisfaction with a
-particular BD.  It's simply that group-based governance is more
-"evolutionarily stable", to borrow a biological metaphor.  Whenever a
-benevolent dictator steps down, or attempts to spread decision-making
-responsibility more evenly, it is an opportunity for the group to
-settle on a new, non-dictatorial system&nbsp;&mdash;&nbsp;to establish a
-constitution, as it were.  The group may not take this opportunity the
-first time, or the second, but eventually they will; once they do,
-the decision is unlikely ever to be reversed.  It is easy to see
-why: if a group of N people were to vest one of their number with special
-power, it would mean that N&nbsp;-&nbsp;1 people were choosing to
-decrease their individual influence.  People usually don't want to do
-that.  Even if they did, the resulting dictatorship would still be
-conditional: the group anointed the BD, so clearly the group could depose
-the BD.  Therefore, once a project has moved from leadership by a
-charismatic individual to a more formal, group-based system, it rarely
-moves back.</para>
+<para>随着项目变老，它们倾向于从仁慈的独裁者模式转向更公开的民主制度。这不一定是因为对某个特定的 BD 不满意。这只是因为基于群体的治理在生物学隐喻中更具“进化稳定性”。每当一个仁慈的独裁者下台，或试图更均匀地分散决策责任时，对群体来说都是一个机会，可以确定一个新的、非独裁的制度——可以说，是建立一部宪法。群体可能不会在第一次或第二次抓住这个机会，但最终他们会的；一旦他们这样做了，这个决定就不太可能被推翻。原因很容易理解：如果一个 N 人的群体将特殊权力赋予其中一人，那就意味着 N-1 个人选择减少他们个人的影响力。人们通常不想这样做。即使他们这样做了，由此产生的独裁仍然是有条件的：群体任命了 BD，所以显然群体可以废黜 BD。因此，一旦一个项目从由一个有魅力的个人领导转向一个更正式的、基于群体的制度，它就很少会回头了。</para>
 
-<para>The details of how these systems work vary widely, but there are
-two common elements: one, the group works by consensus most of the
-time; two, there is a formal voting mechanism to fall back on when
-consensus cannot be reached.</para>
+<para>这些系统如何运作的细节差异很大，但有两个共同的元素：一，群体在大多数时候通过共识工作；二，当无法达成共识时，有一个正式的投票机制可以依靠。</para>
 
-<para><firstterm>Consensus</firstterm> simply means an agreement that
-everyone is willing to live with.  It is not an ambiguous state: a
-group has reached consensus on a given question when someone proposes
-that consensus has been reached and no one contradicts the assertion.
-The person proposing consensus should, of course, state specifically
-what the consensus is and what actions would be taken in consequence
-of it (if they are not obvious).</para>
+<para><firstterm>共识 (Consensus)</firstterm>仅仅指一个每个人都愿意接受的协议。它不是一个模棱两可的状态：当有人提出已经达成共识，并且没有人反驳这一断言时，一个群体就对给定的问题达成了共识。提出共识的人当然应该具体说明共识是什么，以及因此将采取什么行动（如果它们不明显的话）。</para>
 
-<para>Most conversation in a project is on technical topics, such as
-the right way to fix a certain bug, whether or not to add a feature,
-how strictly to document interfaces, etc.  Consensus-based governance
-works well because it blends seamlessly with the technical discussion
-itself.  By the end of a discussion, there is often general agreement
-on what course to take.  Someone will usually make a concluding post,
-which is simultaneously a summary of what has been decided and an
-implicit proposal of consensus.  This provides a last chance for
-someone else to say "Wait, I didn't agree to that.  We need to hash
-this out some more."</para>
+<para>项目中的大多数对话都是关于技术话题的，比如修复某个 bug 的正确方法，是否添加某个功能，接口文档应该多严格等。基于共识的治理之所以行之有效，是因为它与技术讨论本身无缝融合。在讨论结束时，通常会对采取何种行动达成普遍协议。通常会有人发表一个总结性的帖子，这既是对已决定事项的总结，也是一个隐含的共识提议。这为其他人提供了一个最后的机会来说“等等，我不同意那个。我们需要再讨论一下。”</para>
 
-<para>For small, uncontroversial decisions, the proposal of consensus
-is implicit.  For example, when a developer spontaneously commits a
-bugfix, the commit itself is a proposal of consensus: <emphasis>I assume we all
-agree that this bug needs to be fixed, and that this is the way to fix
-it.</emphasis>  Of course, the developer does not actually say that; she just
-commits the fix, and the others in the project do not bother to state
-their agreement, because silence is consent.  If someone commits a
-change that turns out <emphasis>not</emphasis> to have consensus, the
-result will simply be that the project discusses the change as though it
-had not already been committed.  The reason this works is the topic of
-the next section.</para>
+<para>对于小的、无争议的决定，共识的提议是隐含的。例如，当一个开发者自发地提交一个 bug 修复时，提交本身就是一个共识的提议：<emphasis>我假设我们都同意这个 bug 需要被修复，并且这是修复它的方法。</emphasis>当然，开发者实际上并不会这么说；她只是提交了修复，而项目中的其他人也不会费心去表示同意，因为沉默即是同意。如果有人提交了一个后来证明<emphasis>没有</emphasis>共识的变更，结果将只是项目会像变更尚未提交一样讨论它。这之所以行得通，是下一节的主题。</para>
 
 <sect2 id="version-control-relaxation">
-<title>Version Control Means You Can Relax</title>
+<title>版本控制意味着你可以放松</title>
 
-<para>The fact that the project's source code is kept under version
-control means that most decisions can be easily unmade.  The most
-common way this happens is that someone commits a change mistakenly
-thinking everyone will be happy with it, only to be met with
-objections after the fact.  It is typical for such objections to start
-out with an obligatory apology for having missed out on prior
-discussion, though this may be omitted if the objector finds no record
-of such a discussion in the mailing list archives.  Either way, there
-is no reason for the tone of the discussion to be different after the
-change has been committed than before.  Any change can be
-reverted,<footnote><para>Of course, it's good manners and good sense to
-discuss before reverting.  Reverting a change is not usually the way to start
-a conversation about whether it should be reverted.  There are
-sometimes situation where it may be appropriate to perform the reversion
-before the conversation about it has definitively concluded, but even
-then it's still important to have started the conversation
-first.</para></footnote> at least until dependent changes are
-introduced (i.e., new code that would break if the original change
-were suddenly removed).  Version control gives the project
-a way to undo the effects of bad or hasty judgement.  This, in turn,
-frees people to trust their instincts about how much feedback is
-necessary before doing something.</para>
+<para>项目的源代码被置于版本控制之下，这意味着大多数决定都可以轻易地被撤销。最常见的情况是，某人提交了一个变更，错误地认为每个人都会对此感到满意，结果事后遭到了反对。通常，这种反对意见会以一个必须的道歉开始，为错过了之前的讨论而道歉，尽管如果反对者在邮件列表档案中找不到此类讨论的记录，这个道歉可能会被省略。无论哪种方式，在变更提交之后，讨论的基调没有理由与之前不同。任何变更都可以被撤销，<footnote><para>当然，在撤销之前进行讨论是礼貌和明智的。撤销一个变更通常不是开启关于是否应该撤销它的对话的方式。在某些情况下，在关于它的对话明确结束之前执行撤销可能是合适的，但即使那样，先开始对话仍然很重要。</para></footnote>至少在引入依赖性变更（即，如果原始变更突然被移除，新代码会中断）之前是这样。版本控制为项目提供了一种撤销错误或草率判断影响的方法。这反过来又使人们可以自由地相信自己关于在做某件事之前需要多少反馈的直觉。</para>
 
-<para>This also means that the process of establishing consensus need
-not be very formal.  Most projects handle it by feel.  Minor changes
-can go in with no discussion, or with minimal discussion followed by a
-few nods of agreement.  For more significant changes, especially ones
-with the potential to destabilize a lot of code, people should wait a
-day or two before assuming there is consensus, the rationale being
-that no one should be marginalized in an important conversation simply
-because he didn't check email frequently enough.</para>
+<para>这也意味着建立共识的过程不必非常正式。大多数项目凭感觉处理。小的变更可以无需讨论就进入，或者经过最少的讨论和几个点头同意后进入。对于更重大的变更，特别是那些有可能动摇大量代码的变更，人们应该等一两天再假设达成了共识，理由是任何人都不应该因为没有足够频繁地检查电子邮件而在重要的对话中被边缘化。</para>
 
-<para>Thus, when someone is confident she knows what needs to be done,
-she should just go ahead and do it.  This applies not only to software
-fixes, but to web site updates, documentation changes, and anything
-else unlikely to be controversial.  Usually there will be only a few
-instances where an action draws disapproval, and these can be handled on
-a case-by-case basis.  Of course, one shouldn't encourage people to be
-headstrong.  There is still a psychological difference between a
-decision under discussion and one that has already taken effect but is
-technically reversible.  People always feel that momentum is
-allied to action, and will be slightly more reluctant to revert a
-change than to prevent it in the first place.  If a developer abuses
-this fact by committing potentially controversial changes too quickly,
-however, people can and should complain, and hold that developer to a
-stricter standard until things improve.</para>
+<para>因此，当某人确信她知道需要做什么时，她就应该去做。这不仅适用于软件修复，也适用于网站更新、文档变更，以及任何其他不太可能引起争议的事情。通常只会有少数几次行动会引起不满，这些可以逐案处理。当然，不应该鼓励人们一意孤行。一个正在讨论中的决定和一个已经生效但技术上可逆的决定之间仍然存在心理上的差异。人们总是觉得势头与行动是同盟，并且会稍微更不愿意撤销一个变更，而不是一开始就阻止它。然而，如果一个开发者滥用这一事实，过快地提交可能引起争议的变更，人们可以也应该抱怨，并对该开发者施加更严格的标准，直到情况改善。</para>
 <!-- The email thread in which Eli Zaretskii does this to me is
 
      "Re: [Emacs-diffs] master b88e7c8: Make transpose-regions interactive (Bug#30343)"
@@ -353,316 +114,86 @@ stricter standard until things improve.</para>
 </sect2>
 
 <sect2 id="voting">
-<title>When Consensus Cannot Be Reached, Vote</title>
+<title>当无法达成共识时，投票</title>
 
-<para>Inevitably, some debates just won't consense.  When all other
-means of breaking a deadlock fail, the solution is to vote.  But
-before a vote can be taken, there must be a clear set of choices on
-the ballot.  Here, again, the normal process of technical discussion
-blends serendipitously with the project's decision-making procedures.
-The kinds of questions that come to a vote often involve complex,
-multifaceted issues.  In any such complex discussion, there are
-usually one or two people playing the role of <firstterm>honest
-broker</firstterm>: posting periodic summaries of the various
-arguments and keeping track of where the core points of disagreement
-(and agreement) lie.  These summaries help everyone measure how much
-progress has been made toward resolving the issues, and remind
-everyone of what questions remain to 
-be addressed.  Those same summaries can serve as prototypes for a
-ballot sheet, should a vote become necessary.  If the honest brokers
-have been doing their job well, they will be able to credibly call for
-a vote when the time comes, and the group will be willing to use a
-ballot sheet based on their summary of the issues.  The brokers
-themselves may be participants in the debate; it is not necessary for
-them to remain above the fray, as long as they can understand and
-fairly represent others' views, and not let their partisan sentiments
-prevent them from summarizing the state of the debate accurately.</para>
+<para>不可避免地，有些辩论就是无法达成共识。当所有其他打破僵局的方法都失败时，解决方案就是投票。但在进行投票之前，必须有一套清晰的选票选项。在这里，技术讨论的正常过程再次与项目的决策程序不期而遇地融合在一起。需要投票的问题通常涉及复杂、多方面的问题。在任何此类复杂的讨论中，通常会有一两个人扮演<firstterm>诚实的中间人</firstterm>的角色：定期发布各种论点的摘要，并跟踪分歧（和一致）的核心点在哪里。这些摘要帮助每个人衡量在解决问题方面取得了多少进展，并提醒每个人还有哪些问题需要解决。如果需要投票，这些摘要本身就可以作为选票的草稿。如果诚实的中间人做得好，当时候到了，他们就能有信誉地号召投票，而团队也愿意使用基于他们问题摘要的选票。中间人本身可能是辩论的参与者；他们不必保持中立，只要他们能理解并公平地代表他人的观点，并且不让自己的党派情绪妨碍他们准确地总结辩论的状态。</para>
 
-<para>The actual content of the ballot is usually not controversial.
-By the time matters reach a vote, the disagreement has usually boiled
-down to a few key issues, with recognizable labels and brief
-descriptions.  Occasionally a developer will object to the form of the
-ballot itself.  Sometimes his concern is legitimate, for example
-that an important choice was left off or not described accurately.
-But other times a developer may be merely trying to stave off the
-inevitable, perhaps knowing that the vote probably won't go his way.
-See <xref linkend="difficult-people"/> for how to deal with
-this sort of obstructionism.</para>
+<para>选票的实际内容通常没有争议。当事情发展到投票阶段时，分歧通常已经归结为几个关键问题，有可识别的标签和简短的描述。偶尔会有开发者对选票的形式提出异议。有时他的担忧是合理的，例如，一个重要的选项被遗漏或描述不准确。但其他时候，一个开发者可能只是想拖延不可避免的事情，也许知道投票可能不会对他有利。关于如何处理这种阻挠主义，请参见<xref linkend="difficult-people"/>。</para>
 
-<para>Remember to specify the voting method, as there are many
-different kinds, and people might make wrong assumptions about which
-procedure is being used.  A good choice in most cases is
-<firstterm>approval voting</firstterm>,<footnote><para>Also called
-<firstterm>multiple approval</firstterm>, <firstterm>multiple
-preference</firstterm> or <firstterm>multiple preference
-approval</firstterm>.</para></footnote> whereby each voter can vote
-for as many of the choices on the ballot as she likes.  Approval
-voting is simple to explain and to count, and comprehensibility is an
-important factor when choosing a voting method.</para>
+<para>请记住指定投票方法，因为有很多不同的种类，人们可能会对正在使用的程序做出错误的假设。在大多数情况下，一个好的选择是<firstterm>赞成投票 (approval voting)</firstterm>，<footnote><para>也称为<firstterm>多重赞成 (multiple approval)</firstterm>、<firstterm>多重偏好 (multiple preference)</firstterm>或<firstterm>多重偏好赞成 (multiple preference approval)</firstterm>。</para></footnote>即每个选民可以投票给她喜欢的任意多个选票选项。赞成投票易于解释和计票，而可理解性是选择投票方法时的一个重要因素。</para>
 
 <sidebar id="voting-systems">
-<title>Voting Systems</title>
+<title>投票系统</title>
 
-<para>See <ulink url="https://en.wikipedia.org/wiki/Voting_system"
->https://en.wikipedia.org/wiki/Voting_system</ulink> for more details
-about approval voting and other voting systems, but beware the
-temptation to geek out on voting systems.  I did, in the course of
-researching this sidebar, and I've never been the same since.  You can
-try all sorts of fancy voting methods, for example ones that involve
-scoring or preferential ranking of choices&nbsp;&mdash;&nbsp;such as
-score voting, Borda, Condorcet, instant runoff, and single
-transferable vote&nbsp;&mdash;&nbsp;but a famous result known as
-"Arrow's Impossibility Theorem" (<ulink
-url="https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem"
->https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem</ulink>)
-has already demonstrated that no voting system is perfect (at least
-among a certain broad class of voting systems).  Try to avoid getting
-into a long debate about which system to use, because, of course, you
-will then find yourself in a debate about which voting system to use
-to choose the voting system!</para>
+<para>关于赞成投票和其他投票系统的更多细节，请参见<ulink url="https://en.wikipedia.org/wiki/Voting_system">https://en.wikipedia.org/wiki/Voting_system</ulink>，但要警惕沉迷于投票系统的诱惑。我在研究这个侧边栏的过程中就这样做了，从此我再也不是原来的我了。你可以尝试各种花哨的投票方法，例如涉及对选项进行评分或偏好排序的方法——如分数投票、波达计票法、孔多塞方法、即时复选制和单一可转移票制——但一个著名的被称为“阿罗不可能定理”(<ulink url="https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem">https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem</ulink>)的结果已经证明，没有完美的投票系统（至少在某一类广泛的投票系统中是这样）。尽量避免陷入关于使用哪个系统的长篇辩论，因为，当然，你接下来会发现自己陷入了关于使用哪个投票系统来选择投票系统的辩论！</para>
 
-<para>Approval Voting, or maybe some form of Ranked Choice / IRV, is
-usually fine for the kinds of ballots an open source project is likely
-to use to resolve technical or procedural questions.</para>
+<para>对于开源项目可能用来解决技术或程序性问题的选票来说，赞成投票，或者某种形式的排名选择/即时复选制，通常是没问题的。</para>
 
 </sidebar>
 
-<para>Conduct votes in public as much as possible.<footnote><para>An
-exception is described in <xref
-linkend="adding-maintainers"/>.</para></footnote> There is no need for
-secrecy or anonymity in a vote about matters that have been debated
-publicly anyway.  Have each participant post her votes to the project
-mailing list, so that any observer can tally and check the results for
-herself, and so that everything is recorded in the archives.  If you
-would like to use specialized software to conduct votes, various open
-source applications are available.  As of this writing in 2022, Helios
-(<ulink url="https://vote.heliosvoting.org/"
->https://vote.heliosvoting.org/</ulink>) is one that I know supports
-approval voting, and a quick search will turn up plenty of
-others.</para>
+<para>尽可能公开地进行投票。<footnote><para>一个例外在<xref linkend="adding-maintainers"/>中描述。</para></footnote>对于反正已经公开辩论过的事情，投票没有必要保密或匿名。让每个参与者将她的选票发布到项目邮件列表上，这样任何观察者都可以自己计票和核对结果，并且一切都记录在档案中。如果你想使用专门的软件来投票，有各种开源应用程序可用。在 2022 年撰写本文时，Helios（<ulink url="https://vote.heliosvoting.org/">https://vote.heliosvoting.org/</ulink>）是我知道的支持赞成投票的一个，快速搜索会发现很多其他的。</para>
 
 </sect2>
 
 <sect2 id="when-to-vote">
-<title>When To Vote</title>
+<title>何时投票</title>
 
-<para>The hardest thing about voting is determining when to do it.  In
-general, taking a vote should be very rare&nbsp;&mdash;&nbsp;a last resort for
-when all other options have failed.  Don't think of voting as a great
-way to resolve debates.  It isn't.  It ends discussion, and thereby
-ends creative thinking about the problem.  As long as discussion
-continues, there is the possibility that someone will come up with a
-new solution everyone likes.  This happens surprisingly often: a
-lively debate can produce a new way of looking at the problem, and
-lead to a proposal that eventually satisfies everyone.  Even when no
-new proposal arises, it's still usually better to broker a compromise
-than to hold a vote.  After a compromise, everyone is a little bit
-unhappy, whereas after a vote, some people are unhappy while others
-are happy.  From a political standpoint, the former situation is
-preferable: at least each person can feel she extracted a price for her
-unhappiness.  She may be dissatisfied, but so is everyone else.</para>
+<para>关于投票，最难的事情是决定何时进行。总的来说，投票应该非常罕见——是所有其他选择都失败后的最后手段。不要把投票看作是解决辩论的好方法。它不是。它结束了讨论，从而结束了对问题的创造性思考。只要讨论继续，就有人可能想出大家都喜欢的新解决方案。这种情况出人意料地经常发生：一场热烈的辩论可以产生一种看待问题的新方式，并导致一个最终能满足所有人的提案。即使没有新提案出现，促成一个妥协通常也比举行投票要好。妥协后，每个人都有点不高兴，而投票后，一些人不高兴，而另一些人高兴。从政治角度来看，前一种情况更可取：至少每个人都可以觉得她为自己的不快付出了代价。她可能不满意，但其他人也一样。</para>
 
-<para>Voting's only function is that it finally settles a question so
-everyone can move on.  But it settles by a head count, instead of
-by rational dialogue leading everyone to the same conclusion.  The
-more experienced people are with open source projects, the less eager
-I find them to be to resolve questions by voting.  Instead they will try
-to explore previously unconsidered solutions, or compromise more
-severely than they'd originally planned.  Various techniques are
-available to prevent a premature vote.  The most obvious is simply to
-say "I don't think we're ready for a vote yet," and explain why not.
-Another is to ask for an informal (non-binding) show of hands.  If the
-response clearly tends toward one side or another, this will make some
-people suddenly more willing to compromise, obviating the need for a
-formal vote.  But the most effective way is simply to offer a new
-solution, or a new viewpoint on an old suggestion, so that people
-re-engage with the issues instead of merely repeating the same
-arguments.</para>
+<para>投票的唯一功能是它最终解决了一个问题，以便大家可以继续前进。但它是通过数人头来解决的，而不是通过理性的对话让每个人得出相同的结论。人们对开源项目的经验越丰富，我发现他们就越不急于通过投票来解决问题。相反，他们会尝试探索以前未曾考虑过的解决方案，或者比他们最初计划的更严重地妥协。有各种技术可以防止过早投票。最明显的是简单地说“我认为我们还没准备好投票”，并解释为什么。另一个是要求进行一次非正式的（无约束力的）举手表决。如果反应明显倾向于某一方，这会让一些人突然更愿意妥协，从而避免了正式投票的需要。但最有效的方法是简单地提供一个新的解决方案，或者对一个旧建议提出一个新的观点，这样人们就会重新参与到问题中，而不是仅仅重复相同的论点。</para>
 
-<para>In certain rare cases, everyone may agree that all the
-compromise solutions are worse than any of the non-compromise ones.
-When that happens, voting is less objectionable, both because it is
-more likely to lead to a superior solution and because people will not
-be overly unhappy no matter how it turns out.  Even then, the vote
-should not be rushed.  The discussion leading up to a vote is what
-educates the electorate, so stopping that discussion early can lower
-the quality of the result.</para>
+<para>在某些罕见的情况下，每个人可能都同意所有的妥协方案都比任何非妥协方案要差。当这种情况发生时，投票就不那么令人反感了，一是因为它更有可能导致一个更优的解决方案，二是因为无论结果如何，人们都不会过分不快。即便如此，投票也不应仓促进行。投票前的讨论是教育选民的过程，所以过早停止讨论会降低结果的质量。</para>
 
-<para>Note that this advice to be reluctant to call votes does not
-apply to routine or process-mandated votes.  For example, in <xref
-linkend="stabilizing-a-release"/>, voting is more of a communications
-mechanism, a means of registering one's involvement in the change
-review process so that everyone can tell how much review a given
-change has received.  Another example would be procedural elections,
-for example choosing the board of directors for a project organized as
-a non-profit legal entity.</para>
+<para>请注意，这条关于不愿召集投票的建议不适用于例行或程序规定的投票。例如，在<xref linkend="stabilizing-a-release"/>中，投票更像是一种沟通机制，一种登记自己参与变更审查过程的方式，以便每个人都能知道某个给定的变更得到了多少审查。另一个例子是程序性选举，例如为一个组织为非营利法律实体的项目选举董事会。</para>
 
 </sect2>
 
 <sect2 id="electorate">
-<title>Who Votes?</title>
+<title>谁投票？</title>
 
-<para>Having a voting system raises the question of electorate: who
-gets to vote?  This has the potential to be a sensitive issue, because
-it forces the project to officially recognize some people as being
-more involved, or as having better judgement, than others.</para>
+<para>拥有一个投票系统引出了选民的问题：谁有投票权？这可能是一个敏感问题，因为它迫使项目正式承认某些人比其他人更投入，或者有更好的判断力。</para>
 
-<para>One solution is to simply take an existing distinction, commit
-access (see <xref linkend="committers"/>), and attach
-voting privileges to it.  In projects that offer both full and partial
-commit access, the question of whether partial committers can vote
-largely depends on the process by which partial commit access is
-granted.  If the project hands it out liberally, for example as a way
-of maintaining many third-party contributed tools in the repository,
-then it should be made clear that partial commit access is just
-about committing, not voting.  The reverse implication naturally holds
-as well: since full committers <emphasis>will</emphasis> have voting
-privileges, they must be chosen not only as programmers, but as
-members of the electorate.  If someone shows disruptive or
-obstructionist tendencies on the mailing list, the group should be
-very cautious about making him a committer, even if the person is
-technically skilled.</para>
+<para>一个解决方案是简单地利用一个现有的区别，即提交权限（参见<xref linkend="committers"/>），并将投票权附加于其上。在提供完全和部分提交权限的项目中，部分提交者是否可以投票的问题很大程度上取决于授予部分提交权限的过程。如果项目慷慨地授予它，例如作为在仓库中维护许多第三方贡献工具的一种方式，那么就应该明确表示，部分提交权限只是关于提交，而不是投票。反之亦然：因为完全提交者<emphasis>将</emphasis>拥有投票权，所以他们不仅必须作为程序员被选择，而且必须作为选民被选择。如果某人在邮件列表上表现出破坏性或阻挠性的倾向，即使这个人技术娴熟，团队在让他成为提交者时也应该非常谨慎。</para>
 
 <sect3 id="non-technical-maintainers">
-<title>Not All Maintainers Are Coders</title>
+<title>并非所有维护者都是编码人员</title>
 
-<para>For many projects, it works out fine to have the set of
-committers and the set of voters be exactly the same.  But this isn't
-appropriate for every project.  There may be people who are very
-invested, and who contribute a lot, through means other than
-coding.  People may provide legal help, or organize events, or
-manage the bug tracker, or write documentation, or do any number of
-other things that are highly valued in the project.  They often may
-have a level of influence in the community (and familiarity with the
-community's dynamics) that exceeds that of many committers.</para>
+<para>对于许多项目来说，让提交者集合和投票者集合完全相同是行得通的。但这并不适合每个项目。可能有些人非常投入，并且通过编码以外的方式做出了很多贡献。人们可能提供法律帮助，或者组织活动，或者管理 bug 跟踪器，或者编写文档，或者做任何其他在项目中受到高度重视的事情。他们通常在社区中拥有一定的影响力（并且熟悉社区的动态），这种影响力甚至超过了许多提交者。</para>
 
-<para>If valuable members of your community are being left out of
-important decisions just because those people happen not to be coders,
-consider expanding the notion of <emphasis>committer</emphasis> to
-something more like
-<firstterm>maintainer</firstterm> (see also <xref linkend="committer"/>).<footnote><para>Some projects call
-this "member", which is also fine.  There isn't a set term for it.  I
-prefer "maintainer" because it implies responsibility to the project,
-rather than belonging to a club.</para></footnote>  For the rest of
-this section, I'll use that term.  In projects where commit access and
-maintainership are synonymous, then it just means the same thing as
-"committer", but in other projects it might mean more than that.  The
-procedures for adding new maintainers should be the same either way;
-it doesn't matter if they write code or not&nbsp;&mdash;&nbsp;what
-matters is their good judgement and the trust of their peers in the
-project.</para>
+<para>如果你的社区中有价值的成员仅仅因为他们恰好不是编码人员而被排除在重要决策之外，可以考虑将<emphasis>提交者 (committer)</emphasis>的概念扩展为更像<firstterm>维护者 (maintainer)</firstterm>（另请参见<xref linkend="committer"/>）的东西。<footnote><para>一些项目称之为“成员 (member)”，这也行。对此没有固定的术语。我更喜欢“维护者”，因为它暗示了对项目的责任，而不是属于一个俱乐部。</para></footnote>在本节的其余部分，我将使用这个术语。在提交权限和维护者身份同义的项目中，它就意味着与“提交者”相同的事情，但在其他项目中，它可能意味着更多。添加新维护者的程序应该无论如何都是相同的；他们是否编写代码并不重要——重要的是他们良好的判断力和项目中同行的信任。</para>
 
 </sect3>
 
 <sect3 id="adding-maintainers">
-<title>Adding New Maintainers</title>
+<title>增加新维护者</title>
 
-<para>The voting system itself should be used to choose new
-voters, both full and partial.  But here is one of the rare
-instances where secrecy is appropriate.  You can't have votes about
-potential new maintainers posted to a public mailing list, because the
-candidates' feelings and reputations are on the line.  Instead, the
-usual way is that an existing maintainer posts to a private mailing
-list consisting only of the other maintainers, proposing that the candidate
-be invited to join.  The other maintainers speak their minds
-freely, knowing the discussion is private.  Often there will be no
-disagreement, and therefore no formal vote is needed.  After waiting a few
-days to make sure every maintainer has had a chance to respond, the
-proposer mails the candidate and makes the offer.  If there
-is disagreement, discussion ensues as for any other question, possibly
-resulting in a vote.</para>
+<para>投票系统本身应该用来选择新的投票者，无论是完全的还是部分的。但这里是少数几个适合保密的情况之一。你不能把关于潜在新维护者的投票发布到公共邮件列表上，因为候选人的感情和声誉都岌岌可危。相反，通常的做法是，一个现有的维护者向一个只包含其他维护者的私人邮件列表发帖，提议邀请该候选人加入。其他维护者可以自由地发表他们的想法，知道讨论是私密的。通常不会有分歧，因此不需要正式投票。在等了几天以确保每个维护者都有机会回应后，提议者会给候选人发邮件并提出邀请。如果有分歧，就会像其他任何问题一样进行讨论，并可能导致投票。</para>
 
-<para>For this process to be open and frank, the mere fact that the
-discussion is taking place at all should be secret.  If the person
-under consideration knew it was going on, and then were never offered
-maintainership, he could conclude that he had lost the vote, and would
-likely feel hurt.  Of course, if someone explicitly asks to be
-considered, then there is no choice but to take up the proposal and
-explicitly accept or reject him.  If the latter, then it should be
-done as politely as possible, with a clear explanation: "We liked your
-patches, but haven't seen enough of them yet," or "We appreciate all
-the work you did for the conference, but you haven't been very active
-in the project since then, so we don't feel comfortable making you a
-maintainer just yet.  We hope that this will change over time,
-though."  Remember, what you're saying could come as a blow, depending
-on the person's temperament or confidence level.  Try to see it from
-their point of view as you write the message.</para>
+<para>为了使这个过程开放和坦率，讨论正在进行这个事实本身就应该是秘密的。如果被考虑的人知道这件事正在进行，然后从未被邀请成为维护者，他可能会得出结论说他输掉了投票，并且很可能会感到受伤。当然，如果有人明确要求被考虑，那么就别无选择，只能接受或明确拒绝他的提议。如果是后者，那么应该尽可能礼貌地进行，并附上清晰的解释：“我们喜欢你的补丁，但我们还没有看到足够多的补丁，”或者“我们感谢你为会议所做的所有工作，但从那以后你在项目中并不活跃，所以我们觉得现在让你成为维护者还不合适。不过，我们希望这种情况会随着时间的推移而改变。”请记住，你所说的话可能会对他造成打击，这取决于他的性情或自信水平。在写信息时，试着从他的角度看问题。</para>
 
-<para>Because adding a new maintainer is more consequential than most
-other one-time decisions, some projects have special requirements for
-the vote.  For example, they may require that the proposal receive at
-least <emphasis>n</emphasis> positive votes and no negative votes, or
-that a supermajority vote in favor.  The exact parameters are not
-important; the main idea is to get the group to be careful about
-adding new maintainers.  Similar, or even stricter, special
-requirements can apply to votes to <emphasis>remove</emphasis> a
-maintainer (see <xref linkend="revoking-committers"/>), though hopefully that will never be necessary.</para>
+<para>因为增加一个新的维护者比大多数其他一次性决定更重要，一些项目对投票有特殊要求。例如，他们可能要求提案至少获得<emphasis>n</emphasis>张赞成票且没有反对票，或者要求绝大多数人投票赞成。确切的参数不重要；主要思想是让团队在增加新维护者时要小心。类似地，甚至更严格的特殊要求可以适用于<emphasis>移除</emphasis>一个维护者的投票（参见<xref linkend="revoking-committers"/>），尽管希望这永远不会有必要。</para>
 
 </sect3>
 
 </sect2>
 
 <sect2 id="polls">
-<title>Polls Versus Votes</title>
+<title>民意调查与投票</title>
 
-<para>For certain kinds of votes, it may be useful to expand the
-electorate. For example, if the developers simply can't figure out
-whether a given interface choice matches the way people actually use
-the software, one solution is to ask to all the subscribers of the
-project's mailing lists to vote.  These are really
-<firstterm>polls</firstterm> rather than votes, but the developers may
-choose to treat the result as binding.  As with any poll, be sure to
-make it clear to the participants that there's a write-in option: if
-someone thinks of a better option that was not offered in the poll questions,
-her response may turn out to be the most important result of the
-poll.</para>
+<para>对于某些类型的投票，扩大选民范围可能是有用的。例如，如果开发者们实在搞不清楚某个界面选择是否符合人们实际使用软件的方式，一个解决方案是请求项目邮件列表的所有订阅者投票。这些实际上是<firstterm>民意调查 (polls)</firstterm>而不是投票，但开发者可能会选择将结果视为有约束力的。与任何民意调查一样，务必向参与者明确表示有自由填写选项：如果有人想到了一个民意调查问题中没有提供的更好的选项，她的回应可能最终成为民意调查最重要的结果。</para>
 
 </sect2>
 
 <sect2 id="veto">
-<title>Vetoes</title>
+<title>否决权</title>
 
-<para>Some projects allow a special kind of vote known as a
-<firstterm>veto</firstterm>.  A veto is a way for a developer to put a
-halt to a hasty or ill-considered change, at least long enough for
-everyone to discuss it more.  Think of a veto as somewhere between a
-very strong objection and a filibuster.  Its exact meaning varies from
-one project to another.  Some projects make it very difficult to
-override a veto; others allow them to be overridden by regular
-majority vote, but after an enforced delay for more discussion.
-Any veto should be accompanied by a thorough explanation; a veto
-without such an explanation should be considered invalid on
-arrival.</para>
+<para>一些项目允许一种特殊的投票，称为<firstterm>否决 (veto)</firstterm>。否决是开发者暂停一个草率或考虑不周的变更的一种方式，至少足够长的时间让大家更多地讨论它。可以把否决看作是介于一个非常强烈的反对和一个冗长辩论之间的东西。它的确切含义因项目而异。一些项目使得推翻一个否决非常困难；另一些则允许通过常规的多数票推翻它，但在强制的更多讨论延迟之后。任何否决都应附有详尽的解释；没有这种解释的否决应被视为一到就无效。</para>
 
-<para>With vetoes comes the problem of veto abuse.  Sometimes
-developers are too eager to raise the stakes of disagreement by
-casting a veto, when
-really all that was called for was more discussion.  You can prevent
-veto abuse by being very reluctant to use vetoes yourself, and by
-gently calling it out when someone else uses her veto too often.  If
-necessary, you can also remind the group that vetoes are binding for
-only as long as the group agrees they are&nbsp;&mdash;&nbsp;after all, if a
-clear majority of developers wants X, then X is going to happen one
-way or another.  Either the vetoing developer will back down, or the
-group will decide to weaken the meaning of a veto.</para>
+<para>随着否决权的出现，也带来了否决权滥用的问题。有时开发者过于急于通过投否决票来加剧分歧的赌注，而实际上所需要的只是更多的讨论。你可以通过自己非常不情愿地使用否决权，以及当别人过于频繁地使用否决权时温和地指出，来防止否决权滥用。如有必要，你还可以提醒团队，否决权只有在团队同意它们有约束力时才具有约束力——毕竟，如果一个明确的多数开发者想要 X，那么 X 无论如何都会发生。要么是投否决票的开发者让步，要么是团队决定削弱否决权的意义。</para>
 
-<para>You may see people write "-1" to express a veto.  This usage
-originally comes from the Apache Software Foundation (which has a
-highly structured voting and veto process, described at <ulink
-url="https://www.apache.org/foundation/voting.html"
->https://www.apache.org/foundation/voting.html</ulink>), but has since spread to
-many other projects, albeit not always with exactly
-the same formal meaning it has at the ASF.  Technically, "-1" does not
-always indicate a formal veto even according to the Apache standards,
-but informally it is usually taken to mean a veto, or at least a very
-strong objection.</para>
+<para>你可能会看到人们写“-1”来表示否决。这种用法最初来自 Apache 软件基金会（它有一个高度结构化的投票和否决过程，详见<ulink url="https://www.apache.org/foundation/voting.html">https://www.apache.org/foundation/voting.html</ulink>），但此后已传播到许多其他项目，尽管并不总是具有与 ASF 完全相同的正式含义。技术上讲，即使根据 Apache 标准，“-1”也不总是表示正式否决，但非正式地，它通常被理解为否决，或者至少是一个非常强烈的反对。</para>
 
-<para>Like votes, vetoes can apply retroactively.  It's not okay to
-object to a veto on the grounds that the change in question has
-already been committed, or the action taken (unless it's something
-irrevocable, like putting out a press release).  On the other hand, a
-veto that arrives weeks or months late isn't likely to be taken very
-seriously, nor should it be.</para>
+<para>像投票一样，否决可以追溯适用。以相关变更已经提交或行动已经采取为由反对否决是不可以的（除非是像发布新闻稿这样不可撤销的事情）。另一方面，一个迟到几周或几个月的否决不太可能被认真对待，也不应该被认真对待。</para>
 
 </sect2>
 
@@ -670,211 +201,60 @@ seriously, nor should it be.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="written-rules">
-<title>Writing It All Down</title>
+<title>把一切都写下来</title>
 
-<para>At some point, the number of conventions and agreements floating
-around in your project may become so great that you need to record it
-somewhere.  In order to give such a document legitimacy, make it clear
-that it is based on mailing list discussions and on agreements already
-in effect.  As you compose it, link to the relevant threads in the
-mailing list archives, and whenever there's a point you're not sure
-about, ask again.  The document should not contain any surprises:
-remember, it
-is not the source of the agreements, it is merely a description of
-them.  Of course, if it is successful, people will start citing it as
-a source of authority in itself, but that just means it reflects the
-overall will of the group accurately.</para>
+<para>在某个时候，你的项目中流传的惯例和协议的数量可能会变得如此之大，以至于你需要把它们记录在某个地方。为了给这样一份文件赋予合法性，要明确表示它基于邮件列表的讨论和已经生效的协议。在撰写它时，链接到邮件列表档案中的相关话题，并且每当有你不确定的地方，就再问一次。这份文件不应包含任何意外：记住，它不是协议的来源，它只是对它们的描述。当然，如果它成功了，人们会开始引用它作为权威的来源，但这只意味着它准确地反映了团队的整体意愿。</para>
 
-<para>Typically, this document lives at the top level of the
-repository tree, is written in a simple markup language such as
-Markdown, and has a name like <filename>CONTRIBUTING.md</filename> or
-<filename>DEVELOPMENT.md</filename>.</para>
+<para>通常，这份文档位于仓库树的顶层，用简单的标记语言如 Markdown 编写，并有一个像<filename>CONTRIBUTING.md</filename>或<filename>DEVELOPMENT.md</filename>这样的名字。</para>
 
 <sidebar id="linking-to-emails">
-<title>Linking To Emails</title>
+<title>链接到电子邮件</title>
 
-<para>When you link to an email thread in the archives, it's a good
-practice to give not only the thread's URL, but the subject, sender
-name, and date of the first message in the thread (or at least of some
-message in the thread).  The reason is that if the archive
-moves&nbsp;&mdash;&nbsp;this can happen from time to time, for example
-because of a change in hosting provider&nbsp;&mdash;&nbsp;the URL
-alone will usually not contain enough information to find the message
-or thread in its new location.</para>
+<para>当你链接到档案中的一个电子邮件话题时，一个好的做法是不仅给出话题的 URL，还要给出话题中第一封邮件（或至少是话题中某封邮件）的主题、发件人姓名和日期。原因是如果档案移动了——这种情况时有发生，例如因为托管提供商的变更——单凭 URL 通常不足以在其新位置找到该邮件或话题。</para>
 
-<para>The same advice could apply to bug tickets too, but in practice
-bug trackers move less often than mail archives do, and when a bug
-tracker moves the project usually manages to either preserve the
-ticket numbers or make a mapping between old and new ticket numbers,
-so that old references can be resolved with a little extra effort.
-For various technical reasons, this is harder to do with emails and
-especially with threads, so the better solution is just for references
-to include enough information to do a search in the new archive if
-necessary.  See also <xref linkend="using-archives"/>.</para>
+<para>同样的建议也适用于 bug 票据，但实际上，bug 跟踪器移动的频率比邮件档案要低，而且当 bug 跟踪器移动时，项目通常会设法要么保留票据编号，要么制作一个新旧票据编号的映射，这样旧的引用只需稍加努力就可以解析。出于各种技术原因，对电子邮件尤其是话题这样做更难，所以更好的解决方案是让引用包含足够的信息，以便在必要时可以在新的档案中进行搜索。另请参见<xref linkend="using-archives"/>。</para>
 </sidebar>
 
-<para>This is the document alluded to in <xref
-linkend="developer-guidelines"/>.  Naturally, when the
-project is very young, you will have to lay down guidelines without
-the benefit of a long project history to draw on.  But as the
-development community matures, you can adjust the language to reflect
-the way things actually turn out.</para>
+<para>这就是在<xref linkend="developer-guidelines"/>中提到的文档。当然，当项目非常年轻时，你将不得不在没有长期的项目历史可借鉴的情况下制定指导方针。但随着开发社区的成熟，你可以调整语言以反映事情实际的发展方式。</para>
 
-<para>Don't try to be comprehensive.  No document can capture
-everything people need to know about participating in a project.  Many
-of the conventions a project evolves may remain forever unspoken, never
-mentioned explicitly yet adhered to by all.  Other things are simply
-too obvious to be mentioned, and would only distract from important
-but non-obvious material.  For example, there's no point writing
-guidelines like "Be polite and respectful to others on the mailing
-lists, and don't start flame wars," or "Write clean, readable bug-free
-code."  Of course these things are desirable, but since there's no
-conceivable universe in which they are <emphasis>not</emphasis>
-desirable, they are not worth mentioning.  If people are being rude on
-the mailing list, or writing buggy code, they're not going to stop
-just because the project guidelines said to.  Such situations need to
-be dealt with as they arise, not by blanket admonitions to be good.
-On the other hand, if the project has specific guidelines about
-<emphasis>how</emphasis> to write good code, such as rules about
-documenting every API in a certain format, then those guidelines
-should be written down as thoroughly as possible.</para>
+<para>不要试图做到全面。没有一份文件能捕捉到人们参与一个项目所需知道的一切。一个项目演变出的许多惯例可能永远不会被说出来，从未被明确提及，却被所有人遵守。其他事情则太明显以至于不值一提，只会分散对重要但不明显材料的注意力。例如，写像“在邮件列表上对他人保持礼貌和尊重，不要挑起口水战”或“编写干净、可读、无 bug 的代码”这样的指导方针是没有意义的。当然这些事情是可取的，但因为在任何可以想象的宇宙中它们都<emphasis>不是</emphasis>不可取的，所以它们不值一提。如果人们在邮件列表上粗鲁，或者编写有 bug 的代码，他们不会仅仅因为项目指导方针说了就停止。这种情况需要随它们出现而处理，而不是通过一概而论的劝告来做好人。另一方面，如果项目有关于<emphasis>如何</emphasis>编写好代码的具体指导方针，例如关于以某种格式记录每个 API 的规则，那么这些指导方针就应该尽可能详尽地写下来。</para>
 
-<para>A good way to determine what to include is to base the document
-on the questions that newcomers ask most often, and on the complaints
-experienced developers make most often.  This doesn't necessarily mean
-it should turn into a FAQ sheet&nbsp;&mdash;&nbsp;it probably needs a more
-coherent narrative structure than FAQs can offer.  But it should
-follow the same reality-based principle of addressing the issues that
-actually arise, rather than those you anticipate might arise.</para>
+<para>确定要包含什么内容的一个好方法是，将文档基于新来者最常问的问题，以及经验丰富的开发者最常提出的抱怨。这不一定意味着它应该变成一个 FAQ 表——它可能需要比 FAQ 所能提供的更连贯的叙事结构。但它应该遵循同样基于现实的原则，即解决实际出现的问题，而不是你预期可能出现的问题。</para>
 
-<para>If the project is a benevolent dictatorship, or has officers
-endowed with special powers (president, chair, whatever), then the
-document is also a good opportunity to codify succession procedures.
-Sometimes this can be as simple as naming specific people as
-replacements in case the BD suddenly leaves the project for any
-reason.  Generally, if there is a BD, only the BD can get away with
-naming a successor.  If there are elected officers, then the
-nomination and election procedure that was used to choose them in the
-first place should be described in the document.  If there was no
-procedure originally, then get consensus on a procedure on the mailing
-lists <emphasis>before</emphasis> writing it down in an official place.  People can
-sometimes be touchy about hierarchical structures, so the subject
-needs to be approached with sensitivity.</para>
+<para>如果项目是仁慈的独裁，或者有被赋予特殊权力的官员（主席、会长等），那么这份文件也是一个很好的机会来规定继承程序。有时这可以简单到指定特定的人作为替代者，以防 BD 因任何原因突然离开项目。通常，如果有 BD，只有 BD 可以指定继承人。如果有选举产生的官员，那么最初选择他们时使用的提名和选举程序应该在文件中描述。如果最初没有程序，那么在将其写入官方文件<emphasis>之前</emphasis>，先在邮件列表上就程序达成共识。人们有时对等级结构很敏感，所以需要谨慎地处理这个主题。</para>
 
-<para>Perhaps the most important thing is to make it clear that the
-rules can be reconsidered.  If the conventions described in the
-document start to hamper the project, remind everyone that it is
-supposed to be a living reflection of the group's intentions, not a
-source of frustration and blockage.  If someone makes a habit of
-inappropriately asking for rules to be reconsidered every time the
-rules get in her way, you don't always need to debate it with
-her&nbsp;&mdash;&nbsp;sometimes silence is the best tactic.  If other people
-agree with the complaints, they'll chime in, and it will be obvious
-that something needs to change.  If no one else agrees, then the
-person won't get much response, and the rules will stay as they
-are.</para>
+<para>也许最重要的是要明确表示规则可以被重新考虑。如果文件中描述的惯例开始妨碍项目，提醒大家它应该是一个反映团队意图的活的文件，而不是挫折和阻碍的来源。如果有人养成了每次规则妨碍她时就不适当地要求重新考虑规则的习惯，你不必总是和她辩论——有时沉默是最好的策略。如果其他人同意这些抱怨，他们会附和，那么很明显需要改变一些东西。如果没有其他人同意，那么这个人就不会得到太多回应，规则也会保持原样。</para>
 
-<para>Three good examples of project guidelines are the LibreOffice
-Development guide at <ulink
-url="https://wiki.documentfoundation.org/Development"
->https://wiki.documentfoundation.org/Development</ulink>, the Subversion
-Community Guide, at <ulink
-url="https://subversion.apache.org/docs/community-guide/"
->https://subversion.apache.org/docs/community-guide/</ulink>, and the
-Apache Software Foundation governance documents, at <ulink
-url="https://www.apache.org/foundation/how-it-works.html"
->https://www.apache.org/foundation/how-it-works.html</ulink> and <ulink
-url="https://www.apache.org/foundation/voting.html"
->https://www.apache.org/foundation/voting.html</ulink>.  The ASF is
-really a collection of software projects, legally organized as a
-nonprofit corporation, so its documents tend to describe governance
-procedures more than development conventions.  They're still worth
-reading, though, because they represent the accumulated experience of
-a lot of open source projects.</para>
+<para>三个好的项目指南例子是 LibreOffice 开发指南，网址为<ulink url="https://wiki.documentfoundation.org/Development">https://wiki.documentfoundation.org/Development</ulink>，Subversion 社区指南，网址为<ulink url="https://subversion.apache.org/docs/community-guide/">https://subversion.apache.org/docs/community-guide/</ulink>，以及 Apache 软件基金会治理文件，网址为<ulink url="https://www.apache.org/foundation/how-it-works.html">https://www.apache.org/foundation/how-it-works.html</ulink>和<ulink url="https://www.apache.org/foundation/voting.html">https://www.apache.org/foundation/voting.html</ulink>。ASF 实际上是一个软件项目的集合，法律上组织为一个非营利性公司，所以它的文件更多地描述治理程序而不是开发惯例。不过，它们仍然值得一读，因为它们代表了许多开源项目的累积经验。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="non-profit">
-<title>Joining or Creating a Non-Profit Organization</title>
+<title>加入或创建一个非营利组织</title>
 
-<para>Successful open source projects sometimes get to a point where they
-feel the need for some sort of formal existence as a legal
-entity&nbsp;&mdash;&nbsp;to be able to accept donations (see
-<xref linkend="money"/> for discussion of how to handle incoming
-funding), to purchase and maintain infrastructure for the project's
-benefit, to organize conferences and developer meetups, to enforce
-trademarks, etc.</para>
+<para>成功的开源项目有时会达到一个点，他们觉得需要某种形式的法律实体存在——以便能够接受捐赠（关于如何处理收到的资金，请参见<xref linkend="money"/>的讨论），为项目购买和维护基础设施，组织会议和开发者聚会，执行商标等。</para>
 
-<para>There may be a few exceptional circumstances where forming a
-new organization from scratch would be the right solution, but for
-most projects it is much better to join an existing organization.
-There are umbrella organizations whose purpose is to provide a legal
-home for open source projects.  Working with multiple projects gives
-these organizations economies of scale and broad
-experience&nbsp;&mdash;&nbsp;any of them would almost certainly do a
-better job of providing services to your project than your project
-could manage if it started its own organization.</para>
+<para>在少数特殊情况下，从头开始组建一个新组织可能是正确的解决方案，但对于大多数项目来说，加入一个现有的组织要好得多。有一些伞形组织，其目的是为开源项目提供一个法律上的家。与多个项目合作使这些组织具有规模经济和广泛的经验——它们中的任何一个几乎肯定会比你的项目如果自己创办一个组织能做得更好。</para>
 
-<para>Here are some well-known and reputable umbrella organizations:</para>
+<para>这里有一些著名且信誉良好的伞形组织：</para>
 
 <itemizedlist>
-  <listitem>Software Freedom Conservancy&nbsp;&mdash;&nbsp;<ulink
-  url="https://sfconservancy.org/"
-  >https://sfconservancy.org/</ulink><footnote><para>I think the Software
-  Freedom Conservancy is a good choice for most projects,
-  which is why I listed it first.  But I should add the disclosure
-  that I served on their Evaluation Committee, a volunteer committee that
-  evaluates projects applying to become members of the Conservancy, for
-  some time while revising this book for its 2nd edition.  The recommendation of
-  the Conservancy was already in the in-progress text before I joined
-  the committee.</para></footnote></listitem>
+  <listitem>软件自由保护协会 (Software Freedom Conservancy)&nbsp;—&nbsp;<ulink url="https://sfconservancy.org/">https://sfconservancy.org/</ulink><footnote><para>我认为软件自由保护协会对大多数项目来说是一个不错的选择，所以我把它列在了第一位。但我应该补充披露一下，在为本书第二版修订期间，我曾在他们的评估委员会（一个评估申请成为保护协会成员的项目的志愿者委员会）任职一段时间。在我加入该委员会之前，推荐保护协会的内容就已经在进行中的文本里了。</para></footnote></listitem>
 
-  <listitem>Apache Software Foundation&nbsp;&mdash;&nbsp;<ulink
-  url="https://apache.org/" 
-  >https://apache.org/</ulink></listitem>
+  <listitem>Apache 软件基金会 (Apache Software Foundation)&nbsp;—&nbsp;<ulink url="https://apache.org/">https://apache.org/</ulink></listitem>
 
-  <listitem>Eclipse Foundation&nbsp;&mdash;&nbsp;<ulink 
-  url="https://eclipse.org/" 
-  >https://eclipse.org/</ulink></listitem>
+  <listitem>Eclipse 基金会 (Eclipse Foundation)&nbsp;—&nbsp;<ulink url="https://eclipse.org/">https://eclipse.org/</ulink></listitem>
 
-  <listitem>Software in the Public Interest&nbsp;&mdash;&nbsp;<ulink
-  url="http://spi-inc.org/" 
-  >http://spi-inc.org/</ulink></listitem>
+  <listitem>公共利益软件 (Software in the Public Interest)&nbsp;—&nbsp;<ulink url="http://spi-inc.org/">http://spi-inc.org/</ulink></listitem>
 
-  <listitem>Linux Foundation&nbsp;&mdash;&nbsp;<ulink
-  url="http://collabprojects.linuxfoundation.org/"
-  >http://collabprojects.linuxfoundation.org/</ulink></listitem>
+  <listitem>Linux 基金会 (Linux Foundation)&nbsp;—&nbsp;<ulink url="http://collabprojects.linuxfoundation.org/">http://collabprojects.linuxfoundation.org/</ulink></listitem>
 
 </itemizedlist>
 
-<para>These are all based in the United States, but there are similar
-umbrella organizations outside the U.S.&nbsp;&mdash;&nbsp;I just
-didn't know them well enough to make recommendations.  If you're a
-U.S. reader, remember that the distinctions the U.S. tax code makes
-between different types of non-profit corporations, such as 501(c)(3)
-tax-exempt organizations vs 501(c)(6) trade associations, may not be
-meaningful to people outside the U.S., and that the
-tax benefits available to donors under 501(c)(3) won't apply to
-non-U.S. donors anyway.</para>
+<para>这些都设在美国，但在美国以外也有类似的伞形组织——只是我不太了解它们，所以无法推荐。如果你是美国读者，请记住，美国税法对不同类型的非营利公司（如 501(c)(3) 免税组织与 501(c)(6) 行业协会）所做的区分，对美国以外的人可能没有意义，而且 501(c)(3) 下对捐赠者可用的税收优惠也不适用于非美国捐赠者。</para>
 
-<para>If your project joins or creates a non-profit organization, make
-clear the separation between the legal infrastructure and the
-day-to-day running of the project.  The organization is there to
-handle things the developers don't want to handle, not to interfere
-with the things the developers <emphasis>do</emphasis> want to handle
-and are already competent to handle.  Even if the non-profit becomes
-the official owner of the project's copyrights, trademarks, and other
-assets, that shouldn't change the way decisions are made about
-technical questions, project direction, etc.  A good reason to
-join one of the existing organizations is that they already have
-experience with this distinction, and know how to fairly read the collective will
-of the project even when there is controversy or strong disagreement.
-They also serve as a neutral place for resolving disagreements about
-how to allocate the project's money or other resources.  More than one
-of the organizations listed above has had to play "project psychotherapist"
-on occasion, and their ability to do so should be considered an
-advantage even by a healthy and smoothly functioning project.</para>
+<para>如果你的项目加入或创建了一个非营利组织，请明确法律基础设施与项目日常运作之间的分离。该组织的存在是为了处理开发者不想处理的事情，而不是干涉开发者<emphasis>想</emphasis>处理并且已经有能力处理的事情。即使非营利组织成为项目版权、商标和其他资产的官方所有者，这也不应改变关于技术问题、项目方向等决策的制定方式。加入现有组织的一个好理由是，它们已经有处理这种区别的经验，并且知道即使在有争议或强烈分歧时如何公平地解读项目的集体意愿。它们还充当了解决关于如何分配项目资金或其他资源的分歧的中立场所。上面列出的不止一个组织偶尔不得不扮演“项目心理治疗师”的角色，即使对于一个健康且运作顺畅的项目来说，它们能够这样做也应被视为一个优势。</para>
 
 </sect1>
 

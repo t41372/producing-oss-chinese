@@ -1,466 +1,162 @@
 <preface id="preface">
-<title>Preface</title>
+<title>前言</title>
   
 <!-- ======================== SECTION ============================== -->
 <sect1 id="why">
-<title>Why Write This Book?</title>
+<title>为何写这本书？</title>
 
-<para>At parties, people no longer give me a blank stare when I tell
-them I work in open source software. "Oh, yes&nbsp;&mdash;&nbsp;like Linux?"
-they say. I nod eagerly in agreement. "Yes, exactly! That's what I
-do." It's nice not to be completely fringe anymore. In the past, the
-next question was usually fairly predictable: "How do you make money
-doing that?" To answer, I'd summarize the economics of free software:
-that there are organizations in whose interest it is to have certain
-software exist, but that they don't need to sell copies, they just
-want to make sure the software is available and maintained, as a tool
-instead of as a rentable monopoly.</para>
+<para>在派对上，当我告诉别人我从事开源软件工作时，他们不再是一脸茫然地看着我了。“哦，是的——像 Linux 那样？”他们会说。我急切地点头同意。“是的，正是！我就是做那个的。”不再完全处于边缘地带的感觉真好。在过去，下一个问题通常是相当可预见的：“你做那个怎么赚钱？”为了回答，我会总结一下自由软件的经济学：有些组织，让某些软件存在符合其利益，但他们不需要销售副本，他们只是想确保软件可用并得到维护，是作为一种工具，而不是作为一种可出租的垄断。</para>
 
-<para>The next question is not always about money, though. The
-business case for open source software<footnote><para>The terms "open
-source software" and "free software" are essentially synonymous in
-this context; they are discussed more in <xref
-linkend="free-vs-open-source"/>.</para></footnote> is no longer so
-mysterious, and even non-programmers already understand&nbsp;&mdash;&nbsp;or at
-least are not surprised&nbsp;&mdash;&nbsp;that there are people employed at it
-full time. Instead, the next question is often "<emphasis>Oh, what's
-that like?</emphasis>"</para>
+<para>不过，下一个问题并不总是关于钱。开源软件<footnote><para>在此背景下，“开源软件”(open source software) 和“自由软件”(free software) 这两个术语基本上是同义词；在 <xref linkend="free-vs-open-source"/> 中有更详细的讨论。</para></footnote>的商业案例已不再那么神秘，甚至非程序员也已经理解——或者至少不感到惊讶——有人全职从事这项工作。相反，下一个问题常常是“<emphasis>哦，那是什么样子的？</emphasis>”</para>
 
-<para>I didn't have a satisfactory answer ready, and the harder I
-tried to come up with one, the more I realized how complex a topic it
-really is. Running a free software project is not exactly like
-running a business (imagine having to constantly negotiate the nature
-of your product with a group of random people of diverse motivations
-and interests, most of whom you've never met!).
-Nor, for various reasons, is it exactly like running a
-traditional non-profit organization, nor a government. It has
-similarities to all these things, but I have slowly come to the
-conclusion that free software is <foreignphrase>sui
-generis</foreignphrase>. There are many things with which it can be
-usefully compared, but none with which it can be equated. Indeed,
-even the assumption that free software projects can be "run" is a
-stretch. A free software project can be <emphasis>started</emphasis>,
-and it can be influenced by interested parties.
-But its assets cannot be made the property of any single owner, and as
-long as there are people somewhere&nbsp;&mdash;&nbsp;anywhere&nbsp;&mdash;&nbsp;interested in
-continuing it, it can never be unilaterally shut down. Everyone has
-infinite power; everyone has no power. It's an interesting situation.</para>
+<para>我没有准备好一个令人满意的答案，而且我越是努力想出一个，就越是意识到这个话题有多复杂。运营一个自由软件项目并不完全像经营一家企业（想象一下，你必须不断地与一群动机和兴趣各异、大多数你从未见过面的随机人群协商你的产品性质！）。出于各种原因，它也并不完全像运营一个传统的非营利组织，也不是政府。它与所有这些都有相似之处，但我慢慢得出结论，自由软件是<foreignphrase>自成一格 (sui generis)</foreignphrase>的。有很多东西可以与它进行有益的比较，但没有一个可以与它划等号。事实上，即使是认为自由软件项目可以被“运营”的假设也是一种夸张。一个自由软件项目可以被<emphasis>启动</emphasis>，并且可以被感兴趣的各方影响。但它的资产不能成为任何单一所有者的财产，而且只要在某个地方——任何地方——有人有兴趣继续它，它就永远不能被单方面关闭。每个人都有无限的权力；每个人都没有权力。这是一个有趣的局面。</para>
 
-<para>That is why I wanted to write this book in the first place, and,
-a decade later, wanted to update it. Free software projects have
-evolved a distinct culture, an ethos in which the liberty to make the
-software do anything one wants is a central tenet. Yet the result of
-this liberty is not a scattering of individuals each going their own
-separate way with the code, but enthusiastic collaboration and frequent compromise. 
-Indeed, competence at cooperation itself is one of the most highly valued
-skills in free software. To manage these projects is to engage in a
-kind of hypertrophied cooperation, where one's ability not only to
-work with others but to come up with new ways of working together can
-result in tangible benefits to the software and the community that develops it. This book attempts to
-describe the techniques by which this may be done. It is by no means
-complete, but it is at least a beginning.</para>
+<para>这就是我最初想写这本书的原因，并且在十年后，想要更新它。自由软件项目已经演变出一种独特的文化，一种将让软件做任何想做之事的自由作为中心信条的精神。然而，这种自由的结果并不是个体各行其是，带着代码分道扬镳，而是热情的协作和频繁的妥协。事实上，合作本身的能力是自由软件中最受重视的技能之一。管理这些项目就是参与一种高度发达的合作，在这种合作中，一个人不仅能与他人共事，还能想出新的合作方式，这可以为软件和开发它的社区带来切实的利益。本书试图描述可以做到这一点的方法。它绝不是完整的，但至少是一个开始。</para>
 
-<para>Good free software is a worthy goal in itself, and I hope that
-readers who come looking for ways to achieve it will be satisfied with
-what they find here. But beyond that I also hope to convey something
-of the sheer pleasure to be had from working with a motivated team of
-open source developers, and from interacting with users in the
-wonderfully direct way that open source encourages. Participating in
-a successful free software project is a deep pleasure, and ultimately
-that's what keeps the whole system going.</para>
+<para>好的自由软件本身就是一个有价值的目标，我希望那些前来寻找实现它方法的读者能对在这里找到的内容感到满意。但除此之外，我也希望传达出与一个积极的开源开发者团队共事，以及以开源所鼓励的那种奇妙直接的方式与用户互动所能获得的纯粹乐趣。参与一个成功的自由软件项目是一种深刻的快乐，而最终，正是这种快乐让整个系统得以运转。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="audience">
-<title>Who Should Read This Book?</title>
+<title>谁应该读这本书？</title>
 
-<para>This book is meant for managers and software developers who are
-considering starting an open source project, or who have started one
-and are wondering what to do now. It should also be helpful for
-people who just want to participate in an open source project but have
-never done so before.</para>
+<para>这本书是为那些正在考虑启动一个开源项目的管理者和软件开发者，或者已经启动了一个项目但不知道现在该做什么的人准备的。对于那些只想参与一个开源项目但以前从未这样做过的人来说，它也应该有所帮助。</para>
 
-<para>The reader need not be a programmer, but should know basic
-software engineering concepts such as APIs, source code, compilers, and
-patches.</para>
+<para>读者不必是程序员，但应该了解基本的软件工程概念，如 API、源代码、编译器和补丁 (patch)。</para>
 
-<para>Prior experience with open source software, as either a user or
-a developer, is not necessary. Those who have worked in free software
-projects before will probably find at least some parts of the book a
-bit obvious, and may want to skip those sections. Because there's
-such a potentially wide range of audience experience, I've made an
-effort to label sections clearly, and to say when something can be
-skipped by those already familiar with the material.</para>
+<para>作为用户或开发者，先前有无开源软件经验都不是必需的。那些以前在自由软件项目中工作过的人可能会觉得书中的某些部分有点显而易见，或许可以跳过那些章节。因为读者的经验范围可能很广，我已努力清晰地标注章节，并说明当那些已经熟悉材料的读者可以跳过某些内容时。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="sources">
-<title>Sources</title>
+<title>资料来源</title>
 
-<para>Much of the raw material for the first edition of this book came
-from five years of working with the Subversion project (<ulink
-url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>).
-Subversion is an open source
-version control system, written from scratch, which was intended to (and did for a while) replace
-CVS as the <foreignphrase>de facto</foreignphrase> version control
-system of choice in the open source
-community.<footnote><para>Subversion was eventually supplanted by Git,
-one of several systems that implement "distributed version control",
-a style of working that is better suited to collaborative development
-than Subversion's centralized model.</para></footnote> The project was
-started by my employer, CollabNet (<ulink
-url="http://www.collab.net/" >http://www.collab.net/</ulink>), in early 2000,
-and thank goodness
-CollabNet understood right from the start how to run it as a truly
-collaborative, distributed effort. We got a lot of 
-developer buy-in early on; today the majority of developers on the
-project are not CollabNet employees.</para>
+<para>本书第一版的大部分原始材料来自于我在 Subversion 项目（<ulink url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>）工作的五年。Subversion 是一个从头开始编写的开源版本控制系统，旨在（并在一段时间内确实）取代 CVS 成为开源社区中<foreignphrase>事实上的</foreignphrase>首选版本控制系统。<footnote><para>Subversion 最终被 Git 取代，Git 是实现“分布式版本控制”的几个系统之一，这种工作方式比 Subversion 的集中式模型更适合协作开发。</para></footnote>该项目由我的雇主 CollabNet（<ulink url="http://www.collab.net/">http://www.collab.net/</ulink>）于 2000 年初启动，谢天谢地，CollabNet 从一开始就明白如何将其作为一个真正协作的、分布式的项目来运作。我们很早就得到了许多开发者的支持；如今，项目上的大多数开发者都不是 CollabNet 的员工。</para>
 
-<para>Subversion is in many ways a classic example of an open source
-project, and I ended up drawing on it more heavily than I originally
-expected. This was partly a matter of convenience: whenever I needed
-an example of a particular phenomenon, I could usually call one up
-from Subversion right off the top of my head. But it was also a
-matter of verification. Although I am involved in many other free software
-projects to varying degrees, and talk to colleagues
-involved in many more, one quickly realizes when writing for print
-that all assertions need to be fact-checked. I didn't want to make
-statements about events in other projects based only on what I could
-read in their public discussion archives. If someone were to try
-that with Subversion, I knew, she'd be right about half the time and
-wrong the other half. So when drawing inspiration or examples from a
-project with which I didn't have direct experience, I tried to first
-talk to an informant there, someone I could trust to explain what was
-really going on.</para>
+<para>Subversion 在许多方面都是开源项目的典型例子，我最终比我最初预期的更多地借鉴了它。这部分是出于方便：每当需要某个特定现象的例子时，我通常能立刻从 Subversion 中信手拈来。但这也是一个验证的问题。虽然我在不同程度上参与了许多其他自由软件项目，并与参与更多项目的同事交谈，但在为印刷品写作时，人们很快意识到所有断言都需要事实核查。我不想仅凭在其他项目的公开讨论档案中读到的内容就对其事件做出陈述。我知道，如果有人对 Subversion 这样做，她一半时间是对的，另一半时间是错的。因此，当从我没有直接经验的项目中汲取灵感或例子时，我尽量先与那里的知情人交谈，一个我能信任的、能解释真实情况的人。</para>
 
-<para>While Subversion was my full time job from 2000-2006, I've been
-involved in free software for more than twenty-five years. Other projects and organizations that have influenced
-this book include:</para>
+<para>虽然从 2000 年到 2006 年，Subversion 是我的全职工作，但我参与自由软件已有超过二十五年。影响本书的其他项目和组织包括：</para>
 
 <itemizedlist>
-  <listitem><para>The GNU Emacs text editor project at the Free
-            Software Foundation.</para>
+  <listitem><para>自由软件基金会的 GNU Emacs 文本编辑器项目。</para>
   </listitem>
-  <listitem><para>Concurrent Versions System (CVS), which I worked on
-            intensely in 1994&ndash;1995 with Jim Blandy and was
-            involved with intermittently for a few years afterwards.</para>
+  <listitem><para>并发版本系统 (Concurrent Versions System, CVS)，我在 1994-1995 年与 Jim Blandy 密切合作，并在其后几年断断续续地参与。</para>
   </listitem>
-  <listitem><para>The collection of open source projects known as the
-            Apache Software Foundation, especially the Apache Portable
-            Runtime (APR) and Apache HTTP Server.</para> 
+  <listitem><para>被称为 Apache 软件基金会的开源项目集合，特别是 Apache 可移植运行时 (APR) 和 Apache HTTP 服务器。</para>
   </listitem>
-  <listitem><para>The Launchpad.net project at Canonical, Ltd.</para> 
+  <listitem><para>Canonical, Ltd. 的 Launchpad.net 项目。</para>
   </listitem>
-  <listitem><para>Code for America and O'Reilly Media, which gave me
-            an inside view on open source civic technology development
-            starting in 2010, and kindly kept me in the loop after I
-            became a full-time consultant at Open Tech Strategies, LLC
-            around 2012.</para>
+  <listitem><para>Code for America 和 O'Reilly Media，从 2010 年开始，它们让我对开源公民技术开发有了内部视角，并在我 2012 年左右成为 Open Tech Strategies, LLC 的全职顾问后，友好地让我保持了解。</para>
   </listitem>
-  <listitem><para>The many open source anti-surveillance and
-            censorship-circumvention tools supported by the Open
-            Internet Tools Project (OpenITP.org) and by the Open
-            Technology Institute at the New America Foundation.</para>
+  <listitem><para>由 Open Internet Tools Project (OpenITP.org) 和新美国基金会的开放技术研究所支持的许多开源反监视和审查规避工具。</para>
   </listitem>
-  <listitem><para>Checkbook NYC, the municipal financial transparency
-            software released by the New York City Office of the
-            Comptroller.</para>
+  <listitem><para>Checkbook NYC，由纽约市审计长办公室发布的市政财务透明度软件。</para>
   </listitem>
-  <listitem><para>The Arches Project, an open source geospatial web
-            application for inventorying and helping protect cultural
-            heritage sites (e.g., historic buildings, archaeological
-            sites, etc), created by the Getty Conservation Institute
-            and World Monuments Fund.</para>
+  <listitem><para>Arches 项目，一个用于盘点和帮助保护文化遗产地（例如，历史建筑、考古遗址等）的开源地理空间 Web 应用程序，由盖蒂保护研究所和世界古迹基金会创建。</para>
   </listitem>
-  <listitem><para>OpenOffice.org / LibreOffice.org, the Berkeley
-            Database from Sleepycat, and MySQL Database; I have not been
-            involved with these projects personally, but have observed
-            them and, in some cases, talked to people there.</para> 
+  <listitem><para>OpenOffice.org / LibreOffice.org，来自 Sleepycat 的 Berkeley 数据库，以及 MySQL 数据库；我个人没有参与过这些项目，但观察过它们，并在某些情况下与那里的人交谈过。</para>
   </listitem>
-  <listitem><para>Likewise various projects at the Mozilla Corporation,
-            including but not limited to the Firefox web browser.</para>
+  <listitem><para>同样，Mozilla 公司的各种项目，包括但不限于 Firefox 网页浏览器。</para>
   </listitem>
-  <listitem><para>GNU Debugger (GDB) (likewise).</para>
+  <listitem><para>GNU 调试器 (GDB)（同样）。</para>
   </listitem>
-  <listitem><para>The Debian Project (likewise).</para>
+  <listitem><para>Debian 项目（同样）。</para>
   </listitem>
-  <listitem><para>The Hypothes.is Project (likewise).</para>
+  <listitem><para>Hypothes.is 项目（同样）。</para>
   </listitem>
 </itemizedlist>
 
-<para>This is far from a complete list. Many of the client
-projects I work with through our consulting practice at Open Tech
-Strategies, LLC have also influenced this book, and like most open source
-programmers, I keep loose tabs on a variety of different projects of
-interest to me, just to have a sense of the general state of things.
-I haven't named all of them here, but they are mentioned in the text
-where appropriate.</para>
+<para>这远非一个完整的列表。我在 Open Tech Strategies, LLC 的咨询实践中合作的许多客户项目也影响了本书，而且像大多数开源程序员一样，我也会松散地关注各种我感兴趣的不同项目，只是为了对总体情况有个感觉。我没有在这里列出所有这些项目，但在文中适当的地方提到了它们。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="acknowledgements">
-<title>Acknowledgements</title>
+<title>致谢</title>
 
 <sect2 id="acknowledgements-1st-ed">
-<title>For the first edition (2005)</title>
+<title>第一版 (2005)</title>
 
-<para>This book took four times longer to write than I thought it
-would, and for much of that time felt rather like a grand piano
-suspended above my head wherever I went. Without help from many
-people, I would not have been able to complete it while staying
-sane.</para>
+<para>这本书的写作时间比我预想的要长四倍，而且在那段时间的大部分里，感觉就像一架大钢琴悬在我头顶，无论我走到哪里。没有许多人的帮助，我不可能在保持理智的情况下完成它。</para>
 
-<para>Andy Oram, my editor at O'Reilly, was a writer's dream. Aside
-from knowing the field intimately (he suggested many of the topics),
-he has the rare gift of knowing what one meant to say and helping one
-find the right way to say it. It has been an honor to work with him.
-Thanks also to Chuck Toporek for steering this proposal to Andy right
-away.</para>
+<para>Andy Oram，我在 O'Reilly 的编辑，是作家的梦想。除了对该领域了如指掌（他建议了许多主题），他还拥有罕见的天赋，知道一个人想说什么，并帮助他找到正确的表达方式。能与他合作是我的荣幸。还要感谢 Chuck Toporek 马上将这个提案转给 Andy。</para>
 
-<para>Brian Fitzpatrick reviewed almost all of the material as I wrote
-it, which not only made the book better, but kept me writing when I
-wanted to be anywhere in the world but in front of the computer. Ben
-Collins-Sussman and Mike Pilato also checked up on progress, and were
-always happy to discuss&nbsp;&mdash;&nbsp;sometimes at length&nbsp;&mdash;&nbsp;whatever topic
-I was trying to cover that week. They also noticed when I slowed
-down, and gently nagged when necessary. Thanks, guys.</para>
+<para>Brian Fitzpatrick 在我写作时几乎审阅了所有材料，这不仅让书变得更好，而且在我想要在世界任何地方而不是在电脑前时，让我坚持写作。Ben Collins-Sussman 和 Mike Pilato 也检查了进度，并且总是乐于讨论——有时是长篇大论地讨论——我那周试图涵盖的任何主题。他们还注意到我放慢了速度，并在必要时温和地催促。谢谢你们，伙计们。</para>
 
-<para>Biella Coleman was writing her dissertation at the same time
-I was writing this book. She knows what it means to sit down and
-write every day, and provided an inspiring example as well as a
-sympathetic ear. She also has a fascinating anthropologist's-eye view
-of the free software movement, giving both ideas and references that I
-was able use in the book. Alex Golub&nbsp;&mdash;&nbsp;another anthropologist
-with one foot in the free software world, and also finishing his
-dissertation at the same time&nbsp;&mdash;&nbsp;was exceptionally supportive early
-on, which helped a great deal.</para>
+<para>Biella Coleman 在我写这本书的同时也在写她的博士论文。她知道每天坐下来写作意味着什么，并提供了一个鼓舞人心的榜样和一个同情的倾听者。她对自由软件运动还有一个迷人的人类学家视角，提供了我可以在书中使用想法和参考资料。Alex Golub——另一位一只脚踏入自由软件世界的人类学家，并且也在同一时间完成他的博士论文——在早期给予了非凡的支持，这帮了很大的忙。</para>
 
-<para>Micah Anderson somehow never seemed too oppressed by his own
-writing gig, which was inspiring in a sick, envy-generating sort of
-way, but he was ever ready with friendship, conversation, and (on at
-least one occasion) technical support. Thanks, Micah!</para>
+<para>Micah Anderson 似乎从未被他自己的写作任务所压迫，这在一种病态的、产生嫉妒的方式上是鼓舞人心的，但他总是乐于提供友谊、交谈和（至少有一次）技术支持。谢谢，Micah！</para>
 
-<para>Jon Trowbridge and Sander Striker gave both encouragement and
-concrete help&nbsp;&mdash;&nbsp;their broad experience in free software provided
-material I couldn't have gotten any other way.</para>
+<para>Jon Trowbridge 和 Sander Striker 既给予了鼓励，也给予了具体的帮助——他们在自由软件方面的广泛经验提供了我无法通过其他任何方式获得的材料。</para>
 
-<para>Thanks to Greg Stein not only for friendship and well-timed
-encouragement, but for showing the Subversion project how important
-regular code review is in building a programming community. Thanks
-also to Brian Behlendorf, who tactfully drummed into our heads the
-importance of having discussions publicly; I hope that principle is
-reflected throughout this book.</para>
+<para>感谢 Greg Stein 不仅给予了友谊和及时的鼓励，而且向 Subversion 项目展示了定期的代码审查在建立一个编程社区中的重要性。还要感谢 Brian Behlendorf，他巧妙地向我们灌输了公开讨论的重要性；我希望这一原则在本书中得到体现。</para>
 
-<para>Thanks to Benjamin "Mako" Hill and Seth Schoen, for various
-conversations about free software and its politics; to Zack Urlocker
-and Louis Suarez-Potts for taking time out of their busy schedules to
-be interviewed; to Shane on the Slashcode list for allowing his post
-to be quoted; and to Haggen So for his enormously helpful comparison
-of canned hosting sites.</para>
+<para>感谢 Benjamin "Mako" Hill 和 Seth Schoen，感谢他们关于自由软件及其政治的各种对话；感谢 Zack Urlocker 和 Louis Suarez-Potts 在他们繁忙的日程中抽出时间接受采访；感谢 Slashcode 列表上的 Shane 允许引用他的帖子；感谢 Haggen So 对托管网站的极其有用的比较。</para>
 
-<para>Thanks to Alla Dekhtyar, Polina, and Sonya for their unflagging
-and patient encouragement. I'm very glad that I will no longer have
-to end (or rather, try unsuccessfully to end) our evenings early to go
-home and work on "The Book."</para>
+<para>感谢 Alla Dekhtyar、Polina 和 Sonya 坚定不移、耐心的鼓励。我很高兴我将不再需要为了回家写“那本书”而提早结束（或者说，试图提早结束但未成功）我们的夜晚。</para>
 
-<para>Thanks to Jack Repenning for friendship, conversation, and a
-stubborn refusal to ever accept an easy wrong analysis when a harder
-right one is available. I hope that some of his long experience with
-both software development and the software industry rubbed off on this
-book.</para>
+<para>感谢 Jack Repenning 的友谊、交谈，以及在有更难的正确分析可用时，固执地拒绝接受简单的错误分析。我希望他多年来在软件开发和软件行业的经验能对这本书有所影响。</para>
 
-<para>CollabNet was exceptionally generous in allowing me a flexible
-schedule to write, and didn't complain when it went on far longer than
-originally planned. I don't know all the intricacies of how
-management arrives at such decisions, but I suspect Sandhya Klute, and
-later Mahesh Murthy, had something to do with it&nbsp;&mdash;&nbsp;my thanks to
-them both.</para>
+<para>CollabNet 非常慷慨地允许我灵活安排写作时间，并且在我计划的时间远超预期时没有抱怨。我不知道管理层是如何做出这样决定的所有复杂细节，但我怀疑 Sandhya Klute，以及后来的 Mahesh Murthy，与此有关——我感谢他们两人。</para>
 
-<para>The entire Subversion development team has been an inspiration
-for the past five years, and much of what is in this book I learned
-from working with them. I won't thank them all by name here, because
-there are too many, but I implore any reader who runs into a
-Subversion committer to immediately buy that committer the drink of
-their choice&nbsp;&mdash;&nbsp;I certainly plan to.</para>
+<para>整个 Subversion 开发团队在过去五年里一直是一个灵感来源，本书中的很多内容都是我与他们共事时学到的。我不会在这里一一致谢，因为人太多了，但我恳请任何遇到 Subversion 提交者的读者立即为该提交者买一杯他们选择的饮料——我当然也计划这样做。</para>
 
-<para>Many times I ranted to Rachel Scollon about the state of the
-book; she was always willing to listen, and somehow managed to make
-the problems seem smaller than before we talked. That helped a
-lot&nbsp;&mdash;&nbsp;thanks.</para>
+<para>我多次向 Rachel Scollon 抱怨书的状况；她总是愿意倾听，并且不知何故总能让问题在我们交谈后显得比之前小。这帮了很大的忙——谢谢。</para>
 
-<para>Thanks (again) to Noel Taylor, who must surely have wondered why
-I wanted to write another book given how much I complained the last
-time, but whose friendship and leadership of Golos&aacute; helped keep
-music and good fellowship in my life even in the busiest times.
-Thanks also to Matthew Dean and Dorothea Samtleben, friends and
-long-suffering musical partners, who were very understanding as my
-excuses for not practicing piled up. Megan Jennings was constantly
-supportive, and genuinely interested in the topic even though it was
-unfamiliar to her&nbsp;&mdash;&nbsp;a great tonic for an insecure writer. Thanks,
-pal!</para>
+<para>再次感谢 Noel Taylor，他肯定想知道为什么我在上次抱怨了那么多之后还想再写一本书，但他的友谊和对 Golosá 的领导，即使在最忙碌的时候也让我的生活充满了音乐和美好的情谊。还要感谢 Matthew Dean 和 Dorothea Samtleben，朋友和长期受苦的音乐伙伴，他们在我为不练习找借口堆积如山时非常理解。Megan Jennings 一直给予支持，并且对这个主题真正感兴趣，尽管它对她来说很陌生——这对一个没有安全感的作家来说是一剂良药。谢谢，伙计！</para>
 
-<para>I had four knowledgeable and diligent reviewers for this book:
-Yoav Shapira, Andrew Stellman, Davanum Srinivas, and Ben Hyde. If I
-had been able to incorporate all of their excellent suggestions, this
-would be a better book. As it was, time constraints forced me to pick
-and choose, but the improvements were still significant. Any errors
-that remain are entirely my own.</para>
+<para>我有四位知识渊博、勤奋的审阅者为这本书审稿：Yoav Shapira、Andrew Stellman、Davanum Srinivas 和 Ben Hyde。如果我能采纳他们所有的优秀建议，这本书会更好。事实上，时间限制迫使我只能挑选，但改进仍然是显著的。任何仍然存在的错误完全是我自己的责任。</para>
 
-<para>My parents, Frances and Henry, were wonderfully supportive as
-always, and as this book is less technical than the previous one, I
-hope they'll find it somewhat more readable.</para>
+<para>我的父母，Frances 和 Henry，一如既往地给予了极大的支持，而且由于这本书比前一本技术性要弱，我希望他们会觉得它更具可读性。</para>
 
-<para>Finally, I would like to thank the dedicatees, Karen Underhill
-and Jim Blandy. Karen's friendship and understanding have meant
-everything to me, not only during the writing of this book but for the
-last seven years. I simply would not have finished without her help.
-Likewise for Jim, a true friend and a hacker's hacker, who first
-taught me about free software, much as a bird might teach an airplane
-about flying.</para>
+<para>最后，我要感谢本书的题献对象，Karen Underhill 和 Jim Blandy。Karen 的友谊和理解对我来说意味着一切，不仅在写这本书期间，而且在过去的七年里。没有她的帮助，我根本无法完成。Jim 也是如此，一个真正的朋友和一个黑客中的黑客，他首先教会我关于自由软件的知识，就像鸟儿教飞机飞行一样。</para>
 
 </sect2>
 
 <sect2 id="acknowledgements-2nd-ed">
-<title>For the second edition (2023)</title>
+<title>第二版 (2023)</title>
 
-<para>The acknowledgements for the second edition of this book include
-more people and, undoubtedly, more unintentional omissions. If your
-name should be here but is not, please accept my apologies (and let me
-know, because we can at least fix the online copy).</para>
+<para>本书第二版的致谢名单包括了更多的人，并且无疑有更多无意的遗漏。如果你的名字应该在这里但没有出现，请接受我的歉意（并请告知我，因为我们至少可以修正网络版）。</para>
 
-<para>Andy Oram of O'Reilly Media once again went above and beyond the
-call of duty as an editor. He read closely and made many excellent
-recommendations; his expertise both in expository writing in general
-and in open source in particular were apparent in all his comments. I
-can't thank him enough, and the book is much improved for his
-attention.</para>
+<para>O'Reilly Media 的 Andy Oram 再次超越了作为编辑的职责。他仔细阅读并提出了许多优秀的建议；他在说明文写作和开源领域的专业知识在他所有的评论中都显而易见。我无法足够地感谢他，这本书因他的关注而大大改善。</para>
 
-<para>James Vasile has been my friend and colleague for well over a decade
-now, yet not a week goes in which I don't learn something new from
-him. Despite having a busy job&nbsp;&mdash;&nbsp;I know firsthand,
-because we're business partners&nbsp;&mdash;&nbsp;and young children at
-home, he unhesitatingly volunteered to read through the manuscript and
-provide feedback. Money can't buy that, and even if it could, I could
-never afford James. Thanks, pal.</para>
+<para>James Vasile 是我十多年的朋友和同事，但没有一周我不是从他那里学到新东西。尽管工作繁忙——我亲身了解，因为我们是商业伙伴——家里还有年幼的孩子，他毫不犹豫地自愿通读手稿并提供反馈。钱买不到这个，即使买得到，我也永远买不起 James。谢谢，伙计。</para>
 
-<para>Cecilia Donnelly is both a wonderful friend and was a supremely
-capable Open Source Specialist at the Open Tech Strategies office in
-Chicago. It's a delight to be working with her, as our clients know
-too, and her clear thinking and sharp observations have influenced
-many parts of this book.</para>
+<para>Cecilia Donnelly 既是一位很棒的朋友，也是芝加哥 Open Tech Strategies 办公室一位极为能干的开源专家。与她合作是一件愉快的事，我们的客户也知道这一点，她清晰的思维和敏锐的观察影响了本书的许多部分。</para>
 
-<para>Karen Sandler has been unfailingly supportive, and provided
-thoughtful and patient discussion about many of the topics (and even
-some of the specific examples) in this book. As with James, I usually
-learn something from Karen when we talk about free software, and when
-we talk about other things too.</para>
+<para>Karen Sandler 一直给予坚定的支持，并对本书中的许多主题（甚至一些具体例子）进行了深思熟虑和耐心的讨论。和 James 一样，当我们谈论自由软件时，我通常能从 Karen 那里学到一些东西，当我们谈论其他事情时也是如此。</para>
 
-<para>Bradley Kuhn's name appears several times in the commit logs for
-this book, because he provided highly expert feedback on multiple
-occasions, in one case practically writing the patch himself. As I
-wrote in the log message for one of the commits, he is someone "whose
-contributions to free software have been immeasurable and whose
-dedication to our shared cause is a constant inspiration".</para>
+<para>Bradley Kuhn 的名字在本书的提交日志中出现了好几次，因为他多次提供了非常专业的反馈，有一次几乎是自己写了补丁。正如我在其中一次提交的日志消息中所写，他是一个“对自由软件的贡献不可估量，对我们共同事业的奉献是持续的灵感来源”的人。</para>
 
-<para>Karen and Bradley both work at the Software Freedom Conservancy
-(<ulink url="https://sfconservancy.org/" >https://sfconservancy.org/</ulink>).
-If you like this book and you want to help free software, donating to
-the Conservancy is a fine first step. It's also a fine second
-step.</para>
+<para>Karen 和 Bradley 都在软件自由保护协会（<ulink url="https://sfconservancy.org/">https://sfconservancy.org/</ulink>）工作。如果你喜欢这本书，并且想帮助自由软件，向保护协会捐款是一个很好的第一步。它也是一个很好的第二步。</para>
 
-<para>Ben Reser provided a super-detailed and expert review of Chapters
-6 and 7 that resulted in many improvements. Ben, thank you so much.</para>
+<para>Ben Reser 对第 6 章和第 7 章进行了超级详细和专业的审查，带来了许多改进。Ben，非常感谢你。</para>
 
-<para>Michael Bernstein not only provided some detailed feedback
-during the interregnum between the first and second editions, he also
-helped a lot with organizing the Kickstarter campaign that made the
-latter possible. Thank you, Michael.</para>
+<para>Michael Bernstein 不仅在第一版和第二版之间的空档期提供了一些详细的反馈，他还帮助组织了使后者成为可能的 Kickstarter 运动。谢谢你，Michael。</para>
 
-<para>Danese Cooper always keeps me on my toes, and in particular
-brought me the message (which I was not at first willing to hear) that
-innersourcing <emphasis>can</emphasis> work as a means of helping
-organizations learn open source practices and eventually produce open
-source software themselves. Thanks for that, Danese, and much
-else.</para>
+<para>Danese Cooper 总是让我保持警惕，特别是她带来了我起初不愿意听取的信息，即内部开源<emphasis>可以</emphasis>作为帮助组织学习开源实践并最终自己生产开源软件的一种方式。谢谢你，Danese，以及许多其他事情。</para>
 
-<para>Between the two editions, I spent a very educational stretch of
-time working at O'Reilly Media, Code for America / Civic Commons
-(while ensconced in the Open Plans office in New York City, thanks to
-their very kind offer of desk space), and the New America Foundation
-as Open Internet Tools Project Fellow. Much of what I learned through
-that work ended up in the book, and in addition to the organizations
-themselves I thank Tim O'Reilly, Jen Pahlka, Andrew McLaughlin, Philip
-Ashlock, Abhi Nemani, Nick Grossman, Chris Holmes, Frank Hebbert, and
-Andrew Hoppin for the ideas and perspectives they shared.</para>
+<para>在两版之间，我曾在 O'Reilly Media、Code for America / Civic Commons（在纽约市的 Open Plans 办公室，感谢他们非常友好的办公桌空间提供）和新美国基金会作为开放互联网工具项目研究员度过了一段非常有教育意义的时期。我通过那项工作学到的很多东西都最终进入了这本书，除了这些组织本身，我还要感谢 Tim O'Reilly、Jen Pahlka、Andrew McLaughlin、Philip Ashlock、Abhi Nemani、Nick Grossman、Chris Holmes、Frank Hebbert 和 Andrew Hoppin 分享了他们的想法和观点。</para>
 
-<para>Sumana Harihareswara and Leonard Richardson have given frank and
-helpful commentary about various open source goings-on over the years;
-the book is better for their input, and I am the better for their
-friendship.</para>
+<para>Sumana Harihareswara 和 Leonard Richardson 多年来对各种开源事件给予了坦率和有益的评论；这本书因他们的输入而变得更好，我也因他们的友谊而变得更好。</para>
 
-<para>Eben Moglen at the Software Freedom Law Center (<ulink
-url="https://softwarefreedom.org/" >https://softwarefreedom.org/</ulink>)
-taught me a lot about how to look at free software as a large-scale
-social and economic phenomenon, and about how companies view free
-software. He also provided a private working space on a few occasions
-when it really made a difference. Thank you, Eben.</para>
+<para>软件自由法律中心的 Eben Moglen（<ulink url="https://softwarefreedom.org/">https://softwarefreedom.org/</ulink>）教会我很多如何将自由软件看作一个大规模的社会和经济现象，以及公司如何看待自由软件。在几次真正需要的时候，他还提供了一个私人的工作空间。谢谢你，Eben。</para>
 
-<para>I do not understand how Dr. David A. Wheeler makes time to
-answer my occasional questions when he is in demand from so many other
-people as well, but he does, and his answers are always spot-on and
-authoritative. Thanks as always, David.</para>
+<para>我不明白 David A. Wheeler 博士在被那么多人需要的时候，是怎么抽出时间来回答我偶尔的问题的，但他确实做到了，而且他的回答总是恰到好处、权威。一如既往地感谢你，David。</para>
 
-<para>Breena Xie's interest in open source led swiftly to trenchant
-questions about it. Those questions were helpful to me in thinking
-through certain topics in the book, but so was her patience on those
-occasions when the book demanded more time than it should have (by
-which I mean "than I said it would"). Thank you, Breena.</para>
+<para>Breena Xie 对开源的兴趣迅速引出了对它的尖锐问题。那些问题对我思考书中的某些主题很有帮助，但她在我需要比我说的时间更多地投入到书上时所表现出的耐心也同样有帮助。谢谢你，Breena。</para>
 
-<para>Many thanks to Radhir Kothuri and the rest of the HackIllinois
-2017 crew, who provided a very timely motivational boost when they
-proposed doing a print run of the new edition for their event at the
-University of Illinois at Urbana-Champaign, Illinois in February 2017.
-I appreciate the vote of confidence in the book, and hope the
-HackIllinois attendees will be pleased with the results.</para>
+<para>非常感谢 Radhir Kothuri 和 HackIllinois 2017 的其他成员，他们在提议为他们在 2017 年 2 月于伊利诺伊大学厄巴纳-香槟分校的活动印刷新版时，提供了一个非常及时的激励。我感谢他们对这本书的信任投票，并希望 HackIllinois 的与会者会对结果感到满意。</para>
 
-<para>Camille Bégnis of <ulink url="http://neodoc.biz/"
->http://neodoc.biz/</ulink> provided expert DocBook help in real time
-one day, solving a long-standing technical problem in the online
-version of the book that I'd been unable to fix for years. Merci
-beaucoup, Camille.</para>
+<para>Camille Bégnis of <ulink url="http://neodoc.biz/">http://neodoc.biz/</ulink> 有一天实时提供了专业的 DocBook 帮助，解决了一个我多年来一直无法修复的书中在线版本的长期技术问题。非常感谢你，Camille。</para>
 
-<para>My friend Jason A. Owen also provided timely and wonderfully
-thorough help with some DocBook formatting issues and with the build
-process, and is the reason it is now possible to generate PDFs of this
-book suitable for printing on different page sizes.  Independently of
-that, Jason has been a valued collaborator on many open source
-projects, and raises standards wherever he's involved.  Thank you,
-Jason.</para>
+<para>我的朋友 Jason A. Owen 也在一些 DocBook 格式问题和构建过程上提供了及时且非常周到的帮助，也是现在可以生成适合在不同页面尺寸上打印的本书 PDF 的原因。除此之外，Jason 在许多开源项目上都是一位宝贵的合作者，并且在他参与的任何地方都提高了标准。谢谢你，Jason。</para>
 
-<para>Near the end of the preparation of the second edition, I
-realized that the text badly needed a complete read-through, for typos
-of the sort that can't easily be caught by automated means, and for
-various expressive infelicities that I knew had crept in but couldn't
-detect myself.  Corin Duey undertook this task with good cheer and
-magnificent attention to detail, and the book is noticeably improved
-as a result.  Corin, thank you so much.
-</para>
+<para>在准备第二版的尾声，我意识到文本急需一次完整的通读，以找出那种无法通过自动化方式轻易发现的拼写错误，以及我知道已经悄悄潜入但自己无法察觉的各种表达上的不妥。Corin Duey 以愉悦的心情和极其细致的注意力承担了这项任务，书因此得到了显著的改善。Corin，非常感谢你。</para>
 
-<para>The hardest part of these acknowledgements is realizing there
-will never be enough space to do justice to all the knowledge people
-have shared in the decade and a half since the first edition came out. I've been
-working in open source the whole time since then, and have had
-illuminating conversations with many clients, partners, interviewees,
-expert consultants, and fellow travelers; some of them have
-occasionally sent in concrete improvements to the book, too. I can't
-imagine what this new edition would be without the benefit of that
-collective mind, and will try to list some of those people below. I'm
-sure the list is incomplete, and I apologize for that. For what it's
-worth, I used a program to randomize the order, and accepted its first
-output:</para>
+<para>这些致谢最困难的部分是意识到，永远没有足够的空间来公正地对待自第一版问世以来十五年里人们分享的所有知识。从那时起，我一直在开源领域工作，并与许多客户、合作伙伴、受访者、专家顾问和同行进行了富有启发性的对话；他们中的一些人偶尔也为本书提供了具体的改进。我无法想象没有那个集体智慧的帮助，这个新版会是什么样子，我将尝试在下面列出其中一些人。我确信这个列表是不完整的，我为此道歉。值得一提的是，我用一个程序随机排列了顺序，并接受了它的第一次输出：</para>
 
 <para>
 Nithya Ruff,
@@ -572,15 +268,7 @@ Forest Gregg,
 and Molly de Blanc.
 </para>
 
-<para>The 2nd edition rewrite was funded through a Kickstarter
-campaign. The response to that campaign was swift and generous, and
-I'm immensely grateful to all the people who pledged. I hope they
-will forgive me for taking almost four times longer than expected to
-finish the revisions. Every backer of the campaign is acknowledged
-below, using the name they provided via Kickstarter. The list is in
-either ascending or descending order by pledge size, but I'm not going
-to say which, because a little mystery should be retained in these
-matters:</para>
+<para>第二版的重写是通过 Kickstarter 运动资助的。对那次运动的响应是迅速而慷慨的，我非常感谢所有承诺的人。我希望他们能原谅我花了几乎是预期四倍的时间来完成修订。每一位运动的支持者都在下面被致谢，使用他们通过 Kickstarter 提供的名字。列表按承诺大小的升序或降序排列，但我不会说具体是哪种，因为在这些事情上应该保留一点神秘感：</para>
 
 <para>
 Pablo,

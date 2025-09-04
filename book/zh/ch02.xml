@@ -1,135 +1,39 @@
 <chapter id="getting-started">
 
-<title>Getting Started</title>
+<title>开始</title>
 
 <simplesect>
 
-<para>Starting a free software project is a twofold task.  The
-software needs to acquire users, and to acquire developers.  These two
-needs are not necessarily in conflict, but the interaction between
-them adds some complexity to a project's initial presentation.  Some
-information is useful for both audiences, some is useful only for one
-or the other.  Both kinds of information should subscribe to the
-<firstterm>principle of scaled presentation</firstterm>: the degree of detail presented at
-each stage should correspond to the amount of time and effort put in
-by the reader at that stage.  More effort should always result in more
-reward.  When effort and reward do not correlate reliably, people
-lose faith and stop investing effort.</para>
+<para>启动一个自由软件项目是一项双重任务。软件需要获得用户，并获得开发者。这两个需求不一定冲突，但它们之间的相互作用给项目的初始展示增加了一些复杂性。有些信息对两个受众都有用，有些只对其中一个有用。两种信息都应遵循<firstterm>分级呈现原则</firstterm>：在每个阶段呈现的细节程度应与读者在该阶段投入的时间和精力相对应。更多的努力应总能带来更多的回报。当努力和回报不能可靠地关联时，人们会失去信心并停止投入努力。</para>
 
-<para>The corollary to this is that <emphasis>appearances
-matter</emphasis>.  Programmers, in particular, often don't like to
-believe this.  Their love of substance over form is almost a point of
-professional pride.  It's no accident that so many programmers exhibit
-an antipathy for marketing and public relations work, nor that
-professional graphic designers are often horrified at the designs
-programmers come up with on their own.</para>
+<para>由此得出的推论是<emphasis>外表很重要</emphasis>。尤其是程序员，通常不喜欢相信这一点。他们对实质重于形式的偏爱几乎是一种职业自豪感。许多程序员对市场营销和公共关系工作表现出反感，并非偶然；专业平面设计师常常对程序员自己想出的设计感到震惊，也非偶然。</para>
 
-<para>This is a pity, because there are situations where form
-<emphasis>is</emphasis> substance, and project presentation is one of
-them.  For example, the very first thing a visitor learns about a
-project is what its home page looks like.  This information is
-absorbed before any of the actual content on the site is
-comprehended&nbsp;&mdash;&nbsp;before any of the text has been read or links
-clicked on.  However unjust it may be, people cannot stop themselves
-from forming an immediate first impression.  The site's appearance
-signals what kind of care was taken in organizing the project's
-presentation.  Humans have extremely sensitive antennae for detecting
-the investment of care.  Most of us can tell in one quick glance whether a
-home page was thrown together quickly or was given serious thought.
-This is the first piece of information your project puts out, and the
-impression it creates will carry over to the rest of the project by
-association.</para>
+<para>这很可惜，因为在某些情况下，形式<emphasis>就是</emphasis>实质，而项目展示就是其中之一。例如，访问者了解一个项目的第一个信息就是其主页的样子。这个信息在网站上的任何实际内容被理解之前就被吸收了——在任何文本被阅读或链接被点击之前。无论这可能多么不公，人们都无法阻止自己形成一个即时的第一印象。网站的外观标志着在组织项目展示时投入了何种程度的关心。人类对于检测关心的投入有极其敏感的触角。我们大多数人一眼就能看出一个主页是草草搭建的还是经过深思熟虑的。这是你的项目发布的第一条信息，它所创造的印象将通过联想影响到项目的其余部分。</para>
 
-<para>Thus, while much of this chapter talks about the content your
-project should start out with, remember that its look and feel matter
-too.  Because the project web site has to work for two different types
-of visitors&nbsp;&mdash;&nbsp;users and developers&nbsp;&mdash;&nbsp;special attention
-must be paid to clarity and directedness.  Although this is not the
-place for a general treatise on web design, one principle is important
-enough to deserve mention, particularly when the site serves multiple
-(if overlapping) audiences: people should have a rough idea where a
-link goes before clicking on it.  For example, it should be obvious
-<emphasis>from looking at the links</emphasis> to user documentation
-that they lead to user documentation, and not to, say, developer
-documentation.  Running a project is partly about supplying
-information, but it's also about supplying comfort.  The mere presence
-of certain standard offerings, in expected places, reassures users and
-developers who are deciding whether they want to get involved.  It
-says that this project has its act together, has anticipated the
-questions people will ask, and has made an effort to answer them in a
-way that requires minimal exertion on the part of the asker.  By
-giving off this aura of preparedness, the project sends out a message:
-"Your time will not be wasted if you get involved," which is exactly
-what people need to hear.</para>
+<para>因此，虽然本章的大部分内容讨论的是你的项目应该开始时具备的内容，但请记住，它的外观和感觉同样重要。因为项目网站必须为两种不同类型的访问者——用户和开发者——服务，所以必须特别注意清晰度和导向性。虽然这里不是一个关于网页设计的通用论述，但有一个原则重要到值得一提，特别是当网站服务于多个（尽管有重叠）受众时：人们在点击链接之前应该对其去向有一个大致的了解。例如，<emphasis>从链接本身</emphasis>就应该能明显看出它们指向用户文档，而不是开发者文档。运营一个项目部分是关于提供信息，但也是关于提供舒适感。某些标准产品的存在，在预期的地方，能让那些正在决定是否参与的用户和开发者感到放心。这表明这个项目有条不紊，预见到了人们会问的问题，并努力以一种需要提问者最少努力的方式来回答它们。通过散发出这种准备充分的光环，项目传递出一个信息：“如果你参与进来，你的时间不会被浪费”，这正是人们需要听到的。</para>
 
 <sidebar id="user-vs-developer">
-<title>What We Mean by Users and Developers</title>
-<para>The terms <firstterm>user</firstterm> and
-<firstterm>developer</firstterm> here refer to someone's relationship
-to the open source software project in question, not to her identity
-in the world at large.</para>
+<title>我们所说的用户和开发者是什么意思</title>
+<para>这里的术语<firstterm>用户 (user)</firstterm>和<firstterm>开发者 (developer)</firstterm>指的是某人与所讨论的开源软件项目的关系，而不是她在整个世界中的身份。</para>
 
-<para>For example, if the open source project is a Javascript library
-intended for use in web development, and someone is using the library
-as part of her work building web sites, then she is a "user" of the
-library (even though professionally her title might be "software
-developer").  But if she starts contributing bugfixes and enhancements
-back <firstterm>upstream</firstterm>&nbsp;&mdash;&nbsp;that is, back into the project
-&nbsp;&mdash;&nbsp;then, to the extent that she becomes involved in the project's
-maintenance, she is also a "developer" of the project.</para>
+<para>例如，如果开源项目是一个用于网页开发的 Javascript 库，而某人正在使用该库作为她构建网站工作的一部分，那么她就是该库的“用户”（即使她的职业头衔可能是“软件开发者”）。但是，如果她开始将错误修复和增强功能贡献回<firstterm>上游 (upstream)</firstterm>——也就是说，回馈到项目中——那么，在她参与项目维护的程度上，她也是该项目的“开发者”。</para>
 
-<para>It's common for developers in an open source projects to be
-users as well, but it's not always the case.  Especially with large
-projects started by organizations to meet enterprise-scale software
-needs, the developers may not always be direct users of the software,
-although they are usually somehow connected with the team that deploys that
-software within their organization.</para>
+<para>在开源项目中，开发者同时也是用户是很常见的，但并非总是如此。特别是在由组织为了满足企业级软件需求而发起的大型项目中，开发者可能并不总是软件的直接用户，尽管他们通常与在组织内部署该软件的团队有某种联系。</para>
 
-<para>In projects meant primarily for programmers, the boundary
-between user and developer is very porous: <emphasis>every</emphasis>
-user is a potential developer.  But even in projects meant for
-non-technical people, some percentage of the users are still potential
-developers.  Open source projects should be run in such a way as to
-make that transition available to anyone who's interested.</para>
+<para>在主要面向程序员的项目中，用户和开发者之间的界限非常模糊：<emphasis>每个</emphasis>用户都是潜在的开发者。但即使在面向非技术人员的项目中，仍有一定比例的用户是潜在的开发者。开源项目应该以一种方式运营，使得这种转变得以向任何感兴趣的人开放。</para>
 </sidebar>
 
-<para>If you use a "canned hosting" site (see <xref
-linkend="canned-hosting"/>), one advantage of that
-choice is that those sites have a default layout that is similar from
-project to project and is pretty well-suited to presenting a project
-to the world.  That layout can be customized, within certain
-boundaries, but the default design prompts you to include the
-information visitors are most likely to be looking for.</para>
+<para>如果你使用“托管平台”网站（见<xref linkend="canned-hosting"/>），选择它的一个优点是这些网站有一个从项目到项目都相似的默认布局，并且非常适合向世界展示一个项目。该布局可以在一定范围内进行定制，但默认设计会提示你包含访问者最可能寻找的信息。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="look-around">
-<title>But First, Look Around</title>
+<title>但首先，环顾四周</title>
 
-<para>Before starting an open source project, there is one important
-caveat:</para>
+<para>在启动一个开源项目之前，有一个重要的警告：</para>
 
-<para>Always look around to see if there's an existing project that
-does what you want.  The chances are pretty good that whatever problem
-you want solved now, someone else wanted solved before you.  If they
-did solve it, and released their code under a free license, then
-there's no reason for you to reinvent the wheel today.  There are
-exceptions, of course: if you want to start a project as an
-educational experience, pre-existing code won't help; or maybe the
-project you have in mind is so specialized that you know there is zero
-chance anyone else has done it.  But generally, there's no point not
-looking, and the payoff can be huge.<footnote><para>If the usual
-Internet search engines don't turn up anything, another good place to
-look is the Free Software Foundation's directory of free software at
-<ulink url="https://directory.fsf.org/"
->https://directory.fsf.org/</ulink>, which the FSF actively
-maintains.</para></footnote></para>
+<para>总是先看看周围是否已经有能满足你需求的项目。你现在想解决的问题，很可能以前也有人想解决。如果他们解决了，并且以自由许可证发布了他们的代码，那么你今天就没有理由重新发明轮子。当然也有例外：如果你想启动一个项目作为教育体验，那么预先存在的代码无济于事；或者你脑海中的项目是如此专业，以至于你知道其他人做过的可能性为零。但总的来说，不看一看是没有意义的，而且回报可能是巨大的。<footnote><para>如果通常的互联网搜索引擎找不到任何东西，另一个好去处是自由软件基金会的自由软件目录，网址是<ulink url="https://directory.fsf.org/">https://directory.fsf.org/</ulink>，FSF 会积极维护这个目录。</para></footnote></para>
 
-<para>Even if you don't find exactly what you were looking for, you
-might find something so close that it makes more sense to join that
-project and add functionality to it than to start from scratch yourself.
-See <xref linkend="evaluating-oss-projects"/> for a
-discussion of how to evaluate an existing open source project
-quickly.</para>
+<para>即使你没有找到完全符合你需求的东西，你可能会找到一些非常接近的东西，以至于加入那个项目并为其添加功能比你自己从头开始更有意义。关于如何快速评估一个现有的开源项目，请参见<xref linkend="evaluating-oss-projects"/>。</para>
 
 </sect2>
 
@@ -138,205 +42,59 @@ quickly.</para>
 
 <!-- ========================== SECTION =========================== -->
 <sect1 id="starting-from-what-you-have">
-<title>Starting From What You Have</title>
+<title>从你所拥有的开始</title>
 
-<para>You've looked around, found that nothing out there really fits
-your needs, and decided to start a new project.</para>
+<para>你已经环顾四周，发现外面没有什么真正适合你的需求，并决定启动一个新项目。</para>
 
-<para>What now?</para>
+<para>现在怎么办？</para>
 
-<para>The hardest part about launching a free software project is
-transforming a private vision into a public one.  You or your
-organization may know perfectly well what you want, but expressing
-that goal comprehensibly to the world is a fair amount of work.  It is
-essential, however, that you take the time to do it.  You and the
-other founders must decide what the project is really about&nbsp;&mdash;&nbsp;that
-is, decide its limitations, what it <emphasis>won't</emphasis> do as
-well as what it will&nbsp;&mdash;&nbsp;and write up a mission
-statement.<footnote><para>See <xref
-linkend="mission-statement"/>.</para></footnote>  This
-part is usually not too hard, though it can sometimes reveal unspoken
-assumptions and even disagreements about the nature of the project,
-which is fine: better to resolve those now than later.  The next step
-is to package up the project for public consumption, and this is,
-basically, pure drudgery.</para>
+<para>启动一个自由软件项目最困难的部分是将一个私人的愿景转变为一个公共的愿景。你或你的组织可能非常清楚你想要什么，但要向世界清晰地表达这个目标是一项相当大的工作。然而，花时间去做这件事是至关重要的。你和其他创始人必须决定这个项目到底是关于什么的——也就是说，决定它的局限性，它<emphasis>不会</emphasis>做什么以及它会做什么——并写一份使命宣言。<footnote><para>参见<xref linkend="mission-statement"/>。</para></footnote> 这部分通常不太难，尽管它有时会揭示出关于项目性质的未言明的假设甚至分歧，这没关系：最好现在解决这些问题，而不是以后。下一步是将项目打包以供公众消费，而这，基本上，纯粹是苦差事。</para>
 
-<para>What makes it so laborious is that it consists mainly of
-organizing and documenting things everyone already
-knows&nbsp;&mdash;&nbsp;"everyone", that is, who's been involved in the project so 
-far.  Thus, for the people doing the work, there is no immediate
-benefit.  They do not need a <filename>README</filename> file giving
-an overview of the project, nor a design document.
-They do not need an organized code tree conforming to the
-informal but widespread standards of software source distributions.
-Whatever way the source code is arranged is fine for them, because
-they're already accustomed to it anyway, and if the code runs at all,
-they know how to use it.  It doesn't even matter, for them, if the
-fundamental architectural assumptions of the project remain
-undocumented; they're already familiar with those too.</para>
+<para>之所以如此费力，是因为它主要包括组织和记录那些每个人都已经知道的事情——“每个人”，也就是说，到目前为止参与项目的人。因此，对于做这项工作的人来说，没有直接的好处。他们不需要一个<filename>README</filename>文件来概述项目，也不需要一个设计文档。他们不需要一个符合软件源代码分发非正式但广泛标准的有组织的代码树。无论源代码如何安排，对他们来说都行，因为他们已经习惯了，而且如果代码能运行，他们也知道如何使用它。对他们来说，即使项目的基本架构假设没有被记录下来也无所谓；他们也已经熟悉那些了。</para>
 
-<para>Newcomers, on the other hand, need all these things.  Fortunately,
-they don't need them all at once.  It's not necessary for you to
-provide every possible resource before taking a project public.  In a
-perfect world, perhaps, every new open source project would start out
-life with a thorough design document, a complete user manual (with
-special markings for features planned but not yet implemented),
-beautifully and portably packaged code capable of running on any
-computing platform, and so on.  In reality, taking care of all these
-loose ends would be prohibitively time-consuming, and anyway, it's
-work that one can reasonably hope others will help with once the
-project is under way.</para>
+<para>另一方面，新来者需要所有这些东西。幸运的是，他们不需要一次性全部得到。你没有必要在将一个项目公开之前提供所有可能的资源。在完美的世界里，也许每个新的开源项目都应该以一份详尽的设计文档、一份完整的用户手册（带有对计划但尚未实现的功能的特殊标记）、精美且可移植打包的代码（能够在任何计算平台上运行）等等开始。实际上，处理所有这些零散的事情会非常耗时，而且无论如何，这是可以合理地期望在项目进行中其他人会帮助完成的工作。</para>
 
-<para>What <emphasis>is</emphasis> necessary, however, is to put enough
-investment into presentation that newcomers can get past the
-initial obstacle of unfamiliarity.  Think of it as the first step in a
-bootstrapping process, to bring the project to a kind of minimum
-activation energy.  I've heard this threshold called the
-<firstterm>hacktivation energy</firstterm>: the amount of energy a
-newcomer must put in before she starts getting something back.  The
-lower a project's hacktivation energy, the better.  Your first task is
-bring the hacktivation energy down to a level that encourages people
-to get involved.</para>
+<para>然而，<emphasis>有必要</emphasis>的是，在展示上投入足够的精力，让新来者能够克服最初的不熟悉障碍。把它看作是引导过程的第一步，将项目带到一种最低激活能。我听说这个门槛被称为<firstterm>“黑客激活能”(hacktivation energy)</firstterm>：一个新来者在开始得到回报之前必须投入的能量。一个项目的“黑客激活能”越低越好。你的首要任务是把“黑客激活能”降低到一个鼓励人们参与的水平。</para>
 
-<para>Each of the following subsections describes one aspect
-of starting a new project.  They are presented roughly in the order
-that a new visitor would encounter them, though of course the order in
-which you actually implement them might be different.  You can treat
-them as a checklist.  When starting a project, just go down the list
-and make sure you've got each item covered, or at least that you're
-comfortable with the potential consequences if you've left one
-out.</para>
+<para>以下每个小节描述了启动一个新项目的一个方面。它们大致按照新访客会遇到的顺序呈现，当然你实际实现它们的顺序可能会不同。你可以把它们当作一个清单。在启动一个项目时，只需逐项检查，确保你已经涵盖了每一项，或者至少你对遗漏某一项可能带来的后果感到安心。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="choosing-a-name">
-<title>Choose a Good Name</title>
+<title>选择一个好名字</title>
 
-<para>Put yourself in the shoes of someone who's just heard about your
-project, perhaps by having stumbled across it while searching for
-software to solve some problem.  The first thing they'll encounter is
-the project's name.</para>
+<para>设身处地地想一想，某人刚刚听说你的项目，也许是在搜索解决某个问题的软件时偶然发现的。他们遇到的第一件事就是项目的名字。</para>
 
-<para>A good name will not automatically make your project successful,
-and a bad name will not doom it.<footnote><para>Well, a
-<emphasis>really</emphasis> bad name probably could do that, but we
-start from the assumption that no one here is actively trying to make
-their project fail.</para></footnote>  However, a bad name can slow
-down adoption of the
-project, either because people don't take it seriously, or because
-they simply have trouble remembering it.</para>
+<para>一个好名字不会自动让你的项目成功，一个坏名字也不会注定它的失败。<footnote><para>嗯，一个<emphasis>非常</emphasis>坏的名字可能确实会做到这一点，但我们从没有人会主动试图让他们的项目失败这个假设开始。</para></footnote> 然而，一个坏名字会减慢项目的采用速度，要么是因为人们不把它当回事，要么是因为他们就是记不住。</para>
 
-<para>A good name:
+<para>一个好名字：
 
 <itemizedlist>
-  <listitem><para>Gives some idea what the project does, or at least
-            is related in an obvious way, such that if one knows the
-            name and knows what the project does, the name will come
-            quickly to mind thereafter.</para>
+  <listitem><para>能让人对其功能有所了解，或者至少以一种明显的方式相关联，这样如果一个人知道了名字并且知道项目是做什么的，那么之后这个名字就会很快浮现在脑海中。</para>
   </listitem>
-  <listitem><para>Is easy to remember.  Here, there is no getting
-            around the fact that English has become the default
-            language of the Internet: "easy to remember" usually means
-            "easy for someone who can read English to remember."</para>
+  <listitem><para>容易记住。在这里，无法回避的事实是，英语已经成为互联网的默认语言：“容易记住”通常意味着“对于能读懂英语的人来说容易记住”。</para>
   </listitem>
-  <listitem><para>Does not depend on native or high-level fluency in
-            English, nor on a particular regional pronunciation.
-            Names that are puns, for example, do not always travel well.
-            If the pun is particularly compelling and memorable, it
-            may still be worth it; just keep in mind that not everyone
-            who sees the name will hear it in their head in the same
-            way.</para>
+  <listitem><para>不依赖于对英语的母语或高级流利程度，也不依赖于特定的地域发音。例如，双关语的名字并不总是能很好地传播。如果双关语特别引人入胜且令人难忘，它可能仍然值得；只是要记住，不是每个看到这个名字的人都会在脑海中以同样的方式听到它。</para>
   </listitem>
-  <listitem><para>Is not the same as some other project's name, and
-            does not infringe on any trademarks.  This is just good
-            manners, as well as good legal sense.  You don't want to
-            create identity confusion.  It's hard enough to keep track
-            of everything that's available on the Net already, without
-            different things having the same name.</para>
+  <listitem><para>不与任何其他项目的名称相同，也不侵犯任何商标。这既是良好的礼貌，也是良好的法律意识。你不想造成身份混淆。在网上已经很难追踪所有可用的东西了，如果不同的东西有相同的名字，那就更难了。</para>
 
-            <para>The resources mentioned earlier in
-            <xref linkend="look-around"/> are useful in
-            discovering whether another project already has the name
-            you're thinking of.  For the U.S., trademark searches are
-            available at <ulink url="http://www.uspto.gov/"
-            >http://www.uspto.gov/</ulink>.</para> 
+            <para>在<xref linkend="look-around"/>中提到的资源对于发现你正在考虑的名字是否已经被其他项目使用很有用。在美国，商标搜索可在<ulink url="http://www.uspto.gov/">http://www.uspto.gov/</ulink>上进行。</para>
   </listitem>
-  <listitem><para>If possible, is available as a domain name in the
-            <systemitem>.com</systemitem>,
-            <systemitem>.net</systemitem>, and
-            <systemitem>.org</systemitem> top-level domains.  You
-            should pick one, probably <systemitem>.org</systemitem>,
-            to advertise as the official home site for the project;
-            the other two should forward there and are simply to
-            prevent third parties from creating identity confusion
-            around the project's name.  Even if you intend to host the
-            project at some other site (see
-            <xref linkend="hosting"/>), you
-            can still register project-specific domains and forward
-            them to the hosting site.  It helps users a lot to have a
-            simple URL to remember.<footnote><para>The importance of
-            top-level domain names seems to be declining.  A number of
-            projects now have just their name in the
-            <systemitem>.io</systemitem> TLD, for example, and don't
-            bother with <systemitem>.com</systemitem>,
-            <systemitem>.net</systemitem>, or
-            <systemitem>.org</systemitem>.  I can't predict what the
-            brand psychology of domain names will be in the future, so
-            just use your judgement, and if you can get the name in
-            all the important TLDs, do so.</para></footnote></para>
+  <listitem><para>如果可能的话，在<systemitem>.com</systemitem>、<systemitem>.net</systemitem>和<systemitem>.org</systemitem>顶级域名中可用作域名。你应该选择一个，可能是<systemitem>.org</systemitem>，作为项目的官方主站；另外两个应该转发到那里，这只是为了防止第三方围绕项目名称制造身份混淆。即使你打算在其他某个网站上托管项目（参见<xref linkend="hosting"/>），你仍然可以注册特定于项目的域名并将其转发到托管网站。这能帮助用户记住一个简单的 URL。<footnote><para>顶级域名的重要性似乎正在下降。例如，现在许多项目只在<systemitem>.io</systemitem> TLD 中有它们的名字，而不再费心去注册<systemitem>.com</systemitem>、<systemitem>.net</systemitem>或<systemitem>.org</systemitem>。我无法预测未来域名的品牌心理会是怎样，所以只需凭你的判断，如果你能拿到所有重要 TLD 中的名字，就去做吧。</para></footnote></para>
   </listitem>
-  <listitem><para>If possible, is available as a username on <ulink
-            url="https://twitter.com/" >https://twitter.com/</ulink> and other
-            microblog sites.  See <xref linkend="own-the-name"/> for
-            more on this and its relationship to the domain name.</para>
+  <listitem><para>如果可能，在<ulink url="https://twitter.com/">https://twitter.com/</ulink>和其他微博客网站上作为用户名可用。关于这一点及其与域名的关系，请参见<xref linkend="own-the-name"/>。</para>
   </listitem>
 </itemizedlist>
 
 </para>
 
 <sect3 id="own-the-name">
-<title>Own the Name in the Important Namespaces</title>
+<title>在重要的命名空间中拥有该名称</title>
 
-<para>For large projects, it is a good idea to own the project's name
-in as many of the relevant namespaces on the Internet as you can.  By
-namespaces, I mean not just the global Domain Name System, but also online
-services in which the account name (username) is the publicly visible
-handle by which people refer to the project.  If you have the same
-name in all the places where people would look for you, you make it
-easier for people to sustain a mild interest in the project until
-they're ready to become more involved.</para>
+<para>对于大型项目来说，尽可能多地在互联网相关命名空间中拥有项目名称是一个好主意。我所说的命名空间，不仅指全球域名系统，也指那些账户名（用户名）是人们用来指代项目的公开可见句柄的在线服务。如果你在所有人们会寻找你的地方都使用同一个名字，那么你就能让人们更容易地对项目保持轻微的兴趣，直到他们准备好更深入地参与。</para>
 
-<para>For example, the Gnome free desktop project has the <ulink
-url="https://gnome.org/" >https://gnome.org/</ulink> domain
-name,<footnote><para>They didn't manage to get gnome.com or gnome.net,
-but that's okay&nbsp;&mdash;&nbsp;if you only have one, and it's .org,
-it's fine.  That's usually the first one people look for when they're
-seeking the open source project of that name.  If they couldn't get
-"gnome.org" itself, a typical solution would be to get
-"gnomeproject.org" instead, and many projects solve the problem that
-way.</para></footnote> the <ulink url="https://twitter.com/gnome"
->https://twitter.com/gnome</ulink> Twitter handle, the <ulink
-url="https://github.com/gnome" >https://github.com/gnome</ulink> username at
-GitHub.com,<footnote><para>While the authoritative copy of Gnome's source code
-is at <ulink url="https://git.gnome.org/" >https://git.gnome.org/</ulink>, they
-maintain a mirror at GitHub, since so many developers are already
-familiar with GitHub.</para></footnote> and on the Libera.chat IRC
-network (see <xref linkend="chat"/>) they have the channel
-<code>#gnome</code>, although they also maintain their own IRC servers
-(where they control the channel namespace, of course).</para>
+<para>例如，Gnome 自由桌面项目拥有<ulink url="https://gnome.org/">https://gnome.org/</ulink>域名，<footnote><para>他们没能拿到 gnome.com 或 gnome.net，但这没关系——如果你只有一个，而且是 .org，那就行了。这通常是人们在寻找同名开源项目时首先会找的。如果他们拿不到“gnome.org”本身，一个典型的解决方案是转而获取“gnomeproject.org”，许多项目就是这样解决问题的。</para></footnote> <ulink url="https://twitter.com/gnome">https://twitter.com/gnome</ulink> 推特句柄，<ulink url="https://github.com/gnome">https://github.com/gnome</ulink> 在 GitHub.com 上的用户名，<footnote><para>虽然 Gnome 源代码的权威副本在<ulink url="https://git.gnome.org/">https://git.gnome.org/</ulink>，但他们在 GitHub 上维护了一个镜像，因为很多开发者已经熟悉 GitHub 了。</para></footnote> 并且在 Libera.chat IRC 网络上（参见<xref linkend="chat"/>）他们拥有频道<code>#gnome</code>，尽管他们也维护自己的 IRC 服务器（当然，他们在那里控制频道命名空间）。</para>
 
-<para>All this makes the Gnome project splendidly easy to find: it's
-usually right where a potential contributor would expect it to be.  Of
-course, Gnome is a large and complex project with thousands of
-contributors and many subdivisions; the advantage to Gnome of being
-easy to find is greater than it would be for a newer project, since by
-now there are so many ways to get involved in Gnome.  But it will
-certainly never <emphasis>harm</emphasis> your project to own its name
-in as many of the relevant namespaces as it can, and it can sometimes
-help.  So when you start a project, think about what its online handle
-should be and register that handle with the online services you think
-you're likely to care about.  The ones mentioned above are probably a
-good initial list, but you may know others that are relevant for the
-particular subject area of your project.</para>
+<para>所有这些都使得 Gnome 项目非常容易被找到：它通常就在潜在贡献者期望它在的地方。当然，Gnome 是一个拥有数千名贡献者和许多分支的大型复杂项目；对于 Gnome 来说，容易被找到的优势比一个新项目要大，因为现在参与 Gnome 的方式太多了。但是，尽可能多地在相关命名空间中拥有你的项目名称，肯定永远不会<emphasis>损害</emphasis>你的项目，而且有时会有所帮助。所以当你启动一个项目时，考虑一下它的在线句柄应该是什么，并在你认为可能关心的在线服务上注册该句柄。上面提到的那些可能是一个不错的初始列表，但你可能知道其他与你项目特定主题领域相关的服务。</para>
 
 </sect3>
 
@@ -344,234 +102,102 @@ particular subject area of your project.</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="mission-statement">
-<title>Have a Clear Mission Statement</title>
+<title>拥有清晰的使命宣言</title>
 
-<para>Once they've found the project's home site, the next thing people
-will look for is a quick description or mission statement, so they can
-decide (within 30 seconds) whether or not they're interested in
-learning more.  This should be prominently placed on the front page,
-preferably right under the project's name.</para>
+<para>一旦他们找到了项目的主页，人们接下来会寻找的是一个快速的描述或使命宣言，这样他们就可以（在 30 秒内）决定是否对了解更多感兴趣。这应该放在首页的显眼位置，最好就在项目名称的正下方。</para>
 
-<para>The description should be concrete, limiting, and above all,
-short.  Here's an example of a good one, from <ulink
-url="https://hadoop.apache.org/" >https://hadoop.apache.org/</ulink>:</para>
+<para>描述应该是具体的、有限的，最重要的是，简短。这里有一个很好的例子，来自<ulink url="https://hadoop.apache.org/">https://hadoop.apache.org/</ulink>：</para>
 
   <blockquote>
-  <para><emphasis>The Apache™ Hadoop® project develops open-source
-  software for reliable, scalable, distributed computing.</emphasis></para>
+  <para><emphasis>Apache™ Hadoop® 项目开发用于可靠、可扩展、分布式计算的开源软件。</emphasis></para>
 
-  <para><emphasis>The Apache Hadoop software library is a framework
-  that allows for the distributed processing of large data sets across
-  clusters of computers using simple programming models. It is
-  designed to scale up from single servers to thousands of machines,
-  each offering local computation and storage. Rather than rely on
-  hardware to deliver high-availability, the library itself is
-  designed to detect and handle failures at the application layer, so
-  delivering a highly-available service on top of a cluster of
-  computers, each of which may be prone to failures.</emphasis></para>
+  <para><emphasis>Apache Hadoop 软件库是一个框架，它允许使用简单的编程模型跨计算机集群对大数据集进行分布式处理。它旨在从单个服务器扩展到数千台机器，每台机器都提供本地计算和存储。它不依赖硬件来提供高可用性，而是设计为在应用层检测和处理故障，从而在一组可能容易出现故障的计算机集群之上提供高可用性服务。</emphasis></para>
   </blockquote>
 
-<para>In just four sentences, they've hit all the high points, largely
-by drawing on the reader's prior knowledge.  That's an important
-point: it's okay to assume a minimally informed reader with a baseline
-level of technical preparedness.  A reader who doesn't know what "clusters" and
-"high-availability" mean in this context probably can't make much use
-of Hadoop anyway, so there's no point writing for a reader who knows
-any less than that.  The phrase "designed to detect and handle
-failures at the application layer" will stand out to engineers who
-have experience with large-scale computing clusters&nbsp;&mdash;&nbsp;when they
-see those words, they'll know that the people behind Hadoop understand
-that world, and the first-time visitor will thus be likely to give
-Hadoop further consideration.</para>
+<para>仅仅四句话，他们就抓住了所有要点，很大程度上是借鉴了读者的先验知识。这是一个重要的点：假设读者具备最低限度的信息和基本的技术准备是没问题的。一个不知道在这种上下文中“集群”(clusters)和“高可用性”(high-availability)意味着什么的读者，可能也无法很好地使用 Hadoop，所以为知识水平低于此的读者写作没有意义。“设计为在应用层检测和处理故障”这句话会让有大规模计算集群经验的工程师眼前一亮——当他们看到这些话时，他们会知道 Hadoop 背后的人了解那个世界，因此初次访问者很可能会进一步考虑 Hadoop。</para>
 
-<para>Those who remain interested after reading the mission statement
-will next want to see more details, perhaps some user or developer
-documentation, and eventually will want to download something.  But
-before any of that, they'll need to be sure it's open source.</para>
+<para>在阅读了使命宣言后仍然感兴趣的人，接下来会想看更多细节，也许是一些用户或开发者文档，并最终想要下载一些东西。但在所有这些之前，他们需要确定它是开源的。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="state-freedom">
-<title>State That the Project is Free</title>
+<title>声明项目是自由的</title>
 
-<para><emphasis>The front page must make it unambiguously clear that
-the project is open source.</emphasis> This may seem obvious, but you
-would be surprised how many projects forget to do it.  I have seen
-free software project web sites where the front page not only did not
-say which particular free license the software was distributed under,
-but did not even state outright that the software was free at all.
-Sometimes the crucial bit of information was relegated to the
-Downloads page, or the Developers page, or some other place that
-required one more mouse click to get to.  In extreme cases, the
-license was not given anywhere on the web site at all&nbsp;&mdash;&nbsp;the only
-way to find it was to download the software and look at a license file
-inside.</para>
+<para><emphasis>首页必须明确无误地表明项目是开源的。</emphasis>这可能看起来很明显，但你会惊讶地发现有多少项目忘记了这样做。我见过一些自由软件项目的网站，首页不仅没有说明软件是在哪个特定的自由许可证下分发的，甚至根本没有直接说明软件是自由的。有时，关键信息被放在了下载页面、开发者页面，或者其他需要多一次鼠标点击才能到达的地方。在极端情况下，网站上根本没有给出许可证——找到它的唯一方法是下载软件并查看里面的许可证文件。</para>
 
-<para>Please don't make this mistake.  Such an omission can lose many
-potential developers and users.  State up front, in or near the
-mission statement, that the project is "free software" or "open source
-software", and give the exact license.  A quick guide to choosing a
-license is given in
-<xref linkend="license-quickstart"/>, and
-licensing issues are discussed in detail in <xref
-linkend="legal"/>.</para>
+<para>请不要犯这个错误。这样的疏忽可能会让你失去许多潜在的开发者和用户。在使命宣言中或附近， upfront 声明项目是“自由软件”或“开源软件”，并给出确切的许可证。选择许可证的快速指南在<xref linkend="license-quickstart"/>中给出，许可证问题在<xref linkend="legal"/>中有详细讨论。</para>
 
-<para>By this point, our hypothetical visitor has
-determined&nbsp;&mdash;&nbsp;probably in a minute or less&nbsp;&mdash;&nbsp;that she's
-interested in spending, say, at least five more minutes investigating
-this project.  The next sections describe what she should encounter in
-those five minutes.</para>
+<para>到目前为止，我们假设的访客已经确定——可能在一分钟或更短的时间内——她有兴趣花上，比如说，至少五分钟来研究这个项目。接下来的部分描述了她在这五分钟内应该遇到的东西。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="features-and-requirements">
-<title>Features and Requirements List</title>
+<title>功能和需求列表</title>
 
-<para>There should be a brief list of the features the software
-supports (if something isn't completed yet, you can still list it, but
-put "<emphasis>planned</emphasis>" or
-"<emphasis>in&nbsp;progress</emphasis>" next to it), and the kind of
-computing environment required to run the software.  Think of the
-features/requirements list as what you would give to someone asking
-for a quick summary of the software.  It is often just a logical
-expansion of the mission statement.  For example, the mission
-statement might say:</para>
+<para>应该有一个简短的列表，列出软件支持的功能（如果某项功能尚未完成，你仍然可以列出它，但在旁边加上“<emphasis>计划中</emphasis>”或“<emphasis>进行中</emphasis>”），以及运行软件所需的计算环境。可以把功能/需求列表看作是你给别人快速总结软件时会给出的东西。它通常只是使命宣言的逻辑扩展。例如，使命宣言可能会说：</para>
 
   <blockquote>
-  <para><emphasis>Scanley is an open source full-text indexer and
-  search engine with a rich API, for use by programmers in providing
-  search services for large collections of text files.</emphasis></para>
+  <para><emphasis>Scanley 是一个开源的全文本索引器和搜索引擎，具有丰富的 API，供程序员在为大型文本文件集合提供搜索服务时使用。</emphasis></para>
   </blockquote>
 
-<para>The features and requirements list would give the details,
-clarifying the mission statement's scope:</para>
+<para>功能和需求列表会给出细节，阐明使命宣言的范围：</para>
 
   <blockquote>
-    <para><emphasis>Features:</emphasis></para>
+    <para><emphasis>功能：</emphasis></para>
     <itemizedlist>
-      <listitem><para><emphasis>Searches plain text, HTML, JSON,
-                XML, and other formats</emphasis></para>
+      <listitem><para><emphasis>搜索纯文本、HTML、JSON、XML 和其他格式</emphasis></para>
       </listitem>
-      <listitem><para><emphasis>Word or phrase searching</emphasis></para>
+      <listitem><para><emphasis>单词或短语搜索</emphasis></para>
       </listitem>
-      <listitem><para><emphasis>(planned) Fuzzy matching</emphasis></para>
+      <listitem><para><emphasis>（计划中）模糊匹配</emphasis></para>
       </listitem>
-      <listitem><para><emphasis>(planned) Incremental index 
-                updates</emphasis></para>
+      <listitem><para><emphasis>（计划中）增量索引更新</emphasis></para>
       </listitem>
-      <listitem><para><emphasis>(planned) Indexing of remote web
-                sites</emphasis></para>
+      <listitem><para><emphasis>（计划中）索引远程网站</emphasis></para>
       </listitem>
     </itemizedlist>
-    <para><emphasis>Requirements:</emphasis></para>
+    <para><emphasis>需求：</emphasis></para>
     <itemizedlist>
-      <listitem><para><emphasis>Python 3.9 or higher</emphasis></para>
+      <listitem><para><emphasis>Python 3.9 或更高版本</emphasis></para>
       </listitem>
-      <listitem><para><emphasis>Enough disk space to hold the indexes
-                (approximately 2x original data size)</emphasis></para>
+      <listitem><para><emphasis>足够的磁盘空间来存放索引（大约是原始数据大小的 2 倍）</emphasis></para>
       </listitem>
     </itemizedlist>
   </blockquote>
 
-<para>With this information, readers can quickly get a feel for
-whether this software might be what they're looking for, and they can
-consider getting involved as developers too.</para>
+<para>有了这些信息，读者可以很快地感觉到这个软件是否可能是他们正在寻找的，他们也可以考虑作为开发者参与进来。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="development-status">
-<title>Development Status</title>
+<title>开发状态</title>
 
-<para>Visitors usually want to know how a project is doing.  For new
-projects, they want to know the gap between the project's promise and
-current reality.  For mature projects, they want to know how actively
-it is maintained, how often it puts out new releases, how responsive
-it is to bug reports, etc.</para>
+<para>访问者通常想知道一个项目进展如何。对于新项目，他们想知道项目的承诺与当前现实之间的差距。对于成熟的项目，他们想知道它维护的活跃程度，发布新版本的频率，对 bug 报告的响应速度等。</para>
 
-<para>There are a couple of different ways to provide answers to
-these questions.  One is to have a development status page, listing
-the project's near-term goals and what kinds of expertise are expected
-from participating developers at the current stage.  The page
-can also give a history of past releases, with feature lists, so
-visitors can get an idea of how the project defines "progress", and
-how quickly it makes progress according to that definition.  Some
-projects structure their development status page as a roadmap that
-includes the future: past events are shown on the dates they actually
-happened, future ones on the approximate dates the project hopes they
-will happen.</para>
+<para>有几种不同的方式来回答这些问题。一种是有一个开发状态页面，列出项目的近期目标以及在当前阶段期望参与的开发者具备何种专业知识。该页面还可以提供过去版本的历史记录，附带功能列表，这样访问者就可以了解项目如何定义“进展”，以及根据该定义它进展得有多快。一些项目将其开发状态页面构建为一个包含未来的路线图：过去的事件显示在它们实际发生的日期，未来的事件显示在项目希望它们发生的大致日期。</para>
 
-<para>The other way&nbsp;&mdash;&nbsp;not mutually exclusive with the
-first, and in fact probably best done in combination with
-it&nbsp;&mdash;&nbsp;is to have various automatically-maintained
-counters and indicators embedded in the project's front page and/or
-its developer landing page, showing various pieces of information
-that, in the aggregate, give a sense of the project's development
-status and progress.  For example, an Announcements or News panel
-showing recent news items, a Twitter or other microblog stream showing
-notices that match the project's designated hashtags, a timeline of
-recent releases, a panel showing recent activity in the bug tracker
-(bugs filed, bugs responded to), another showing mailing list or
-discussion forum activity, etc.  Each such indicator should be a
-gateway to further information of its type: for example, clicking on
-the "recent bugs" panel should take one to the full bug tracker, or at
-least to an expanded view into bug tracker activity.</para>
+<para>另一种方式——与第一种并非相互排斥，实际上最好是结合使用——是在项目首页和/或其开发者登陆页面嵌入各种自动维护的计数器和指示器，显示各种信息片段，这些信息片段总体上能给人一种项目开发状态和进展的感觉。例如，一个显示近期新闻条目的公告或新闻面板，一个显示与项目指定标签匹配的通知的推特或其他微博客流，一个近期发布的时间线，一个显示 bug 跟踪器中近期活动的面板（提交的 bug，响应的 bug），另一个显示邮件列表或讨论论坛活动的面板等。每个这样的指示器都应该是通往其类型更多信息的门户：例如，点击“近期 bug”面板应该能带人到完整的 bug 跟踪器，或者至少是 bug 跟踪器活动的扩展视图。</para>
 
-<para>Really, there are two slightly different meanings of
-"development status" being conflated here.  One is the formal sense:
-where does the project stand in relation to its stated goals, and how
-fast is it making progress.  The other is less formal but just as
-useful: how active is this project?  Is stuff going on?  Are there
-people here, getting things done?  Often that latter notion is what a
-visitor is most interested in.  Whether or not a project met its most
-recent milestone is often not as interesting as the more
-fundamental question of whether it has an active community of
-developers around it.</para>
+<para>实际上，这里混淆了“开发状态”的两种略有不同的含义。一种是正式的意义：项目相对于其既定目标的立场如何，以及它取得进展的速度有多快。另一种则不那么正式但同样有用：这个项目有多活跃？有事情在发生吗？这里有人在做事吗？通常后者是访问者最感兴趣的。一个项目是否达到了其最近的里程碑，通常不如它是否拥有一个活跃的开发者社区这个更基本的问题有趣。</para>
 
 <!-- For link compatibility with a now-obsolete sidebar ID. -->
 <anchor id="launchpad-status-indicators" />
 
-<para>These two notions of development status are, of course, related,
-and a well-presented project shows both kinds.  The information can be
-divided between the project's front page (show enough there to give an
-overview of both types of development status) and a more
-developer-oriented page.</para>
+<para>这两种开发状态的概念当然是相关的，一个展示得好的项目会同时显示这两种。信息可以分布在项目首页（在那里显示足够的信息以提供两种开发状态的概览）和更面向开发者的页面之间。</para>
 
 <sect3 id="development-status-honesty">
-<title>Development Status Should Always Reflect Reality</title>
+<title>开发状态应始终反映现实</title>
 
-<para>Don't be afraid of looking unready, and never give in to the
-temptation to inflate or hype the development status.  Everyone knows that
-software evolves by stages; there's no shame in saying "This is alpha
-software with known bugs.  It runs, and works at least some of the
-time, but use at your own risk."  Such language won't scare away the
-kinds of developers you need at that stage.  One of the
-worst things a project can do is attract users before the software is
-ready for them.  A reputation for instability or bugginess is very
-hard to shake, once acquired.  Conservatism pays off in the long
-run; it's always better for the software to be
-<emphasis>more</emphasis> stable than the user expected rather than less, and
-pleasant surprises produce the best kind of word-of-mouth.</para>
+<para>不要害怕看起来还没准备好，永远不要屈服于夸大或炒作开发状态的诱惑。每个人都知道软件是分阶段发展的；说“这是一个有已知 bug 的 alpha 软件。它能运行，并且至少在某些时候能工作，但使用风险自负”并没有什么可耻的。这样的语言不会吓跑你在那个阶段所需要的那种开发者。一个项目能做的最糟糕的事情之一，就是在软件还没准备好时就吸引用户。一旦获得了不稳定或多 bug 的名声，就很难摆脱。保守主义从长远来看是值得的；软件比用户预期的<emphasis>更</emphasis>稳定总是比不那么稳定要好，而愉快的惊喜会产生最好的口碑。</para>
 
 <sidebar id="alpha-and-beta">
-  <title>Alpha and Beta</title>
-  <para>The term <firstterm>alpha</firstterm> usually means a first
-  release, with which users can get real work done and which has all
-  the intended functionality, but which also has known bugs.  The main
-  purpose of alpha software is to generate feedback, so the developers
-  know what to work on.  Alpha releases are generally free to change
-  APIs and functionality.</para>
+  <title>Alpha 和 Beta</title>
+  <para>术语<firstterm>alpha</firstterm>通常指第一个版本，用户可以用它来完成实际工作，并且它具备所有预期的功能，但也有已知的 bug。alpha 软件的主要目的是产生反馈，以便开发者知道该做什么。Alpha 版本通常可以自由更改 API 和功能。</para>
 
-  <para>The next stage, <firstterm>beta</firstterm>, means the
-  software's APIs are finalized and its serious known bugs fixed, but
-  it has not yet been tested enough to certify for production release.
-  The purpose of beta software is to either become the official
-  release, assuming no bugs are found, or provide detailed feedback to
-  the developers so they can reach the official release quickly.  In a
-  series of beta releases, APIs and functionality should not change
-  except when absolutely necessary.</para>
+  <para>下一个阶段，<firstterm>beta</firstterm>，意味着软件的 API 已经最终确定，其严重的已知 bug 已被修复，但尚未经过足够的测试以认证为生产版本。beta 软件的目的是要么成为正式版本（假设没有发现 bug），要么向开发者提供详细的反馈，以便他们能迅速达到正式版本。在一系列 beta 版本中，除非绝对必要，否则 API 和功能不应更改。</para>
 </sidebar>
 
 </sect3>
@@ -580,7 +206,7 @@ pleasant surprises produce the best kind of word-of-mouth.</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="downloads">
-<title>Downloads</title>
+<title>下载</title>
 
 <!-- This section probably needs to be rewritten, because there's so
      much software, especially Javascript, that is distributed
@@ -597,450 +223,131 @@ pleasant surprises produce the best kind of word-of-mouth.</para>
      source code.  You also need .</para></footnote>
 -->
 
-<para>The software should be downloadable as source code in standard
-formats.  When a project is first getting started, binary (executable)
-packages are not necessary, unless the software has such complicated
-build requirements or dependencies that merely getting it to run would
-be a lot of work for most people.  (But if this is the case, the
-project is going to have a hard time attracting developers
-anyway!)</para>
+<para>软件应该以标准格式的源代码形式提供下载。当一个项目刚刚开始时，二进制（可执行）包不是必需的，除非软件有如此复杂的构建要求或依赖关系，以至于仅仅让它运行起来对大多数人来说就是一项大量的工作。（但如果情况是这样，那么这个项目无论如何都很难吸引开发者！）</para>
 
-<para>The distribution mechanism should be as convenient, standard,
-and low-overhead as possible.  If you were trying to eradicate a
-disease, you wouldn't distribute the medicine in such a way that it
-requires a non-standard syringe size to administer.  Likewise,
-software should conform to standard build and installation methods;
-the more it deviates from the standards, the more potential users and
-developers will give up and go away confused.</para>
+<para>分发机制应该尽可能方便、标准、低开销。如果你想根除一种疾病，你不会以一种需要非标准尺寸注射器来施药的方式分发药物。同样，软件应该符合标准的构建和安装方法；它偏离标准的程度越大，就会有越多的潜在用户和开发者放弃并困惑地离开。</para>
 
-<para>That sounds obvious, but many projects don't bother to
-standardize their installation procedures until very late in the game,
-telling themselves they can do it any time: <emphasis>"We'll sort all
-that stuff out when the code is closer to being ready."</emphasis>
-What they don't realize is that by putting off the boring work of
-finishing the build and installation procedures, they are actually
-making the code take longer to get ready&nbsp;&mdash;&nbsp;because they
-discourage developers who might otherwise have contributed to the
-code, if only they could build and test it.  Most insidiously, the
-project won't even <emphasis>know</emphasis> it's
-losing all those developers, because the process is an accumulation of
-non-events: someone visits a web site, downloads the software, tries
-to build it, fails, gives up and goes away.  Who will ever know it
-happened, except the person themselves?  No one working on the project
-will realize that someone's interest and good will have been silently
-squandered.</para>
+<para>这听起来很明显，但许多项目直到游戏后期才费心去标准化他们的安装过程，告诉自己他们随时都可以做：“等代码快准备好了，我们再整理那些东西。”他们没有意识到的是，通过推迟完成构建和安装过程的乏味工作，他们实际上是在让代码准备好的时间变得更长——因为他们打击了那些本可能为代码做出贡献的开发者，如果他们能构建和测试的话。最阴险的是，项目甚至不会<emphasis>知道</emphasis>它正在失去所有这些开发者，因为这个过程是一系列非事件的累积：某人访问了一个网站，下载了软件，试图构建它，失败了，放弃了，然后走开了。除了那个人自己，谁会知道发生了什么？项目中的任何人都不会意识到，某个人的兴趣和善意已经被悄无声息地浪费了。</para>
 
-<para>Boring work with a high payoff should always be done early, and
-significantly lowering the project's barrier to entry through good
-packaging brings a very high payoff.</para>
+<para>有高回报的枯燥工作应该尽早完成，而通过良好的打包显著降低项目的入门门槛会带来非常高的回报。</para>
 
-<para>When you release a downloadable package, give it a unique
-version number, so that people can compare any two releases and know
-which supersedes the other.  That way they can report bugs against a
-particular release (which helps respondents to figure out if the bug
-is already fixed or not).  A detailed discussion of version
-numbering can be found in <xref linkend="release-numbering"/>, and the
-details of standardizing build and installation procedures are covered
-in <xref linkend="packaging"/>.</para>
+<para>当你发布一个可下载的包时，给它一个唯一的版本号，这样人们就可以比较任意两个版本，知道哪个版本取代了另一个。这样他们就可以针对特定的版本报告 bug（这有助于响应者判断 bug 是否已经被修复）。关于版本号的详细讨论可以在<xref linkend="release-numbering"/>中找到，而标准化构建和安装过程的细节在<xref linkend="packaging"/>中涵盖。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="vc-and-bug-tracker-access">
-<title>Version Control and Bug Tracker Access</title>
+<title>版本控制和 Bug 跟踪器访问</title>
 
-<para>Downloading source packages is fine for those who just want to
-install and use the software, but it's not enough for those who want
-to debug or add new features.  Nightly source snapshots can help, but
-they're still not fine-grained enough for a thriving development
-community.  People need real-time access to the latest sources, and a
-way to submit changes based on those sources.</para>
+<para>下载源代码包对于那些只想安装和使用软件的人来说是没问题的，但对于那些想调试或添加新功能的人来说还不够。每晚的源代码快照可能会有所帮助，但对于一个蓬勃发展的开发社区来说，它们的粒度仍然不够细。人们需要实时访问最新的源代码，以及一种基于这些源代码提交更改的方式。</para>
 
-<para>The solution is to use a version control
-system&nbsp;&mdash;&nbsp;specifically, an online, publicly-accessible
-version controlled repository, from which anyone can check out the
-project's materials and subsequently get updates.  A version control
-repository is a sign&nbsp;&mdash;&nbsp;to both users and developers&nbsp;&mdash;&nbsp;that
-this project is making an effort to give people what they need to
-participate.  As of this writing, many open source projects use <ulink
-url="https://github.com/" >https://github.com/</ulink>, which offers unlimited
-free public version control hosting for open source projects.  While
-GitHub is not the only choice, nor even the only good choice, it's a
-reasonable one for most projects<footnote><para>Although GitHub is
-based on Git, a popular open source version control system, the code
-that runs GitHub's web services is not itself open source.  Whether
-this matters for your project is a complex question, and is addressed
-in more depth in <xref linkend="canned-hosting"/></para></footnote>.
-Version control infrastructure is discussed in detail in <xref
-linkend="vc"/>.</para>
+<para>解决方案是使用一个版本控制系统——具体来说，是一个在线的、可公开访问的版本控制仓库，任何人都可以从中检出项目的材料并随后获取更新。一个版本控制仓库是一个标志——对用户和开发者都是如此——表明这个项目正在努力为人们提供参与所需的东西。在撰写本文时，许多开源项目使用<ulink url="https://github.com/">https://github.com/</ulink>，它为开源项目提供无限的免费公共版本控制托管。虽然 GitHub 不是唯一的选择，甚至不是唯一的好选择，但对于大多数项目来说，它是一个合理的选择<footnote><para>虽然 GitHub 基于 Git，一个流行的开源版本控制系统，但运行 GitHub Web 服务的代码本身并不是开源的。这对你的项目是否重要是一个复杂的问题，在<xref linkend="canned-hosting"/>中有更深入的讨论。</para></footnote>。版本控制基础设施在<xref linkend="vc"/>中有详细讨论。</para>
 
-<para>The same goes for the project's bug tracker.  The importance of
-a bug tracking system lies not only in its day-to-day usefulness to
-developers, but in what it signifies for project observers.  For many
-people, an accessible bug database is one of the strongest signs that
-a project should be taken seriously&nbsp;&mdash;&nbsp;and the higher
-the number of bugs in
-the database, the <emphasis>better</emphasis> the project looks.  That
-might seem counterintuitive, but remember that the number of bug
-reports filed really depends mostly on two things: the number of people
-using the software and the convenience with which those people can report bugs.
-Any software of sufficient size and complexity has an
-essentially arbitrary number of bugs waiting to be discovered.  The
-real question is, how well will the project do at receiving, recording, and
-prioritizing those bugs?  A project with a large and well-maintained
-bug database ("well-maintained" meaning bugs are responded to promptly, duplicate bugs
-are unified, etc) therefore makes a much better impression than a project
-with no bug database or with a nearly empty database.</para>
+<para>项目的 bug 跟踪器也是如此。一个 bug 跟踪系统的重要性不仅在于它对开发者的日常用处，还在于它对项目观察者所象征的意义。对许多人来说，一个可访问的 bug 数据库是项目应该被认真对待的最强烈的标志之一——而且数据库中的 bug 数量越多，项目看起来就<emphasis>越好</emphasis>。这可能看起来有悖常理，但请记住，提交的 bug 报告数量主要取决于两件事：使用软件的人数和这些人报告 bug 的便利性。任何足够大和复杂的软件都有一个基本上是任意数量的 bug 等待被发现。真正的问题是，项目在接收、记录和优先处理这些 bug 方面做得如何？一个拥有庞大且维护良好的 bug 数据库（“维护良好”意味着 bug 得到及时响应，重复的 bug 被合并等）的项目，因此比一个没有 bug 数据库或数据库几乎为空的项目给人留下更好的印象。</para>
 
-<para>Of course, if your project is just getting started, then the bug
-database will contain very few bugs, and there's not much you can do
-about that.  But if the status page emphasizes the project's youth,
-and if people looking at the bug database can see that most filings
-have taken place recently, they can extrapolate from that the project
-still has a healthy <emphasis>rate</emphasis> of filings, and they
-will not be unduly alarmed by the low absolute number of bugs
-recorded.<footnote><para>For a more thorough argument that bug reports
-should be treated as good news, see <ulink
-url="http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/"
->http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/</ulink>,
-which is about how the accumulation of bug reports does
-<emphasis>not</emphasis> represent technical debt (in the sense of
-<ulink url="https://en.wikipedia.org/wiki/Technical_debt"
->https://en.wikipedia.org/wiki/Technical_debt</ulink>) but rather
-user engagement.</para></footnote></para>
+<para>当然，如果你的项目刚刚起步，那么 bug 数据库里的 bug 会很少，对此你也无能为力。但是，如果状态页面强调了项目的年轻，并且查看 bug 数据库的人能看到大多数提交都是最近发生的，他们可以由此推断出项目仍然有一个健康的提交<emphasis>率</emphasis>，他们就不会因为记录的 bug 绝对数量低而过分担忧。<footnote><para>关于 bug 报告应被视为好消息的更详尽论证，请参见<ulink url="http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/">http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/</ulink>，该文论述了 bug 报告的积累<emphasis>并不</emphasis>代表技术债务（在<ulink url="https://en.wikipedia.org/wiki/Technical_debt">https://en.wikipedia.org/wiki/Technical_debt</ulink>的意义上），而是代表用户参与。</para></footnote></para>
 
-<para>Note that bug trackers are often used to track not only software
-defects, but also enhancement requests, documentation changes, pending tasks,
-and more.  The details of running a bug tracker are covered in
-<xref linkend="bug-tracker"/>, so I won't
-go into them here.  The important thing from a presentation point of
-view is mainly to <emphasis>have</emphasis> a bug tracker and to use it&nbsp;&mdash;&nbsp;and to make
-sure that it is easy to find.</para>
+<para>请注意，bug 跟踪器通常不仅用于跟踪软件缺陷，还用于跟踪增强请求、文档更改、待办任务等。运行 bug 跟踪器的细节在<xref linkend="bug-tracker"/>中有所涉及，所以我在这里不赘述。从展示的角度来看，重要的是<emphasis>拥有</emphasis>一个 bug 跟踪器并使用它——并确保它易于找到。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="communications-channels">
-<title>Communications Channels</title>
+<title>沟通渠道</title>
 
-<para>Visitors usually want to know how to reach the human beings
-involved with the project.  Provide the addresses of mailing lists,
-chat rooms, and any other forums where others
-involved with the software can be reached.<footnote><para>See <xref
-linkend="technical-infrastructure"/>.</para></footnote>
-Make it clear that you and
-the other maintainers of the project are subscribed to these mailing
-lists, so people see there's a way to give feedback that will reach
-the developers.  Your presence on the lists does not imply a
-commitment to answer all questions or implement all feature requests.
-In the long run, probably only a fraction of users will use the forums
-anyway, but the others will be comforted to know that they
-<emphasis>could</emphasis> if they ever needed to.</para>
+<para>访问者通常想知道如何联系到项目相关的人员。提供邮件列表、聊天室以及任何其他可以联系到软件相关人员的论坛的地址。<footnote><para>参见<xref linkend="technical-infrastructure"/>。</para></footnote>明确表示你和项目的其他维护者都订阅了这些邮件列表，这样人们就能看到有一种反馈方式可以到达开发者。你在列表上的存在并不意味着承诺回答所有问题或实现所有功能请求。从长远来看，可能只有一小部分用户会使用这些论坛，但其他人会因为知道如果需要的话他们<emphasis>可以</emphasis>使用而感到安慰。</para>
 
-<para>In the early stages of a project, there's usually no need to have
-separate user and developer forums.  It's much better to have everyone
-involved with the software talking together, in one "room."  Among
-early adopters, the distinction between developer and user is often
-fuzzy; to the extent that the distinction can be made, the ratio of
-developers to users is usually much higher in the early days of the
-project than later on.  While you can't assume that every early
-adopter is a programmer who wants to hack on the software, you can
-assume that they are at least interested in following development
-discussions and in getting a sense of the project's direction.</para>
+<para>在项目的早期阶段，通常没有必要区分用户和开发者论坛。让所有与软件相关的人都在一个“房间”里交谈要好得多。在早期采用者中，开发者和用户之间的区别通常很模糊；在可以做出区分的程度上，项目早期的开发者与用户的比例通常比后期要高得多。虽然你不能假设每个早期采用者都是想在软件上进行开发的程序员，但你可以假设他们至少对关注开发讨论和了解项目方向感兴趣。</para>
    
-<para>As this chapter is only about getting a project started, it's
-enough merely to say that these communications forums need to exist.
-Later, in <xref linkend="growth"/>, we'll examine where
-and how to set up such forums, the ways in which they might need
-moderation or other management, and how, when the time comes, to
-separate user forums from developer forums without creating an
-unbridgeable gulf.</para>
+<para>由于本章只涉及如何启动一个项目，因此只需说明这些沟通论坛需要存在就足够了。稍后，在<xref linkend="growth"/>中，我们将探讨在哪里以及如何建立这样的论坛，它们可能需要何种方式的审核或其他管理，以及在时机成熟时，如何将用户论坛与开发者论坛分开，而又不造成不可逾越的鸿沟。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="developer-guidelines">
-<title>Developer Guidelines</title>
+<title>开发者指南</title>
 
-<para>If someone is considering contributing to the project, she'll
-look for developer guidelines.  Developer guidelines are not so much
-technical as social: they explain how the developers interact with
-each other and with the users, and ultimately how things get
-done.</para>
+<para>如果有人考虑为项目做出贡献，她会寻找开发者指南。开发者指南与其说是技术性的，不如说是社交性的：它们解释了开发者如何彼此互动以及如何与用户互动，并最终解释了事情是如何完成的。</para>
 
-<para>This topic is covered in detail in
-<xref linkend="written-rules"/>, but the basic
-elements of developer guidelines are:
+<para>这个主题在<xref linkend="written-rules"/>中有详细介绍，但开发者指南的基本要素是：
 
 <itemizedlist>
-  <listitem><para>pointers to forums for interaction with other
-            developers</para> 
+  <listitem><para>指向与其他开发者互动的论坛</para>
   </listitem>
-  <listitem><para>instructions on how to report bugs and submit
-            patches</para>
+  <listitem><para>关于如何报告 bug 和提交补丁的说明</para>
   </listitem>
-  <listitem><para>some indication of <emphasis>how</emphasis>
-            development is usually done and how decisions are
-            made&nbsp;&mdash;&nbsp;is the project a benevolent dictatorship, a
-            democracy, or something else</para>
+  <listitem><para>关于开发<emphasis>通常如何</emphasis>进行以及决策如何做出的某种指示——项目是仁慈的独裁，民主，还是其他什么</para>
   </listitem>
 </itemizedlist>
 
-No pejorative sense is intended by "dictatorship", by the way.  It's
-perfectly okay to run a tyranny where one particular developer has
-veto power over all changes.  Many successful projects work this way.
-The important thing is that the project come right out and say so.  A
-tyranny pretending to be a democracy will turn people off; a tyranny
-that says it's a tyranny will do fine as long as the tyrant is
-competent and trusted.  (See <xref linkend="forkability"/>
-for why dictatorship in open source projects doesn't have the same
-implications as dictatorship in other areas of life.)</para>
+顺便说一句，“独裁”一词并无贬义。由某位特定开发者对所有变更拥有否决权的暴政是完全可以的。许多成功的项目就是这样运作的。重要的是项目要坦率地说明这一点。一个伪装成民主的暴政会让人反感；一个自称是暴政的暴政，只要暴君有能力且受信任，就会运作得很好。（关于为什么开源项目中的独裁与生活中其他领域的独裁有不同的含义，请参见<xref linkend="forkability"/>。）</para>
   
-<para><ulink
-url="http://subversion.apache.org/docs/community-guide/"
->http://subversion.apache.org/docs/community-guide/</ulink>
-is an example of particularly thorough developer guidelines; the
-LibreOffice guidelines at <ulink
-url="https://wiki.documentfoundation.org/Development"
->https://wiki.documentfoundation.org/Development</ulink> are also a good
-example.</para>
+<para><ulink url="http://subversion.apache.org/docs/community-guide/">http://subversion.apache.org/docs/community-guide/</ulink>是一个特别详尽的开发者指南的例子；LibreOffice 的指南在<ulink url="https://wiki.documentfoundation.org/Development">https://wiki.documentfoundation.org/Development</ulink>也是一个很好的例子。</para>
 
-<para>If the project has a written Code of Conduct (see <xref
-linkend="code-of-conduct"/>), then the developer guidelines should
-link to it.</para>
+<para>如果项目有书面的行为准则（参见<xref linkend="code-of-conduct"/>），那么开发者指南应该链接到它。</para>
 
-<para>The separate issue of providing a programmer's introduction to
-the software is discussed in <xref
-linkend="developer-documentation"/>.</para>
+<para>关于为程序员提供软件介绍的单独问题，在<xref linkend="developer-documentation"/>中讨论。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="documentation">
-<title>Documentation</title>
+<title>文档</title>
 
-<para>Documentation is essential.  There needs to be
-<emphasis>something</emphasis> for people to read, even if it's
-rudimentary and incomplete.  This falls squarely into the "drudgery"
-category referred to earlier, and is often the first area where a new
-open source project falls down.  Coming up with a mission statement
-and feature list, choosing a license, summarizing development
-status&nbsp;&mdash;&nbsp;these are all relatively small tasks, which can be
-definitively completed and usually need not be revisited once done.
-Documentation, on the other hand, is never really finished, which may
-be one reason people sometimes delay starting it at all.</para>
+<para>文档是必不可少的。必须有<emphasis>一些</emphasis>东西供人们阅读，即使它很简陋和不完整。这完全属于前面提到的“苦差事”类别，并且通常是新开源项目失败的第一个领域。想出一个使命宣言和功能列表，选择一个许可证，总结开发状态——这些都是相对较小的任务，可以明确完成，并且一旦完成通常不需要重新审视。另一方面，文档从来没有真正完成过，这可能是人们有时根本不愿开始它的原因之一。</para>
 
-<para>Insidiously, documentation's utility to
-those writing it is the inverse of its utility to those reading
-it.  The most important documentation for initial users is the basics:
-how to quickly set up the software, an overview of how it works,
-perhaps some guides to doing common tasks.  Yet these are exactly the
-things the <emphasis>writers</emphasis> of the documentation know all
-too well&nbsp;&mdash;&nbsp;so well that it can be difficult for them to see
-things from the reader's point of view, and to laboriously spell out
-the steps that (to the writers) seem so obvious as to be unworthy of
-mention.</para>
+<para>阴险的是，文档对编写者的用处与其对阅读者的用处成反比。对初始用户来说，最重要的文档是基础知识：如何快速设置软件，其工作原理的概述，也许还有一些完成常见任务的指南。然而，这些正是文档的<emphasis>编写者</emphasis>非常了解的事情——了解得如此之好，以至于他们很难从读者的角度看问题，并费力地阐述那些（对编写者来说）似乎显而易见以至于不值一提的步骤。</para>
 
-<para>There's no magic solution to this problem.  Someone just needs
-to sit down and write the stuff, and then, most importantly,
-incorporate feedback from readers.  Use a simple, easy-to-edit format
-such as Markdown, HTML, plain text, ReStructuredText, or
-Asciidoc&nbsp;&mdash;&nbsp;something that's convenient for lightweight,
-quick improvements on the spur of the moment.<footnote><para>Don't
-worry too much about choosing the right format the first time.  If you
-change your mind later, you can always do an automated conversion
-using Pandoc (<ulink url="https://pandoc.org/"
->https://pandoc.org/</ulink>).</para></footnote>  This is not only to remove any
-overhead that might impede the original writers from making
-incremental improvements, but also for those who join the project
-later and want to work on the documentation.</para>
+<para>这个问题没有灵丹妙药。需要有人坐下来写东西，然后，最重要的是，采纳读者的反馈。使用简单、易于编辑的格式，如 Markdown、HTML、纯文本、ReStructuredText 或 Asciidoc——某种便于随时进行轻量级、快速改进的格式。<footnote><para>不要太担心第一次就选对格式。如果你以后改变主意，你总是可以使用 Pandoc（<ulink url="https://pandoc.org/">https://pandoc.org/</ulink>）进行自动转换。</para></footnote> 这不仅是为了消除任何可能阻碍原始作者进行增量改进的开销，也是为了那些后来加入项目并想从事文档工作的人。</para>
 
-<para>One way to ensure basic initial documentation gets done is to
-limit its scope in advance.  That way, writing it at least won't feel
-like an open-ended task.  A good rule of thumb is that it should meet
-the following minimal criteria:</para>
+<para>确保完成基本初始文档的一种方法是预先限制其范围。这样，至少编写它不会感觉像一个没有尽头的任务。一个好的经验法则是，它应该满足以下最低标准：</para>
 
 <itemizedlist>
-  <listitem><para>Tell the reader clearly how much technical
-            expertise they're expected to have.</para>
+  <listitem><para>清楚地告诉读者他们被期望拥有多少技术专长。</para>
   </listitem>
-  <listitem><para>Describe clearly and thoroughly how to set up
-            the software, and tell the user how to run some sort of
-            diagnostic test or simple command to confirm that
-            they've set things up correctly.  Startup
-            documentation is in some ways more important than
-            actual usage documentation.  The more effort someone has
-            invested in installing and getting started with the
-            software, the more persistent she'll be in figuring out
-            advanced functionality that's not well-documented.
-            When people abandon, they abandon early; therefore,
-            it's the earliest stages, like installation, that need
-            the most support.</para>
+  <listitem><para>清晰、详尽地描述如何设置软件，并告诉用户如何运行某种诊断测试或简单命令来确认他们已经正确设置。启动文档在某些方面比实际使用文档更重要。一个人在安装和开始使用软件上投入的精力越多，她在弄清楚那些没有很好记录的高级功能时就会越执着。人们放弃时，是在早期放弃；因此，最需要支持的是最早的阶段，比如安装。</para>
   </listitem>
-  <listitem><para>Give one tutorial-style example of how to do a
-            common task.  Obviously, many examples for many tasks
-            would be even better, but if time is limited, pick one
-            task and walk through it thoroughly.  Once someone
-            sees that the software <emphasis>can</emphasis> be
-            used for one thing, they'll start to explore what else
-            it can do on their own&nbsp;&mdash;&nbsp;and, if you're lucky,
-            start filling in the documentation themselves.  Which
-            brings us to the next point...</para>
+  <listitem><para>给出一个教程式的例子，说明如何完成一个常见的任务。显然，为许多任务提供许多例子会更好，但如果时间有限，选择一个任务并详尽地走一遍。一旦有人看到软件<emphasis>可以</emphasis>用于一件事，他们就会开始自己探索它还能做什么——而且，如果你幸运的话，他们会自己开始补充文档。这就引出了下一点……</para>
   </listitem>
-  <listitem><para>Label the areas where the documentation is known
-            to be incomplete.  By showing the readers that you are
-            aware of its deficiencies, you align yourself with
-            their point of view.  Your empathy reassures them that
-            they won't struggle to convince the project of
-            what's important.  These labels needn't represent
-            promises to fill in the gaps by any particular date&nbsp;&mdash;&nbsp;it's
-            equally legitimate to treat them as open
-            requests for help.</para>
+  <listitem><para>标记出已知文档不完整的区域。通过向读者展示你意识到了它的不足，你将自己与他们的观点对齐。你的同理心让他们放心，他们不需要费力去说服项目什么是重要的。这些标记不必代表在任何特定日期前填补空白的承诺——将它们视为公开寻求帮助的请求同样是合法的。</para>
   </listitem>
 </itemizedlist>
 
-<para>The last point is of wider importance, actually, and can be
-applied to the entire project, not just the documentation.  An
-accurate accounting of known deficiencies is the norm in the open
-source world.  You don't have to exaggerate the project's
-shortcomings, just identify them scrupulously and dispassionately when
-the context calls for it (whether in the documentation, in the bug
-tracking database, or on a mailing list discussion).  No one will
-treat this as defeatism on the part of the project, nor as a
-commitment to solve the problems by a certain date, unless the project
-makes such a commitment explicitly.  Since anyone who uses the
-software will discover the deficiencies for themselves, it's much
-better for them to be psychologically prepared&nbsp;&mdash;&nbsp;then the
-project will look like it has a solid knowledge of how it's
-doing.</para>
+<para>实际上，最后一点具有更广泛的重要性，可以应用于整个项目，而不仅仅是文档。在开源世界中，准确地说明已知的不足是常态。你不必夸大项目的缺点，只需在上下文需要时（无论是在文档中、在 bug 跟踪数据库中，还是在邮件列表讨论中）审慎而冷静地指出它们。没有人会把这看作是项目的失败主义，也不会把它看作是在某个日期前解决问题的承诺，除非项目明确做出这样的承诺。因为任何使用软件的人都会自己发现这些不足，所以让他们有心理准备要好得多——这样项目就会看起来对自己的状况有扎实的了解。</para>
 
 <sidebar id="faq-maintenance">
   <!-- For link compatibility with the old sidebar ID. -->
   <anchor id="starting-a-faq" />
-  <title>Maintaining a FAQ</title>
+  <title>维护常见问题解答 (FAQ)</title>
 
-  <para>A <firstterm>FAQ</firstterm> ("Frequently Asked Questions"
-  document) can be one of the best investments a project makes in
-  terms of educational payoff.  FAQs are highly tuned to the questions
-  users and developers actually ask&nbsp;&mdash;&nbsp;as opposed to the questions
-  you might have <emphasis>expected</emphasis> them to ask&nbsp;&mdash;&nbsp;and
-  therefore, a well-maintained FAQ tends to give those who consult it
-  exactly what they're looking for.  The FAQ is often the first place
-  users look when they encounter a problem, often even in preference
-  to the official manual, and it's probably the document in your
-  project most likely to be linked to from other sites.</para>
+  <para>一个<firstterm>FAQ</firstterm>（“常见问题解答”文档）在教育回报方面，可以是一个项目最好的投资之一。FAQ 高度针对用户和开发者实际提出的问题——而不是你<emphasis>期望</emphasis>他们会问的问题——因此，一个维护良好的 FAQ 往往能给查阅者提供他们正在寻找的东西。FAQ 通常是用户遇到问题时首先会查找的地方，甚至常常优先于官方手册，它也可能是你项目中被其他网站链接最多的文档。</para>
 
-  <para>Unfortunately, you cannot make the FAQ at the start of the
-  project.  Good FAQs are not written, they are grown.  They are by
-  definition reactive documents, evolving over time in response to
-  the questions people ask about the software.  Since it's impossible
-  to correctly anticipate those questions, it is impossible to sit
-  down and write a useful FAQ from scratch.</para>
+  <para>不幸的是，你不能在项目开始时就制作 FAQ。好的 FAQ 不是写出来的，而是成长起来的。它们本质上是反应性的文档，随着时间的推移，根据人们对软件提出的问题而演变。因为不可能正确地预见到那些问题，所以不可能坐下来从头写一个有用的 FAQ。</para>
 
-  <para>Therefore, don't waste your time trying to.  You may, however,
-  find it useful to set up a mostly blank FAQ template with just a few
-  questions and answers, so there will
-  be an obvious place for people to contribute questions and answers
-  after the project is under way.  At this stage, the most important
-  property is not completeness, but <emphasis>convenience</emphasis>:
-  if the FAQ is easy to
-  add to, people will add to it.  (Proper FAQ maintenance is a
-  non-trivial and intriguing problem: see <xref
-  linkend="manager-is-not-owner"/>,
-  <xref linkend="wikis"/>, and <xref
-  linkend="all-as-archives"/>.)</para>
+  <para>因此，不要浪费时间去尝试。不过，你可能会发现，设置一个几乎为空的 FAQ 模板，只包含几个问题和答案，是很有用的，这样当项目进行中时，人们就会有一个明显的地方来贡献问题和答案。在这个阶段，最重要的属性不是完整性，而是<emphasis>便利性</emphasis>：如果 FAQ 易于添加，人们就会添加。（适当的 FAQ 维护是一个不小且有趣的问题：参见<xref linkend="manager-is-not-owner"/>、<xref linkend="wikis"/>和<xref linkend="all-as-archives"/>。）</para>
 </sidebar>
 
 <sect3 id="documentation-availability">
-<title>Availability of Documentation</title>
+<title>文档的可用性</title>
 
-<para>Documentation should be available from two places: online
-(directly from the web site), <emphasis>and</emphasis> in the
-downloadable distribution of the software (see
-<xref linkend="packaging"/>).  It needs to be
-online, in browsable form, for two reasons: one, people often read
-documentation <emphasis>before</emphasis> downloading software for the
-first time, as a way of helping them decide whether to download at
-all, and two, Internet search engines will often give results that
-land people directly in the docs.  But documentation 
-should also be accompany the software, on the principle that downloading
-should supply (i.e., make locally accessible) everything one needs to
-use the package.</para>
+<para>文档应该可以从两个地方获得：在线（直接从网站），<emphasis>以及</emphasis>在软件的可下载分发包中（参见<xref linkend="packaging"/>）。它需要在线，以可浏览的形式，原因有二：一，人们通常在第一次下载软件<emphasis>之前</emphasis>阅读文档，作为帮助他们决定是否下载的一种方式；二，互联网搜索引擎通常会给出直接导向文档的结果。但文档也应该随软件一起提供，基于下载应该提供（即，使本地可访问）使用软件包所需的一切的原则。</para>
 
-<para>For online documentation, make sure that there is a link that
-brings up the <emphasis>entire</emphasis> documentation in one HTML
-page (put a note like "monolithic" or "all-in-one" or "single large
-page" next to the link, so people know that it might take a while to
-load).  This is useful because people often want to search for a
-specific word or phrase across the entire documentation.  Generally,
-they already know what they're looking for; they just can't remember
-what section it's in.  For such people, nothing is more frustrating
-than encountering one HTML page for the table of contents, then a
-different page for the introduction, then a different page for
-installation instructions, etc.  When the pages are broken up like
-that, their browser's search function is useless.  The separate-page
-style is useful for those who already know what section they need, or
-who want to read the entire documentation from front to back in
-sequence.  But this is not necessarily the most common way
-documentation is accessed.  Often, someone who is basically
-familiar with the software is coming back to search for a specific
-word or phrase, and to fail to provide them with a single, searchable
-document would only make their lives harder.</para>
+<para>对于在线文档，确保有一个链接可以打开<emphasis>整个</emphasis>文档的单个 HTML 页面（在链接旁边加上“整体式”或“一体式”或“单个大页面”之类的注释，这样人们就知道加载可能需要一些时间）。这很有用，因为人们常常想在整个文档中搜索某个特定的单词或短语。通常，他们已经知道他们在寻找什么；他们只是不记得它在哪一节。对于这样的人来说，没有什么比遇到一个目录的 HTML 页面，然后是引言的另一个页面，然后是安装说明的另一个页面等更令人沮丧的了。当页面像那样被分割时，他们的浏览器的搜索功能就没用了。分立页面的样式对于那些已经知道他们需要哪一节，或者想按顺序从头到尾阅读整个文档的人来说是有用的。但这不一定是访问文档最常见的方式。通常，一个基本熟悉软件的人回来是为了搜索某个特定的单词或短语，而不为他们提供一个单一的、可搜索的文档只会让他们的生活更困难。</para>
 
 </sect3>
 
 <sect3 id="developer-documentation">
-<title>Developer Documentation</title>
+<title>开发者文档</title>
 
-<para>Developer documentation is written by programmers to help other
-programmers
-understand the code, so they can repair and extend it.  This is
-somewhat different from the <emphasis>developer guidelines</emphasis>
-discussed earlier, which are more social than technical.  Developer
-guidelines tell programmers how to get along with each other;
-developer documentation tells them how to get along with the code
-itself.  The two are often packaged together in one document for
-convenience (as with the <ulink
-url="https://subversion.apache.org/docs/community-guide/"
->https://subversion.apache.org/docs/community-guide/</ulink> example given
-earlier), but they don't have to be.</para>
+<para>开发者文档是由程序员编写的，旨在帮助其他程序员理解代码，以便他们可以修复和扩展它。这与前面讨论的<emphasis>开发者指南</emphasis>有所不同，后者更偏向社交而非技术。开发者指南告诉程序员如何与彼此相处；开发者文档告诉他们如何与代码本身相处。为了方便，这两者经常被打包在一个文档中（就像前面给出的<ulink url="https://subversion.apache.org/docs/community-guide/">https://subversion.apache.org/docs/community-guide/</ulink>例子一样），但它们不一定非要如此。</para>
 
-<para>Although developer documentation can be very helpful, there's no
-reason to delay a release to do it.  As long as the original authors
-are available (and willing) to answer questions about the code, that's
-enough to start with.  In fact, having to answer the same questions
-over and over is a common motivation for writing documentation.  But
-even before it's written, determined contributors will still manage to
-find their way around the code.  The force that drives people to spend
-time learning a codebase is that the code does something useful for
-them.  If people have faith in that, they will take the time to figure
-things out; if they don't have that faith, no amount of developer
-documentation will get or keep them.</para>
+<para>尽管开发者文档非常有帮助，但没有理由为了它而推迟发布。只要原始作者可以（并且愿意）回答关于代码的问题，这就足够开始了。事实上，不得不一遍又一遍地回答相同的问题是编写文档的常见动机。但即使在编写之前，坚定的贡献者仍然能够设法在代码中找到自己的路。驱使人们花时间学习代码库的力量是，代码为他们做了有用的事情。如果人们对此有信心，他们就会花时间去弄清楚事情；如果他们没有这种信心，再多的开发者文档也无法吸引或留住他们。</para>
 
-<para>So if you have time to write documentation for only one
-audience, write it for users.  All user documentation is, in effect,
-developer documentation as well; any programmer who's going to work on
-a piece of software will need to be familiar with how to use it too.
-Later, when you see programmers asking the same questions over and
-over, take the time to write up some separate documents just for
-them.</para>
+<para>所以，如果你只有时间为一个受众编写文档，那就为用户写。所有用户文档实际上也是开发者文档；任何要从事某软件工作的程序员都需要熟悉如何使用它。稍后，当你看到程序员一遍又一遍地问同样的问题时，再花时间为他们写一些单独的文档。</para>
 
-<para>Some projects use wikis for their initial documentation, or even
-as their primary documentation.  In my experience, this works best
-if the wiki is actively maintained by a few people who agree on how
-the documentation is to be organized and what sort of "voice" it
-should have.  See
-<xref linkend="wikis"/> for
-more.</para>
+<para>一些项目使用 wiki 作为其初始文档，甚至作为其主要文档。根据我的经验，如果 wiki 由少数几个人积极维护，他们对文档的组织方式和应该具有的“声音”达成一致，那么这种方式效果最好。更多信息请参见<xref linkend="wikis"/>。</para>
 
-<para>If the infrastructure aspects of documentation workflow seem
-daunting, consider using <ulink url="https://readthedocs.org/"
->https://readthedocs.org/</ulink>.  Many projects now depend on it to automate
-the process of presenting their documentation online.  The site takes
-care of format conversion, integration with the project's version
-control repository (so that documentation rebuilds happen
-automatically), and various other mundane tasks, so that you and your
-contributors can focus on content.</para>
+<para>如果文档工作流程的基础设施方面看起来令人望而生畏，可以考虑使用<ulink url="https://readthedocs.org/">https://readthedocs.org/</ulink>。许多项目现在依赖它来自动化在线展示文档的过程。该网站负责格式转换、与项目版本控制仓库的集成（以便文档自动重建），以及各种其他繁琐的任务，这样你和你的贡献者就可以专注于内容了。</para>
 
 </sect3>
 
@@ -1050,117 +357,40 @@ contributors can focus on content.</para>
 <sect2 id="examples-and-demos">
 <!-- For link compatibility with the old section ID. -->
 <anchor id="example-output" />
-<title>Demos, Screenshots, Videos, and Example Output</title>
+<title>演示、截图、视频和示例输出</title>
 
 <!-- For link compatibility with an old sidebar ID. -->
 <anchor id="screenshots" />
-<para>If the project involves a graphical user interface, or if it
-produces graphical or otherwise distinctive output, put some samples
-up on the project web site.  In the case of an interface, this means
-screenshots or, better yet, a brief (4 minutes or fewer) video with
-subtitles or a narrator.  For output, it might be screenshots or just
-sample files to download.  For web-based software, the gold standard
-is a demo site, of course, assuming the software is amenable to
-that.</para>
+<para>如果项目涉及图形用户界面，或者它产生图形或其他独特的输出，请在项目网站上放一些样本。对于界面，这意味着截图，或者更好的是，一个带有字幕或解说员的简短（4 分钟或更短）视频。对于输出，可能是截图或只是供下载的示例文件。对于基于 Web 的软件，黄金标准当然是一个演示网站，前提是软件适合这样做。</para>
 
-<para>The main thing is to cater to people's desire for instant
-gratification in the way they are most likely to expect.  A single
-screenshot or video can be more convincing than paragraphs of
-descriptive text and mailing list chatter, because it is proof
-that the software <emphasis>works</emphasis>.  The code may still be
-buggy, it may be hard to install, it may be incompletely documented,
-but image-based evidence shows people that if one puts in enough effort,
-one can get it to run.</para>
+<para>最主要的是要以人们最可能期望的方式满足他们对即时满足的渴望。一张截图或一段视频比几段描述性文字和邮件列表的讨论更有说服力，因为它是软件<emphasis>能用</emphasis>的证明。代码可能仍然有 bug，可能很难安装，可能文档不完整，但基于图像的证据向人们表明，如果投入足够的努力，就能让它运行起来。</para>
 
 <sidebar id="video-brevity">
-  <title>Keep Videos Brief, and <emphasis>Say</emphasis> They're
-  Brief</title>
-  <para>If you have a video demonstration of your project, keep the
-  video under 4 minutes long, and make sure people can see the
-  duration <emphasis>before</emphasis> they click on it.  This is in
-  keeping with the "principle of scaled presentation" mentioned
-  at the beginning of this chapter: make the decision to watch the video an easy
-  one by removing as much risk as possible.  Visitors are more likely to click on
-  a link that says "Watch our 3 minute video" than on one that just
-  says "Watch our video", because in the former case they know what
-  they're getting into before they click&nbsp;&mdash;&nbsp;and they'll
-  watch it better, because they've mentally prepared the necessary
-  amount of attention commitment beforehand, and thus won't tire mid-way
-  through the video.</para>
-  <para>As to where the four-minute limit came from: it's a scientific
-  fact, determined through many attempts by the same experimental
-  subject (who shall remain unnamed) to watch project videos.  The
-  limit does not apply to tutorials or other instructional material,
-  of course; it's just for introductory videos.</para>
-  <para>In case you don't already have preferred software for
-  recording desktop interaction videos: If you use the GNOME 3 desktop
-  manager, you can use its built-in screen recording capability (see
-  <ulink
-  url="https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en#screencast"
-  >https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en#screencast</ulink>&nbsp;&mdash;&nbsp;essentially,
-  do
-  <keycap>Ctl</keycap>+<keycap>Alt</keycap>+<keycap>Shift</keycap>+<keycap>R</keycap>
-  to start recording, and then do
-  <keycap>Ctl</keycap>+<keycap>Alt</keycap>+<keycap>Shift</keycap>+<keycap>R</keycap>
-  again to stop).  There are many open source video editors; <filename>OpenShot</filename>
-  has been fine for post-capture editing in my experience.</para>
+  <title>保持视频简短，并<emphasis>说明</emphasis>它们很简短</title>
+  <para>如果你有项目的视频演示，请将视频保持在 4 分钟以内，并确保人们在点击<emphasis>之前</emphasis>能看到时长。这符合本章开头提到的“分级呈现原则”：通过尽可能多地消除风险，让观看视频的决定变得容易。访问者更可能点击一个写着“观看我们的 3 分钟视频”的链接，而不是一个只写着“观看我们的视频”的链接，因为在前者的情况下，他们在点击之前就知道自己将要面对什么——而且他们会看得更好，因为他们已经事先为所需的注意力投入做好了心理准备，因此不会在视频中途感到疲倦。</para>
+  <para>至于四分钟的限制是怎么来的：这是一个科学事实，是通过同一位实验对象（其姓名将保密）多次尝试观看项目视频得出的。当然，这个限制不适用于教程或其他教学材料；它只适用于介绍性视频。</para>
+  <para>如果你还没有首选的录制桌面交互视频的软件：如果你使用 GNOME 3 桌面管理器，你可以使用其内置的屏幕录制功能（参见<ulink url="https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en#screencast">https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en#screencast</ulink>——基本上，按<keycap>Ctl</keycap>+<keycap>Alt</keycap>+<keycap>Shift</keycap>+<keycap>R</keycap>开始录制，然后再按一次<keycap>Ctl</keycap>+<keycap>Alt</keycap>+<keycap>Shift</keycap>+<keycap>R</keycap>停止）。有许多开源视频编辑器；根据我的经验，<filename>OpenShot</filename>在后期编辑方面表现不错。</para>
 </sidebar>
   
 </sect2>
 
-<para>There are many other things you could put on the project web
-site, if you have the time, or if for one reason or another they are
-especially appropriate: a news page, a project history page, a related
-links page, a site-search feature, a donations link, etc.  None of
-these are necessities at startup time, but keep them in mind for the
-future.</para>
+<para>如果你有时间，或者出于某种原因它们特别合适，你还可以在项目网站上放很多其他东西：一个新闻页面，一个项目历史页面，一个相关链接页面，一个网站搜索功能，一个捐赠链接等。这些在启动时都不是必需品，但可以为将来留作考虑。</para>
 
 <sect2 id="hosting">
-<title>Hosting</title>
+<title>托管</title>
 
 <!-- For link compatibility with the old section id. -->
 <anchor id="starting-with-canned-hosting" />
 
-<para>Where on the Internet should you put the project's materials?</para>
+<para>你应该把项目的材料放在互联网的什么地方？</para>
 
-<para>A web site, obviously&nbsp;&mdash;&nbsp;but the full answer
-is a little more complicated than that.</para>
+<para>显然是网站——但完整的答案比这要复杂一些。</para>
 
-<para>Many projects distinguish between their primary public user-facing
-web site&nbsp;&mdash;&nbsp;the one with the pretty pictures and the
-"About" page and the gentle introductions and videos and guided tours
-and all that stuff&nbsp;&mdash;&nbsp;and their developers' site, where
-everything's grungy and full of closely-spaced text in monospace fonts
-and impenetrable abbreviations.</para>
+<para>许多项目区分其主要的面向公众用户的网站——那个有漂亮图片、“关于”页面、温和的介绍、视频、导览等等的网站——和他们的开发者网站，那里一切都很简陋，充满了等宽字体的紧凑文本和难以理解的缩写。</para>
 
-<para>In the early stages of
-your project it is not so important to distinguish between these two
-audiences.  Most of the interested visitors you get will be
-developers, or at least people who are comfortable trying out new
-code.  Over time, you may find it makes sense to have a user-facing
-site (of course, if your project is a code library, those "users"
-might be other programmers) and a somewhat separate collaboration area
-for those interested in participating in development.  The
-collaboration site would have the code repository, bug tracker,
-development wiki, links to development mailing lists, etc.  The two
-sites should link to each other, and in particular it's important that
-the user-facing site make it clear that the project is open source and
-where the open source development activity can be
-found.</para>
+<para>在你的项目早期阶段，区分这两个受众并不那么重要。你得到的大多数感兴趣的访问者将是开发者，或者至少是那些乐于尝试新代码的人。随着时间的推移，你可能会发现，拥有一个面向用户的网站（当然，如果你的项目是一个代码库，那些“用户”可能是其他程序员）和一个为有兴趣参与开发的人设立的相对独立的协作区是有意义的。协作网站将有代码仓库、bug 跟踪器、开发维基、开发邮件列表的链接等。这两个网站应该相互链接，特别重要的是，面向用户的网站要明确表示项目是开源的，以及在哪里可以找到开源开发活动。</para>
 
-<para>In the past, many projects set up the developer site and
-infrastructure themselves.  Over the last decade or so, however, most
-open source projects&nbsp;&mdash;&nbsp;and almost all the new
-ones&nbsp;&mdash;&nbsp;just use one of the "canned hosting" sites that
-have sprung up to offer these services for free to open source
-projects.  By far the most popular such site, as of early 2018,
-is GitHub (<ulink url="https://github.com/" >https://github.com/</ulink>), and
-if you don't have a strong preference about where to host, you should
-probably just choose GitHub; many developers are already familiar with
-it and have personal accounts there.  See <xref
-linkend="canned-hosting"/> for a more detailed
-discussion of the questions to consider when choosing a canned hosting
-site and for an overview of the most popular ones.</para>
+<para>在过去，许多项目自己建立开发者网站和基础设施。然而，在过去十年左右的时间里，大多数开源项目——以及几乎所有新项目——都使用那些为开源项目免费提供这些服务的“托管平台”网站之一。到 2018 年初，迄今为止最受欢迎的此类网站是 GitHub（<ulink url="https://github.com/">https://github.com/</ulink>），如果你对托管地点没有强烈的偏好，你可能应该直接选择 GitHub；许多开发者已经熟悉它并在那里有个人账户。关于在选择托管平台网站时要考虑的问题以及最受欢迎的网站的概述，请参见<xref linkend="canned-hosting"/>。</para>
 
 </sect2>
 
@@ -1169,443 +399,65 @@ site and for an overview of the most popular ones.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="license-quickstart">
-<title>Choosing a License and Applying It</title>
+<title>选择并应用许可证</title>
 
-<para>This section is intended to be a very quick, very rough guide to
-choosing a license.  Read <xref linkend="legal"/> to understand
-the detailed legal implications of the different licenses, and how the
-license you choose can affect people's ability to mix your software
-with other software.</para>
+<para>本节旨在提供一个非常快速、非常粗略的选择许可证的指南。请阅读<xref linkend="legal"/>以了解不同许可证的详细法律含义，以及你选择的许可证如何影响他人将你的软件与其他软件混合使用的能力。</para>
 
 <sidebar id="fsf-and-osi-approved">
-  <title>Synonyms: "free software license", "FSF-approved", "open
-  source license", and "OSI-approved"</title>
+  <title>同义词：“自由软件许可证”、“FSF 批准”、“开源许可证”和“OSI 批准”</title>
 
-  <para>The terms "free software license" and "open source license"
-  are essentially synonymous, and I treat them so throughout this
-  book.</para>
+  <para>术语“自由软件许可证”和“开源许可证”基本上是同义的，我在本书中也是这样处理的。</para>
 
-  <para>Technically, the former term refers to licenses confirmed by
-  the Free Software Foundation as meeting the "four freedoms"
-  of the Free Software Definition (FSD, see <ulink
-  url="https://www.gnu.org/philosophy/free-sw.html"
-  >https://www.gnu.org/philosophy/free-sw.html</ulink>), while the latter term refers
-  to licenses approved by the Open Source Initiative as meeting the
-  Open Source Definition (OSD, see <ulink url="https://opensource.org/osd"
-  >https://opensource.org/osd</ulink>).  However, if you read the FSD
-  and the OSD, it becomes obvious that the two definitions delineate the
-  same freedoms&nbsp;&mdash;&nbsp;which is not surprising, given the
-  historical background explained in <xref
-  linkend="free-vs-open-source"/>.  The inevitable, and in
-  some sense deliberate, result is that the two organizations have
-  approved the same set of licenses.<footnote><para>There actually <emphasis>are</emphasis>
-  some minor differences between the sets of approved licenses, but
-  they are not significant for our purposes&nbsp;&mdash;&nbsp;or
-  indeed for most practical purposes.  In some cases, one or the other
-  organization has simply not gotten around to considering a given
-  license, usually a license that is not widely-used anyway.  There
-  are also a few rarely-used licenses that have clauses that formally
-  conflict with the letter, if not the spirit, of one or the other
-  definition.
-  <!--
-  I don't want to take up space in the book with it, but for the
-  record, here is the conversation in which Alexandre Oliva provided
-  me with the excellent example of the above phenomenon that follows,
-  as well as educated me more generally in how the FSD and OSD can
-  differ in certain cases.  This conversation happened on Identi.ca on
-  2020-12-28: https://identi.ca/kfogel/note/MnzhERnORzW3cEyIU7xe_A.
-  
-    Me:
-    > I dislike the phrase "open source alternative to X" and try not to
-    > use it.
-    > 
-    > Casting something as an "alternative" sets up an obvious
-    > center/periphery dynamic that in this case is damaging to what I
-    > care about. For some of us, it's not an alternative: it's the
-    > first choice.
-  
-    Alexandre:
-    > this comment would have been a 'like' if you'd written "free
-    > software" instead ;-)
-  
-    Me:
-    > Hey, Alexandre.  Had I done that, my comment would have been
-    > disconnected from my actual experience: I frequently encounter the
-    > phrase "open source alternative to" and only rarely encounter the
-    > phrase "free software alternative to".  I was talking about a
-    > phrase that others use that I decline to use, not a phrase of my
-    > choosing that I either do or don't use.
-    > 
-    > (I consider the terms synonymous anyway, and have ever since the
-    > term "open source" was coined for this usage, but that's a much
-    > more complex discussion of course.
-    > https://opensource.org/faq#free-software has some of the
-    > background on why one might choose this interpretation.)
-  
-    Alexandre:
-    > *nod*, I suppose our circles and feeds are different indeed, and
-    > the phrase you encounter more often, or the one that annoys you
-    > more, is different from mine ;-) still, the point was that I'd
-    > have related more strongly with what you wrote had your experience
-    > been more like mine.  that was what I meant to express.  the
-    > negative feelings that "free software alternative to X" bring
-    > about in me are largely similar to those you described.  and yeah,
-    > when it comes to the software proper, the terms are very nearly
-    > synonymous, differing only in nearly-irrelevant corner cases.
-    > they do often convey alignment or ignorance, since when it comes
-    > to philosophies, they express very different positions.  as a
-    > quote, it carries meanings intended by those you're quoting, but
-    > that doesn't make me like it ;-) enjoyable holidays and a happier
-    > gnu year!
-  
-    Me:
-    > :-)  Yes, I understand.
-    > 
-    > I've actually always wondered about those alleged corner cases.
-    > The FSF definition of software freedom and the OSI definition of
-    > open source *look* logically equivalent to me.  Some people have
-    > claimed that there are licenses that are open source but not free
-    > or vice versa — well, the Sybase Open Watcom License [1] is the
-    > only specific claim I've heard made — and I've always wanted to
-    > get time to evaluate this claim myself.  I've not heard what the
-    > actual argument is, and there are certainly other occasions where
-    > I've heard someone make a claim that a certain license is/isn't
-    > Free/OSS, or is/isn't compatible with some other license, and then
-    > when I've examined the claim in detail I've found that I didn't
-    > agree, or at least that the claim wasn't obviously correct.
-    > 
-    > Now, even if the two terms were to describe the exact same set of
-    > licenses, they could still carry different connotations, of
-    > course, and for many people they do.  But my own position is that
-    > if the freedom is built in to the definition, then that freedom
-    > must inevitably become a connotation, whether people wanted it to
-    > or not.  (I think one can see this happening, at a gradual and
-    > evolutionary way, in public communications from the OSI itself
-    > over the years, too.)
-    > 
-    > Anyway, Happy Gnu Year to you too!
-    > 
-    > Best regards,
-    > -Karl
-    > 
-    > [1] https://opensource.org/licenses/Watcom-1.0
-  
-    Alexandre:
-    > the examples that first come to mind of non-equivalence and
-    > non-containment are:
-    > 
-    > * GNU autoconf; the license encompasses an additional permission
-    >   that must be dropped if certain modifications are made.  as a
-    >   result, in some cases you cannot distribute modified versions
-    >   under the same license you could receive the original program.
-    >   this requirement in the complete licensing conditions appears to
-    >   conflict with one of the bullets of the OSD, but it doesn't
-    >   render the software non-Free
-    > 
-    > * Tivoized software: the OSI directors, back when I consulted them
-    >   about this, didn't think that software distributed under
-    >   tivoization-like anti-modification technical constraints caused
-    >   it to fail to meet the OSD for the recipient, since they got the
-    >   sources in conditions that meet the OSD (and the FSD), though
-    >   the executable, in the tivoized scenario, is definitely non-Free
-    >   Software
-    > 
-    > though these are real, rather than purely academic corner cases,
-    > and they could apply to an arbitrarily large set of software one
-    > way or another, nobody seems to be too worried about the
-    > differences.  those who care about OSS don't seem to care that
-    > autoconf-like licensing isn't strictly compliant with the
-    > definition, since they fall back to the FSD anyway, and those who
-    > care more about FS worry about tivoized software, but apparently
-    > don't assign so much relevance to OSS or the OSD.  so in the end
-    > the FSD seems to serve as the ultimate definition for everyone,
-    > though those who accept tivoized software also accept other
-    > proprietary software
-  
-    Me:
-    > GNU Autoconf is just GPL (a combination of GPL-2.0 and GPL-3.0, it
-    > looks like — probably on a file-by-file basis for historical
-    > reasons).  There is a v3 exception that allows certain outputs
-    > (derivatives, as far as copyright law is concerned) to be
-    > distributed under other licenses, including proprietary licenses,
-    > but that doesn't make GNU Autoconf itself either non-free or
-    > non-open-source.  It just weakens its copyleft-ness a bit, but
-    > copyleft-ness is not required for FOSS.
-    > 
-    > Regarding tivo-ization, that's not an FSD-vs-OSD difference and it
-    > doesn't affect the covered licenses.  It's just a difference of
-    > interpretation, one that could be applied equally well to either
-    > the FSD or OSD.  The OSI's answer to the second point has always
-    > been that it's the license that's applied *to the source code*
-    > that matters.  In other words, it's not even meaningful to say
-    > that a binary is "free software" or "open source" in the absence
-    > of source code anyway, and if you do have the source code than
-    > *that's* the thing whose distribution under the license matters.
-    > 
-    > For the record, this is what happens every time I try to get a
-    > concrete example of any actual difference between "free software"
-    > and "open source software": it turns out it's either not a
-    > difference at all or it's a difference of interpretation that
-    > depends on the party doing the interpretation (i.e., not on the
-    > FSD or OSD itself).  In other words, the FSF interpreting the OSD
-    > would come to the same conclusion (in these situations) that they
-    > come to with the FSD, and the OSI interpreting the FSD would come
-    > to the same conclusion they come to with the OSD.
-    > 
-    > In more than 20 years, no has has yet shown me a license whose
-    > terms clearly match one definition but not the other.  I am fairly
-    > sure that no such license *can* logically exist, even in
-    > principle, and my attempts to find a disproof of this belief have
-    > thus far failed.
-    > 
-    > Well, I should correct one thing:
-    > 
-    > There may be instances where the FSF would come to a different
-    > conclusion, regarding a particular case, when interpreting the OSD
-    > instead of the FSD.  However, in the (rare) instances of this
-    > happening that I have observed, it has not been very convincing
-    > and I doubt a judge would agree with it :-).  That is, I think
-    > those differences of interpretation on the part of the FSF may be
-    > politically motivated rather than logically motivated.
-  
-    Alexandre:
-    > > GNU Autoconf is just GPL
-    > 
-    > not true.  any exceptions *are* part of the licensing conditions.
-    > that some part of the licensing conditions of a program is
-    > recognizable as a separate license doesn't make that the license
-    > of the program.  the license is the *complete* set of permissions
-    > and conditions, not a subset thereof.
-    > 
-    > > There is a v3 exception
-    > 
-    > that is part of the licensing conditions, and that cannot be
-    > extended to certain modified versions, which conflicts with
-    > requirements of the OSD.
-    > 
-    > that the OSD only looks at the license of the sources is exactly
-    > another fundamental difference that leads to different outcomes
-    > when assessing whether a program meets the OSS or meets the FSD.
-    > the latter looks at conditions imposed on users through technical
-    > means, in as much as they impose substantial limitations on the
-    > essential freedoms.
-    > 
-    > that the OSD attempted to establish objective conditions that
-    > model the FSD but failed to capture this is IMHO a bug in the OSD,
-    > that most people of OSS allegiance weasel out of by dismissing it
-    > as irrelevant, even when they admit the different would stand in
-    > the way of the so-called open source effect.  double-thinking at
-    > its best ;-)
-  
-    Me:
-    > Hunh.  I didn't fully understand this response, but you're
-    > unlikely to write something that doesn't make sense, so I'll
-    > ponder it more and see if I understand.  If I still don't
-    > understand it, then maybe at least I can distill down what I was
-    > saying in a more clear and precise way (which I wasn't doing here
-    > on identi.ca) and see where that goes.
-  
-    Alexandre:
-    > in short, I disputed the point that the additional permission was
-    > not an integral part of the autoconf license, as you'd suggested.
-    > the license is the complete set of applicable permissions and
-    > conditions, not just an identifiable and recognizable variant
-    > (subset?) thereof, even if those combined permissions and
-    > conditions allow the distribution under the variant.
-    > 
-    > indeed, the easy fix for the OSD would be to recognize and endorse
-    > such arrangements in which the program is licensed under
-    > conditions that allow the distribution under alternate terms that
-    > satisfy the definition
-  
-    Me:
-    > Ah, okay, this is about clause 3 of the OSD and its requirement of
-    > "same license".
-    > 
-    > However, in the case of Autoconf, is it not true that one can
-    > distribute Autoconf under exactly the same terms one received it
-    > under?  That is, one is not required to apply any of the
-    > exceptions offered in the Autoconf Configure Script Exception.
-    > The offer of exception is just there to allow a special kind of
-    > entangled derivative to be distributed — and in those cases in
-    > which the derivative is distributed under a set of terms that
-    > differs from Autoconf's original terms but is still FSD- and
-    > OSD-compliant, then downstreams get those new terms as well.
-    > 
-    > IOW, I see what you mean about the glitch in the OSD (I'd call it
-    > a bug), in which redistribution under
-    > different-but-still-OSD-compliant terms is not included in the
-    > definition.  So now I see that there is, in principle, a possible
-    > slight difference in the actual meanings of the two definitions —
-    > thank you! — but isn't Autoconf itself, as a distributed package,
-    > still OSD-compliant?
-    > 
-    > By analogy: someone might distribute software under the MIT
-    > license.  Then someone else might make a derivative work under
-    > different (perhaps even non-FOSS) terms.  But that wouldn't make
-    > the original software not be under MIT.  If I can receive Autoconf
-    > under a set of terms X, and I can redistribute it under the exact
-    > same set of terms X, and I can redistribute modified versions
-    > under the exact same set of terms X, then... isn't that satisfying
-    > OSD #3?
-    > 
-    > Oh, wait, maybe what you're saying is that, in the specific case
-    > of Autoconf, a recipient/redistributor may not expand the set of
-    > "Normally Copied Code" as defined in the exception?  Thus
-    > activating this clause in the exception: "You have permission to
-    > propagate output of Autoconf, even if such propagation would
-    > otherwise violate the terms of GPLv3. However, if by modifying
-    > Autoconf you cause any Ineligible Code of the version you received
-    > to become Normally Copied Code of your modified version, then you
-    > void this Exception for the resulting covered work. If you convey
-    > that resulting covered work, you must remove this Exception in
-    > accordance with the second paragraph of Section 7 of GPLv3."
-    > 
-    > Okay.  That's fascinating: it does indeed fail test #3 of the OSD.
-    > Though frankly I'll bet that's just an accident of drafting in the
-    > OSD and that no one at OSI would seriously object (semantics-wise)
-    > to simply fixing the OSD in the obvious way — though they might
-    > object on the grounds of perception of stability.  Still, though,
-    > you're right: drafting accident or not, there is a way in which
-    > the OSD differs substantively from the FSD, even though it's a
-    > rare corner case in practice.
-    > 
-    > Thanks, Alexandre.
-  
-    Alexandre:
-    > yup, you managed to figure out what I meant.  sorry I had you do
-    > the legwork, I didn't have the links handy and had to go by memory
-    > from a while ago.  I'm glad I didn't mess things up.
-    > 
-    > as I said, easy to fix in the OSD, if someone cared about it.  I
-    > sort of doubt anyone ever did, and discussing changing the OSD
-    > right now is probably riskier than ever for OSI, so I kind of
-    > doubt they'd undertake it
-  -->
-  For example, the OSD requires the license to
-  allow redistribution under the exact same terms the software
-  originally came with, instead of just under some set of
-  OSD-compliant terms, whereas the FSD goes the other way on this
-  question.  These differences are exotic edge cases, however.  For
-  any license you are likely to be using, the terms "OSI-approved" and
-  "FSF-approved" can be treated as implying each
-  other.</para></footnote></para>
+  <para>技术上讲，前一个术语指的是经自由软件基金会确认符合“自由软件定义”（FSD，见<ulink url="https://www.gnu.org/philosophy/free-sw.html">https://www.gnu.org/philosophy/free-sw.html</ulink>）的“四大自由”的许可证，而后一个术语指的是经开源促进会批准符合“开源定义”（OSD，见<ulink url="https://opensource.org/osd">https://opensource.org/osd</ulink>）的许可证。然而，如果你阅读 FSD 和 OSD，就会很明显地发现这两个定义划定了相同的自由——考虑到<xref linkend="free-vs-open-source"/>中解释的历史背景，这并不奇怪。不可避免的，并且在某种意义上是故意的结果是，这两个组织批准了同一套许可证。<footnote><para>实际上，批准的许可证集合之间确实存在一些微小的差异，但对于我们的目的——或者说对于大多数实际目的——这些差异并不重要。在某些情况下，其中一个组织只是还没有考虑某个特定的许可证，通常是那些不被广泛使用的许可证。还有一些很少使用的许可证，其条款在形式上与其中一个定义的字面意思（如果不是精神的话）相冲突。例如，OSD 要求许可证允许在与原始软件完全相同的条款下重新分发，而不仅仅是在某些符合 OSD 的条款下，而 FSD 在这个问题上则持相反的观点。然而，这些差异是罕见的边缘情况。对于你可能使用的任何许可证，“OSI 批准”和“FSF 批准”这两个术语可以被视为相互暗示。</para></footnote></para>
 </sidebar>
 
-<para>There are a great many free software licenses to choose from.
-Most of them we needn't consider here, as they were written to satisfy
-the particular legal needs of some corporation or person, and wouldn't
-be appropriate for your project.  We will restrict ourselves to just
-the most commonly used licenses; in most cases, you will want to
-choose one of them.</para>
+<para>有许多自由软件许可证可供选择。我们在这里不必考虑其中的大多数，因为它们是为了满足某些公司或个人的特定法律需求而编写的，不适合你的项目。我们将自己限制在最常用的许可证上；在大多数情况下，你会想选择其中之一。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="license-quickstart-non-gpl">
-<title>The "Do Anything" Licenses</title>
+<title>“随心所欲”许可证</title>
 
-<para>If you're comfortable with your project's code potentially being
-used in proprietary programs, then use
-an <firstterm>MIT-style</firstterm> license.  It is the simplest of
-several minimal licenses that do little more than assert nominal
-copyright (without actually restricting copying) and specify that the
-code comes with no warranty.  See
-<xref linkend="license-choosing"/> for details.</para>
+<para>如果你对你的项目代码可能被用于专有程序感到放心，那么就使用一个<firstterm>MIT 风格</firstterm>的许可证。它是几个极简许可证中最简单的一个，除了声明名义上的版权（实际上不限制复制）和指定代码不附带任何保证之外，几乎没有其他作用。详情请见<xref linkend="license-choosing"/>。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="license-quickstart-gpl">
-<title>The GPL</title>
+<title>GPL</title>
 
-<para>If you don't want your code to be used in proprietary programs,
-use the GNU General Public License, version 3 (<ulink
-url="https://www.gnu.org/licenses/gpl.html"
->https://www.gnu.org/licenses/gpl.html</ulink>).  The GPL is probably the most
-widely recognized free software license in the world today.  This is
-in itself a big advantage, since many potential users and contributors
-will already be familiar with it, and therefore won't have to spend
-extra time to read and understand your license.  See <xref
-linkend="license-choosing-gpl"/> for details.</para>
+<para>如果你不希望你的代码被用于专有程序，请使用 GNU 通用公共许可证第 3 版（<ulink url="https://www.gnu.org/licenses/gpl.html">https://www.gnu.org/licenses/gpl.html</ulink>）。GPL 可能是当今世界上最被广泛认可的自由软件许可证。这本身就是一个很大的优势，因为许多潜在的用户和贡献者已经熟悉它，因此不必花额外的时间来阅读和理解你的许可证。详情请见<xref linkend="license-choosing-gpl"/>。</para>
 
 <sidebar>
-<para>If users interact with your code primarily over a
-network connection&nbsp;&mdash;&nbsp;that is, the software is usually part of a hosted
-service, rather than being distributed to run client-side&nbsp;&mdash;&nbsp;then consider
-using the <firstterm>GNU Affero GPL</firstterm> instead.  The AGPL is
-just the GPL with one extra clause establishing network accessibility
-as a form of distribution for the purposes of the license.  See <xref
-linkend="gnu-affero-gpl"/> for more.</para>
+<para>如果用户主要通过网络连接与你的代码交互——也就是说，软件通常是托管服务的一部分，而不是分发给客户端运行——那么可以考虑使用<firstterm>GNU Affero GPL</firstterm>。AGPL 只是在 GPL 的基础上增加了一个额外的条款，将网络可访问性确立为许可证目的下的分发形式。更多信息请参见<xref linkend="gnu-affero-gpl"/>。</para>
 </sidebar>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="license-quickstart-applying">
-<title>How to Apply a License to Your Software</title>
+<title>如何将许可证应用于你的软件</title>
 
-<para>Once you've chosen a license, you'll need to apply it to the
-software.</para>
+<para>一旦你选择了一个许可证，你就需要将它应用于你的软件。</para>
 
-<para>The first thing to do is state the license clearly on the
-project's front page.  You don't need to include the actual text of
-the license there; just give its name and make it link to the full
-license text on another page.  That tells the public what license you
-<emphasis>intend</emphasis> the software to be released
-under&nbsp;&mdash;&nbsp;but it's not quite sufficient for legal purposes.  The
-other step is that the software itself should include the
-license.</para>
+<para>首先要做的是在项目首页上清楚地说明许可证。你不需要在那里包含许可证的实际文本；只需给出它的名称，并使其链接到另一个页面上的完整许可证文本。这告诉公众你<emphasis>打算</emphasis>在哪个许可证下发布软件——但这在法律上还不够。另一个步骤是软件本身应该包含许可证。</para>
 
-<para>The standard way to do this is to put the full license text in a
-file called <filename>LICENSE</filename> (or
-<filename>COPYING</filename>) included with the source code, and then
-at the top of each source file put a short notice in a comment, naming
-the copyright date, holder, and license, and saying where to find the
-full text of the license.</para>
+<para>标准的做法是将完整的许可证文本放在一个名为<filename>LICENSE</filename>（或<filename>COPYING</filename>）的文件中，并随源代码一起提供，然后在每个源文件的顶部用注释的形式写一个简短的声明，注明版权日期、持有人和许可证，并说明在哪里可以找到许可证的全文。</para>
 
-<para>There are many variations on this pattern, so we'll look at just
-one example here.  The GNU GPL says to put a notice like this at the
-top of each source file:</para>
+<para>这种模式有很多变体，所以我们在这里只看一个例子。GNU GPL 要求在每个源文件的顶部放置如下声明：</para>
 
   <blockquote>
-    <para>Copyright (C) &lt;year&gt;  &lt;name of author&gt;</para>
+    <para>版权所有 (C) &lt;年份&gt; &lt;作者姓名&gt;</para>
 
-    <para>This program is free software: you can redistribute it
-    and/or modify it under the terms of the GNU General Public License
-    as published by the Free Software Foundation, either version 3 of
-    the License, or (at your option) any later version.</para>
+    <para>本程序是自由软件：你可以根据自由软件基金会发布的 GNU 通用公共许可证的条款重新分发和/或修改它，无论是许可证的第 3 版，还是（由你选择）任何更高版本。</para>
 
-    <para>This program is distributed in the hope that it will be
-    useful, but WITHOUT ANY WARRANTY; without even the implied
-    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-    See the GNU General Public License for more details.</para>
+    <para>本程序的分发是希望它会有用，但没有任何保证；甚至没有对适销性或特定用途适用性的默示保证。更多详情请见 GNU 通用公共许可证。</para>
 
-    <para>You should have received a copy of the GNU General Public
-    License along with this program.  If not, see
-    &lt;http://www.gnu.org/licenses/&gt;</para>
+    <para>你应该已经随本程序收到一份 GNU 通用公共许可证的副本。如果没有，请见 &lt;http://www.gnu.org/licenses/&gt;</para>
   </blockquote>
 
-<para>It does not say specifically that the copy of the license you
-received along with the program is in the file
-<filename>COPYING</filename> or <filename>LICENSE</filename>, but
-that's where it's usually put.  (You could change the above notice to
-state that directly, but there's no real need to.)</para>
+<para>它没有具体说明你随程序收到的许可证副本是在<filename>COPYING</filename>或<filename>LICENSE</filename>文件中，但通常是放在那里的。（你可以修改上面的声明直接说明这一点，但没有真正的必要。）</para>
 
-<para>In general, the notice you put in each source file does not have
-to look exactly like the one above, as long as it starts with the same
-notice of copyright holder and date,<footnote><para>There is some
-leeway on exactly what the dates should indicate, and of course this
-book does not provide legal advice.  The strictest legal
-interpretation I've heard is that the date should show the years in
-which the file was modified for copyright purposes.  In other words,
-for a file modified in 2012, 2018, and 2021, you would write "2012,
-2018, 2021"&nbsp;&mdash;&nbsp;<emphasis>not</emphasis> "2012-2021",
-because the file wasn't modified in most of the years in that range.
-Some projects just use a range anyway, with one end being the file's
-creation year and the other end being the year of most recent
-modification, as that's so much shorter and easier.</para></footnote>
-states the name of the license, and
-makes clear where to view the full license terms.  It's always best to
-consult a lawyer, of course, if you can afford one.</para>
+<para>总的来说，你在每个源文件中放置的声明不必与上面的完全一样，只要它以相同的版权持有人和日期声明开始，<footnote><para>关于日期应该具体表示什么，存在一些回旋余地，当然本书不提供法律建议。我听过的最严格的法律解释是，日期应该显示文件因版权目的而被修改的年份。换句话说，对于一个在 2012 年、2018 年和 2021 年修改过的文件，你应该写“2012, 2018, 2021”——<emphasis>而不是</emphasis>“2012-2021”，因为文件在该范围的大多数年份中没有被修改。一些项目无论如何都只使用一个范围，一端是文件的创建年份，另一端是最近修改的年份，因为这样更短、更容易。</para></footnote>声明了许可证的名称，并明确了在哪里可以查看完整的许可证条款。当然，如果你能负担得起，最好还是咨询律师。</para>
 
 </sect2>
 
@@ -1613,866 +465,89 @@ consult a lawyer, of course, if you can afford one.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="setting-tone">
-<title>Setting the Tone</title>
+<title>定下基调</title>
 
-<para>So far we've covered one-time tasks you do during project setup:
-picking a license, arranging the initial web site, etc.  But the most
-important aspects of starting a new project are dynamic.  Choosing a
-mailing list address is easy; ensuring that the list's conversations
-remain on-topic and productive is another matter entirely.  For
-example, if the project is being opened up after years of closed,
-in-house development, its development processes will change, and you
-will have to prepare the existing developers for that change.</para>
+<para>到目前为止，我们已经涵盖了你在项目设置期间所做的一次性任务：选择许可证、安排初始网站等。但启动一个新项目最重要的方面是动态的。选择一个邮件列表地址很容易；确保列表的对话保持主题并富有成效则完全是另一回事。例如，如果项目是在经过多年的封闭、内部开发后开放的，其开发过程将会改变，你将必须为现有开发者准备好迎接这一变化。</para>
 
-<para>The first steps are the hardest, because precedents and
-expectations for future conduct have not yet been set.  Stability in a
-project does not come from formal policies, but from a shared,
-hard-to-pin-down collective wisdom that develops over time.  There are
-often written rules as well, but they tend to be essentially a
-distillation of the intangible, ever-evolving agreements that really
-guide the project.  The written policies do not define the project's
-culture so much as describe it, and even then only
-approximately.</para>
+<para>最初的几步是最难的，因为先例和对未来行为的期望尚未设定。项目中的稳定性不是来自正式的政策，而是来自随着时间推移而发展的、难以捉摸的集体智慧。通常也有成文的规则，但它们往往本质上是对真正指导项目的无形的、不断演变的协议的提炼。成文的政策与其说定义了项目的文化，不如说描述了它，而且即使那样也只是近似的。</para>
 
-<para>There are a few reasons why things work out this way.  Growth
-and high turnover are not as damaging to the accumulation of social
-norms as one might think.  As long as change does not happen
-<emphasis>too</emphasis> quickly, there is time for new arrivals to
-learn how things are done, and after they learn, they will help
-reinforce those ways themselves.  Consider how children's songs
-survive for centuries.  There are children today singing roughly the
-same rhymes as children did hundreds of years ago, even though there
-are no children alive now who were alive then.  Younger children hear
-the songs sung by older ones, and when they are older, they in turn
-will sing them in front of other younger ones.  The children are not
-engaging in a conscious program of transmission, of course, but the
-reason the songs survive is nonetheless that they are transmitted
-regularly and repeatedly.  The time scale of free software projects
-may not be measured in centuries (we don't know yet), but the dynamics
-of transmission are much the same.  The turnover rate is faster,
-however, and must be compensated for by a more active and deliberate
-transmission effort.</para>
+<para>事情之所以会这样发展，有几个原因。增长和高流失率对社会规范的积累并不像人们想象的那么具有破坏性。只要变化发生得<emphasis>不</emphasis>太快，新来者就有时间学习事情是如何做的，而在他们学习之后，他们自己也会帮助加强这些方式。想想童谣是如何流传几个世纪的。今天的孩子们唱的歌谣与几百年前的孩子们唱的大致相同，尽管现在活着的没有一个是那时活着的。年幼的孩子听年长的孩子唱歌，当他们长大后，他们又会在其他年幼的孩子面前唱。当然，孩子们并不是在进行有意识的传播计划，但歌曲之所以能存活下来，仍然是因为它们被定期和重复地传播。自由软件项目的时间尺度可能不是以世纪来衡量（我们还不知道），但传播的动态大同小异。然而，流失率更快，必须通过更积极和刻意的传播努力来弥补。</para>
 
-<para>This effort is aided by the fact that people generally show up
-expecting and looking for social norms.  That's just how humans are
-built.  In any group unified by a common endeavor, people who join
-instinctively search for behaviors that will mark them as part of the
-group.  The goal of setting precedents early is to make those
-"in-group" behaviors be ones that are useful to the project; once
-established, they will be largely self-perpetuating.</para>
+<para>这种努力得益于这样一个事实，即人们通常带着期望和寻找社会规范的心态出现。这正是人类的构造方式。在任何由共同事业团结起来的群体中，加入的人会本能地寻找那些能将他们标记为群体一部分的行为。早期设定先例的目标是使那些“圈内”行为成为对项目有用的行为；一旦建立，它们将在很大程度上自我延续。</para>
 
-<para>Following are some examples of specific things you can do to set
-good precedents.  They're not meant as an exhaustive list, just as
-illustrations of the idea that setting a collaborative mood early
-helps a project tremendously.  Physically, every developer may be
-working separately, but you can do a lot to make
-them <emphasis>feel</emphasis> like they're all working together in
-the same room.  The more they feel this way, the more time they'll
-want to spend on the project.  I chose these particular examples
-because situations like these seem to come up in most open source
-projects, and should be seen as opportunities to start things off on
-the right foot.</para>
+<para>以下是一些你可以做的具体事情的例子，以设定良好的先例。它们并非详尽无遗的列表，只是为了说明早期设定协作氛围对项目有巨大帮助。从物理上讲，每个开发者可能都在独立工作，但你可以做很多事情来让他们<emphasis>感觉</emphasis>他们都在同一个房间里一起工作。他们越是这样感觉，他们就越愿意在项目上花时间。我选择这些特定的例子，是因为类似的情况似乎在大多数开源项目中都会出现，并且应该被视为以正确的方式开始的机会。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="avoid-private-discussions">
-<title>Avoid Private Discussions</title>
+<title>避免私下讨论</title>
 
-<para>Even after you've taken the project public, you and the other
-founders will often find yourselves wanting to settle difficult
-questions by private communications among an inner circle.  This is
-especially true in the early days of the project, when there are so
-many important decisions to make, and, usually, few people
-qualified to make them.  All the obvious disadvantages of public
-discussions will loom palpably in front of you: the delay inherent in
-email conversations, the need to leave sufficient time for consensus
-to form, the hassle of dealing with naive newcomers who think they
-understand all the issues but actually don't (every project has these;
-sometimes they're next year's star contributors, sometimes they stay
-naive forever), the person who can't understand why you only want to
-solve problem X when it's obviously a subset of larger problem Y, and
-so on.  The temptation to make decisions behind closed doors and
-present them as <foreignphrase>faits accomplis</foreignphrase>, or at
-least as the firm recommendations of a united and influential voting
-block, will be very great.</para>
+<para>即使在你将项目公开之后，你和其他创始人也常常会发现自己想通过内部圈子的私下交流来解决难题。在项目的早期尤其如此，那时有那么多重要的决定要做，而且通常，有资格做这些决定的人很少。公开讨论的所有明显缺点都会清晰地摆在你面前：电子邮件对话固有的延迟，需要留出足够的时间来形成共识，处理那些认为自己理解所有问题但实际上并不理解的天真新手的麻烦（每个项目都有这样的人；有时他们是明年的明星贡献者，有时他们永远天真），那个无法理解你为什么只想解决问题 X 而它显然是更大问题 Y 的子集的人，等等。在闭门造车中做出决定，然后将其作为<foreignphrase>既成事实</foreignphrase>，或者至少作为一个团结且有影响力的投票集团的坚定建议来呈现的诱惑将会非常大。</para>
 
-<para>Don't do it.</para>
+<para>别这么做。</para>
 
-<para>As slow and cumbersome as public discussion can be, it's
-almost always preferable in the long run.  Making important decisions
-in private is like spraying contributor repellent on your project.  No
-serious contributor would stick around for long in an environment where
-a secret council makes all the big decisions behind closed doors.  Furthermore, public
-discussion has beneficial side effects that will last beyond whatever
-ephemeral technical question was at issue:
+<para>尽管公开讨论可能缓慢而笨拙，但从长远来看，它几乎总是更可取的。私下做重要决定就像在你的项目上喷洒贡献者驱避剂。没有哪个认真的贡献者会在一个秘密委员会在闭门造车中做所有重大决定的环境中长久停留。此外，公开讨论还有有益的副作用，这些副作用将超越任何短暂的技术问题：
 
 <itemizedlist>
   <listitem>
-  <para>The discussion will help train and educate new developers.
-        You never know how many eyes are watching the conversation;
-        even if most people don't participate, many may be lurking
-        silently, gleaning information about the software.</para>
+  <para>讨论将有助于培训和教育新开发者。你永远不知道有多少双眼睛在注视着对话；即使大多数人不参与，许多人可能在默默地潜水，从中获取关于软件的信息。</para>
   </listitem>
   <listitem>
-  <para>The discussion will train <emphasis>you</emphasis> in the art
-        of explaining technical issues to people who are not as
-        familiar with the software as you are.  This is a skill that
-        requires practice, and you can't get that practice by talking
-        to people who already know what you know.</para>
+  <para>讨论将训练<emphasis>你</emphasis>向那些对软件不像你那么熟悉的人解释技术问题的艺术。这是一项需要练习的技能，你无法通过与已经知道你所知的人交谈来获得这种练习。</para>
   </listitem>
   <listitem>
-  <para>The discussion and its conclusions will be available in public
-        archives forever after, enabling future discussions to avoid
-        retracing the same steps.  See
-        <xref linkend="using-archives"/>.</para>
+  <para>讨论及其结论将永远保存在公共档案中，使未来的讨论能够避免重蹈覆辙。参见<xref linkend="using-archives"/>。</para>
   </listitem>
 </itemizedlist>
 
 </para>
 
-<para>Finally, there is the possibility that someone on the list may
-make a real contribution to the conversation, by coming up with an
-idea you never anticipated.  It's hard to say how likely this is; it
-just depends on the complexity of the code and degree of
-specialization required.  But if anecdotal evidence may be permitted,
-I would hazard that this is more likely than you might
-expect.  In the Subversion project, we (the founders) believed we
-faced a deep and complex set of problems, which we had been thinking
-about hard for several months, and we frankly doubted that anyone on
-the newly created mailing list was likely to make a real contribution
-to the discussion.  So we took the lazy route and started batting some
-technical ideas back and forth in private emails, until an observer of
-the project<footnote><para>Credit where credit is due: the observer
-was Brian Behlendorf, and he was correctly insistent about
-the general importance of keeping all discussions public unless there
-was a specific need for privacy.</para></footnote> caught wind of what
-was happening and asked for the discussions to be moved to the public
-list.  Rolling our eyes a bit, we did&nbsp;&mdash;&nbsp;and were stunned by the
-number of insightful comments and suggestions that quickly resulted.
-In many cases people offered ideas that had never even occurred to us.
-It turned out there were some <emphasis>very</emphasis> smart people
-on that list; they'd just been waiting for the right bait.  It's true
-that the ensuing discussions took longer than they would have if we
-had kept the conversation private, but they were so much more
-productive that it was well worth the extra time.</para>
+<para>最后，还有一种可能性，即列表上的某个人可能会对对话做出真正的贡献，提出一个你从未预料到的想法。很难说这有多大可能性；这取决于代码的复杂性和所需的专业化程度。但如果可以允许轶事证据，我敢说这比你想象的更有可能。在 Subversion 项目中，我们（创始人）相信我们面临着一系列深刻而复杂的问题，我们已经为此思考了几个月，我们坦率地怀疑新创建的邮件列表上是否有人可能对讨论做出真正的贡献。所以我们走了懒惰的路线，开始在私人邮件中来回讨论一些技术想法，直到一个项目观察者<footnote><para>功劳归功于：观察者是 Brian Behlendorf，他正确地坚持了除非有特定的隐私需求，否则所有讨论都应保持公开的普遍重要性。</para></footnote>发现了正在发生的事情，并要求将讨论移至公共列表。我们有点不情愿地照做了——结果很快就收到了数量惊人的深刻评论和建议，让我们大吃一惊。在许多情况下，人们提出的想法是我们从未想过的。原来那个列表上有一些<emphasis>非常</emphasis>聪明的人；他们只是在等待合适的诱饵。诚然，随后的讨论比我们保持私下对话要长，但它们富有成效得多，完全值得多花的时间。</para>
 
-<para>Without descending into hand-waving generalizations like "the
-group is always smarter than the individual" (we've all met enough
-groups to know better), it must be acknowledged that there are certain
-activities at which groups excel.  Massive peer review is one of them;
-generating large numbers of ideas quickly is another.  The quality of
-the ideas depends on the quality of the thinking that went into them,
-of course, but you won't know what kinds of thinkers are out there
-until you stimulate them with a challenging problem.</para>
+<para>不至于陷入“群体总是比个体聪明”之类的空泛概括（我们都见过足够多的群体，知道事实并非如此），但必须承认，在某些活动中，群体确实表现出色。大规模的同行评审是其中之一；快速产生大量想法是另一个。当然，想法的质量取决于产生它们的思考质量，但在你用一个具有挑战性的问题来激发他们之前，你不会知道外面有哪些类型的思考者。</para>
 
-<para>Naturally, there are some discussions that must be had
-privately; throughout this book we'll see examples of those.  But the
-guiding principle should always be: <emphasis>If there's no reason for
-it to be private, it should be public.</emphasis></para>
+<para>当然，有些讨论必须私下进行；在本书中，我们会看到这些例子。但指导原则应该始终是：<emphasis>如果没有理由保密，就应该公开。</emphasis></para>
 
-<para>Making this happen requires action.  It's not enough merely to
-ensure that all your own posts go to the public list.  You also have
-to nudge other people's unnecessarily private conversations to the
-list too.  If someone tries to start a private discussion with you and
-there's no reason for it to be private, then it is incumbent on you to open
-the appropriate meta-discussion immediately.  Don't even comment on
-the original topic until you've either successfully steered the
-conversation to a public place, or ascertained that privacy really was
-needed.  If you do this consistently, people will catch on pretty
-quickly and start to use the public forums by
-default&nbsp;&mdash;&nbsp;and will promote this norm to others where
-necessary.</para>
+<para>要实现这一点，需要采取行动。仅仅确保你自己所有的帖子都发到公共列表是不够的。你还必须把别人不必要的私人对话也推到列表上。如果有人试图与你开始私人讨论，而没有理由保密，那么你就有责任立即开启适当的元讨论。在成功地将对话引导到公共场所，或者确定隐私确实需要之前，甚至不要评论原始主题。如果你一贯这样做，人们很快就会明白，并开始默认使用公共论坛——并且在必要时向他人推广这一规范。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="prevent-rudeness">
-<title>Nip Rudeness in the Bud</title>
+<title>杜绝无礼行为</title>
 
-<para>From the very start of your project's public existence, you
-should maintain a zero-tolerance policy toward rude or insulting
-behavior in its forums.  Zero-tolerance does not mean technical
-enforcement per se.  You don't have to remove people from the mailing
-list when they flame another subscriber, or take away their commit
-access because they made derogatory comments.  (In theory, you might
-eventually have to resort to such actions, but only after all other
-avenues have failed&nbsp;&mdash;&nbsp;which, by definition, isn't the case at the
-start of the project.)  Zero-tolerance simply means never letting bad
-behavior slide by unnoticed.  For example, when someone posts a
-technical comment mixed together with an <foreignphrase>ad
-hominem</foreignphrase> attack on some other developer in the project,
-it is imperative that your response address the <foreignphrase>ad
-hominem</foreignphrase> attack as a separate issue unto itself,
-separate from the technical content.</para>
+<para>从你的项目公开存在的第一天起，你就应该对其论坛中的粗鲁或侮辱性行为采取零容忍政策。零容忍并不意味着技术上的强制执行。当有人在邮件列表上攻击另一位订阅者时，你不必将他们从邮件列表中移除，或者因为他们发表了贬损性评论而剥夺他们的提交权限。（理论上，你最终可能不得不采取这样的行动，但只有在所有其他途径都失败之后——根据定义，在项目开始时情况并非如此。）零容忍只是意味着永远不要让不良行为被忽视。例如，当有人发表一个技术评论，同时夹杂着对项目中某个其他开发者的<foreignphrase>人身攻击 (ad hominem)</foreignphrase>时，你的回应必须将<foreignphrase>人身攻击</foreignphrase>作为一个独立的问题来处理，与技术内容分开。</para>
 
-<para>It is unfortunately very easy, and all too typical, for
-constructive discussions to lapse into destructive flame wars.
-People will say things in email that they would never say
-face-to-face.  The topics of discussion only amplify this effect: in
-technical issues, people often feel there is a single right answer to
-most questions, and that disagreement with that answer can only be
-explained by ignorance, stupidity, or laziness.  It's a short distance from
-calling someone's technical proposal stupid to calling the person
-themselves stupid.  In fact, it's often hard to tell where technical
-debate leaves off and character attack begins, which is one reason why
-drastic responses or punishments are not a good idea.  Instead, when
-you think you see it happening, make a post that stresses the
-importance of keeping the discussion friendly, without accusing anyone
-of being deliberately poisonous.  Such "Nice Police" posts do have an
-unfortunate tendency to sound like a kindergarten teacher lecturing a
-class on good behavior:</para>
+<para>不幸的是，建设性的讨论很容易演变成破坏性的口水战。人们在邮件里会说一些他们永远不会当面说的话。讨论的话题只会加剧这种效应：在技术问题上，人们常常觉得大多数问题都有一个唯一的正确答案，而对该答案的异议只能用无知、愚蠢或懒惰来解释。从称某人的技术提议愚蠢到称其人愚蠢，只有一步之遥。事实上，通常很难区分技术辩论何时结束，人身攻击何时开始，这也是为什么激烈的回应或惩罚不是一个好主意的原因之一。相反，当你认为这种情况正在发生时，发表一个帖子，强调保持讨论友好的重要性，而不指责任何人故意挑起事端。这种“友善警察”的帖子确实有一种不幸的倾向，听起来像幼儿园老师在给全班上课讲行为规范：</para>
 
     <blockquote>
-      <para><emphasis>First, let's please cut down on the
-      (potentially) ad hominem comments; for example, calling J's
-      design for the security layer "naive and ignorant of the basic
-      principles of computer security."  That may be true or it may
-      not, but in either case it's no way to have the discussion.  J
-      made his proposal in good faith.  If it has deficiencies, point
-      them out, and we'll fix them or get a new design.  I'm sure M
-      meant no personal insult to J, but the phrasing was unfortunate,
-      and we try to keep things constructive around here.
-      </emphasis></para>
+      <para><emphasis>首先，请大家减少（潜在的）人身攻击评论；例如，称 J 的安全层设计“天真且对计算机安全基本原则无知”。这可能是真的，也可能不是，但无论哪种情况，这都不是进行讨论的方式。J 是出于好意提出他的建议的。如果它有缺陷，指出来，我们会修复它们或得到一个新的设计。我相信 M 并非有意侮辱 J，但措辞不当，我们在这里努力保持建设性。</emphasis></para>
 
-      <para><emphasis>Now, on to the proposal.  I think M was right
-      in saying that...</emphasis></para>
+      <para><emphasis>现在，回到提案上。我认为 M 说得对……</emphasis></para>
     </blockquote>
 
-<para>As stilted as such responses sound, they have a noticeable
-effect.  If you consistently call out bad behavior, but don't demand
-an apology or acknowledgement from the offending party, then you leave
-people free to cool down and show their better side by behaving more
-decorously next time&nbsp;&mdash;&nbsp;and they will.</para>
+<para>尽管这样的回应听起来很生硬，但它们确实有显著的效果。如果你一贯地指出不良行为，但又不要求冒犯方道歉或承认，那么你就给了人们冷静下来并通过下次更得体的行为来展示他们更好一面的自由——他们会的。</para>
 
-<para>One of the secrets of
-doing this successfully is to never make the meta-discussion the main
-topic.  It should always be an aside, a brief preface to the main
-portion of your response.  Point out in passing that "we don't do
-things that way around here," but then move on to the real content, so
-that you're giving people something on-topic to respond to.  If
-someone protests that they didn't deserve your rebuke, simply refuse
-to be drawn into an argument about it.  Either don't respond (if you
-think they're just letting off steam and don't require a response), or
-say you're sorry if you overreacted and that it's hard to detect
-nuance in email, then get back to the main topic.  Never, ever insist
-on an acknowledgement, whether public or private, from someone that
-they behaved inappropriately.  If they choose of their own volition to
-post an apology, that's great, but demanding that they do so will only
-cause resentment.</para>
+<para>成功做到这一点的一个秘诀是，永远不要让元讨论成为主要话题。它应该总是一个旁白，是你回应主要部分的简短前言。顺便指出“我们这里不这么做事”，然后转向真正的内容，这样你就给了人们一些可以回应的主题。如果有人抗议说他们不应该受到你的指责，就拒绝被卷入关于此事的争论。要么不回应（如果你认为他们只是在发泄，不需要回应），要么说如果你的反应过度了，你很抱歉，而且在邮件中很难察觉细微差别，然后回到主要话题。永远，永远不要坚持要求某人公开或私下承认他们行为不当。如果他们自愿选择发布道歉，那很好，但要求他们这样做只会引起怨恨。</para>
 
-<para>The overall goal is to make good etiquette be seen as one of the
-"in-group" behaviors.  This helps the project, because developers can
-be driven away (even from projects they like and want to support) by
-flame wars.  You may not even know that they were driven away; someone
-might lurk on the mailing list, see that it takes a thick skin to
-participate in the project, and decide against getting involved at
-all.  Keeping forums friendly is a long-term survival strategy, and
-it's easier to do when the project is still small.  Once it's part of
-the culture, you won't have to be the only person promoting it.  It
-will be maintained by everyone.</para>
+<para>总的目标是让良好的礼仪被视为“圈内”行为之一。这有助于项目，因为开发者可能会因为口水战而被赶走（即使是他们喜欢并想支持的项目）。你甚至可能不知道他们被赶走了；某人可能潜水在邮件列表上，看到参与项目需要厚脸皮，于是决定根本不参与。保持论坛友好是一项长期的生存策略，当项目还很小时，这样做更容易。一旦它成为文化的一部分，你就不必是唯一一个推广它的人了。它将由每个人来维护。</para>
 
 </sect2>
 
 <sect3 id="code-of-conduct">
-<title>Codes of Conduct</title>
+<title>行为准则</title>
 
-<para>In the decade since the first edition of this book in 2006, it
-has become somewhat more common for open source projects, especially
-the larger ones, to adopt an explicit <firstterm>code of
-conduct</firstterm>.  I think this is a good trend.  As open source
-projects become, at long last, more diverse, the presence of a code of
-conduct can remind participants to think twice about whether a joke is
-going to be hurtful to some people, or whether&nbsp;&mdash;&nbsp;to
-pick a random example&nbsp;&mdash;&nbsp;it contributes to a welcoming
-and inclusive atmosphere when an open source image processing
-library's documentation just happens to use yet another picture of a
-pretty young woman to illustrate the behavior of a particular
-algorithm.  Codes of conduct remind participants that the maintenance
-of a respectful and welcoming environment is everyone's
-responsibility.</para>
+<para>自本书第一版于 2006 年问世以来的十年里，开源项目，特别是大型项目，采用明确的<firstterm>行为准则</firstterm>变得更为普遍。我认为这是一个好趋势。随着开源项目终于变得更加多样化，行为准则的存在可以提醒参与者三思，一个笑话是否会伤害到某些人，或者——举个随机的例子——当一个开源图像处理库的文档恰好又用了一张漂亮年轻女性的照片来说明某个算法的行为时，这是否有助于营造一个欢迎和包容的氛围。行为准则提醒参与者，维护一个尊重和欢迎的环境是每个人的责任。</para>
 
-<para>An Internet search will easily find many examples of codes of
-conduct for open source projects.  The most popular one is probably
-the one at <ulink url="https://contributor-covenant.org/"
->https://contributor-covenant.org/</ulink>, so naturally there's a positive
-feedback dynamic if you choose or adapt that one: more developers will be
-already familiar with it, plus you get its translations into other
-languages for free, etc.</para>
+<para>互联网搜索可以轻松找到许多开源项目行为准则的例子。最受欢迎的可能是在<ulink url="https://contributor-covenant.org/">https://contributor-covenant.org/</ulink>上的那个，所以如果你选择或改编那个，自然会有一个正反馈动态：更多的开发者会已经熟悉它，而且你还可以免费获得它翻译成其他语言的版本等。</para>
 
-<para>A code of conduct will <emphasis>not</emphasis> solve all the
-interpersonal problems in your project.  Furthermore, if it is
-misused, it has the potential to create new
-problems&nbsp;&mdash;&nbsp;it's always possible to find people who
-specialize in manipulating social norms and rules to harm a community
-rather than help it (see <xref linkend="difficult-people"/>), and
-if you're particularly unlucky some of those people may find their way
-into your project.  It is always up to the project leadership, by
-which I mean those whom others in the project tend to listen to the
-most, to enforce a code of conduct, and to see to it that a code of
-conduct is used wisely.  (See also <xref linkend="rudeness"/>.)</para>
+<para>一个行为准则<emphasis>不会</emphasis>解决你项目中所有的人际关系问题。此外，如果被滥用，它有可能制造新的问题——总能找到一些专门操纵社会规范和规则来伤害而非帮助社区的人（参见<xref linkend="difficult-people"/>），如果你特别不幸，这些人中的一些可能会进入你的项目。执行行为准则，并确保行为准则被明智地使用，始终是项目领导层的责任，我指的是那些在项目中其他人倾向于听取其意见的人。（另请参见<xref linkend="rudeness"/>。）</para>
 
-<para>Some participants may genuinely disagree with the need to adopt
-a code at all, and argue against it on the grounds that it could do
-more harm than good.  Even if you feel they're wrong, it is imperative
-that you help make sure they're able to state their view without being
-attacked for it.  After all, disagreeing with the need for a code of
-conduct is not the same as&nbsp;&mdash;&nbsp;is, in fact, entirely
-unrelated to&nbsp;&mdash;&nbsp; engaging in behavior that would be a
-violation of the proposed code of conduct.  Sometimes people confuse
-these two things, and need to be reminded of the
-distinction.<footnote><para>There's an excellent post by Christie
-Koehler at <ulink
-url="https://subfictional.com/2016/01/25/the-complex-reality-of-adopting-a-meaningful-code-of-conduct/"
->https://subfictional.com/2016/01/25/the-complex-reality-of-adopting-a-meaningful-code-of-conduct/</ulink>
-discussing this in much more depth.</para></footnote></para>
+<para>一些参与者可能真诚地不同意采纳行为准则的必要性，并以它可能弊大于利为由反对它。即使你觉得他们错了，你也必须帮助确保他们能够陈述自己的观点而不因此受到攻击。毕竟，不同意行为准则的必要性与从事会违反拟议行为准则的行为是两回事——实际上，是完全无关的。有时人们会混淆这两件事，需要被提醒这种区别。<footnote><para>Christie Koehler 在<ulink url="https://subfictional.com/2016/01/25/the-complex-reality-of-adopting-a-meaningful-code-of-conduct/">https://subfictional.com/2016/01/25/the-complex-reality-of-adopting-a-meaningful-code-of-conduct/</ulink>上有一篇非常好的文章，更深入地讨论了这一点。</para></footnote></para>
 
-<para>In some projects, a code of conduct specifically for
-organizational or commercial participants&nbsp;&mdash;&nbsp;often one
-implies the other, but not always&nbsp;&mdash;&nbsp;may also be called
-for.  If you see organizational actors participating in your project
-in ways that might not be conducive to the project's long-term health,
-consider creating a <firstterm>Commercial Code of Conduct</firstterm>
-(<firstterm>CCoC</firstterm>, sometimes also expanded as
-<firstterm>Corporate Code of Conduct</firstterm>) or
-<firstterm>Organizational Code of Conduct</firstterm>
-(<firstterm>OCoC</firstterm>).  Two
-examples<footnote><para>Disclosure: My company was involved in
-drafting both.</para></footnote> are the <citetitle>General Guidelines
-for Commercial Entities and Others Deploying Arches</citetitle>
-(on <ulink url="https://www.archesproject.org/code-of-conduct/"
->https://www.archesproject.org/code-of-conduct/</ulink>) and the
-Bytecode Alliance's <citetitle>Organizational Code of
-Conduct</citetitle> (which appears to still be a draft under
-consideration as of this writing, but the draft text is available at
-<ulink
-    url="https://github.com/bytecodealliance/rfcs/blob/main/ORG_CODE_OF_CONDUCT.md"
->https://github.com/bytecodealliance/rfcs/blob/main/ORG_CODE_OF_CONDUCT.md</ulink>
-and is a representative example).</para>
+<para>在某些项目中，可能还需要一个专门针对组织或商业参与者的行为准则——通常一个暗示另一个，但并非总是如此。如果你看到组织行为者以可能不利于项目长期健康的方式参与你的项目，可以考虑创建一个<firstterm>商业行为准则 (Commercial Code of Conduct, CCoC)</firstterm>（有时也扩展为<firstterm>企业行为准则 (Corporate Code of Conduct)</firstterm>）或<firstterm>组织行为准则 (Organizational Code of Conduct, OCoC)</firstterm>。两个例子<footnote><para>披露：我的公司参与了这两份草案的起草。</para></footnote>是《Arches 商业实体及其他部署者通用指南》（在<ulink url="https://www.archesproject.org/code-of-conduct/">https://www.archesproject.org/code-of-conduct/</ulink>上）和字节码联盟的《组织行为准则》（在撰写本文时似乎仍是草案，但草案文本可在<ulink url="https://github.com/bytecodealliance/rfcs/blob/main/ORG_CODE_OF_CONDUCT.md">https://github.com/bytecodealliance/rfcs/blob/main/ORG_CODE_OF_CONDUCT.md</ulink>上获得，是一个代表性的例子）。</para>
 
 </sect3>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="code-review">
-<title>Practice Conspicuous Code Review</title>
-
-<para>One of the best ways to foster a productive development
-community is to get people looking at each others'
-code&nbsp;&mdash;&nbsp;ideally, to get them looking at each others'
-code <emphasis>changes</emphasis> as those changes arrive.
-<firstterm>Commit review</firstterm> (sometimes just called
-<firstterm>code review</firstterm>) is the practice of reviewing
-commits as they come in, looking for bugs and possible
-improvements.</para>
-
-<para>There are a couple of reasons to focus on reviewing changes,
-rather than on reviewing in-place code that's already in source files.  First,
-it just works better socially: when someone reviews your change, she
-is interacting with work you did recently.  That means if she comments
-on it right away, you will be maximally interested in hearing what she
-has to say; six months later, you might not feel as motivated to
-engage, and in any case might not remember the change very well.
-Second, looking at what changes in a codebase is a gateway to looking
-at the rest of the code anyway: reviewing a change
-often causes one to look at the surrounding code, at the affected
-callers and callees elsewhere, at related module interfaces,
-etc.<footnote><para>None of this is an argument against top-to-bottom
-code review, of course, for example to do a security audit.  But while
-that kind of review is important too, it's more of a generic
-development best practice, and is not as specifically relevant to
-running an open source project as change-by-change review
-is.</para></footnote></para>
-
-<para>Commit review thus serves several purposes simultaneously.  It's
-the most direct example of peer review in the open source world, and
-helps to maintain software quality.  Every bug that ships in
-a piece of software got there by being committed and not detected;
-therefore, the more eyes watch commits, the fewer bugs will ship.  But
-commit review also serves an indirect purpose: it confirms to people
-that what they do matters, because one obviously wouldn't take time to
-review a commit unless one cared about its effect.  People do their
-best work when they know that others will take the time to evaluate
-it.</para>
-
-<para>Reviews should be public.  Even on occasions when I have been
-sitting in the same physical room with another developer, and one of
-us has made a commit, we take care not to do the review verbally in
-the room, but to send it to the appropriate online review forum
-instead.  Everyone benefits from seeing the review happen.  People
-follow the commentary and sometimes find flaws in it; even when they
-don't, it still reminds them that review is an expected, regular
-activity, like washing the dishes or mowing the lawn.</para>
-
-<para>Some technical infrastructure is required to do change-by-change
-review effectively.  In particular, setting up commit notifications is
-extremely useful.  The effect of commit notifications is that every
-time someone commits a change to the central repository, an email or
-other subscribable notification goes out showing the log message and
-diffs (unless the diff is too large; see <xref
-linkend="vc-vocabulary-diff"/>, in <xref linkend="vc-vocabulary"/>).
-The review itself might take place on a mailing list, or in a review
-tool such as Gerrit or the GitHub "pull request" interface.  See <xref
-linkend="commit-notifications" /> for details.</para>
-
-<sect3 id="subversion-commit-review">
-<title>Case study</title>
-
-<para>In the Subversion project, we did not at first make a regular
-practice of code review.  There was no guarantee that every commit
-would be reviewed, though one might sometimes look over a change if
-one were particularly interested in that area of the code.  Bugs
-slipped in that really could and should have been caught.  A developer
-named Greg Stein, who knew the value of code review from past work,
-decided that he was going to set an example by reviewing every line of
-<emphasis>every single commit</emphasis> that went into the code
-repository.  Each commit anyone made was soon followed by an email to
-the developer's list from Greg, dissecting the commit, analyzing
-possible problems, and occasionally praising a clever bit of code.  Right
-away, he was catching bugs and non-optimal coding practices that would
-otherwise have slipped by without ever being noticed.  Pointedly, he
-never complained about being the only person reviewing every commit,
-even though it took a fair amount of his time, but he did sing the
-praises of code review whenever he had the chance.  Pretty soon, other
-people, myself included, started reviewing commits regularly too.</para>
-
-<para>What was our motivation?  It wasn't that Greg had consciously shamed
-us into it.  But he had proven that reviewing code was a valuable way
-to spend time, and that one could contribute as much to the project by
-reviewing others' changes as by writing new code.  Once he
-demonstrated that, it became expected behavior, to the point where any
-commit that didn't get some reaction would cause the committer to
-worry, and even ask on the list whether anyone had had a chance to
-review it yet.  Later, Greg got a job that didn't leave him as much
-time for Subversion, and had to stop doing regular reviews.  But by
-then, the habit was so ingrained for the rest of us as to seem that it
-had been going on since time immemorial.</para>
-
-</sect3>
-
-<para>Start doing reviews from the very first commit.  The sorts of
-problems that are easiest to catch by reviewing diffs are security
-vulnerabilities, memory leaks, insufficient comments or API
-documentation, off-by-one errors, caller/callee discipline mismatches,
-and other problems that require a minimum of surrounding context to
-spot.  However, even larger-scale issues such as failure to abstract
-repeated patterns to a single location become spottable after one has
-been doing reviews regularly, because the memory of past diffs informs
-the review of present diffs.</para>
-
-<para>Don't worry that you might not find anything to comment on, or
-that you don't know enough about every area of the code.  There will
-usually be something to say about almost every commit; even where you
-don't find anything to question, you may find something to praise.
-The important thing is to make it clear to every committer that what
-they do is seen and understood, that attention is being paid.  Of
-course, code review does not absolve programmers of the responsibility
-to review and test their changes before committing; no one should
-depend on code review to catch things she ought to have caught on her
-own.</para>
-
-</sect2>
-
-<!-- ======================== SECTION ============================== -->
-<sect2 id="be-open-from-day-one">
-<title>Be Open From Day One</title>
-
-<para>Start your project out in the open from the very first day.  The
-longer a project is run in a closed source manner, the harder it is to
-open source later.<footnote><para>This section started out as a blog
-post, <ulink
-url="http://archive.civiccommons.org/2011/01/be-open-from-day-one/index.html"
->http://archive.civiccommons.org/2011/01/be-open-from-day-one/index.html</ulink>, though
-it's been edited a lot for inclusion here.</para>
-</footnote></para>
-
-<para>Being open source from the start doesn't mean your developers
-must immediately take on the extra responsibilities of community
-management.  People often think that "open source" means "strangers
-distracting us with questions", but that's
-optional&nbsp;&mdash;&nbsp;it's something you might do down the road,
-if and when it makes sense for your project.  It's under your control.
-There are still major advantages to be had by running the project out
-in open, publicly-visible forums from the beginning.  Conversely, the
-longer the project is run closed-source, the more difficult it will be
-to open up later.</para>
-
-<para>I think there's one underlying cause for this:</para>
-
-<para>At each step in a project, programmers face a choice: to do that
-step in a manner compatible with a hypothetical future open-sourcing,
-or do it in a manner incompatible with open-sourcing.  And every time
-they choose the latter, the project gets just a little bit harder to
-open source.</para>
-
-<para>The crucial thing is, they can't help choosing the latter
-occasionally&nbsp;&mdash;&nbsp;all the pressures of development propel
-them that way.  It's very difficult to give a future event the same
-present-day weight as, say, fixing the incoming bugs reported by the
-testers, or finishing that feature the customer just added to the
-spec.  Also, programmers struggling to stay on budget will inevitably
-cut corners here and there.  In Ward Cunningham's phrase, they will
-incur "technical debt" (<ulink
-url="https://en.wikipedia.org/wiki/Technical_debt"
->https://en.wikipedia.org/wiki/Technical_debt</ulink>), with the
-intention of paying back that debt later.</para>
-
-<para>Thus, when it's time to open source, you'll suddenly find there
-are things like:</para>
-
-<itemizedlist>
-  <listitem>Customer-specific configurations and passwords checked
-            into the code repository;</listitem>
-  <listitem>Sample data constructed from live (and confidential)
-            information;</listitem>
-  <listitem>Bug reports containing sensitive information that cannot
-            be made public;</listitem>
-  <listitem>Comments in the code expressing perhaps overly-honest
-            reactions to the customer's latest urgent request;</listitem>
-  <listitem>Archives of correspondence among the developer team, in
-            which useful technical information is interleaved with
-            personal opinions not intended for strangers;</listitem>
-  <listitem>Licensing issues due to dependency libraries whose terms
-            might have been fine for internal deployment (or not even
-            that), but aren't compatible with open source
-            distribution;</listitem>
-  <listitem>Documentation written in the wrong format (e.g., that
-            proprietary internal wiki your department uses), with no
-            tool available to easily transform it into formats
-            appropriate for public distribution;</listitem>
-  <listitem>Non-portable build dependencies that only become apparent
-            when you try to move the software out of your internal
-            build environment;</listitem>
-  <listitem>Modularity violations that everyone knows need cleaning
-            up, but that there just hasn't been time to take care of
-            yet...</listitem>
-  <listitem>(This list could go on for a long time.)</listitem>
-</itemizedlist>
-
-<para>The problem isn't just the work of actually doing the cleanups;
-it's the extra decision-making they require.  For example, if
-sensitive material was checked into the code repository in the past,
-your team now faces a choice between cleaning it out of the historical
-revisions entirely, so you can open source the entire (sanitized)
-history, or just cleaning up the latest revision and open-sourcing
-from that (sometimes called a "top-skim").  Neither method is wrong or
-right&nbsp;&mdash;&nbsp;and that's the problem: now you've got one
-more discussion to have and one more decision to make.  In some
-projects, that decision gets made and reversed several times before
-the final release. The thrashing itself is part of the cost.</para>
-
-<sect3 id="avoid-exposure-events">
-<title>Waiting Just Creates an Exposure Event</title>
-
-<para>The other problem with opening up a developed codebase is that
-it creates a needlessly large exposure event.  Whatever issues there
-may be in the code (modularity corner-cutting, security
-vulnerabilities, etc), they are all exposed to public scrutiny at
-once&nbsp;&mdash;&nbsp;the open-sourcing event becomes an opportunity
-for the technical blogosphere to pounce on the code and see what they
-can find.</para>
-
-<para>Contrast that with the scenario where development was done in
-the open from the beginning: code changes come in one at a time, so
-problems are handled as they come up (and are often caught sooner,
-since there are more eyeballs on the code).  Because changes reach the
-public at a low, continuous rate of exposure, no one blames your
-development team for the occasional corner-cutting or flawed code
-checkin.  Everyone's been there, after all; these tradeoffs are
-inevitable in real-world development.  As long as the technical debt
-is properly recorded in "FIXME" comments and bug reports, and any
-security issues are addressed promptly, it's fine.  Yet if those same
-issues were to appear suddenly all at once, unsympathetic observers
-may jump on the aggregate exposure in a way they never would have if
-the issues had come up piecemeal in the normal course of
-development.</para>
-
-<para>(These concerns apply even more strongly to government software
-projects; see <xref linkend="starting-open-for-govs" />.)</para>
-
-</sect3>
-
-<para>The good news is that these are all unforced errors.  A project
-incurs little extra cost by avoiding them in the simplest way
-possible: by running in the open from Day One.</para>
-
-<para>"In the open" means the following things are publicly
-accessible, in standard formats, from the first day of the project:
-the code repository, bug tracker, design documents, user
-documentation, wiki (if any), and developer discussion forums. It also means
-the code and documentation are placed under an open source license, of
-course. And it means that your team's day-to-day work takes place in the
-publicly visible area.</para>
-
-<para>"In the open" does <emphasis>not</emphasis> have to mean: allowing strangers to check
-code into your repository (they're free to copy it into their own
-repository, if they want, and work with it there); allowing anyone to
-file bug reports in your tracker (you're free to choose your own QA
-process, and if allowing reports from strangers doesn't help you, you
-don't have to do it); reading and responding to every bug report
-filed, even if you do allow strangers to file; responding to every
-question people ask in the forums (even if you moderate them through);
-reviewing every patch or suggestion posted, when doing so may cost
-valuable development time; etc.</para>
-
-<para>Think of it this way: 
-
-  <blockquote>
-  <para><emphasis>You open source your code, not your time.</emphasis></para>
-  </blockquote>
-
-Your code is infinitely replicable; your time is not, and you may protect
-it however you need to.  You get to determine the point at which
-engaging with outside users and developers makes sense for your
-project.  In the long run it usually does, and most of this book is
-about how to do it effectively.  But the pace of engagement is always
-under your control.  Developing in the open does not change this, it
-just ensures that everything done in the project is, by definition,
-done in a way that's compatible with being open source.</para>
-
-</sect2>
-</sect1>
-
-<!-- ======================== SECTION ============================== -->
-<sect1 id="opening-closed-projects">
-<title>Opening a Formerly Closed Project</title>
-
-<para>It's best to
-avoid being in the situation of opening up a closed project in the
-first place; just start the project in the open if you can.  But if
-it's too late for that and you find yourself opening up an existing
-project, perhaps with active developers accustomed to working in a
-closed-source environment, there are certain common issues that tend
-to arise.  You can save a lot of time and trouble if you are prepared
-for them.</para>
-
-<para>Some of these issues are essentially mechanical, and for them
-<xref linkend="be-open-from-day-one"/> can serve as a checklist.  For
-example, if your code depends on proprietary libraries that are not
-part of the standard distribution of your target operating system(s),
-you will need to find open source replacements; if there is
-confidential content&nbsp;&mdash;&nbsp;e.g., unpublishable comments,
-passwords or site-specific configuration information that cannot
-easily be changed, confidential data belonging to third parties,
-etc&nbsp;&mdash;&nbsp;in the project's version control history, then
-you may have to release a "top-skim" version, that is, restart the
-version history afresh from the current version as of the moment you
-open source the code; and so on.</para>
-
-<para>But there can be social and managerial issues too, and they are
-often more significant in the long run than the mere mechanical
-concerns.  You need to make sure everyone on the development team
-understands that a big change is coming&nbsp;&mdash;&nbsp;and you
-need to understand how it's going to feel from their point of view.</para>
-
-<para>Try to imagine how the situation looks to them: formerly, all
-code and design decisions were made with a group of other programmers
-who knew the software more or less equally well, who all received the
-same pressures from the same management, and who all know each others'
-strengths and weaknesses.  Now you're asking them to expose their code
-to the scrutiny of random strangers, who will form judgements based
-only on the code, with no awareness of what business pressures may
-have forced certain decisions.  These strangers will ask lots of
-questions, questions that jolt the existing developers into realizing
-that the documentation they worked so hard on is
-<emphasis>still</emphasis> inadequate (this is inevitable).  To top it
-all off, the newcomers are unknown, faceless entities.  If one of your
-developers already feels insecure about his skills, imagine how that
-will be exacerbated when newcomers point out flaws in code he wrote,
-and worse, do so in front of his colleagues.  Unless you have a team
-of perfect coders, this is unavoidable&nbsp;&mdash;&nbsp;in fact, it will probably
-happen to all of them at first.  This is not because they're bad
-programmers; it's just that any program above a certain size has bugs,
-and peer review will spot some of those bugs (see
-<xref linkend="code-review"/>).
-At the same time, the newcomers
-themselves won't be subject to much peer review at first, since they
-can't contribute code until they're more familiar with the project.
-To your developers, it may feel like all the criticism is incoming,
-never outgoing.  Thus, there is the danger of a siege mentality taking
-hold among the old hands.</para>
-
-<para>The best way to prevent this is to warn everyone about what's
-coming, explain it, tell them that the initial discomfort is perfectly
-normal, and reassure them that it's going to get better.  Some of
-these warnings should take place privately, before the project is
-opened.  But you may also find it helpful to remind people on the
-public lists that this is a new way of development for the project,
-and that it will take some time to adjust.  The very best thing you
-can do is lead by example.  If you don't see your developers answering
-enough newbie questions, then just telling them to answer more isn't
-going to help.  They may not have a good sense of what warrants a
-response and what doesn't yet, or it could be that they don't have a
-feel for how to prioritize coding work against the new burden of
-external communications.  The way to get them to participate is to
-participate yourself.  Be on the public mailing lists, and make sure
-to answer some questions there.  When you don't have the
-expertise to field a question, then visibly hand it off to a developer
-who does&nbsp;&mdash;&nbsp;and watch to make sure she follows up with an answer,
-or at least a response.  It will naturally be tempting for the
-longtime developers to lapse into private discussions, since that's
-what they're used to.  Make sure you're subscribed to the internal
-mailing lists on which this might happen, so you can ask that such
-discussions be moved to the public lists right away.</para>
-
-<para>If you expect the newly-public project to start involving
-developers who are not paid directly for their
-work&nbsp;&mdash;&nbsp;and there are usually at least a few such
-developers on most successful open source
-projects&nbsp;&mdash;&nbsp;see <xref linkend="money"/> for discussion
-of how to mix paid and unpaid developers successfully.</para>
-
-</sect1>
-
-<!-- ======================== SECTION ============================== -->
-<sect1 id="announcing">
-<title>Announcing</title>
-
-<para>Once the project is presentable&nbsp;&mdash;&nbsp;not perfect, just
-presentable&nbsp;&mdash;&nbsp;you're ready to announce it to the world.</para>
-
-<para>This is a simpler process than you might expect.  First, set up
-the announcement pages at your project's home site, as described in
-<xref linkend="announcing-releases"/>).  Then, post announcements
-in the appropriate forums.  There are two kinds of forums: generic
-forums that display many kinds of new project announcements, and
-topic-specific forums where your project would be welcome news.</para>
-
-<para>Make sure the announcement includes key words and phrases that
-will help people find your project in search engines.  A good test is
-that if someone does a search for "open source foo bar baz", and your
-project is a credible offering for foo, bar, and baz, then it should
-be on the first page of results.  (Unless you have a lot of open
-source competitors&nbsp;&mdash;&nbsp;but you don't, because you read
-<xref linkend="look-around"/>, right?)</para>
-
-<para>As of early 2022, the best general forum for announcements is probably <ulink
-url="https://news.ycombinator.com/" >https://news.ycombinator.com/</ulink>.
-While you are welcome to submit your project there, note that it will
-have to successfully climb the word-of-mouth / upvote tree to get
-featured on the front page.  The subreddit forums related to <ulink
-url="https://www.reddit.com/r/opensource/"
->https://www.reddit.com/r/opensource/</ulink>, <ulink
-url="https://www.reddit.com/r/programming/"
->https://www.reddit.com/r/programming/</ulink>, and <ulink
-url="https://www.reddit.com/r/software/" >https://www.reddit.com/r/software/</ulink>
-work in a similar way.  While it's good news for your project if you
-can get mentioned in a place like that, I hesitate to contribute to
-the marketing arms race by suggesting any concrete steps to accomplish
-this.  Use your judgement and try not to spam.</para>
-
-<para>You might also consider submitting an entry for your project at
-the FSF's Free Software Directory <ulink url="https://directory.fsf.org/"
->https://directory.fsf.org/</ulink>, though that is more about helping its
-long-term findability rather than about soliciting attention at the
-moment of launch.</para>
-
-<para>Topic-specific forums are probably where you'll get the
-most interest, of course.  Think of discussion forums where an
-announcement of your project would be on-topic and of
-interest&nbsp;&mdash;&nbsp;you might already be a member of some of
-them&nbsp;&mdash;&nbsp;and post there.  Be careful to make exactly
-<emphasis>one</emphasis> post per forum, and to direct people to your
-project's own discussion areas for follow-up discussion (when posting
-by email, you can do this by setting the
-<systemitem>Reply-to</systemitem> header).  Your announcement should
-be short and get right to the point, and the Subject line should make
-it clear that it is an announcement of a new project:</para>
-
-<screen>
-To: discuss@some.forum.about.search.indexers
-Subject: [ANNOUNCE] Scanley, a new open source full-text indexer.
-Reply-to: dev@scanley.org
-
-This is a one-time post to announce the creation of the Scanley
-project, an open source full-text indexer and search engine with a
-rich API, for use by programmers in providing search services for
-large collections of text files.  Scanley already has running code,
-is under active development, and is looking for both developers and
-testers.
-
-Home page: http://www.scanley.org/
-
-Features:
-   - Searches plain text, HTML, and XML
-   - Word or phrase searching
-   - (planned) Fuzzy matching
-   - (planned) Incremental updating of indexes
-   - (planned) Indexing of remote web sites
-   - (planned) Long-distance mind-reading
-
-Requirements:
-   - Python 3.9 or higher
-   - SQLite 3.34 or higher
-
-For more information, please come find us at scanley.org!
-
-Thank you,
--J. Random
-</screen>
-
-<para>(See <xref linkend="publicity"/> for advice on announcing
-subsequent releases and other project events.)</para>
-
-<para>There is an ongoing debate in the free software world about
-whether it is necessary to begin with running code, or whether a
-project can benefit from being announced even during the
-design/discussion stage.  I used to think starting with running code
-was crucial, that it was what separated successful projects from toys,
-and that serious developers would only be attracted to software that
-already does something concrete.</para>
-
-<para>This turned out not to be the case.  In the Subversion project,
-we started with a design document, a core of interested and
-well-connected developers, a lot of fanfare, and
-<emphasis>no</emphasis> running code at all.  To my complete surprise,
-the project acquired active participants right from the beginning, and
-by the time we did have something running, there were quite a few
-developers already deeply involved.  Subversion is not the
-only example; the Mozilla project was also launched without running
-code, and is now a successful and popular web browser.</para>
-
-<para>On the evidence of this and other examples, I have to back away
-from the assertion that running code is absolutely necessary for
-launching a project.  Running code is still the best foundation for
-success, and a good rule of thumb would be to wait until you have it
-before announcing your project.<footnote><para>Note that
-<emphasis>announcing</emphasis> your project usually comes long after you
-have open sourced the code.  My advice to consider carefully the
-timing of your announcement should not be taken as advice to delay
-open sourcing the code&nbsp;&mdash;&nbsp;ideally, your project should
-be open source and publicly visible from the very first moment of its
-existence, and this is entirely independent of when you announce it.
-See <xref linkend="be-open-from-day-one"/> for
-more.</para></footnote>  However, there may be circumstances where
-announcing earlier makes sense.  I do think that at least a
-well-developed design document, or else some sort of code framework,
-is necessary&nbsp;&mdash;&nbsp;of course it may be revised based on public
-feedback, but there has to be something concrete, something more
-tangible than just good intentions, for people to sink their teeth
-into.</para>
-
-<para>Whenever you announce, don't expect a horde of participants to
-join the project immediately afterward.  Usually, the result of
-announcing is that you get a few casual inquiries, a few more people
-join your mailing lists, and aside from that, everything continues
-pretty much as before.  But over time, you will notice a gradual
-increase in participation from both new code contributors and users.</para>
-
-<para>Announcement is merely the planting of a seed.  It can take a long
-time for the news to spread.  If the project consistently rewards
-those who get involved, the news <emphasis>will</emphasis> spread,
-though, because people want to share when they've found something
-good.  If all goes well, the dynamics of exponential communications
-networks will slowly transform the project into a complex community,
-where you don't necessarily know everyone's name and can no longer
-follow every single conversation.  The next chapters are about working
-in that environment.</para>
-
-</sect1>
-
-</chapter>
-
-<!--
-local variables: 
-sgml-parent-document: ("book.xml" "chapter")
-end:
--->
-
+<title>实践显眼的代...

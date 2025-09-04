@@ -1,203 +1,83 @@
 <chapter id="development-cycle">
 
-<title>Packaging, Releasing, and Daily Development</title>
+<title>打包、发布和日常开发</title>
 
 <simplesect>
 
-<para>This chapter is about how free software projects package and
-release their software, and how overall development patterns organize
-around those goals.</para>
+<para>本章关于自由软件项目如何打包和发布其软件，以及整体开发模式如何围绕这些目标进行组织。</para>
 
-<para>A major difference between open source projects and proprietary
-ones is the lack of centralized control over the development team.
-When a new release is being prepared, this difference is especially
-stark: if a single corporation manages the entire development team, it
-can ask them to focus on
-an upcoming release, putting aside new feature development and
-non-critical bug fixing until the release is done.  But open source
-developer communities are rarely so monolithic.  People work on the
-project for all sorts of
-reasons, and those not interested in helping with a given release
-still want to continue regular development work while the release is
-going on.  Because development doesn't stop, open source release
-processes tend to take longer, but be less disruptive, than commercial
-release processes.</para>
+<para>开源项目与专有项目的一个主要区别在于对开发团队缺乏集中控制。在准备新版本时，这种差异尤为明显：如果一个公司管理整个开发团队，它可以要求他们专注于即将发布的版本，将新功能开发和非关键性 bug 修复推迟到版本发布之后。但开源开发者社区很少如此单一。人们出于各种原因从事项目工作，那些对帮助某个给定版本不感兴趣的人仍然希望在版本发布期间继续常规的开发工作。因为开发不会停止，所以开源发布过程往往比商业发布过程更长，但干扰性更小。</para>
 
-<para>It's a bit like highway repair.  There are two
-ways to fix a road: you can shut it down completely, so that a repair
-crew can swarm all over it at full capacity until the problem is
-solved, or you can work on a couple of lanes at a time, while leaving the
-others open to traffic.  The first way is very efficient <emphasis>for
-the repair crew</emphasis>, but not for anyone else&nbsp;&mdash;&nbsp;the road is
-entirely shut down until the job is done.  The second way involves
-much more time and trouble for the repair crew (now they have to work
-with fewer people and less equipment, in cramped conditions, with
-flaggers to slow and direct traffic, etc), but at least the road
-remains useable, albeit not at full capacity.</para>
+<para>这有点像公路维修。修复道路有两种方法：你可以完全关闭它，以便维修队可以全力以赴地在上面工作直到问题解决，或者你可以一次只修几条车道，同时让其他车道对交通开放。第一种方法对<emphasis>维修队</emphasis>非常高效，但对其他人则不然——道路在工作完成前完全关闭。第二种方法对维修队来说需要更多的时间和麻烦（现在他们必须用更少的人和更少的设备，在狭窄的条件下工作，还要有旗手来减速和指挥交通等），但至少道路仍然可用，尽管不是满负荷。</para>
 
-<para>Open source projects tend to work the second way.  In fact, for
-a mature piece of software with several different release lines being
-maintained simultaneously, the project is sort of in a permanent state
-of minor road repair.  There are always a couple of lanes closed; a
-consistent but low level of background inconvenience is always being
-tolerated by the development group as a whole, so that releases get
-made on a regular schedule.</para>
+<para>开源项目倾向于采用第二种方式。事实上，对于一个成熟的、同时维护多个不同发布线的软件来说，项目有点像处于永久性的轻微道路维修状态。总有几条车道是关闭的；整个开发团队总是在容忍一种持续但低水平的背景不便，以便发布能够按常规时间表进行。</para>
 
-<para>The model that makes this possible generalizes to more than just
-releases.  It's the principle of parallelizing tasks that are not
-mutually interdependent&nbsp;&mdash;&nbsp;a principle that is by no means unique
-to open source development, of course, but one which open source
-projects implement in their own particular way.  They cannot afford to
-annoy either the roadwork crew or the regular traffic too much, but
-they also cannot afford to have people dedicated to standing by the
-orange cones and flagging traffic along.  Thus they gravitate toward
-processes that have flat, constant levels of administrative overhead,
-rather than peaks and valleys.  Developers are generally willing to
-work with small but consistent amounts of inconvenience; the
-predictability allows them to come and go without worrying about
-whether their schedule will clash with what's happening in the
-project.  But if the project were subject to a master schedule in
-which some activities excluded other activities, the result would be a
-lot of developers sitting idle a lot of the time&nbsp;&mdash;&nbsp;which would be
-not only inefficient but boring, and therefore dangerous, in that a
-bored developer is likely to soon be an ex-developer.</para>
+<para>使这成为可能的模型可以推广到不仅仅是发布。它是并行处理非相互依赖任务的原则——这个原则当然并非开源开发所独有，但开源项目以其自己独特的方式实现它。他们既不能过多地惹恼道路施工队，也不能过多地惹恼常规交通，但他们也无法承受让专人站在橙色锥筒旁指挥交通。因此，他们倾向于采用具有平坦、恒定水平的管理开销的过程，而不是有高峰和低谷的过程。开发者通常愿意接受少量但持续的不便；可预测性使他们可以来去自如，而不必担心他们的日程安排会与项目中发生的事情发生冲突。但如果项目受到一个主时间表的约束，其中一些活动排斥其他活动，结果将是许多开发者在很多时候无所事事——这不仅效率低下而且无聊，因此是危险的，因为一个无聊的开发者很可能很快就会成为前开发者。</para>
 
-<para>Release work is usually the most noticeable non-development task
-that happens in parallel with development, so the methods described in
-the following sections are geared mostly toward enabling releases.
-However, note that they also apply to other parallelizable tasks, such
-as translations and internationalization, broad API changes made
-gradually across the entire codebase, etc.</para>
+<para>发布工作通常是与开发并行发生的最引人注目的非开发任务，因此以下各节中描述的方法主要旨在促成发布。然而，请注意，它们也适用于其他可并行化的任务，例如翻译和国际化、在整个代码库中逐步进行的大范围 API 更改等。</para>
 
 </simplesect>
 
-<!-- ========================== SECTION =========================== -->
+<!-- ======================== SECTION =========================== -->
 
 <sect1 id="release-numbering">
-<title>Release Numbering</title>
+<title>版本编号</title>
 
-<para>Before we talk about how to make a release, let's look at how to
-name releases, which requires knowing what releases actually mean to
-users.  A release means that:</para>
+<para>在讨论如何发布之前，让我们先看看如何命名发布，这需要了解发布对用户实际上意味着什么。一个发布意味着：</para>
 
 <itemizedlist>
 
-  <listitem><para>Some old bugs have been fixed.  This is probably the one
-            thing users can count on being true of every release.</para>
+  <listitem><para>一些旧的 bug 已经被修复。这可能是用户可以指望每个版本都为真的唯一一件事。</para>
   </listitem>
 
-  <listitem><para>New bugs have been added.  This too can usually
-            be counted on, except sometimes in the case of security
-            releases or other one-offs (see
-            <xref linkend="security-releases"/>).</para>
+  <listitem><para>新的 bug 已经被添加。这通常也可以指望，除了在安全发布或其他一次性发布的情况下（参见<xref linkend="security-releases"/>）。</para>
   </listitem>
 
-  <listitem><para>New features may have been added.</para>
+  <listitem><para>可能已经添加了新功能。</para>
   </listitem>
 
-  <listitem><para>New configuration options may have been added, or
-            the meanings of old options may have changed subtly.  The
-            installation or upgrade procedures may have changed slightly since
-            the last release too.</para>
+  <listitem><para>可能已经添加了新的配置选项，或者旧选项的含义可能发生了细微的变化。安装或升级过程也可能自上次发布以来略有改变。</para>
   </listitem>
 
-  <listitem><para>Incompatible changes may have been introduced, for
-            example such 
-            that the data formats used by older versions of the
-            software are no longer useable without undergoing some
-            sort of (possibly manual) one-way conversion step.</para>
+  <listitem><para>可能已经引入了不兼容的更改，例如，旧版本软件使用的数据格式在不经过某种（可能是手动的）单向转换步骤的情况下不再可用。</para>
   </listitem>
 
 </itemizedlist>
 
-<para>As you can see, not all of these are good things.  This is why
-experienced users approach new releases with some trepidation,
-especially when the software is mature and was already mostly doing
-what they wanted (or thought they wanted).  Even the arrival of new
-features is a mixed blessing, in that it may mean the software
-will now behave in unexpected ways.</para>
+<para>如你所见，并非所有这些都是好事。这就是为什么有经验的用户会带着一些忧虑来对待新版本，特别是当软件已经成熟并且基本上已经做了他们想要（或认为他们想要）的事情时。即使是新功能的到来也是喜忧参半，因为它可能意味着软件现在会以意想不到的方式运行。</para>
 
-<para>The purpose of release numbering, therefore, is twofold:
-obviously the numbers should unambiguously communicate the ordering of
-releases within a given series (i.e., by looking at the numbers of any
-two releases in the same series, one can know which came later), but
-also they should indicate as compactly as possible the degree and
-nature of the changes in each release.</para>
+<para>因此，版本编号的目有两个：显然，这些数字应该明确地传达一个给定系列中版本的顺序（即，通过查看同一系列中任意两个版本的数字，就可以知道哪个是后来的），但它们也应该尽可能紧凑地指示每个版本中更改的程度和性质。</para>
 
 <sidebar id="release-numbering-vs-release-ids" >
-<title>Some Projects Just Need Release Identifiers, Not Release
-Numbers.</title>
-<para>The advice in the rest of this section only applies to projects
-where release number semantics matter.  Use your judgement: if your
-project isn't offering API predictability anyway, or if it practices
-continuous development with auto-deployment in the way that (for
-example) some Javascript projects do, then maybe you can get away with
-just letting git commit IDs double as release identifiers, or with
-some other similarly lightweight method.  Just make sure to consider
-the question carefully, and to base your decision on how users
-actually deploy and upgrade the software.  When it comes to release
-numbering, it's better to be overly strict than overly lax.  Remember
-that the project's core developers are not the main audience for
-release numbers; those developers already know what's happening in the
-project, what APIs have changed, etc.  Release numbers are most
-important for people who <emphasis>don't</emphasis> follow the project
-on a daily basis, and who are therefore naturally underrepresented in
-project discussions about how strictly to adhere to a release
-numbering scheme.  If you believe in the users, stand up for
-them!</para>
+<title>有些项目只需要发布标识符，而不是发布编号。</title>
+<para>本节其余部分的建议仅适用于发布编号语义重要的项目。请自行判断：如果你的项目无论如何都不提供 API 可预测性，或者它像（例如）一些 Javascript 项目那样实行持续开发和自动部署，那么你也许可以只让 git 提交 ID 兼作发布标识符，或者用其他类似的轻量级方法。只需确保仔细考虑这个问题，并根据用户实际部署和升级软件的方式来做决定。在发布编号方面，宁严勿松。请记住，项目的核心开发者不是发布编号的主要受众；那些开发者已经知道项目中正在发生什么，哪些 API 发生了变化等。发布编号对于那些<emphasis>不</emphasis>每天关注项目的人最重要，因此他们在关于如何严格遵守发布编号方案的项目讨论中自然代表性不足。如果你相信用户，就为他们站出来！</para>
 </sidebar>
 
-<para>All that in a number?  Well, more or less, yes.  Release
-numbering strategies are one of the oldest bikeshed discussions around
-(see <xref linkend="bikeshed"/>), and the world is
-unlikely to settle on a single, complete standard anytime soon.
-However, a few good strategies have emerged, along with one
-universally agreed-on principle: <emphasis>be consistent</emphasis>.
-Pick a numbering scheme, document it, and stick with it.  Your users
-will thank you.</para>
+<para>所有这些都在一个数字里？嗯，或多或少，是的。版本编号策略是周围最古老的“自行车棚”讨论之一（参见<xref linkend="bikeshed"/>），而且世界不太可能在短期内就一个单一、完整的标准达成一致。然而，已经出现了一些好的策略，以及一个普遍认同的原则：<emphasis>保持一致</emphasis>。选择一个编号方案，记录下来，并坚持下去。你的用户会感谢你的。</para>
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="release-number-components">
-<title>Release Number Components</title>
+<title>版本号组成部分</title>
 
-<para>This section describes the usual conventions of release
-numbering in detail, and assumes very little prior knowledge.  It is
-intended mainly as a reference.  If you're already familiar with these
-conventions, you can skip this section.</para>
+<para>本节详细描述了版本编号的常规惯例，并假设读者几乎没有先验知识。它主要用作参考。如果你已经熟悉这些惯例，可以跳过本节。</para>
 
-<para>Release numbers are groups of digits separated by dots:</para>
+<para>版本号是由点分隔的数字组：</para>
 
 <informalexample>
 <literallayout>Scanley 2.3
 Singer 5.11.4</literallayout>
 </informalexample>
 
-<para>...and so on.  The dots are <emphasis>not</emphasis> decimal
-points, they are merely separators; "5.3.9" would be followed by
-"5.3.10".  A few projects have occasionally hinted otherwise, most
-famously the Linux kernel with its "0.95", "0.96"... "0.99" sequence
-leading up to Linux 1.0, but the convention that the dots are not
-decimal points is now firmly established and should be considered a
-standard.  There is no limit to the number of components (digit
-portions containing no dots), but most projects do not go beyond three
-or four.  The reasons why will become clear later.</para>
+<para>……等等。这些点<emphasis>不是</emphasis>小数点，它们只是分隔符；“5.3.9”后面会是“5.3.10”。少数项目偶尔会暗示并非如此，最著名的是 Linux 内核的“0.95”、“0.96”……“0.99”序列，最终导向 Linux 1.0，但点不是小数点的惯例现在已经牢固确立，应被视为一个标准。组成部分的数量没有限制（不含点的数字部分），但大多数项目不会超过三或四个。原因稍后会变得清晰。</para>
 
-<para>In addition to the numeric components, projects sometimes tack
-on a descriptive label such as "Alpha" or "Beta" (see
-<xref linkend="alpha-and-beta"/>), for example:</para>
+<para>除了数字组成部分，项目有时还会附加一个描述性标签，如“Alpha”或“Beta”（参见<xref linkend="alpha-and-beta"/>），例如：</para>
 
 <informalexample>
 <literallayout>Scanley 2.3.0 (Alpha)
 Singer 5.11.4 (Beta)</literallayout>
 </informalexample>
 
-<para>An Alpha or Beta qualifier means that this
-release <emphasis>precedes</emphasis> a future release that will have
-the same number without the qualifier.  Thus, "2.3.0&nbsp;(Alpha)"
-leads eventually to "2.3.0".  In order to allow several such candidate
-releases in a row, the qualifiers themselves can have meta-qualifiers.
-For example, here is a series of releases in the order that they would
-be made available to the public:</para>
+<para>Alpha 或 Beta 限定符意味着这个版本<emphasis>先于</emphasis>一个未来将拥有相同编号但没有限定符的版本。因此，“2.3.0 (Alpha)”最终会导向“2.3.0”。为了允许连续出现多个这样的候选版本，限定符本身可以有元限定符。例如，这里是一个按公开发布顺序排列的版本序列：</para>
 
 <informalexample>
 <literallayout>Scanley 2.3.0 (Alpha 1)
@@ -208,76 +88,19 @@ Scanley 2.3.0 (Beta 3)
 Scanley 2.3.0</literallayout>
 </informalexample>
 
-<para>Notice that when it has the "Alpha" qualifier, Scanley "2.3" is
-written as "2.3.0".  The two numbers are equivalent&nbsp;&mdash;&nbsp;trailing
-all-zero components can always be dropped for brevity&nbsp;&mdash;&nbsp;but when a
-qualifier is present, brevity is out the window anyway, so one might
-as well go for completeness instead.</para>
+<para>请注意，当有“Alpha”限定符时，Scanley“2.3”被写为“2.3.0”。这两个数字是等价的——尾部的全零组成部分总是可以为了简洁而省略——但当有限定符存在时，简洁无论如何都谈不上了，所以不妨追求完整性。</para>
 
-<para>Other qualifiers in semi-regular use include "Stable",
-"Unstable", "Development", and "RC" (for "Release Candidate").  The
-most widely used ones are still "Alpha" and "Beta", with "RC" running
-a close third place, but note that "RC" always includes a numeric
-meta-qualifier.  That is, you don't release
-"Scanley&nbsp;2.3.0&nbsp;(RC)", you release
-"Scanley&nbsp;2.3.0&nbsp;(RC&nbsp;1)", followed by RC2, etc.</para>
+<para>其他半常规使用的限定符包括“Stable”（稳定版）、“Unstable”（不稳定版）、“Development”（开发版）和“RC”（“Release Candidate”，发布候选版）。最广泛使用的是“Alpha”和“Beta”，“RC”紧随其后，但请注意，“RC”总是包含一个数字元限定符。也就是说，你不会发布“Scanley 2.3.0 (RC)”，你会发布“Scanley 2.3.0 (RC 1)”，然后是 RC2，等等。</para>
 
-<para>Those three labels, "Alpha", "Beta", and "RC", are pretty widely
-known now, and I don't recommend using any of the others, even though
-the others might at first glance seem like better choices because they
-are normal words, not jargon.  But people who install software from
-releases are already familiar with the big three, and there's no
-reason to do things gratuitously differently from the way everyone
-else does them.</para>
+<para>这三个标签，“Alpha”、“Beta”和“RC”，现在已经广为人知，我不建议使用任何其他的，即使其他的乍一看可能因为是普通词汇而不是行话而显得更好。但安装发布版软件的人已经熟悉这三巨头了，没有理由 gratuitously 地做得与别人不同。</para>
 
-<para>Although the dots in release numbers are not decimal points,
-they do indicate place-value significance.  All "0.X.Y" releases
-precede "1.0" (which is equivalent to "1.0.0", of course).  "3.14.158"
-immediately precedes "3.14.159", and non-immediately precedes
-"3.14.160" as well as "3.15.anything", and so.</para>
+<para>尽管版本号中的点不是小数点，但它们确实表示位值重要性。所有“0.X.Y”版本都先于“1.0”（当然，这等同于“1.0.0”）。“3.14.158”紧接着是“3.14.159”，并且非紧接着先于“3.14.160”以及“3.15.任何东西”，等等。</para>
 
-<para>A consistent release numbering policy enables a user to look at
-two release numbers for the same piece of software and tell, just from
-the numbers, the important differences between those two releases.  In
-a typical three-component system, the first component is
-the <firstterm>major&nbsp;number</firstterm>, the second is
-the <firstterm>minor&nbsp;number</firstterm>, and the third is the
-<firstterm>micro&nbsp;number</firstterm> (sometimes also called the
-"patch" number).  For example, release
-"2.10.17" is the eighteenth micro release (or patch release) in the
-eleventh minor release
-line within the second major release series<footnote><para>Not
-seventeenth and tenth, because numbering starts from 0, not
-1 in the minor and micro components.</para></footnote>.  The words "line" and
-"series" are used informally here, but they mean what one would
-expect: a major series is simply all the releases that share the same
-major number, and a minor series (or minor line) consists of all the releases
-that share the same minor <emphasis>and</emphasis> major number.  That
-is, "2.4.0" and "3.4.1" are not in the same minor series,
-even though they both have "4" for their minor number; on the other
-hand, "2.4.0" and "2.4.2" are in the same minor line, though they are
-not adjacent if "2.4.1" was released between them.</para>
+<para>一个一致的版本编号策略使用户能够查看同一软件的两个版本号，并仅从数字就能判断出这两个版本之间的重要差异。在一个典型的三部分系统中，第一部分是<firstterm>主版本号</firstterm>，第二部分是<firstterm>次版本号</firstterm>，第三部分是<firstterm>微版本号</firstterm>（有时也称为“补丁”号）。例如，版本“2.10.17”是第二个主版本系列中第十一个次版本线的第十八个微版本（或补丁版本）<footnote><para>不是第十七和第十，因为编号从 0 开始，而不是 1，对于次版本和微版本部分。</para></footnote>。“线”和“系列”这两个词在这里是非正式使用的，但它们的意思正如人们所期望的：一个主系列就是所有共享相同主版本号的版本，一个次系列（或次线）由所有共享相同次版本号<emphasis>和</emphasis>主版本号的版本组成。也就是说，“2.4.0”和“3.4.1”不在同一个次系列中，尽管它们的次版本号都是“4”；另一方面，“2.4.0”和“2.4.2”在同一个次线中，但如果“2.4.1”在它们之间发布，它们就不是相邻的。</para>
 
-<para>The meanings of these numbers themselves are also roughly what
-you'd expect: an
-increment of the major number indicates that major changes happened;
-an increment of the minor number indicates minor changes; and an
-increment of the micro number indicates really trivial changes.  Some
-projects add a fourth component, usually called
-the <firstterm>patch&nbsp;number</firstterm>, for especially
-fine-grained control over the differences between their releases
-(confusingly, other projects use "patch" as a synonym for "micro" in a
-three-component system, as mentioned earlier).  There are also projects that use the last
-component as a <firstterm>build&nbsp;number</firstterm>, incremented
-every time the software is built and representing no change other than
-that build.  This helps the project link every bug report with a
-specific build, and is probably most useful when binary packages are
-the default method of distribution.</para>
+<para>这些数字本身的含义也大致如你所料：主版本号的增加表示发生了重大变化；次版本号的增加表示次要变化；微版本号的增加表示非常微小的变化。一些项目会增加第四个部分，通常称为<firstterm>补丁号</firstterm>，用于对版本之间的差异进行更细粒度的控制（令人困惑的是，其他项目在三部分系统中使用“补丁”作为“微”的同义词，如前所述）。还有一些项目使用最后一部分作为<firstterm>构建号</firstterm>，每次软件构建时都会增加，除了表示该构建之外没有其他变化。这有助于项目将每个 bug 报告与特定的构建联系起来，并且在二进制包是默认分发方式时可能最有用。</para>
 
-<para>Although there are many different conventions for how many
-components to use, and what the components mean, the differences tend
-to be minor&nbsp;&mdash;&nbsp;you get a little leeway, but not a lot.  The next
-two sections discuss some of the most widely used conventions.</para>
+<para>尽管关于使用多少个组成部分以及这些组成部分的含义有很多不同的惯例，但差异往往很小——你有一点回旋余地，但不多。接下来的两节将讨论一些最广泛使用的惯例。</para>
 
 </sect2>
 
@@ -286,162 +109,46 @@ two sections discuss some of the most widely used conventions.</para>
 <!-- For link compatibility with an old ID. -->
 <anchor id="release-number-simple-strategy" />
 
-<title>Semantic Versioning</title>
+<title>语义化版本</title>
 
-<para>Most projects have rules about what kinds of changes are allowed
-into a release if one is only incrementing the micro number, different
-rules for the minor number, and still different ones for the major
-number.  Here I will describe a policy that has been used successfully
-by multiple projects.  You may want to just adopt this policy in your
-own project, but even if you don't, it's still a good example of the
-kind of information release numbers should convey.  This policy is now
-formalized as <firstterm>Semantic Versioning</firstterm> at <ulink
-url="http://semver.org/"
->http://semver.org/</ulink>.<footnote><para>Except that the semver.org
-standard apparently does not include the forward-compatibility
-requirement for increments in the micro (patch)
-number.</para></footnote></para>
+<para>大多数项目都有关于在只增加微版本号时允许哪些类型的更改的规则，对于次版本号有不同的规则，对于主版本号又有不同的规则。在这里，我将描述一个已被多个项目成功使用的策略。你可能想在自己的项目中直接采用这个策略，但即使你不这样做，它仍然是版本号应传达何种信息的一个好例子。这个策略现在在<ulink url="http://semver.org/">http://semver.org/</ulink>上被正式化为<firstterm>语义化版本</firstterm>。<footnote><para>除了 semver.org 标准显然不包括微（补丁）号增量的前向兼容性要求。</para></footnote></para>
 
 <orderedlist>
 
-  <listitem><para>Changes to the micro number only (that is, changes
-            within the same minor line) must be both forward- and
-            backward-compatible.  The changes should be bug
-            fixes only, or very small enhancements to existing
-            features.  New features should not be introduced in a
-            micro release.</para>
+  <listitem><para>仅更改微版本号（即，在同一次版本线内）必须是前向和后向兼容的。更改应仅为 bug 修复，或对现有功能的非常小的增强。不应在微版本中引入新功能。</para>
   </listitem>
 
-  <listitem><para>Changes to the minor number (that is, within the
-            same major line) must be backward-compatible, but not
-            necessarily forward-compatible.  It's normal to introduce
-            new features in a minor release, but usually not too many
-            new features at once.</para>
+  <listitem><para>更改次版本号（即，在同一主版本线内）必须是后向兼容的，但不一定需要前向兼容。在次版本中引入新功能是正常的，但通常不会一次引入太多新功能。</para>
   </listitem>
 
-  <listitem><para>Changes to the major number mark compatibility
-            boundaries.  A new major release can be forward- and
-            backward-incompatible.  A major release is expected to
-            have new features, and may even have entire new feature
-            sets.</para>
+  <listitem><para>更改主版本号标志着兼容性边界。一个新的主版本可以是前向和后向不兼容的。一个主版本预计会有新功能，甚至可能有一整套新功能。</para>
   </listitem>
 
 </orderedlist>
 
-<para>What <firstterm>backward-compatible</firstterm>
-and <firstterm>forward-compatible</firstterm> mean, exactly, depends on
-what your software does, but in context they are usually not open to
-much interpretation.  For example, if your project is a client/server
-application, then "backward-compatible" means that upgrading the
-server to 2.6.0 should not cause any existing 2.5.4 clients to lose
-functionality or behave differently than they did before (except for
-bugs that were fixed, of course).  On the other hand, upgrading one of
-those clients to 2.6.0, along with the server, might
-make <emphasis>new</emphasis> functionality available for that client,
-functionality that 2.5.4 clients don't know how to take advantage of.
-If that happens, then the upgrade is <emphasis>not</emphasis>
-"forward-compatible": clearly you can't now downgrade that client
-back to 2.5.4 and keep all the functionality it had at 2.6.0, since
-some of that functionality was new in 2.6.0.</para>
+<para><firstterm>后向兼容</firstterm>和<firstterm>前向兼容</firstterm>的确切含义取决于你的软件做什么，但在上下文中，它们通常没有太多解释的余地。例如，如果你的项目是一个客户端/服务器应用程序，那么“后向兼容”意味着将服务器升级到 2.6.0 不应导致任何现有的 2.5.4 客户端失去功能或表现得与以前不同（当然，除了被修复的 bug）。另一方面，将其中一个客户端与服务器一起升级到 2.6.0 可能会为该客户端提供<emphasis>新</emphasis>的功能，而 2.5.4 客户端不知道如何利用这些功能。如果发生这种情况，那么升级就<emphasis>不是</emphasis>“前向兼容”的：显然，你现在不能将该客户端降级回 2.5.4 并保留它在 2.6.0 时拥有的所有功能，因为其中一些功能是在 2.6.0 中新增的。</para>
 
-<para>This is why micro releases are essentially for bug fixes only.
-They must remain compatible in both directions: if you upgrade from
-2.5.3 to 2.5.4, then change your mind and downgrade back to 2.5.3, no
-functionality should be lost.  Of course, the bugs fixed in 2.5.4
-would reappear after the downgrade, but you wouldn't lose any
-features, except insofar as the restored bugs interfere with the use of some
-existing features.</para>
+<para>这就是为什么微版本基本上只用于 bug 修复。它们必须在两个方向上都保持兼容：如果你从 2.5.3 升级到 2.5.4，然后改变主意降级回 2.5.3，不应丢失任何功能。当然，在 2.5.4 中修复的 bug 会在降级后重新出现，但你不会失去任何功能，除非恢复的 bug 干扰了某些现有功能的使用。</para>
 
-<para>Client/server protocols are just one of many possible
-compatibility domains.  Another is data formats: does the software
-write data to permanent storage?  If so, the formats it reads and
-writes need to follow the compatibility guidelines promised by the
-release number policy.  Version 2.6.0 needs to be able to read the
-files written by 2.5.4, but may silently upgrade the format to
-something that 2.5.4 cannot read, because the ability to downgrade is
-not required across a minor number boundary.  If your project
-distributes code libraries for other programs to use, then APIs are a
-compatibility domain too: you must make sure that source and binary
-compatibility rules are spelled out in such a way that the informed
-user need never wonder whether or not it's safe to upgrade in place.
-She should be able to look at the numbers and know instantly.</para>
+<para>客户端/服务器协议只是众多可能的兼容性领域之一。另一个是数据格式：软件是否将数据写入永久存储？如果是，它读取和写入的格式需要遵循版本号策略所承诺的兼容性指导方针。版本 2.6.0 需要能够读取 2.5.4 写入的文件，但可能会默默地将格式升级为 2.5.4 无法读取的格式，因为在次版本号边界上不要求能够降级。如果你的项目分发供其他程序使用的代码库，那么 API 也是一个兼容性领域：你必须确保源和二进制兼容性规则被明确规定，以便有见识的用户永远不必怀疑就地升级是否安全。她应该能够查看数字并立即知道。</para>
 
-<para>In this system, you don't get a chance for a fresh start until
-you increment the major number.  This can often be a real
-inconvenience: there may be features you wish to add, or protocols
-that you wish to redesign, that simply cannot be done while
-maintaining compatibility.  There's no magic solution to this, except
-to try to design things in an extensible way in the first place (a
-topic easily worth its own book, and certainly outside the scope of
-this one).  But publishing a release compatibility policy, and
-adhering to it, is an inescapable part of distributing software.  One
-nasty surprise can alienate a lot of users.  The policy just described
-is good partly because it's already quite widespread, but also because
-it's easy to explain and to remember, even for those not already familiar
-with it.</para>
+<para>在这个系统中，直到你增加主版本号，你都没有机会重新开始。这通常会是一个真正的不便：可能有一些你希望添加的功能，或者你希望重新设计的协议，但在保持兼容性的同时根本无法做到。对此没有灵丹妙药，除非一开始就尝试以可扩展的方式设计事物（这个话题本身就值得写一本书，而且肯定超出了本书的范围）。但发布一个版本兼容性策略，并遵守它，是分发软件不可避免的一部分。一个令人不快的意外可能会疏远很多用户。刚刚描述的策略之所以好，部分是因为它已经相当普遍，也因为它易于解释和记忆，即使对于那些不熟悉它的人也是如此。</para>
 
-<para>It is generally understood that these rules do not apply to
-pre-1.0 releases (although your release policy should probably state
-so explicitly, just to be clear).  A project that is still in initial
-development can release 0.1, 0.2, 0.3, and so on in sequence, until
-it's ready for 1.0, and the differences between those releases can be
-arbitrarily large.  Micro numbers in pre-1.0 releases are optional.
-Depending on the nature of your project and the differences between
-the releases, you might find it useful to have 0.1.0, 0.1.1, etc, or
-you might not.  Conventions for pre-1.0 release numbers are fairly
-loose, mainly because people understand that strict compatibility
-constraints would hamper early development too much, and because early
-adopters tend to be forgiving anyway.</para>
+<para>通常认为，这些规则不适用于 1.0 之前的版本（尽管你的发布策略可能应该明确说明这一点，以求清晰）。一个仍处于初始开发阶段的项目可以依次发布 0.1、0.2、0.3 等版本，直到准备好发布 1.0，而这些版本之间的差异可以是任意大的。1.0 之前的版本中的微版本号是可选的。根据你的项目性质和版本之间的差异，你可能会发现有 0.1.0、0.1.1 等版本很有用，也可能不会。1.0 之前版本的编号惯例相当宽松，主要是因为人们理解严格的兼容性限制会过多地妨碍早期开发，而且早期采用者通常比较宽容。</para>
 
-<para>Remember that all these injunctions only apply to this
-particular three-component system.  Your project could easily come up
-with a different three-component system, or even decide it doesn't
-need such fine granularity and use a two-component system instead.
-The important thing is to decide early, publish exactly what the
-components mean, and stick to it.</para>
+<para>请记住，所有这些禁令仅适用于这个特定的三部分系统。你的项目可以很容易地想出另一个不同的三部分系统，甚至决定它不需要如此细的粒度，而改用一个两部分系统。重要的是要尽早决定，公布这些部分的确切含义，并坚持下去。</para>
 
 </sect2>
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="release-number-even-odd-strategy">
-<title>The Even/Odd Strategy</title>
+<title>奇偶策略</title>
 
-<para>Some projects use the parity of the minor number component to
-indicate the stability of the software: even means stable, odd means
-unstable.  This applies only to the minor number, not the major or
-micro numbers.  Increments in the micro number still indicate bug
-fixes (no new features), and increments in the major number still
-indicate big changes, new feature sets, etc.</para>
+<para>一些项目使用次版本号的奇偶性来表示软件的稳定性：偶数表示稳定，奇数表示不稳定。这仅适用于次版本号，不适用于主版本号或微版本号。微版本号的增加仍然表示 bug 修复（没有新功能），主版本号的增加仍然表示大的变化、新的功能集等。</para>
 
-<para>The advantage of the even/odd system, which has been used by the
-Linux kernel project<footnote><para>Though Linux no longer uses it;
-see <ulink
-url="https://en.wikipedia.org/wiki/Linux_kernel#History"
->https://en.wikipedia.org/wiki/Linux_kernel#History</ulink>.</para></footnote>
-among others, is that it offers a way to release
-new functionality for testing without subjecting production users to
-potentially unstable code.  People can see from the numbers that
-"2.4.21" is okay to install on their live web server, but that "2.5.1"
-should probably stay confined to experimental servers.  The
-development team handles the bug reports that come in from the
-unstable (odd-minor-numbered) series, and when things start to settle
-down after some number of micro releases in that series, they
-increment the minor number (thus making it even), reset the micro
-number back to "0", and release a presumably stable package.</para>
+<para>奇偶系统的优势，曾被 Linux 内核项目<footnote><para>尽管 Linux 不再使用它；参见<ulink url="https://en.wikipedia.org/wiki/Linux_kernel#History">https://en.wikipedia.org/wiki/Linux_kernel#History</ulink>。</para></footnote>等使用，在于它提供了一种在测试中发布新功能的方法，而不会让生产用户面临潜在不稳定的代码。人们可以从数字上看出“2.4.21”可以安装在他们的生产网络服务器上，但“2.5.1”可能应该只留在实验性服务器上。开发团队处理从不稳定（奇数次版本号）系列收到的 bug 报告，当在该系列中经过一定数量的微版本发布后事情开始稳定下来时，他们会增加次版本号（从而使其变为偶数），将微版本号重置为“0”，并发布一个想必是稳定的软件包。</para>
 
-<para>This system preserves, or at least does not conflict with, the
-compatibility guidelines given earlier.  It simply overloads the minor
-number with some extra information.  This forces the minor number to
-be incremented about twice as often as would otherwise be necessary,
-but there's no real harm in that.  The even/odd system is probably
-best for projects that have very long release cycles, and which by
-their nature have a high proportion of conservative users who value
-stability above new features.  It is not the only way to get new
-functionality tested in the wild, however.  In
-<xref linkend="stabilizing-a-release"/> we will examine another, perhaps more common,
-method of releasing potentially unstable code to the public, in which
-the release number is further marked so that people have a clear picture of
-the risk/benefit trade-offs immediately on seeing the release's name.</para>
+<para>这个系统保留，或者至少不与前面给出的兼容性指导方针冲突。它只是给次版本号增加了一些额外的信息。这迫使次版本号的增加频率大约是原本必要的两倍，但这并没有真正的坏处。奇偶系统可能最适合那些发布周期非常长，并且本质上拥有大量重视稳定性而非新功能的保守用户的项目。然而，这并不是在野外测试新功能的唯一方法。在<xref linkend="stabilizing-a-release"/>中，我们将探讨另一种，也许更常见的方法，即向公众发布可能不稳定的代码，其中版本号被进一步标记，以便人们在看到发布名称时能立即清楚地了解风险/收益权衡。</para>
 
 </sect2>
 
@@ -449,450 +156,126 @@ the risk/benefit trade-offs immediately on seeing the release's name.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="release-branches">
-<title>Release Branches</title>
+<title>发布分支</title>
 
-<para>From a developer's point of view, a free software project is in
-a state of continuous release.  Developers usually run the latest
-available code at all times, because they want to spot bugs, and
-because they follow the project closely enough to be able to stay away
-from currently unstable areas of the feature space.  They often update
-their copy of the software every day, sometimes more than once a day,
-and when they check in a change, they can reasonably expect that every
-other developer will have it within a day or two.</para>
+<para>从开发者的角度来看，一个自由软件项目处于持续发布的状态。开发者通常总是运行最新的可用代码，因为他们想发现 bug，而且他们密切关注项目，能够避开当前不稳定的功能区域。他们常常每天更新他们的软件副本，有时一天不止一次，当他们提交一个变更时，他们可以合理地期望每个其他开发者在一两天内就会拥有它。</para>
 
-<para>How, then, should the project make a formal release?  Should it
-simply take a snapshot of the tree at a moment in time, package it up,
-and hand it to the world as, say, version "3.5.0"?  Common sense says
-no.  First, there may be no moment in time when the entire development
-tree is clean and ready for release.  Newly-started features could be
-lying around in various states of completion.  Someone might have
-checked in a major change to fix a bug, but the change could be
-controversial and under debate at the moment the snapshot is taken.
-If so, it wouldn't work to simply delay the snapshot until the debate
-ends, because in the meantime another, unrelated debate could start,
-and then you'd have wait for <emphasis>that</emphasis> one to end too.
-This process is not guaranteed to halt.</para>
+<para>那么，项目应该如何进行正式发布呢？是应该简单地在某个时刻对树进行快照，打包，然后作为，比如说，“3.5.0”版本交给世界吗？常识告诉我们不应该。首先，可能没有任何一个时刻，整个开发树都是干净且准备好发布的。新开始的功能可能处于各种完成状态。某人可能为了修复一个 bug 而提交了一个重大的变更，但这个变更在快照拍摄时可能存在争议并在讨论中。如果是这样，简单地推迟快照直到辩论结束是行不通的，因为在此期间，另一个无关的辩论可能会开始，然后你也得等<emphasis>那个</emphasis>结束。这个过程不保证会停止。</para>
 
-<para>In any case, using full-tree snapshots for releases would inevitably
-interfere with ongoing development work even if the tree could be put
-into a releasable state.  Say this snapshot is going to be "3.5.0";
-presumably, the next snapshot would be "3.5.1", and would contain
-mostly fixes for bugs found in the 3.5.0 release.  But if both are
-snapshots from the same tree, what are the developers supposed to do
-in the time between the two releases?  They can't be adding new
-features; the compatibility guidelines prevent that.  But not everyone
-will be enthusiastic about fixing bugs in the 3.5.0 code.  Some people
-may have new features they're trying to complete, and will become
-irate if they are forced to choose between sitting idle and working on
-things they're not interested in, just because the project's release
-processes demand that the development tree remain unnaturally
-quiescent.</para>
+<para>无论如何，即使树可以被置于可发布状态，使用全树快照进行发布也必然会干扰正在进行的开发工作。假设这个快照将是“3.5.0”；想必，下一个快照将是“3.5.1”，并且主要包含在 3.5.0 版本中发现的 bug 的修复。但如果两者都是来自同一棵树的快照，那么在这两个版本之间的开发者应该做什么呢？他们不能添加新功能；兼容性指导方针禁止这样做。但不是每个人都会热衷于修复 3.5.0 代码中的 bug。有些人可能有他们想完成的新功能，如果他们被迫在无所事事和从事他们不感兴趣的事情之间做出选择，仅仅因为项目的发布过程要求开发树保持不自然的静止，他们会变得愤怒。</para>
 
-<para>The solution to these problems is to always use
-a <firstterm>release branch</firstterm>.  A release branch is just a
-branch in the version control system (see
-<xref linkend="vc-vocabulary-branch"/>), on which the code
-destined for the corresponding release can be isolated from mainline
-development.</para>
+<para>这些问题的解决方案是始终使用一个<firstterm>发布分支</firstterm>。发布分支只是版本控制系统中的一个分支（参见<xref linkend="vc-vocabulary-branch"/>），在该分支上，注定要用于相应版本的代码可以与主线开发隔离开来。</para>
 
-<para>The concept of release branches is certainly not original to free
-software; many proprietary development organizations use them too.
-However, in closed-source environments, release branches are sometimes
-considered a luxury&nbsp;&mdash;&nbsp;a kind of theoretical "best practice" that can,
-in the heat of a major deadline, be dispensed with while everyone on
-the team scrambles to stabilize the main tree.</para>
+<para>发布分支的概念当然不是自由软件所独创的；许多专有开发组织也使用它们。然而，在闭源环境中，发布分支有时被视为一种奢侈品——一种理论上的“最佳实践”，在重大截止日期的压力下，当团队中的每个人都在争分夺秒地稳定主树时，可以被舍弃。</para>
 
-<para>Release branches are close to a necessity in open source
-projects, however.  Even though developers typically create their own
-short-lived branches for work on individual bugfixes and features,
-they also expect to be able to merge their work to the common "main"
-branch as soon as the work is ready.  If the main branch is
-artificially frozen&nbsp;&mdash;&nbsp;that is, gated to allow
-release-related changes only&nbsp;&mdash;&nbsp;then overall
-development momentum is slowed, and developers become frustrated that
-their work is delayed from appearing in the shared arena where it
-would be most easily usable by others.  Furthermore, the release
-itself may suffer if the few people working on it are hurrying to
-finish so everyone else could get back to regular working order on the
-main branch.  Finally, having a release branch facilitates developer
-autonomy: many developers are happy to contribute
-<emphasis>some</emphasis> of their attention to a release branch, as
-long as that's a choice they can make according to their own schedules
-and interests in the same way that they do regarding feature and
-bugfix branches.</para>
+<para>然而，在开源项目中，发布分支几乎是必需品。尽管开发者通常会为个别的 bug 修复和功能创建自己的短期分支，但他们也期望能够在其工作准备好后立即将其合并到公共的“主”分支。如果主分支被人为地冻结——也就是说，被门控以仅允许与发布相关的变更——那么整体的开发势头就会减慢，开发者会因为他们的工作被延迟出现在共享领域而感到沮丧，因为在那里他们的工作最容易被他人使用。此外，如果少数从事发布工作的人为了让其他人能回到主分支的正常工作秩序而匆忙完成，发布本身可能会受到影响。最后，拥有一个发布分支有助于开发者的自主性：许多开发者乐于将他们<emphasis>部分</emphasis>的注意力贡献给一个发布分支，只要这是他们可以根据自己的日程安排和兴趣做出的选择，就像他们对待功能和 bug 修复分支一样。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="release-branch-mechanics">
-<title>Mechanics of Release Branches</title>
+<title>发布分支的机制</title>
 
-<para>The exact mechanics of creating a release branch depend on your
-version control system, of course, but the general concepts are the
-same in most systems.  A branch usually sprouts from another branch or
-from the main line.  Commonly, the main line is where developers'
-changes are first integrated, unfettered by release constraints, and
-the release branch&nbsp;&mdash;&nbsp;say, the one leading to the "1.0" 
-release&nbsp;&mdash;&nbsp;sprouts from main.  (The details of how to create and manage branches in
-your particular version control system are beyond the scope of this
-book, but the semantics are roughly the same everywhere.)  Note that
-you might want to name the branch "1.0.x" (with a literal "x") instead
-of "1.0.0".  That way you can use the same minor line&nbsp;&mdash;&nbsp;i.e., the
-same branch&nbsp;&mdash;&nbsp;as the branch source for all the micro
-releases in that line.</para>
+<para>创建发布分支的确切机制当然取决于你的版本控制系统，但大多数系统中的一般概念是相同的。一个分支通常从另一个分支或主线发芽。通常，主线是开发者变更首先被整合的地方，不受发布约束，而发布分支——比如说，导向“1.0”发布的分支——从主线发芽。（在你的特定版本控制系统中创建和管理分支的细节超出了本书的范围，但语义在各处大致相同。）请注意，你可能想将分支命名为“1.0.x”（带有一个字面的“x”）而不是“1.0.0”。这样你就可以使用同一个次版本线——即，同一个分支——作为该线中所有微版本的分支源。</para>
 
-<para>The social and technical process of stabilizing the branch for
-release is covered in <xref linkend="stabilizing-a-release"/>.  Here we are
-concerned just with the high-level version control actions that relate
-to the release process.  When the release branch is stabilized and
-ready, it is time to tag a snapshot from the branch (see <xref
-linkend="vc-vocabulary-tag"/>) with a name like, e.g.,
-"1.0.0".  The resultant tag represents the exact state of the
-project's source tree in the 1.0.0 release (this is useful when
-developers need to compare against an old version while tracking down
-a bug).  The next micro release in the same line is likewise prepared
-on the 1.0.x branch, and when it is ready, a tag is made for 1.0.1.
-Lather, rinse, repeat for 1.0.2, and so on.  When it's time to start
-thinking about a 1.1.x release, make a new branch from main.</para>
+<para>稳定分支以供发布的社会和技术过程在<xref linkend="stabilizing-a-release"/>中有述。这里我们只关心与发布过程相关的高级版本控制操作。当发布分支稳定并准备好时，就该用像“1.0.0”这样的名字给分支打上一个快照标签了（参见<xref linkend="vc-vocabulary-tag"/>）。由此产生的标签代表了项目源代码树在 1.0.0 版本中的确切状态（这对于开发者在追踪 bug 时需要与旧版本进行比较很有用）。同一线中的下一个微版本同样在 1.0.x 分支上准备，当它准备好时，会为 1.0.1 打上一个标签。对 1.0.2 依此类推，洗刷、冲洗、重复。当该考虑 1.1.x 发布时，从主线创建一个新分支。</para>
 
-<para>Maintenance can continue in parallel along both 1.0.x and 1.1.x,
-and releases can be made independently from both lines (while new
-development work happens either directly on the main branch or in
-short-lived "feature branches" that get merged into the main branch as
-soon as they're ready).</para>
+<para>维护可以沿着 1.0.x 和 1.1.x 两条线并行进行，并且可以从两条线独立地进行发布（而新的开发工作要么直接在主分支上进行，要么在短期的“功能分支”中进行，这些分支在准备好后立即合并到主分支）。</para>
 
-<para>In fact, it is not unusual to publish near-simultaneous releases
-from two different lines.<footnote><para>See <xref
-linkend="release-lines"/>.</para></footnote> The older series is
-recommended for more conservative site administrators, who may not
-want to make the big jump from (say) 1.0.5 to 1.1 without careful
-preparation, and so the project releases 1.0.6 in parallel with 1.1.
-Meanwhile, more adventurous people usually take the most recent
-release on the highest line, to make sure they're getting the latest
-features, even at the risk of greater instability.</para>
+<para>事实上，从两条不同的线几乎同时发布版本并不少见。<footnote><para>参见<xref linkend="release-lines"/>。</para></footnote>旧的系列推荐给更保守的网站管理员，他们可能不想在没有仔细准备的情况下就从（比如说）1.0.5 大跳到 1.1，所以项目会与 1.1 同时发布 1.0.6。与此同时，更大胆的人通常会选择最高线上最新的版本，以确保他们得到最新的功能，即使冒着更大不稳定性的风险。</para>
 
 </sect2>
 
-<para>This is not the only release branch strategy, of course.  In
-some circumstances it may not even be the best, though it works
-pretty well for many projects.  Use any strategy that
-seems to work, but remember the main points: the purpose of a release
-branch is to isolate release work from the fluctuations of daily
-development, and to give the project a physical entity&nbsp;&mdash;&nbsp;the
-release branch&nbsp;&mdash;&nbsp;around which to organize its release process.
-That process is described in detail in the next section.</para>
+<para>当然，这并非唯一的发布分支策略。在某些情况下，它甚至可能不是最好的，尽管它对许多项目来说效果很好。使用任何看起来可行的策略，但请记住要点：发布分支的目的是将发布工作与日常开发的波动隔离开来，并为项目提供一个物理实体——发布分支——来组织其发布过程。该过程在下一节中有详细描述。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="stabilizing-a-release">
-<title>Stabilizing a Release</title>
+<title>稳定一个版本</title>
 
-<para><firstterm>Stabilization</firstterm> is the process of getting a
-release branch into a releasable state; that is, of deciding which
-changes will be in the release, which will not, and shaping the branch
-content accordingly.</para>
+<para><firstterm>稳定化 (Stabilization)</firstterm>是将一个发布分支带入可发布状态的过程；也就是说，决定哪些变更将包含在发布中，哪些不包含，并相应地塑造分支内容。</para>
 
-<para>There's a lot of potential grief contained in the word "deciding".  
-The last-minute feature rush is a familiar phenomenon in
-collaborative software projects: as soon as developers see that a
-release is about to happen, they scramble to finish their current
-changes, in order not to miss the boat.  This, of course, is the exact
-opposite of what you want at release time.  It would be much better
-for people to work on features at a comfortable pace, and not worry
-too much about whether their changes make it into this release or the
-next one.  The more changes one tries to cram into a release at the
-last minute, the less stable the code is and (usually) the more
-new bugs are created.</para>
+<para>“决定”这个词里包含了很多潜在的痛苦。最后一刻的功能冲刺是协作软件项目中一个熟悉的现象：一旦开发者看到一个版本即将发布，他们就会争先恐后地完成他们当前的变更，以免错过这班车。当然，这与你在发布时想要的恰恰相反。如果人们能以舒适的节奏从事功能工作，并且不太担心他们的变更是否能进入这个版本或下一个版本，那会好得多。你试图在最后一刻塞进一个版本的变更越多，代码就越不稳定，并且（通常）会产生越多的新 bug。</para>
 
 <sidebar id="time-based-vs-feature-based" >
-<title>Time-Based Releases vs Feature-Based Releases</title>
+<title>基于时间的发布 vs. 基于功能的发布</title>
 
-<para>Some software projects use "<firstterm>time-based
-releases</firstterm>", as opposed to "<firstterm>feature-based
-releases</firstterm>".  With time-based releases, the project puts out
-a new releases at an absolutely regular rhythm, typically something
-like every six months, and the rule is that the release goes out no
-matter what new features and bugfixes are ready or not
-ready&nbsp;&mdash;&nbsp;anything that isn't ready simply isn't
-included in the release.<footnote><para>While any release methodology
-requires some degree of branch management, time-based releases imply
-that the development team must use a fairly strict gateway policy
-at all times.  Development work must stay isolated from release
-branches until that work is truly ready to be shipped.  Otherwise,
-unfinished code might be hard to extricate from the release branch
-when release time rolls
-around.</para></footnote> Developers who didn't make the deadline are
-told to just wait for the next train, but this is easy for them to
-accept because they can count on the next train coming by in exactly
-six months (or whatever the release period is) anyway.  The advice in
-this section applies to both time-based and feature-based releases,
-but keep both methods in mind as you read.  Depending on your
-project's goals or culture, one or other other method may be more
-appropriate.<footnote><para>For an alternative approach, you
-may wish to read Martin Michlmayr's Ph.D. thesis <citetitle>Quality
-Improvement in Volunteer Free and Open Source Software Projects:
-Exploring the Impact of Release Management</citetitle>
-(<ulink url="https://www.cyrius.com/publications/michlmayr-phd.html"
->https://www.cyrius.com/publications/michlmayr-phd.html</ulink>).  It
-is about using time-based release processes, as opposed to
-feature-based, in large free software projects.  See also <ulink
-url="https://www.cyrius.com/publications/michlmayr_hunt_probert-release_management.pdf"
->https://www.cyrius.com/publications/michlmayr_hunt_probert-release_management.pdf</ulink>,
-by Martin Michlmayr, Francis Hunt, and David Probert.  Finally,
-Michlmayr gave a talk at Google on the subject: <ulink
-url="https://www.youtube.com/watch?v=IKsQsxubuAA"
->https://www.youtube.com/watch?v=IKsQsxubuAA</ulink>.</para></footnote></para>
+<para>一些软件项目使用“<firstterm>基于时间的发布</firstterm>”，而不是“<firstterm>基于功能的发布</firstterm>”。对于基于时间的发布，项目以绝对规律的节奏发布新版本，通常是每六个月左右，规则是无论新功能和 bug 修复是否准备好，发布都会准时进行——任何没准备好的东西都不会包含在发布中。<footnote><para>虽然任何发布方法都需要一定程度的分支管理，但基于时间的发布意味着开发团队必须始终使用相当严格的网关策略。开发工作必须与发布分支保持隔离，直到该工作真正准备好可以发布。否则，当发布时间到来时，未完成的代码可能很难从发布分支中剥离出来。</para></footnote>错过截止日期的开发者被告知只需等待下一班车，但这对他们来说很容易接受，因为他们可以指望下一班车无论如何都会在正好六个月（或发布周期）后到来。本节的建议适用于基于时间和基于功能的发布，但在阅读时请记住这两种方法。根据你的项目目标或文化，一种或另一种方法可能更合适。<footnote><para>作为另一种方法，你可能希望阅读 Martin Michlmayr 的博士论文《志愿者自由和开源软件项目的质量改进：探索发布管理的影响》(<citetitle>Quality Improvement in Volunteer Free and Open Source Software Projects: Exploring the Impact of Release Management</citetitle>)（<ulink url="https://www.cyrius.com/publications/michlmayr-phd.html">https://www.cyrius.com/publications/michlmayr-phd.html</ulink>）。它是关于在大型自由软件项目中使用基于时间的发布过程，而不是基于功能的。另请参见 Martin Michlmayr、Francis Hunt 和 David Probert 的<ulink url="https://www.cyrius.com/publications/michlmayr_hunt_probert-release_management.pdf">https://www.cyrius.com/publications/michlmayr_hunt_probert-release_management.pdf</ulink>。最后，Michlmayr 在谷歌就此主题做了一次演讲：<ulink url="https://www.youtube.com/watch?v=IKsQsxubuAA">https://www.youtube.com/watch?v=IKsQsxubuAA</ulink>。</para></footnote></para>
 </sidebar>
 
-<para>Most software engineers agree in theory on rough criteria for
-what changes should be allowed into a release line during its
-stabilization period.  Obviously, fixes for severe bugs can go in,
-especially for bugs without workarounds.  Documentation updates are
-fine, as are fixes to error messages (except when they are considered
-part of the interface and must remain stable).  Many projects also
-allow certain kinds of low-risk or non-core changes to go in during
-stabilization, and may have formal guidelines for measuring risk.  But
-no amount of formalization can obviate the need for human judgement.
-There will always be cases where the project simply has to make a
-decision about whether a given change can go into a release.  The
-danger is that since each person wants to see their own favorite
-changes admitted into the release, then there will be plenty of people
-motivated to allow changes and not enough people motivated to resist
-them.</para>
+<para>大多数软件工程师在理论上都大致同意，在稳定期间应该允许哪些类型的变更进入发布线。显然，严重 bug 的修复可以进入，特别是那些没有变通方法的 bug。文档更新是可以的，错误消息的修复也是可以的（除非它们被认为是接口的一部分并且必须保持稳定）。许多项目也允许在稳定期间进入某些类型的低风险或非核心变更，并且可能有衡量风险的正式指导方针。但再多的形式化也无法消除对人类判断的需求。总会有一些情况，项目必须就某个给定的变更是否可以进入发布做出决定。危险在于，因为每个人都希望看到自己喜欢的变更被接纳到发布中，所以会有很多人有动力去允许变更，而没有足够的人有动力去抵制它们。</para>
 
-<para>Thus, the process of stabilizing a release is mostly about
-creating mechanisms for saying "no".  The trick for open source
-projects, in particular, is to come up with ways of saying "no" that
-won't result in too many hurt feelings or disappointed developers, and
-also won't prevent deserving changes from getting into the release.
-There are many different ways to do this.  It's pretty easy to design
-systems that satisfy these criteria, once the team has focused on them
-as the important criteria.  Here I'll briefly describe two of the most
-popular systems, at the extreme ends of the spectrum, but don't let
-that discourage your project from being creative.  Plenty of other
-arrangements are possible; these are just two that I've seen work in
-practice.</para>
+<para>因此，稳定一个发布的过程主要是关于创建说“不”的机制。特别是对于开源项目来说，诀窍是想出说“不”的方式，既不会导致太多的伤害感情或失望的开发者，也不会阻止应得的变更进入发布。有很多不同的方法可以做到这一点。一旦团队将它们作为重要的标准来关注，设计满足这些标准的系统就相当容易了。在这里，我将简要描述两种最流行的系统，处于光谱的两端，但这不应阻止你的项目发挥创造力。还有很多其他的安排是可能的；这些只是我在实践中看到行之有效的两种。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="release-owner">
-<title>Dictatorship by Release Owner</title>
+<title>由发布所有者独裁</title>
 
-<para>The group agrees to let one person be the <firstterm>release
-owner</firstterm>.  This person has final say over what changes make
-it into the release.  Of course, it is normal and expected for there
-to be discussions and arguments, but in the end the group must grant
-the release owner sufficient authority to make final decisions.  For
-this system to work, it is necessary to choose someone with the
-technical competence to understand all the changes, and the social
-standing and people skills to navigate the discussions leading up to
-the release without causing too many hurt feelings.</para>
+<para>团队同意让一个人成为<firstterm>发布所有者 (release owner)</firstterm>。这个人对哪些变更能进入发布有最终决定权。当然，有讨论和争论是正常和预期的，但最终团队必须授予发布所有者足够的权力来做出最终决定。为了让这个系统奏效，有必要选择一个有技术能力理解所有变更，并且有社会地位和人际交往能力来驾驭导致发布前的讨论而不会引起太多伤害感情的人。</para>
 
-<para>A common pattern is for the release owner to say "I don't think
-there's anything wrong with this change, but we haven't had enough
-time to test it yet, so it shouldn't go into this release."  It helps
-a lot if the release owner has broad technical knowledge of the
-project, and can give reasons why the change could be potentially
-destabilizing (for example, its interactions with other parts of the
-software, or portability concerns).  People will sometimes ask for such
-decisions to be justified, or will argue that a change is not as risky
-as it looks.  These conversations need not be confrontational, as long
-as the release owner is able to consider all the arguments objectively
-and not reflexively dig in her heels.</para>
+<para>一个常见的模式是，发布所有者说“我不认为这个变更有任何问题，但我们还没有足够的时间来测试它，所以它不应该进入这个版本。”如果发布所有者对项目有广泛的技术知识，并且能给出变更可能不稳定的原因（例如，它与其他软件部分的交互，或者可移植性问题），这将非常有帮助。人们有时会要求对这样的决定进行辩解，或者会争辩说一个变更并不像看起来那么有风险。只要发布所有者能够客观地考虑所有论点，而不是本能地固执己见，这些对话就不必是对抗性的。</para>
 
-<para>Note that the release owner need not be the same person as the
-project leader (in cases where there is a project leader at all; see
-<xref linkend="benevolent-dictator"/>).  In fact,
-sometimes it's
-good to make sure they're <emphasis>not</emphasis> the same person.
-The skills that make a good development leader are not necessarily the
-same as those that make a good release owner.  In something as
-important as the release process, it may be wise to have someone
-provide a counterbalance to the project leader's judgement.  In that
-case, the project leader needs to remember that overriding a decision
-by the release owner will undermine the release owner's authority;
-that alone may be enough reason, in most situations, to let the
-release owner win when there is a disagreement.</para>
+<para>请注意，发布所有者不必与项目负责人是同一个人（在有项目负责人的情况下；参见<xref linkend="benevolent-dictator"/>）。事实上，有时确保他们<emphasis>不是</emphasis>同一个人是件好事。成为一个好的开发负责人的技能不一定与成为一个好的发布所有者的技能相同。在像发布过程这样重要的事情上，让某人来平衡项目负责人的判断可能是明智的。在这种情况下，项目负责人需要记住，推翻发布所有者的决定会损害发布所有者的权威；仅此一点就可能足以在大多数情况下让发布所有者在有分歧时获胜。</para>
 
-<para>Contrast the release owner role with the less dictatorial role
-described in
-<xref linkend="release-manager"/>.</para>
+<para>将发布所有者的角色与<xref linkend="release-manager"/>中描述的不那么独裁的角色进行对比。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="release-voting">
-<title>Voting on Changes</title>
+<title>对变更进行投票</title>
 
-<para>At the opposite extreme from dictatorship by release owner,
-developers can simply vote on which changes to include in the release.
-However, since the most important function of release stabilization is
-to <emphasis>exclude</emphasis> changes, it's important to design the
-voting system in such a way that getting a change into the release
-involves positive action by multiple developers.  Including a change
-should need more than just a simple majority (see <xref
-linkend="electorate"/>).  Otherwise,
-one vote for and none against a given change would suffice to get it
-into the release, and an
-unfortunate dynamic would be set up whereby each developer would vote
-for her own changes, yet would be reluctant to vote against others'
-changes, for fear of possible retaliation.  To avoid this, the system
-should be arranged such that subgroups of developers must act in
-cooperation to get any change into the release.  This not only means
-that more people review each change, it also makes any individual
-developer less hesitant to vote against a change, because she knows
-that no particular one among those who voted for it would take her
-vote against as a personal affront.  The greater the number of people
-involved, the more the discussion becomes about the change and less
-about the individuals.</para>
+<para>与发布所有者独裁的极端相反，开发者可以简单地投票决定哪些变更包含在发布中。然而，由于发布稳定的最重要功能是<emphasis>排除</emphasis>变更，因此设计投票系统时，重要的是要让一个变更进入发布需要多个开发者的积极行动。包含一个变更需要的不仅仅是简单多数（参见<xref linkend="electorate"/>）。否则，对一个给定的变更一票赞成、零票反对就足以让它进入发布，这样就会形成一个不幸的动态，即每个开发者都会为自己的变更投票，但会因为害怕可能的报复而不愿意投票反对别人的变更。为了避免这种情况，系统应该被安排成，开发者的小组必须合作才能让任何变更进入发布。这不仅意味着更多的人审查每个变更，也使任何单个开发者在投票反对一个变更时更不犹豫，因为她知道支持它的那些人中没有哪一个会把她的反对票看作是个人侮辱。参与的人越多，讨论就越是关于变更本身，而不是关于个人。</para>
 
-<para>The system used for many years in the Subversion project seems
-to have struck
-a good balance, so I'll recommend it here.  In order for a change to
-be applied to the release branch, at least three developers must vote
-in favor of it, and none against.  A single "no" vote is enough to
-stop the change from being included; that is, a "no" vote in a release
-context is equivalent to a veto (see <xref linkend="veto"/>).
-Naturally, any such vote must be accompanied by a justification, and
-in theory the veto could be overridden if enough people feel it is
-unreasonable and force a special vote over it.  In practice, this 
-never happens.  People are
-conservative around releases anyway, and when someone feels strongly
-enough to veto the inclusion of a change, there's usually a good
-reason for it.</para>
+<para>Subversion 项目多年来使用的系统似乎达到了一个很好的平衡，所以我在这里推荐它。为了让一个变更被应用到发布分支，至少需要三名开发者投票赞成，并且没有人反对。一票“否决”就足以阻止该变更被包含；也就是说，在发布上下文中，一票“否决”等同于否决权（参见<xref linkend="veto"/>）。当然，任何这样的投票都必须附有理由，理论上，如果足够多的人认为否决不合理并强制进行特别投票，否决权也可能被推翻。实际上，这种情况从未发生。人们在发布前后本来就比较保守，当有人强烈到要否决一个变更的包含时，通常都有充分的理由。</para>
 
-<para>Because the release procedure is deliberately biased toward
-conservatism, the justifications offered for vetoes are sometimes
-procedural rather than technical.  For example, a person may feel that
-a change is well-written and unlikely to cause any new bugs, but vote
-against its inclusion in a micro release simply because it's too
-big&nbsp;&mdash;&nbsp;perhaps it adds a new feature, or in some subtle way fails
-to fully follow the compatibility guidelines.  I've occasionally even
-seen developers veto something because they simply had a gut feeling
-that the change needed more testing, even though they couldn't spot
-any bugs in it by inspection.  People grumbled a little bit, but the
-vetoes stood and the change was not included in the release (I don't
-remember if any bugs were found in later testing or not,
-though).</para>
+<para>因为发布程序被故意设计得偏向保守，所以为否决提供的理由有时是程序性的而不是技术性的。例如，一个人可能觉得一个变更写得很好，不太可能引起任何新的 bug，但仅仅因为它太大了——也许它增加了一个新功能，或者在某些微妙的方式上没有完全遵循兼容性指导方针——就投票反对它被包含在一个微版本中。我甚至偶尔见过开发者否决某样东西，仅仅因为他们有一种直觉，觉得这个变更需要更多的测试，尽管他们通过检查没有发现任何 bug。人们会抱怨一下，但否决仍然有效，变更也没有被包含在发布中（我不记得后来在测试中是否发现了任何 bug）。</para>
 
 <sect3 id="release-stabilization-collaboration">
-<title>Managing Collaborative Release Stabilization</title>
+<title>管理协作式发布稳定</title>
 
-<para>If your project chooses a change-voting system for releases, the
-physical mechanics of setting up ballots and casting votes must be
-as convenient as possible.  Although there is plenty of open source
-electronic voting software available, setting it up and using it is
-not worth the overhead.  Instead, just do something easy and simple,
-such as putting a text file, called <filename>STATUS</filename> or
-<filename>VOTES</filename> or something like that, in the release
-branch.  This file lists each proposed change&nbsp;&mdash;&nbsp;any
-developer can propose a change for inclusion&nbsp;&mdash;&nbsp;along with all the
-votes for and against it, plus any notes or comments.  (Proposing a
-change doesn't necessarily mean voting for it, by the way, although
-the two often go together.)  An entry in such a file might look like
-this:</para>
+<para>如果你的项目选择一个变更投票系统来进行发布，那么设置选票和投票的物理机制必须尽可能方便。尽管有很多开源的电子投票软件可用，但设置和使用它的开销是不值得的。相反，只需做一些简单易行的事情，比如在发布分支中放一个名为<filename>STATUS</filename>或<filename>VOTES</filename>之类的文本文件。这个文件列出了每个提议的变更——任何开发者都可以提议一个变更——以及所有对其的赞成和反对票，外加任何注释或评论。（顺便说一句，提议一个变更不一定意味着投票支持它，尽管这两者常常一起发生。）这样一个文件中的一个条目可能看起来像这样：</para>
 
 <screen>
 * commit b31910a7180fc (issue #49)
-  Prevent client/server handshake from happening twice.
-  Justification:
-    Avoids extra network turnaround; 
-    small change and easy to review.
-  Notes:
-    Discussed in https://.../msg-7777.html
-    and other messages in that thread.
-  Votes:
+  防止客户端/服务器握手发生两次。
+  理由：
+    避免额外的网络往返；
+    变更小且易于审查。
+  备注：
+    在 https://.../msg-7777.html
+    和该话题中的其他消息中讨论过。
+  投票：
     +1: jsmith, kimf
-    -1: tmartin (breaks compatibility with some 
-                 pre-1.0 servers; true, those 
-                 servers are buggy, but why be
-                 incompatible if we don't have to?)
+    -1: tmartin (破坏了与某些 1.0 之前服务器的兼容性；
+                 诚然，那些服务器有 bug，但如果我们不必
+                 不兼容，为什么非要不兼容呢？)
 </screen>
 
-<para>In this case, the change acquired two positive votes, but was
-vetoed by tmartin, who gave the reason for the veto in a parenthetical
-note.  The exact format of the entry doesn't matter; whatever your
-project settles on is fine&nbsp;&mdash;&nbsp;perhaps tmartin's explanation for the
-veto should go up in the "Notes:" section, or perhaps the change
-description should get a "Description:" header to match the other
-sections.  The important things are that all the information needed to
-evaluate the change is easily accessible and that the mechanism for casting
-votes is as lightweight as possible.  The proposed change is referred
-to by its revision number in the repository (in the above case a single
-commit, b31910a7180fc, although a proposed change could just as easily
-consist of multiple commits).  The revision is assumed to refer to a
-change made on the main branch; if the change were already on the release
-branch, there would be no need to vote on it.<footnote><para>For
-projects on a Git hosting platform, a "merge request" or "pull
-request" ID can be the way to uniquely identify a
-change.</para></footnote></para>
+<para>在这种情况下，该变更获得了两张赞成票，但被 tmartin 否决了，他在括号里的注释中给出了否决的理由。条目的确切格式不重要；你的项目确定什么格式都行——也许 tmartin 对否决的解释应该放在“备注：”部分，或者变更描述应该有一个“描述：”标题来匹配其他部分。重要的是，评估变更所需的所有信息都易于获取，并且投票的机制尽可能轻量级。提议的变更通过其在仓库中的修订号来引用（在上面的例子中是一个单一的提交，b31910a7180fc，尽管一个提议的变更也可以很容易地由多个提交组成）。修订号被假定为指在主分支上做出的变更；如果变更已经在发布分支上，就没有必要对其进行投票了。<footnote><para>对于在 Git 托管平台上的项目，一个“合并请求”或“拉取请求”ID 可以是唯一标识一个变更的方式。</para></footnote></para>
 
-<para>Those proposing or voting for a change are responsible for
-making sure it applies cleanly to the release branch, that is, applies
-without conflicts (see <xref linkend="vc-vocabulary-conflict"/>).
-If there are conflicts, then the entry should point to a temporary
-branch that holds an adjusted version of the change, for example:</para>
+<para>那些提议或投票支持一个变更的人，有责任确保它能干净地应用到发布分支，也就是说，应用时没有冲突（参见<xref linkend="vc-vocabulary-conflict"/>）。如果有冲突，那么条目应该指向一个临时分支，该分支持有一个调整过的变更版本，例如：</para>
 
 <screen>
 * r13222, r13223, r13232
-  Rewrite libsvn_fs_fs's auto-merge algorithm
-  Justification:
-    unacceptable performance (>50 minutes for a small commit) in
-    a repository with 300,000 revisions
-  Branch:
+  重写 libsvn_fs_fs 的自动合并算法
+  理由：
+    在一个有 300,000 个修订版的仓库中，性能不可接受（一个小提交 >50 分钟）
+  分支：
     1.1.x-fs-automerge-rewrite
-  Votes:
+  投票：
     +1: epg, ghudson
 </screen>
 
-<para>That example is taken from real life; it comes from the
-<filename>STATUS</filename> file for the Subversion 1.1.4 release
-process.  Notice how it uses the original revisions as canonical
-handles on the change, even though there is also a branch with a
-conflict-adjusted version of the change (the branch also combines the
-three mainline revisions into one, r13517, to make it easier to merge the
-change into the release, should it get approval).  The original
-revisions are provided because they're still the easiest entity to
-review, since they have the original log messages.  The temporary
-branch wouldn't have those log messages.  In order to avoid duplication
-of information (see
-<xref linkend="vc-singularity"/>), the
-branch's log message for r13517 should simply say "Adjust r13222,
-r13223, and r13232 for backport to 1.1.x branch."  All other
-information about the changes can be chased down at their original
-revisions.</para>
+<para>那个例子取自现实生活；它来自 Subversion 1.1.4 发布过程的<filename>STATUS</filename>文件。请注意它如何使用原始修订版作为变更的规范句柄，即使还有一个带有冲突调整版变更的临时分支（该分支还将三个主线修订版合并为一个，r13517，以便在获得批准后更容易将变更合并到发布中）。提供原始修订版是因为它们仍然是最容易审查的实体，因为它们有原始的日志消息。临时分支不会有那些日志消息。为了避免信息重复（参见<xref linkend="vc-singularity"/>），r13517 的分支日志消息应该简单地说“为向 1.1.x 分支反向移植而调整 r13222、r13223 和 r13232。”关于变更的所有其他信息都可以在其原始修订版中追溯。</para>
 
 </sect3>
 
 <sect3 id="release-manager">
-<title>Release Manager</title>
+<title>发布经理</title>
 
-<para>The actual process of merging (see
-<xref linkend="vc-vocabulary-merge"/>) approved changes into the
-release branch can be performed by any developer.  There does not need
-to be one person whose job it is to merge changes; if there are a lot
-of changes, it can be better to spread the burden around.</para>
+<para>将批准的变更合并（参见<xref linkend="vc-vocabulary-merge"/>）到发布分支的实际过程可以由任何开发者执行。不需要有一个专门负责合并变更的人；如果有很多变更，分摊负担可能会更好。</para>
 
-<para>However, although both voting and merging happen in a
-decentralized fashion, in practice there are usually one or two people
-driving the release process.  This role is sometimes formally blessed
-as <firstterm>release manager</firstterm>, but it is quite different
-from a release owner (see
-<xref linkend="release-owner"/>) who has
-final say over the changes.  Release managers keep track of how many
-changes are currently under consideration, how many have been
-approved, how many seem likely to be approved, etc.  If they sense
-that important changes are not getting enough attention, and might be
-left out of the release for lack of votes, they will gently nag other
-developers to review and vote.  When a batch of changes are approved,
-these people will often take it upon themselves to merge them into the
-release branch; it's fine if others leave that task to them, as
-long as everyone understands that the release managers are not
-obligated to do all the
-work unless they have explicitly committed to it.  When the time comes
-to put the release out the door (see
-<xref linkend="testing-and-releasing"/>), the release managers
-also take care of the logistics of creating the final release
-packages, collecting digital signatures, uploading the packages, and
-making the public announcement.</para>
+<para>然而，尽管投票和合并都以去中心化的方式进行，但在实践中，通常会有一两个人来推动发布过程。这个角色有时被正式地称为<firstterm>发布经理 (release manager)</firstterm>，但它与对变更拥有最终决定权的发布所有者（参见<xref linkend="release-owner"/>）大不相同。发布经理会跟踪当前有多少变更正在考虑中，有多少已经被批准，有多少看起来可能会被批准等。如果他们感觉到重要的变更没有得到足够的关注，并且可能因为缺少投票而被排除在发布之外，他们会温和地催促其他开发者进行审查和投票。当一批变更被批准后，这些人常常会自告奋勇地将它们合并到发布分支；如果其他人把这个任务留给他们，那也没关系，只要大家都明白，除非发布经理明确承诺，否则他们没有义务做所有的工作。当该把发布推出门外时（参见<xref linkend="testing-and-releasing"/>），发布经理也会负责创建最终的发布包、收集数字签名、上传包以及发布公告的后勤工作。</para>
 
 </sect3>
 
@@ -900,168 +283,69 @@ making the public announcement.</para>
 
 </sect1>
 
-<!-- ========================== SECTION =========================== -->
+<!-- ======================== SECTION ============================== -->
 <sect1 id="packaging">
-<title>Packaging</title>
+<title>打包</title>
 
-<para>The canonical form for distribution of free software is as
-source code.  This is true regardless of whether the software normally
-runs in source form (i.e., interpreted, like Perl, Python, PHP,
-etc) or is typically compiled first (like C, C++, Java, Rust, etc).  With
-compiled software, most users will probably not compile the sources
-themselves, but will instead install from pre-built binary packages
-(see <xref linkend="binary-packages"/>).  However, those binary
-packages are still derived from a particular source distribution.  The
-point of the source package is to unambiguously define the release.
-When the project distributes "Scanley&nbsp;2.5.0", what it means,
-specifically, is "The tree of source code files that, when compiled
-(if necessary) and installed, produces Scanley 2.5.0."</para>
+<para>自由软件分发的规范形式是源代码。这无论是软件通常以源代码形式运行（即，解释型，如 Perl、Python、PHP 等）还是通常先编译（如 C、C++、Java、Rust 等）都是如此。对于编译型软件，大多数用户可能不会自己编译源代码，而是从预构建的二进制包（参见<xref linkend="binary-packages"/>）安装。然而，那些二进制包仍然是从特定的源代码分发版派生的。源代码包的要点是明确地定义发布。当项目分发“Scanley 2.5.0”时，它的具体意思是“当编译（如果需要）并安装后，能产生 Scanley 2.5.0 的源代码文件树”。</para>
 
-<para>There is a fairly strict standard for how source releases
-should look.  One will occasionally see deviations from this standard,
-but they are the exception, not the rule.  Unless there is a compelling
-reason to do otherwise, your project should follow this standard
-too.</para>
+<para>关于源代码发布应该是什么样子，有一个相当严格的标准。人们偶尔会看到偏离这个标准的情况，但它们是例外，不是规则。除非有令人信服的理由不这样做，否则你的项目也应该遵循这个标准。</para>
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="packaging-format">
 <!-- For link compatibility with a now-vanished sidebar. -->
 <anchor id="packaging-tar" />
 
-<title>Format</title>
+<title>格式</title>
 
-<para>The source code should be shipped in the standard formats for
-transporting directory trees.  For Unix and Unix-like operating
-systems, the convention is to use TAR format, compressed
-by <command>compress</command>, <command>gzip</command>,
-<command>bzip</command> or <command>bzip2</command>.  For MS Windows,
-the standard method for distributing directory trees
-is <firstterm>zip</firstterm> format, which compresses
-automatically.  For JavaScript projects, it is customary to ship the
-"minified"<footnote><para>See <ulink
-url="https://en.wikipedia.org/wiki/Minification_%28programming%29"
->https://en.wikipedia.org/wiki/Minification_%28programming%29</ulink>.</para></footnote>
-versions of the files together with the human-readable source files.</para>
+<para>源代码应该以传输目录树的标准格式发布。对于 Unix 和类 Unix 操作系统，惯例是使用 TAR 格式，并用<command>compress</command>、<command>gzip</command>、<command>bzip</command>或<command>bzip2</command>进行压缩。对于 MS Windows，分发目录树的标准方法是<firstterm>zip</firstterm>格式，它会自动压缩。对于 JavaScript 项目，习惯上将“压缩”<footnote><para>参见<ulink url="https://en.wikipedia.org/wiki/Minification_%28programming%29">https://en.wikipedia.org/wiki/Minification_%28programming%29</ulink>。</para></footnote>版本的文件与人类可读的源文件一起发布。</para>
 
 </sect2>
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="packaging-name-and-layout">
-<title>Name and Layout</title>
+<title>名称和布局</title>
 <!-- For link compatibility with a now-vanished sidebar. -->
 <anchor id="changelog" />
 
-<para>The name of the package should consist of the software's name
-plus the release number, plus the format suffixes appropriate for the
-archive type.  For example, Scanley 2.5.0, packaged for Unix using GNU
-Zip (gzip) compression, would look like this:</para>
+<para>包的名称应由软件名称加上版本号，再加上适合存档类型的格式后缀组成。例如，Scanley 2.5.0，为 Unix 打包并使用 GNU Zip (gzip) 压缩，看起来会是这样：</para>
 
 <informalexample>
 <literallayout>scanley-2.5.0.tar.gz</literallayout>
 </informalexample>
 
-<para>or for Windows using zip compression:</para>
+<para>或者对于使用 zip 压缩的 Windows：</para>
 
 <informalexample>
 <literallayout>scanley-2.5.0.zip</literallayout>
 </informalexample>
 
-<para>Either of these archives, when unpacked, should create a single
-new directory tree named <filename>scanley-2.5.0</filename> in the
-current directory.  Underneath the new directory, the source code
-should be arranged in a layout ready for compilation (if compilation
-is needed) and installation.  In the top level of new directory tree,
-there should be a plain text <filename>README</filename> file
-explaining what the software does and what release this is, and giving
-pointers to other resources, such as the project's web site, other
-files of interest, etc.  Among those other files should be an
-<filename>INSTALL</filename> file, sibling to
-the <filename>README</filename> file, giving instructions on how to build
-and install the software for all the operating systems it supports.
-As mentioned in
-<xref linkend="license-quickstart-applying"/>, there should also
-be a <filename>LICENSE</filename> or <filename>COPYING</filename>
-file, giving the software's terms of distribution.<footnote><para>Your
-all-caps files&nbsp;&mdash;&nbsp;README, INSTALL,
-etc&nbsp;&mdash;&nbsp;may of course have ".md" extensions to indicate
-Markdown (<ulink url="https://daringfireball.net/projects/markdown/"
->https://daringfireball.net/projects/markdown/</ulink>) format,
-or ".txt" to indicate plain text, etc.</para></footnote></para>
+<para>这些存档中的任何一个，在解包时，都应该在当前目录下创建一个名为<filename>scanley-2.5.0</filename>的单一新目录树。在新目录树下，源代码应该以准备好编译（如果需要编译）和安装的布局排列。在新目录树的顶层，应该有一个纯文本的<filename>README</filename>文件，解释软件是做什么的，这是哪个版本，并提供指向其他资源的指针，如项目网站、其他感兴趣的文件等。在这些其他文件中，应该有一个与<filename>README</filename>文件同级的<filename>INSTALL</filename>文件，提供关于如何在它支持的所有操作系统上构建和安装软件的说明。如<xref linkend="license-quickstart-applying"/>中所述，还应该有一个<filename>LICENSE</filename>或<filename>COPYING</filename>文件，给出软件的分发条款。<footnote><para>你的全大写文件——README、INSTALL 等——当然可以有“.md”扩展名来表示 Markdown（<ulink url="https://daringfireball.net/projects/markdown/">https://daringfireball.net/projects/markdown/</ulink>）格式，或者“.txt”来表示纯文本等。</para></footnote></para>
 
-<para>There should also be a <filename>CHANGES</filename> file
-(sometimes called <filename>NEWS</filename> or something else),
-explaining what's new in this release.<footnote><para>Sumana
-Harihareswara points out that there is a distinction between a
-detailed CHANGES file and <firstterm>release notes</firstterm>.  Her
-full post at <ulink
-url="https://harihareswara.net/posts/2024/changelogs-and-release-notes/"
->harihareswara.net/posts/2024/changelogs-and-release-notes</ulink> is
-very much worth reading.  In the part I'll quote here, she uses the
-word "changelog", but she means by it what I called a CHANGES or NEWS
-file:</para>
-<para>"Release notes are a prose summary of what's changed, which
-exist in addition to a changelog (the release notes might link to the
-changelog or include a copy at the bottom), and which focus on changes
-the user might perceive. ...  If a changelog is too overwhelming and
-an end user is left thinking, 'but what matters to <emphasis
-role="bold">me</emphasis>?' they can go read the release notes."
-</para></footnote> The <filename>CHANGES</filename> file accumulates
-changelists for all releases, in reverse chronological order, so that
-the list for this release appears at the top of the file.  Completing
-that list is usually the last thing done on a stabilizing release
-branch; some projects write the list piecemeal as they're developing,
-others prefer to save it all up for the end and have one person write
-it, getting information by combing the version control logs.  The list
-looks something like this:</para>
+<para>还应该有一个<filename>CHANGES</filename>文件（有时称为<filename>NEWS</filename>或其他名称），解释这个版本有什么新内容。<footnote><para>Sumana Harihareswara 指出，详细的 CHANGES 文件和<firstterm>发布说明</firstterm>之间有区别。她完整的帖子在<ulink url="https://harihareswara.net/posts/2024/changelogs-and-release-notes/">harihareswara.net/posts/2024/changelogs-and-release-notes</ulink>上，非常值得一读。在我将引用的部分中，她使用了“changelog”这个词，但她的意思是我所说的 CHANGES 或 NEWS 文件：</para><para>“发布说明是对变更的散文式总结，它与变更日志（发布说明可能会链接到变更日志或在底部包含一份副本）并存，并且侧重于用户可能感知的变更。……如果一个变更日志过于庞大，让最终用户觉得‘但什么对我<emphasis role="bold">重要</emphasis>？’他们可以去阅读发布说明。”</para></footnote> <filename>CHANGES</filename>文件按时间倒序累积所有版本的变更列表，因此这个版本的列表出现在文件顶部。完成该列表通常是稳定发布分支上做的最后一件事；一些项目在开发时零散地编写列表，另一些则喜欢把所有东西都留到最后，让一个人通过梳理版本控制日志来编写它。列表看起来像这样：</para>
 
 <screen>
-Version 2.5.0
-(20 December 2022, from branch 2.5.x)
+版本 2.5.0
+(2022 年 12 月 20 日，来自 2.5.x 分支)
 http://scanley.org/repos/tags/2.5.0/
 
- New features and enhancements:
-    * Added regular expression queries (issue #53)
-    * Added support for UTF-16 documents
-    * Documentation translated into Malagasy, Polish, Russian
+ 新功能和增强：
+    * 添加了正则表达式查询 (issue #53)
+    * 添加了对 UTF-16 文档的支持
+    * 文档翻译成马拉加斯语、波兰语、俄语
     * ...
 
- Bugfixes:
-    * fixed reindexing bug (issue #945)
-    * fixed some query bugs (issues #815, #1007, #1008)
+ Bug 修复：
+    * 修复了重新索引的 bug (issue #945)
+    * 修复了一些查询 bug (issues #815, #1007, #1008)
     * ...
 </screen>
 
-<para>The list can be as long as necessary, but don't bother to
-describe every little bugfix and feature enhancement in detail.  The point is
-to give users an overview of what they would gain by upgrading to
-the new release, and to tell them about any incompatible changes.  In
-fact, the changelist is customarily included in the announcement email
-(see <xref linkend="testing-and-releasing"/>), so write it with that
-audience in mind.</para>
+<para>列表可以根据需要任意长，但不必详细描述每一个小的 bug 修复和功能增强。重点是给用户一个升级到新版本会获得什么好处的概览，并告诉他们任何不兼容的更改。事实上，变更列表通常包含在公告邮件中（参见<xref linkend="testing-and-releasing"/>），所以要考虑到那个受众来编写它。</para>
 
-<para>The actual layout of the source code inside the tree should be
-the same as, or as similar as possible to, the source code layout one
-would get by checking out the project directly from its version
-control repository.  Sometimes there are a few differences, for example
-because the package contains some generated files needed for
-configuration and compilation (see
-<xref linkend="packaging-build-install"/>), or because the distribution includes
-third-party software that is not maintained by the project, but that
-is required and that users are not likely to already have.  But even
-if the distributed tree corresponds exactly to some development tree
-in the version control repository, the distribution itself should not
-be a working copy (see <xref linkend="vc-vocabulary-working-copy"/>).
-The release is supposed to represent a static reference point&nbsp;&mdash;&nbsp;a
-particular, unchangeable configuration of source files.  If it were a
-working copy, the danger would be that the user might update it, and
-afterward think that he still has the release when in fact he has
-something different.</para>
+<para>树内源代码的实际布局应该与通过从其版本控制仓库直接检出项目所获得的源代码布局相同，或者尽可能相似。有时会有一些差异，例如，因为包中包含一些用于配置和编译的生成文件（参见<xref linkend="packaging-build-install"/>），或者因为分发版中包含了项目不维护但必需且用户不太可能已经拥有的第三方软件。但即使分发树与版本控制仓库中的某个开发树完全对应，分发版本身也不应是一个工作副本（参见<xref linkend="vc-vocabulary-working-copy"/>）。发布应该代表一个静态的参考点——一个特定的、不可更改的源文件配置。如果它是一个工作副本，危险在于用户可能会更新它，然后认为他仍然拥有的是发布版，而实际上他拥有的是不同的东西。</para>
 
-<para>The package should be the same regardless of the
-packaging.  The release&nbsp;&mdash;&nbsp;that is, the precise entity referred to
-when someone says "Scanley&nbsp;2.5.0"&nbsp;&mdash;&nbsp;is the tree created by
-unpacking a zip file or tarball.  So the project might offer all of
-these for download:</para>
+<para>无论打包方式如何，包都应该是相同的。发布——也就是说，当有人说“Scanley 2.5.0”时所指的确切实体——是解压 zip 文件或 tarball 后创建的树。所以项目可能会提供所有这些供下载：</para>
 
 <informalexample>
 <literallayout>scanley-2.5.0.tar.bz2
@@ -1069,45 +353,18 @@ scanley-2.5.0.tar.gz
 scanley-2.5.0.zip</literallayout>
 </informalexample>
 
-<para>...but the source tree created by unpacking them would be the
-same.  That source tree itself is the distribution; the form in which it is
-downloaded is merely a matter of convention or convenience.  Certain minor
-differences between source packages are allowable: for example, in the
-Windows package, text files may have lines ending with CRLF
-(Carriage Return and Line Feed), while Unix packages would use just
-LF.  The trees may be arranged slightly differently between source
-packages destined for different operating systems, too, if those
-operating systems require different sorts of layouts for compilation.
-However, these are all basically trivial transformations.  The basic
-source files should be the same across all the packagings of a given
-release.</para>
+<para>……但解压它们后创建的源代码树将是相同的。那个源代码树本身就是分发版；下载它的形式仅仅是惯例或方便的问题。源代码包之间允许存在某些微小的差异：例如，在 Windows 包中，文本文件可能以 CRLF（回车和换行）结尾，而 Unix 包则只使用 LF。如果不同的操作系统需要不同类型的布局进行编译，那么为不同操作系统准备的源代码包之间的树结构也可能略有不同。然而，这些基本上都是微不足道的转换。一个给定版本的所有打包形式中的基本源文件应该是相同的。</para>
 
 <sect3 id="release-capitalization">
-<title>To Capitalize or Not to Capitalize</title>
+<title>大写还是不大写</title>
 
-<para>When referring to a project by name, people generally capitalize
-it as a proper noun, and capitalize acronyms if there are any:
-"MySQL&nbsp;5.0", "Scanley&nbsp;2.5.0", etc.  Whether this
-capitalization is reproduced in the package name is up to the project.
-Either <filename>Scanley-2.5.0.tar.gz</filename> or
-<filename>scanley-2.5.0.tar.gz</filename> would be fine, for example
-(I personally prefer the latter, because I don't like to make people
-hit the shift key, but plenty of projects ship capitalized packages).
-The important thing is that the directory created by unpacking the
-tarball use the same capitalization.  There should be no surprises:
-the user must be able to predict with perfect accuracy the name of the
-directory that will be created when she unpacks a distribution.</para>
+<para>在按名称引用一个项目时，人们通常会像专有名词一样将其大写，并且如果有缩写，也会大写：“MySQL 5.0”、“Scanley 2.5.0”等。这种大写是否在包名中再现，由项目决定。例如，<filename>Scanley-2.5.0.tar.gz</filename>或<filename>scanley-2.5.0.tar.gz</filename>都可以（我个人更喜欢后者，因为我不喜欢让人按 shift 键，但很多项目都发布大写的包）。重要的是，解压 tarball 后创建的目录要使用相同的大写。不应该有意外：用户必须能够完美地预测解压一个分发版时将创建的目录的名称。</para>
 
 </sect3>
 <sect3 id="release-prereleases">
-<title>Pre-Releases</title>
+<title>预发布版</title>
 
-<para>When shipping a pre-release or candidate release, the qualifier
-is a part of the release number, so include it in the name of
-the package's name.  For example, the ordered sequence of alpha and
-beta releases given earlier in
-<xref linkend="release-number-components"/> would result in
-package names like this:</para>
+<para>在发布预发布版或候选发布版时，限定符是版本号的一部分，所以要将其包含在包的名称中。例如，<xref linkend="release-number-components"/>中早先给出的 alpha 和 beta 发布的有序序列将导致如下的包名：</para>
 
 <informalexample>
 <literallayout>scanley-2.3.0-alpha1.tar.gz
@@ -1118,9 +375,7 @@ scanley-2.3.0-beta3.tar.gz
 scanley-2.3.0.tar.gz</literallayout>
 </informalexample>
 
-<para>The first would unpack into a directory
-named <filename>scanley-2.3.0-alpha1</filename>, the second into
-<filename>scanley-2.3.0-alpha2</filename>, and so on.</para>
+<para>第一个会解压到一个名为<filename>scanley-2.3.0-alpha1</filename>的目录，第二个会解压到<filename>scanley-2.3.0-alpha2</filename>，依此类推。</para>
 
 </sect3>
 
@@ -1128,13 +383,9 @@ named <filename>scanley-2.3.0-alpha1</filename>, the second into
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="packaging-build-install">
-<title>Compilation and Installation</title>
+<title>编译与安装</title>
 
-<para>For software requiring compilation or installation from source,
-there are usually standard procedures that experienced users expect to
-be able to follow.  For example, for programs written in C, C++, or
-certain other compiled languages, the standard for a long time under
-Unix-like systems was for the user to type:</para>
+<para>对于需要从源代码编译或安装的软件，通常有有经验的用户期望能够遵循的标准程序。例如，对于用 C、C++ 或某些其他编译语言编写的程序，在类 Unix 系统下，长期以来的标准是用户输入：</para>
 
 <screen>
    $ ./configure
@@ -1142,139 +393,31 @@ Unix-like systems was for the user to type:</para>
    $ sudo make install
 </screen>
 
-<para>The first command autodetects as much about the environment as
-it can and prepares for the build process, the second command builds
-the software in place (but does not install it), and the last command
-installs it on the system.</para>
+<para>第一个命令自动检测尽可能多的环境信息并为构建过程做准备，第二个命令在原地构建软件（但不安装），最后一个命令将其安装到系统上。</para>
 
-<para>This is not the only standard, though it has historically been
-one of the most widespread.  These days there are often instructions
-for how to deploy into a popular container environment such as Docker
-as well.  Furthermore, other programming languages have their own
-standards for building and installing packages.  If it's not obvious
-to you what the applicable standards are for your project, ask an
-experienced developer; you can safely assume that
-<emphasis>some</emphasis> standard applies, even if you don't yet know
-it.</para>
+<para>这并非唯一的标准，尽管它在历史上曾是最广泛的标准之一。如今，通常也有关于如何部署到像 Docker 这样的流行容器环境的说明。此外，其他编程语言也有自己的构建和安装包的标准。如果你不清楚你的项目适用的标准是什么，可以问一个有经验的开发者；你可以安全地假设<emphasis>某些</emphasis>标准是适用的，即使你还不知道它是什么。</para>
 
-<para>Whatever the appropriate standards for your project are, don't
-deviate from them unless you absolutely must.  Standard installation
-procedures are practically spinal reflexes for a lot of system
-administrators.  If they see familiar invocations documented in
-your project's <filename>INSTALL</filename> file, that instantly
-raises their faith that your project is generally aware of
-conventions, and that it is likely to have gotten other things right
-as well.  Also, as discussed in
-<xref linkend="downloads"/>, having a standard
-build procedure pleases potential developers.</para>
+<para>无论你的项目适用的标准是什么，除非你绝对必须，否则不要偏离它们。标准的安装过程对许多系统管理员来说几乎是条件反射。如果他们在你的项目的<filename>INSTALL</filename>文件中看到熟悉的调用，这会立即增加他们对你的项目普遍了解惯例的信心，并且很可能也把其他事情做对了。此外，如<xref linkend="downloads"/>中所述，拥有一个标准的构建过程能取悦潜在的开发者。</para>
 
-<para>On Windows, the standards for building and installing are a bit
-less settled.  For projects requiring compilation, the general
-convention seems to be to ship a tree that can fit into the
-workspace/project model of the standard Microsoft development
-environments (Developer Studio, Visual Studio, VS.NET, MSVC++, etc).
-Depending on the nature of your software, it may be possible to offer
-a Unix-like build option on Windows using MinGW or Cygwin.  And of course,
-if you're using a language or programming framework that comes with
-its own build and install conventions&nbsp;&mdash;&nbsp;e.g.,
-Python&nbsp;&mdash;&nbsp;you should simply use whatever the standard
-method is for that framework, whether on Windows, Unix, Mac OS X, or
-any other operating system.</para>
+<para>在 Windows 上，构建和安装的标准有点不太确定。对于需要编译的项目，一般的惯例似乎是发布一个可以适应标准微软开发环境（Developer Studio、Visual Studio、VS.NET、MSVC++等）的工作区/项目模型的树。根据你的软件的性质，可能可以使用 MinGW 或 Cygwin 在 Windows 上提供一个类 Unix 的构建选项。当然，如果你正在使用一种带有自己构建和安装惯例的语言或编程框架——例如，Python——你应该简单地使用该框架的标准方法，无论是在 Windows、Unix、Mac OS X 还是任何其他操作系统上。</para>
 
-<para>Be willing to put in a lot of extra effort in order to make your
-project conform to the relevant build or installation standards.
-Building and installing is an entry point: it's okay for things to get
-harder after that, if they absolutely must, but it would be a shame
-for the user's or developer's very first interaction with the software
-to require unexpected steps.</para>
+<para>为了让你的项目符合相关的构建或安装标准，要愿意付出大量额外的努力。构建和安装是一个入口点：如果之后的事情绝对必须变得更难，那也没关系，但如果用户或开发者与软件的第一次互动就需要意想不到的步骤，那将是一件憾事。</para>
 
 </sect2>
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="binary-packages">
-<title>Binary Packages</title>
+<title>二进制包</title>
 
-<para>Although the formal release is a source code package, users often
-install software from binary packages, either provided by their operating
-system's software distribution mechanism, or obtained manually from
-the project web site or from some third party.  Here, "binary" doesn't
-necessarily mean "compiled"; it's a general term for
-a pre-configured form of
-the package that allows the user to install it on her computer without
-going through the usual source-based build and install procedures.  On
-RedHat GNU/Linux, it is the RPM system; on Debian GNU/Linux, it is the
-APT (<filename>.deb</filename>) system; etc.</para>
+<para>尽管正式的发布是源代码包，但用户通常从二进制包安装软件，这些包要么由他们的操作系统的软件分发机制提供，要么从项目网站或某些第三方手动获取。在这里，“二进制”不一定意味着“已编译”；它是一个通用的术语，指一种预配置形式的包，允许用户在他们的计算机上安装它，而无需经过通常的基于源代码的构建和安装过程。在 RedHat GNU/Linux 上，是 RPM 系统；在 Debian GNU/Linux 上，是 APT（<filename>.deb</filename>）系统；等等。</para>
 
-<para>Whether these binary packages are assembled by people closely
-associated with the project, or by distant third parties, users are
-going to <emphasis>treat</emphasis> them as equivalent to the
-project's official releases, and will file tickets in the project's bug
-tracker based on the behavior of the binary packages.  Therefore, it
-is in the project's interest to provide packagers with clear
-guidelines, and work closely with them to ensure that what they
-produce represents the software fairly and accurately.</para>
+<para>无论这些二进制包是由与项目密切相关的人组装的，还是由遥远的第三方组装的，用户都会<emphasis>将</emphasis>它们视为与项目的官方发布等同，并会根据二进制包的行为在项目的 bug 跟踪器中提交票据。因此，为打包者提供清晰的指导方针，并与他们密切合作以确保他们生产的产品公平准确地代表该软件，符合项目的利益。</para>
 
-<para>The main thing packagers need to know is that they should <emphasis>always</emphasis>
-base their binary packages on an official source release.  Sometimes
-packagers are tempted to pull an unstable incarnation of the code from the
-repository, or to include selected changes that were committed after the
-release was made, in order to provide users with certain bug fixes or
-other improvements.  The packager thinks he is doing his users a favor
-by giving them the more recent code, but actually this practice can
-cause a great deal of confusion.  Projects are prepared to receive
-reports of bugs found in released versions, and bugs found in recent
-mainline and major branch code (that is, found by people who deliberately
-run bleeding edge code).  When a bug report comes in from these
-sources, the responder will often be able to confirm immediately that
-the bug is
-known to be present in that snapshot, and perhaps that it has since
-been fixed and that the user should upgrade or wait for the
-next release.  If it is a previously unknown bug, knowing the precise
-release makes it easier to reproduce and easier to categorize in the
-tracker.</para>
+<para>打包者需要知道的主要事情是，他们应该<emphasis>总是</emphasis>基于官方的源代码发布来制作他们的二进制包。有时打包者会 tempted to pull an unstable incarnation of the code from the repository, or to include selected changes that were committed after the release was made, in order to provide users with certain bug fixes or other improvements.  The packager thinks he is doing his users a favor by giving them the more recent code, but actually this practice can cause a great deal of confusion.  Projects are prepared to receive reports of bugs found in released versions, and bugs found in recent mainline and major branch code (that is, found by people who deliberately run bleeding edge code).  When a bug report comes in from these sources, the responder will often be able to confirm immediately that the bug is known to be present in that snapshot, and perhaps that it has since been fixed and that the user should upgrade or wait for the next release.  If it is a previously unknown bug, knowing the precise release makes it easier to reproduce and easier to categorize in the tracker.</para>
 
-<para>However, projects are not prepared to receive bug reports based
-on unspecified intermediate or hybrid versions.  Such bugs can be hard
-to reproduce; also, they may be due to unexpected interactions between
-individual changes pulled together from different development stages, and thereby cause
-misbehaviors that the project's developers should not have to take the
-blame for.  I have even seen dismayingly large amounts of time wasted
-because a bug was <emphasis>absent</emphasis> when it should have been
-present: someone was running a slightly patched-up version, based on
-(but not identical to) an official release, and when the predicted bug
-did not happen, everyone had to dig around a lot to figure out
-why.</para>
+<para>然而，项目并没有准备好接收基于未指定的中间或混合版本的 bug 报告。这样的 bug 可能很难重现；此外，它们可能是由于从不同开发阶段拉取的个别变更之间意想不到的交互造成的，从而导致项目开发者不应承担责任的错误行为。我甚至见过因为一个 bug <emphasis>不存在</emphasis>而本应存在时，浪费了惊人数量的时间：某人正在运行一个稍微打过补丁的版本，基于（但不完全相同于）一个官方发布，当预期的 bug 没有发生时，每个人都得费力地去弄清楚为什么。</para>
 
-<para>Still, there will sometimes be circumstances when a packager
-insists that modifications to the source release are necessary.<footnote><para>
-<ulink
-    url="https://en.wikipedia.org/wiki/Mozilla_Corporation_software_rebranded_by_the_Debian_project#Iceweasel"
-    >https://en.wikipedia.org/wiki/Mozilla_Corporation_software_rebranded_by_the_Debian_project#Iceweasel</ulink>
-gives a well-known example of this.</para></footnote>
-Packagers should be encouraged to bring this up with the project's
-developers and describe their plans.  They may get approval, but
-failing that, they will at least have notified the project of their
-intentions, so the project can watch out for unusual bug reports.  The
-developers may respond by putting a disclaimer on the project's web
-site, and may ask that the packager do the same thing in the
-appropriate place, so that users of that binary package know what they
-are getting is not exactly the same as what the project officially
-released.  There need be no animosity in such a situation, though
-unfortunately there often is.  It's just that packagers have a
-slightly different set of goals from developers.  The packagers mainly
-want the best out-of-the-box experience for their users.  The
-developers want that too, of course, but they also need to ensure that
-they know what versions of the software are out there, so they can
-receive coherent bug reports and make compatibility guarantees.
-Sometimes these goals conflict.  When they do, it's good to keep in
-mind that the project has no control over the packagers, and that the
-bonds of obligation run both ways.  It's true that the project is
-doing the packagers a favor simply by producing the software.  But the
-packagers are also doing the project a favor, by taking on a mostly
-unglamorous job in order to make the software more widely
-available&nbsp;&mdash;&nbsp;often orders of magnitude more available.
-It's fine to disagree with packagers, but don't flame them; just try
-to work things out as best you can.</para>
+<para>尽管如此，有时打包者会坚持认为对源代码发布进行修改是必要的。<footnote><para><ulink url="https://en.wikipedia.org/wiki/Mozilla_Corporation_software_rebranded_by_the_Debian_project#Iceweasel">https://en.wikipedia.org/wiki/Mozilla_Corporation_software_rebranded_by_the_Debian_project#Iceweasel</ulink>给出了一个著名的例子。</para></footnote>应鼓励打包者与项目的开发者讨论并描述他们的计划。他们可能会得到批准，但即使得不到，他们至少也通知了项目的意图，这样项目就可以留意不寻常的 bug 报告。开发者可能会在项目网站上发布一个免责声明作为回应，并可能要求打包者在适当的地方也这样做，以便该二进制包的用户知道他们得到的东西与项目官方发布的并不完全相同。在这种情况下不必有敌意，尽管不幸的是常常会有。只是打包者的目标与开发者的目标略有不同。打包者主要希望为他们的用户提供最好的开箱即用体验。当然，开发者也希望这样，但他们还需要确保他们知道外面有哪些版本的软件，以便他们能收到连贯的 bug 报告并做出兼容性保证。有时这些目标会发生冲突。当它们发生冲突时，最好记住项目无法控制打包者，并且义务的纽带是双向的。诚然，项目仅仅通过生产软件就为打包者提供了帮助。但打包者也为项目提供了帮助，他们承担了一项大多不光彩的工作，以使软件更广泛地可用——通常是数量级上的可用。与打包者意见不合是可以的，但不要攻击他们；只需尽力解决问题。</para>
 
 </sect2>
 
@@ -1282,135 +425,39 @@ to work things out as best you can.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="testing-and-releasing">
-<title>Testing and Releasing</title>
+<title>测试与发布</title>
 
-<para>Once the source distribution is produced from the stabilized
-release branch, the public part of the release process begins.  But
-before the distribution is made available to the world at large, it
-should be tested and approved by some minimum number of developers,
-usually three or more.  That approval must then be signaled to the
-world at large, using digital signatures and identifying hashes.</para>
+<para>一旦从稳定的发布分支产生了源代码分发版，发布的公共部分就开始了。但在分发版向广大世界提供之前，它应该由至少三名或更多的开发者进行测试和批准。然后，必须使用数字签名和识别哈希向广大世界表明该批准。</para>
 
-<para>The purpose of signing and hashing is to give users a way to
-verify that the copy they receive has not been maliciously tampered
-with.  Users are about to run this code on their computers&nbsp;&mdash;&nbsp;if
-the code has been tampered with, an attacker could suddenly have a
-back door to all their data.  (See also <xref
-linkend="security-releases"/>.)  The details of creating
-digital signatures and release hashes are beyond the scope of this
-book, but if you're not familiar with them, see <ulink
-url="https://www.apache.org/dev/release-signing.html"
->https://www.apache.org/dev/release-signing.html</ulink>, and you might also want
-to do an Internet search for these phrases (simultaneously):
-"open&nbsp;source" "digital&nbsp;signature"
-"web&nbsp;of&nbsp;trust".</para>
+<para>签名和哈希的目的是让用户能够验证他们收到的副本没有被恶意篡改。用户即将要在他们的计算机上运行这段代码——如果代码被篡改，攻击者可能会突然获得他们所有数据的后门。（另请参见<xref linkend="security-releases"/>。）创建数字签名和发布哈希的细节超出了本书的范围，但如果你不熟悉它们，请参见<ulink url="https://www.apache.org/dev/release-signing.html">https://www.apache.org/dev/release-signing.html</ulink>，你可能还想在互联网上搜索这些短语（同时搜索）：“open source” “digital signature” “web of trust”。</para>
 
-<para>Gaining developer approval is not simply a matter of them
-inspecting the release for obvious flaws.  Ideally, the developers
-download the package, build and install it onto a clean system, run
-the regression test suite (see
-<xref linkend="automated-testing"/>), and do some
-manual testing.  Assuming it passes these checks, as well as any other
-release checklist criteria the project may have, each developer then
-digitally signs each container (the .tar.gz file, .zip file, etc) using
-GnuPG (<ulink url="https://www.gnupg.org/" >https://www.gnupg.org/</ulink>) or some other
-program capable of producing OpenPGP-compliant signatures.</para>
+<para>获得开发者的批准不仅仅是让他们检查发布版中明显的缺陷。理想情况下，开发者下载软件包，将其构建并安装到一个干净的系统上，运行回归测试套件（参见<xref linkend="automated-testing"/>），并进行一些手动测试。假设它通过了这些检查，以及项目可能有的任何其他发布清单标准，那么每个开发者就用 GnuPG（<ulink url="https://www.gnupg.org/">https://www.gnupg.org/</ulink>）或其他能够产生符合 OpenPGP 标准的签名的程序，对每个容器（.tar.gz 文件、.zip 文件等）进行数字签名。</para>
 
-<para>In most projects, the developers just use their personal digital
-signatures, instead of a shared project key, and as many developers as
-want to may sign (i.e., there is a minimum number, but not a maximum).
-The more developers sign, the more testing the release undergoes, and
-also the greater the likelihood that a security-conscious user can
-find a web-of-trust path from herself to the release.</para>
+<para>在大多数项目中，开发者只使用他们的个人数字签名，而不是一个共享的项目密钥，并且只要愿意，尽可能多的开发者都可以签名（即，有最低数量，但没有最高数量）。签名的开发者越多，发布版经受的测试就越多，而且安全意识强的用户找到从自己到发布版的信任网络路径的可能性也越大。</para>
 
-<para>Once approved, the release (that is, all tarballs, zip files,
-and whatever other formats are being distributed) should be placed
-into the project's download area, accompanied by the digital
-signatures and hashes.
-There are various standards for doing this.  One way is to accompany
-each released package with a file giving the corresponding digital
-signatures, and another file giving the checksum.  For example, if one
-of the released packages is <filename>scanley-2.5.0.tar.gz</filename>,
-place in the same directory a file
-<filename>scanley-2.5.0.tar.gz.asc</filename> containing the digital
-signature for that tarball, another file
-<filename>scanley-2.5.0.tar.gz.md5</filename> containing its MD5
-checksum, perhaps another,
-<filename>scanley-2.5.0.tar.gz.sha256</filename>, containing its SHA256
-checksum, etc.  A different way to provide checking is to collect all the
-signatures for all the released packages into a single file,
-<filename>scanley-2.5.0.sigs</filename>; the same may be done with the
-checksums.</para>
+<para>一旦获得批准，发布版（也就是说，所有 tarball、zip 文件以及任何其他正在分发的格式）都应该被放置在项目的下载区，并附上数字签名和哈希值。有各种标准可以做到这一点。一种方法是为每个发布的包附带一个给出相应数字签名的文件，以及另一个给出校验和的文件。例如，如果发布的包之一是<filename>scanley-2.5.0.tar.gz</filename>，就在同一个目录下放置一个名为<filename>scanley-2.5.0.tar.gz.asc</filename>的文件，其中包含该 tarball 的数字签名，另一个名为<filename>scanley-2.5.0.tar.gz.md5</filename>的文件，其中包含其 MD5 校验和，也许还有另一个，<filename>scanley-2.5.0.tar.gz.sha256</filename>，其中包含其 SHA256 校验和，等等。另一种提供检查的方法是将所有发布包的所有签名收集到一个单独的文件中，<filename>scanley-2.5.0.sigs</filename>；对校验和也可以这样做。</para>
 
-<para>It doesn't really matter which way you do it.  Just keep to a
-simple scheme, describe it clearly, and be consistent from release to
-release.</para>
+<para>你采用哪种方式并不重要。只需坚持一个简单的方案，清晰地描述它，并且从一个版本到下一个版本保持一致。</para>
 
 <sect2 id="candidate-releases">
-<title>Candidate Releases</title>
+<title>候选发布版</title>
 
-<para>For important releases containing many changes, many projects
-prefer to put out <firstterm>release candidates</firstterm> first,
-e.g., <filename>scanley-2.5.0-beta1</filename> before
-<filename>scanley-2.5.0</filename>.  The purpose of a candidate is to
-subject the code to wide testing before blessing it as an official
-release.  If problems are found, they are fixed on the release branch
-and a new candidate release is rolled out
-(<filename>scanley-2.5.0-beta2</filename>).  The cycle continues until
-no unacceptable bugs are left, at which point the last candidate
-release becomes the official release&nbsp;&mdash;&nbsp;that is, the only
-difference between the last candidate release and the real release
-is the removal of the qualifier from the version number.</para>
+<para>对于包含许多变更的重要发布，许多项目更喜欢先发布<firstterm>候选发布版</firstterm>，例如，在<filename>scanley-2.5.0</filename>之前发布<filename>scanley-2.5.0-beta1</filename>。候选版的目的是在将其正式定为官方发布之前，让代码经受广泛的测试。如果发现了问题，就在发布分支上修复，然后推出一个新的候选发布版（<filename>scanley-2.5.0-beta2</filename>）。这个循环一直持续到没有不可接受的 bug 剩下为止，那时最后一个候选发布版就成为官方发布版——也就是说，最后一个候选发布版和真正的发布版之间唯一的区别就是从版本号中去掉了限定符。</para>
 
-<para>In most other respects, a candidate release should be treated
-the same as a real release.  The <emphasis>alpha</emphasis>,
-<emphasis>beta</emphasis>, or <emphasis>rc</emphasis> qualifier is
-enough to warn conservative users to wait until the real release, and
-of course the announcements for the candidate releases should
-point out that their purpose is to solicit feedback.  Other than
-that, give candidate releases the same amount of care as regular
-releases.  After all, you want people to use the candidates, because
-exposure is the best way to uncover bugs, and also because you never
-know which candidate release will end up becoming the official
-release.</para>
+<para>在大多数其他方面，一个候选发布版应该被同等对待。 <emphasis>alpha</emphasis>、<emphasis>beta</emphasis>或<emphasis>rc</emphasis>限定符足以警告保守的用户等到真正的发布版，当然，候选发布版的公告应该指出它们的目的是征求反馈。除此之外，给予候选发布版与常规发布版同等的关注。毕竟，你希望人们使用候选版，因为曝光是发现 bug 的最佳方式，也因为你永远不知道哪个候选发布版最终会成为官方发布版。</para>
 
 </sect2>
 
 <sect2 id="release-announcement">
-<title>Announcing Releases</title>
+<title>发布公告</title>
 
-<para>Announcing a release is like announcing any other event, and
-should use the procedures described in
-<xref linkend="publicity"/>.  There are a few
-specific things to do for releases, though.</para>
+<para>发布公告就像宣布任何其他事件一样，应该使用<xref linkend="publicity"/>中描述的程序。不过，对于发布有一些特定的事情要做。</para>
 
-<para>Whenever you write the URL to the downloadable release tarball,
-make sure to also write the MD5/SHA1 checksums and pointers to the
-digital signatures file.  Since the announcement happens in multiple
-forums (mailing list, news page, etc), this means users can get the
-checksums from multiple sources, which gives the most
-security-conscious among them extra assurance that the checksums
-themselves have not been tampered with.  Meanwhile, giving the link to the
-digital signature files multiple times doesn't make those signatures
-more secure, but it does reassure people (especially those who don't
-follow the project closely) that the project takes security
-seriously.</para>
+<para>无论何时你写下可下载的发布 tarball 的 URL，确保也写下 MD5/SHA1 校验和以及指向数字签名文件的指针。由于公告会在多个论坛（邮件列表、新闻页面等）上发布，这意味着用户可以从多个来源获取校验和，这给那些最注重安全的用户额外的保证，即校验和本身没有被篡改。同时，多次提供数字签名文件的链接并不会使那些签名更安全，但它确实让人们（特别是那些不密切关注项目的人）放心，项目是认真对待安全的。</para>
 
-<para>In the announcement email, and on news pages that contain more
-than just a blurb about the release, make sure to include the relevant
-portion of the CHANGES file, so people can see why it might be in
-their interests to upgrade.  This is as important with candidate
-releases as with final releases; the presence of bugfixes and new
-features is important in tempting people to try out a candidate
-release.</para>
+<para>在公告邮件中，以及在包含的不仅仅是关于发布的一点点消息的新闻页面上，确保包含 CHANGES 文件的相关部分，这样人们就可以看到为什么升级可能对他们有利。这对于候选发布和最终发布同样重要；bug 修复和新功能的存在是吸引人们尝试候选发布的重要因素。</para>
 
-<para>Finally, don't forget to thank the development team, the
-testers, and all the people who took the time to file good bug
-reports.  Don't single out anyone by name, though, unless there's
-someone who is individually responsible for a huge piece of work,
-the value of which is widely recognized by everyone in the
-project.  Be wary of sliding down the slippery slope of credit
-inflation (see <xref linkend="credit"/>).</para>
+<para>最后，不要忘记感谢开发团队、测试人员以及所有花时间提交好的 bug 报告的人。不过，不要点名感谢任何人，除非有某个人独立负责了一项巨大的工作，并且其价值被项目中的每个人广泛认可。要警惕滑入信用膨胀的滑坡（参见<xref linkend="credit"/>）。</para>
 
 </sect2>
 
@@ -1418,99 +465,29 @@ inflation (see <xref linkend="credit"/>).</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="release-lines">
-<title>Maintaining Multiple Release Lines</title>
+<title>维护多个发布线</title>
 
-<para>Most mature projects maintain multiple release lines in
-parallel.  For example, after 1.0.0 comes out, that line should
-continue with micro (bugfix) releases 1.0.1, 1.0.2, etc, until the
-project explicitly decides to end the line, and
-releasing 1.1.0 is not sufficient reason to end the 1.0.x line.  For
-example, some users make it a policy never to upgrade to the first
-release in a new minor or major series&nbsp;&mdash;&nbsp;they let others shake the
-bugs out of, say 1.1.0, and wait until 1.1.1.  This isn't necessarily
-selfish (remember, they're forgoing the bugfixes and new features
-too); it's just that, for whatever reason, they've decided to be very
-careful with upgrades.  Accordingly, if the project learns of a major
-bug in 1.0.3 right before it's about to release 1.1.0, it would be a
-bit severe to just put the bugfix in 1.1.0 and tell all the old 1.0.x
-users they should upgrade.  Why not release both 1.1.0 and 1.0.4, so
-everyone can be happy?</para>
+<para>大多数成熟的项目会并行维护多个发布线。例如，在 1.0.0 发布后，该线应该继续发布微版本（bug 修复）1.0.1、1.0.2 等，直到项目明确决定结束该线，而发布 1.1.0 并不足以成为结束 1.0.x 线的理由。例如，一些用户制定了从不升级到新的次要或主要系列第一个版本的策略——他们让别人去解决，比如说 1.1.0 中的 bug，然后等到 1.1.1。这不一定是自私的（记住，他们也放弃了 bug 修复和新功能）；只是，出于某种原因，他们决定在升级时非常小心。因此，如果项目在即将发布 1.1.0 之前发现 1.0.3 中有一个重大 bug，仅仅将 bug 修复放入 1.1.0 并告诉所有旧的 1.0.x 用户他们应该升级，会有点苛刻。为什么不同时发布 1.1.0 和 1.0.4，让每个人都高兴呢？</para>
 
-<para>After the 1.1.x line is well under way, you can declare 1.0.x to
-be at <firstterm>end of life</firstterm>.  This should be announced
-officially.  The announcement could stand alone, or it could be
-mentioned as part of a 1.1.x release announcement; however you do
-it, users need to know that the old line is being phased out, so they
-can make upgrade decisions accordingly.</para>
+<para>在 1.1.x 线进展顺利之后，你可以宣布 1.0.x 进入<firstterm>生命周期结束 (end of life)</firstterm>。这应该被正式宣布。公告可以单独发布，也可以作为 1.1.x 发布公告的一部分提及；无论你怎么做，用户都需要知道旧的线正在被淘汰，以便他们可以相应地做出升级决定。</para>
 
-<para>Some projects set a window of time during which they pledge to
-support the previous release line.  In an open source context,
-"support" means accepting bug reports against that line, and making
-maintenance releases when significant bugs are found.  Other projects
-don't give a definite amount of time, but watch incoming bug reports
-to gauge how many people are still using the older line.  When the
-percentage drops below a certain point, they declare end of life for
-the line and stop supporting it.</para>
+<para>一些项目设定一个时间窗口，在此期间他们承诺支持前一个发布线。在开源的背景下，“支持”意味着接受针对该线的 bug 报告，并在发现重大 bug 时发布维护版本。其他项目不给出确切的时间，而是观察收到的 bug 报告来衡量还有多少人仍在使用旧的线。当百分比降到某个点以下时，他们就宣布该线的生命周期结束并停止支持。</para>
 
-<para>For each release, make sure to have a <firstterm>target
-version</firstterm> or <firstterm>target milestone</firstterm>
-available in the bug tracker, so people filing bugs will be able to do
-so against the proper release.  Don't forget to also have a target
-called "development" or "latest" for the most recent development
-sources, since some people&nbsp;&mdash;&nbsp;and not only active
-developers&nbsp;&mdash;&nbsp;stay ahead of the official
-releases.</para>
+<para>对于每个发布，确保在 bug 跟踪器中有一个<firstterm>目标版本</firstterm>或<firstterm>目标里程碑</firstterm>可用，这样提交 bug 的人就能针对正确的发布进行提交。不要忘记也为最新的开发源代码设置一个名为“development”或“latest”的目标，因为有些人——不仅仅是活跃的开发者——会走在官方发布的前面。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="security-releases">
-<title>Security Releases</title>
+<title>安全发布</title>
 
-<para>Most of the details of handling security bugs were covered in
-<xref linkend="security"/>, but there are some
-special details to discuss for doing security releases.</para>
+<para>处理安全 bug 的大部分细节已在<xref linkend="security"/>中涵盖，但对于进行安全发布，还有一些特殊的细节需要讨论。</para>
 
-<para>A <firstterm>security release</firstterm> is a release made
-solely to close a security vulnerability.  The code that fixes the bug
-cannot be made public until the release is available, which means not
-only that the fixes cannot be committed to any public repository until the
-day of the release, but also that the release cannot be publicly
-tested before it goes out the door.  Obviously, the developers can
-examine the fix among themselves, and test the release privately, but
-widespread real-world testing is not possible.</para>
+<para>一个<firstterm>安全发布</firstterm>是专门为了关闭一个安全漏洞而进行的发布。修复 bug 的代码在发布可用之前不能公开，这意味着修复不仅在发布日之前不能提交到任何公共仓库，而且发布在推出之前也不能公开测试。显然，开发者可以在他们之间检查修复，并私下测试发布，但广泛的真实世界测试是不可能的。</para>
 
-<para>Because of this lack of testing, a security release should
-always consist of some existing release plus the fixes for the
-security bug, with <emphasis>no other changes</emphasis>.  This is
-because the more changes you ship without testing, the more likely
-that one of them will cause a new bug, perhaps even a new security
-bug!  This conservatism is also friendly to administrators who may
-need to deploy the security fix, but whose upgrade policy stipulates
-that they not deploy any other changes at the same time.</para>
+<para>由于缺乏测试，一个安全发布应该总是由某个现有的发布加上修复安全 bug 的补丁组成，<emphasis>没有其他更改</emphasis>。这是因为你未经测试就发布的更改越多，其中之一导致新 bug 的可能性就越大，甚至可能是一个新的安全 bug！这种保守主义对那些可能需要部署安全修复，但其升级策略规定他们不能同时部署任何其他更改的管理员来说也是友好的。</para>
 
-<para>Making a security release sometimes involves some minor
-deception.  For example, the project may have been working on a 1.1.3
-release, with certain bug fixes to 1.1.2 already publicly declared,
-when a security report comes in.  Naturally, the developers cannot
-talk about the security problem until they make the fix available;
-until then, they must continue to talk publicly as though 1.1.3 will
-be what it's always been planned to be.  But when 1.1.3 actually
-comes out, it will differ from 1.1.2 only in the security fixes, and
-all those other fixes will have been deferred to 1.1.4 (which, of
-course, will now <emphasis>also</emphasis> contain the security
-fix, as will all other future releases).</para>
+<para>进行安全发布有时需要一些小小的欺骗。例如，项目可能一直在进行 1.1.3 版本的发布工作，其中对 1.1.2 的某些 bug 修复已经公开宣布，这时一个安全报告进来了。自然，开发者在提供修复之前不能谈论安全问题；在那之前，他们必须继续公开地谈论，好像 1.1.3 仍将是它一直计划的那样。但当 1.1.3 真正发布时，它与 1.1.2 的区别将仅在于安全修复，而所有那些其他的修复将被推迟到 1.1.4（当然，1.1.4 现在<emphasis>也</emphasis>将包含安全修复，就像所有未来的发布一样）。</para>
 
-<para>You could add an extra component to an existing release to
-indicate that it contains security changes only.  For example, people
-would be able to tell just from the numbers that 1.1.2.1 is a security
-release against 1.1.2, and they would know that any release "higher"
-than that (e.g., 1.1.3, 1.2.0, etc) contains the same security fixes.
-For those in the know, this system conveys a lot of information.  On
-the other hand, for those not following the project closely, it can be
-a bit confusing to see a three-component release number most of the
-time with an occasional four-component one thrown in seemingly at
-random.  Most projects choose consistency and simply
-use the next regularly scheduled number for security releases, even
-when it means shifting other planned releases by one number.</para>
+<para>你可以在一个现有的发布上增加一个额外的部分来表示它只包含安全更改。例如，人们仅从数字就能看出 1.1.2.1 是针对 1.1.2 的一个安全发布，并且他们会知道任何比那“更高”的发布（例如，1.1.3、1.2.0 等）都包含相同的安全修复。对于知情者来说，这个系统传达了大量信息。另一方面，对于那些不密切关注项目的人来说，看到一个大部分时间是三部分版本号，偶尔会随机出现一个四部分版本号，可能会有点困惑。大多数项目选择一致性，并简单地使用下一个常规计划的数字来进行安全发布，即使这意味着要将其他计划的发布推迟一个数字。</para>
 
 </sect2>
 
@@ -1518,163 +495,57 @@ when it means shifting other planned releases by one number.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="releases-and-daily-development">
-<title>Releases and Daily Development</title>
+<title>发布与日常开发</title>
 
-<para>Maintaining parallel releases simultaneously has implications
-for how daily development is done.  In particular, it makes
-a discipline that would be recommended anyway practically mandatory:
-have each commit be a single logical change, and don't mix unrelated
-changes in the same commit.  If a change is too big or too disruptive
-to do in one commit, break it across N commits, where each commit is a
-well-partitioned subset of the overall change, and includes nothing
-unrelated to the overall change.</para>
+<para>同时维护并行发布对日常开发的方式有影响。特别是，它使得一个本来就推荐的纪律几乎成为强制性的：让每个提交都是一个单一的逻辑变更，不要在同一个提交中混合不相关的变更。如果一个变更太大或太具破坏性，无法在一个提交中完成，就将其分解成 N 个提交，其中每个提交都是整个变更的一个划分良好的子集，并且不包含与整个变更无关的任何内容。</para>
 
-<para>Here's an example of an ill-thought-out commit:</para>
+<para>这里有一个考虑不周的提交的例子：</para>
 
 <screen>
 commit 3b1917a01f8c50e25db0b71edce32357d2645759
 Author: J. Random &lt;jrandom@example.com&gt;
 Date:   Sat 2022-06-28 15:53:07 -0500
 
-Fix Issue #1729: warn on change during re-indexing.
+修复问题 #1729：在重新索引期间发生更改时发出警告。
 
-Make indexing gracefully warn the user when a file is
-changing as it is being indexed.
+使索引在文件被索引时发生更改时能优雅地警告用户。
 
 * ui/repl.py
-  (ChangingFile): New exception class.
-  (DoIndex): Handle new exception.
+  (ChangingFile): 新的异常类。
+  (DoIndex): 处理新的异常。
 
 * indexer/index.py
-  (FollowStream): Raise new exception if file changes during
-  indexing.
-  (BuildDir): Unrelatedly, remove some obsolete comments,
-  reformat some code, and fix the error check when creating
-  a directory.
+  (FollowStream): 如果文件在索引期间发生更改，则引发新的异常。
+  (BuildDir): 不相关地，删除一些过时的注释，
+  重新格式化一些代码，并修复创建
+  目录时的错误检查。
 
-Other unrelated cleanups:
+其他不相关的清理：
 
-* www/index.html: Fix some typos, set next release date.
+* www/index.html: 修复一些拼写错误，设置下一个发布日期。
 </screen>
 
-<para>The problem with it becomes apparent as soon as someone needs to
-port the <function>BuildDir</function> error check fix over to a
-branch for an upcoming maintenance release.  The porter doesn't want
-any of the other changes&nbsp;&mdash;&nbsp;for example, perhaps the fix for ticket
-#1729 wasn't approved for the maintenance branch at all, while the
-<filename>index.html</filename> tweaks would simply be irrelevant
-there.  But she cannot easily grab just the
-<function>BuildDir</function> change via the version control tool's
-merge functionality, because the version control system was told that
-that change is logically grouped with all these other unrelated
-things.  In fact, the problem would become apparent even before the
-merge.  Merely listing the change for voting would become problematic:
-instead of just giving the revision number, the proposer would have to
-make a special change branch just to isolate the portion of
-the commit being proposed.  That would be a lot of work for others to
-suffer through, and all because the original committer couldn't be
-bothered to break things into logical groups.</para>
+<para>它的问题在有人需要将<function>BuildDir</function>的错误检查修复移植到一个即将发布的维护版本分支时就变得显而易见了。移植者不想要任何其他的变更——例如，也许问题 #1729 的修复根本没有被批准用于维护分支，而<filename>index.html</filename>的调整在那里根本就是无关紧要的。但她无法通过版本控制工具的合并功能轻易地只抓取<function>BuildDir</function>的变更，因为版本控制系统被告知那个变更与所有这些其他不相关的东西是逻辑上分组的。事实上，问题甚至在合并之前就会变得明显。仅仅列出变更进行投票就会变得有问题：提议者将不得不创建一个特殊的变更分支来隔离被提议的提交部分，而不是只给出修订号。那对其他人来说会是很多麻烦，而这一切都只是因为原始提交者懒得把事情分成逻辑组。</para>
 
-<para>The original commit really should have been
-<emphasis>four</emphasis> separate commits: one to fix issue
-#1729, another to remove obsolete comments and reformat code in
-<function>BuildDir</function>, another to fix the error check in
-<function>BuildDir</function>, and finally, one to tweak
-<filename>index.html</filename>.  The third of those commits would be
-the one proposed for the maintenance release branch.</para>
+<para>原始提交真的应该被分成<emphasis>四个</emphasis>独立的提交：一个修复问题 #1729，另一个在<function>BuildDir</function>中移除过时的注释并重新格式化代码，再一个修复<function>BuildDir</function>中的错误检查，最后，一个调整<filename>index.html</filename>。这四个提交中的第三个将是为维护发布分支提议的那个。</para>
 
-<para>Of course, release stabilization is not the only reason why
-having each commit be one logical change is desirable.
-Psychologically, a semantically unified commit is easier to review,
-and easier to revert if necessary (in some version control systems,
-reversion is really a special kind of merge anyway).  A little
-up-front discipline on each developer's part can save the project a
-lot of headache later.</para>
+<para>当然，发布稳定化并不是希望每个提交都是一个逻辑变更的唯一原因。从心理上讲，一个语义统一的提交更容易审查，并且在必要时更容易回滚（在某些版本控制系统中，回滚实际上是一种特殊的合并）。每个开发者在前期付出一点纪律，可以为项目后期省去很多麻烦。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="planning">
-<title>Planning Releases</title>
+<title>规划发布</title>
 
-<para>One area where open source projects have historically differed
-from proprietary projects is in release planning.  Proprietary
-projects usually have firmer deadlines.  Sometimes it's because
-customers were promised that an upgrade would be available by a
-certain date, because the new release needs to be coordinated with
-some other effort for marketing purposes, or because the venture
-capitalists who invested in the whole thing need to see some results
-before they put in any more funding.  Free software projects, on the
-other hand, are concerned with maintaining a cooperative working
-atmosphere among many parties&nbsp;&mdash;&nbsp;some of who may be
-business competitors with others&nbsp;&mdash;&nbsp;and the
-preservation of the working relationship is more important than any
-single party's deadlines.</para>
+<para>开源项目与专有项目在发布规划方面历来有所不同。专有项目通常有更严格的截止日期。有时是因为向客户承诺了在某个日期前提供升级，因为新版本需要与某些其他营销活动协调，或者因为投资整个项目的风险资本家需要在投入更多资金前看到一些结果。另一方面，自由软件项目关心的是在众多方之间维持一个合作的工作氛围——其中一些可能是商业竞争对手——而维护这种工作关系比任何一方的截止日期都重要。</para>
 
-<para>Of course, many open source projects are funded by corporations,
-and are correspondingly influenced by deadline-conscious management.  This is in
-many ways a good thing, but it can
-cause conflicts between the priorities of those developers who care
-about a particular release date and everyone else.  The developers who
-are under pressure will naturally want to just pick a date when the
-release will occur and have everyone's activities fall into line.  But
-the rest of the developers may have other
-agendas&nbsp;&mdash;&nbsp;perhaps features they want to complete, or
-some testing they want to have done&nbsp;&mdash;&nbsp;that they feel
-the release should wait for.</para>
+<para>当然，许多开源项目由公司资助，并相应地受到注重截止日期的管理层的影响。这在许多方面是件好事，但也可能导致那些关心特定发布日期的开发者与其他所有人的优先事项之间发生冲突。处于压力下的开发者自然会希望只挑选一个发布日期，然后让所有人的活动都与之保持一致。但其余的开发者可能有其他的议程——也许是他们想完成的功能，或者他们想进行的某些测试——他们觉得发布应该为此等待。</para>
 
-<para>There is no general solution to this problem except discussion
-and compromise, of course.  But you can minimize the friction by decoupling the proposed
-<emphasis>existence</emphasis> of a given release from the date when
-it would go out the door.  That is, try to steer discussion toward the
-subject of which releases the project will be making in the near- to
-medium-term future, and what features will be in them, without at
-first mentioning anything about dates (except for rough guesses with
-wide margins of error).<footnote><para>Or you could consider doing
-time-based releases, as described in <xref
-linkend="time-based-vs-feature-based"/>.</para></footnote>
-By nailing down feature sets early, you reduce
-the complexity of the discussion about any individual release,
-and thus improve predictability.  This then creates a kind of
-inertial bias against anyone who proposes to expand the definition of
-a release by adding new features or other complications.  If the
-release's contents are fairly well defined, the onus is on the
-proposer to justify the expansion, even though the date of the release
-may not have been set yet.  Once the release's contents have been
-defined, discussion about dates will be much easier.</para>
+<para>当然，除了讨论和妥协，这个问题没有通用的解决方案。但你可以通过将某个给定发布的<emphasis>存在</emphasis>与它推出的日期解耦来最小化摩擦。也就是说，试着引导讨论转向项目在近期到中期未来将要进行的发布，以及它们将包含哪些功能，而一开始不提及任何关于日期的事情（除了有很大误差范围的粗略猜测）。<footnote><para>或者你可以考虑进行基于时间的发布，如<xref linkend="time-based-vs-feature-based"/>中所述。</para></footnote>通过尽早确定功能集，你可以减少关于任何单个发布的讨论的复杂性，从而提高可预测性。这反过来又对任何提议通过添加新功能或其他复杂性来扩大发布定义的人造成了一种惯性偏见。如果发布的内容相当明确，那么提议者就有责任为扩大范围提供理由，即使发布的日期可能还没有确定。一旦发布的内容被定义，关于日期的讨论就会容易得多。</para>
 
-<para>An alternative strategy for dealing with the tension between
-project release timing and corporate needs is for the company to
-simply make separate interim releases for its customers.  As discussed
-in <xref linkend="economics-of-open-source"/>, such releases can be public and
-open source, and won't do the project any harm as long as they are
-clearly distinguished from the project's official releases.  However,
-maintaining separate release lines independently from the project
-involves overhead in tracking changes and porting them back
-and forth.  This technique only works when a company can dedicate
-enough people to release management to handle that overhead.</para>
+<para>应对项目发布时间和公司需求之间紧张关系的另一种策略是，公司简单地为其客户制作单独的临时发布。如<xref linkend="economics-of-open-source"/>中所述，这样的发布可以是公开和开源的，并且只要它们与项目的官方发布明确区分开来，就不会对项目造成任何损害。然而，独立于项目维护单独的发布线会涉及跟踪变更和来回移植的开销。这种技术只有在公司能够投入足够的人力来进行发布管理以处理该开销时才有效。</para>
 
-<para>It is crucial, of course, to never present any individual
-suggestion or decision as written in stone.  In the comments associated with each
-assignment of a ticket to a specific future release, invite
-discussion, dissent, and be genuinely willing to be persuaded whenever
-possible.  Never exercise control merely for the sake of exercising
-control: the more deeply others feel they can participate in the
-release planning process (see
-<xref linkend="share-management"/>), the easier it
-will be to persuade them to share your priorities on the issues that
-really matter for you.</para>
+<para>当然，至关重要的是，永远不要将任何个别的建议或决定呈现为板上钉钉。在将一个票据分配给一个特定的未来发布的评论中，邀请讨论、异议，并真诚地愿意在可能的情况下被说服。永远不要仅仅为了行使控制而行使控制：其他人越是深切地感觉到他们可以参与发布规划过程（参见<xref linkend="share-management"/>），就越容易说服他们在对你真正重要的问题上分享你的优先事项。</para>
 
-<para>The other way the project can lower tensions around release
-planning is to make releases fairly often (even if you're not using a
-time-based release scheme&nbsp;&mdash;&nbsp;see <xref
-linkend="time-based-vs-feature-based"/>).  When there's a long time
-between releases, the importance of any individual release is
-magnified in everyone's minds; people are that much more crushed when
-their code doesn't make it in, because they know how long it might be
-until the next chance.  Depending on the complexity of the release
-process and the nature of your project, somewhere between every three
-and six months is usually about the right gap between releases, though
-maintenance lines may put out micro releases a bit faster, if there is
-demand for them.</para>
+<para>项目可以降低发布规划紧张气氛的另一种方式是相当频繁地进行发布（即使你不使用基于时间的发布方案——参见<xref linkend="time-based-vs-feature-based"/>）。当发布之间的时间很长时，任何单个发布的重要性在每个人心中都会被放大；当他们的代码没能进入时，人们会更加沮丧，因为他们知道下一次机会可能要等很久。根据发布过程的复杂性和你的项目的性质，每三到六个月之间通常是发布之间合适的间隔，尽管维护线可能会稍微快一点地发布微版本，如果有需求的话。</para>
 
 </sect2>
 
@@ -1687,4 +558,3 @@ local variables:
 sgml-parent-document: ("book.xml" "chapter")
 end:
 -->
-
