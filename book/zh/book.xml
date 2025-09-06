@@ -26,8 +26,8 @@
        is, I haven't found it.  <shrug>  That's why we kluge the
        version into the 'copyright' element later on.  But let's still
        substitute in the right VC-based version number here, just in
-       case 'edition' ever does start showing up. --> 
-  <edition>2.__SEE ../aggrevision SCRIPT__</edition>
+       case 'edition' ever does start showing up. -->
+  <edition>2.2.0.0 (05 Sep 2025)</edition>
   <isbn>ISBN: 0-596-00759-0</isbn>
   <authorgroup>
     <author><firstname>Karl</firstname><surname>Fogel</surname></author>
@@ -35,17 +35,17 @@
   <editor><firstname>Andy</firstname><surname>Oram</surname></editor>
   <!-- <pubdate>2005</pubdate> -->
   <copyright><year>2005-2023</year><holder>Karl Fogel，基于知识共享署名-相同方式共享 (4.0) 许可协议。
-  <!-- This is an egregious kluge.  Since I don't know how to reference 
+  <!-- This is an egregious kluge.  Since I don't know how to reference
        the text from <edition> element above and have it show up in
        the right place in all the output formats, I just crowbar a
        redundant version into the copyright section here.  At least
        it'll show up that way.  It looks good in HTML and PDF; build
        problems with EPUB are preventing me from checking that, but
-       based on an old EPUB I think it should be fine there too.  
+       based on an old EPUB I think it should be fine there too.
 
        So basically, as long as you have no morals nor sense of taste,
        this solution is just fine. -->
-  <literallayout>版本：2.__SEE ../aggrevision SCRIPT__</literallayout>
+  <literallayout>版本：2.2.0.0 (05 Sep 2025)</literallayout>
   <literallayout>主站：<ulink url="https://producingoss.com/zh/" >https://producingoss.com/zh/</ulink></literallayout>
 </holder></copyright>
 </bookinfo>

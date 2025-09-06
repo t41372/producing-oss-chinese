@@ -15,10 +15,10 @@
 <!ENTITY copyright  SYSTEM "copy.xml">
 ]>
 
-<book id="poss" lang="en">
-<title>Producing Open Source Software</title>
-<subtitle>How to Run a Successful Free Software Project</subtitle>
-<subtitle>2nd Edition</subtitle>
+<book id="poss" lang="zh">
+<title>开源软件之道</title>
+<subtitle>如何成功运营自由软件项目</subtitle>
+<subtitle>第二版</subtitle>
 
 <bookinfo>
   <!-- For some reason, the cdata in the 'edition' element doesn't
@@ -34,7 +34,7 @@
   </authorgroup>
   <editor><firstname>Andy</firstname><surname>Oram</surname></editor>
   <!-- <pubdate>2005</pubdate> -->
-  <copyright><year>2005-2023</year><holder>Karl Fogel, under the CreativeCommons Attribution-ShareAlike (4.0) license.
+  <copyright><year>2005-2023</year><holder>Karl Fogel，基于知识共享署名-相同方式共享 (4.0) 许可协议。
   <!-- This is an egregious kluge.  Since I don't know how to reference 
        the text from <edition> element above and have it show up in
        the right place in all the output formats, I just crowbar a
@@ -45,8 +45,8 @@
 
        So basically, as long as you have no morals nor sense of taste,
        this solution is just fine. -->
-  <literallayout>Version: 2.__SEE ../aggrevision SCRIPT__</literallayout>
-  <literallayout>Home site: <ulink url="https://producingoss.com/" >https://producingoss.com/</ulink></literallayout>
+  <literallayout>版本：2.__SEE ../aggrevision SCRIPT__</literallayout>
+  <literallayout>主站：<ulink url="https://producingoss.com/zh/" >https://producingoss.com/zh/</ulink></literallayout>
 </holder></copyright>
 </bookinfo>
 
