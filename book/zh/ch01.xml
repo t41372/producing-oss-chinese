@@ -117,345 +117,86 @@ url="https://opensource.org/faq#copyleft"
 
 <para>然而，在新兴的自由软件场景中还发生了许多其他事情，并非所有事情都像 Stallman 的 GNU 项目那样明确具有意识形态性。其中最重要的之一是<firstterm>伯克利软件发行版</firstterm>（<firstterm>BSD</firstterm>），这是对 Unix 操作系统的逐步重新实现&nbsp;&mdash;&nbsp;直到 20 世纪 70 年代后期，Unix 一直是 AT&amp;T 的一个松散专有研究项目&nbsp;&mdash;&nbsp;由加州大学伯克利分校的程序员完成。BSD 团队没有就程序员需要团结起来相互分享发表任何公开的政治声明，但他们以热情和风格<emphasis>实践</emphasis>了这个想法，通过协调一个大规模的分布式开发工作，其中 Unix 命令行工具和代码库，以及最终操作系统内核本身，主要由志愿者从头重写。BSD 项目成为非意识形态自由软件开发的早期例子，也为许多后来继续活跃在开源世界的开发者提供了训练场。</para>
 
-<para>Another crucible of cooperative development was the <firstterm>X
-Window System</firstterm>, a free, network-transparent graphical
-computing environment, developed at MIT in the mid-1980's in
-partnership with hardware vendors who had a common interest in being
-able to offer their customers a windowing system.  Far from opposing
-proprietary software, the X license deliberately allowed proprietary
-extensions on top of the free core&nbsp;&mdash;&nbsp;each member of the consortium
-wanted the chance to enhance the default X distribution, and thereby
-gain a competitive advantage over the other members.  X
-Windows<footnote><para>They prefer it to be called the "X Window
-System", but in practice, people usually call it "X Windows".</para></footnote> itself was free
-software, but mainly as a way to level the playing field between
-competing business interests and to increase standardization, not out of
-some desire to end the dominance of proprietary software.</para>
+<para>协作开发的另一个熔炉是 <firstterm>X Window System</firstterm>，一个自由的、网络透明的图形计算环境，由 MIT 在 20 世纪 80 年代中期与硬件供应商合作开发，这些供应商有一个共同的利益，即能够为客户提供窗口系统。X 许可证远非反对专有软件，而是故意允许在自由核心之上添加专有扩展&nbsp;&mdash;&nbsp;联盟的每个成员都希望有机会增强默认的 X 发行版，从而获得相对于其他成员的竞争优势。X Windows<footnote><para>他们更喜欢称其为"X Window System"，但在实践中，人们通常称其为"X Windows"。</para></footnote>本身是自由软件，但主要是作为一种在竞争的商业利益之间拉平竞争环境和增加标准化的方式，而不是出于结束专有软件主导地位的某种愿望。</para>
 
-<para>Yet another example, predating the
-GNU project by a few years, was TeX, Donald Knuth's free,
-publishing-quality typesetting system.  He released it under terms
-that allowed anyone to modify and distribute the code, but not to call 
-the result "TeX" unless it passed a very strict set of compatibility
-tests (this is an example of the "trademark-protecting" class of free
-licenses, discussed more in <xref linkend="legal"/>).  Knuth wasn't
-taking a stand one way or the other on the question of
-free-versus-proprietary software; he just needed a better typesetting
-system in order to complete his
-<emphasis>real</emphasis> goal&nbsp;&mdash;&nbsp;a book on computer
-programming&nbsp;&mdash;&nbsp;and saw no reason not to release his system to the
-world when done.</para>
+<para>另一个例子，比 GNU 项目早几年，是 TeX，Donald Knuth 的自由、出版质量的排版系统。他在允许任何人修改和分发代码的条款下发布它，但除非通过一套非常严格的兼容性测试，否则不能将结果称为"TeX"（这是"商标保护"类自由许可证的一个例子，在<xref linkend="legal"/>中有更多讨论）。Knuth 在自由软件与专有软件的问题上没有采取任何立场；他只是需要一个更好的排版系统来完成他的<emphasis>真正</emphasis>目标&nbsp;&mdash;&nbsp;一本关于计算机编程的书&nbsp;&mdash;&nbsp;并且认为完成后没有理由不向世界发布他的系统。</para>
 
 </sect3>
 
-<para>Without listing every project and every license, it's safe to
-say that by the late 1980's, there was a lot of free software
-available under a wide variety of licenses.  The diversity of licenses
-reflected a corresponding diversity of motivations.  Even some of the
-programmers who chose the GNU GPL were much less ideologically driven
-than the GNU project itself was.  Although they enjoyed working on free
-software, many developers did not consider proprietary software a
-social evil.  There were people who felt a moral impulse to rid the
-world of "software hoarding" (Stallman's term for non-free software),
-but others were motivated more by technical excitement, or by the
-pleasure of working with like-minded collaborators, or even by a
-simple human desire for glory.  Yet by and large these disparate
-motivations did not interact in destructive ways.  This may be
-because software, unlike other creative forms like prose or the visual
-arts, must pass semi-objective tests in order to be considered
-successful: it must run, and be reasonably free of bugs.  This gives
-all participants in a project a kind of automatic common ground, a
-reason and a framework for working together without worrying too much
-about qualifications or motivations beyond the technical.</para>
+<para>不必列举每个项目和每个许可证，可以肯定地说，到 20 世纪 80 年代后期，有大量自由软件可用，采用各种不同的许可证。许可证的多样性反映了相应的动机多样性。即使是一些选择 GNU GPL 的程序员，其意识形态驱动也远不如 GNU 项目本身那么强。尽管他们喜欢从事自由软件工作，但许多开发者并不认为专有软件是一种社会邪恶。有些人感到有道德冲动要消除世界上的"软件囤积"（Stallman 对非自由软件的称呼），但其他人更多是受技术兴奋的驱使，或者是与志同道合的合作者一起工作的乐趣，甚至只是简单的人类对荣耀的渴望。然而总的来说，这些不同的动机并没有以破坏性的方式相互作用。这可能是因为软件与其他创作形式（如散文或视觉艺术）不同，必须通过半客观的测试才能被认为是成功的：它必须运行，并且相当没有 bug。这给项目中的所有参与者提供了一种自动的共同基础，一个共同工作的理由和框架，而不必过多担心技术之外的资格或动机。</para>
 
-<para>Developers had another reason to stick together as well: it
-turned out that the free software world was producing some very
-high-quality code.  In some cases, it was demonstrably technically
-superior to the nearest non-free alternative; in others, it was at
-least comparable, and of course it always cost less to
-acquire&nbsp;&mdash;&nbsp;and you didn't have to worry about the
-manufacturer going out of business.  While only a few
-people might have been motivated to run free software on strictly
-philosophical grounds, a great many people were happy to run it
-because it did a better job.  And of those who used it, some
-percentage were always willing to donate their time and skills to help
-maintain and improve the software.</para>
+<para>开发者还有另一个团结在一起的理由：事实证明，自由软件世界正在生产一些非常高质量的代码。在某些情况下，它在技术上明显优于最接近的非自由替代品；在其他情况下，它至少具有可比性，当然获取成本总是更低&nbsp;&mdash;&nbsp;而且你不必担心制造商倒闭。虽然只有少数人可能纯粹出于哲学理由而运行自由软件，但很多人乐意运行它，因为它做得更好。而在使用它的人中，总有一定比例的人愿意贡献他们的时间和技能来帮助维护和改进软件。</para>
 
-<para>This tendency to produce good code was certainly not universal,
-but it was happening with increasing frequency in free software
-projects around the world.  Businesses that depended heavily on
-software gradually began to take notice.  Many of them discovered that
-they were already using free software in day-to-day operations, and
-simply hadn't known it (upper management isn't always aware of
-everything the developers and the IT department do).  Corporations began to take a more
-active and public role in free software projects, contributing time
-and equipment, and sometimes even directly funding the development of
-free programs.  Such investments could, in the best scenarios, repay
-themselves many times over.  The sponsor only pays a small number of
-expert programmers to devote themselves to the project full time, but
-reaps the benefits of <emphasis>everyone's</emphasis> contributions,
-including work from programmers being paid by other corporations and
-from volunteers who have their own disparate motivations.</para>
+<para>这种生产优秀代码的趋势当然不是普遍的，但它在世界各地的自由软件项目中越来越频繁地发生。严重依赖软件的企业逐渐开始注意到这一点。许多企业发现他们在日常运营中已经在使用自由软件，只是不知道而已（高层管理人员并不总是了解开发人员和 IT 部门所做的一切）。公司开始在自由软件项目中扮演更积极和公开的角色，贡献时间和设备，有时甚至直接资助自由程序的开发。在最好的情况下，这样的投资可以获得数倍的回报。赞助商只需支付少数专家程序员全职投入项目，但却能收获<emphasis>所有人</emphasis>的贡献，包括其他公司付费程序员的工作以及有着各自不同动机的志愿者的工作。</para>
 
 </sect2>
 
 <!-- ========================== subsection ========================== -->
 <sect2 id="free-vs-open-source">
-<title>"Free" Versus "Open Source"</title>
+<title>"自由"与"开源"</title>
 
-<para>As the corporate world gave more and more attention to free
-software, programmers were faced with new issues of public presentation.  One
-was the word "free" itself.  On first hearing the term "free software"
-many people mistakenly think it means just "zero-cost software."  It's
-true that all free software is zero-cost,<footnote><para>One may charge
-a fee for giving out copies of free software, but since one cannot
-stop the recipients from offering it at no charge afterwards, the
-price is effectively driven to zero immediately.</para></footnote>
-but not all zero-cost software is free as in "freedom"&nbsp;&mdash;&nbsp;that is,
-the freedom to share and modify for any purpose.  For example, during the
-battle of the browsers in the 1990s, both Netscape and Microsoft gave
-away their competing web browsers at no charge, in a scramble to gain
-market share.  Neither browser was free in the "free software" sense.
-You couldn't get the source code, and even if you could, you didn't
-have the right to modify or redistribute it.<footnote><para>The source
-code to Netscape Navigator
-<emphasis>was</emphasis> eventually released under an open source
-license, in 1998, and became the foundation for the Mozilla Firefox web
-browser.  See <ulink
-url="https://www.mozilla.org/" >https://www.mozilla.org/</ulink>.</para></footnote>
-The only thing
-you could do was download an executable and run it.  The browsers were
-no more free than shrink-wrapped software bought in a store; they
-merely had a lower price.</para>
+<para>随着企业界对自由软件给予越来越多的关注，程序员面临着新的公众宣传问题。其中之一就是"free"（自由）这个词本身。许多人第一次听到"free software"（自由软件）这个术语时，会误以为它只是指"零成本软件"。确实，所有自由软件都是零成本的，<footnote><para>人们可以为分发自由软件的副本收取费用，但由于无法阻止接收者之后免费提供它，价格实际上会立即降至零。</para></footnote>但并非所有零成本软件都是"自由"意义上的 free&nbsp;&mdash;&nbsp;即为任何目的而分享和修改的自由。例如，在 20 世纪 90 年代的浏览器大战期间，Netscape 和 Microsoft 都免费赠送他们竞争的网络浏览器，争夺市场份额。这两个浏览器都不是"自由软件"意义上的自由。你无法获得 source code，即使你能获得，你也没有修改或重新分发它的权利。<footnote><para>Netscape Navigator 的 source code<emphasis>最终</emphasis>在 1998 年以开源许可证发布，并成为 Mozilla Firefox 网络浏览器的基础。见<ulink
+url="https://www.mozilla.org/" >https://www.mozilla.org/</ulink>。</para></footnote>你唯一能做的就是下载可执行文件并运行它。这些浏览器并不比在商店购买的收缩包装软件更自由；它们只是价格更低。</para>
 
-<para>This confusion over the word "free" is due entirely to an
-unfortunate ambiguity in the English language.  Most other tongues
-distinguish low prices from liberty (the distinction between
-<emphasis>gratis</emphasis> and <emphasis>libre</emphasis> is
-immediately clear to speakers of Romance languages, for example).  But
-English's position as the de facto bridge language of the Internet
-means that a problem with English is, to some degree, a problem for
-everyone.  The misunderstanding around the word "free" was so
-prevalent that free software programmers eventually evolved a standard
-formula in response: "It's <emphasis>free</emphasis> as in
-<emphasis>freedom</emphasis>&nbsp;&mdash;&nbsp;think <emphasis>free
-speech</emphasis>, not <emphasis>free beer</emphasis>."  Still, having
-to explain it over and over is tiring.  Many programmers felt, with
-some justification, that the ambiguous word "free" was hampering the
-public's understanding of this software.</para>
+<para>对"free"这个词的混淆完全是由于英语中一个不幸的歧义。大多数其他语言都区分低价格和自由（例如，<emphasis>gratis</emphasis> 和 <emphasis>libre</emphasis> 之间的区别对罗曼语系的使用者来说立即就很清楚）。但英语作为互联网事实上的桥梁语言的地位意味着英语的问题在某种程度上是每个人的问题。围绕"free"一词的误解如此普遍，以至于自由软件程序员最终演化出一个标准的回应公式："这是<emphasis>自由（freedom）</emphasis>意义上的 free&nbsp;&mdash;&nbsp;想想<emphasis>言论自由（free speech）</emphasis>，而不是<emphasis>免费啤酒（free beer）</emphasis>。"尽管如此，一遍又一遍地解释是令人疲倦的。许多程序员有理由地认为，含糊不清的"free"一词正在妨碍公众对这种软件的理解。</para>
 
-<para>But the problem went deeper than that.  The word "free" carried
-with it an inescapable moral connotation: if freedom was an end in
-itself, it didn't matter whether free software also happened to
-be better, or more profitable for certain businesses in certain
-circumstances.  Those were merely pleasant side effects of a motive
-that was, at its root, neither technical nor mercantile, but moral.
-Furthermore, the "free as in freedom" position forced a glaring
-inconsistency on corporations who wanted to support particular free
-software in some areas of their business but continue marketing
-proprietary software in others.</para>
+<para>但问题比这更深。"free"一词带有一种不可避免的道德内涵：如果自由本身就是目的，那么自由软件是否恰好更好，或者在某些情况下对某些企业更有利可图，都无关紧要。这些只是一个动机的愉快副作用，而这个动机从根本上说既不是技术的也不是商业的，而是道德的。此外，"作为自由的 free"立场给那些希望在业务的某些领域支持特定自由软件但在其他领域继续营销专有软件的公司带来了明显的不一致性。</para>
 
-<para>These dilemmas came to a community that was already poised for
-an identity crisis.  The programmers who actually
-<emphasis>write</emphasis> free software have never been of one mind
-about the overall goal, if any, of the free software movement.  Even
-saying that opinions run from one extreme to the other would be
-misleading, in that it would falsely imply a linear range where there
-is instead a multidimensional scattering.  However, two broad
-categories of belief can be distinguished, if we are willing to ignore
-subtleties for the moment.  One group takes Stallman's view, that the
-freedom to share and modify is the most important thing, and that
-therefore if you stop talking about freedom, you've left out the core
-issue.  Others feel that the software's quality itself is the most important
-argument in its favor, and are uncomfortable with proclaiming
-proprietary software inherently bad.  Some, but not all, free
-software programmers believe that the author (or employer, in the case
-of paid work)
-<emphasis>should</emphasis> have the right to control the terms of
-distribution, and that no moral judgement need be attached to the
-choice of particular terms.  Others don't believe this.</para>
+<para>这些困境来到了一个已经面临身份危机的社区。实际<emphasis>编写</emphasis>自由软件的程序员从未对自由软件运动的总体目标（如果有的话）达成一致。甚至说意见从一个极端到另一个极端都会产生误导，因为这会错误地暗示存在一个线性范围，而实际上是多维的分散。然而，如果我们暂时愿意忽略细微差别，可以区分出两大类信念。一组人持 Stallman 的观点，认为分享和修改的自由是最重要的，因此如果你停止谈论自由，你就忽略了核心问题。其他人认为软件的质量本身是支持它的最重要论据，并且不愿意宣称专有软件本质上是坏的。一些（但不是全部）自由软件程序员认为，作者（或在有偿工作的情况下是雇主）<emphasis>应该</emphasis>有权控制分发条款，并且不需要对选择特定条款附加道德判断。其他人不这么认为。</para>
 
-<para>For a long time, these differences did not need to be carefully
-examined or articulated, but free software's burgeoning success in the
-business world made the issue unavoidable.  In 1998, the term
-<firstterm>open&nbsp;source</firstterm> was coined by Christine Peterson as an alternative
-to "free", during meetings of a coalition that eventually became the
-Open Source Initiative (OSI).<footnote><para>OSI's web home is <ulink
+<para>在很长一段时间内，这些差异不需要仔细审查或阐明，但自由软件在商业世界的蓬勃发展使这个问题不可避免。1998 年，在一个最终成为开源促进会（OSI）的联盟会议期间，Christine Peterson 创造了术语 <firstterm>open source</firstterm>（开源）作为"free"的替代品。<footnote><para>OSI 的网站是<ulink
 url="https://www.opensource.org/"
->https://www.opensource.org/</ulink>.</para></footnote>  The OSI's position was
-not only that "free software" was potentially confusing, but that the
-word "free" was just one symptom of a general problem: that the
-movement needed a marketing program to pitch it to the corporate
-world, and that talk of morals and the social benefits of sharing
-would never fly in corporate boardrooms.  In their own words at the
-time:</para>
+>https://www.opensource.org/</ulink>。</para></footnote>OSI 的立场不仅是"自由软件"可能令人困惑，而且"free"一词只是一个普遍问题的一个症状：运动需要一个营销计划来向企业界推销，而关于道德和分享的社会效益的讨论永远不会在公司董事会中获得成功。用他们当时自己的话说：</para>
 
     <blockquote>
-      <para><emphasis>The Open Source Initiative is a marketing
-      program for free software. It's a pitch for "free software" on
-      solid pragmatic grounds rather than ideological
-      tub-thumping. The winning substance has not changed, the losing
-      attitude and symbolism have.&nbsp;...</emphasis></para>
+      <para><emphasis>开源促进会是一个自由软件的营销计划。它基于坚实的务实理由而不是意识形态的大肆宣扬来推销"自由软件"。获胜的实质没有改变，失败的态度和象征主义改变了。&nbsp;...</emphasis></para>
 
-      <para><emphasis>The case that needs to be made to most techies
-      isn't about the concept of open source, but the name. Why not
-      call it, as we traditionally have, free software?</emphasis></para>
+      <para><emphasis>需要向大多数技术人员说明的情况不是关于开源的概念，而是名称。为什么不像我们传统上那样称它为自由软件？</emphasis></para>
 
-      <para><emphasis>One direct reason is that the term "free
-      software" is easily misunderstood in ways that lead to
-      conflict.&nbsp;...</emphasis></para>
+      <para><emphasis>一个直接原因是"自由软件"这个术语很容易被误解，导致冲突。&nbsp;...</emphasis></para>
 
-      <para><emphasis>But the real reason for the re-labeling is a
-      marketing one. We're trying to pitch our concept to the
-      corporate world now. We have a winning product, but our
-      positioning, in the past, has been awful. The term "free
-      software" has been misunderstood by business persons, who
-      mistake the desire to share with anti-commercialism, or worse,
-      theft.</emphasis></para>
+      <para><emphasis>但重新标记的真正原因是营销。我们现在正试图向企业界推销我们的概念。我们有一个获胜的产品，但我们过去的定位很糟糕。"自由软件"这个术语被商业人士误解，他们把分享的愿望误认为是反商业主义，或者更糟，是盗窃。</emphasis></para>
 
-      <para><emphasis>Mainstream corporate CEOs and CTOs will never
-      buy "free software." But if we take the very same tradition, the
-      same people, and the same free-software licenses and change the
-      label to "open
-      source"&nbsp;&mdash;&nbsp;<emphasis>that</emphasis>, they'll
-      buy.</emphasis></para>
+      <para><emphasis>主流企业的 CEO 和 CTO 永远不会购买"自由软件"。但如果我们采用完全相同的传统、相同的人和相同的自由软件许可证，并将标签改为"开源"&nbsp;&mdash;&nbsp;<emphasis>那个</emphasis>，他们会购买。</emphasis></para>
 
-      <para><emphasis>Some hackers find this hard to believe, but
-      that's because they're techies who think in concrete,
-      substantial terms and don't understand how important image is
-      when you're selling something.</emphasis></para>
+      <para><emphasis>一些黑客发现这很难相信，但那是因为他们是技术人员，以具体、实质性的术语思考，不理解在销售东西时形象有多重要。</emphasis></para>
 
-      <para><emphasis>In marketing, appearance is reality. The
-      appearance that we're willing to climb down off the barricades
-      and work with the corporate world counts for as much as the
-      reality of our behavior, our convictions, and our
-      software.</emphasis></para>
+      <para><emphasis>在营销中，外观就是现实。我们愿意从街垒上爬下来与企业界合作的外观，与我们行为、信念和软件的现实一样重要。</emphasis></para>
 
-      <para>(from <ulink url="https://www.opensource.org/"
-      >https://www.opensource.org/</ulink>.  Or
-      rather, <emphasis>formerly</emphasis> from that
-      site&nbsp;&mdash;&nbsp;the OSI has apparently taken down the
-      pages since then, although they can still be seen at 
+      <para>(摘自 <ulink url="https://www.opensource.org/"
+      >https://www.opensource.org/</ulink>。或者更确切地说，<emphasis>以前</emphasis>来自那个网站&nbsp;&mdash;&nbsp;OSI 显然从那时起就删除了这些页面，尽管它们仍然可以在 
       <ulink url="https://web.archive.org/web/20021204155057/http://www.opensource.org/advocacy/faq.php" >https://web.archive.org/web/20021204155057/http://www.opensource.org/advocacy/faq.php</ulink>
-      and
-      <ulink url="https://web.archive.org/web/20021204155022/http://www.opensource.org/advocacy/case_for_hackers.php#marketing" >https://web.archive.org/web/20021204155022/http://www.opensource.org/advocacy/case_for_hackers.php#marketing</ulink> [sic].)</para>
+      和
+      <ulink url="https://web.archive.org/web/20021204155022/http://www.opensource.org/advocacy/case_for_hackers.php#marketing" >https://web.archive.org/web/20021204155022/http://www.opensource.org/advocacy/case_for_hackers.php#marketing</ulink> [原文如此] 看到。)</para>
     </blockquote>
 
-<para>The tips of many icebergs of controversy are visible in that
-text.  It refers to "our convictions", but smartly avoids spelling out
-exactly what those convictions are.  For some, it might be the
-conviction that code developed according to an open process will be
-better code; for others, it might be the conviction that all
-information should be shared.  There's the use of the word "theft" to
-refer (presumably) to illegal copying&nbsp;&mdash;&nbsp;a usage that many object
-to, on the grounds that it's not theft if the original possessor still
-has the item afterwards.  There's the tantalizing hint that the free
-software movement might be mistakenly accused of anti-commercialism,
-but the question of whether such an accusation would have any basis in
-fact is left carefully unexamined.</para>
+<para>在那段文字中可以看到许多争议冰山的顶端。它提到"我们的信念"，但巧妙地避免明确说明这些信念到底是什么。对一些人来说，这可能是根据开放流程开发的代码将是更好的代码的信念；对另一些人来说，可能是所有信息都应该共享的信念。文中使用"盗窃"一词来指（大概是）非法复制&nbsp;&mdash;&nbsp;许多人反对这种用法，理由是如果原来的拥有者之后仍然拥有该物品，那就不是盗窃。文中诱人地暗示自由软件运动可能被错误地指责为反商业主义，但这样的指责是否有任何事实依据的问题被小心地留待未审查。</para>
 
-<para>None of which is to say that the OSI's rhetoric is inconsistent
-or misleading.  It wasn't.  Rather, it was an example of exactly what
-the OSI claimed had been missing from the free software movement: good
-marketing, where "good" means "viable in the business world."  The
-Open Source Initiative gave a lot of people exactly what they had been
-looking for&nbsp;&mdash;&nbsp;a vocabulary for talking about free software as a
-development methodology and business strategy, instead of as a moral
-crusade.</para>
+<para>这些都不是说 OSI 的修辞不一致或具有误导性。它不是。相反，它正是 OSI 声称自由软件运动一直缺少的东西的例子：良好的营销，其中"良好"意味着"在商业世界中可行"。开源促进会给许多人提供了他们一直在寻找的东西&nbsp;&mdash;&nbsp;一套谈论自由软件作为开发方法论和商业策略的词汇，而不是作为道德运动。</para>
 
 </sect2>
 
-<para>The appearance of the Open Source Initiative changed the
-landscape of free software.  It formalized a dichotomy that had long
-been unnamed, and in doing so forced the movement to acknowledge that
-it had internal politics as well as external.  The effect today is
-that both sides have had to find common ground, since most projects
-include programmers from both camps, as well as participants who don't
-fit any clear category.  This doesn't mean people never talk about
-moral motivations&nbsp;&mdash;&nbsp;lapses in the traditional "hacker ethic" are
-sometimes called out, for example.  But it is rare for a free software
-/ open source developer to openly question the basic motivations of
-others in a project.  The contribution trumps the contributor.  If
-someone writes good code, you don't ask them whether they do it for
-moral reasons, or because their employer paid them to, or because
-they're building up their r&eacute;sum&eacute;, or whatever.  You evaluate
-the contribution on technical grounds, and respond on technical
-grounds.  Even explicitly political organizations like the Debian
-project, whose goal is to offer a 100% free (that is, "free as in
-freedom") computing environment, are fairly relaxed about integrating
-with third-party non-free code and cooperating with programmers who don't share
-exactly the same goals.<footnote><para>See also <xref
-linkend="licenses-terminology"/>, which discusses how "free software"
-and "open source" are <emphasis>almost</emphasis> entirely synonymous
-when used to describe licensing and distribution
-terms.</para></footnote></para>
+<para>开源促进会的出现改变了自由软件的格局。它将一个长期未命名的二分法正式化，并在这样做的过程中迫使运动承认它既有内部政治也有外部政治。今天的效果是，双方都不得不找到共同点，因为大多数项目包括来自两个阵营的程序员，以及不适合任何明确类别的参与者。这并不意味着人们从不谈论道德动机&nbsp;&mdash;&nbsp;例如，传统"黑客精神"的失误有时会被指出。但自由软件/开源开发者公开质疑项目中其他人的基本动机是罕见的。贡献胜过贡献者。如果有人编写了好代码，你不会问他们是出于道德原因这样做，还是因为他们的雇主付钱让他们这样做，还是因为他们在建立自己的简历，或者其他什么。你在技术基础上评估贡献，并在技术基础上做出回应。即使是像 Debian 项目这样明确的政治组织，其目标是提供 100% 自由（即"作为自由的 free"）的计算环境，在与第三方非自由代码集成以及与不完全分享相同目标的程序员合作方面也相当宽松。<footnote><para>另见<xref
+linkend="licenses-terminology"/>，其中讨论了"自由软件"和"开源"在用于描述许可和分发条款时<emphasis>几乎</emphasis>完全同义。</para></footnote></para>
 
 </sect1>
 
 <!-- ========================== SECTION =========================== -->
 <sect1 id="today">
-<title>The Situation Today</title>
+<title>今日的状况</title>
 
-<para>When running a free software project, you won't need to talk
-about such weighty philosophical matters on a daily basis.
-Programmers will not insist that everyone else in the project agree
-with their views on all things (those who do insist on this quickly
-find themselves unable to work in any project).  But you do need to be
-aware that the question of "free" versus "open source" exists, partly
-to avoid saying things that might be inimical to some of the
-participants, and partly because understanding developers' motivations
-is key to managing a project well.</para>
+<para>在运营自由软件项目时，你不需要每天都谈论如此沉重的哲学问题。程序员不会坚持要求项目中的其他人在所有事情上都同意他们的观点（那些坚持这样做的人很快就会发现自己无法在任何项目中工作）。但你确实需要意识到"自由"与"开源"的问题存在，一方面是为了避免说出可能对某些参与者不利的话，另一方面是因为理解开发者的动机是管理好项目的关键。</para>
 
-<para>Free software is a culture by choice.  To operate successfully
-in it, you have to understand why people choose to be in it in the
-first place.  Coercive techniques don't work.  If people are unhappy in
-one project, they will just wander off to another one.  Free software
-is remarkable even among intentional communities for its lightness of
-investment.  Many of the people involved have never actually met the
-other participants face-to-face.  The normal conduits by which humans bond
-with each other and form lasting groups are narrowed down to a tiny
-channel: the written word, carried over electronic wires.  Because of
-this, it can take a long time for a cohesive and dedicated group to
-form.  Conversely, it's quite easy for a project to lose a potential
-participant in the first five minutes of acquaintanceship.  If a project
-doesn't make a good first impression, a newcomer may wait a long time
-before giving it a second chance.</para>
+<para>自由软件是一种选择的文化。要在其中成功运作，你必须理解人们首先为什么选择参与其中。强制性技术不起作用。如果人们在一个项目中不开心，他们只会漫步到另一个项目。自由软件即使在有意识社区中也因其投资的轻量性而引人注目。许多参与的人实际上从未面对面见过其他参与者。人类彼此建立联系并形成持久团体的正常渠道缩小为一个微小的通道：通过电子线路传递的文字。正因为如此，一个有凝聚力和专注的团体可能需要很长时间才能形成。相反，一个项目在最初五分钟的相识中失去潜在参与者是相当容易的。如果一个项目没有留下好的第一印象，新人可能会等很长时间才会给它第二次机会。</para>
 
-<para>This potential transience of relationships is perhaps the single most daunting task
-facing a new project.  What will persuade all these people to stick
-together long enough to produce something useful?  The answer to that
-question is complex enough to occupy the rest of this book, but if it
-had to be expressed in one sentence, it would be this:</para>
+<para>关系的这种潜在短暂性也许是新项目面临的最艰巨的单一任务。什么会说服所有这些人团结在一起足够长的时间来生产有用的东西？这个问题的答案复杂到足以占据本书的其余部分，但如果必须用一句话来表达，那就是：</para>
 
     <blockquote>
-      <para><emphasis>People should feel that their connection to a
-      project, and influence over it, is directly proportional to
-      their contributions.</emphasis></para> 
+      <para><emphasis>人们应该感到他们与项目的联系以及对项目的影响力与他们的贡献直接成正比。</emphasis></para> 
     </blockquote>
 
-<para>No class of developers, or potential developers, should ever
-feel discounted or discriminated against for non-technical
-reasons.<footnote><para>There can be cases where you discriminate
-against certain developers due to behavior which, though not related
-to their technical contributions, has the potential to harm the
-project.  That's reasonable: their behavior is relevant because in the
-long run it will have a negative effect on the project.  The varieties
-of human culture being what they are, I can give no single, succinct
-rule to cover all such cases, except to say that you should try to be
-welcoming to all potential contributors and, if you must discriminate,
-do so only on the basis of actual behavior in the project, not on the basis of a
-contributor's group affiliation or group identity.</para></footnote>
-Clearly, projects with corporate
-sponsorship and/or salaried developers need to be especially careful
-in this regard, as <xref linkend="money"/> discusses in detail.  Of
-course, this doesn't mean that if there's no corporate sponsorship
-then you have nothing to worry about.  Money is merely one of many
-factors that can affect the success of a project.  There are also
-questions of what programming languages to choose, what license, what development
-process, precisely what kind of infrastructure to set up, how to
-publicize the project's inception effectively, and much more.
-Starting a project out on the right foot is the topic of <link
-linkend="getting-started">the next chapter</link>.</para>
+<para>任何类别的开发者或潜在开发者都不应该因为非技术原因而感到被低估或被歧视。<footnote><para>有些情况下，你可能会因某些开发者的行为而歧视他们，尽管这些行为与他们的技术贡献无关，但有可能损害项目。这是合理的：他们的行为是相关的，因为从长远来看它会对项目产生负面影响。鉴于人类文化的多样性，我无法给出一个单一、简洁的规则来涵盖所有这些情况，只能说你应该努力欢迎所有潜在的贡献者，如果你必须歧视，只能基于项目中的实际行为，而不是基于贡献者的群体归属或群体身份。</para></footnote>显然，有企业赞助和/或带薪开发者的项目在这方面需要特别小心，正如<xref linkend="money"/>详细讨论的那样。当然，这并不意味着如果没有企业赞助，你就没有什么可担心的。金钱只是可能影响项目成功的众多因素之一。还有选择什么编程语言、什么许可证、什么开发流程、精确地设置什么样的基础设施、如何有效地宣传项目的启动等等问题。以正确的方式启动项目是<link
+linkend="getting-started">下一章</link>的主题。</para>
 
 </sect1>
 
