@@ -13,6 +13,46 @@ Use AI to translate the entire book
 原作者: Karl Fogel
 
 
+## 构建指南
+
+翻译内容完成后，可以借助项目内置的 Docker 化工具链把整本书打包为 HTML、EPUB 与 PDF。整个流程不会在宿主机上安装 DocBook/FOP，只需要 Docker。
+
+### 快速开始
+
+1. 确保本机已安装并启动 Docker Desktop（或其他兼容的 Docker 守护进程）。
+2. 在仓库根目录执行：
+
+   ```bash
+   ./scripts/build-book.sh zh
+   ```
+
+   脚本会：
+   - 根据 `docker/builder.Dockerfile` 构建一个包含 `xsltproc`、DocBook XSL、Apache FOP、fonts-noto-cjk 等依赖的容器镜像；
+   - 在容器里自动下载官方 `tools/`、`lang-makefile`、`styles.css`；
+   - 用当前 Git 提交信息生成 `book/zh/book.xml`；
+   - 依次运行 `html html-chunk epub pdf` 四个 `make` 目标，产出 `book/zh/producingoss.html`、`book/zh/html-chunk/`、`book/zh/producingoss.epub` 与各纸张尺寸的 PDF。
+
+### 可选参数
+
+- 切换语言：`./scripts/build-book.sh en zh` 会顺序构建 `book/en` 与 `book/zh`。
+- 覆盖构建目标：`BUILD_TARGETS="html epub" ./scripts/build-book.sh zh`。
+- 自定义镜像标签或 Dockerfile：通过 `POSS_BUILDER_IMAGE`、`POSS_DOCKERFILE` 环境变量控制。
+
+### GitHub Actions 自动构建
+
+`.github/workflows/build-book.yml` 会在相关文件变更或手动触发时运行同一套脚本，并把生成的 HTML/EPUB/PDF 作为构建工件（artifact）上传，方便下载或后续部署。
+
+### 构建产物位置
+
+所有生成文件位于 `book/<语言代码>/` 目录下：
+
+- 单页 HTML：`producingoss.html`
+- 分片 HTML 目录：`html-chunk/`
+- EPUB：`producingoss.epub`
+- 多种纸张规格的 PDF：`producingoss-*.pdf`
+
+如需发布到网站，可直接将 `html-chunk/` 与 `producingoss.html` 上传到静态站或 GitHub Pages。
+
 
 ## 一些相关的 prompt
 
@@ -60,7 +100,6 @@ You can use the ViewVC tool here just to check if your work is there or to see t
 所以我们要怎么做呢？要怎么拿到所有英文的源文件然后开始翻译工作？
 顺便帮我规划一下我们这个 git 仓库的 layout。目前我的规划是 root 放一些跟我们翻译工作相关的东西，书的源文件和翻译放在 book 目录下。
 ```
-
 
 
 

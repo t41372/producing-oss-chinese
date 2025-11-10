@@ -1,0 +1,15 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version='1.0'>
+  <xsl:import href="xsl/fo/docbook.xsl"/>
+  <xsl:import href="xsl/fo/profile-docbook.xsl"/>
+
+  <xsl:param name="alignment">left</xsl:param>
+  <xsl:param name="fop1.extensions" select="1" />
+  <xsl:param name="variablelist.as.blocks" select="1" />
+  <xsl:param name="profile.condition">treeware</xsl:param>
+  <xsl:param name="insert.xref.page.number">yes</xsl:param>
+
+  <xsl:param name="page.margin.inner">15mm</xsl:param>
+  <xsl:param name="page.margin.outer">10mm</xsl:param>
+  <xsl:param name="body.start.indent">5mm</xsl:param>
+  <xsl:param name="paper.type" select="'C5'"></xsl:param>
+</xsl:stylesheet>

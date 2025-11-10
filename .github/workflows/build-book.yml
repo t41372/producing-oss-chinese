@@ -1,0 +1,40 @@
+name: Build Book
+
+on:
+  push:
+    paths:
+      - 'book/zh/**'
+      - 'scripts/**'
+      - 'docker/**'
+      - '.github/workflows/build-book.yml'
+      - 'README.md'
+  pull_request:
+    paths:
+      - 'book/zh/**'
+      - 'scripts/**'
+      - 'docker/**'
+      - '.github/workflows/build-book.yml'
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  build-zh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build book (zh)
+        run: |
+          ./scripts/build-book.sh zh
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: producingoss-zh
+          path: |
+            book/zh/producingoss*.html
+            book/zh/producingoss*.epub
+            book/zh/producingoss-*.pdf
+            book/zh/html-chunk
+          if-no-files-found: error
