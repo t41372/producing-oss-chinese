@@ -47,289 +47,75 @@ url="https://opentechstrategies.com/archetypes"
 <para>将项目作为开源而不是封闭项目运营所需的额外努力并不大，但这些努力在一开始最为明显。而在一开始不那么明显的是收益，这些收益是相当可观的，并且随着项目的进展会变得更加清晰。当然，它给开发者带来深刻的个人满足感：在公开场合工作的乐趣，能够欣赏并被同行欣赏。许多开源开发者即使在更换雇主后，仍继续在同一项目上保持活跃&nbsp;&mdash;&nbsp;作为工作的一部分&nbsp;&mdash;&nbsp;这并非偶然。但也有重大的组织利益：你的组织参与的开源项目是一层膜，通过它，你的管理者和开发者会定期接触到组织层级之外的人和想法。这就像拥有参加会议的好处，但同时还能完成日常工作，而且不会产生差旅费用。<footnote><para>当然，他们偶尔参加真正的会议仍然是个好主意；见<xref
 linkend="meeting-in-person"/>。</para></footnote>在一个成功的开源项目中，这些好处一旦开始到来，就会大大超过成本。</para>
 
-<para>This book is a practical guide, not an anthropological study or
-a history.  However, a working knowledge of the origins of today's
-free software culture is an essential foundation for any practical
-advice.  A person who understands the culture can travel far and wide
-in the open source world, encountering many local variations in custom
-and dialect, yet still be able to participate comfortably and
-effectively everywhere.  In contrast, a person who does not understand
-the culture will find the process of organizing or participating in a
-project difficult and full of surprises.  Since the number of people
-developing free software continues to grow, there are many people in
-that latter category&nbsp;&mdash;&nbsp;this is largely a culture of recent
-immigrants, and will continue to be so for some time.  If you think
-you might be one of them, the next section provides background for
-discussions you'll encounter later, both in this book and on the
-Internet.  (On the other hand, if you've been working with open source
-for a while, you may already know a lot of its history, so feel free
-to skip the next section.)</para>
+<para>本书是一本实用指南，而不是人类学研究或历史。然而，了解当今自由软件文化的起源是任何实用建议的基本基础。理解这种文化的人可以在开源世界中自由穿梭，遇到许多习俗和方言的地方变体，但仍然能够在任何地方舒适有效地参与。相比之下，不理解这种文化的人会发现组织或参与项目的过程困难重重，充满惊喜。由于开发自由软件的人数持续增长，属于后一类的人很多&nbsp;&mdash;&nbsp;这在很大程度上是一种新移民的文化，并将在一段时间内继续如此。如果你认为自己可能是其中之一，下一节将为你在本书和互联网上稍后遇到的讨论提供背景。（另一方面，如果你已经从事开源工作有一段时间了，你可能已经知道很多历史，所以可以跳过下一节。）</para>
 
 </simplesect>
 
 <!-- ========================== SECTION =========================== -->
 <sect1 id="history">
-<title>History</title>
+<title>历史</title>
 
-<para>Software sharing has been around as long as software itself.  In
-the early days of computers, manufacturers felt that competitive
-advantages were to be had mainly in hardware innovation, and therefore
-didn't pay much attention to software as a business asset.  Many of
-the customers for these early machines were scientists or technicians,
-who were able to modify and extend the software shipped with the
-machine themselves.  Customers sometimes distributed their patches
-back not only to the manufacturer, but to other owners of similar
-machines.  The manufacturers often tolerated and even encouraged this:
-in their eyes, improvements to the software, from whatever source,
-just made the hardware more attractive to other potential
-customers.</para>
+<para>软件共享与软件本身一样古老。在计算机的早期，制造商认为竞争优势主要来自硬件创新，因此并不太关注软件作为商业资产。这些早期机器的许多客户是科学家或技术人员，他们能够自己修改和扩展随机器提供的软件。客户有时不仅将他们的 patch 分发回制造商，还分发给类似机器的其他所有者。制造商通常容忍甚至鼓励这种做法：在他们看来，来自任何来源的软件改进只会使硬件对其他潜在客户更具吸引力。</para>
 
-<para>Although this early period resembled today's free software
-culture in many ways, it differed in two crucial respects.  First,
-there was as yet little standardization of hardware&nbsp;&mdash;&nbsp;it was a
-time of flourishing innovation in computer design, but the diversity
-of computing architectures meant that everything was incompatible with
-everything else.  Software written for one machine would
-generally not work on another; programmers tended to acquire
-expertise in a particular architecture or family of architectures
-(whereas today they would be more likely to acquire expertise in a
-programming language or family of languages, confident that their
-expertise will be transferable to whatever computing hardware they
-happen to find themselves working with).  Because a person's expertise
-tended to be specific to one kind of computer, their accumulation of
-expertise had the effect of making that particular architecture
-computer more attractive to them and their colleagues.  It was
-therefore in the manufacturer's interests for machine-specific code
-and knowledge to spread as widely as possible.</para>
+<para>尽管这个早期时代在许多方面类似于今天的自由软件文化，但它在两个关键方面有所不同。首先，硬件标准化程度还很低&nbsp;&mdash;&nbsp;这是计算机设计蓬勃创新的时代，但计算架构的多样性意味着一切都与其他一切不兼容。为一台机器编写的软件通常无法在另一台机器上运行；程序员倾向于获得特定架构或架构系列的专业知识（而今天他们更有可能获得编程语言或语言系列的专业知识，确信他们的专业知识可以转移到他们碰巧使用的任何计算硬件上）。因为一个人的专业知识往往特定于一种计算机，他们的专业知识积累使得那种特定架构的计算机对他们和他们的同事更具吸引力。因此，让特定于机器的代码和知识尽可能广泛传播符合制造商的利益。</para>
 
-<para>Second, there was no widespread Internet.  Though there were
-fewer legal restrictions on sharing than there are today, the
-technical restrictions were greater: the means of getting data from
-place to place were inconvenient and cumbersome, relatively speaking.
-There were some small, local networks, good for sharing information
-among employees at the same lab or company.  But there remained
-barriers to overcome if one wanted to share with the world.  These
-barriers <emphasis>were</emphasis> overcome in many cases.  Sometimes
-different groups made contact with each other independently, sending
-disks or tapes through land mail, and sometimes the manufacturers
-themselves served as central clearing houses for patches.  It also
-helped that many of the early computer developers worked at
-universities, where publishing one's knowledge was expected.  But the
-physical realities of data transmission meant there was always an
-impedance to sharing, an impedance proportional to the distance (real
-or organizational) that the software had to travel.  Widespread,
-frictionless sharing, as we know it today, was not possible.</para>
+<para>其次，当时没有广泛的互联网。尽管共享的法律限制比今天少，但技术限制更大：相对而言，将数据从一个地方传输到另一个地方的方法既不方便又麻烦。有一些小型局域网，适合在同一实验室或公司的员工之间共享信息。但如果想与世界分享，仍然存在需要克服的障碍。在许多情况下，这些障碍<emphasis>确实</emphasis>被克服了。有时不同的团体独立地相互联系，通过陆地邮件发送磁盘或磁带，有时制造商本身充当 patch 的中央交换所。许多早期计算机开发人员在大学工作也有帮助，在那里发表自己的知识是预期的。但数据传输的物理现实意味着共享总是存在阻力，这种阻力与软件必须传播的距离（真实的或组织的）成正比。我们今天所知的广泛、无摩擦的共享是不可能的。</para>
 
 <!-- ========================== subsection ========================== -->
 <sect2 id="propertization">
-<title>The Rise of Proprietary Software and Free Software</title>
+<title>专有软件和自由软件的兴起</title>
 
-<para>As the industry matured, several interrelated changes occurred
-simultaneously.  The wild diversity of hardware designs gradually gave
-way to a few clear winners&nbsp;&mdash;&nbsp;winners through superior technology,
-superior marketing, or some combination of the two.  At the same time,
-and not entirely coincidentally, the development of so-called "high
-level" programming languages meant that one could write a program
-once, in one language, and have it automatically translated
-("compiled") to run on different kinds of computers.  The implications
-of this were not lost on the hardware manufacturers: a customer could
-now undertake a major software engineering effort without necessarily
-locking themselves into one particular computer architecture.  When
-this was combined with the gradual narrowing of performance
-differences between various computers, as the less efficient designs
-were weeded out, a manufacturer that treated its hardware as its only
-asset could look forward to a future of declining profit margins.  Raw
-computing power was becoming a fungible good, while software was
-becoming the differentiator.  Selling software, or at least treating
-it as an integral part of hardware sales, began to look like a good
-strategy.</para>
+<para>随着行业的成熟，几个相互关联的变化同时发生。硬件设计的狂野多样性逐渐让位于几个明显的赢家&nbsp;&mdash;&nbsp;通过卓越的技术、卓越的营销或两者的结合而获胜。与此同时，并非完全巧合的是，所谓"高级"编程语言的发展意味着可以用一种语言编写一次程序，然后自动翻译（"编译"）在不同类型的计算机上运行。硬件制造商没有忽视这一点的含义：客户现在可以进行重大的软件工程工作，而不必将自己锁定在一个特定的计算机架构上。当这与各种计算机之间性能差异的逐渐缩小相结合时，随着效率较低的设计被淘汰，将硬件视为唯一资产的制造商可能面临利润率下降的未来。原始计算能力正在成为可替代的商品，而软件正在成为差异化因素。销售软件，或至少将其视为硬件销售的组成部分，开始看起来是一个好策略。</para>
 
-<para>This meant that manufacturers had to start enforcing the
-copyrights on their code more strictly.  If users simply continued to
-share and modify code freely among themselves, they might
-independently reimplement some of the improvements now being sold as
-"added value" by the supplier.  Worse, shared code could get into the
-hands of competitors.  The irony is that all this was happening around
-the time the Internet was getting off the ground.  So just when truly
-unobstructed software sharing was finally becoming technically
-possible, changes in the computer business made it economically
-undesirable, at least from the point of view of any single company.
-The suppliers clamped down, either denying users access to the code
-that ran their machines, or insisting on non-disclosure agreements
-that made effective sharing impossible.</para>
+<para>这意味着制造商必须开始更严格地执行其代码的版权。如果用户继续在彼此之间自由地共享和修改代码，他们可能会独立地重新实现供应商现在作为"附加值"出售的一些改进。更糟糕的是，共享的代码可能落入竞争对手手中。讽刺的是，所有这一切都发生在互联网刚刚起步的时候。所以，就在真正无障碍的软件共享最终在技术上成为可能的时候，计算机业务的变化使其在经济上变得不可取，至少从任何单个公司的角度来看是这样。供应商采取了严厉措施，要么拒绝用户访问运行其机器的代码，要么坚持签署保密协议，使有效的共享变得不可能。</para>
 
 <sect3 id="history-conscious-resistance">
-<title>Conscious Resistance</title>
+<title>自觉的抵抗</title>
 
-<para>As the world of unrestricted code swapping slowly faded away, a
-counterreaction crystallized in the mind of at least one programmer.
-Richard Stallman worked in the Artificial Intelligence Lab at the
-Massachusetts Institute of Technology in the 1970s and early '80s,
-during what turned out to be a golden age and a golden location for
-code sharing.  The AI Lab had a strong "hacker
-ethic",<footnote><para>Stallman uses the word "hacker" in the sense of
-"someone who loves to program and enjoys being clever about it," not
-the somewhat newer meaning of "someone who breaks into
-computers."</para></footnote> and people were not only encouraged but
-expected to share whatever improvements they made to the system.  As
-Stallman wrote later:</para>
+<para>随着不受限制的代码交换世界慢慢消逝，至少在一位程序员的心中形成了一种反作用力。Richard Stallman 在 20 世纪 70 年代和 80 年代初在麻省理工学院的人工智能实验室工作，那是代码共享的黄金时代和黄金地点。AI 实验室有着强烈的"黑客精神"，<footnote><para>Stallman 使用"hacker"一词的意思是"热爱编程并乐于巧妙地做事的人"，而不是稍新的含义"入侵计算机的人"。</para></footnote>人们不仅被鼓励，而且被期望分享他们对系统所做的任何改进。正如 Stallman 后来写道：</para>
 
     <blockquote>
-      <para><emphasis>We did not call our software "free software",
-      because that term did not yet exist; but that is what it was.
-      Whenever people from another university or a company wanted to
-      port and use a program, we gladly let them.  If you saw someone
-      using an unfamiliar and interesting program, you could always
-      ask to see the source code, so that you could read it, change
-      it, or cannibalize parts of it to make a new program.
+      <para><emphasis>我们没有称我们的软件为"自由软件"，因为那个术语还不存在；但它就是那样的。每当来自其他大学或公司的人想要移植和使用程序时，我们都欣然同意。如果你看到有人使用一个不熟悉且有趣的程序，你总是可以要求查看 source code，这样你就可以阅读它、修改它，或者拆解其中的部分来制作新程序。
       </emphasis></para>
 
-      <para>(from <emphasis role="bold"><ulink
+      <para>(摘自 <emphasis role="bold"><ulink
       url="https://www.gnu.org/gnu/thegnuproject.html" >https://www.gnu.org/gnu/thegnuproject.html</ulink></emphasis>)</para>
     </blockquote>
 
 
-<para>This Edenic community collapsed around Stallman shortly after
-1980, when the changes that had been happening in the rest of the
-industry finally caught up with the AI Lab.  A startup company hired
-away many of the Lab's programmers to work on an operating system
-similar to what they had been working on at the Lab, only now under an
-exclusive license.  At the same time, the AI Lab acquired new
-equipment that came with a proprietary operating system.</para>
+<para>这个伊甸园般的社区在 1980 年后不久在 Stallman 周围崩溃了，当时其他行业发生的变化最终影响到了 AI 实验室。一家初创公司雇走了实验室的许多程序员，让他们开发一个类似于他们在实验室工作的操作系统，只不过现在是在排他性许可下。与此同时，AI 实验室获得了配备专有操作系统的新设备。</para>
 
-<para>Stallman saw the larger pattern in what was happening:</para>
+<para>Stallman 看到了正在发生的事情的更大模式：</para>
 
     <blockquote>
-      <para><emphasis>The modern computers of the era, such as the VAX
-      or the 68020, had their own operating systems, but none of them
-      were free software: you had to sign a nondisclosure agreement
-      even to get an executable copy.</emphasis> </para>
+      <para><emphasis>那个时代的现代计算机，如 VAX 或 68020，都有自己的操作系统，但它们都不是自由软件：即使只是获得一个可执行副本，你也必须签署保密协议。</emphasis> </para>
 
-      <para><emphasis>This meant that the first step in using a
-      computer was to promise not to help your neighbor. A cooperating
-      community was forbidden. The rule made by the owners of
-      proprietary software was, "If you share with your neighbor, you
-      are a pirate. If you want any changes, beg us to make them."
+      <para><emphasis>这意味着使用计算机的第一步是承诺不帮助你的邻居。合作的社区被禁止了。专有软件所有者制定的规则是："如果你与邻居分享，你就是海盗。如果你想要任何更改，请求我们来做。"
       </emphasis> </para>
 
     </blockquote>
 
-<para>By some quirk of personality, he decided to resist the trend.
-Instead of continuing to work at the now-decimated AI Lab, or taking a
-job writing code at one of the new companies, where the results of his
-work would be kept locked in a box, he resigned from the Lab and
-started the GNU Project and the Free Software Foundation (FSF).  The
-goal of GNU<footnote><para>It stands for "GNU's Not Unix", and the
-"GNU" in that expansion stands for an infinitely long
-footnote.</para></footnote> was to develop a completely free and open
-computer operating system and body of application software, in which
-users would never be prevented from hacking or from sharing their
-modifications.  He was, in essence, setting out to recreate what had
-been destroyed at the AI Lab, but on a world-wide scale and without
-the vulnerabilities that had made the AI Lab's culture susceptible to
-disintegration.</para>
+<para>出于某种性格特质，他决定抵制这一趋势。他没有继续在现已衰败的 AI 实验室工作，也没有接受在新公司之一编写代码的工作（那里他的工作成果会被锁在盒子里），而是从实验室辞职，创立了 GNU 项目和自由软件基金会（FSF）。GNU<footnote><para>它代表"GNU's Not Unix"（GNU 不是 Unix），而这个扩展中的"GNU"又代表一个无限长的脚注。</para></footnote>的目标是开发一个完全自由和开放的计算机操作系统和应用软件体系，在其中用户永远不会被阻止进行 hack 或分享他们的修改。从本质上讲，他着手重建曾经在 AI 实验室被摧毁的东西，但规模是全球性的，并且不存在那些使 AI 实验室文化易于瓦解的脆弱性。</para>
 
-<para>In addition to working on the new operating system, Stallman
-devised a copyright license whose terms guaranteed that his code would
-be perpetually free.  The GNU General Public License (GPL) is a clever
-piece of legal judo: it says that the code may be copied and modified
-without restriction, and that both copies and derivative works (i.e.,
-modified versions) must, if they are distributed at all, be
-distributed under the same license as the original, with no additional
-restrictions.</para>
+<para>除了开发新的操作系统，Stallman 还设计了一个版权许可证，其条款保证他的代码永远自由。GNU 通用公共许可证（GPL）是一个聪明的法律柔道：它规定代码可以无限制地复制和修改，并且副本和衍生作品（即修改版本）如果要分发的话，必须在与原始版本相同的许可证下分发，不得有任何额外限制。</para>
 
-<para>In effect, the GPL uses
-copyright law to achieve an effect opposite to that of traditional
-copyright: instead of limiting the software's distribution, it
-prevents <emphasis>anyone</emphasis>, even the author, from limiting
-distribution.  For Stallman, this was better than simply putting his
-code into the public domain.  If it were in the public domain, any
-particular copy of it could be incorporated into a proprietary program
-(as also sometimes happens to code under non-reciprocal<footnote><para>See <xref
-linkend="licenses-terminology" /> for more about "non-reciprocal" licensing
-versus GPL-style "reciprocal" or "copyleft" licensing.  The opensource.org FAQ is also
-a good resource on this&nbsp;&mdash;&nbsp;see <ulink
+<para>实际上，GPL 使用版权法来实现与传统版权相反的效果：它不是限制软件的分发，而是防止<emphasis>任何人</emphasis>（甚至作者本人）限制分发。对 Stallman 来说，这比简单地将代码放入公共领域要好。如果它在公共领域，它的任何特定副本都可能被纳入专有程序（这种情况有时也会发生在非互惠<footnote><para>关于"非互惠"许可与 GPL 风格的"互惠"或"copyleft"许可的更多信息，请参见<xref
+linkend="licenses-terminology" />。opensource.org 的 FAQ 也是一个很好的资源&nbsp;&mdash;&nbsp;见<ulink
 url="https://opensource.org/faq#copyleft"
->https://opensource.org/faq#copyleft</ulink>.</para></footnote> open
-source copyright licenses).  While such incorporation wouldn't in
-any way diminish the original code's continued availability, it would
-have meant that Stallman's efforts could benefit the
-enemy&nbsp;&mdash;&nbsp;proprietary software.  The GPL can be thought of as a form
-of protectionism for free software, because it prevents non-free
-software from taking full advantage of GPLed code.  The GPL and its
-relationship to other free software licenses are discussed in detail
-in <xref linkend="legal"/>.</para>
+>https://opensource.org/faq#copyleft</ulink>。</para></footnote>开源版权许可证下的代码）。虽然这种合并不会以任何方式减少原始代码的持续可用性，但这将意味着 Stallman 的努力可能有利于敌人&nbsp;&mdash;&nbsp;专有软件。GPL 可以被认为是自由软件的一种保护主义形式，因为它防止非自由软件充分利用 GPL 代码。GPL 及其与其他自由软件许可证的关系在<xref linkend="legal"/>中有详细讨论。</para>
 
-<para>With the help of many programmers, some of whom shared
-Stallman's ideology and some of whom simply wanted to see a lot of
-free code available, the GNU Project began releasing free replacements
-for many of the most critical components of an operating system.
-Because of the now-widespread standardization in computer hardware and
-software, it was possible to use the GNU replacements on otherwise
-non-free systems, and many people did.  The GNU text editor (Emacs)
-and C compiler (GCC) were particularly successful, gaining large and
-loyal followings not on ideological grounds, but simply on their
-technical merits.  By about 1990, GNU had produced most of a free
-operating system, except for the kernel&nbsp;&mdash;&nbsp;the part that the
-machine actually boots up and is responsible for managing memory,
-disk, and other system resources.</para>
+<para>在许多程序员的帮助下，其中一些人认同 Stallman 的意识形态，一些人只是想看到大量自由代码可用，GNU 项目开始为操作系统的许多最关键组件发布自由替代品。由于计算机硬件和软件现在已经广泛标准化，可以在本来非自由的系统上使用 GNU 的替代品，许多人这样做了。GNU 文本编辑器（Emacs）和 C compiler（GCC）特别成功，获得了大量忠实的追随者，不是基于意识形态理由，而仅仅是基于它们的技术优点。到 1990 年左右，GNU 已经生产了自由操作系统的大部分组件，除了内核&nbsp;&mdash;&nbsp;机器实际启动并负责管理内存、磁盘和其他系统资源的部分。</para>
 
-<para>Unfortunately, the GNU project had chosen a kernel design that
-turned out to be harder to implement than expected.  The ensuing delay
-prevented the Free Software Foundation from making the first release
-of an entirely free operating system.  The final piece was put into
-place instead by Linus Torvalds, a Finnish computer science student
-who, with the help of developers around the world, had completed a
-free kernel using a more conservative design.  He named it Linux, and
-when it was combined with the existing GNU programs and other free
-software (especially the X Windows System), the result was a
-completely free operating system.  For the first time, you could boot
-up your computer and do work without using any proprietary
-software.<footnote><para>Technically, Linux was not the first.  A free
-operating system for IBM-compatible computers, called 386BSD, had come
-out shortly before Linux.  However, it was a lot harder to get 386BSD
-up and running.  Linux made such a splash not only because it was
-free, but because it actually had a high chance of successfully
-booting your computer after you installed it.</para></footnote></para>
+<para>不幸的是，GNU 项目选择了一个内核设计，结果比预期的更难实现。随之而来的延迟阻止了自由软件基金会发布第一个完全自由的操作系统。最后一块拼图是由 Linus Torvalds 完成的，他是一名芬兰计算机科学学生，在世界各地开发者的帮助下，使用更保守的设计完成了一个自由内核。他将其命名为 Linux，当它与现有的 GNU 程序和其他自由软件（特别是 X Windows System）结合时，结果是一个完全自由的操作系统。第一次，你可以启动计算机并工作，而无需使用任何专有软件。<footnote><para>从技术上讲，Linux 不是第一个。一个用于 IBM 兼容计算机的自由操作系统，称为 386BSD，在 Linux 之前不久就出现了。然而，要让 386BSD 启动和运行要困难得多。Linux 之所以引起如此轰动，不仅因为它是自由的，还因为在安装后它实际上有很高的成功启动计算机的机会。</para></footnote></para>
 
-<para>Much of the software on this new operating system was not
-produced by the GNU project.  In fact, GNU wasn't even the only group
-working on producing a free operating system (for example, the code
-that eventually became NetBSD and FreeBSD was already under
-development by this time).  The importance of the Free Software
-Foundation was not only in the code they wrote, but in their political
-rhetoric.  By talking about free software as a cause instead of a
-convenience, they made it difficult for
-programmers <emphasis>not</emphasis> to have a political consciousness
-about it.  Even those who disagreed with the FSF had to engage the
-issue, if only to stake out a different position.  The FSF's
-effectiveness as propagandists lay in tying their code to a message,
-by means of the GPL and other texts.  As their code spread widely,
-that message spread as well.</para>
+<para>这个新操作系统上的许多软件并非由 GNU 项目生产。事实上，GNU 甚至不是唯一一个致力于生产自由操作系统的团体（例如，最终成为 NetBSD 和 FreeBSD 的代码在此时已经在开发中）。自由软件基金会的重要性不仅在于他们编写的代码，还在于他们的政治修辞。通过将自由软件作为一项事业而不是一种便利来谈论，他们使程序员很难<emphasis>不</emphasis>对此产生政治意识。即使是那些不同意 FSF 的人也必须参与这个问题，哪怕只是为了表明不同的立场。FSF 作为宣传者的有效性在于通过 GPL 和其他文本将他们的代码与一个信息联系起来。随着他们的代码广泛传播，这个信息也随之传播。</para>
 
 </sect3>
 
 <sect3 id="history-accidental-resistance">
-<title>Accidental Resistance</title>
+<title>无意的抵抗</title>
 
-<para>There were many other things going on in the nascent free
-software scene, however, and not all were as explicitly ideological as
-Stallman's GNU Project.  One of the most important was
-the <firstterm>Berkeley Software Distribution</firstterm>
-(<firstterm>BSD</firstterm>), a gradual re-implementation of the Unix
-operating system&nbsp;&mdash;&nbsp;which up until the late 1970's had been a
-loosely proprietary research project at AT&amp;T&nbsp;&mdash;&nbsp;by programmers
-at the University of California at Berkeley.  The BSD group did not
-make any overt political statements about the need for programmers to
-band together and share with one another, but they
-<emphasis>practiced</emphasis> the idea with flair and
-enthusiasm, by coordinating a massive distributed development effort
-in which the Unix command-line utilities and code libraries, and
-eventually the operating system kernel itself, were rewritten from
-scratch mostly by volunteers.  The BSD project became an early example
-of non-ideological free software development, and also served as a
-training ground for many developers who would go on to remain active
-in the open source world.</para>
+<para>然而，在新兴的自由软件场景中还发生了许多其他事情，并非所有事情都像 Stallman 的 GNU 项目那样明确具有意识形态性。其中最重要的之一是<firstterm>伯克利软件发行版</firstterm>（<firstterm>BSD</firstterm>），这是对 Unix 操作系统的逐步重新实现&nbsp;&mdash;&nbsp;直到 20 世纪 70 年代后期，Unix 一直是 AT&amp;T 的一个松散专有研究项目&nbsp;&mdash;&nbsp;由加州大学伯克利分校的程序员完成。BSD 团队没有就程序员需要团结起来相互分享发表任何公开的政治声明，但他们以热情和风格<emphasis>实践</emphasis>了这个想法，通过协调一个大规模的分布式开发工作，其中 Unix 命令行工具和代码库，以及最终操作系统内核本身，主要由志愿者从头重写。BSD 项目成为非意识形态自由软件开发的早期例子，也为许多后来继续活跃在开源世界的开发者提供了训练场。</para>
 
 <para>Another crucible of cooperative development was the <firstterm>X
 Window System</firstterm>, a free, network-transparent graphical
