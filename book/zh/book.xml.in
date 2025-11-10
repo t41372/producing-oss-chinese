@@ -15,10 +15,10 @@
 <!ENTITY copyright  SYSTEM "copy.xml">
 ]>
 
-<book id="poss" lang="en">
-<title>Producing Open Source Software</title>
-<subtitle>How to Run a Successful Free Software Project</subtitle>
-<subtitle>2nd Edition</subtitle>
+<book id="poss" lang="zh">
+<title>生产开源软件</title>
+<subtitle>如何运营一个成功的自由软件项目</subtitle>
+<subtitle>第二版</subtitle>
 
 <bookinfo>
   <!-- For some reason, the cdata in the 'edition' element doesn't

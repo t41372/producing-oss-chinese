@@ -1,224 +1,90 @@
 <preface id="preface">
-<title>Preface</title>
-  
+<title>序言</title>
+
 <!-- ======================== SECTION ============================== -->
 <sect1 id="why">
-<title>Why Write This Book?</title>
+<title>为什么要写这本书？</title>
 
-<para>At parties, people no longer give me a blank stare when I tell
-them I work in open source software. "Oh, yes&nbsp;&mdash;&nbsp;like Linux?"
-they say. I nod eagerly in agreement. "Yes, exactly! That's what I
-do." It's nice not to be completely fringe anymore. In the past, the
-next question was usually fairly predictable: "How do you make money
-doing that?" To answer, I'd summarize the economics of free software:
-that there are organizations in whose interest it is to have certain
-software exist, but that they don't need to sell copies, they just
-want to make sure the software is available and maintained, as a tool
-instead of as a rentable monopoly.</para>
+<para>在聚会上，当我告诉别人我从事开源软件工作时，他们不再一脸茫然。"哦，知道&nbsp;&mdash;&nbsp;就像 Linux？"他们会说。我热情地点头："对，没错！我做的就是这个。"感觉很不错，不再是完全的边缘人物了。过去，接下来的问题通常都能猜到："你怎么靠这个挣钱？"我会回答说，总结一下自由软件的经济学：有一些组织需要某些软件存在，这符合它们的利益，但它们不需要出售软件拷贝，只是想确保软件可用并得到维护——作为一种工具，而不是可出租的垄断品。</para>
 
-<para>The next question is not always about money, though. The
-business case for open source software<footnote><para>The terms "open
-source software" and "free software" are essentially synonymous in
-this context; they are discussed more in <xref
-linkend="free-vs-open-source"/>.</para></footnote> is no longer so
-mysterious, and even non-programmers already understand&nbsp;&mdash;&nbsp;or at
-least are not surprised&nbsp;&mdash;&nbsp;that there are people employed at it
-full time. Instead, the next question is often "<emphasis>Oh, what's
-that like?</emphasis>"</para>
+<para>不过，接下来的问题不总是关于钱。开源软件<footnote><para>"开源软件（open source software）"和"自由软件（free software）"这两个术语在此语境下本质上是同义的；更多讨论见 <xref
+linkend="free-vs-open-source"/>。</para></footnote>的商业案例不再那么神秘，即使是非程序员也已经理解&nbsp;&mdash;&nbsp;或者至少不会感到惊讶&nbsp;&mdash;&nbsp;有人全职从事这项工作。相反，接下来的问题常常是："<emphasis>哦，那是什么感觉？</emphasis>"</para>
 
-<para>I didn't have a satisfactory answer ready, and the harder I
-tried to come up with one, the more I realized how complex a topic it
-really is. Running a free software project is not exactly like
-running a business (imagine having to constantly negotiate the nature
-of your product with a group of random people of diverse motivations
-and interests, most of whom you've never met!).
-Nor, for various reasons, is it exactly like running a
-traditional non-profit organization, nor a government. It has
-similarities to all these things, but I have slowly come to the
-conclusion that free software is <foreignphrase>sui
-generis</foreignphrase>. There are many things with which it can be
-usefully compared, but none with which it can be equated. Indeed,
-even the assumption that free software projects can be "run" is a
-stretch. A free software project can be <emphasis>started</emphasis>,
-and it can be influenced by interested parties.
-But its assets cannot be made the property of any single owner, and as
-long as there are people somewhere&nbsp;&mdash;&nbsp;anywhere&nbsp;&mdash;&nbsp;interested in
-continuing it, it can never be unilaterally shut down. Everyone has
-infinite power; everyone has no power. It's an interesting situation.</para>
+<para>我还没准备好令人满意的答案，而且越想给出答案，就越意识到这个话题有多复杂。运营一个自由软件项目不完全像经营一家企业（想象一下，你得不断与一群动机和兴趣各异的陌生人协商产品的性质，而且这些人大多数你从未谋面！）。出于各种原因，它也不完全像运营传统的非营利组织，也不像管理政府。它与所有这些事物都有相似之处，但我慢慢得出结论：自由软件是<foreignphrase>独一无二的（sui generis）</foreignphrase>。可以拿很多东西来类比，但没有什么能与之等同。事实上，甚至认为自由软件项目可以被"运营"都是一种牵强的说法。自由软件项目可以被<emphasis>启动</emphasis>，可以被相关方影响。但它的资产不能成为任何单一所有者的财产，只要在某个地方&nbsp;&mdash;&nbsp;任何地方&nbsp;&mdash;&nbsp;有人对继续它感兴趣，就永远无法单方面关闭它。每个人都有无限的权力；每个人又都没有权力。这是一种有趣的局面。</para>
 
-<para>That is why I wanted to write this book in the first place, and,
-a decade later, wanted to update it. Free software projects have
-evolved a distinct culture, an ethos in which the liberty to make the
-software do anything one wants is a central tenet. Yet the result of
-this liberty is not a scattering of individuals each going their own
-separate way with the code, but enthusiastic collaboration and frequent compromise. 
-Indeed, competence at cooperation itself is one of the most highly valued
-skills in free software. To manage these projects is to engage in a
-kind of hypertrophied cooperation, where one's ability not only to
-work with others but to come up with new ways of working together can
-result in tangible benefits to the software and the community that develops it. This book attempts to
-describe the techniques by which this may be done. It is by no means
-complete, but it is at least a beginning.</para>
+<para>这就是我最初想写这本书的原因，十年后，又想更新它。自由软件项目已经发展出一种独特的文化，一种精神气质，其中让软件做任何你想做的事情的自由是核心信条。然而这种自由的结果不是各自为政、各走各路的一盘散沙，而是热情的协作与频繁的妥协。事实上，协作能力本身就是自由软件中最受重视的技能之一。管理这些项目就是参与一种超强度的协作，在这种协作中，一个人不仅要能与他人共事，还要能想出新的共事方式，从而为软件及其开发社区带来实实在在的好处。本书试图描述实现这一目标的技术。它绝不完整，但至少是一个开始。</para>
 
-<para>Good free software is a worthy goal in itself, and I hope that
-readers who come looking for ways to achieve it will be satisfied with
-what they find here. But beyond that I also hope to convey something
-of the sheer pleasure to be had from working with a motivated team of
-open source developers, and from interacting with users in the
-wonderfully direct way that open source encourages. Participating in
-a successful free software project is a deep pleasure, and ultimately
-that's what keeps the whole system going.</para>
+<para>优秀的自由软件本身就是一个值得追求的目标，我希望那些寻找实现方法的读者能对这里的内容感到满意。但除此之外，我还希望传达一些与积极主动的开源开发者团队共事的纯粹乐趣，以及以开源所鼓励的那种美妙而直接的方式与用户互动的快乐。参与一个成功的自由软件项目是一种深层次的愉悦，归根结底，这正是维持整个系统运转的动力。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="audience">
-<title>Who Should Read This Book?</title>
+<title>谁应该读这本书？</title>
 
-<para>This book is meant for managers and software developers who are
-considering starting an open source project, or who have started one
-and are wondering what to do now. It should also be helpful for
-people who just want to participate in an open source project but have
-never done so before.</para>
+<para>本书面向正在考虑启动开源项目的管理者和软件开发者，或者已经启动了一个项目但不知道下一步该做什么的人。对于那些只是想参与开源项目但以前从未这样做过的人来说，本书也会有所帮助。</para>
 
-<para>The reader need not be a programmer, but should know basic
-software engineering concepts such as APIs, source code, compilers, and
-patches.</para>
+<para>读者不必是程序员，但应该了解基本的软件工程概念，例如 API、source code、compiler 和 patch。</para>
 
-<para>Prior experience with open source software, as either a user or
-a developer, is not necessary. Those who have worked in free software
-projects before will probably find at least some parts of the book a
-bit obvious, and may want to skip those sections. Because there's
-such a potentially wide range of audience experience, I've made an
-effort to label sections clearly, and to say when something can be
-skipped by those already familiar with the material.</para>
+<para>不需要有使用或开发开源软件的经验。那些以前参与过自由软件项目的人可能会发现本书的某些部分有点显而易见，可能想跳过这些章节。由于读者的经验范围可能很广，我努力清晰地标记各个章节，并说明哪些内容可以被已经熟悉材料的人跳过。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="sources">
-<title>Sources</title>
+<title>资料来源</title>
 
-<para>Much of the raw material for the first edition of this book came
-from five years of working with the Subversion project (<ulink
-url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>).
-Subversion is an open source
-version control system, written from scratch, which was intended to (and did for a while) replace
-CVS as the <foreignphrase>de facto</foreignphrase> version control
-system of choice in the open source
-community.<footnote><para>Subversion was eventually supplanted by Git,
-one of several systems that implement "distributed version control",
-a style of working that is better suited to collaborative development
-than Subversion's centralized model.</para></footnote> The project was
-started by my employer, CollabNet (<ulink
-url="http://www.collab.net/" >http://www.collab.net/</ulink>), in early 2000,
-and thank goodness
-CollabNet understood right from the start how to run it as a truly
-collaborative, distributed effort. We got a lot of 
-developer buy-in early on; today the majority of developers on the
-project are not CollabNet employees.</para>
+<para>本书第一版的大部分原始素材来自我在 Subversion 项目（<ulink
+url="http://subversion.apache.org/">http://subversion.apache.org/</ulink>）工作的五年经历。Subversion 是一个从零开始编写的开源版本控制系统，旨在（并且在一段时间内确实做到了）取代 CVS，成为开源社区中<foreignphrase>事实上的（de facto）</foreignphrase>首选版本控制系统。<footnote><para>Subversion 最终被 Git 取代，Git 是实现"分布式版本控制"的几个系统之一，这种工作方式比 Subversion 的集中式模型更适合协作开发。</para></footnote>该项目由我的雇主 CollabNet（<ulink
+url="http://www.collab.net/" >http://www.collab.net/</ulink>）于 2000 年初启动，谢天谢地，CollabNet 从一开始就明白如何将其作为真正的协作式分布式项目来运营。我们很早就获得了许多开发者的认同；如今项目中的大多数开发者都不是 CollabNet 的员工。</para>
 
-<para>Subversion is in many ways a classic example of an open source
-project, and I ended up drawing on it more heavily than I originally
-expected. This was partly a matter of convenience: whenever I needed
-an example of a particular phenomenon, I could usually call one up
-from Subversion right off the top of my head. But it was also a
-matter of verification. Although I am involved in many other free software
-projects to varying degrees, and talk to colleagues
-involved in many more, one quickly realizes when writing for print
-that all assertions need to be fact-checked. I didn't want to make
-statements about events in other projects based only on what I could
-read in their public discussion archives. If someone were to try
-that with Subversion, I knew, she'd be right about half the time and
-wrong the other half. So when drawing inspiration or examples from a
-project with which I didn't have direct experience, I tried to first
-talk to an informant there, someone I could trust to explain what was
-really going on.</para>
+<para>Subversion 在许多方面都是开源项目的经典范例，我最终使用它的频率超出了最初的预期。这部分出于方便：每当需要某个特定现象的例子时，我通常可以立即从 Subversion 中想到一个。但这也是出于验证的需要。尽管我在不同程度上参与了许多其他自由软件项目，也与参与更多项目的同事交流，但在为出版物写作时，人们很快就会意识到所有的论断都需要核实。我不想仅凭在公共讨论档案中读到的内容就对其他项目的事件发表声明。我知道，如果有人对 Subversion 这样做，她大约一半时间是对的，另一半时间是错的。因此，当从我没有直接经验的项目中汲取灵感或例子时，我试图先与那里的知情人交谈，找一个我可以信任的人来解释真正发生的事情。</para>
 
-<para>While Subversion was my full time job from 2000-2006, I've been
-involved in free software for more than twenty-five years. Other projects and organizations that have influenced
-this book include:</para>
+<para>虽然 Subversion 是我在 2000 至 2006 年的全职工作，但我参与自由软件已经超过二十五年了。影响本书的其他项目和组织包括：</para>
 
 <itemizedlist>
-  <listitem><para>The GNU Emacs text editor project at the Free
-            Software Foundation.</para>
+  <listitem><para>自由软件基金会的 GNU Emacs 文本编辑器项目。</para>
   </listitem>
-  <listitem><para>Concurrent Versions System (CVS), which I worked on
-            intensely in 1994&ndash;1995 with Jim Blandy and was
-            involved with intermittently for a few years afterwards.</para>
+  <listitem><para>并发版本系统（CVS），我在 1994-1995 年与 Jim Blandy 一起密集开发，之后的几年间断性地参与。</para>
   </listitem>
-  <listitem><para>The collection of open source projects known as the
-            Apache Software Foundation, especially the Apache Portable
-            Runtime (APR) and Apache HTTP Server.</para> 
+  <listitem><para>被称为 Apache 软件基金会的一系列开源项目，特别是 Apache Portable Runtime（APR）和 Apache HTTP Server。</para> 
   </listitem>
-  <listitem><para>The Launchpad.net project at Canonical, Ltd.</para> 
+  <listitem><para>Canonical 公司的 Launchpad.net 项目。</para> 
   </listitem>
-  <listitem><para>Code for America and O'Reilly Media, which gave me
-            an inside view on open source civic technology development
-            starting in 2010, and kindly kept me in the loop after I
-            became a full-time consultant at Open Tech Strategies, LLC
-            around 2012.</para>
+  <listitem><para>Code for America 和 O'Reilly Media，让我从 2010 年开始对开源公民技术开发有了内部视角，并在我 2012 年左右成为 Open Tech Strategies 公司的全职顾问后，依然友好地让我保持联系。</para>
   </listitem>
-  <listitem><para>The many open source anti-surveillance and
-            censorship-circumvention tools supported by the Open
-            Internet Tools Project (OpenITP.org) and by the Open
-            Technology Institute at the New America Foundation.</para>
+  <listitem><para>Open Internet Tools Project（OpenITP.org）和 New America Foundation 的 Open Technology Institute 支持的许多开源反监控和反审查规避工具。</para>
   </listitem>
-  <listitem><para>Checkbook NYC, the municipal financial transparency
-            software released by the New York City Office of the
-            Comptroller.</para>
+  <listitem><para>Checkbook NYC，纽约市审计长办公室发布的市政财政透明软件。</para>
   </listitem>
-  <listitem><para>The Arches Project, an open source geospatial web
-            application for inventorying and helping protect cultural
-            heritage sites (e.g., historic buildings, archaeological
-            sites, etc), created by the Getty Conservation Institute
-            and World Monuments Fund.</para>
+  <listitem><para>Arches Project，一个用于清点和帮助保护文化遗产地点（如历史建筑、考古遗址等）的开源地理空间 Web 应用程序，由 Getty Conservation Institute 和 World Monuments Fund 创建。</para>
   </listitem>
-  <listitem><para>OpenOffice.org / LibreOffice.org, the Berkeley
-            Database from Sleepycat, and MySQL Database; I have not been
-            involved with these projects personally, but have observed
-            them and, in some cases, talked to people there.</para> 
+  <listitem><para>OpenOffice.org / LibreOffice.org、Sleepycat 的 Berkeley Database 和 MySQL Database；我没有亲自参与这些项目，但观察了它们，在某些情况下与那里的人交谈过。</para> 
   </listitem>
-  <listitem><para>Likewise various projects at the Mozilla Corporation,
-            including but not limited to the Firefox web browser.</para>
+  <listitem><para>同样，Mozilla Corporation 的各种项目，包括但不限于 Firefox 网页浏览器。</para>
   </listitem>
-  <listitem><para>GNU Debugger (GDB) (likewise).</para>
+  <listitem><para>GNU Debugger（GDB）（同上）。</para>
   </listitem>
-  <listitem><para>The Debian Project (likewise).</para>
+  <listitem><para>Debian 项目（同上）。</para>
   </listitem>
-  <listitem><para>The Hypothes.is Project (likewise).</para>
+  <listitem><para>Hypothes.is 项目（同上）。</para>
   </listitem>
 </itemizedlist>
 
-<para>This is far from a complete list. Many of the client
-projects I work with through our consulting practice at Open Tech
-Strategies, LLC have also influenced this book, and like most open source
-programmers, I keep loose tabs on a variety of different projects of
-interest to me, just to have a sense of the general state of things.
-I haven't named all of them here, but they are mentioned in the text
-where appropriate.</para>
+<para>这远非完整清单。我通过 Open Tech Strategies 公司的咨询实践合作的许多客户项目也影响了本书，像大多数开源程序员一样，我会松散地关注各种我感兴趣的不同项目，只是为了了解整体状况。我没有在这里一一列举，但会在正文中适当提及它们。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="acknowledgements">
-<title>Acknowledgements</title>
+<title>致谢</title>
 
 <sect2 id="acknowledgements-1st-ed">
-<title>For the first edition (2005)</title>
+<title>第一版（2005 年）</title>
 
-<para>This book took four times longer to write than I thought it
-would, and for much of that time felt rather like a grand piano
-suspended above my head wherever I went. Without help from many
-people, I would not have been able to complete it while staying
-sane.</para>
+<para>这本书花费的时间是我预想的四倍，在大部分时间里，我感觉就像一架三角钢琴悬在我头顶，无论走到哪里都挥之不去。如果没有许多人的帮助，我不可能在保持理智的同时完成它。</para>
 
-<para>Andy Oram, my editor at O'Reilly, was a writer's dream. Aside
-from knowing the field intimately (he suggested many of the topics),
-he has the rare gift of knowing what one meant to say and helping one
-find the right way to say it. It has been an honor to work with him.
-Thanks also to Chuck Toporek for steering this proposal to Andy right
-away.</para>
+<para>我在 O'Reilly 的编辑 Andy Oram 是作家的梦想。除了对这个领域了如指掌（他提出了许多主题）之外，他还有一种罕见的天赋，能够知道你想说什么并帮助你找到正确的表达方式。能与他合作是我的荣幸。也要感谢 Chuck Toporek 立即将这个提案引导给 Andy。</para>
 
 <para>Brian Fitzpatrick reviewed almost all of the material as I wrote
 it, which not only made the book better, but kept me writing when I
@@ -324,7 +190,7 @@ about flying.</para>
 </sect2>
 
 <sect2 id="acknowledgements-2nd-ed">
-<title>For the second edition (2023)</title>
+<title>第二版（2023 年）</title>
 
 <para>The acknowledgements for the second edition of this book include
 more people and, undoubtedly, more unintentional omissions. If your
@@ -899,7 +765,7 @@ Tina,
 and Thorsten Behrens.
 </para>
 
-<para>Thank you all.</para>
+<para>感谢大家。</para>
 
 </sect2>
 
@@ -907,13 +773,9 @@ and Thorsten Behrens.
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="disclaimer">
-<title>Disclaimer</title>
+<title>免责声明</title>
 
-<para>The thoughts and opinions expressed in this book are my own.
-They do not necessarily represent the views of clients, past
-employers, partners, or the open source projects discussed herein.
-Any errors that remain despite the efforts of the people mentioned in
-the acknowledgements are my own as well.</para>
+<para>本书中表达的想法和观点仅代表我个人。它们不一定代表客户、前雇主、合作伙伴或本书讨论的开源项目的观点。尽管致谢中提到的人做出了努力，任何仍然存在的错误也都是我自己的责任。</para>
 
 </sect1>
 
