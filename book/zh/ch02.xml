@@ -1,135 +1,41 @@
 <chapter id="getting-started">
 
-<title>Getting Started</title>
+<title>开始</title>
 
 <simplesect>
 
-<para>Starting a free software project is a twofold task.  The
-software needs to acquire users, and to acquire developers.  These two
-needs are not necessarily in conflict, but the interaction between
-them adds some complexity to a project's initial presentation.  Some
-information is useful for both audiences, some is useful only for one
-or the other.  Both kinds of information should subscribe to the
-<firstterm>principle of scaled presentation</firstterm>: the degree of detail presented at
-each stage should correspond to the amount of time and effort put in
-by the reader at that stage.  More effort should always result in more
-reward.  When effort and reward do not correlate reliably, people
-lose faith and stop investing effort.</para>
+<para>启动一个自由软件项目是一项双重任务。软件需要获得用户，也需要获得开发者。这两个需求不一定冲突，但它们之间的相互作用给项目的初始展示增加了一些复杂性。有些信息对两类受众都有用，有些则只对其中一类有用。两类信息都应该遵循<firstterm>分级展示原则</firstterm>：在每个阶段展示的详细程度应该与读者在该阶段投入的时间和精力相对应。更多的努力应该总是带来更多的回报。当努力和回报不能可靠地关联时，人们会失去信心并停止投入努力。</para>
 
-<para>The corollary to this is that <emphasis>appearances
-matter</emphasis>.  Programmers, in particular, often don't like to
-believe this.  Their love of substance over form is almost a point of
-professional pride.  It's no accident that so many programmers exhibit
-an antipathy for marketing and public relations work, nor that
-professional graphic designers are often horrified at the designs
-programmers come up with on their own.</para>
+<para>由此推论是<emphasis>外观很重要</emphasis>。程序员特别不喜欢相信这一点。他们对实质重于形式的热爱几乎是一种职业自豪。这么多程序员对营销和公共关系工作表现出反感，以及专业平面设计师常常对程序员自己设计的作品感到震惊，都不是偶然的。</para>
 
-<para>This is a pity, because there are situations where form
-<emphasis>is</emphasis> substance, and project presentation is one of
-them.  For example, the very first thing a visitor learns about a
-project is what its home page looks like.  This information is
-absorbed before any of the actual content on the site is
-comprehended&nbsp;&mdash;&nbsp;before any of the text has been read or links
-clicked on.  However unjust it may be, people cannot stop themselves
-from forming an immediate first impression.  The site's appearance
-signals what kind of care was taken in organizing the project's
-presentation.  Humans have extremely sensitive antennae for detecting
-the investment of care.  Most of us can tell in one quick glance whether a
-home page was thrown together quickly or was given serious thought.
-This is the first piece of information your project puts out, and the
-impression it creates will carry over to the rest of the project by
-association.</para>
+<para>这很可惜，因为有些情况下形式<emphasis>就是</emphasis>实质，项目展示就是其中之一。例如，访问者了解项目的第一件事就是其主页的外观。这些信息在网站上的任何实际内容被理解之前就被吸收了&nbsp;&mdash;&nbsp;在阅读任何文字或点击任何链接之前。无论多么不公平，人们都无法阻止自己形成即时的第一印象。网站的外观传达了在组织项目展示时投入了什么样的关怀。人类对检测关怀投入有极其敏感的天线。我们大多数人可以一眼就看出主页是匆忙拼凑的还是经过认真思考的。这是你的项目发出的第一条信息，它创造的印象会通过联想延续到项目的其余部分。</para>
 
-<para>Thus, while much of this chapter talks about the content your
-project should start out with, remember that its look and feel matter
-too.  Because the project web site has to work for two different types
-of visitors&nbsp;&mdash;&nbsp;users and developers&nbsp;&mdash;&nbsp;special attention
-must be paid to clarity and directedness.  Although this is not the
-place for a general treatise on web design, one principle is important
-enough to deserve mention, particularly when the site serves multiple
-(if overlapping) audiences: people should have a rough idea where a
-link goes before clicking on it.  For example, it should be obvious
-<emphasis>from looking at the links</emphasis> to user documentation
-that they lead to user documentation, and not to, say, developer
-documentation.  Running a project is partly about supplying
-information, but it's also about supplying comfort.  The mere presence
-of certain standard offerings, in expected places, reassures users and
-developers who are deciding whether they want to get involved.  It
-says that this project has its act together, has anticipated the
-questions people will ask, and has made an effort to answer them in a
-way that requires minimal exertion on the part of the asker.  By
-giving off this aura of preparedness, the project sends out a message:
-"Your time will not be wasted if you get involved," which is exactly
-what people need to hear.</para>
+<para>因此，虽然本章大部分内容讨论的是项目应该以什么内容开始，但请记住其外观和感觉也很重要。因为项目网站必须为两种不同类型的访问者&nbsp;&mdash;&nbsp;用户和开发者&nbsp;&mdash;&nbsp;服务，必须特别注意清晰度和针对性。虽然这里不是讨论网页设计的一般论文的地方，但有一个原则足够重要，值得一提，特别是当网站服务于多个（即使是重叠的）受众时：人们在点击链接之前应该大致知道链接指向哪里。例如，<emphasis>从查看链接</emphasis>应该明显看出用户文档的链接指向用户文档，而不是开发者文档。运营项目部分是关于提供信息，但也是关于提供舒适感。某些标准内容仅仅出现在预期位置，就能让正在决定是否参与的用户和开发者感到安心。这表明这个项目井然有序，预见了人们会问的问题，并且努力以要求提问者付出最少努力的方式回答这些问题。通过散发这种准备就绪的气氛，项目发出一个信息："如果你参与，你的时间不会被浪费"，这正是人们需要听到的。</para>
 
 <sidebar id="user-vs-developer">
-<title>What We Mean by Users and Developers</title>
-<para>The terms <firstterm>user</firstterm> and
-<firstterm>developer</firstterm> here refer to someone's relationship
-to the open source software project in question, not to her identity
-in the world at large.</para>
+<title>我们所说的用户和开发者的含义</title>
+<para>这里的<firstterm>用户</firstterm>和<firstterm>开发者</firstterm>这两个术语指的是某人与所讨论的开源软件项目的关系，而不是她在整个世界中的身份。</para>
 
-<para>For example, if the open source project is a Javascript library
-intended for use in web development, and someone is using the library
-as part of her work building web sites, then she is a "user" of the
-library (even though professionally her title might be "software
-developer").  But if she starts contributing bugfixes and enhancements
-back <firstterm>upstream</firstterm>&nbsp;&mdash;&nbsp;that is, back into the project
-&nbsp;&mdash;&nbsp;then, to the extent that she becomes involved in the project's
-maintenance, she is also a "developer" of the project.</para>
+<para>例如，如果开源项目是一个用于 Web 开发的 Javascript 库，而某人正在使用该库作为其构建网站工作的一部分，那么她就是该库的"用户"（即使在职业上她的头衔可能是"软件开发者"）。但如果她开始将 bugfix 和增强功能贡献回<firstterm>上游</firstterm>&nbsp;&mdash;&nbsp;即回到项目中&nbsp;&mdash;&nbsp;那么，在她参与项目维护的程度上，她也是该项目的"开发者"。</para>
 
-<para>It's common for developers in an open source projects to be
-users as well, but it's not always the case.  Especially with large
-projects started by organizations to meet enterprise-scale software
-needs, the developers may not always be direct users of the software,
-although they are usually somehow connected with the team that deploys that
-software within their organization.</para>
+<para>开源项目中的开发者通常也是用户，但并非总是如此。特别是对于组织为满足企业级软件需求而启动的大型项目，开发者可能并不总是软件的直接用户，尽管他们通常以某种方式与在其组织内部署该软件的团队有联系。</para>
 
-<para>In projects meant primarily for programmers, the boundary
-between user and developer is very porous: <emphasis>every</emphasis>
-user is a potential developer.  But even in projects meant for
-non-technical people, some percentage of the users are still potential
-developers.  Open source projects should be run in such a way as to
-make that transition available to anyone who's interested.</para>
+<para>在主要面向程序员的项目中，用户和开发者之间的界限非常多孔：<emphasis>每个</emphasis>用户都是潜在的开发者。但即使在面向非技术人员的项目中，仍有一定比例的用户是潜在的开发者。开源项目应该以让任何感兴趣的人都能进行这种转变的方式来运营。</para>
 </sidebar>
 
-<para>If you use a "canned hosting" site (see <xref
-linkend="canned-hosting"/>), one advantage of that
-choice is that those sites have a default layout that is similar from
-project to project and is pretty well-suited to presenting a project
-to the world.  That layout can be customized, within certain
-boundaries, but the default design prompts you to include the
-information visitors are most likely to be looking for.</para>
+<para>如果你使用"罐装托管"网站（见<xref
+linkend="canned-hosting"/>），这种选择的一个优点是，这些网站有一个默认布局，从项目到项目都很相似，而且非常适合向世界展示项目。该布局可以在一定范围内定制，但默认设计会提示你包含访问者最有可能寻找的信息。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="look-around">
-<title>But First, Look Around</title>
+<title>但首先，先看看周围</title>
 
-<para>Before starting an open source project, there is one important
-caveat:</para>
+<para>在启动开源项目之前，有一个重要的警告：</para>
 
-<para>Always look around to see if there's an existing project that
-does what you want.  The chances are pretty good that whatever problem
-you want solved now, someone else wanted solved before you.  If they
-did solve it, and released their code under a free license, then
-there's no reason for you to reinvent the wheel today.  There are
-exceptions, of course: if you want to start a project as an
-educational experience, pre-existing code won't help; or maybe the
-project you have in mind is so specialized that you know there is zero
-chance anyone else has done it.  But generally, there's no point not
-looking, and the payoff can be huge.<footnote><para>If the usual
-Internet search engines don't turn up anything, another good place to
-look is the Free Software Foundation's directory of free software at
-<ulink url="https://directory.fsf.org/"
->https://directory.fsf.org/</ulink>, which the FSF actively
-maintains.</para></footnote></para>
+<para>始终环顾四周，看看是否有现有的项目可以做你想做的事情。很有可能你现在想要解决的任何问题，在你之前就有人想要解决了。如果他们确实解决了，并且在自由许可证下发布了他们的代码，那么你今天就没有理由重新发明轮子。当然也有例外：如果你想启动一个项目作为教育经验，预先存在的代码不会有帮助；或者你心中的项目非常专业，你知道其他人做过它的可能性为零。但通常，没有理由不去看看，回报可能是巨大的。<footnote><para>如果通常的互联网搜索引擎没有找到任何东西，另一个寻找的好地方是自由软件基金会的自由软件目录，网址是<ulink url="https://directory.fsf.org/"
+>https://directory.fsf.org/</ulink>，FSF 积极维护该目录。</para></footnote></para>
 
-<para>Even if you don't find exactly what you were looking for, you
-might find something so close that it makes more sense to join that
-project and add functionality to it than to start from scratch yourself.
-See <xref linkend="evaluating-oss-projects"/> for a
-discussion of how to evaluate an existing open source project
-quickly.</para>
+<para>即使你没有找到你正在寻找的确切内容，你也可能找到一些非常接近的东西，以至于加入该项目并为其添加功能比自己从头开始更有意义。有关如何快速评估现有开源项目的讨论，请参见<xref linkend="evaluating-oss-projects"/>。</para>
 
 </sect2>
 
@@ -138,94 +44,33 @@ quickly.</para>
 
 <!-- ========================== SECTION =========================== -->
 <sect1 id="starting-from-what-you-have">
-<title>Starting From What You Have</title>
+<title>从你已有的开始</title>
 
-<para>You've looked around, found that nothing out there really fits
-your needs, and decided to start a new project.</para>
+<para>你已经环顾四周，发现那里没有真正符合你需求的东西，并决定启动一个新项目。</para>
 
-<para>What now?</para>
+<para>现在怎么办？</para>
 
-<para>The hardest part about launching a free software project is
-transforming a private vision into a public one.  You or your
-organization may know perfectly well what you want, but expressing
-that goal comprehensibly to the world is a fair amount of work.  It is
-essential, however, that you take the time to do it.  You and the
-other founders must decide what the project is really about&nbsp;&mdash;&nbsp;that
-is, decide its limitations, what it <emphasis>won't</emphasis> do as
-well as what it will&nbsp;&mdash;&nbsp;and write up a mission
-statement.<footnote><para>See <xref
-linkend="mission-statement"/>.</para></footnote>  This
-part is usually not too hard, though it can sometimes reveal unspoken
-assumptions and even disagreements about the nature of the project,
-which is fine: better to resolve those now than later.  The next step
-is to package up the project for public consumption, and this is,
-basically, pure drudgery.</para>
+<para>启动自由软件项目最困难的部分是将私人愿景转变为公共愿景。你或你的组织可能非常清楚自己想要什么，但以可理解的方式向世界表达这一目标需要相当多的工作。然而，花时间去做这件事是至关重要的。你和其他创始人必须决定项目真正是关于什么的&nbsp;&mdash;&nbsp;也就是说，决定它的局限性，它<emphasis>不会</emphasis>做什么以及它会做什么&nbsp;&mdash;&nbsp;并写出一份使命声明。<footnote><para>见<xref
+linkend="mission-statement"/>。</para></footnote>这部分通常不太难，尽管它有时会揭示关于项目性质的未说出口的假设甚至分歧，这很好：最好现在解决这些问题而不是以后。下一步是打包项目供公众使用，这基本上是纯粹的苦差事。</para>
 
-<para>What makes it so laborious is that it consists mainly of
-organizing and documenting things everyone already
-knows&nbsp;&mdash;&nbsp;"everyone", that is, who's been involved in the project so 
-far.  Thus, for the people doing the work, there is no immediate
-benefit.  They do not need a <filename>README</filename> file giving
-an overview of the project, nor a design document.
-They do not need an organized code tree conforming to the
-informal but widespread standards of software source distributions.
-Whatever way the source code is arranged is fine for them, because
-they're already accustomed to it anyway, and if the code runs at all,
-they know how to use it.  It doesn't even matter, for them, if the
-fundamental architectural assumptions of the project remain
-undocumented; they're already familiar with those too.</para>
+<para>使它如此费力的是，它主要包括组织和记录每个人都已经知道的事情&nbsp;&mdash;&nbsp;"每个人"，即到目前为止参与项目的人。因此，对于做这项工作的人来说，没有直接的好处。他们不需要一个提供项目概述的 <filename>README</filename> 文件，也不需要设计文档。他们不需要符合软件源代码分发的非正式但广泛标准的有组织的代码树。无论源代码以何种方式安排对他们来说都很好，因为他们无论如何都已经习惯了，而且如果代码能运行，他们知道如何使用它。对他们来说，即使项目的基本架构假设没有记录也无关紧要；他们也已经熟悉这些了。</para>
 
-<para>Newcomers, on the other hand, need all these things.  Fortunately,
-they don't need them all at once.  It's not necessary for you to
-provide every possible resource before taking a project public.  In a
-perfect world, perhaps, every new open source project would start out
-life with a thorough design document, a complete user manual (with
-special markings for features planned but not yet implemented),
-beautifully and portably packaged code capable of running on any
-computing platform, and so on.  In reality, taking care of all these
-loose ends would be prohibitively time-consuming, and anyway, it's
-work that one can reasonably hope others will help with once the
-project is under way.</para>
+<para>另一方面，新来者需要所有这些东西。幸运的是，他们不需要一次全部拥有。在公开项目之前，你不必提供所有可能的资源。也许在一个完美的世界里，每个新的开源项目都会以完整的设计文档、完整的用户手册（对计划但尚未实现的功能有特殊标记）、能够在任何计算平台上运行的精美且可移植的打包代码等开始生命。实际上，处理所有这些零散的事情会耗费大量时间，而且无论如何，这是一项工作，一旦项目开始进行，人们可以合理地希望其他人会帮忙。</para>
 
-<para>What <emphasis>is</emphasis> necessary, however, is to put enough
-investment into presentation that newcomers can get past the
-initial obstacle of unfamiliarity.  Think of it as the first step in a
-bootstrapping process, to bring the project to a kind of minimum
-activation energy.  I've heard this threshold called the
-<firstterm>hacktivation energy</firstterm>: the amount of energy a
-newcomer must put in before she starts getting something back.  The
-lower a project's hacktivation energy, the better.  Your first task is
-bring the hacktivation energy down to a level that encourages people
-to get involved.</para>
+<para>然而，<emphasis>确实</emphasis>必要的是，对展示投入足够的投资，以便新来者能够克服不熟悉的初始障碍。把它想象成引导过程的第一步，使项目达到某种最小激活能量。我听说这个阈值被称为<firstterm>黑客激活能量</firstterm>：新来者在开始获得回报之前必须投入的能量。
+项目的黑客激活能量越低越好。你的首要任务是将黑客激活能量降低到鼓励人们参与的水平。</para>
 
-<para>Each of the following subsections describes one aspect
-of starting a new project.  They are presented roughly in the order
-that a new visitor would encounter them, though of course the order in
-which you actually implement them might be different.  You can treat
-them as a checklist.  When starting a project, just go down the list
-and make sure you've got each item covered, or at least that you're
-comfortable with the potential consequences if you've left one
-out.</para>
+<para>以下每个小节描述了启动新项目的一个方面。它们大致按照新访问者会遇到它们的顺序呈现，尽管当然你实际实现它们的顺序可能不同。你可以将它们视为检查清单。在启动项目时，只需浏览清单，确保你已经涵盖了每个项目，或者至少你对如果遗漏了某一项的潜在后果感到满意。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="choosing-a-name">
-<title>Choose a Good Name</title>
+<title>选择一个好名字</title>
 
-<para>Put yourself in the shoes of someone who's just heard about your
-project, perhaps by having stumbled across it while searching for
-software to solve some problem.  The first thing they'll encounter is
-the project's name.</para>
+<para>设身处地为刚刚听说你的项目的人着想，也许是在搜索软件来解决某个问题时偶然发现的。他们遇到的第一件事就是项目的名称。</para>
 
-<para>A good name will not automatically make your project successful,
-and a bad name will not doom it.<footnote><para>Well, a
-<emphasis>really</emphasis> bad name probably could do that, but we
-start from the assumption that no one here is actively trying to make
-their project fail.</para></footnote>  However, a bad name can slow
-down adoption of the
-project, either because people don't take it seriously, or because
-they simply have trouble remembering it.</para>
+<para>一个好名字不会自动让你的项目成功，一个坏名字也不会毁掉它。<footnote><para>好吧，一个<emphasis>真正</emphasis>糟糕的名字可能会这样做，但我们从没有人在这里积极试图让他们的项目失败的假设出发。</para></footnote>然而，一个坏名字可能会减缓项目的采用，要么是因为人们不认真对待它，要么只是因为他们很难记住它。</para>
 
-<para>A good name:
+<para>一个好名字：
 
 <itemizedlist>
   <listitem><para>Gives some idea what the project does, or at least
