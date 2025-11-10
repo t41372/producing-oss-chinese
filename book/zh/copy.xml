@@ -11,54 +11,43 @@
      $ 
 -->
 
-<title>Copyright</title>
+<title>版权</title>
 
 <simplesect>
 <para>
-This work is licensed under the Creative Commons
-Attribution-ShareAlike 4.0 International License. To view a copy of
-this license, visit <ulink url="https://creativecommons.org/licenses/by-sa/4.0/" >https://creativecommons.org/licenses/by-sa/4.0/</ulink>.
-A summary of the license is given below, followed by the full legal
-text.  If you wish to distribute some or all of this work under
-different terms, please contact the author, Karl Fogel
-&lt;kfogel@red-bean.com&gt;.
+本作品基于知识共享署名-相同方式共享 4.0 国际许可协议（Creative Commons
+Attribution-ShareAlike 4.0 International License）授权。如需查看该许可协议的副本，请访问 <ulink url="https://creativecommons.org/licenses/by-sa/4.0/" >https://creativecommons.org/licenses/by-sa/4.0/</ulink>。
+下文先给出许可协议摘要，随后为完整的法律条文。如果您希望在不同条款下发布本作品的部分或全部内容，请联系作者 Karl Fogel
+&lt;kfogel@red-bean.com&gt;。
 </para>
 
 <para>
-You are free:
+您可以自由地：
 </para>
 <itemizedlist>
-  <listitem>to Share — to copy, distribute and transmit the work</listitem>
-  <listitem>to Remix — to adapt the work</listitem>
+  <listitem>分享 — 复制、发行和传播本作品</listitem>
+  <listitem>演绎 — 改编本作品</listitem>
 </itemizedlist>
 
 <para>
-Under the following conditions:
+在以下条件下：
 </para>
 
 <itemizedlist>
   <listitem><para>
-      Attribution. You must attribute the work in the manner specified
-      by the author or licensor (but not in any way that suggests that
-      they endorse you or your use of the work).
+      署名。您必须按作者或许可人指定的方式对作品进行署名（但不得以任何方式暗示他们为您或您对作品的使用背书）。
   </para></listitem>
   <listitem><para>
-      Share Alike. If you alter, transform, or build upon this work,
-      you may distribute the resulting work only under the same,
-      similar or a compatible license.
+      相同方式共享。如果您改变、转换或基于本作品进行创作，您只能在与本许可协议相同、类似或兼容的许可协议下发布衍生作品。
   </para></listitem>
   <listitem><para>
-      For any reuse or distribution, you must make clear to others the
-      license terms of this work.  The best way to do this is with a
-      link to this web page.
+      对于任何再利用或发布，您必须向他人明确本作品的许可条款。实现这一点的最佳方式是提供指向本网页的链接。
   </para></listitem>
   <listitem><para>
-      Any of the above conditions can be waived if you get permission
-      from the copyright holder.
+      如果您获得版权持有人的许可，上述任何条件都可以被豁免。
   </para></listitem>
   <listitem><para>
-      Nothing in this license impairs or restricts the author's moral
-      rights.
+      本许可协议中的任何条款都不会损害或限制作者的人格权。
   </para></listitem>
 </itemizedlist>
 </simplesect>
