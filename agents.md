@@ -135,6 +135,11 @@ Karl Fogel 的写作风格是这本书的“味道”。翻译时请尽量对齐
 ## 关于编辑文件
 书本的正文文件 `chxx.xml` 几乎都相当长，请注意。
 
+## 完成翻译后的自检
+
+1. `make -C book/zh -f ../lang-makefile valid`（或替换成对应语言目录）——底层会用 `xmllint` 做 DocBook DTD 校验，能快速发现标签未闭合、实体缺失等语法错误。
+2. 如果只改了少量章节，也可以点对点执行 `xmllint --noout --nonet --valid book/zh/chXX.xml` 先自检，再把整本书跑一遍。
+
 ## 关于测试
 构建书籍，确认翻译过后格式没有炸。
 
