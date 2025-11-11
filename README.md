@@ -36,6 +36,11 @@ Use AI to translate the entire book
 
 ### 本地工具链（不使用 Docker）
 
+如果不使用 docker，请确保环境中已经安装相关依赖:
+```sh
+sudo apt-get update && sudo apt-get install -y make subversion xsltproc docbook-xsl docbook-xsl-ns fop default-jre-headless zip libxml2-utils
+```
+
 若你的环境里已经安装好 DocBook/FOP 相关依赖，可以直接运行：
 
 ```bash
