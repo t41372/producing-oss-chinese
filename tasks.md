@@ -12,18 +12,18 @@
 3. **ch01.xml** - 第一章：介绍（Introduction）✅
 4. **ch02.xml** - 第二章：入门（Getting Started）✅
 5. **ch03.xml** - 第三章：技术基础设施（Technical Infrastructure）✅
+6. **ch04.xml** - 第四章：社会与政治基础设施 (Social and Political Infrastructure) ✅
 
 ### 进行中 🔄
-- **ch04.xml** - 第四章（待开始）
+- **ch05.xml** - 第五章（待开始）
 
 ### 待翻译 📋
-
-6. **ch05.xml** - 第五章
-7. **ch06.xml** - 第六章
-8. **ch07.xml** - 第七章
-9. **ch08.xml** - 第八章
-10. **ch09.xml** - 第九章
-11. **copy.xml** - 版权信息
+- **ch05.xml** - 第五章
+- **ch06.xml** - 第六章
+- **ch07.xml** - 第七章
+- **ch08.xml** - 第八章
+- **ch09.xml** - 第九章
+- **copy.xml** - 版权信息
 
 ## 翻译规范
 
@@ -42,3 +42,4 @@
 - 2025-11-10: 开始 ch01.xml 翻译
 - 2025-11-11: 完成 ch01.xml, ch02.xml, ch03.xml 翻译
 - 2025-11-11: 更新进度跟踪，开始 ch04.xml
+- 2025-11-11: 完成 ch04.xml 翻译
