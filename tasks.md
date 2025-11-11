@@ -9,15 +9,15 @@
 ### 已完成 ✅
 1. **dedication.xml** - 献辞 ✅
 2. **ch00.xml** - 前言（Preface）✅
+3. **ch01.xml** - 第一章：介绍（Introduction）✅
+4. **ch02.xml** - 第二章：入门（Getting Started）✅
+5. **ch03.xml** - 第三章：技术基础设施（Technical Infrastructure）✅
 
 ### 进行中 🔄
-- **ch01.xml** - 第一章：介绍（Introduction）
+- **ch04.xml** - 第四章（待开始）
 
 ### 待翻译 📋
 
-3. **ch02.xml** - 第二章
-4. **ch03.xml** - 第三章
-5. **ch04.xml** - 第四章
 6. **ch05.xml** - 第五章
 7. **ch06.xml** - 第六章
 8. **ch07.xml** - 第七章
@@ -40,3 +40,5 @@
 - 2025-11-10: 完成 dedication.xml 翻译
 - 2025-11-10: 完成 ch00.xml（前言）主要部分翻译
 - 2025-11-10: 开始 ch01.xml 翻译
+- 2025-11-11: 完成 ch01.xml, ch02.xml, ch03.xml 翻译
+- 2025-11-11: 更新进度跟踪，开始 ch04.xml
