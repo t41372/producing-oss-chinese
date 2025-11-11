@@ -16,7 +16,6 @@
 7. **ch05.xml** - 第五章：组织与金钱 (Organizations and Money) ✅
 
 ### 进行中 🔄
-- **ch06.xml** - 第六章（待开始）
 
 ### 待翻译 📋
 - **ch06.xml** - 第六章

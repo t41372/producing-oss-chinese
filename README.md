@@ -17,6 +17,8 @@ Use AI to translate the entire book
 
 翻译内容完成后，可以借助项目内置的 Docker 化工具链把整本书打包为 HTML、EPUB 与 PDF。整个流程不会在宿主机上安装 DocBook/FOP，只需要 Docker。
 
+如果你更希望直接使用本机已经安装好的 DocBook/FOP 工具链，也可以运行新的 `scripts/build-book-local.sh`，完全跳过 Docker（见下文“本地工具链”）。
+
 ### 快速开始
 
 1. 确保本机已安装并启动 Docker Desktop（或其他兼容的 Docker 守护进程）。
@@ -31,6 +33,24 @@ Use AI to translate the entire book
    - 在容器里自动下载官方 `tools/`、`lang-makefile`、`styles.css`；
    - 用当前 Git 提交信息生成 `book/zh/book.xml`；
    - 依次运行 `html html-chunk epub pdf` 四个 `make` 目标，产出 `book/zh/producingoss.html`、`book/zh/html-chunk/`、`book/zh/producingoss.epub` 与各纸张尺寸的 PDF。
+
+### 本地工具链（不使用 Docker）
+
+若你的环境里已经安装好 DocBook/FOP 相关依赖，可以直接运行：
+
+```bash
+./scripts/build-book-local.sh zh
+```
+
+该脚本会重用 `scripts/internal/build-inside-container.sh`，步骤与 Docker 版完全一致，但所有命令都在宿主机执行。请先准备好以下工具（名称以 Debian/Ubuntu 软件包为例）：
+
+- `make`
+- `svn`
+- `xsltproc` 与 `docbook-xsl`/`docbook-xsl-ns`
+- `fop`（包含 `default-jre-headless`）
+- `zip`、以及 `libxml2-utils`
+
+如果只想生成某些格式，可以和 Docker 方案一样通过 `BUILD_TARGETS` 环境变量覆盖默认值；`POSS_SVN_BASE`、`FOP_OPTS`、`HTML_CHUNK_DIR_OVERRIDE` 等变量同样受支持。
 
 ### 可选参数
 
@@ -100,7 +120,6 @@ You can use the ViewVC tool here just to check if your work is there or to see t
 所以我们要怎么做呢？要怎么拿到所有英文的源文件然后开始翻译工作？
 顺便帮我规划一下我们这个 git 仓库的 layout。目前我的规划是 root 放一些跟我们翻译工作相关的东西，书的源文件和翻译放在 book 目录下。
 ```
-
 
 
 
