@@ -1,288 +1,75 @@
 <chapter id="managing-participants">
 
-<title>Managing Participants</title>
+<title>管理参与者</title>
 
 <simplesect>
 
-<para>Getting people to agree on what a project needs, and to work
-together to achieve it, requires more than just a genial atmosphere
-and a lack of obvious dysfunction.  It requires someone, or several
-someones, consciously managing all the people involved.  Managing
-participants who work for different organizations or
-for themselves may not be a technical craft in the same sense as
-computer programming, but it is a craft in the sense that it can be
-improved through study and practice.</para>
+<para>让人们就项目需求达成一致，并共同努力实现它，这需要的不仅仅是友好的氛围和没有明显的沟通障碍。它需要有人——一个或几个人——有意识地去管理所有相关人员。管理来自不同组织或为自己工作的参与者，或许不像计算机编程那样是一门技术活，但它确实是一门手艺，一门可以通过学习和实践来提升的手艺。</para>
 
-<para>This chapter is a grab-bag of specific techniques for managing
-diverse participants in an open source project.  It draws, perhaps
-more heavily than previous chapters, on
-the Subversion project as a case study, partly because I was working
-on that project as I wrote the first edition of this book and had all
-the primary sources close
-at hand, and partly because it's more acceptable to cast critical
-stones into one's own glass house than into others'.  But I have also
-seen in various other projects the benefits of applying&nbsp;&mdash;&nbsp;and the
-consequences of not applying&nbsp;&mdash;&nbsp;the recommendations that follow;
-when it is politically feasible to give examples from some of those
-other projects, I will do so.</para>
+<para>本章汇集了在开源项目中管理不同背景参与者的多种具体技巧。它比前几章更深入地借鉴了 Subversion 项目的案例。部分原因是我在撰写本书第一版时正在该项目中工作，手头掌握着所有第一手资料；另一部分原因则是，朝自家的玻璃房子扔石头，总比朝别人家的更容易被接受。不过，在其他各种项目中，我也见证了采纳以下建议所带来的好处——以及不采纳它们所导致的后果。在政治上可行的情况下，我也会引用其他项目的一些例子。</para>
 
-<para>Speaking of politics, this is as good a time as any to drag that
-much-maligned word out for a closer look.  Many engineers like to
-think of politics as something other people engage in.
-"<emphasis>I'm</emphasis> just advocating the best course for the
-project, but <emphasis>she's</emphasis> raising objections for
-political reasons."  I believe this distaste for politics (or for what
-is imagined to be politics) is especially strong in engineers because
-engineers are bought into the idea that some solutions are objectively
-superior to others.  Thus, when someone acts in a way that seems
-motivated by non-technical considerations&nbsp;&mdash;&nbsp;say, the maintenance of her
-own position of influence, the lessening of someone else's
-influence, outright horse-trading, or avoiding hurting someone's
-feelings&nbsp;&mdash;&nbsp;other participants in the project may get annoyed.  Of
-course, this rarely prevents them from behaving in the same way when
-their own vital interests are at stake.</para>
+<para>说到政治（politics），现在正是把这个备受诟病的词拎出来仔细审视的好时机。很多工程师倾向于认为政治是别人的事。“<emphasis>我</emphasis>只是在为项目倡导最佳路线，但<emphasis>她</emphasis>提出反对意见是出于政治原因。”我相信，这种对政治（或想当然的政治）的厌恶在工程师中尤为强烈，因为他们深信某些解决方案在客观上优于其他方案。因此，当某人的行为看起来是受非技术因素驱动时——比如，维护自己的影响力、削弱他人的影响力、赤裸裸的利益交换，或避免伤害某人感情——项目中的其他参与者可能会感到恼火。当然，当他们自己的切身利益受到威胁时，这很少能阻止他们做出同样的行为。</para>
 
-<para>If you consider "politics" a dirty word and hope to keep your
-project free of it, give up right now.  Politics are inevitable
-whenever people have to cooperatively manage a shared resource.  In
-the case of an open source project, even though the code itself is not
-that kind of shared resource (since it can be copied by anyone), attention,
-credibility, and influence in the project very much are: they are by
-definition not copyable, and therefore not forkable.</para>
+<para>如果你认为“政治”是个肮脏的词，并希望你的项目能远离它，那现在就放弃吧。只要人们需要合作管理共享资源，政治就不可避免。就开源项目而言，尽管代码本身不属于那种共享资源（因为任何人都可以复制），但项目中的**注意力**、**信誉**和**影响力**却实实在在是：根据定义，它们无法被复制，因此也无法被 `fork`。</para>
 
-<para>Thus it is quite reasonable that one of the considerations
-in each person's decision-making process is the question of
-how a given action might affect her own future influence in the
-project.  After all, if you trust your own judgement and skills, as
-most programmers do, then the potential loss of future influence has
-to be considered a technical result, in a sense.  Similar reasoning
-applies to other behaviors that might seem, on their face, like "pure"
-politics.  In truth, there is no such thing as pure politics: it is
-precisely because actions have multiple real-world consequences that
-people become politically conscious in the first place.  Politics is,
-in the end, simply an acknowledgement that <emphasis>all</emphasis>
-consequences of decisions must be taken into account.  If a particular
-decision leads to a result that most participants find technically
-satisfying, but involves a change in power relationships that leaves
-key people feeling isolated, the latter is just as important a result
-as the former.  To ignore it would not be high-minded but
-shortsighted.</para>
+<para>因此，在每个人的决策过程中，考虑某个行动会如何影响自己在项目中的未来影响力，是完全合理的。毕竟，如果你像大多数程序员一样相信自己的判断和技能，那么未来影响力的潜在损失，在某种意义上也必须被视为一种技术后果。类似的逻辑也适用于其他表面上看起来像“纯粹”政治的行为。事实上，根本不存在纯粹的政治：正是因为行动会带来多重的现实世界后果，人们才会首先产生政治意识。说到底，政治不过是承认必须考虑决策的<emphasis>所有</emphasis>后果。如果某个决策带来的结果在技术上令大多数参与者满意，但却涉及权力关系的改变，让关键人物感到被孤立，那么后者与前者是同等重要的结果。忽视它不是清高，而是短视。</para>
 
-<para>So as you read the advice that follows, and as you work with
-your own project, remember that there is <emphasis>no one</emphasis>
-who is above politics.  Appearing to be above politics is merely one
-particular political strategy, and sometimes a very useful one, but it
-is never the reality.  Politics is simply what happens when people
-disagree on the use or allocation of a shared asset, and successful
-projects evolve political mechanisms for managing such
-disagreement constructively.</para>
+<para>因此，在阅读以下建议以及在你自己的项目中工作时，请记住，<emphasis>没有谁</emphasis>能凌驾于政治之上。表现得超然于政治之外，仅仅是一种特定的政治策略，有时还非常有效，但这绝非现实。当人们就共享资产的使用或分配产生分歧时，政治便应运而生。而成功的项目会演化出相应的政治机制，以建设性的方式来管理这些分歧。</para>
 
 </simplesect>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="community-and-motivation">
-<title>Community and Motivation</title>
+<title>社区与激励</title>
 
-<para>Why do people work on free software
-projects?<footnote><para>This question was studied in detail, with
-interesting results, in a paper by Karim Lakhani and Robert G. Wolf,
-entitled <citetitle>Why Hackers Do What They Do: Understanding
-Motivation and Effort in Free/Open Source Software
-Projects</citetitle>.  See <ulink url="http://flosshub.org/node/53"
->http://flosshub.org/node/53</ulink>.</para></footnote>  Of course, in some
-cases the answer is that it's their job&nbsp;&mdash;&nbsp;their
-manager asked them to.  But even then, most participants have some
-degree of intrinsic motivation that goes beyond a mere management
-request.  As every manager knows, people are much more successful when
-they have their own motivations for wanting to succeed than when they
-are merely performing work in return for a paycheck.
-Most open source developers&nbsp;&mdash;&nbsp;I would even go so far
-as to say the vast majority of them&nbsp;&mdash;&nbsp;are not in it
-only for the paycheck.  There is something more to it than that.</para> 
+<para>人们为什么会为自由软件项目工作？<footnote><para>Karim Lakhani 和 Robert G. Wolf 在一篇题为《黑客为何如此：理解自由/开源软件项目中的动机与努力》（<citetitle>Why Hackers Do What They Do: Understanding Motivation and Effort in Free/Open Source Software Projects</citetitle>）的论文中详细研究了这个问题，并得出了有趣的结论。请见 <ulink url="http://flosshub.org/node/53">http://flosshub.org/node/53</ulink>。</para></footnote> 当然，在某些情况下，答案是“这是他们的工作”——他们的经理要求他们这么做。但即便如此，大多数参与者的内在动机，都或多或少超越了单纯的管理层要求。正如每位管理者都明白的，当人们有自己的成功动机时，他们会比仅仅为了薪水而工作时要成功得多。绝大多数的开源开发者——我甚至敢说，他们中的绝大多数人——并不仅仅是为了薪水。这背后还有更多的东西。</para>
 
-<para>When asked, many claim they do it because they want to produce
-good software, or want to be personally involved in fixing the bugs
-that matter to them.  But these reasons are usually not the whole
-story.  After all, could you imagine a participant staying with a
-project even if no one ever said a word in appreciation of her work,
-or listened to her in discussions?  Of course not.  Clearly, people
-spend time on free software for reasons beyond just an abstract desire
-to produce good code.  Understanding people's true motivations will
-help you arrange things so as to attract and keep them.  The desire to
-produce good software may be among those motivations, along with the
-challenge and educational value of working on hard problems.  But
-humans also have a built-in desire to work with other humans, and to
-give and earn respect through cooperative activities.  Groups engaged
-in cooperative activities must evolve norms of behavior such that
-status is acquired and kept through actions that help the group's
-goals.</para>
+<para>当被问及时，许多人声称他们这么做是因为想生产出好的软件，或者想亲身参与修复那些对他们而言重要的 `bug`。但这些理由通常并非全部。毕竟，你能想象一个参与者会留在一个项目中，即使从没有人对她的工作说过一句赞赏的话，也从没人在讨论中倾听她的意见吗？当然不能。显然，人们花时间在自由软件上，其原因远不止是创造优秀代码这种抽象的愿望。理解人们的真实动机会帮助你更好地安排事务，从而吸引并留住他们。创造优秀软件的愿望可能是动机之一，同时还有解决难题带来的挑战和教育价值。但人类天生渴望与他人协作，并通过合作活动给予和赢得尊重。参与合作活动的群体必须演化出行为规范，使得个体能够通过帮助团队实现目标的行动来获得和维持地位。</para>
 
-<para>Those norms won't always arise by themselves.  For example, on
-some projects&nbsp;&mdash;&nbsp;experienced open source developers can probably
-name several off the tops of their heads&nbsp;&mdash;&nbsp;people apparently feel
-that status is acquired by posting frequently and verbosely.  They
-don't come to this conclusion accidentally; they come to it because
-they are rewarded with respect for making long, intricate arguments,
-whether or not that actually helps the project.  Following are some
-techniques for creating an atmosphere in which status-acquiring
-actions are also <emphasis>constructive</emphasis> actions.</para>
+<para>这些规范不会总是自行产生。例如，在某些项目中——经验丰富的开源开发者可能随口就能说出好几个——人们显然觉得，地位是通过频繁且冗长地发帖获得的。他们得出这个结论并非偶然，而是因为他们通过发表冗长、复杂的论点而获得了尊重作为回报，无论这是否真的对项目有帮助。以下是一些技巧，用于创造一种氛围，在这种氛围中，获取地位的行为同时也是<emphasis>建设性</empha>的行为。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="delegation">
-<title>Delegation</title>
+<title>授权（Delegation）</title>
 
-<para>Delegation is not merely a way to spread the workload around; it
-is also a political and social tool.  Consider all the effects when
-you ask someone to do something.  The most obvious effect is that, if
-he accepts, he does the task and you don't.  But another effect is
-that he is made aware that you trusted him to handle the task.
-Furthermore, if you made the request in a public forum, then he knows
-that others in the group have been made aware of that trust too.  He
-may also feel some pressure to accept, which means you must ask in a
-way that allows him to decline gracefully if he doesn't really want
-the job.  If the task requires coordination with others in the
-project, you are effectively proposing that he become more involved,
-form bonds that he might not otherwise have been formed, and perhaps
-become a source of authority in some subdomain of the project.  The
-added involvement may be daunting, or it may lead him to become
-engaged in new ways from an increased feeling of overall
-commitment.</para>
+<para>授权不仅仅是分摊工作量的一种方式，它也是一种政治和社交工具。想想看，当你请别人做某件事时，会产生哪些影响。最明显的影响是，如果他接受了，他就会去做那项任务，而你不用。但另一个影响是，他会意识到你信任他能处理好这项任务。此外，如果你是在公共场合提出的请求，那么他知道团队中的其他人也意识到了这份信任。他也可能感到一些接受的压力，这意味着你必须以一种方式提出请求，让他可以在如果真的不想做这份工作时，能够体面地拒绝。如果这项任务需要与项目中的其他人协调，你实际上是在提议他更深入地参与进来，建立他原本可能不会建立的联系，并可能在项目的某个子领域成为权威来源。这种额外的参与可能令人生畏，也可能因为整体承诺感的增强而让他以新的方式投入其中。</para>
 
-<para>Because of all these effects, it often makes sense to ask
-someone else to do something even when you know you could do it faster
-or better yourself.  Of course, there is sometimes a strict economic
-efficiency argument for this anyway: perhaps the opportunity cost of
-doing it yourself would be too high&nbsp;&mdash;&nbsp;there might be something
-even more important you could do with that time.  But even when that
-kind of comparative advantage argument doesn't apply, you may
-<emphasis>still</emphasis> want to ask someone else to take on the
-task, because in the long run you want to draw that person deeper into
-the project, even if it means spending extra time watching over them
-at first.  The converse technique also applies: if you occasionally
-volunteer for work that someone else doesn't want or have time to do,
-you will gain her good will and respect.  Delegation and
-substitution are not just about getting individual tasks done; they're
-also about drawing people into a closer commitment with each other and to the
-project.</para>
+<para>由于所有这些影响，即使你知道自己能更快或更好地完成某件事，请别人来做也常常是明智的。当然，有时这样做也有纯粹的经济效率考量：或许你自己做的机会成本太高——你可能有更重要的事情要用那段时间去做。但即使那种比较优势的论点不适用，你可能<emphasis>仍然</emphasis>想请别人来承担这项任务，因为从长远来看，你想把那个人更深地拉入项目中，即使这意味着一开始要花额外的时间去指导他们。反向技巧也同样适用：如果你偶尔自愿去做别人不想做或没时间做的工作，你会赢得她的好感和尊重。授权和替代不仅仅是为了完成单个任务，它们也是为了让人们彼此之间以及对项目建立更紧密的承诺。</para>
 
 <sect3 id="delegation-assignment">
-<title>Distinguish Clearly Between Inquiry and Assignment</title>
+<title>明确区分“问询”与“指派”</title>
 
-<para>Sometimes it is fair to expect that a person will accept a
-particular task.  For example, if someone writes a bug into the code,
-or commits code that fails to comply with project guidelines in some
-obvious way, then it is enough to point out the problem and thereafter
-behave as though you assume the person will take care of it.  Also, if
-they have stated publicly that they will do something, it is
-reasonable to depend on that.  But there are other situations where it
-is by no means clear that you have a right to expect action.  The
-person may do as you ask, or may not.  Since no one likes to be taken
-for granted, you need to be sensitive to the difference between these
-two types of situations, and tailor your requests accordingly.</para>
+<para>有时候，期望某人接受特定任务是合理的。例如，如果有人在代码中引入了一个 `bug`，或者 `commit` 的代码明显不符合项目规范，那么指出问题，然后表现得好像你默认他会处理就足够了。同样，如果他们已经公开表示会做某件事，那么依赖于此也是合理的。但在其他情况下，你完全没有理由期望对方必须行动。对方可能会按你的要求去做，也可能不会。因为没人喜欢被视为理所当然，所以你需要对这两种情况的区别保持敏感，并相应地调整你的请求方式。</para>
 
-<para>One thing that almost always causes people instant annoyance is
-being asked to do something in a way that implies that you think it is
-clearly their responsibility to do it when they feel otherwise.  For
-example, assignment of incoming tickets is particularly fertile ground
-for this kind of annoyance.  The participants in a project usually
-know who is expert in what areas, so when a bug report comes in, there
-will often be one or two people whom everyone knows could probably fix
-it quickly.  However, if you assign the ticket over to one of those
-people without her prior permission, she may feel she has been
-put into an uncomfortable position.  She senses the pressure of
-expectation, but also may feel that she is, in effect, being
-punished for her expertise.  After all, the way to acquire
-expertise is by fixing bugs, so perhaps someone else should take this
-one!  (Note that ticket trackers that automatically assign tickets to
-particular people based on information in the bug report are less
-likely to offend, because everyone knows that the assignment was made
-by an automated process, and is not an indication of human
-expectations.)</para>
+<para>有一件事几乎总是会立刻惹恼别人，那就是当你用一种暗示你认为这显然是他们责任的方式去要求他们做事，而他们自己却不这么认为。例如，分配新收到的工单（ticket）就特别容易引发这种烦恼。项目参与者通常知道谁是哪个领域的专家，所以当一个 `bug` 报告进来时，往往会有一两个人，大家都知道他们可能能很快修复。然而，如果你未经她事先同意就把工单指派给其中一位，她可能会觉得被置于一个尴尬的境地。她感受到了期望的压力，但同时也可能觉得，自己实际上是在因为专业能力而受到“惩罚”。毕竟，获得专业能力的方式就是通过修复 `bug`，所以也许这次该由别人来接手！（请注意，那些根据 `bug` 报告中的信息自动将工单分配给特定人员的工单跟踪系统，就不太可能冒犯人，因为大家都知道分配是由自动化流程完成的，并不代表某个人的期望。）</para>
 
-<para>While it would be nice to spread the load as evenly as possible,
-there are certain times when you just want to encourage the person who
-can fix a bug the fastest to do so.  Given that you can't afford a
-communications turnaround for every such assignment ("Would you be
-willing to look at this bug?"  "Yes."  "Okay, I'm assigning the ticket
-over to you then." "Okay."), you should simply make the assignment in
-the form of an inquiry, conveying no pressure.  Virtually all ticket
-trackers allow a comment to be associated with the assignment of a
-ticket.  In that comment, you can say something like this:</para>
+<para>尽管我们希望尽可能均匀地分摊工作量，但在某些时候，你就是想鼓励那个能最快修复 `bug` 的人去动手。考虑到你不可能为每一个这样的指派都进行一次沟通往返（“你愿意看看这个 `bug` 吗？”“愿意。”“好的，我把工单指派给你了。”“收到。”），你应该简单地以问询的形式进行指派，不传递任何压力。几乎所有的工单跟踪系统都允许在指派工单时附上评论。在那条评论里，你可以这样说：</para>
 
 <blockquote>
-   <para>Assigning this over to you, jrandom, because you're most
-   familiar with this code.  Feel free to bounce this back if you
-   don't have time to look at it, though.  (And let me know if you'd
-   prefer not to receive such requests in the future.)</para>
+   <para>jrandom，把这个指派给你，因为你最熟悉这块代码。如果你没时间看，随时可以把它退回来。（另外，如果你以后不想再收到这类请求，也请告诉我。）</para>
 </blockquote>
 
-<para>This distinguishes clearly between the
-<emphasis>request</emphasis> for assignment and the
-recipient's <emphasis>acceptance</emphasis> of that assignment.  The
-audience here isn't only the assignee, it's everyone: the entire group
-sees a public confirmation of the assignee's expertise, but the
-message also makes it clear that the assignee is free to accept or
-decline the responsibility.</para>
+<para>这样就明确区分了指派的<emphasis>请求</emphasis>和接收者对该指派的<emphasis>接受</emphasis>。这里的受众不仅是被指派者，而是所有人：整个团队都看到了对被指派者专业能力的公开肯定，但这条信息也清楚地表明，被指派者可以自由地接受或拒绝这份责任。</para>
 
 </sect3>
 
 <sect3 id="delegation-followup">
-<title>Follow Up After You Delegate</title>
+<title>授权后要跟进</title>
 
-<para>When you ask someone to do something, remember that you have
-done so, and follow up with her no matter what.  Most requests are
-made in public forums, and are roughly of the form "Can you take care
-of X?  Let us know either way; no problem if you can't, I just need to
-know."  You may or may not get a response.  If you do, and the
-response is negative, the loop is closed&nbsp;&mdash;&nbsp;you'll need to try some
-other strategy for dealing with X.  If there is a positive response,
-then keep an eye out for progress on the issue, and comment on the
-progress you do or don't see (everyone works better when they know
-someone else is appreciating their work).  If there is no response
-after a few days, ask again, or post saying that you got no
-response and are looking for someone else to do it.  Or just do it
-yourself, but still make sure to say that you got no response to the
-initial inquiry.</para>
+<para>当你请别人做某件事时，要记住你这么做了，并且无论如何都要跟进。大多数请求是在公共场合提出的，形式大致如下：“你能处理一下 X 吗？无论如何都请告知一声；如果你不能，也没问题，我只是需要知道。”你可能会也可能不会得到回应。如果得到了回应，且是负面的，那么这个循环就关闭了——你需要尝试其他策略来处理 X。如果得到的是积极的回应，那么就要留意这个问题的进展，并对你看到或没看到的进展发表评论（当人们知道有别人在关注并欣赏他们的工作时，他们会工作得更好）。如果几天后没有回应，就再问一次，或者发个帖子说你没有收到回应，正在找别人来做。或者干脆自己做，但仍然要确保说明你最初的问询没有得到回应。</para>
 
-<para>The purpose of publicly noting the lack of response is
-<emphasis>not</emphasis> to humiliate the person, and your remarks
-should be phrased so as not to have that effect.  The purpose is
-simply to show that you keep track of what you have asked for, and
-that you notice the reactions you get.  This makes people more likely
-to say yes next time, because they will observe (even if only
-unconsciously) that you are likely to notice any work they do, given
-that you noticed the much less visible event of someone failing to
-respond.</para>
+<para>公开指出没有回应的目的<emphasis>不是</emphasis>为了羞辱对方，你的言辞也应该措辞得当以避免这种效果。目的仅仅是为了表明你对自己所要求的事情有追踪，并且你注意到了你得到的反应。这会让人更有可能在下次说“是”，因为他们会观察到（即使只是下意识地），既然你连“某人未回应”这样不那么显眼的事件都注意到了，那你很可能也会注意到他们做的任何工作。</para>
 
 </sect3>
 
 <sect3 id="delegation-interest">
-<title>Notice What People Are Interested In</title>
+<title>留意人们的兴趣所在</title>
 
-<para>Another thing that makes people happy is to have their interests
-noticed&nbsp;&mdash;&nbsp;in general, the more aspects of someone's personality
-you notice and remember, the more comfortable she will be, and the
-more she will want to work with groups of which you are a
-part.</para>
+<para>另一件能让人开心的事是他们的兴趣被注意到——总的来说，你注意到并记住某人个性的方面越多，她就会感觉越舒服，也越愿意与你所在的团队合作。</para>
 
-<para>For example, there was a sharp distinction in the Subversion
-project between people who wanted to reach a definitive 1.0 release
-(which we eventually did), and people who mainly wanted to add new
-features and work on interesting problems but who didn't much care
-when 1.0 came out.  Neither of these positions is better or worse than
-the other; they're just two different kinds of developers, and both
-kinds do lots of work on the project.  But we swiftly learned that it
-was important to <emphasis>not</emphasis> assume that the excitement
-of the 1.0 drive was shared by everyone.  Electronic media can be very
-deceptive: you may sense an atmosphere of shared purpose when, in fact,
-it's shared only by the people you happen to have been talking to,
-while others have completely different priorities.</para>
+<para>例如，在 Subversion 项目中，有一部分人希望尽快发布一个明确的 1.0 版本（我们最终也做到了），而另一部分人则主要想添加新功能、解决有趣的问题，但不太关心 1.0 版本什么时候发布，这两者之间有明显区别。这两种立场没有好坏之分，它们只是两种不同类型的开发者，而且两种开发者都为项目做了大量工作。但我们很快就认识到，<emphasis>不要</emphasis>想当然地认为每个人都对 1.0 版本的冲刺感到兴奋，这一点很重要。电子媒介可能非常具有欺骗性：你可能感觉到一种共同目标的氛围，但实际上，这种氛围可能只在你碰巧交谈过的人之间共享，而其他人则有着完全不同的优先事项。</para>
 
-<para>The more aware you are of what different people want out of the project,
-the more effectively you can make requests of them.  Even just
-demonstrating an understanding of what they want, without making any
-associated request, is useful, in that it confirms to each person that
-she's not just another particle in an undifferentiated mass.</para>
+<para>你越了解不同的人想从项目中得到什么，你就能越有效地向他们提出请求。即使只是表现出对他们需求的理解，而不附带任何请求，也是有用的，因为它向每个人确认了，她不仅仅是无差别群体中的一个微粒。</para>
 
 </sect3>
 
@@ -290,417 +77,110 @@ she's not just another particle in an undifferentiated mass.</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="praise-and-criticism">
-<title>Praise and Criticism</title>
+<title>表扬与批评</title>
 
-<para>Praise and criticism are not opposites; in many ways, they are
-very similar.  Both are primarily forms of attention, and are most
-effective when specific rather than generic.  Both should be deployed
-with concrete goals in mind.  Both can be diluted by inflation: praise
-too much or too often and you will devalue your praise; the same is
-true for criticism, though in practice, criticism is usually reactive
-and therefore a bit more resistant to devaluation.</para>
+<para>表扬和批评并非对立面；在很多方面，它们非常相似。两者主要都是一种关注形式，并且在具体而非笼统时最为有效。两者都应带着具体的目标来使用。两者都会因“通货膨胀”而贬值：表扬得太多或太频繁，你的表扬就会失去价值；批评也是如此，尽管在实践中，批评通常是反应性的，因此对贬值的抵抗力稍强一些。</para>
 
-<para>An important feature of technical culture is that detailed,
-dispassionate criticism is often taken as a kind of praise (as
-discussed in <xref linkend="rudeness"/>), because of the
-implication that the recipient's work is worth the time required to
-analyze it.  However, both of those
-conditions&nbsp;&mdash;&nbsp;<emphasis>detailed</emphasis> and
-<emphasis>dispassionate</emphasis>&nbsp;&mdash;&nbsp;must be met for this to be
-true.  For example, if someone makes an incorrect change to the code, it
-is useless (and actually harmful) to follow up saying simply "That was
-sloppy."  Sloppiness is ultimately a characteristic of a
-<emphasis>person</emphasis>, not of their work, and it's important to
-keep your reactions focused on the work.  It's much more effective to
-describe whatever is wrong with the change, tactfully and without
-malice.  If this is the third or fourth careless change in a row by
-the same person, it's appropriate to say that&nbsp;&mdash;&nbsp;again without
-anger&nbsp;&mdash;&nbsp;at the end of your critique, to make it clear that the
-pattern has been noticed.</para>
+<para>技术文化的一个重要特点是，详尽、冷静的批评常常被视为一种赞扬（如在 <xref linkend="rudeness"/> 中讨论的），因为它暗示了接收者的工作值得花时间去分析。然而，要做到这一点，必须同时满足<emphasis>详尽</emphasis>和<emphasis>冷静</empha>这两个条件。例如，如果有人对代码做出了不正确的修改，仅仅跟帖说“这太草率了”是毫无用处（甚至是有害）的。草率最终是<emphasis>人</empha>的特性，而不是他们工作的特性，重要的是让你的反应聚焦于工作本身。更有效的方式是，有分寸且不带恶意地描述这项修改错在哪里。如果这是同一个人连续第三或第四次做出粗心的修改，那么在批评的最后指出这一点是合适的——同样要不带怒气——以明确表示这种模式已经被注意到了。</para>
 
-<para>If someone does not improve in response to criticism, the
-solution is not more or stronger criticism.  The solution is for the
-group to remove that person from the position of incompetence, in a
-way that minimizes hurt feelings as much as possible; see
-<xref linkend="transitions"/> for examples.  That is a rare
-occurrence, however.  Most people respond pretty well to criticism
-that is specific, detailed, and contains a clear (even if unspoken)
-expectation of improvement.</para>
+<para>如果有人在受到批评后没有改进，解决方法不是更多或更强烈的批评。解决方法是让团队将此人从他不称职的位置上移开，并尽可能减少伤害；具体例子见 <xref linkend="transitions"/>。不过，这种情况很少见。大多数人对具体的、详尽的、并包含明确（即使是未言明）改进期望的批评，反应都相当不错。</para>
 
-<para>Praise won't hurt anyone's feelings, of course, but that doesn't
-mean it should be used any less carefully than criticism.  Praise is a
-tool: before you use it, ask yourself <emphasis>why</emphasis> you
-want to use it.  As a rule, it's not a good idea to regularly praise people for
-doing what they usually do, or for actions that are a normal and
-expected part of participating in the group.  If you were to do that,
-it would be hard to know when to stop: should you praise
-<emphasis>everyone</emphasis> for doing the usual things?  After all,
-if you leave some people out, they'll wonder why.  It's much better to
-express praise and gratitude sparingly, in response to unusual or
-unexpected efforts, with the intention of encouraging more such
-efforts.  When a participant seems to have moved permanently into a
-state of higher productivity, adjust your praise threshold for that
-person accordingly.  Repeated praise for normal behavior gradually
-becomes meaningless anyway.  Instead, that person should sense that
-her high level of productivity is now considered normal and natural,
-and only work that goes beyond that should be specially noticed.</para>
+<para>当然，表扬不会伤害任何人的感情，但这并不意味着使用它时可以比使用批评时更不谨慎。表扬是一种工具：在使用它之前，问问自己<emphasis>为什么</emphasis>要用它。通常来说，经常表扬人们做他们日常做的事，或者做那些参与团队中正常且预期之内的行为，并不是一个好主意。如果你那样做，就很难知道何时停止：难道你应该表扬<emphasis>每个人</empha>做日常事务吗？毕竟，如果你漏掉了一些人，他们会想知道为什么。更好的做法是，有节制地表达表扬和感激，作为对不寻常或超预期努力的回应，意在鼓励更多此类努力。当一个参与者似乎已经永久性地进入了更高产的状态时，相应地调整你对那个人的表扬阈值。对正常行为的重复表扬会逐渐变得毫无意义。相反，那个人应该感觉到，她的高产水平现在被认为是正常和自然的，只有超越这个水平的工作才应该被特别注意到。</para>
 
-<para>This is not to say that the person's contributions shouldn't be
-acknowledged, of course.  But remember that if the project is set up
-right, everything that person does is already visible anyway, and so
-the group will know (and the person will know that the rest of the
-group knows) everything she does.  There are also ways to acknowledge
-someone's work by means other than direct praise.  You could mention
-in passing, while discussing a related topic, that she has done a lot
-of work in the given area and is the resident expert there; you
-could publicly consult her on some question about the code; or perhaps
-most effectively, you could conspicuously make further use of the work
-she has done, so she sees that others are now comfortable relying on
-the results of her work.  It's probably not necessary to do these
-things in any calculated way.  Someone who regularly makes large
-contributions in a project will know it, and will occupy a position of
-influence by default.  There's usually no need to take explicit steps
-to ensure this, unless you sense that, for whatever reason, a
-contributor is underappreciated.</para>
+<para>这当然不是说那个人的贡献不应该被承认。但请记住，如果项目设置得当，她所做的一切本来就是可见的，所以团队会知道（而她也会知道团队的其他人都知道）她所做的一切。除了直接表扬，还有其他方式可以承认某人的工作。你可以在讨论相关话题时顺便提及，她在这个领域做了大量工作，是那里的常驻专家；你可以就代码的某个问题公开咨询她；或者，也许最有效的是，你可以引人注目地进一步利用她所做的工作，让她看到别人现在可以放心地依赖她的工作成果。可能没有必要刻意地去做这些事。在一个项目中经常做出巨大贡献的人自己会知道，并且会默认地拥有一个有影响力的位置。通常不需要采取明确的步骤来确保这一点，除非你感觉到，出于某种原因，某个贡献者被低估了。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="territoriality">
-<title>Prevent Territoriality</title>
+<title>防止地盘意识（Territoriality）</title>
 
-<para>Watch out for participants who try to stake out exclusive
-ownership of certain areas of the project, and who seem to want to do
-all the work in those areas, to the extent of aggressively taking over
-work that others start.  Such behavior may even seem healthy at first.
-After all, on the surface it looks like the person is taking on more
-responsibility, and showing increased activity within a given area.
-But in the long run, it is destructive.  When people sense a "no
-trespassing" sign, they stay away.  This results in reduced review in
-that area, and greater fragility, because the lone developer becomes a
-single point of failure.  Worse, it fractures the cooperative,
-egalitarian spirit of the project.  The theory should always be that
-any developer is welcome to help out on any task at any time.  Of
-course, in practice things work a bit differently: people do have
-areas where they are more and less influential, and non-experts
-frequently defer to experts in certain domains of the project.  But
-the key is that this is all voluntary: informal authority is granted
-based on competence and proven judgement, but it should never be
-actively
-<emphasis>taken</emphasis>.  Even if the person desiring the authority
-really is competent, it is still crucial that she hold that authority
-informally, through the consensus of the group, that the exact
-boundaries of the authority remain fuzzy and subjective, and that the
-authority never cause her to exclude others from working in that area.</para>
+<para>要警惕那些试图在项目的某些领域划定专属所有权的参与者，他们似乎想包揽这些领域的所有工作，甚至会激进地接管别人已经开始的工作。这种行为起初可能看起来很健康。毕竟，表面上看，这个人承担了更多责任，并在特定领域表现出更高的活跃度。但从长远来看，这是破坏性的。当人们感觉到一块“禁止闯入”的牌子时，他们就会远离。这导致该领域的审查减少，脆弱性增加，因为这个独立的开发者成了单点故障。更糟糕的是，这会破坏项目的合作、平等的精神。理论上应该永远是：任何开发者都欢迎在任何时候帮助完成任何任务。当然，实践中情况有些不同：人们确实有他们或多或少有影响力的领域，非专家也经常在某些领域听从专家的意见。但关键在于，这一切都是自愿的：非正式的权威是基于能力和被证明的判断力授予的，但它绝不应该是被主动<emphasis>夺取</empha>的。即使渴望权威的人确实有能力，她以非正式的方式、通过团队共识持有该权威，权威的确切边界保持模糊和主观，以及该权威绝不导致她排斥他人在该领域工作，这些仍然至关重要。</para>
 
-<para>Rejecting or editing someone's work for technical reasons is an
-entirely different matter, of course.  There, the decisive factor
-is the content of the work, not who happened to act as gatekeeper.  It
-may be that the same person happens to do most of the reviewing for a
-given area, but as long as he never tries to prevent someone else from
-doing that work too, things are probably okay.</para>
+<para>当然，出于技术原因拒绝或编辑某人的工作完全是另一回事。在那里，决定性因素是工作的内容，而不是谁碰巧扮演了看门人的角色。可能碰巧是同一个人在某个特定领域做了大部分的审查工作，但只要他从不试图阻止别人也做这项工作，情况就可能没问题。</para>
 
   <sidebar id="cookie-licking">
-  <title>Cookie Licking</title>
+  <title>“舔饼干”（Cookie Licking）</title>
 
-  <para>The wonderful term <firstterm>cookie licking</firstterm>,
-  which I first heard from Sumana Harihareswara, can be used for the
-  situation where someone claims, in front of the group, that they're
-  going to take care of a certain task but then does nothing with it.
-  As Sumana says<footnote><para>See <ulink
-  url="http://opensourcebridge.org/sessions/1132"
-  >http://opensourcebridge.org/sessions/1132</ulink>.</para></footnote>:
-  "Nobody in their right mind would pick up and eat the licked cookie
-  or finish the [task]."  If you think you see an instance of cookie
-  licking happening in your project, simply pointing it out may be
-  enough to de-territorialize the task in question and make others
-  consider picking it up (may be enough to sterilize the cookie,
-  I guess, though at this point staying with the analogy may be more
-  confusing than helpful).</para>
+  <para>“<firstterm>舔饼干</firstterm>”这个绝妙的词，我第一次是从 Sumana Harihareswara 那里听到的。它可以用来形容这样一种情况：某人在团队面前声称他们要处理某项任务，但之后却什么也没做。正如 Sumana 所说<footnote><para>见 <ulink url="http://opensourcebridge.org/sessions/1132">http://opensourcebridge.org/sessions/1132</ulink>。</para></footnote>：“没有一个正常人会捡起并吃掉被舔过的饼干，或者去完成那项[任务]。”如果你觉得在你的项目中看到了“舔饼干”的实例，仅仅指出这一点可能就足以让相关任务“去地盘化”，并让其他人考虑接手它（我猜，这也许足以给饼干“消毒”了，不过在这个节骨眼上，再纠结这个比喻恐怕只会越说越乱）。</para>
 
   </sidebar>
 
-<para>In order to combat incipient territorialism, or even the
-appearance of it, many projects have taken the step of banning the
-inclusion of author names or designated maintainer names in source
-files.  I wholeheartedly agree with this practice: we follow it in the
-Subversion project, and it is more or less official policy at the
-Apache Software Foundation.  ASF member Sander Striker puts it this
-way:</para>
+<para>为了对抗初露端倪的地盘主义，甚至是其表象，许多项目已经采取措施，禁止在源文件中包含作者姓名或指定的维护者姓名。我完全赞同这种做法：我们在 Subversion 项目中遵循它，这在 Apache 软件基金会也或多或少是官方政策。ASF 成员 Sander Striker 这样说：</para>
 
 <blockquote>
-   <para><emphasis>At the Apache Software foundation we discourage the
-   use of author tags in source code.  There are various reasons for
-   this, apart from the legal ramifications.  Collaborative
-   development is about working on projects as a group and caring for
-   the project as a group.  Giving credit is good, and should be done,
-   but in a way that does not allow for false attribution, even by
-   implication.  There is no clear line for when to add or remove an
-   author tag.  Do you add your name when you change a comment?  When
-   you put in a one-line fix?  Do you remove other author tags when
-   you refactor the code and it looks 95% different?  What do you do
-   about people who go about touching every file, changing just enough
-   to make the virtual author tag quota, so that their name will be
-   everywhere?</emphasis></para>
+   <para><emphasis>在 Apache 软件基金会，我们不鼓励在源代码中使用作者标签（author tags）。除了法律上的影响，这还有多种原因。协作开发是关于作为一个团队在项目上工作，并作为一个团队来关心项目。给予贡献署名是好的，也应该做，但方式上不应允许错误的归属，即使是暗示性的。何时添加或移除作者标签没有明确的界限。当你修改一个注释时，你会加上你的名字吗？当你修复一个单行代码时呢？当你重构了代码，使其看起来有 95% 的不同时，你会移除其他作者的标签吗？对于那些到处修改每个文件，改动刚好足够达到虚拟的作者标签配额，以便他们的名字无处不在的人，你又该怎么办？</emphasis></para>
 
-   <para><emphasis>There are better ways to give credit, and our
-   preference is to use those.  From a technical standpoint author
-   tags are unnecessary; if you wish to find out who wrote a
-   particular piece of code, the version control system can be
-   consulted to figure that out.  Author tags also tend to get out of
-   date.  Do you really wish to be contacted in private about a piece
-   of code you wrote five years ago and were glad to have
-   forgotten?</emphasis></para>
+   <para><emphasis>有更好的方式来给予贡献署名，我们倾向于使用那些方式。从技术角度来看，作者标签是不必要的；如果你想知道是谁写了某段特定的代码，可以查阅版本控制系统来搞清楚。作者标签也容易过时。你真的希望在五年后，因为一段你早已乐于忘记的代码而被人私下联系吗？</empha></para>
 </blockquote>
 
-<para>A software project's source code files are the core of its
-identity.  They should reflect the fact that the developer community
-as a whole is responsible for them, and not be divided up into
-little fiefdoms.</para>
+<para>一个软件项目的源代码文件是其身份的核心。它们应该反映出开发者社区作为一个整体对它们负责的事实，而不应被分割成一个个小小的领地。</para>
 
-<para>People sometimes argue in favor of author or maintainer tags in
-source files on the grounds that this gives visible credit to those
-who have done the most work there.  There are two problems with this
-argument.  First, the tags inevitably raise the awkward question of
-how much work one must do to get one's own name listed there too.
-Second, they conflate the issue of credit with that of authority:
-having done work in the past does not imply ownership of the area
-where the work was done, but it's difficult if not impossible to avoid
-such an implication when individual names are listed at the tops of
-source files.  In any case, credit information can already be obtained
-from the version control logs and other out-of-band mechanisms like
-mailing list archives, so no information is lost by banning it from
-the source files themselves.<footnote><para>But see the mailing list
-thread entitled <citetitle>"having authors names in .py files"</citetitle>
-at <ulink url="https://groups.google.com/group/sage-devel/browse_thread/thread/e207ce2206f0beee"
->https://groups.google.com/group/sage-devel/browse_thread/thread/e207ce2206f0beee</ulink>
-for a good counterargument, particularly the post from William Stein.
-The key in that case, I think, is that many of the authors come from a
-culture (the academic mathematics community) where crediting directly
-at the source is the norm and is highly valued.  In such
-circumstances, it may be preferable to put author names into the
-source files, along with precise descriptions of what each author did,
-since the majority of potential contributors will expect that style of
-acknowledgement.</para></footnote></para>
+<para>人们有时会支持在源文件中使用作者或维护者标签，理由是这能给那些在该领域做了最多工作的人以可见的贡献署名。这个论点有两个问题。首先，这些标签不可避免地会引出一个尴尬的问题：一个人必须做多少工作才能把自己的名字也列上去。其次，它们混淆了贡献署名和权威的问题：过去做过工作并不意味着拥有该工作所在领域的所有权，但当个人名字被列在源文件顶部时，要避免这种暗示是很难甚至不可能的。无论如何，贡献信息已经可以从版本控制日志和邮件列表归档等带外机制中获得，因此，禁止将其写入源文件本身并不会丢失任何信息。<footnote><para>但请参阅邮件列表主题为 <citetitle>“having authors names in .py files”</citetitle> 的讨论串，网址为 <ulink url="https://groups.google.com/group/sage-devel/browse_thread/thread/e207ce2206f0beee">https://groups.google.com/group/sage-devel/browse_thread/thread/e207ce2206f0beee</ulink>，那里有一个很好的反驳论点，特别是 William Stein 的帖子。我认为，那个案例的关键在于，许多作者来自一种文化（学术数学界），在这种文化中，直接在源头署名是常态且备受重视。在这种情况下，将作者姓名连同每位作者所做工作的精确描述一起放入源文件可能是更可取的，因为大多数潜在的贡献者会期望这种致谢方式。</para></footnote></para>
 
-<para>If your project decides to ban individual names from source
-files, make sure not to go overboard.  For instance, many
-projects have a <filename>contrib/</filename> area where small tools and
-helper scripts are kept, often written by people who are otherwise not
-associated with the project.  It's fine for those files to contain
-author names, because they are not really maintained by the project as
-a whole.  On the other hand, if a contributed tool starts getting
-hacked on by other people in the project, eventually you may want to
-move it to a less isolated location and, assuming the original author
-approves, remove the author's name, so that the code looks like any
-other community-maintained resource.  If the author is sensitive about
-this, compromise solutions are acceptable, for example:</para>
+<para>如果你的项目决定禁止在源文件中使用个人姓名，请确保不要矫枉过正。例如，许多项目有一个 <filename>contrib/</filename> 目录，用于存放小型工具和辅助脚本，这些脚本通常由与项目无其他关联的人编写。这些文件中包含作者姓名是没问题的，因为它们并非真正由整个项目维护。另一方面，如果一个贡献的工具开始被项目中的其他人修改，最终你可能想把它移到一个不那么孤立的位置，并且，在原作者同意的情况下，移除作者的名字，这样代码看起来就和其他社区维护的资源一样了。如果作者对此很敏感，可以接受折衷方案，例如：</para>
 
 <blockquote>
 <programlisting>
-# indexclean.py: Remove old data from a Scanley index.
+# indexclean.py: 从 Scanley 索引中移除旧数据。
 #
-# Original Author: K. Maru &lt;kobayashi@example.com&gt;
-# Now Maintained By: Scanley Project (scanley.org)
-#                    and K. Maru.
+# 原作者: K. Maru &lt;kobayashi@example.com&gt;
+# 现由: Scanley 项目 (scanley.org)
+#      及 K. Maru 维护。
 # 
 # ...
 </programlisting>
 </blockquote>
 
-<para>But it's better to avoid such compromises, if possible, and most
-authors are willing to be persuaded, because they're happy that their
-contribution is being made a more integral part of the project.</para>
+<para>但如果可能的话，最好避免这种折衷，而且大多数作者都愿意被说服，因为他们很高兴自己的贡献能成为项目中更不可或缺的一部分。</para>
 
-<para>The important thing is to remember that there is a continuum
-between the core and the periphery of any project.  The main source
-code files for the software are clearly part of the core, and should
-be considered as maintained by the community.  On the other hand,
-companion tools or pieces of documentation may be the work of single
-individuals, who maintain them essentially alone, even though the
-works may be associated with, and even distributed with, the project.
-There is no need to apply a one-size-fits-all rule to every file, as
-long as the principle that community-maintained resources are not
-allowed to become individual territories is upheld.</para>
+<para>重要的是要记住，任何项目的核心和外围之间都存在一个连续统一体。软件的主要源代码文件显然是核心的一部分，应被视为由社区维护。另一方面，配套工具或文档片段可能是单个人的工作，他们基本上是独立维护这些作品，即使这些作品可能与项目相关联，甚至与项目一起分发。没有必要对每个文件都应用一刀切的规则，只要坚持社区维护的资源不允许成为个人领地这一原则即可。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="automation">
-<title>The Automation Ratio</title>
+<title>自动化率（The Automation Ratio）</title>
 
-<para>Try not to let humans do what machines could do instead.  As a
-rule of thumb, automating a common task is worth at least ten times the
-effort a developer would spend doing that task manually one time.  For
-very frequent or very complex tasks, that ratio could easily go up to
-twenty or even higher.</para>
+<para>尽量不要让人类去做机器可以代劳的事情。根据经验法则，自动化一个常见任务的价值，至少是开发者手动完成该任务一次所花费精力的十倍。对于非常频繁或非常复杂的任务，这个比率可以轻松达到二十甚至更高。</para>
 
-<para>Thinking of yourself as a "project manager", rather than just
-another developer, may be a useful attitude here.  Sometimes
-individual developers are too wrapped up in low-level work to see the
-big picture and realize that everyone is wasting a lot of effort
-performing automatable tasks manually.  Even those who do realize it
-may not take the time to solve the problem: because each individual
-performance of the task does not feel like a huge burden, no one ever
-gets annoyed enough to do anything about it.  What makes automation
-compelling is that the small burden is multiplied by the number of
-times each developer incurs it, and then <emphasis>that</emphasis>
-number is multiplied by the number of developers.</para>
+<para>在这里，将自己视为“项目经理”而非仅仅是另一个开发者，可能是一种有用的心态。有时，个别开发者过于专注于底层工作，以至于看不到全局，没意识到每个人都在手动执行可自动化的任务上浪费了大量精力。即使那些意识到这一点的人，也可能不会花时间去解决这个问题：因为每次单独执行任务感觉负担不大，所以没有人会烦到要去采取行动。自动化的吸引力在于，这个小小的负担乘以每个开发者承担它的次数，然后<emphasis>再</emphasis>乘以开发者的人数。</para>
 
-<para>Here, I am using the term "automation" broadly, to mean not only
-repeated actions where one or two variables change each time, but any
-sort of technical infrastructure that assists humans.  The minimum
-standard automation required to run a project these days was described
-in <xref linkend="technical-infrastructure"/>, but each project
-may have its own special problems too.  For example, a group working
-on documentation might want to have a web site displaying the most
-up-to-date versions of the documents at all times.  Since
-documentation is often written in a markup language like XML, there
-may be a compilation step, often quite intricate, involved in creating
-displayable or downloadable documents.  Arranging a web site where
-such compilation happens automatically on every commit might take
-a little time, but it is worth it.<footnote><para>It's gotten easier
-thanks to <ulink url="https://readthedocs.org/"
->https://readthedocs.org/</ulink>, an open source, community-supported
-site used by many projects.  In its own words, "Read The Docs
-simplifies software documentation by automating building, versioning,
-and hosting of your docs for you."</para></footnote>  The overall benefits of having
-up-to-date pages available at all times are huge, even though the cost
-of <emphasis>not</emphasis> having them might seem like only a small
-annoyance at any single moment, to any single developer.</para>
+<para>在这里，我广泛地使用“自动化”这个词，不仅指那些每次改变一两个变量的重复性动作，还指任何辅助人类的技术基础设施。如今运行一个项目所需的最低标准自动化已在 <xref linkend="technical-infrastructure"/> 中描述过，但每个项目可能还有其自身的特殊问题。例如，一个从事文档工作的小组可能希望有一个网站，能随时展示文档的最新版本。由于文档通常是用 XML 这样的标记语言编写的，因此在创建可显示或可下载的文档时，可能涉及一个通常相当复杂的编译步骤。安排一个网站，在每次 `commit` 时自动进行这种编译可能会花费一些时间，但这是值得的。<footnote><para>这变得更容易了，多亏了 <ulink url="https://readthedocs.org/">https://readthedocs.org/</ulink>，一个由许多项目使用的开源、社区支持的网站。用它自己的话说：“Read The Docs 通过为您自动化构建、版本控制和托管您的文档来简化软件文档工作。”</para></footnote> 随时能获得最新页面的总体好处是巨大的，即使在任何单一时刻，对任何单个开发者来说，<emphasis>没有</empha>这些页面的成本可能看起来只是一个小小的烦恼。</para>
 
-<para>Taking such steps eliminates not merely wasted time, but the
-griping and frustration that ensue when humans make missteps (as they
-inevitably will) in trying to perform complicated procedures manually.
-Multi-step, deterministic operations are exactly what computers were
-invented for; save your humans for more interesting things.</para>
+<para>采取这样的步骤不仅消除了时间的浪费，还消除了当人类在尝试手动执行复杂程序时不可避免地出错所带来的抱怨和挫败感。多步骤、确定性的操作正是计算机发明的目的；把你的精力留给更有趣的事情吧。</para>
 
-<para>(For another example of using automation to remove a bottleneck for
-the entire team, see Subversion's Contribulyzer system, which
-I've already described in detail in Chapter 21 of the book "Beautiful
-Teams" (<ulink
-url="https://www.oreilly.com/library/view/beautiful-teams/9780596801885/"
->https://www.oreilly.com/library/view/beautiful-teams/9780596801885/</ulink>).  
-That chapter, <citetitle>Teams and Tools</citetitle>, is available online at <ulink
-url="https://red-bean.com/kfogel/beautiful-teams/bt-chapter-21.html"
->https://red-bean.com/kfogel/beautiful-teams/bt-chapter-21.html</ulink>.)</para>
+<para>（关于使用自动化为整个团队消除瓶颈的另一个例子，请参见 Subversion 的 Contribulyzer 系统，我已在《Beautiful Teams》一书的第 21 章中详细描述过（<ulink url="https://www.oreilly.com/library/view/beautiful-teams/9780596801885/">https://www.oreilly.com/library/view/beautiful-teams/9780596801885/</ulink>）。该章，<citetitle>Teams and Tools</citetitle>，可在线获取，网址为 <ulink url="https://red-bean.com/kfogel/beautiful-teams/bt-chapter-21.html">https://red-bean.com/kfogel/beautiful-teams/bt-chapter-21.html</ulink>。）</para>
 
 <sect3 id="automated-testing">
-<title>Automated testing</title>
+<title>自动化测试</title>
 
-<para>Automated test runs are helpful for any software project, but
-especially so for open source projects, because automated testing
-(especially regression testing) allows developers to feel comfortable
-changing code in areas they are unfamiliar with, and thus encourages
-exploratory development.  Since detecting breakage is so hard to do by
-hand&nbsp;&mdash;&nbsp;one essentially has to guess where one might have broken
-something, and try various experiments to prove that one
-didn't&nbsp;&mdash;&nbsp;having automated ways to detect such breakage saves the
-project a <emphasis>lot</emphasis> of time.  It also makes people much
-more relaxed about refactoring large swaths of code, and therefore
-contributes to the software's long-term maintainability.</para>
+<para>自动化测试运行对任何软件项目都有帮助，但对开源项目尤其如此，因为自动化测试（特别是回归测试）让开发者在修改他们不熟悉的代码区域时感到放心，从而鼓励了探索性开发。由于手动检测代码破坏非常困难——基本上，你必须猜测你可能在哪里破坏了什么，并尝试各种实验来证明你没有——拥有自动化的方式来检测这种破坏为项目节省了<emphasis>大量</empha>时间。这也让人们在重构大片代码时更加放松，因此有助于软件的长期可维护性。</para>
 
   <sidebar id="regression-testing-vs-unit-testing">
-  <title>Regression Testing and Unit Testing</title>
+  <title>回归测试与单元测试</title>
 
-  <para><firstterm>Regression testing</firstterm> means testing that
-  working software stays working.  Its purpose is to reduce the
-  chances that code changes will break the software, particularly in
-  ways the software has been broken before.  Many projects have a
-  <firstterm>regression test suite</firstterm>, a separate program
-  that invokes the project's software with the expectation of
-  particular inputs causing particular behaviors.  If the test suite
-  instead causes a different behavior to happen, this is known as
-  a <firstterm>regression</firstterm>, meaning that someone's change
-  unexpectedly broke something else.</para>
+  <para><firstterm>回归测试</firstterm>（Regression testing）是指测试能正常工作的软件保持正常工作。其目的是减少代码变更破坏软件的可能性，特别是以软件以前曾被破坏过的方式。许多项目都有一个<firstterm>回归测试套件</firstterm>（regression test suite），这是一个独立的程序，它调用项目的软件，期望特定的输入会引起特定的行为。如果测试套件反而导致了不同的行为发生，这被称为<firstterm>回归</firstterm>（regression），意味着某人的变更意外地破坏了其他东西。</para>
 
-  <para><firstterm>Unit testing</firstterm> means testing the
-  software's module boundaries using their documented APIs.  Its
-  purpose is both to reduce the chance that modifications will break
-  existing functionality, and to prove that the intended functionality
-  exists as claimed.  If regression testing is retrospective ("What
-  has broken in the past?"), unit testing is prospective ("What needs
-  to continue working in the future?").  As with
-  regression tests, many projects have a <firstterm>unit test
-  suite</firstterm>.</para>
+  <para><firstterm>单元测试</firstterm>（Unit testing）是指使用其文档化的 API 来测试软件的模块边界。其目的既是减少修改破坏现有功能的可能性，也是为了证明预期的功能如声称的那样存在。如果说回归测试是回顾性的（“过去什么坏过？”），那么单元测试就是前瞻性的（“未来什么需要继续工作？”）。与回归测试一样，许多项目都有一个<firstterm>单元测试套件</firstterm>（unit test suite）。</para>
 
-  <para>As a software project gets bigger and more complicated, the
-  chances of unexpected side effects increase steadily.  Good design
-  can reduce the rate at which those chances increase, but it cannot
-  eliminate the problem entirely.  Thus many projects encourage, and
-  sometimes even require, contributors to accompany new functionality
-  with corresponding new regression or unit tests.</para>
+  <para>随着软件项目变得越来越大、越来越复杂，意外副作用的几率会稳步增加。良好的设计可以降低这些几率增加的速度，但无法完全消除问题。因此，许多项目鼓励，有时甚至要求，贡献者在提供新功能的同时，附上相应的新的回归测试或单元测试。</para>
 
-  <para>See
-  <ulink url="https://en.wikipedia.org/wiki/Regression_testing"
-  >https://en.wikipedia.org/wiki/Regression_testing</ulink> and 
-  <ulink url="https://en.wikipedia.org/wiki/Unit_testing"
-  >https://en.wikipedia.org/wiki/Unit_testing</ulink> for more
-  information.</para>
+  <para>更多信息，请参阅 <ulink url="https://en.wikipedia.org/wiki/Regression_testing">https://en.wikipedia.org/wiki/Regression_testing</ulink> 和 <ulink url="https://en.wikipedia.org/wiki/Unit_testing">https://en.wikipedia.org/wiki/Unit_testing</ulink>。</para>
 
   </sidebar>
 
-<para>Automated testing is not a panacea.  For one thing, it works
-best for programs with batch-style interfaces.  Software that is
-operated primarily through graphical user interfaces is much harder to
-test programmatically.  Another problem is that test suites
-themselves can often be quite complex, with a learning
-curve and maintenance burden all their own.  Reducing this complexity is
-one of the most useful things you can do, even though it may take a
-considerable amount of time.  The easier it is to add new tests to the
-suite, the more developers will do so, and the fewer bugs will survive
-to release.  Any effort spent making tests easier to write will be
-paid back many-fold over the lifetime of the project.</para>
+<para>自动化测试并非万能药。首先，它最适用于具有批处理式接口的程序。主要通过图形用户界面操作的软件，要进行程序化测试就困难得多。另一个问题是，测试套件本身通常可能相当复杂，有其自身的学习曲线和维护负担。降低这种复杂性是你能做的最有用的事情之一，即使这可能需要相当长的时间。向测试套件中添加新测试越容易，就会有越多的开发者这样做，幸存到发布版的 `bug` 就会越少。任何花在让测试更容易编写上的努力，都会在项目的整个生命周期中得到多倍的回报。</para>
 
-<para>Almost all projects have a <firstterm>"Don't break the
-build!"</firstterm> rule, meaning: don't commit a change that makes
-the software unable to compile or run.  Being the person who broke the
-build is usually cause for mild embarrassment and ribbing.  Projects
-with test suites often have a corollary rule: don't commit any change
-that causes tests to fail.  Such failures are easiest to spot if there
-are automatic nightly or per-change runs of the entire test suite,
-with the results posted publicly; that's another example of a
-worthwhile automation.</para>
+<para>几乎所有项目都有一条<firstterm>“别破坏构建！”</firstterm>（"Don't break the build!"）的规则，意思是：不要 `commit` 一个让软件无法编译或运行的变更。成为破坏构建的人通常会引起轻微的尴尬和调侃。有测试套件的项目通常还有一条附属规则：不要 `commit` 任何导致测试失败的变更。如果能自动地每晚或每次变更后运行整个测试套件，并将结果公开发布，这类失败就最容易被发现；这是另一个值得做的自动化。</para>
 
-<para>Most project hosting sites offer easy ways to connect code
-repositories to automating test services, so that continuous
-integration<footnote><para>The Wikipedia page <ulink
-url="https://en.wikipedia.org/wiki/Continuous_integration"
->https://en.wikipedia.org/wiki/Continuous_integration</ulink> has a
-good description of this practice and its variants.</para></footnote>
-can be a regular part of the development cycle.  Unless you have a
-reason to do something different, your project should just use one of
-the standard CI systems that other projects on that hosting site use.
-That way some developers will be already familiar with the CI setup
-when they start participating in your project.</para>
+<para>大多数项目托管网站都提供了将代码 `repository` 连接到自动化测试服务的简便方法，这样持续集成<footnote><para>维基百科页面 <ulink url="https://en.wikipedia.org/wiki/Continuous_integration">https://en.wikipedia.org/wiki/Continuous_integration</ulink> 对这种实践及其变体有很好的描述。</para></footnote> 就可以成为开发周期的常规部分。除非你有理由做些不同的事，你的项目应该就使用该托管网站上其他项目使用的标准 CI 系统之一。这样，一些开发者在开始参与你的项目时，就已经熟悉 CI 的设置了。</para>
 
-<para>In general, developers are willing to take the extra time to
-write tests when the test system is comprehensible and
-easy to work with.  Accompanying changes with tests is understood to
-be the responsible thing to do, and it's also an easy opportunity for
-collaboration: often two developers will divide up the work for a
-bugfix, with one writing the fix itself, and the other writing the
-test.  The latter developer sometimes ends up with more work, and since
-writing a test is already less satisfying than actually fixing the
-bug, it is imperative that the test suite not make the experience more
-painful than it has to be.</para>
+<para>总的来说，当测试系统易于理解和使用时，开发者愿意花额外的时间来编写测试。为变更附上测试被认为是负责任的做法，这也是一个简单的合作机会：通常两个开发者会为一个 `bug` 修复分工，一个编写修复本身，另一个编写测试。后一个开发者有时最终会做更多的工作，而且由于编写测试本身就不如实际修复 `bug` 那么有满足感，因此测试套件绝不能让这个体验变得比它必须的更痛苦。</para>
 
-<para>Some projects go even further, requiring that a new test
-accompany <emphasis>every</emphasis> bugfix or new feature.  Whether
-this is a good idea or not depends on many factors: the nature of the
-software, the makeup of the development team, and the difficulty of
-writing new tests.  It is normal to spend more time writing a new
-regression test than on fixing the original bug.  But don't let it get
-to an extreme: if it takes ten minutes to diagnose and fix a bug, but
-two hours to add a corresponding test, most developers will not bother
-with the test.  And if the project requires tests to accompany fixes,
-then the developer may not bother to fix the bug in the first
-place.</para>
+<para>一些项目甚至走得更远，要求<emphasis>每一个</empha> `bug` 修复或新功能都必须附带一个新的测试。这是否是个好主意，取决于许多因素：软件的性质、开发团队的构成，以及编写新测试的难度。花在编写新回归测试上的时间比修复原始 `bug` 的时间多是正常的。但别让它走向极端：如果诊断和修复一个 `bug` 需要十分钟，但添加相应的测试需要两个小时，大多数开发者就不会费心去写测试了。而如果项目要求修复必须附带测试，那么开发者可能一开始就不会去修复那个 `bug`。</para>
 
-<para>If the test system ever becomes a significant impediment to
-development, something <emphasis>must</emphasis> be done, and quickly.
-The same would be true for any routine process that turns into a
-barrier or a bottleneck for contributors.</para>
+<para>如果测试系统在任何时候成为开发的重大障碍，<emphasis>必须</empha>立即采取措施。任何变成了贡献者障碍或瓶颈的常规流程，都应如此处理。</para>
 
 </sect3>
 
@@ -708,211 +188,63 @@ barrier or a bottleneck for contributors.</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="users-to-participants">
-<title>Treat Every User as a Potential Participant</title>
+<title>将每位用户都视为潜在的参与者</title>
 
-<para>Each interaction with a user is an opportunity to get a new
-participant.  When a user takes the time to post to one of the project's
-mailing lists, or to file a bug report, she has already tagged herself
-as having more potential for involvement than most users (from whom
-the project will never hear at all).  Follow up on that potential: if
-she described a bug, thank her for the report and ask her if she wants
-to try fixing it.  If she wrote to say that an important question was
-missing from the FAQ, or that the program's documentation was
-deficient in some way, then freely acknowledge the problem (assuming
-it really exists) and ask if she's interested in writing the missing
-material herself.  Naturally, much of the time the user will demur.
-But it doesn't cost much to ask, and every time you do, it reminds the
-other listeners in that forum that getting involved in the project is
-something anyone can do.</para>
+<para>与用户的每一次互动都是获得新参与者的机会。当一个用户花时间在项目的某个邮件列表上发帖，或者提交一个 `bug` 报告时，她已经表明自己比大多数用户（项目永远不会从他们那里听到任何消息）更有可能参与进来。要跟进这种潜力：如果她描述了一个 `bug`，感谢她的报告，并问她是否想尝试修复它。如果她写信说常见问题解答（FAQ）中少了一个重要问题，或者程序的文档在某方面有缺陷，那么就坦然承认问题（假设它确实存在），并问她是否有兴趣自己编写缺失的材料。当然，大多数时候用户会婉拒。但问一下也花不了多少成本，而且你每问一次，都是在提醒那个论坛里的其他听众，参与项目是任何人都可以做的事情。</para>
 
-<para>Don't limit your goals to acquiring new developers and
-documentation writers.  For example, even training people to write
-good bug reports pays off in the long run, if you don't spend
-<emphasis>too</emphasis> much time per person, and if they go on
-to submit more bug reports in the future&nbsp;&mdash;&nbsp;which they are more
-likely to do if they got a constructive reaction to their first
-report.  A constructive reaction need not be a fix for the bug,
-although that's always the ideal; it can also be a solicitation for
-more information, or even just a confirmation that the behavior
-<emphasis>is</emphasis> a bug.  People want to be listened to.
-Secondarily, they want their bugs fixed.  You may not always be able
-to give them the latter in a timely fashion, but you (or rather, the
-project as a whole) can give them the former.</para>
+<para>不要把你的目标局限于招募新的开发者和文档编写者。例如，即使是培训人们编写好的 `bug` 报告，从长远来看也是有回报的，前提是你不在每个人身上花费<emphasis>太多</empha>时间，并且他们将来会提交更多的 `bug` 报告——如果他们对第一份报告得到了建设性的回应，他们就更有可能这样做。一个建设性的回应不一定是对 `bug` 的修复，尽管那总是最理想的；它也可以是请求更多信息，甚至只是确认该行为<emphasis>确实是</empha>一个 `bug`。人们希望被倾听。其次，他们才希望自己的 `bug` 被修复。你可能不总能及时地给予他们后者，但你（或者说，整个项目）可以给予他们前者。</para>
 
-<para>A corollary of this is that developers should not express anger
-at people who file well-intended but vague bug reports.  This is one
-of my personal pet peeves; I see developers do it all the time on
-various open source mailing lists, and the harm it does is palpable.
-Some hapless newbie will post a useless report:</para>
+<para>由此得出的一个推论是，开发者不应该对那些提交了善意但模糊的 `bug` 报告的人生气。这是我个人的一个忌讳；我经常在各种开源邮件列表上看到开发者这样做，它造成的伤害是显而易见的。某个倒霉的新手会发一个没用的报告：</para>
 
 <blockquote>
-   <para>Hi, I can't get Scanley to run.  Every time I start it up, it
-   just errors.  Is anyone else seeing this problem?</para>
+   <para>你好，我无法运行 Scanley。每次启动它，都会报错。有其他人遇到这个问题吗？</para>
 </blockquote>
 
-<para>Some developer&nbsp;&mdash;&nbsp;who has seen this kind of report a
-thousand times, and hasn't stopped to think that the newbie has
-not&nbsp;&mdash;&nbsp;will respond like this:</para>
+<para>某个开发者——他已经见过这种报告一千次了，并且没有停下来想过这个新手没有——会这样回应：</para>
 
 <blockquote>
-   <para>What are we supposed to do with so little information?
-   Sheesh.  Give us at least some details, like the version of
-   Scanley, your operating system, and the error.</para>
+   <para>信息这么少，我们能做什么？真是的。至少给我们一些细节，比如 Scanley 的版本、你的操作系统，以及错误信息。</para>
 </blockquote>
 
-<para>This developer has failed to see things from the user's point of
-view, and also failed to consider the effect such a reaction might
-have on all the <emphasis>other</emphasis> people watching the
-exchange.  Naturally a user who may have no programming experience, and no
-prior experience reporting bugs, will not know how to write a bug
-report.  What is the right way to handle such a person?  Educate them!
-And do it in such a way that they come back for more:</para>
+<para>这位开发者没有从用户的角度看问题，也没有考虑到这样的回应可能会对所有<emphasis>其他</empha>围观这次交流的人产生什么影响。一个可能没有任何编程经验、也没有报告 `bug` 先前经验的用户，自然不知道如何写 `bug` 报告。对待这样的人的正确方法是什么？教育他们！并且要用一种能让他们还想再来的方式：</para>
 
 <blockquote>
-   <para>Sorry you're having trouble.  We'll need more information in
-   order to figure out what's happening here.  Please tell us the
-   version of Scanley, your operating system, and the exact text of
-   the error.  The very best thing you can do is send a transcript
-   showing the exact commands you ran, and the output they produced.
-   See http://www.scanley.org/how-to-report-a-bug.html for more.</para> 
+   <para>很抱歉你遇到了麻烦。我们需要更多信息才能弄清楚这里发生了什么。请告诉我们 Scanley 的版本、你的操作系统，以及错误信息的确切文本。你能做的最好的事情，是发送一份显示你运行的确切命令及其产生的输出的记录。更多信息请见 http://www.scanley.org/how-to-report-a-bug.html。</para>
 </blockquote>
 
-<para>This way of responding is far more effective at
-extracting the needed information from the user, because it is written
-to the user's point of view.  First, it expresses sympathy:
-<emphasis>You had a problem; we feel your pain</emphasis>.  (This is
-not necessary in every bug report response; it depends on the severity
-of the problem and how upset the user seemed.)  Second, instead of
-belittling him for not knowing how to report a bug, it tells him how,
-and in enough detail to be actually useful&nbsp;&mdash;&nbsp;for example, many
-users don't realize that "show us the error" means "show us the exact
-text of the error, with no omissions or abridgements."  The first time
-you work with such a user, you need to be specific about that.
-Finally, it offers a pointer to much more detailed and complete
-instructions for reporting bugs.  If you have successfully engaged
-with the user, he will often take the time to read that document and
-do what it says.  This means, of course, that you have to have the
-document prepared in advance.  It should give clear instructions about
-what kind of information your development team wants to see in every
-bug report.  Ideally, it should also evolve over time in response to
-the particular sorts of omissions and misreports users tend to make
-for your project.</para>
+<para>这种回应方式在从用户那里获取所需信息方面要有效得多，因为它是从用户的角度写的。首先，它表达了同情：<emphasis>你遇到了问题；我们感同身受</emphasis>。（这在每个 `bug` 报告的回应中并非都必要；这取决于问题的严重程度以及用户看起来有多沮丧。）其次，它没有因为他不知道如何报告 `bug` 而贬低他，而是告诉他怎么做，并且足够详细，真正有用——例如，许多用户不明白“给我们看错误信息”意味着“给我们看错误信息的**确切**文本，不省略、不删减”。你第一次与这样的用户合作时，需要对此说得具体。最后，它提供了一个指向更详细、更完整的 `bug` 报告说明的链接。如果你成功地与用户进行了互动，他通常会花时间阅读那份文档并照做。这当然意味着，你必须事先准备好那份文档。它应该清楚地说明你的开发团队希望在每个 `bug` 报告中看到什么样的信息。理想情况下，它还应该随着时间的推移，根据用户在你的项目中常犯的遗漏和误报类型而不断演进。</para>
 
-<para>The Subversion project's bug reporting instructions, at <ulink
-url="https://subversion.apache.org/reporting-issues.html"
->https://subversion.apache.org/reporting-issues.html</ulink>, are a fairly
-standard example of the form.  Notice how they include an
-invitation to provide a patch to fix the bug.  This is not because
-such an invitation will lead to a greater patch/report
-ratio&nbsp;&mdash;&nbsp;most users who are capable of fixing bugs already know
-that a patch would be welcome, and don't need to be told.  The
-invitation's real purpose is to emphasize to all readers, especially
-those new to the project or new to free software in general, that the
-project runs on participation.  In a sense, the project's
-current developers are no more responsible for fixing the bug than is
-the person who reported it.  This is an important point that many new
-users will not be familiar with.  Once they realize it, they're more
-likely to help make the fix happen, if not by contributing code then
-by providing a more thorough reproduction recipe, or by offering to
-test fixes that other people post.  The goal is to make every user
-realize that there is no <emphasis>innate</emphasis> difference
-between himself and the people who work on the project&nbsp;&mdash;&nbsp;that
-it's a question of how much time and effort one puts in, not a
-question of who one is.</para>
+<para>Subversion 项目的 `bug` 报告说明，位于 <ulink url="https://subversion.apache.org/reporting-issues.html">https://subversion.apache.org/reporting-issues.html</ulink>，是这种形式的一个相当标准的例子。注意它们是如何包含一个提供 `patch` 来修复 `bug` 的邀请的。这并不是因为这样的邀请会带来更高的 `patch`/报告比率——大多数有能力修复 `bug` 的用户已经知道 `patch` 会受到欢迎，不需要被告知。这个邀请的真正目的是向所有读者，特别是那些项目新手或自由软件新手强调，项目是靠参与来运行的。在某种意义上，项目当前的开发者对修复这个 `bug` 的责任，并不比报告它的人更大。这是许多新用户不熟悉的一个重要点。一旦他们意识到这一点，他们就更有可能帮助实现修复，如果不是通过贡献代码，那么就是通过提供更详尽的复现步骤，或者主动测试别人发布的修复。目标是让每个用户都认识到，他自己和那些在项目上工作的人之间没有<emphasis>天生</empha>的区别——这是一个投入多少时间和精力的问题，而不是你是谁的问题。</para>
 
-<para>The admonition against responding angrily does not apply to rude
-users.  Occasionally people post bug reports or complaints that,
-regardless of their informational content, show a sneering contempt at
-the project for some failing.  Often such people are alternately
-insulting and flattering, such as the person who posted this to a
-Subversion mailing list:</para>
+<para>关于不要愤怒回应的告诫不适用于无礼的用户。偶尔，人们会发布一些 `bug` 报告或抱怨，无论其信息内容如何，都表现出对项目某些失败的轻蔑。这类人常常时而侮辱时而奉承，比如下面这位在 Subversion 邮件列表上发帖的人：</para>
 
 <blockquote>
-<para>Why is it that after almost 6 days there still aren't any
-binaries posted for the windows platform?!?  It's the same story every
-time and it's pretty frustrating.  Why aren't these things automated
-so that they could be available immediately??  When you post an "RC"
-build, I think the idea is that you want users to test the build, but
-yet you don't provide any way of doing so.  Why even have a soak
-period if you provide no means of testing??</para>
+<para>为什么快 6 天了，Windows 平台的二进制文件还没发布？！每次都是这样，真让人沮丧。为什么这些事不能自动化，以便能立刻可用？当你们发布一个“RC”版本时，我想你们是想让用户测试这个版本，但你们却不提供任何测试的方式。如果没有测试手段，为什么要有一个“浸泡期”（soak period）？</para>
 </blockquote>
 
-<para>Initial response to this rather inflammatory post was
-surprisingly restrained: people pointed out that the project had a
-published policy of not providing official binaries, and said, with
-varying degrees of annoyance, that he ought to volunteer to produce
-them himself if they were so important to him.  Believe it or not, his
-next post started with these lines:</para>
+<para>对这个相当煽动性的帖子的最初回应出奇地克制：人们指出项目有不提供官方二进制文件的公开政策，并带着不同程度的恼怒说，如果这些文件对他那么重要，他应该自愿去制作它们。信不信由你，他的下一个帖子开头是这样的：</para>
 
 <blockquote>
-<para>First of all, let me say that I think Subversion is awesome and
-I really appreciate the efforts of everyone involved.  [...]</para>
+<para>首先，让我说，我认为 Subversion 太棒了，我真的很感激所有参与者的努力。[...]</para>
 </blockquote>
 
-<para>...and then he went on to berate the project
-<emphasis>again</emphasis> for not providing binaries, while
-still not volunteering to do anything about it.  After that, about
-50 people just jumped all over him, and I can't say I really
-minded.  Retaliatory rudeness should be avoided toward people with
-whom the project has (or would like to have) a sustained interaction.
-But when someone makes it clear from the start that he is going to
-be a fountain of bile, there is no point making him feel welcome.</para>
+<para>……然后他又继续<emphasis>再次</empha>指责项目不提供二进制文件，同时仍然没有自愿做任何事。那之后，大约有 50 个人就群起而攻之了，我得说我真不介意。对于那些项目已经（或希望）与之有持续互动的人，应该避免报复性的无礼。但当某人从一开始就明确表示他将是一个“怨气喷泉”时，就没必要让他感到受欢迎了。</para>
 
-<para>Such situations are fortunately quite rare, and they are
-noticeably rarer in projects that make an effort to engage users
-constructively and courteously from their very first
-interaction.</para>
+<para>幸运的是，这种情况相当罕见，而且在那些从用户第一次互动开始就努力以建设性和礼貌的方式与他们接触的项目中，这种情况明显更少见。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="meeting-in-person">
-<title>Meeting In Person: Conferences, Hackfests, Code-a-Thons, Code Sprints, Retreats</title>
+<title>线下见面：会议、黑客节（Hackfests）、编程马拉松、代码冲刺、静修</title>
 
-<para>In <xref linkend="fund-meetings"/>, I already discussed the usefulness
-of sponsoring in-person meetings between developers, including those
-who are not part of your organization but who work on the same
-project(s) as your own developers do.  Subsidizing in-person meetups,
-hackathons, and conference travel creates good will and is a
-relatively cheap way to signal the permanence of your company's
-strategic investment in a given project.  It's also a good way for
-your organization to absorb outside ideas from the competitive and
-collaborative landscape, since it puts your developers in close
-contact with developers from other companies.</para>
+<para>在 <xref linkend="fund-meetings"/> 中，我已经讨论了赞助开发者之间线下会议的用处，包括那些不属于你的组织但与你的开发者在同一个项目上工作的人。资助线下聚会、黑客马拉松和会议差旅能建立好感，并且是展示贵公司对某个项目战略投资持久性的相对廉价的方式。这也是你的组织吸收来自竞争与合作领域的外部思想的好方法，因为它让你的开发者与其他公司的开发者紧密接触。</para>
 
-<para>Once you have decided to sponsor in-person contact, what form
-should it take?</para>
+<para>一旦你决定赞助线下接触，它应该采取什么形式呢？</para>
 
-<para>The important thing to remember is that <emphasis>the primary
-output of a social event is social connections</emphasis>.  Don't
-sponsor a hackathon with just the limited goal of getting a specific
-list of bugs fixed or features implemented.  While it is reasonable to
-expect some technical progress as the result of a hackathon, if that's
-all you get, you're wasting at least some of your money.  The
-<emphasis>real</emphasis> output is the increased trust and richer
-shared vocabulary built up between the developers from having been in
-the same room talking through the same problems&nbsp;&mdash;&nbsp;and
-from having relaxed over a good meal later that evening.  That closer
-relationship will continue to pay off long after the event is over, in
-people's willingness to spend an extra hour reviewing a commit,
-evaluating a design proposal, or helping someone debug an unexpected
-problem.  Deeper long-term collaboration is the goal; the event is
-just a means of getting there.</para>
+<para>需要记住的重要一点是，<emphasis>社交活动的主要产出是社交联系</emphasis>。不要仅仅为了修复一个特定的 `bug` 列表或实现某些功能而赞助一个黑客马拉松。虽然期望黑客马拉松能带来一些技术进展是合理的，但如果这只是你得到的全部，那你至少浪费了一部分钱。真正的<emphasis>产出</emphasis>是开发者们因为同处一室、讨论同样的问题——以及当晚晚些时候一起享用美餐放松身心——而建立起来的增强的信任和更丰富的共享词汇。这种更紧密的关系将在活动结束后很长一段时间内持续带来回报，体现在人们愿意多花一个小时审查一个 `commit`、评估一个设计提案，或者帮助某人调试一个意外问题。更深层次的长期合作才是目标；活动只是达到目的的手段。</para>
 
-<para>Meetups do not only have to be for writing code.  Documentation
-sprints, user-testing and QA sprints, and primarily user-centric
-events such as install fests are all useful.  However, be careful to
-distinguish clearly between purely developer-oriented events and
-events with a broader demographic, because the developers who attend
-will want to know what kind of mindset to be in.  Designing, coding,
-and debugging require a specific kind of concentration and mental
-stance, and it helps developers a lot to know in advance whether the
-event they're going is expected to have an atmosphere conducive to
-that kind of concentration or not.  <emphasis>Both</emphasis> kinds of
-events are useful for developers, and it's important for them to
-interact with and develop relationships with documenters, testers,
-users, sales engineers, etc.  They just need to know what they're
-going to, so they can prepare accordingly.</para>
+<para>聚会不仅仅是为了写代码。文档冲刺、用户测试和质量保证（QA）冲刺，以及主要以用户为中心的活动，如安装节（install fests），都是有用的。然而，要小心明确区分纯开发者导向的活动和更广泛人群参与的活动，因为参加的开发者需要知道该抱持什么样的心态。设计、编码和调试需要一种特定的专注和精神状态，提前告知开发者他们要去的活动是否期望有一个有利于这种专注的氛围，对他们大有帮助。<emphasis>两种</empha>类型的活动对开发者都有用，并且让他们与文档编写者、测试人员、用户、销售工程师等互动并发展关系也很重要。他们只是需要知道他们要去的是什么活动，以便能相应地做好准备。</para>
 
 </sect2>
 
@@ -920,432 +252,102 @@ going to, so they can prepare accordingly.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="share-management">
-<title>Share Management Tasks as Well as Technical Tasks</title>
+<title>分担管理任务与技术任务</title>
 
-<para>Share the management burden as well as the technical burden of
-running the project.  As a project becomes more complex, an increasing
-proportion of the work becomes about managing people and information flow.
-There is no reason not to share that burden, and sharing it does not
-necessarily require a top-down hierarchy either.  In fact, what happens in
-practice tends to be more of a peer-to-peer network topology than a
-military-style command structure.</para>
+<para>像分担技术负担一样，分担运行项目的管理负担。随着项目变得越来越复杂，工作中越来越大的比例是关于管理人和信息流。没有理由不分担这个负担，而且分担它也不一定需要一个自上而下的层级结构。事实上，实践中发生的往往更像是一个点对点（peer-to-peer）的网络拓扑，而不是军事化的指挥结构。</para>
 
-<para>Sometimes management roles are formalized and sometimes they
-happen spontaneously.  In the Subversion project, we have a patch
-manager, a translation manager, documentation managers, issue managers
-(albeit unofficial), and a release manager.  Some of these roles we
-made a conscious decision to initiate, others just happened by
-themselves.  Here we'll examine these roles, and a couple of others,
-in detail (except for release manager, which was already covered in
-<xref linkend="release-manager"/> and <xref
-linkend="release-owner"/>).</para>
+<para>有时管理角色是正式化的，有时它们是自发产生的。在 Subversion 项目中，我们有一个 `patch` 经理、一个翻译经理、文档经理、问题经理（尽管是非官方的），以及一个发布经理。其中一些角色是我们有意识地决定设立的，其他的则是自然而然形成的。在这里，我们将详细审视这些角色，以及其他几个角色（发布经理除外，它已在 <xref linkend="release-manager"/> 和 <xref linkend="release-owner"/> 中介绍过）。</para>
 
 <sect2 id="manager-is-not-owner">
 <!-- For link compatibility with the ID of a now-removed section. -->
 <anchor id="faq-manager" />
 
-<title>"Manager" Does Not Mean "Owner"</title>
+<title>“经理”不等于“所有者”</title>
 
-<para>As you read the role descriptions below, notice that none of them
-requires exclusive control over the domain in question.  The issue
-manager does not prevent other people from making changes in the
-tickets database, the FAQ manager does not insist on being the only
-person to edit the FAQ, and so on.  These roles are all about
-<emphasis>responsibility without monopoly</emphasis>.  An important
-part of each domain
-manager's job is to notice when other people are working in that domain,
-and train them to do the things the way the manager does, so that the
-multiple efforts reinforce rather than conflict.  Domain managers
-should also document the processes by which they do their work, so
-that when one leaves, someone else can pick up the slack right
-away.</para>
+<para>在你阅读下面的角色描述时，请注意，没有一个角色要求对相关领域拥有排他性控制权。问题经理不会阻止其他人在工单数据库中做修改，FAQ 经理不会坚持自己是唯一编辑 FAQ 的人，等等。这些角色都是关于<emphasis>责任而非垄断</emphasis>。每个领域经理工作的一个重要部分是，注意到有其他人在那个领域工作，并培训他们以经理的方式做事，这样多方的努力就能相互加强而不是冲突。领域经理还应该记录下他们工作流程，这样当一个经理离开时，其他人可以马上接手。</para>
 
-<para>Sometimes there is a conflict: two or more people want the same
-role.  There is no one right way to handle this.  You just have to
-draw on your knowledge of the project and of the people involved and
-suggest a resolution.  In some cases it will work to just put on your
-"benevolent dictator" hat and choose one of the people.  But I find
-that a better technique is just to ask the multiple candidates to
-settle it among themselves.  They usually will, and will be more
-satisfied with the result than if a decision had been imposed on them
-from the outside.  They may even decide on a co-management
-arrangement, which is fine if it works, and if it doesn't then you're
-right back where you started and can try a different resolution.</para>
+<para>有时会有冲突：两个或更多的人想要同一个角色。处理这个问题没有唯一正确的方法。你只能根据你对项目和相关人员的了解，提出一个解决方案。在某些情况下，戴上你的“开明独裁者”帽子，选择其中一人是可行的。但我发现一个更好的技巧是，让多个候选人自己解决。他们通常会这么做，并且会对结果比被外部强加的决定更满意。他们甚至可能决定共同管理，如果这行得通，那也很好；如果行不通，那你又回到了起点，可以尝试另一种解决方案。</para>
 
 <sect3 id="patch-manager">
-<title>Patch Manager (or Pull Request Manager)</title>
+<title>Patch 经理（或 Pull Request 经理）</title>
 
-<para>In a free software project that receives a lot of
-patches,<footnote><para>Here "patch" and "pull request" are synonymous:
-they just mean a proposed change to the software, supplied in the
-standard format for contributing changes.</para></footnote>
-keeping track of which patches have arrived and what has been decided
-about them can be a nightmare, especially if done in a decentralized
-way.  Most patches arrive either as posts to the project's development
-mailing list or as a pull request submitted through the version
-control system, but there are a number of different routes a patch can
-take after arrival.</para>
+<para>在一个收到大量 `patch` 的自由软件项目中，<footnote><para>这里，“patch”和“pull request”是同义词：它们都指对软件提出的变更，以标准的贡献变更格式提供。</para></footnote> 跟踪哪些 `patch` 已经到达以及对它们做了什么决定，可能是一场噩梦，尤其是在分散处理的情况下。大多数 `patch` 要么是作为帖子发到项目的开发邮件列表，要么是通过版本控制系统提交的 `pull request`，但一个 `patch` 在到达后可以有多种不同的路径。</para>
 
-<para>Sometimes someone reviews the patch, finds problems, and bounces
-it back to the original author for cleanup.  This usually leads to an
-iterative process&nbsp;&mdash;&nbsp;all visible in a public forum&nbsp;&mdash;&nbsp;in which
-the original author posts revised versions of the patch until the
-reviewer has nothing more to criticize.  It is not always easy to tell
-when this process is done: if the reviewer commits the patch, then
-clearly the cycle is complete.  But if she does not, it might be
-because she simply didn't have time, or doesn't have commit access
-herself and couldn't rope any of the other developers into doing
-it.</para>
+<para>有时，有人审查了 `patch`，发现了问题，然后把它退回给原作者进行清理。这通常会导致一个迭代过程——所有过程都在公共论坛上可见——在这个过程中，原作者发布 `patch` 的修订版本，直到审查者再也挑不出毛病。要判断这个过程何时完成并不总是容易：如果审查者 `commit` 了 `patch`，那么这个循环显然就完成了。但如果她没有，可能是因为她根本没时间，或者她自己没有 `commit` 权限，也无法说服其他开发者来做这件事。</para>
 
-<para>Another frequent response to a patch is a freewheeling
-discussion, not necessarily about the patch itself, but about whether
-the concept behind the patch is good.  For example, the patch may fix
-a bug, but the project prefers to fix that bug in another way, as part
-of solving a more general class of problems.  Often this is not known
-in advance, and it is the patch that stimulates the discovery.</para>
+<para>对 `patch` 的另一个常见反应是自由奔放的讨论，不一定关乎 `patch` 本身，而是关于 `patch` 背后的概念是否好。例如，`patch` 可能修复了一个 `bug`，但项目倾向于用另一种方式来修复那个 `bug`，作为解决一个更普遍问题类别的一部分。这通常是事先不知道的，是 `patch` 刺激了这一发现。</para>
 
-<para>Occasionally, a posted patch is met with utter silence.  Usually
-this is due to no developer having time <emphasis>at that
-moment</emphasis> to review the patch, so each hopes that someone else
-will do it.  Since there's no particular limit to how long each person
-waits for someone else to pick up the ball, and meanwhile other
-priorities are always coming up, it's very easy for a patch to be
-ignored permanently without any single person intending for that to
-happen.  The project might miss out on a useful patch this way, and
-there are other harmful side effects as well: it is discouraging to
-the author, who invested work in the patch, and it is discouraging
-to others considering writing patches.</para>
+<para>偶尔，一个发布的 `patch` 会遭遇彻底的沉默。这通常是由于<emphasis>当时</empha>没有开发者有时间审查 `patch`，所以每个人都希望别人会去做。由于每个人等待别人接手的时间没有特别的限制，而与此同时总有其他优先事项出现，所以一个 `patch` 很容易在没有任何人故意的情况下被永久忽略。项目可能因此错过一个有用的 `patch`，而且还有其他有害的副作用：这对投入了工作的作者是令人沮丧的，对其他考虑编写 `patch` 的人也是如此。</para>
 
-<para>The patch manager's job is to make sure that patches don't "slip
-through the cracks."  This is done by following every patch through to
-some sort of stable state.  The patch manager watches every issue
-tracker discussion, pull request, or mailing list thread that results
-from a patch
-posting.  If it ends with a commit of the patch, he does nothing.  If it
-goes into a review/revise iteration, ending with a final version of
-the patch but no commit, he creates or updates a ticket to point to
-the final version, and to any discussion around it, so that there is a
-permanent record for developers to follow up on later.  In projects
-that use a patch queue management system<footnote><para>Three are
-TopGit (<ulink url="https://mackyle.github.io/topgit/"
->https://mackyle.github.io/topgit/</ulink>), 
-patchwork (<ulink url="http://jk.ozlabs.org/projects/patchwork/"
->http://jk.ozlabs.org/projects/patchwork/</ulink>), and Quilt
-(<ulink url="https://savannah.nongnu.org/projects/quilt/"
->https://savannah.nongnu.org/projects/quilt/</ulink>), as of early 2022.  I'm
-sure there are others out there.  Users of the Mercurial version
-control system have long raved about the "Mercurial Queues" patch
-management system; because this is integrated with Mercurial, it's not
-directly available for Git users.  However, Stacked Git ("StGit", at
-<!-- https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools
-     had a lot of interesting stuff besides StGit, FWIW! -->
-<ulink url="https://stacked-git.github.io/" >https://stacked-git.github.io/</ulink>)
-provides similar functionality, and like Mercurial Queues is also
-based on Quilt.</para></footnote> or review
-tools,<footnote><para>Project hosting sites usually have a built-in
-code review system, and most projects just use that.  But you don't
-have to.  There are standalone code review systems worth checking out,
-such as Gerrit (<ulink
-url="https://www.gerritcodereview.com/" >https://www.gerritcodereview.com/</ulink>) and
-ReviewBoard (<ulink url="https://www.reviewboard.org/"
->https://www.reviewboard.org/</ulink>) (and there are others out there
-too).</para></footnote> the patch manager can help encourage
-consistent usage of that tool by putting patches there and watching
-to make sure developers handle them there.</para>
+<para>Patch 经理的工作是确保 `patch` 不会“从缝隙中溜走”。这是通过跟踪每一个 `patch` 直至其达到某种稳定状态来完成的。Patch 经理会关注每一个由 `patch` 发布引起的 issue tracker 讨论、`pull request` 或邮件列表讨论串。如果它以 `patch` 的 `commit` 告终，他什么也不做。如果它进入了一个审查/修订的迭代，最终以 `patch` 的最终版本结束但没有 `commit`，他会创建或更新一个工单，指向最终版本以及围绕它的任何讨论，这样就为开发者日后跟进留下了永久记录。在那些使用 `patch` 队列管理系统<footnote><para>截至 2022 年初，有三个是 TopGit (<ulink url="https://mackyle.github.io/topgit/">https://mackyle.github.io/topgit/</ulink>)、patchwork (<ulink url="http://jk.ozlabs.org/projects/patchwork/">http://jk.ozlabs.org/projects/patchwork/</ulink>) 和 Quilt (<ulink url="https://savannah.nongnu.org/projects/quilt/">https://savannah.nongnu.org/projects/quilt/</ulink>)。我相信还有其他的。Mercurial 版本控制系统的用户长期以来一直对“Mercurial Queues” `patch` 管理系统赞不绝口；因为这与 Mercurial 集成，所以 Git 用户无法直接使用。然而，Stacked Git（“StGit”，位于 <ulink url="https://stacked-git.github.io/">https://stacked-git.github.io/</ulink>）提供了类似的功能，并且像 Mercurial Queues 一样，也是基于 Quilt 的。</para></footnote> 或审查工具<footnote><para>项目托管网站通常有内置的代码审查系统，大多数项目就用那个。但你不必如此。有一些值得一看的独立代码审查系统，比如 Gerrit (<ulink url="https://www.gerritcodereview.com/">https://www.gerritcodereview.com/</ulink>) 和 ReviewBoard (<ulink url="https://www.reviewboard.org/">https://www.reviewboard.org/</ulink>)（还有其他的）。</para></footnote> 的项目中，`patch` 经理可以通过将 `patch` 放在那里并观察以确保开发者在那里处理它们，来帮助鼓励对该工具的一致使用。</para>
 
-<para>When a patch gets no reaction at all, the patch manager waits a
-few days, then follows up asking if anyone is going to review it.
-This usually gets a reaction: a developer may explain that she doesn't
-think the patch should be applied, and give the reasons why, or she
-may review it, in which case one of the previously described paths is
-taken.  If there is still no response, the patch manager may or may
-not file a ticket for the patch, at his discretion, but at least the
-original submitter got <emphasis>some</emphasis> reaction.  The true
-currency of open source projects is attention: people who can see that
-they are getting attention will keep participating, even if not every
-patch they submit lands.</para>
+<para>当一个 `patch` 完全没有反应时，`patch` 经理会等几天，然后跟进询问是否有人会审查它。这通常会得到回应：一个开发者可能会解释她认为不应该应用这个 `patch`，并给出原因，或者她可能会审查它，这时就会走上前面描述过的某条路径。如果仍然没有回应，`patch` 经理可能会也可能不会为这个 `patch` 提交一个工单，这由他自行决定，但至少最初的提交者得到了<emphasis>一些</empha>反应。开源项目的真正货币是注意力：那些能看到自己受到关注的人会继续参与，即使不是他们提交的每个 `patch` 都能被接纳。</para>
 
-<para>Having a patch manager has saved the Subversion development team
-a lot of time and mental energy.  Without a designated person to take
-responsibility, every developer would constantly have to worry "If I
-don't have time to respond to this patch right now, can I count on
-someone else doing it?  Should I try to keep an eye on it?  But if
-other people are also keeping an eye on it, for the same reasons, then
-we'd have needlessly duplicated effort."  The patch manager removes
-the second-guessing from the situation.  Each developer can make the
-decision that is right for her at the moment she first sees the patch.
-If she wants to follow up with a review, she can do that&nbsp;&mdash;&nbsp;the
-patch manager will adjust his behavior accordingly.  If she wants to
-ignore the patch completely, that's fine too; the patch manager will
-make sure it isn't forgotten.</para>
+<para>有一个 `patch` 经理为 Subversion 开发团队节省了大量的时间和精力。没有一个指定的人来负责，每个开发者都会不断地担心“如果我现在没时间回应这个 `patch`，我能指望别人去做吗？我应该留意它吗？但如果其他人也出于同样的原因在留意它，那我们就会有不必要的重复劳动。”`patch` 经理消除了这种情况下的猜测。每个开发者都可以在她第一次看到 `patch` 的那一刻，做出对她自己来说正确的决定。如果她想跟进审查，她可以这么做——`patch` 经理会相应地调整他的行为。如果她想完全忽略这个 `patch`，那也没问题；`patch` 经理会确保它不会被遗忘。</para>
 
-<para>Because this system works only if people can depend on the patch
-manager being there without fail, the role should be held formally.
-In Subversion, we advertised for it on the development and users
-mailing lists, got several volunteers, and took the first one who
-replied.  When that person had to step down (see
-<xref linkend="transitions"/>), we did the same thing again.
-We've never tried having multiple people share the role, because of
-the communications overhead that would be required between them; but
-perhaps at very high volumes of patch submission, a multiheaded patch
-manager might make sense.</para>
+<para>因为这个系统只有在人们能毫无疑问地依赖 `patch` 经理在岗的情况下才能运作，所以这个角色应该被正式地担任。在 Subversion 项目中，我们在开发和用户邮件列表上为此做了宣传，得到了几位志愿者，并接受了第一个回复的人。当那个人不得不卸任时（见 <xref linkend="transitions"/>），我们又做了同样的事。我们从未尝试让多个人分担这个角色，因为他们之间需要大量的沟通开销；但也许在 `patch` 提交量非常大的情况下，一个多头的 `patch` 经理可能是有意义的。</para>
 
 </sect3>
 
 <sect3 id="translation-manager">
-<title>Translation Manager</title>
+<title>翻译经理</title>
 
-<para>In software projects, "translation" can refer to two somewhat
-different things.  It can mean translating the software's
-documentation into other languages, or it can mean translating the
-software itself&nbsp;&mdash;&nbsp;that is, having the program display errors and
-help messages in the user's preferred language.  Both are complex
-tasks, but once the right infrastructure is in place, they are largely
-separable from other development.  Because the tasks are similar in
-some ways, it may make sense, depending on your project, to have a
-single translation manager handle both, or it may be better to have
-two different managers.  (Note also that specialized infrastructure is
-available to help make the translation process more efficient; see
-<xref linkend="translation-infrastructure"/> for more on
-this.)</para>
+<para>在软件项目中，“翻译”可以指两件略有不同的事情。它可以指将软件的文档翻译成其他语言，也可以指翻译软件本身——也就是说，让程序以用户偏好的语言显示错误和帮助信息。两者都是复杂的任务，但一旦建立了正确的基础设施，它们在很大程度上就可以与其他开发工作分离开来。因为这些任务在某些方面相似，根据你的项目情况，让一个翻译经理同时处理两者可能是合理的，或者由两个不同的经理来处理会更好。（另请注意，有专门的基础设施可以帮助提高翻译过程的效率；更多信息请参见 <xref linkend="translation-infrastructure"/>。）</para>
 
-<para>In the Subversion project, we had one translation manager handle
-both.  He did not actually write the translations himself, of
-course&nbsp;&mdash;&nbsp;he might help out on one or two, but would need to speak
-more than ten languages fluently in order to work on all of them!
-Instead, he managed teams of other translators: he helped them
-coordinate among each other, and he coordinated between the
-translation teams and the rest of the project.</para>
+<para>在 Subversion 项目中，我们由一位翻译经理同时处理这两项工作。当然，他并不亲自撰写翻译——他可能会在一两种语言上帮忙，但要处理所有语言，他需要流利地讲十多种语言才行！相反，他管理着其他的翻译团队：他帮助他们相互协调，并在翻译团队和项目的其他部分之间进行协调。</para>
 
-<para>Part of the reason the translation manager is necessary is that
-translators are a different demographic from developers.  They
-sometimes have little or no experience working in a version control
-repository, or indeed with working as part of a distributed 
-team at all.  But in other respects they are often the best kind of
-participant: people with specific domain knowledge who saw a need and
-chose to get involved.  They are usually willing to learn, and
-enthusiastic to get to work.  All they need is someone to tell them
-how.  The translation manager makes sure that the translations happen
-in a way that does not interfere unnecessarily with regular
-development.  He also serves as a sort of representative of the
-translators as a unified body, whenever the developers must be
-informed of technical changes required to support the translation
-effort.</para>
+<para>翻译经理之所以必要，部分原因在于译者和开发者是不同的人群。他们有时在版本控制 `repository` 中工作几乎没有或根本没有经验，甚至在作为一个分布式团队工作方面也是如此。但在其他方面，他们往往是最好的参与者：拥有特定领域知识的人，看到了需求并选择参与进来。他们通常愿意学习，并热情地投入工作。他们所需要的只是有人告诉他们怎么做。翻译经理确保翻译工作以一种不会不必要地干扰常规开发的方式进行。当需要告知开发者为支持翻译工作而必须进行的技术变更时，他也扮演着翻译团队作为一个统一整体的代表的角色。</para>
 
-<para>Thus, the position's most important skills are diplomatic, not
-technical.  For example, in Subversion we had a policy that all
-translations should have at least two people working on them, because
-otherwise there is no way for the text to be reviewed.  When a new
-person shows up offering to translate Subversion to, say, Malagasy,
-the translation manager has to either hook him up with someone who
-posted six months ago expressing interest in doing a Malagasy
-translation, or else politely ask the person to go
-find <emphasis>another</emphasis> Malagasy translator to work with as
-a partner.  Once enough people are available, the manager sets them up
-with the proper kind of commit access, informs them of the project's
-conventions (such as how to write log messages), and then keeps an eye
-out to make sure they adhere to those conventions.</para>
+<para>因此，这个职位最重要的技能是外交手腕，而不是技术。例如，在 Subversion 项目中，我们有一个政策，即所有翻译都应该至少有两个人参与，否则文本就无法得到审校。当一个新人出现，表示愿意将 Subversion 翻译成，比如说，马达加斯加语时，翻译经理要么得把他和六个月前发帖表示有兴趣做马达加斯加语翻译的人联系起来，要么就得礼貌地请这个人去找<emphasis>另一位</empha>马达加斯加语译者作为搭档合作。一旦有了足够的人员，经理就会为他们设置适当的 `commit` 权限，告知他们项目的惯例（比如如何写日志信息），然后留意他们是否遵守这些惯例。</para>
 
-<para>Conversations between the translation manager and the
-developers, or between the translation manager and translation teams,
-are usually held in the project's original language&nbsp;&mdash;&nbsp;that is, the
-language from which all the translations are being made.  For many
-free software projects, this is English, but it doesn't matter what it
-is as long as the project agrees on it.  (English is probably best for
-projects that want to attract a broad international development
-community, though.)</para>
+<para>翻译经理与开发者之间的对话，或者翻译经理与翻译团队之间的对话，通常使用项目的原始语言进行——也就是所有翻译的源语言。对于许多自由软件项目来说，这是英语，但只要项目对此达成一致，具体是什么语言并不重要。（不过，对于希望吸引广泛国际开发社区的项目来说，英语可能是最好的选择。）</para>
 
-<para>Conversations <emphasis>within</emphasis> a particular
-translation team usually happen in their shared language, however, and
-one of the other tasks of the translation manager is to set up a
-dedicated mailing list for each team.  That way the translators can
-discuss their work freely, without distracting people on the project's
-main lists, most of whom would not be able to understand the
-translation language.</para>
+<para>然而，特定翻译团队<emphasis>内部</empha>的对话通常使用他们共同的语言进行，翻译经理的另一项任务就是为每个团队设立一个专门的邮件列表。这样，译者们就可以自由地讨论他们的工作，而不会打扰到项目主要列表上的人，因为他们中的大多数人可能无法理解翻译语言。</para>
 
   <sidebar id="i7n">
-  <title>Internationalization Versus Localization</title>
+  <title>国际化（Internationalization）与本地化（Localization）</title>
   
-  <para><firstterm>Internationalization</firstterm>
-  (<firstterm>I18N</firstterm>) and <firstterm>localization</firstterm>
-  (<firstterm>L10N</firstterm>) both refer to the process of adapting
-  a program to work in linguistic and cultural environments other than
-  the one for which it was originally written.  The terms are often
-  treated as interchangeable, but in fact they are not quite the same
-  thing.  As <ulink
-  url="https://en.wikipedia.org/wiki/Internationalization_and_localization"
-  >https://en.wikipedia.org/wiki/Internationalization_and_localization</ulink>
-  writes:</para>
+  <para><firstterm>国际化</firstterm> (Internationalization, <firstterm>I18N</firstterm>) 和 <firstterm>本地化</firstterm> (localization, <firstterm>L10N</firstterm>) 都指使程序适应其最初编写环境之外的语言和文化环境的过程。这两个术语经常被当作可互换的，但实际上它们并非完全相同。正如 <ulink url="https://en.wikipedia.org/wiki/Internationalization_and_localization">https://en.wikipedia.org/wiki/Internationalization_and_localization</ulink> 所写：</para>
 
   <blockquote>
-     <para>The distinction between them is subtle but important:
-     Internationalization is the adaptation of products
-     for <emphasis>potential</emphasis> use virtually everywhere, while
-     localization is the addition of special features for use in
-     a <emphasis>specific</emphasis> locale.</para>
+     <para>它们之间的区别很微妙但很重要：国际化是使产品适应<emphasis>潜在的</emphasis>几乎任何地方的使用，而本地化是为在<emphasis>特定</empha>地区使用而添加特殊功能。</para>
   </blockquote>
 
-  <para>For example, changing your software to losslessly handle
-  Unicode (<ulink url="https://en.wikipedia.org/wiki/Unicode"
-  >https://en.wikipedia.org/wiki/Unicode</ulink>) text
-  encodings is an internationalization move, since it's not about a
-  particular language, but rather about accepting text from any of a
-  number of languages.  On the other hand, making your software print
-  all error messages in Slovenian when it detects that it is running
-  in a Slovenian environment is a localization move.</para>
+  <para>例如，修改你的软件以无损地处理 Unicode（<ulink url="https://en.wikipedia.org/wiki/Unicode">https://en.wikipedia.org/wiki/Unicode</ulink>）文本编码是一项国际化举措，因为它不针对特定语言，而是关乎接受来自多种语言的文本。另一方面，让你的软件在检测到在斯洛文尼亚环境下运行时，以斯洛文尼亚语打印所有错误消息，则是一项本地化举措。</para>
 
-  <para>The translation manager's task is principally about
-  localization, not internationalization.</para>
+  <para>翻译经理的任务主要是关于本地化，而不是国际化。</para>
   
   </sidebar>
 
 </sect3>
 
 <sect3 id="documentation-manager">
-<title>Documentation Manager</title>
+<title>文档经理</title>
 
-<para>Keeping software documentation up-to-date is a never-ending
-task.  Every new feature or enhancement that goes into the code has
-the potential to cause a change in the documentation.  Also, once the
-project's documentation reaches a certain level of completeness, you
-will find that a lot of the patches people send in are for the
-documentation, not for the code.  This is because there are many more
-people competent to fix bugs in prose than in code: all users are
-readers, but only a few are programmers.</para>
+<para>保持软件文档的最新状态是一项永无止境的任务。代码中每一个新功能或增强功能都有可能导致文档的变更。此外，一旦项目的文档达到一定的完整度，你会发现人们发来的很多 `patch` 都是针对文档，而不是代码。这是因为，能够修复散文中的错误的人比能够修复代码中的错误的人要多得多：所有用户都是读者，但只有少数是程序员。</para>
 
-<para>Documentation patches are usually easier to review and
-apply than code patches.  There is little or no testing to be done,
-and the quality of the change can be evaluated quickly just by examination.
-Since the quantity is high, but the review burden fairly low, the
-ratio of administrative overhead to productive work is greater for
-documentation patches than for code patches.  Furthermore, most of the
-patches will probably need some sort of adjustment, in order to
-maintain a consistent authorial voice in the documentation.  In many
-cases, patches will overlap with or affect other patches, and need to
-be adjusted with respect to each other before being committed.</para>
+<para>文档 `patch` 通常比代码 `patch` 更容易审查和应用。几乎不需要进行测试，变更的质量通过检查就能迅速评估。由于数量多，但审查负担相当低，因此文档 `patch` 的管理开销与生产性工作的比率要高于代码 `patch`。此外，大多数 `patch` 可能需要某种程度的调整，以保持文档中一致的作者口吻。在许多情况下，`patch` 会与其他 `patch` 重叠或相互影响，需要在 `commit` 之前相互协调调整。</para>
 
-<para>Given the exigencies of handling documentation patches, and the
-fact that the codebase needs to be constantly monitored so the
-documentation can be kept up-to-date, it makes sense to have one
-person, or a small team, dedicated to the task.  They can keep a
-record of exactly where and how the documentation lags behind the
-software, and they can have practiced procedures for handling large
-quantities of patches in an integrated way.</para>
+<para>鉴于处理文档 `patch` 的紧迫性，以及需要持续监控代码库以保持文档更新的事实，让一个人或一个小团队专门负责这项任务是合理的。他们可以准确记录文档在何处以及如何落后于软件，并且可以有成熟的流程来以集成的方式处理大量的 `patch`。</para>
 
-<para>Documentation managers also serve another important purpose:
-they may be the only people in the project who regularly review the
-documentation from top to bottom, and thus are in a position to notice
-obsolete or redundant material, independently of any particular
-change.</para>
+<para>文档经理还扮演着另一个重要的角色：他们可能是项目中唯一会定期从头到尾审阅文档的人，因此能够独立于任何特定变更，注意到过时或冗余的材料。</para>
 
-<para>Of course, none of this prevents other people in the project
-from applying documentation patches on the fly, especially small ones,
-as time permits.  And the same patch manager (see
-<xref linkend="patch-manager"/>) can track both code and
-documentation patches, filing them wherever the development and
-documentation teams want them, respectively.  (If the total quantity of
-patches ever exceeds one human's capacity to track, though, switching
-to separate patch managers for code and documentation is probably a
-good first step.)  The point of a documentation team is to ensure that
-there are people
-who think of themselves as responsible for keeping the documentation
-organized, up-to-date, and consistent with itself.  In practice, this
-means knowing the documentation intimately, watching the codebase,
-watching the changes
-<emphasis>others</emphasis> commit to the documentation, watching for
-incoming documentation patches, and using all these information
-sources to do whatever is necessary to keep the documentation
-healthy.  If the documentation is kept in a wiki, then of course the
-wiki's "watch changes" feature can be very important to the
-documentation managers, since (depending on the wiki's edit policy)
-changes may land without going through a pre-change review process.</para>
+<para>当然，所有这些并不妨碍项目中的其他人在时间允许的情况下，随时应用文档 `patch`，尤其是小的 `patch`。同一个 `patch` 经理（见 <xref linkend="patch-manager"/>）可以同时跟踪代码和文档 `patch`，将它们分别归档到开发和文档团队希望的地方。（不过，如果 `patch` 的总数量超过了一个人的处理能力，那么将代码和文档的 `patch` 管理分开，可能是很好的第一步。）设立文档团队的目的是确保有人认为自己有责任保持文档的组织性、时效性和一致性。在实践中，这意味着要非常熟悉文档，关注代码库，关注<emphasis>他人</empha>对文档的 `commit`，留意收到的文档 `patch`，并利用所有这些信息源来做任何必要的事情以保持文档的健康。如果文档保存在一个 wiki 中，那么 wiki 的“监视更改”功能对文档经理来说就非常重要，因为（取决于 wiki 的编辑策略）更改可能会在没有经过预先审查的情况下就直接生效。</para>
 
 </sect3>
 
 <sect3 id="issue-manager">
-<title>Issue Manager</title>
+<title>问题经理（Issue Manager）</title>
 
-<para>Bug report growth is proportional to user base growth, rather
-than to the number of actual defects in the software.  That is, the
-number of tickets in a project's bug tracker grows in
-proportion&nbsp;&mdash;&nbsp;albeit usually non-linear
-proportion&nbsp;&mdash;&nbsp;to the number of people
-<emphasis>using</emphasis> the software.<footnote><para> See <ulink
-url="http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/"
->http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/</ulink> for a more
-detailed discussion of this.</para></footnote> Therefore, even as you
-fix bugs and ship an increasingly robust, mature program, you should
-still expect the number of open tickets to grow essentially without
-bound.  The frequency of duplicate tickets will thus also increase, as
-will the frequency of incomplete or poorly described tickets.</para>
+<para>`Bug` 报告的增长与用户基数的增长成正比，而不是与软件中实际缺陷的数量成正比。也就是说，项目 `bug` 跟踪器中工单（ticket）的数量，与<emphasis>使用</empha>该软件的人数成比例增长——尽管通常是非线性比例。<footnote><para> 更多关于此的详细讨论，请见 <ulink url="http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/">http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/</ulink>。</para></footnote> 因此，即使你修复了 `bug` 并发布了一个越来越健壮、成熟的程序，你仍然应该预期开放工单的数量基本上会无限制地增长。因此，重复工单的频率也会增加，不完整或描述不清的工单的频率也会增加。</para>
 
-<para>An <firstterm>issue manager</firstterm><footnote><para>In the
-nomenclature I've been using elsewhere in this book, this position
-might be called "ticket manager", but in practice no project calls it
-that, and most call it "issue manager", so that's what we'll use here
-too.</para></footnote> helps cope with this situation by watching what
-goes into the database, and periodically sweeping through it looking
-for specific problems.  Their most common action is probably to fix up
-incoming tickets, either because the reporter didn't set some of the
-form fields correctly, or because the ticket is a duplicate of one
-already in the database.  Obviously, the more familiar an issue
-manager is with the project's bug database, and with the
-issue-tracking software's user interface and APIs, the more
-efficiently she will be able to detect and handle duplicate tickets.
-This is why it is often good to have a few people specialize in the
-bug database, instead of everyone trying to do it <foreignphrase>ad
-hoc</foreignphrase>.  Although every developer in the project needs a
-certain basic level of competence in manipulating the issue tracker,
-having a few specialists becomes increasingly important as the project
-matures.  When a project tries to spread collective responsibility for
-the bug database across everyone, no single individual acquires a deep
-enough expertise in the content of the database or the tracker's
-features.</para>
+<para><firstterm>问题经理</firstterm>（issue manager）<footnote><para>根据我在这本书其他地方使用的术语，这个职位可能被称为“工单经理”（ticket manager），但在实践中，没有项目这么称呼它，大多数称之为“问题经理”（issue manager），所以我们在这里也用这个称呼。</para></footnote>通过关注进入数据库的内容，并定期巡查以寻找特定问题，来帮助应对这种情况。他们最常见的操作可能是修正新收到的工单，要么是因为报告者没有正确设置某些表单字段，要么是因为该工单是数据库中已存在的工单的副本。显然，问题经理对项目的 `bug` 数据库以及问题跟踪软件的用户界面和 API 越熟悉，她就能越高效地检测和处理重复工单。这就是为什么通常让少数人专门负责 `bug` 数据库，而不是让每个人都<foreignphrase>临时</foreignphrase>处理会更好。尽管项目中的每个开发者都需要具备操作问题跟踪器的基本能力，但随着项目的成熟，拥有几位专家变得越来越重要。当一个项目试图将 `bug` 数据库的集体责任分散到每个人身上时，没有哪个个体能对数据库的内容或跟踪器的功能获得足够深入的专业知识。</para>
 
-<para>Issue managers can help map between tickets and individual
-developers.  When there are a lot of bug reports coming in, not every
-developer may read the ticket notification mailing list with equal
-attention.  However, if someone who knows the development team is
-keeping an eye on all incoming tickets, then she can discreetly direct
-certain developers' attention to specific bugs when appropriate.  Of
-course, this has to be done with a sensitivity to everything else
-going on in development, and to the recipient's desires and
-temperament.  Therefore, it is often best for issue managers to be
-developers themselves.</para>
+<para>问题经理可以帮助在工单和个别开发者之间建立联系。当有大量 `bug` 报告涌入时，不是每个开发者都会同样关注工单通知邮件列表。然而，如果有一个了解开发团队的人在留意所有新收到的工单，那么她可以在适当的时候，谨慎地引导某些开发者关注特定的 `bug`。当然，这必须考虑到开发中正在发生的所有其他事情，以及接收者的意愿和性情。因此，问题经理通常最好自己也是开发者。</para>
 
-<para>Depending on how your project uses the ticket tracker, issue
-managers can also shape the database to reflect the project's
-priorities.  For example, in Subversion we scheduled tickets into
-specific future releases, so that when someone asks "When will bug X
-be fixed?" we could say "Two releases from now," even if we can't give
-an exact date.  The releases are represented in the ticket tracker as
-target milestones (something most ticket trackers support).  As a
-rule, every Subversion release has one major new feature and a list of
-specific bug fixes.  We assigned the appropriate target milestone to
-all the tickets planned for that release (including the new
-feature&nbsp;&mdash;&nbsp;it got a ticket too), so that people could view the bug
-database through the lens of release scheduling.  These targets rarely
-remain static, however.  As new bugs come in, priorities sometimes get
-shifted around, and tickets must be moved from one milestone to
-another so that each release remains manageable.  This, again, is best
-done by people who have an overall sense of what's in the database,
-and how various tickets relate to each other.</para>
+<para>根据你的项目如何使用工单跟踪器，问题经理还可以塑造数据库以反映项目的优先级。例如，在 Subversion 项目中，我们将工单安排到特定的未来发布版本中，这样当有人问“`bug` X 什么时候会修复？”时，我们可以说“两个发布版本之后”，即使我们不能给出确切的日期。发布版本在工单跟踪器中表示为目标里程碑（大多数工单跟踪器都支持这个功能）。通常，每个 Subversion 发布版本都有一个主要的新功能和一系列特定的 `bug` 修复。我们将相应的目标里程碑分配给计划在该发布版本中处理的所有工单（包括新功能——它也有一个工单），这样人们就可以从发布计划的角度来查看 `bug` 数据库。然而，这些目标很少保持静态。随着新 `bug` 的出现，优先级有时会被调整，工单必须从一个里程碑移动到另一个，以确保每个发布版本都保持可管理。这同样最好由那些对数据库内容有整体把握，并了解不同工单之间关系的人来做。</para>
 
-<para>Another thing issue managers do is notice when tickets become
-obsolete.  Sometimes a bug is fixed accidentally as part of an
-unrelated change to the software, or sometimes the project changes its
-mind about whether a certain behavior is buggy.  Finding obsoleted
-tickets is not easy: the only way to do it systematically is by making
-a sweep over all the tickets in the database.  But full sweeps become less
-and less feasible over time, as the number of tickets grows.
-After a certain point, the only way to keep the database sane is to use a
-divide-and-conquer approach: categorize tickets immediately on arrival
-and direct them to the appropriate developer's or team's attention.
-The recipient then takes charge of the ticket for the rest of its
-lifetime, shepherding it to resolution or oblivion as necessary.  When
-the database is that large, the issue manager becomes more of an
-overall coordinator, spending less time looking at each ticket herself
-and more time getting it into the right person's hands.</para>
+<para>问题经理做的另一件事是注意到工单何时变得过时。有时一个 `bug` 会在一次不相关的软件变更中被意外修复，或者有时项目会改变主意，不再认为某个行为是 `bug`。找到过时的工单并不容易：系统地做到这一点的唯一方法是对数据库中的所有工单进行一次全面巡查。但随着工单数量的增长，全面巡查变得越来越不可行。在某个点之后，保持数据库健康的唯一方法是采用分而治之的策略：在工单一到达时就立即进行分类，并将其引导至相应的开发者或团队的注意。然后，接收者将负责该工单的整个生命周期，根据需要引导它走向解决或被遗忘。当数据库规模如此之大时，问题经理更多地扮演一个总体协调者的角色，花更少的时间亲自查看每个工单，而花更多的时间将其交到合适的人手中。</para>
 
 </sect3>
 
@@ -1355,469 +357,154 @@ and more time getting it into the right person's hands.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="transitions">
-<title>Transitions</title>
+<title>人员过渡</title>
 
-<para>From time to time, a person in a position of ongoing
-responsibility (e.g., patch manager, translation manager, etc) will
-become unable to perform the duties of the position.  It may be
-because the job turned out to be more work than he anticipated, or it
-may be due to other factors: a change in employment,
-a new baby, whatever.</para>
+<para>有时候，一个担任持续性职责的人（例如，`patch` 经理、翻译经理等）会变得无法履行其职责。这可能是因为工作量比他预期的要大，也可能是由于其他因素：换了工作、家里添了新丁，等等。</para>
 
-<para>When a person gets swamped like this, he usually doesn't
-notice it right away.  It happens by slow degrees, and there's no
-point at which he consciously realizes that he can no longer fulfill
-the duties of the role.  Instead, the rest of the project just doesn't
-hear much from him for a while.  Then there will suddenly be a flurry
-of activity, as he feels guilty for neglecting the project for so long
-and sets aside a night to catch up.  Then you won't hear from him for
-a while longer, and then there might or might not be another flurry.
-But there's rarely an unsolicited formal resignation.  To resign 
-would mean openly acknowledging to himself that his circumstances have
-changed and that his ability to fulfill a commitment has been
-permanently reduced.  This is something that people are often
-reluctant to admit.</para>
+<para>当一个人像这样不堪重负时，他通常不会马上意识到。这是慢慢发生的，没有一个明确的节点让他有意识地认识到自己再也无法履行这个角色的职责了。相反，项目里的其他人只是有段时间没怎么听到他的消息。然后会突然有一阵活跃，因为他对长期忽视项目感到内疚，于是抽出一个晚上来追赶进度。然后你又会有更长一段时间听不到他的消息，之后可能会也可能不会再有一阵活跃。但很少有主动的正式辞职。辞职意味着要公开地向自己承认，他的情况已经改变，他履行承诺的能力已经永久性地减弱了。这是人们通常不愿意承认的事情。</para>
 
-<para>Therefore, it's up to you and the others in the project to
-notice what's happening&nbsp;&mdash;&nbsp;or rather, not happening&nbsp;&mdash;&nbsp;and to
-ask the person what's going on.  The inquiry should be friendly and
-100% guilt-free.  Your purpose is to find out a piece
-of information, not to make the person feel bad.  Generally, the
-inquiry should be visible to the rest of the project, but if you know
-of some special reason why a private inquiry would be better, that's
-fine too.  The main reason to do it publicly is so that if the
-person responds by saying that he won't be able to do the job
-anymore, there's a context established for your
-<emphasis>next</emphasis> public post: a request for a new person
-to fill that role.</para>
+<para>因此，需要你和项目中的其他人来注意正在发生——或者更确切地说，没有发生——的事情，并去问问那个人情况如何。问询应该是友好的，并且 100% 不带指责。你的目的是了解信息，而不是让对方感觉糟糕。通常，问询应该对项目的其他人可见，但如果你知道有特殊原因，私下问询会更好，那也行。公开进行的主要原因是，如果对方回应说他再也做不了这份工作了，那么你<emphasis>接下来</emphasis>的公开帖子——征求新人来填补这个角色——就有了一个上下文。</para>
 
-<para>Sometimes, a person is unable to do the job he's taken on,
-but is either unaware or unwilling to admit that fact.  Of course,
-anyone may have trouble at first, especially if the responsibility is
-complex.  However, if someone just isn't working out in the role he's
-taken on, even after everyone else has given all the help and
-suggestions they can, then the only solution is for him to step aside
-and let someone new have a try.  And if the person doesn't see this
-himself, he'll need to be told.  There's basically only one way to
-handle this, I think, but it's a multistep process and each step is
-important.</para>
+<para>有时，一个人无法胜任他所承担的工作，但他要么没有意识到，要么不愿承认。当然，任何人刚开始都可能遇到困难，尤其是在责任复杂的情况下。然而，如果某人在他所担任的角色上就是不奏效，即使在其他所有人都给予了所有能给的帮助和建议之后，那么唯一的解决办法就是让他退位，让新人来试试。如果这个人自己看不到这一点，那就需要有人告诉他。我认为，处理这种情况基本上只有一种方法，但它是一个多步骤的过程，每一步都很重要。</para>
 
-<para>First, make sure your own perception is accurate.  Privately talk to others in
-the project to see if they agree that the problem is as serious as you
-think it is.  Even if you're already positive, this serves the purpose
-of letting others know that you're considering asking the person to
-step aside.  Usually no one will object to that&nbsp;&mdash;&nbsp;they'll just be
-happy you're taking on the awkward task, so they don't have to!</para>
+<para>首先，确保你自己的看法是准确的。私下里和其他项目成员谈谈，看看他们是否同意问题像你认为的那样严重。即使你已经非常肯定，这样做也能让其他人知道你正在考虑请这个人退位。通常没有人会反对——他们只会庆幸你来承担这个尴尬的任务，这样他们就不用了！</para>
 
-<para>Next, <emphasis>privately</emphasis> contact the person in
-question and tell him, kindly but directly, about the problems you
-see.  Be specific, giving as many examples as possible.  Make sure to
-point out how people had tried to help, but that the problems
-persisted without improving.  You should expect this email to take a
-long time to write, but with this sort of message, if you don't back
-up what you're saying, you shouldn't say it at all.  Say that you
-would like to find a someone new to fill the role, but also point
-out that there are many other ways to contribute to the project.  At
-this stage, don't say that you've talked to others about it; nobody
-likes to be told that people were conspiring behind his back.</para>
+<para>接下来，<emphasis>私下</emphasis>联系相关人员，友好但直接地告诉他你看到的问题。要具体，尽可能多地举例。确保指出人们曾如何试图提供帮助，但问题仍然存在且没有改善。你应该预料到写这封邮件会花很长时间，但对于这类信息，如果你不能用事实来支持你的说法，你就不该说。告诉他你想找一个新人来填补这个角色，但也要指出，还有很多其他方式可以为项目做出贡献。在这个阶段，不要说你已经和其他人谈过这件事；没有人喜欢被告知人们在背后密谋。</para>
 
-<para>There are a few different ways things can go after that.  The
-most likely reaction is that he'll agree with you, or at any rate not
-want to argue, and be willing to step down.  In that case, suggest
-that he make the announcement himself, and then you can follow up with
-a post seeking a replacement.</para>
+<para>那之后，事情可能会有几种不同的发展。最可能的反应是，他会同意你的看法，或者至少不想争辩，并愿意卸任。在这种情况下，建议他自己宣布，然后你可以跟进一封寻求替代者的帖子。</para>
 
-<para>Or, he may agree that there have been problems, but ask for a
-little more time (or for one more chance, in the case of discrete-task
-roles like release manager).  How you react to that is a judgement
-call, but whatever you do, don't agree to it just because you feel
-like you can't refuse such a reasonable request.  That would prolong
-the agony, not lessen it.  There is often a very good reason to refuse
-the request&nbsp;&mdash;&nbsp;namely, that there have already been plenty of chances
-and that's how things got to where they are now.  Here's how I put it
-in a mail to someone who was filling the release manager role but was
-not really suited for it:</para>
+<para>或者，他可能承认有问题，但请求多一点时间（或者，在像发布经理这样有明确任务节点的角色情况下，请求再给一次机会）。你如何回应这是一个判断问题，但无论你做什么，都不要仅仅因为你觉得无法拒绝这样一个合理请求就同意。那样只会延长痛苦，而不是减轻它。拒绝这个请求通常有一个很好的理由——即，已经有过很多次机会了，事情就是这样才发展到现在的地步。这是我在一封邮件中对一位担任发布经理角色但并不真正适合的人说的话：</para>
 
 <blockquote>
 <screen>
-&gt; If you wish to replace me with some one else,
-&gt; I will gracefully pass on the role to who
-&gt; comes next.  I have one request, which I
-&gt; hope is not unreasonable.  I would like to
-&gt; attempt one more release in an effort to
-&gt; prove myself.
+&gt; 如果您希望用别人替换我，
+&gt; 我会优雅地将角色交接给下一位。
+&gt; 我有一个请求，我希望这不算过分。
+&gt; 我想再尝试一次发布，以努力
+&gt; 证明自己。
 
-I totally understand the desire (been there
-myself!), but in this case, we shouldn't do the
-"one more try" thing.
+我完全理解这种愿望（我自己也经历过！），
+但在这种情况下，我们不应该做
+“再试一次”的事情。
 
-This isn't the first or second release, it's the
-sixth or seventh... And for all of those, I know
-you've been dissatisfied with the results too
-(because we've talked about it before).  So we've
-effectively already been down the one-more-try
-route.  Eventually, one of the tries has to be the
-last one... I think [this past release] should be
-it.
+这不是第一次或第二次发布，而是
+第六次或第七次了……而且对于所有这些，
+我知道您自己也对结果不满意
+（因为我们之前谈过）。所以我们
+实际上已经走过了“再试一次”的
+路了。最终，总有一次尝试必须是
+最后一次……我认为[这次发布]就应该是
+那一次。
 </screen>
 </blockquote>
 
-<para>In the worst case, the person may disagree outright.  Then
-you have to accept that things are going to be awkward and plow ahead
-anyway.  Now is the time to say that you talked to other people about
-it (but still don't say who until you have their permission, since
-those conversations were confidential), and that you don't think it's
-good for the project to continue as things are.  Be insistent, but
-never threatening.  Keep in mind that with most roles, the transition
-really happens the moment someone new starts doing the job,
-<emphasis>not</emphasis> the moment the old person stops doing it.
-For example, if the contention is over the role of, say, issue
-manager, at any point you and other influential people in the project
-can solicit for a new issue manager.  It's not actually necessary that
-the person who was previously doing it stop doing it, as long as he
-does not sabotage (deliberately or otherwise) the efforts of the new
-person.</para>
+<para>在最坏的情况下，对方可能会直接不同意。那你必须接受事情会变得尴尬，但还是要硬着头皮继续。现在是时候说你和其他人谈过这件事了（但仍然不要说出是谁，除非你得到他们的许可，因为那些对话是保密的），并且你认为项目照现在这样继续下去是不好的。要坚持，但绝不要威胁。请记住，对于大多数角色，过渡真正发生的时刻是新人开始做这项工作的时候，<emphasis>而不是</empha>旧人停止做的时候。例如，如果争论是关于，比如说，问题经理的角色，你和项目中的其他有影响力的人可以在任何时候征求一个新的问题经理。之前做这件事的人实际上不必停止做，只要他不（有意或无意地）破坏新人的努力就行。</para>
 
-<para>Which leads to a tempting thought: instead of asking the person
-to resign, why not just frame it as a matter of getting him some help?
-Why not just have two issue managers, or patch managers, or whatever
-the role is?</para>
+<para>这引出了一个诱人的想法：与其要求那个人辞职，为什么不把它说成是为他找些帮助呢？为什么不同时有两个问题经理，或 `patch` 经理，或者不管是什么角色呢？</para>
 
-<para>Although that may sound nice in theory, it is generally not a
-good idea.  What makes the manager roles work&nbsp;&mdash;&nbsp;what makes them
-useful, in fact&nbsp;&mdash;&nbsp;is their centralization.  Those things that can
-be done in a decentralized fashion are usually already being done that
-way.  Having two people fill one managerial role introduces
-communications overhead between those two people, as well as the
-potential for slippery displacement of responsibility ("I thought you
-brought the first aid kit!"  "Me?  No, I thought
-<emphasis>you</emphasis> brought the first aid kit!").  Of course,
-there are exceptions.  Sometimes two people work extremely well
-together, or the nature of the role is such that it can easily be
-spread across multiple people.  But these are not likely to be applicable
-when you see someone flailing in a role he is not suited for.  If
-he'd appreciated the problem in the first place, he would have sought
-such help before now.  In any case, it would be disrespectful to let
-someone waste time continuing to do a job no one will pay attention
-to.</para>
+<para>虽然这在理论上听起来不错，但通常不是一个好主意。让经理角色起作用的——实际上，让它们有用的——是它们的集中化。那些可以以分散方式完成的事情，通常已经那样做了。让两个人担任一个管理角色会在这两个人之间引入沟通开销，以及责任滑坡的可能（“我以为你带了急救包！”“我？不，我以为<emphasis>你</empha>带了急救包！”）。当然，也有例外。有时两个人合作得非常好，或者角色的性质使其可以很容易地分散给多个人。但当你看到某人在他不适合的角色中挣扎时，这些情况就不太可能适用了。如果他一开始就意识到了问题，他早就寻求这样的帮助了。无论如何，让某人继续浪费时间做一份没人会关注的工作，是不尊重的。</para>
 
-<para>The most important factor in asking someone to step down is
-privacy: giving him the space to make a decision without feeling like
-others are watching and waiting.  I once made the mistake&nbsp;&mdash;&nbsp;an
-obvious mistake, in retrospect&nbsp;&mdash;&nbsp;of mailing all three parties at
-once in order to ask Subversion's release manager to step aside in
-favor of two others who were ready to step up.  I'd already talked to
-the two new
-people privately, and knew that they were willing to take on the
-responsibility.  So I thought, na&iuml;vely and somewhat
-insensitively, that I'd save some time and hassle by sending one mail
-to all of them to initiate the transition.  I assumed that the current
-release manager was already fully aware of the problems and would see
-the reasonableness of my point immediately.</para>
+<para>要求某人卸任最重要的因素是隐私：给他空间去做决定，而不会感到别人在看着等着。我曾经犯过一个错误——回想起来是一个明显的错误——我为了让 Subversion 的发布经理让位给另外两个准备接手的人，一次性给三方都发了邮件。我之前已经私下和那两个新人谈过，知道他们愿意承担这个责任。所以我天真地，也有些不体恤地想，通过一封邮件给他们所有人来启动过渡，可以节省一些时间和麻烦。我以为现任的发布经理已经完全意识到了问题，并会立刻看到我观点的合理性。</para>
 
-<para>I was wrong.  The current release manager was very offended, and
-rightly so.  It's one thing to be asked to hand off the job; it's
-another thing to be asked that <emphasis>in front of</emphasis> the
-people you'll hand it off to.  Once I got it through my head why he
-was offended, I apologized.  He eventually did step aside gracefully,
-and continued to be involved with the project.  But his
-feelings were hurt, and needless to say, this was not the most
-auspicious of beginnings for the new release managers either.</para>
+<para>我错了。现任的发布经理非常生气，而且理应如此。被要求交出工作是一回事；<emphasis>当着</empha>你要交接的人的面被要求，是另一回事。一旦我弄明白他为什么生气，我道了歉。他最终还是优雅地退位了，并继续参与项目。但他的感情受到了伤害，而且不用说，这对新的发布经理们来说，也不是最吉利的开始。</para>
 
 </sect1>
 
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="committers">
-<title>Committers</title>
+<title>Committer</title>
 
 <sidebar id="committer">
-  <title>Defining "Committer" and "Commit Access"</title>
-  <para>For the purposes of this section,
-  <firstterm>committer</firstterm> means someone
-  who has <firstterm>commit access</firstterm>: the right to make
-  changes to the copy of the code that will be used for the project's
-  next official release.</para>
+  <title>定义“Committer”和“Commit 权限”</title>
+  <para>就本节而言，<firstterm>committer</firstterm> 指的是拥有 <firstterm>commit 权限</firstterm>（commit access）的人：即有权对将用于项目下一个正式发布版本的代码副本进行更改。</para>
 
-  <para>This precise definition is important because, after all,
-  anyone can set up a repository containing a copy of the project's
-  code and allow themselves to commit to that repository; indeed,
-  that is a standard development procedure with decentralized
-  version control systems such as Git.  But what matters for
-  the project's purposes is who has the ability to put changes into
-  the <emphasis>authoritative</emphasis> copy&nbsp;&mdash;&nbsp;that is, the
-  central shared copy into which contributors' changes are merged and
-  from which releases are made.</para>
+  <para>这个精确的定义很重要，因为毕竟，任何人都可以建立一个包含项目代码副本的 `repository`，并允许自己向该 `repository` `commit`；实际上，这在使用 Git 等去中心化版本控制系统时是一种标准的开发流程。但对项目的目的而言，重要的是谁有能力将变更放入<emphasis>权威</empha>副本中——也就是，贡献者的变更被合并进去、发布版本从中制作出来的那个中央共享副本。</para>
 
-  <para>Because in older, centralized version control systems, there
-  was normally only one repository anyway, the term "commit access"
-  corresponded closely to who was actually using the "commit" command
-  (see <xref linkend="vc-vocabulary-commit"/>) to put
-  changes into the group's shared repository.  These days it
-  corresponds to those who run the "push" or "pull" commands (see
-  <xref linkend="vc-vocabulary-push"/> and <xref
-  linkend="vc-vocabulary-pull"/>) to put changes into
-  that repository.  It is the same idea either way.  The authoritative
-  repository is a social concept, not a technical concept, and the
-  mechanics of how changes get into it are not important here.  Open
-  source projects continue to use the term "committer" in this
-  identifying sense, even though formally speaking the "commit"
-  command is no longer where the gating happens.</para>
+  <para>因为在旧的、中心化的版本控制系统中，通常只有一个 `repository`，所以“commit 权限”这个词与谁实际使用“commit”命令（见 <xref linkend="vc-vocabulary-commit"/>）将变更放入团队共享 `repository` 的情况密切对应。如今，它对应的是那些运行“push”或“pull”命令（见 <xref linkend="vc-vocabulary-push"/> 和 <xref linkend="vc-vocabulary-pull"/>）将变更放入该 `repository` 的人。这两种方式是同一个意思。权威 `repository` 是一个社会概念，而不是一个技术概念，变更如何进入其中的机制在这里不重要。开源项目继续以这种识别性的意义使用“committer”这个词，尽管从形式上讲，“commit”命令已不再是进行门禁控制的地方。</para>
 </sidebar>
 
-<para>As the only formally distinct class of people found in all open
-source projects, committers deserve special attention in this book.
-Committers are an unavoidable concession to discrimination in a system
-which is otherwise as non-discriminatory as possible.  But
-"discrimination" is not meant as a pejorative here.  The function
-committers perform is utterly necessary, and I do not think a project
-could succeed without it.  Quality control requires, well, control.
-There are always many people who feel qualified to make changes to a
-program, and some smaller number who actually are.<footnote><para>Even
-an experienced developer is often not immediately qualified to make
-changes in a project when still new to that project.  One of the signs
-of an experienced developer, in fact, is when they themselves
-recognize that and make sure to get the help they need to learn their
-way around.</para></footnote>  The project cannot
-rely on people's own judgement; it must maintain standards and grant
-commit access only to those who meet those standards.  On the other
-hand, having people who can commit changes directly working
-side-by-side with people who cannot sets up an obvious power dynamic.
-That dynamic must be managed so that it does not harm the
-project.</para>
+<para>作为所有开源项目中唯一正式存在的不同人群类别，committer 在本书中值得特别关注。在一个尽可能非歧视性的系统中，committer 是对歧视不可避免的让步。但这里的“歧视”并非贬义。committer 所履行的职能是绝对必要的，我认为没有它，一个项目不可能成功。质量控制需要，嗯，控制。总有很多人觉得自己有资格对程序进行修改，而实际有资格的人数要少一些。<footnote><para>即使是一位经验丰富的开发者，当他刚接触一个新项目时，也往往不能立即胜任在该项目中进行修改。实际上，经验丰富的开发者的一个标志就是，他们自己能认识到这一点，并确保获得所需帮助以熟悉环境。</para></footnote> 项目不能依赖人们自己的判断；它必须维持标准，只将 `commit` 权限授予那些符合标准的人。另一方面，让可以直接 `commit` 变更的人和不能直接 `commit` 的人并肩工作，会建立一种明显的权力动态。必须对这种动态进行管理，以免它损害项目。</para>
 
-<para>In <xref linkend="electorate"/>, we already discussed
-the mechanics of choosing new committers, as a subset of choosing
-maintainers generally.  Here we will look at the standards by which
-potential new committers should be judged, and how this process should
-be presented to the larger community.</para>
+<para>在 <xref linkend="electorate"/> 中，我们已经讨论了选择新 committer 的机制，作为选择一般维护者的一个子集。在这里，我们将审视评判潜在新 committer 的标准，以及这个过程应该如何呈现给更广泛的社区。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="commiter-vs-maintainer">
-<title>Committers vs Maintainers</title>
+<title>Committer 与维护者</title>
 
-<para>If you haven't already, please read <xref
-linkend="non-technical-maintainers"/> and take its point to
-heart.</para>
+<para>如果你还没读过，请阅读 <xref linkend="non-technical-maintainers"/> 并将其要点牢记在心。</para>
 
-<para>The discussion here is specifically about
-<emphasis>committers</emphasis>, not about all maintainers.  Because
-committers are ultimately responsible for the project's code base, and
-for the quality of its public software releases, the long-term health
-of the project is inescapably dependent on how they approach their
-work.  This doesn't mean that other kinds of contributors can't also
-affect the project's health; it just means that if the committers
-aren't doing their job well, there is no way the project can
-succeed.</para>
+<para>这里的讨论是专门针对<emphasis>committer</emphasis>的，而不是所有维护者。因为 committer 最终对项目的代码库及其公开发布软件的质量负责，所以项目的长期健康不可避免地取决于他们如何对待自己的工作。这并不意味着其他类型的贡献者不能影响项目的健康；这只是意味着，如果 committer 没有做好他们的工作，项目就不可能成功。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="choosing-committers">
-<title>Choosing Committers</title>
+<title>选择 Committer</title>
 
-<para>A good basis for choosing committers is the Hippocratic
-Principle: <emphasis>first, do no harm</emphasis>.</para>
+<para>选择 committer 的一个好基础是希波克拉底原则：<emphasis>首先，不造成伤害</emphasis>。</para>
 
-<para>The most important criterion is not technical skill or even deep
-familiarity with the code, but simply that a person show good
-judgement.  Judgement includes knowing what not to take on.  Someone
-might post only small patches, fixing fairly simple problems in the
-code, but if his patches apply cleanly, do not contain bugs, and are
-mostly in accord with the project's log message and coding
-conventions, and there are enough patches to show a clear pattern,
-then an existing committer should propose him for commit access.  If
-at least (say) three people say yes, and no one objects, then the
-offer is made.  True, there might be no evidence yet that the person
-is able to solve complex problems in all areas of the codebase, but
-that is irrelevant: he has made it clear that he is capable
-of judging his own abilities, and that is the important thing.</para>
+<para>最重要的标准不是技术技能，甚至不是对代码的深入熟悉，而仅仅是这个人表现出良好的判断力。判断力包括知道什么不该接手。某人可能只提交小的 `patch`，修复代码中相当简单的问题，但如果他的 `patch` 应用得干净利落，不包含 `bug`，并且基本符合项目的日志信息和编码规范，而且有足够多的 `patch` 显示出清晰的模式，那么一个现有的 committer 就应该提议给予他 `commit` 权限。如果至少（比如说）三个人同意，并且没有人反对，那么就发出邀请。诚然，可能还没有证据表明这个人能够解决代码库所有领域的复杂问题，但这无关紧要：他已经清楚地表明，他有能力判断自己的能力，这才是重要的事。</para>
 
-<para>When a new committer proposal does provoke a discussion, it is
-usually not about technical ability, but rather about the person's
-behavior in the project's discussion forums.  Sometimes someone shows
-technical skill and an ability to meet the project's formal code
-contribution standards, yet is also consistently belligerent or
-uncooperative in public forums.  That's a serious concern; if the
-person doesn't seem to shape up over time, even in response to hints,
-then don't add him as a committer no matter how skilled he is.  In an
-open source project, social skills, or the ability to "play well in
-the sandbox", are as important as raw technical ability.  Because
-everything is under version control, the penalty for adding a
-committer you shouldn't have added is not so much the problems it
-could cause in the code (review would spot those quickly anyway), but
-that it might eventually force the project to revoke the person's
-commit access&nbsp;&mdash;&nbsp;an action that is never pleasant and
-can sometimes fragment the whole community.</para>
+<para>当一个新 committer 的提议确实引发讨论时，通常不是关于技术能力，而是关于这个人在项目讨论论坛中的行为。有时，某人表现出技术技能，并有能力满足项目的正式代码贡献标准，但同时在公共论坛中持续好斗或不合作。这是一个严重的问题；如果这个人随着时间的推移似乎没有改善，即使在暗示之后也是如此，那么无论他技术多高超，都不要加他为 committer。在一个开源项目中，社交技能，或者说“在沙盒里好好玩”的能力，和纯粹的技术能力同等重要。因为所有东西都在版本控制之下，增加一个不该增加的 committer 的代价，与其说是在代码中可能引起的问题（审查很快就会发现那些），不如说是它最终可能迫使项目撤销这个人的 `commit` 权限——一个从来都不愉快，有时甚至会分裂整个社区的行动。</para>
 
-<para>Some projects insist that a potential committer first demonstrate a
-certain level of technical expertise and persistence by submitting
-some number of nontrivial patches&nbsp;&mdash;&nbsp;that is, not only
-do these projects want to know that the person will do no harm, they also
-want to know that he is likely to do good across the codebase.  This
-isn't always a bad policy, but be careful that it doesn't start to
-turn committership into a matter of membership in an exclusive club.
-The question to keep in everyone's mind should be "What will bring the
-best results for the code?" not "Will we devalue the social status
-associated with committership by admitting this person?"</para>
+<para>一些项目坚持，一个潜在的 committer 必须首先通过提交一定数量的非小 `patch` 来证明其技术专长和毅力——也就是说，这些项目不仅想知道这个人不会造成伤害，还想知道他很可能在整个代码库中做出好的贡献。这不总是一个坏政策，但要小心，别让它开始把 committer 身份变成一个专属俱乐部的会员资格问题。每个人都应该牢记的问题是“什么能为代码带来最好的结果？”，而不是“我们接纳这个人会贬低与 committer 身份相关的社会地位吗？”</para>
 
-<para>The point of
-commit access is not to reinforce people's self-worth; it's to allow
-good changes to enter the code with a minimum of fuss.  If you have
-100 committers, 12 of whom make large changes on a regular basis, and
-the other 88 of whom just fix typos and small bugs a few times a year,
-that's still better than having only the 12.</para>
+<para>`Commit` 权限的意义不是为了增强人们的自我价值感；而是为了让好的变更能以最少的麻烦进入代码。如果你有 100 个 committer，其中 12 个定期做大的变更，另外 88 个每年只修复几次拼写错误和小 `bug`，那也比只有那 12 个要好。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="revoking-committers">
-<title>Revoking Commit Access</title>
+<title>撤销 Commit 权限</title>
 
-<para>The first thing to be said about revoking commit access is: try
-not to be in that situation in the first place.  Depending on whose
-access is being revoked, and why, the discussions around such an
-action can be very divisive.  Even when not divisive, they will be a
-time-consuming distraction from productive work.</para>
+<para>关于撤销 `commit` 权限，首先要说的是：尽量不要让自己陷入那种境地。根据被撤销权限的人是谁以及原因，围绕这种行动的讨论可能会非常有争议。即使没有争议，它们也会是耗时的工作干扰。</para>
 
-<para>However, if you must do it, the discussion should be had
-privately among the same people who would be in a position to vote for
-<emphasis>granting</emphasis> that person whatever flavor of commit
-access they currently have.  The person himself should not be
-included.  This contradicts the usual injunction against secrecy, but
-in this case it's necessary.  First, no one would be able to speak
-freely otherwise.  Second, if the motion fails, you don't necessarily
-want the person to know it was ever considered, because that could
-open up questions ("Who was on my side?  Who was against me?") that
-lead to the worst sort of factionalism.  In certain rare
-circumstances, the group may want someone to know that revocation of
-commit access is or was being considered, as a warning, but this
-openness should be a decision the group makes.  No one should ever, on
-her own initiative, reveal information from a discussion and ballot
-that others assumed were secret.</para>
+<para>然而，如果你必须这么做，讨论应该在那些有权投票<emphasis>授予</empha>那个人当前所拥有的 `commit` 权限的同样人群中私下进行。当事人本人不应被包括在内。这与通常的反对保密的禁令相矛盾，但在这种情况下是必要的。首先，否则没有人能畅所欲言。其次，如果动议失败，你不一定希望那个人知道曾考虑过这件事，因为这可能会引出问题（“谁站在我这边？谁反对我？”），导致最糟糕的派系主义。在某些罕见的情况下，团队可能希望某人知道正在或曾经考虑撤销他的 `commit` 权限，作为一种警告，但这应该是团队做出的决定。任何人都不应该主动透露其他人以为是秘密的讨论和投票信息。</para>
 
-<para>Once someone's access is revoked, that fact is unavoidably
-public (see
-<xref linkend="commit-access-openness"/>), so try to be as tactful as you can in
-how it is presented to the outside world.</para>
+<para>一旦某人的权限被撤销，这个事实就不可避免地是公开的（见 <xref linkend="commit-access-openness"/>），所以要尽量在如何呈现给外界时表现得尽可能圆滑。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="partial-committers">
-<title>Partial Commit Access</title>
+<title>部分 Commit 权限</title>
 
-<para>Some projects offer gradations of commit access.  For example,
-there might be contributors whose commit access gives them free rein
-in the documentation, but who do not commit to the code itself.
-Common areas for partial commit access include documentation,
-translations, binding code to other programming languages,
-specification files for packaging (e.g., Debian
-<filename>dpkg</filename> configuration files, etc), and other
-places where a mistake will not result in a problem for the core
-project.</para>
+<para>一些项目提供不同等级的 `commit` 权限。例如，可能有些贡献者，他们的 `commit` 权限让他们在文档方面有完全的自由，但他们自己不向代码 `commit`。部分 `commit` 权限的常见领域包括文档、翻译、将代码绑定到其他编程语言、打包的规范文件（例如，Debian <filename>dpkg</filename> 配置文件等），以及其他出错不会给核心项目带来问题的地方。</para>
 
-<para>Since commit access is sometimes not only about committing, but
-about being part of an electorate (see <xref
-linkend="electorate"/>), a question may naturally
-arise: what can the partial committers vote on?</para>
+<para>由于 `commit` 权限有时不仅关乎 `commit`，还关乎成为选举人团的一员（见 <xref linkend="electorate"/>），一个问题自然会产生：部分 committer 可以就什么进行投票？</para>
 
-<para>There is no one right answer; it depends on what sorts of
-partial commit domains your project has.  In the Subversion project
-things are fairly simple: a partial committer can vote on matters
-confined exclusively to that committer's domain, and not on anything
-else.  Importantly, the project does have a mechanism for casting
-advisory votes (essentially, the committer writes "+0" or
-"+1&nbsp;(non-binding)" instead of just "+1" on the ballot).  There's
-no reason to silence people just because their vote isn't formally
-binding.</para>
+<para>没有一个唯一的正确答案；这取决于你的项目有哪些类型的部分 `commit` 领域。在 Subversion 项目中，事情相当简单：一个部分 committer 可以就仅限于该 committer 领域内的事项进行投票，而不能就其他任何事项投票。重要的是，项目确实有一个投咨询票的机制（基本上，committer 在投票时写“+0”或“+1 (无约束力)”而不是仅仅“+1”）。没有理由因为人们的投票没有正式约束力就让他们沉默。</para>
 
-<para>Full committers can vote on anything, just as they can commit
-anywhere, and only full committers vote on adding new committers of
-any kind.  In practice, though, the ability to add new partial
-committers is usually delegated: any full committer can "sponsor" a
-new partial committer, and partial committers in a domain can often
-essentially choose new committers for that same domain (this is
-especially helpful in making translation work run smoothly).</para>
+<para>完全 committer 可以就任何事情投票，就像他们可以在任何地方 `commit` 一样，并且只有完全 committer 才能就增加任何类型的新 committer 进行投票。不过在实践中，增加新部分 committer 的能力通常被下放：任何完全 committer 都可以“赞助”一个新的部分 committer，而某个领域的部分 committer 通常可以实质上为该领域选择新的 committer（这在使翻译工作顺利进行方面尤其有帮助）。</para>
 
-<para>Your project may need a slightly different arrangement,
-depending on the nature of the work, but the same general principles
-apply to all projects.  Each committer should be able to vote on
-matters that fall within the scope of her commit access, and not on
-matters outside that, and votes on procedural questions should default
-to the full committers, unless there's some reason (as decided by the
-full committers) to widen the electorate.  Remember that voting should
-be quite rare anyway (see <xref linkend="when-to-vote"/>), except for
-technical votes such as the change voting described in <xref
-linkend="release-voting"/>.</para>
+<para>你的项目可能需要稍微不同的安排，这取决于工作的性质，但同样的一般原则适用于所有项目。每个 committer 都应该能就其 `commit` 权限范围内的事项投票，而不能就范围外的事项投票，程序性问题的投票应默认由完全 committer 决定，除非有某种理由（由完全 committer 决定）扩大选举人团。记住，无论如何，投票应该相当罕见（见 <xref linkend="when-to-vote"/>），除了像 <xref linkend="release-voting"/> 中描述的变更投票这样的技术性投票。</para>
 
-<para>Regarding enforcement of partial commit access: it's often
-best <emphasis>not</emphasis> to have the version control system
-enforce partial commit domains, even if it is capable of doing so.
-See <xref linkend="vc-authz"/> for the
-reasons why.</para>
+<para>关于部分 `commit` 权限的执行：通常最好<emphasis>不要</empha>让版本控制系统来强制执行部分 `commit` 领域，即使它有能力这么做。原因见 <xref linkend="vc-authz"/>。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="dormant-committers">
-<title>Dormant Committers</title>
+<title>休眠的 Committer</title>
 
-<para>Some projects automatically remove people's commit access if
-they go a certain amount of time (say, a year) without committing
-anything.  I think this is usually unhelpful and even
-counterproductive, for two reasons.</para>
+<para>一些项目会自动移除那些在一定时间（比如一年）内没有任何 `commit` 的人的 `commit` 权限。我认为这通常是无益甚至适得其反的，原因有二。</para>
 
-<para>First, it may tempt some people into committing acceptable but
-unnecessary changes, just to prevent their commit access from
-expiring.  Second, it doesn't really serve any purpose.  If the
-main criterion for granting commit access is good judgement, then why
-assume someone's judgement would deteriorate just because she's been away
-from the project for a while?  Even if she completely vanishes for
-years, not looking at the code or following development discussions,
-when she reappears she'll <emphasis>know</emphasis> how out of touch
-she is, and act accordingly.  You trusted her judgement before, so
-why not trust it always?  If high school diplomas do not expire, then
-commit access certainly shouldn't.</para>
+<para>首先，这可能会诱使一些人为了防止 `commit` 权限过期而进行一些可接受但非必要的变更。其次，这实际上没有任何目的。如果授予 `commit` 权限的主要标准是良好的判断力，那么为什么会假设某人的判断力仅仅因为她离开项目一段时间就会下降呢？即使她完全消失了几年，不看代码也不关注开发讨论，当她重新出现时，她会<emphasis>知道</empha>自己有多么脱节，并会相应地行事。你以前信任她的判断力，为什么不一直信任呢？如果高中毕业证不会过期，那么 `commit` 权限当然也不应该。</para>
 
-<para>Sometimes a committer may ask to be removed, or to be explicitly
-marked as dormant in the list of committers (see
-<xref linkend="commit-access-openness"/> for more about that list).  In these cases, the project
-should accede to the person's wishes, of course.</para>
+<para>有时，一个 committer 可能会要求被移除，或者在 committer 列表中被明确标记为休眠（关于该列表的更多信息，请见 <xref linkend="commit-access-openness"/>）。在这些情况下，项目当然应该尊重这个人的意愿。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="commit-access-openness">
-<title>Avoid Mystery</title>
+<title>避免神秘感</title>
 
-<para>Although the discussions around adding any particular new
-committer must be confidential, the rules and procedures themselves
-need not be secret.  In fact, it's best to publish them, so people
-realize that the committers are not some mysterious Star Chamber,
-closed off to mere mortals, but that anyone can join simply by posting
-good patches and knowing how to handle herself in the community.
-In the Subversion project, we put this information right in the
-developer guidelines document, since the people most likely to be
-interested in how commit access is granted are those thinking of
-contributing code to the project.</para>
+<para>尽管围绕增加任何特定新 committer 的讨论必须保密，但规则和程序本身不必保密。实际上，最好将它们公之于众，这样人们就会意识到 committer 并非某个神秘的星室法庭（Star Chamber），与凡人隔绝，而是任何人只要提交好的 `patch` 并在社区中懂得如何自处，就可以加入。在 Subversion 项目中，我们把这些信息直接放在开发者指南文档中，因为最可能对如何授予 `commit` 权限感兴趣的人，是那些考虑为项目贡献代码的人。</para>
 
-<para>In addition to publishing the procedures, publish the actual
-<emphasis>list</emphasis> of committers.  It often goes in a file
-called <filename>MAINTAINERS</filename> or
-<filename>COMMITTERS</filename> or something like that, in the top
-level of the project's source code tree.  It should list all the full
-committers first, followed by the various partial commit domains and
-the members of each domain.  Each person should be listed by name and
-identifying handle(s).</para>
+<para>除了公布程序，还要公布实际的 committer <emphasis>列表</emphasis>。它通常放在一个名为 <filename>MAINTAINERS</filename> 或 <filename>COMMITTERS</filename> 之类的文件中，位于项目源代码树的顶层。它应该首先列出所有完全 committer，然后是各个部分 `commit` 领域及其成员。每个人都应该用姓名和识别性的用户名列出。</para>
 
-<para>Since the distinction between full commit and partial commit
-access is obvious and well defined, it is proper for the list to make
-that distinction too.  Beyond that, the list should not try to
-indicate the informal distinctions that inevitably arise in a project,
-such as who is particularly influential and how.  It is a public
-record, not an acknowledgements file.  List committers either in
-alphabetical order, or in the order in which they arrived.</para>
+<para>由于完全 `commit` 和部分 `commit` 权限之间的区别是显而易见且定义明确的，因此列表也应该做出这种区分。除此之外，列表不应试图表明项目中不可避免地出现的非正式区别，比如谁特别有影响力以及如何有影响力。它是一份公共记录，而不是一份致谢文件。将 committer 按字母顺序或按他们加入的顺序列出。</para>
 
 </sect2>
 
@@ -1826,498 +513,100 @@ alphabetical order, or in the order in which they arrived.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="credit">
-<title>Credit</title>
+<title>贡献署名（Credit）</title>
 
-<para>Credit is the primary currency of the free software world.
-Whatever people may say about their motivations for participating in a
-project, I don't know many developers who would be happy doing all
-their work anonymously, or under someone else's name.  There are
-tangible reasons for this: one's reputation in a project roughly
-governs how much influence one has, and participation in an open
-source project can also indirectly have monetary value, because many
-employers now look for it on r&eacute;sum&eacute;s (see <xref
-linkend="hiring"/>).  There are also intangible reasons, perhaps even
-more powerful: people simply want to be appreciated, and instinctively
-look for signs that their work was recognized by others.  The promise
-of credit is therefore one of best motivators the project has.  When
-small contributions are acknowledged, people come back to do
-more.</para>
+<para>贡献署名是自由软件世界的主要货币。无论人们怎么说他们参与项目的动机，我不知道有哪个开发者会乐于匿名完成所有工作，或者以别人的名义。这有实际的原因：一个人在项目中的声誉大致决定了他的影响力，参与开源项目也可能间接具有金钱价值，因为许多雇主现在会在简历上寻找这一点（见 <xref linkend="hiring"/>）。也有无形的原因，可能更强大：人们只是想被赏识，并本能地寻找他们的工作被他人认可的迹象。因此，贡献署名的承诺是项目最好的激励因素之一。当小的贡献被承认时，人们会回来做更多。</para>
 
-<para>One of the most important features of collaborative development
-software (see <xref linkend="technical-infrastructure"/>) is that
-it keeps accurate records of who did what, when.  Wherever possible,
-use these existing mechanisms to make sure that credit is distributed
-accurately, and be specific about the nature of the contribution.
-Don't just write "Thanks to J. Random &lt;jrandom@example.com&gt;" if
-instead you can write "Thanks to J. Random &lt;jrandom@example.com&gt;
-for the bug report and reproduction recipe" in a log message.</para>
+<para>协作开发软件（见 <xref linkend="technical-infrastructure"/>）最重要的特性之一是，它能准确记录谁在何时做了什么。只要可能，就利用这些现有机制来确保贡献署名被准确地分配，并具体说明贡献的性质。不要只写“感谢 J. Random &lt;jrandom@example.com&gt;”，如果你可以写成“感谢 J. Random &lt;jrandom@example.com&gt; 提供的 `bug` 报告和复现步骤”，那就这样写在日志信息里。</para>
 
-<para>In Subversion, we set up an informal but consistent policy of
-crediting the reporter of a bug in either the ticket filed, if there
-is one, or else in the log message of the commit that fixes the bug.
-A quick survey of Subversion commit logs shows that a little over 10%
-of commits<footnote><para>10.57%, to be precise.  5955 out of 56331
-<!-- For your amusement:
+<para>在 Subversion 项目中，我们建立了一个非正式但一致的政策，即在提交的工单中（如果有的话），或者在修复 `bug` 的 `commit` 日志信息中，署名给报告 `bug` 的人。对 Subversion `commit` 日志的快速调查显示，略多于 10% 的 `commit`<footnote><para>准确地说是 10.57%。56331 个 `commit` 中有 5955 个（从 2000 年 2 月 29 日到 2022 年 2 月 20 日）使用了署名惯例。</para></footnote> 通过姓名和电子邮件地址给予了某人贡献署名，通常是报告、分析，甚至可能修补了该 `commit` 中修复的 `bug` 的人。请注意，这个人不同于实际进行 `commit` 的开发者——那个开发者的名字已经被版本控制系统自动记录了。截至 2005 年中我上次做这个计算时，后来自己成为 committer 的人中，略多于三分之二的人在成为 committer 之前，曾以这种方式在 `commit` 日志中被署名，通常是多次。当然，这并不能证明被署名是他们持续参与的一个因素，但建立一种氛围，让人们知道他们的贡献会得到公开承认，肯定不会有什么坏处。<footnote><para>最终，这个署名系统变得更加正式化，如 <ulink url="https://subversion.apache.org/docs/community-guide/conventions.html#crediting">https://subversion.apache.org/docs/community-guide/conventions.html#crediting</ulink> 所述，从而通过一个名为 Contribulyzer 的系统，提高了项目发现和鼓励长期参与者的能力。更多关于这个例子的信息，请参见 <xref linkend="automation"/>。</para></footnote></para>
 
-These are the crediting expressions I found in the Subversion commit
-logs as of 2022-02-20:
-
-  Found by
-  Requested by
-  Suggested by
-  Reported-by
-  Reported by
-  Review by
-  Approved by
-  Tested by
-  Patch by
-  Spotted by
-  Reviewed by
-  Inspired by
-  Suggested-by
-  Suggestd by
-  Text by
-  Tweaked by
-  Proposed by
-  Prompted by
-  Report by
-  Sugested by
-  Hindered by
-  Approved-by
-  Helped by
-  Patchy by
-  Noticed by
-  patch by
-  Help by
-  Patch-by
-  Found-by
-  Submitted by
-  Aggrevated by
-  Updated by
-  reviewed by
-  Contributed by
-  Comment by
-  Suggestions by
-  Testing by
-  Approbed by
-  Contribution by
-  Beer by
-  
-While I'm at it, these are the command lines that I used:
-  
-  # Count commits that include any use of the "Verbed by:" convention.
-  # Remember that some commits include multiple uses of tha
-  # convention, so simply grepping the raw logs for "Verbed by:" lines
-  # will overcount.  We want to count all commits that show *any* use
-  # of the convention; how *much* use a given commit shows doesn't
-  # matter, as long as it's greater than none.  (The reason for the
-  # "-" at the start of the character group is because some people
-  # miswrote "Verbed-by:", as you can see above.  While it would be
-  # nice to fix those up, and I will do so if we can arrange svn:log
-  # revprop edit access, that's not the yak I'm trying to shave today.)
-  cat logv.out | dmgrep "^[-.,;:_a-zA-Z]+[- ]by:" | tee crediting-commits.out | grep -E "^r[0-9]+ \|"
-  
-  # Count total commits:
-  cat logv.out | grep -E "^r[0-9]+ \|" | wc -l
--->
-commits (from 29 Feb 2000 through 20 Feb 2022) made use of the
-crediting convention.</para></footnote> give
-credit to someone by name and email address, usually a person who
-reported, analyzed, or perhaps even patched the bug fixed in that
-commit.  Note that this person is different from the developer who
-actually made the commit&nbsp;&mdash;&nbsp;that developer's name is
-already recorded automatically by the version control system.  As of
-mid-2005, when I last did this calculation, slightly over two-thirds
-of people who later became committers themselves were credited in this
-way in the commit logs, usually multiple times, before becoming a
-committer.  This does not, of course, prove that being credited was a
-factor in their continued involvement, but it surely can't hurt to set
-up an atmosphere in which people know they can count on their
-contributions being publicly acknowledged.<footnote><para>Eventually
-this crediting system became a bit more formalized, as described in
-<ulink
-url="https://subversion.apache.org/docs/community-guide/conventions.html#crediting"
->https://subversion.apache.org/docs/community-guide/conventions.html#crediting</ulink>,
-thus improving the project's ability to find and encourage long-term
-participants, via a system known as the Contribulyzer.  See <xref
-linkend="automation"/> for more about this
-example.</para></footnote></para>
-
-<para>It is important to distinguish between routine acknowledgement
-and special thanks.  When discussing a particular piece of code, or
-some other contribution someone made, it is fine to acknowledge their
-work.  For example, saying "Daniel's recent changes to the delta code
-mean we can now implement feature X" simultaneously helps people
-identify which changes you're talking about and acknowledges Daniel's
-work.  On the other hand, posting solely to thank Daniel for the delta
-code changes serves no immediate practical purpose.  It doesn't add
-any information, since the version control system and other mechanisms
-have already recorded the fact that he made the changes.  Thanking
-everyone for everything would be distracting and ultimately
-information-free, since thanks are effective largely by how much they
-stand out from the default, background level of favorable comment
-going on all the time.  This does not mean, of course, that you should
-never thank people.  Just make sure to do it in ways that tend not to
-lead to credit inflation.  Following these guidelines will
-help:</para>
+<para>区分常规致谢和特别感谢是很重要的。在讨论某段特定的代码，或某人做的其他贡献时，承认他们的工作是没问题的。例如，说“Daniel 最近对增量代码的修改意味着我们现在可以实现功能 X”，这既帮助人们识别你谈论的是哪些修改，也承认了 Daniel 的工作。另一方面，专门发帖感谢 Daniel 对增量代码的修改，并没有直接的实际用途。它不增加任何信息，因为版本控制系统和其他机制已经记录了他做了这些修改的事实。感谢每一个人做的每一件事会分散注意力，并且最终是信息无效的，因为感谢的效果很大程度上取决于它们与默认的、背景中一直存在的正面评论的突出程度。当然，这并不意味着你永远不应该感谢人。只是要确保以一种不易导致贡献署名“通货膨胀”的方式来做。遵循以下指导方针会有所帮助：</para>
 
 <itemizedlist>
-  <listitem><para>The more ephemeral the forum, the more free you
-            should feel to express thanks there.  For example,
-            thanking someone for their bugfix in passing during an chat room
-            conversation is fine, as is an aside in an email devoted
-            mainly to other topics.  But don't post a new email solely
-            to thank someone, unless it's for a truly unusual feat, or
-            if it's just one followup in a topic-specific thread
-            already focused on the thing that person did.</para>
-            <para>Likewise, don't clutter the project's web pages with
-            expressions of gratitude.  Once you start that, it'll
-            never be clear when or where to stop. And
-            <emphasis>never</emphasis> put thanks into comments in the
-            code; that would only be a distraction from the primary
-            purpose of comments, which is to help the reader
-            understand the code.</para>
+  <listitem><para>论坛越是即时性，你就越应该随意地表达感谢。例如，在聊天室对话中顺便感谢某人修复了 `bug` 是没问题的，在一封主要讨论其他话题的邮件中顺便提一句也是如此。但不要专门发一封新邮件来感谢某人，除非那是一项真正不寻常的壮举，或者如果它只是一个已经专注于那个人所做事情的主题讨论串中的一个跟进。</para>
+            <para>同样，不要用感激之词来 clutter 项目的网页。一旦你开始那样做，就永远不清楚何时何地该停止。并且<emphasis>绝不</emphasis>要在代码的注释中加入感谢；那只会分散注释的主要目的，即帮助读者理解代码。</para>
   </listitem>
-  <listitem><para>The less involved someone is in the project, the
-            more appropriate it is to thank her for something she
-            did.  This may sound counterintuitive, but it fits with
-            the attitude that expressing thanks is something you do
-            when someone contributes even more than you thought she
-            would.  Thus, to constantly thank regular contributors for
-            doing what they normally do would be to express a lower
-            expectation of them than they have of themselves.  If
-            anything, you want to aim for the opposite effect!</para>
+  <listitem><para>某人参与项目越少，为她所做的事感谢她就越合适。这听起来可能违反直觉，但这符合一种态度，即当你认为某人贡献得比你预期的还多时，你才会表达感谢。因此，不断地感谢常规贡献者做他们平常做的事，等于是对他们表达了比他们对自己的期望更低的期望。如果说有什么的话，你应该力求达到相反的效果！</para>
 
-            <para>There are occasional exceptions to this rule.  It's
-            acceptable to thank someone for fulfilling her expected
-            role when that role involves temporary, intense efforts
-            from time to time.  The canonical example is the release
-            manager, who goes into high gear around the time of each
-            release, but otherwise lies dormant (dormant as a release
-            manager, in any case&nbsp;&mdash;&nbsp;she may also be an active
-            developer, but that's a different matter).
+            <para>这个规则偶尔也有例外。当某人履行的角色涉及不时地进行短暂、高强度的工作时，感谢他履行其预期角色是可以接受的。典型的例子是发布经理，他在每次发布前后会进入高速运转状态，但其他时候则处于休眠状态（至少作为发布经理是休眠的——她可能同时也是一位活跃的开发者，但那是另一回事）。
             </para>
   </listitem>
-  <listitem><para>As with criticism and crediting, gratitude should
-            be specific.  Don't thank people just for being great,
-            even if they are.  Thank them for something they did that
-            was out of the ordinary, and for bonus points, say
-            exactly why what they did was so great.</para> 
+  <listitem><para>与批评和贡献署名一样，感激也应该是具体的。不要仅仅因为人们很棒就感谢他们，即使他们确实很棒。要为他们做的某件不寻常的事感谢他们，并且，如果能锦上添花，就具体说说他们所做的事为什么那么棒。</para>
   </listitem>
 </itemizedlist>
 
-<para>In general, there is always a tension between making sure that
-people's individual contributions are recognized, and making sure the
-project is a group effort rather than a collection of individual
-glories.  Just remain aware of this tension and try to err on the
-side of group, and things won't get out of hand.</para>
+<para>总的来说，确保个人贡献得到承认，和确保项目是团队努力而不是个人荣耀的集合之间，总是存在一种张力。只要意识到这种张力，并尽量偏向于团队一方，事情就不会失控。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="forks">
-<title>Forks</title>
+<title>分支（Forks）</title>
 
 <sect2 id="dev-forks-vs-hard-forks">
 <!-- For link compatibility with a deprecated ID. -->
 <anchor id="social-forks-vs-short-forks" />
-<title>"Development Forks" versus "Hard Forks"</title>
+<title>“开发分支”与“硬分支”</title>
 
-<para>At its most basic, a <firstterm>fork</firstterm> is when one
-copy of a project diverges from another copy: think "fork in the
-road".</para>
+<para>从最基本的意义上说，<firstterm>fork</firstterm> 是指项目的一个副本与另一个副本发生分歧：想象一下“岔路口”。</para>
 
-<para>What that divergence actually means for the project depends on the
-intentions behind the fork.  There are two types of forks: 
-<firstterm>development forks</firstterm> and <firstterm>hard
-forks</firstterm>.  The distinction between them is important.</para>
+<para>这种分歧对项目究竟意味着什么，取决于 `fork` 背后的意图。`fork` 有两种类型：<firstterm>开发分支</firstterm>（development forks）和<firstterm>硬分支</firstterm>（hard forks）。它们之间的区别很重要。</para>
 
-<para>Development forks are very common; in fact, they are the normal way
-development is done in most projects today.  A developer creates her
-own public copy of the project's authoritative repository, makes some
-changes, then submits the changes back to the project directly from
-the forked copy.<footnote><para>This is the "pull request" workflow
-first popularized by GitHub.com (see <xref linkend="pull-requests"
-/>).  GitHub's decision to
-use the term "fork" instead of "clone" to refer to the personal copies
-in which development is done is largely responsible for the newer
-"development fork" sense of "fork".</para></footnote> Development
-forks are done on a routine basis as part of the regular contribution
-cycle, and have no negative
-effect on the social cohesiveness of the project.  They are really
-just an extension of the concept of development branches.</para>
+<para>开发分支非常普遍；事实上，它们是今天大多数项目中正常的开发方式。一个开发者创建她自己的项目权威 `repository` 的公共副本，做一些修改，然后直接从 `fork` 出来的副本将修改提交回项目。<footnote><para>这就是由 GitHub.com 首先推广的“pull request”工作流（见 <xref linkend="pull-requests"/>）。GitHub 决定使用“fork”而不是“clone”来指代进行开发的个人副本，这在很大程度上促成了“fork”一词更新的“开发分支”含义。</para></footnote> 开发分支是作为常规贡献周期的一部分例行进行的，对项目的社会凝聚力没有负面影响。它们实际上只是开发分支概念的延伸。</para>
 
-<para>Hard forks (also sometimes called <firstterm>social
-forks</firstterm>) are much less common, and are much more significant
-when they happen.  A hard fork is when a group of developers disagrees
-with the direction of the project and decides to create a
-divergent version more in line with their own vision.  Of course, one
-of the technical actions required for this is to create their own
-copy of the project's repository, and perhaps of its bug database and
-other assets as well.  This new copy of the project represents
-a potentially permanent divergence, and developers on both sides of
-the fork are aware of this; thus, it is a completely different beast
-from a cooperative development fork.</para>
+<para>硬分支（有时也称为<firstterm>社会性分支</firstterm>，social forks）要少见得多，并且当它们发生时，意义也重大得多。硬分支是指一群开发者不同意项目的方向，并决定创建一个更符合他们自己愿景的分歧版本。当然，为此所需的技术行动之一是创建他们自己的项目 `repository` 副本，可能还包括其 `bug` 数据库和其他资产的副本。这个项目的新副本代表了一个潜在的永久性分歧，`fork` 两边的开发者都意识到了这一点；因此，它与合作性的开发分支是完全不同的东西。</para>
 
-<para>A hard fork is almost always accompanied by long discussions
-and rationales, in which developers try to persuade each other of the
-merits of one or the other side of the fork, or of the merits of
-ending the fork and reunifying.  Since hard forks have implications
-for a project's stability and ability to continue attracting
-developers, knowing how to constructively initiate or react to a
-hard fork of your project is useful&nbsp;&mdash;&nbsp;useful even if
-a fork never happens, since understanding what leads to hard forks, and
-signaling clearly how you will behave in such an event, can sometimes
-prevent the fork from happening in the first place.</para>
+<para>硬分支几乎总是伴随着长时间的讨论和理论阐述，开发者们试图说服彼此相信 `fork` 一方或另一方的优点，或者结束 `fork` 并重新统一的优点。由于硬分支对项目的稳定性和持续吸引开发者的能力有影响，因此了解如何建设性地发起或回应一个项目的硬分支是有用的——即使 `fork` 从未发生，了解导致硬分支的原因，并清楚地表明你在这种事件中将如何行事，有时可以从一开始就阻止 `fork` 的发生。</para>
 
-<para>The rest of this section is about hard forks, not development forks.
-To save space, I will just use the word "fork" instead of "hard
-fork".</para>
+<para>本节的其余部分是关于硬分支，而不是开发分支。为了节省空间，我将只使用“fork”这个词，而不是“硬分支”。</para>
 
 </sect2>
 
 <sect2 id="who-is-the-fork">
-<title>Figuring Out Whether You're the Fork</title>
+<title>搞清楚你是不是那个分支</title>
 
-<para>In <xref linkend="forkability"/>, we saw how
-the <emphasis>potential</emphasis> to fork has important effects on
-how projects are governed.  But what happens when a fork actually
-occurs?  How should you handle it, and what effects can you expect it
-to have?  Conversely, when should you <emphasis>initiate</emphasis> a
-fork?</para>
+<para>在 <xref linkend="forkability"/> 中，我们看到了 `fork` 的<emphasis>潜力</emphasis>如何对项目治理产生重要影响。但当一个 `fork` 真正发生时，会发生什么？你应该如何处理它，可以预期它会产生什么影响？反过来，你什么时候应该<emphasis>发起</empha>一个 `fork`？</para>
 
-<para>The answers depend on the reasons for the fork.  Some forks are
-due to amicable but irreconcilable disagreements about the direction
-of the project; perhaps more are due to both technical disagreements
-and interpersonal conflicts.  Of course, it's not always possible to
-tell the difference between the two, as technical arguments may
-involve personal elements as well.  What all forks have in common is
-that one group of developers (or sometimes even just one developer)
-has decided that the costs of working with some or all of the others
-now outweigh the benefits.</para>
+<para>答案取决于 `fork` 的原因。一些 `fork` 是由于友好但不可调和的项目方向分歧；也许更多的是由于技术分歧和人际冲突。当然，并不总能区分这两者，因为技术争论也可能涉及个人因素。所有 `fork` 的共同点是，一群开发者（有时甚至只有一个开发者）已经决定，与其他人中的某些或全部人合作的成本，现在超过了收益。</para>
 
-<para>Once a project forks, there is no definitive answer to the
-question of which fork is the "true" or "original" project.  People
-will colloquially talk of fork F coming out of project P, as though P
-is continuing unchanged down some natural path while F diverges into
-new territory, but this is, in effect, a declaration of how that
-particular observer feels about it.  Since "the project" is ultimately
-a social concept in the first place, when a large enough percentage of
-observers agree that one side or the other is the project or is the
-fork, that belief starts to become true.  It is not the case that
-there is an objective truth from the outset, one that we are merely
-imperfectly able to perceive at first.  Rather, the perceptions
-<emphasis>are</emphasis> the objective truth, since ultimately a
-project&nbsp;&mdash;&nbsp;or a fork&nbsp;&mdash;&nbsp;is an entity
-that exists only in people's minds anyway.</para>
+<para>一旦一个项目 `fork` 了，哪个 `fork` 是“真正的”或“原始的”项目，就没有确切的答案。人们会口头上说 `fork` F 来自项目 P，好像 P 沿着某个自然路径继续不变，而 F 则分叉进入新领域，但这实际上是那个特定观察者对此感受的声明。由于“项目”本身最终是一个社会概念，当足够大比例的观察者同意某一方是项目或另一方是 `fork` 时，这种信念就开始变成现实。并非从一开始就有一个客观真理，我们只是最初无法完美地感知到它。相反，这些感知<emphasis>就是</empha>客观真理，因为最终一个项目——或一个 `fork`——是一个只存在于人们头脑中的实体。</para>
 
-<para>If those initiating the fork feel that they are
-sprouting a new branch off the main project, the perception question
-is resolved immediately and easily.  Everyone, both developers and
-users, will treat the fork as a new project, with a new name (perhaps
-based on the old name, but easily distinguishable from it), a separate
-web site, and a separate philosophy or goal.  Things get messier,
-however, when both sides feel they are the legitimate guardians of the
-original project and therefore have the right to continue using the
-original name.  If there is some organization with trademark rights to
-the name (see <xref linkend="trademarks"/>), or legal control over the domain
-or web pages, that usually
-resolves the issue by fiat: that organization will decide who is the
-original project and who is the fork, because it holds all the cards in a
-public relations showdown.  Naturally, things rarely get that far: since
-everyone already knows what the power dynamics are, they will avoid
-fighting a battle whose outcome is known in advance, and will just
-jump straight to the end result instead.</para>
+<para>如果发起 `fork` 的人觉得他们是在主项目上长出一个新分支，那么感知问题就立刻且容易地解决了。每个人，无论是开发者还是用户，都会把这个 `fork` 当作一个新项目，有新名字（可能基于旧名字，但很容易区分）、独立的网站，以及独立的理念或目标。然而，当双方都觉得自己是原始项目的合法守护者，因此有权继续使用原始名称时，事情就变得复杂了。如果某个组织对该名称拥有商标权（见 <xref linkend="trademarks"/>），或者对域名或网页有法律控制权，那通常会通过法令解决问题：那个组织会决定谁是原始项目，谁是 `fork`，因为它在公关对决中握有所有牌。自然，事情很少发展到那一步：因为每个人都已经知道权力动态是什么，他们会避免打一场结果已知的仗，而会直接跳到最终结果。</para>
 
-<para>Fortunately, in most cases there is little doubt as to which is
-the project and which is the fork, because a fork is, in essence, a vote
-of confidence.  If more than half of the developers are in favor of
-whatever course the fork proposes to take, usually there is no need to
-fork&nbsp;&mdash;&nbsp;the project can simply go that way itself, unless it is run
-as a dictatorship with a particularly stubborn dictator.  On the other
-hand, if fewer than half of the developers are in favor, the fork is a
-clearly minority rebellion, and both courtesy and common sense
-indicate that it should think of itself as the divergent branch rather
-than the main line.</para>
+<para>幸运的是，在大多数情况下，哪个是项目，哪个是 `fork`，几乎没有疑问，因为 `fork` 本质上是一次信任投票。如果超过半数的开发者赞成 `fork` 提议的任何路线，通常就不需要 `fork`——项目可以自己朝那个方向走，除非它是由一个特别固执的独裁者以独裁方式运行的。另一方面，如果少于半数的开发者赞成，那么这个 `fork` 显然是少数派的叛乱，无论是出于礼貌还是常识，它都应该把自己看作是分叉的支流，而不是主线。</para>
 
-<para>When a fork occurs, there can be a question of what happens to
-non-copyable assets: not just trademarks, but perhaps money in the
-bank, hardware, that full-color conference banner sitting in a storage
-locker somewhere, etc.  Sometimes those questions are resolved
-independently of the project's decision-making procedures because
-those assets already had formal owners, and in each case the owner
-will decide what happens to the asset.  But in cases where the actual
-ownership is in dispute, or the asset belongs in some way to the
-project as a whole, there is no magic answer.  If someone decides to
-make a fuss, the dispute might wind up in a court of law.  In this
-respect, open source projects are not different from any other
-endeavor involving multiple people: when agreement cannot be reached
-but no one is willing to give in, the last resort is the legal system.
-It is extremely rare, however, for things to go that far in a free
-software project (I can't think of any examples, actually), because
-usually there is no participant for whom going to court is a better
-option than just giving up their side of the argument
-anyway.<footnote><para>See also the concept of BATNA: <ulink
-url="https://en.wikipedia.org/wiki/Best_alternative_to_a_negotiated_agreement"
->https://en.wikipedia.org/wiki/Best_alternative_to_a_negotiated_agreement</ulink>.</para></footnote></para>
+<para>当一个 `fork` 发生时，可能会出现一个问题，即那些不可复制的资产会怎样：不仅是商标，还可能包括银行里的钱、硬件、存放在某个储物柜里的那面全彩会议横幅等。有时这些问题是独立于项目的决策程序解决的，因为那些资产已经有了正式的所有者，在每种情况下，所有者都会决定资产的去向。但在所有权确实存在争议，或者资产在某种程度上属于整个项目的情况下，就没有灵丹妙药了。如果有人决定小题大做，争议可能会最终诉诸法庭。在这方面，开源项目与任何其他涉及多人的事业没有区别：当无法达成协议但没有人愿意让步时，最后的手段就是法律体系。然而，在自由软件项目中，事情发展到那一步是极其罕见的（实际上我想不出任何例子），因为通常没有哪个参与者会认为上法庭比直接放弃自己的立场是更好的选择。<footnote><para>另见 BATNA 的概念：<ulink url="https://en.wikipedia.org/wiki/Best_alternative_to_a_negotiated_agreement">https://en.wikipedia.org/wiki/Best_alternative_to_a_negotiated_agreement</ulink>。</para></footnote></para>
 
 </sect2>
 
 <sect2 id="forks-handling">
-<title>Handling a Fork</title>
+<title>处理 Fork</title>
 
-<para>If someone threatens a fork in your project, keep calm and
-remember your long-term goals.  The mere
-<emphasis>existence</emphasis> of a fork isn't what hurts a project;
-rather, it's the loss of developers and users.  Your real aim,
-therefore, is not to squelch the fork, but to minimize these harmful
-effects.  You may be mad, you may feel that the fork was unjust and
-uncalled for, but expressing that publicly can only alienate undecided
-developers.  Instead, don't force people to make exclusive choices,
-and be as cooperative as is practicable with the fork.</para>
+<para>如果有人在你的项目中威胁要 `fork`，保持冷静，并记住你的长期目标。`fork` 的<emphasis>存在</empha>本身并不会伤害一个项目；相反，是开发者和用户的流失。因此，你的真正目标不是压制 `fork`，而是最小化这些有害影响。你可能很生气，可能觉得 `fork` 是不公正和无理的，但公开表达这些只会疏远那些尚未决定的开发者。相反，不要强迫人们做出排他性的选择，并尽可能地与 `fork` 合作。</para>
 
-<para>Don't remove someone's commit access in your project just because she
-decided to work on the fork.  Her work on the fork doesn't mean that
-she has suddenly lost her competence to work on the original
-project; committers before should remain committers afterward.  Beyond
-that, you should express your desire to remain as compatible as
-possible with the fork, and say that you hope developers will port
-changes between the two whenever appropriate.  If you have
-administrative access to the project's servers, publicly offer the
-forkers infrastructure help at startup time.  For example, offer them
-a complete export of the bug database if there's no other way for them
-to get it.  Ask them if there's anything else
-they need, and provide it if you can.  Bend over backward to show
-that you are not standing in the way, and that you want the fork to
-succeed or fail on its own merits and nothing else.</para>
+<para>不要因为某人决定在 `fork` 上工作，就移除她在你的项目中的 `commit` 权限。她在 `fork` 上的工作并不意味着她突然失去了在原始项目上工作的能力；之前的 committer 之后也应该保持 committer 身份。除此之外，你应该表达希望与 `fork` 保持尽可能兼容的愿望，并表示希望开发者在适当时能在两者之间移植变更。如果你有项目的服务器管理权限，公开地为 `fork` 的发起者提供启动时的基础设施帮助。例如，如果他们没有其他方法获取 `bug` 数据库，就为他们提供一个完整的导出。问他们是否还需要其他东西，如果可以的话就提供。要不遗余力地表明你没有设置障碍，并且你希望 `fork` 能凭其自身的优劣成败，而非其他因素。</para>
 
-<para>The reason to do all this&nbsp;&mdash;&nbsp;and do it publicly&nbsp;&mdash;&nbsp;is not
-to actually help the fork, but to persuade developers that your side
-is a safe bet, by appearing as non-vindictive as possible.  In war it
-sometimes makes sense (strategic sense, if not human sense) to force
-people to choose sides, but in free software it almost never does.  In
-fact, after a fork some developers often openly work on both projects,
-doing their best to keep the two compatible.  These developers help
-keep the lines of communication open after the fork.  They allow your
-project to benefit from interesting new features in the fork (yes, the
-fork may have things you want), and also increase the chances of a
-merger down the road.</para>
+<para>做所有这些——并且公开地做——的原因，不是为了真正帮助 `fork`，而是通过表现得尽可能不记仇，来说服开发者们，你这边是一个安全的选择。在战争中，强迫人们站队有时是有意义的（战略意义上，如果不是人道意义上的话），但在自由软件中，几乎从来没有。实际上，在 `fork` 之后，一些开发者常常公开地同时在两个项目上工作，尽力保持两者的兼容性。这些开发者帮助在 `fork` 后保持沟通渠道的开放。他们让你的项目能从 `fork` 中有趣的新功能中受益（是的，`fork` 可能有你想要的东西），也增加了未来合并的机会。</para>
 
-<para>Sometimes a fork becomes so successful that, even though it was
-regarded even by its own instigators as a fork at the outset, it
-becomes the version everybody prefers, and eventually supplants the
-original by popular demand.  A famous instance of this was the
-GCC/EGCS fork.  The <firstterm>GNU Compiler Collection</firstterm>
-(<firstterm>GCC</firstterm>, formerly the <firstterm>GNU C
-Compiler</firstterm>) is the most popular open source native-code
-compiler, and also one of the 
-most portable compilers in the world.  Due to disagreements between GCC's
-official maintainers and Cygnus Software,<footnote><para>Now part of
-RedHat, which later became part of IBM, which I suppose will
-eventually be part of Amazon, along with everything else, so I might
-as well prepare this footnote ahead of time.</para></footnote> one
-of GCC's most active developer groups, Cygnus created a fork of GCC
-called <firstterm>EGCS</firstterm>.  The fork was deliberately
-non-adversarial: the EGCS developers did not, at any point, try to
-portray their version of GCC as a new official version.  Instead, they
-concentrated on making EGCS as good as possible, incorporating patches
-at a faster rate than the official GCC maintainers.  EGCS grew in
-popularity, and eventually some major operating system distributors
-decided to package EGCS as their default compiler instead of GCC.  At
-this point, it became clear to the GCC maintainers that holding on to
-the "GCC" name while everyone switched to the EGCS fork would burden
-everyone with a needless name change, yet do nothing to prevent the
-switchover.  So GCC adopted the EGCS codebase, and there is once again
-a single GCC, but greatly improved because of the fork.</para>
+<para>有时，一个 `fork` 会变得非常成功，以至于尽管它在最初被其发起者都视为一个 `fork`，但它变成了大家都更喜欢的版本，并最终因大众需求而取代了原始版本。一个著名的例子是 GCC/EGCS 的 `fork`。<firstterm>GNU 编译器集合</firstterm>（<firstterm>GCC</firstterm>，前身为 <firstterm>GNU C 编译器</firstterm>）是最流行的开源原生代码编译器，也是世界上最具可移植性的编译器之一。由于 GCC 的官方维护者与 Cygnus Software<footnote><para>现在是 RedHat 的一部分，后来又成为 IBM 的一部分，我猜最终会成为 Amazon 的一部分，和其他所有东西一样，所以我最好提前准备好这个脚注。</para></footnote>（GCC 最活跃的开发者团体之一）之间的分歧，Cygnus 创建了一个名为 <firstterm>EGCS</firstterm> 的 GCC `fork`。这个 `fork` 是刻意非对抗性的：EGCS 的开发者在任何时候都没有试图将他们的 GCC 版本描绘成新的官方版本。相反，他们专注于让 EGCS 尽可能好，以比官方 GCC 维护者更快的速度整合 `patch`。EGCS 的受欢迎程度与日俱增，最终一些主要的操作系统发行商决定将 EGCS 作为他们的默认编译器，而不是 GCC。此时，GCC 的维护者清楚地认识到，在大家都转向 EGCS `fork` 的情况下，坚守“GCC”这个名字只会给每个人带来不必要的名称变更负担，却无法阻止这种转换。于是 GCC 采纳了 EGCS 的代码库，GCC 再次统一，但因为这次 `fork` 而得到了极大的改进。</para>
 
-<para>This example shows why you cannot always regard a fork as an
-unadulteratedly bad thing.  A fork may be painful and unwelcome at the
-time, but you cannot necessarily know whether it will succeed.
-Therefore, you and the rest of the project should keep an eye on it,
-and be prepared not only to absorb features and code where possible,
-but in the most extreme case to even join the fork if it gains the
-bulk of the project's mindshare.  Of course, you will often be able to
-predict a fork's likelihood of success by seeing who joins it.  If the
-fork is started by the project's biggest complainer and is joined by a
-handful of disgruntled developers who weren't behaving constructively
-anyway, they've essentially solved a problem for you by forking, and
-you probably don't need to worry about the fork taking momentum away
-from the original project.  But if you see influential and respected
-developers supporting the fork, you should ask yourself why.  Perhaps
-the project was being overly restrictive, and the best solution is to
-adopt into the mainline project some or all of the changes
-contemplated by the fork&nbsp;&mdash;&nbsp;in essence, to avoid the fork by
-becoming it.</para>
+<para>这个例子说明了为什么你不能总把 `fork` 看作一件纯粹的坏事。`fork` 在当时可能是痛苦和不受欢迎的，但你无法预知它是否会成功。因此，你和项目的其他人应该密切关注它，并准备好不仅尽可能吸收其功能和代码，在最极端的情况下，如果它获得了项目的大部分心智份额，甚至准备加入这个 `fork`。当然，你通常可以通过观察谁加入了 `fork` 来预测其成功的可能性。如果 `fork` 是由项目最大的抱怨者发起的，并且只有一小撮本来就没有建设性行为的不满开发者加入，那他们实际上是为你解决了一个问题，你可能不需要担心 `fork` 会夺走原始项目的势头。但如果你看到有影响力和受人尊敬的开发者支持 `fork`，你就应该问问自己为什么。也许项目过于严格，最好的解决办法是将 `fork` 所考虑的部分或全部变更采纳到主线项目中——实质上，是通过成为它来避免 `fork`。</para>
 
 </sect2>
 
 <sect2 id="forks-initiating">
-<title>Initiating a Fork</title>
+<title>发起一个 Fork</title>
 
-<para>All the advice below assumes that you are forking as a last
-resort.  Exhaust all other possibilities before starting a fork.
-Forking almost always means losing developers, with only an uncertain
-promise of gaining new ones later.  It also means starting out with
-competition for users' attention: everyone who's about to install the
-software has to ask themselves: "Hmm, do I want that one or the other
-one?"  Whichever one you are, the situation is messy, because a
-question has been introduced that wasn't there before.  Some people
-maintain that forks are healthy for the software ecosystem as a whole,
-by a standard natural selection argument: the fittest will survive,
-which means that, in the end, everyone gets better software.  This may
-be true from the ecosystem's point of view, but it's not true from the
-point of view of any individual project.  Most forks do not succeed,
-and most projects are not happy to be forked.</para>
+<para>以下所有建议都假设你是把 `fork` 作为最后的手段。在发起 `fork` 之前，请用尽所有其他可能性。`Fork` 几乎总是意味着失去开发者，而能否在之后获得新的开发者则是不确定的。这也意味着一开始就要与人争夺用户的注意力：每个准备安装软件的人都得问自己：“嗯，我想要这个还是另一个？”无论你是哪一个，情况都很混乱，因为一个以前不存在的问题被引入了。有些人认为，根据标准的自然选择论点，`fork` 对整个软件生态系统是健康的：适者生存，这意味着最终每个人都能得到更好的软件。从生态系统的角度来看，这可能是对的，但从任何单个项目的角度来看，这并非如此。大多数 `fork` 都不会成功，大多数项目也不乐于被 `fork`。</para>
 
-<para>A corollary is that you should not use the threat of a fork as
-an extremist debating technique&nbsp;&mdash;&nbsp;"Do things my way or I'll fork
-the project!"&nbsp;&mdash;&nbsp;because everyone is aware that a fork that fails
-to attract developers away from the original project is unlikely to
-survive long.  All observers&nbsp;&mdash;&nbsp;not just developers, but users and
-operating system packagers too&nbsp;&mdash;&nbsp;will make their own judgement about
-which side to choose.  You should therefore appear extremely reluctant
-to fork, so that if you finally do it, you can credibly claim it was
-the only route left.</para>
+<para>一个推论是，你不应该把 `fork` 的威胁当作一种极端的辩论技巧——“按我的方式来，否则我就 `fork` 项目！”——因为每个人都意识到，一个未能从原始项目吸引走开发者的 `fork`，不太可能长久存活。所有的观察者——不仅是开发者，还有用户和操作系统打包者——都会对选择哪一边做出自己的判断。因此，你应该表现出极不情愿 `fork` 的样子，这样如果你最终真的做了，你就可以有说服力地声称这是剩下的唯一途径。</para>
 
-<para>Do not neglect to take <emphasis>all</emphasis> factors into
-account in evaluating the potential success of your fork.  For
-example, if many of the developers on a project have the same
-employer, then even if they are disgruntled and privately in favor of
-a fork, they are unlikely to say so out loud if they know that their
-employer is against it.  Many free software programmers like to think
-that having a free license on the code means no one company can
-dominate development.  It is true that the license is, in an ultimate
-sense, a guarantor of freedom: if others want badly enough to
-fork the project, and have the resources to do so, they can.  But in
-practice, some projects' development teams are mostly funded by one
-entity, and there is no point pretending that the entity's support
-doesn't matter.  If it is opposed to the fork, its developers are
-unlikely to take part, even if they secretly want to.</para>
+<para>在评估你的 `fork` 成功的可能性时，不要忽略考虑<emphasis>所有</empha>因素。例如，如果一个项目上的许多开发者都受雇于同一家公司，那么即使他们心怀不满并私下支持 `fork`，如果他们知道雇主反对，他们也不太可能公开表示支持。许多自由软件程序员喜欢认为，代码有自由许可是意味着没有哪家公司可以主导开发。确实，从终极意义上说，许可是自由的保障：如果其他人非常想 `fork` 项目，并且有资源这么做，他们就可以。但在实践中，一些项目的开发团队主要由一个实体资助，假装这个实体的支持不重要是毫无意义的。如果它反对 `fork`，它的开发者就不太可能参与，即使他们私下里想。</para>
 
-<para>If, after careful consideration, you still conclude that you
-must fork, line up support
-privately first, then announce the fork in a non-hostile tone.  Even
-if you are angry at, or disappointed with, the current maintainers,
-don't say that in the message.  Just dispassionately state what led
-you to the decision to fork, and that you mean no ill will toward the
-project from which you're forking.  Assuming that you do consider it a
-fork (as opposed to an emergency preservation of the original
-project), emphasize that you're forking the code and not the name, and
-choose a name that does not conflict with the project's name.  You can
-use a name related to the original name, as long as it will not cause
-identity confusion.  Of course it's fine to
-explain prominently on the fork's home page that it descends from the
-original program, and even that it hopes to supplant it.  Just don't
-make users' lives harder by forcing them to untangle an identity
-dispute.</para>
+<para>如果在仔细考虑后，你仍然得出结论必须 `fork`，那就先私下争取支持，然后以非敌对的口吻宣布 `fork`。即使你对现任维护者感到愤怒或失望，也不要在信息中说出来。只冷静地陈述导致你决定 `fork` 的原因，并表示你对你所 `fork` 的项目没有恶意。假设你确实认为它是一个 `fork`（而不是对原始项目的紧急保留），强调你 `fork` 的是代码而不是名字，并选择一个与项目名称不冲突的名字。你可以使用一个与原始名称相关的名字，只要它不会引起身份混淆。当然，在 `fork` 的主页上显著地解释它源于原始程序，甚至希望取而代之，是完全没问题的。只是不要通过强迫用户解开身份纠纷来给他们的生活增加困难。</para>
 
-<para>Finally, you can get things started on the right foot by
-automatically granting <emphasis>all</emphasis> committers of the
-original project commit
-access to the fork, including even those who openly disagreed with the
-need for a fork.  Even if they never use the access, your message is
-clear: there are disagreements here, but no enemies, and you welcome
-code contributions from any competent source.</para>
+<para>最后，你可以通过自动授予原始项目<emphasis>所有</empha> committer 对 `fork` 的 `commit` 权限，来为事情开个好头，甚至包括那些公开反对 `fork` 必要性的人。即使他们从不使用这个权限，你的信息也是明确的：这里有分歧，但没有敌人，你欢迎任何有能力的来源贡献代码。</para>
 
 </sect2>
 
