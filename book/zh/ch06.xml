@@ -1,186 +1,69 @@
 <chapter id="communications">
 
-<title>Communications</title>
+<title>沟通</title>
 
 <simplesect>
 
-<para>An open source project must do many things: recruit users and
-developers, encourage new contributors to become more deeply involved,
-allow free-flowing discussion while still reaching necessary
-decisions, maintain a body of knowledge and convention that guides
-newcomers and experts alike, and, of course, produce working
-software.</para>
+<para>一个开源项目必须做很多事情：招募用户和开发者，鼓励新贡献者更深入地参与，允许自由流动的讨论同时仍能做出必要的决定，维护一个指导新手和专家的知识和惯例体系，当然，还有制作可用的软件。</para>
 
-<para>Coordinating people to accomplish all this together requires many
-techniques, and because open source collaboration is ultimately based
-on software code, most of those techniques revolve around the written
-word.  We'll start there.</para>
+<para>协调人们共同完成所有这些工作需要许多技巧，而且因为开源协作最终是基于软件代码的，所以大多数这些技巧都围绕着书面文字。我们将从这里开始。</para>
 
 </simplesect>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="written-culture">
-<title>Written Culture</title>
+<title>书面文化</title>
 
-<para>The ability to write clearly is one of the most important skills
-one can have in an open source environment.  In the long run it
-may matter more than programming talent.  A great programmer with lousy
-communications skills can get only one thing done at a time, and even
-then may have trouble convincing others to pay attention.  But a mediocre
-programmer with good communications skills can coordinate and persuade
-many people to do many different things, and thereby have a
-significant effect on a project's direction and momentum.</para>
+<para>清晰写作的能力是在开源环境中最重要的技能之一。从长远来看，它可能比编程天赋更重要。一个沟通能力差的优秀程序员一次只能完成一件事，即使这样，也可能难以说服别人关注。但一个沟通能力好的平庸程序员可以协调和说服许多人做许多不同的事情，从而对项目的方向和势头产生重大影响。</para>
 
-<para>There does not seem to be much correlation, in either direction,
-between the ability to write good code and the ability to communicate
-with one's fellow human beings.  There is some correlation between
-programming well and describing technical issues well, but describing
-technical issues is only one part of the communications in a
-project.  Much more important is the ability to empathize with one's
-audience, to see one's own posts and comments as others see them, and
-to cause others to see their own posts with similar objectivity.
-Equally important is noticing when a given medium or communications
-method is no longer working well, perhaps because it doesn't scale as
-the number or diversity of users increases, and taking the time to do something
-about it.</para>
+<para>写出好代码的能力和与同伴沟通的能力之间似乎没有太大的相关性，无论从哪个方向看都是如此。编程出色和描述技术问题出色之间有一些相关性，但描述技术问题只是项目中沟通的一部分。更重要的是能够与你的受众产生共鸣，能够像别人看待自己一样看待自己的帖子和评论，并能让别人也以同样的客观性看待他们自己的帖子。同样重要的是，要注意到某个特定的媒介或沟通方式不再有效，也许是因为随着用户数量或多样性的增加它无法扩展，并花时间去解决它。</para>
 
-<para>All of this is obvious in theory.  What makes it hard in
-practice is that free software development environments are
-bewilderingly diverse both in audiences and in communications
-mechanisms.  Should a given thought be expressed in a post to the
-mailing list, as an annotation in the bug tracker, or as a comment
-in the code?  When answering a question in a public forum, how much
-knowledge can you assume on the part of the reader, given that "the
-reader" is not only the person who asked the question in the first place,
-but all those who might see your response?  How can the developers
-stay in constructive contact with the users, without getting swamped
-by feature requests, spurious bug reports, and general chatter?  How
-do you tell when a communications medium has reached the limits of its capacity, and
-what do you do about it?</para>
+<para>所有这些在理论上都是显而易见的。在实践中让它变得困难的是，自由软件开发环境在受众和沟通机制方面都令人眼花缭乱地多样化。一个特定的想法应该在邮件列表中发表，还是作为错误跟踪器中的注释，或者作为代码中的注释？在公共论坛中回答问题时，鉴于“读者”不仅是最初提问的人，还包括所有可能看到你回答的人，你能假设读者有多少知识？开发人员如何与用户保持建设性的联系，而又不被功能请求、虚假的错误报告和一般的闲聊所淹没？你如何判断一个沟通媒介已经达到了其能力的极限，以及你该怎么办？</para>
 
-<para>Solutions to these problems are usually partial, because any
-particular solution is eventually made obsolete by project growth or
-by changes in project structure.  They are also often <foreignphrase>ad
-hoc</foreignphrase>, because they're improvised responses to dynamic
-situations.  All participants need to be aware of when and how
-communications can become bogged down, and be involved in
-solutions.  Helping people do this is a big part of managing an open
-source project.</para>
+<para>这些问题的解决方案通常是局部的，因为任何特定的解决方案最终都会因项目增长或项目结构的变化而过时。它们也常常是<foreignphrase>临时的</foreignphrase>，因为它们是对动态情况的即兴反应。所有参与者都需要意识到沟通何时以及如何可能陷入困境，并参与到解决方案中。帮助人们做到这一点是管理开源项目的重要组成部分。</para>
 
-<para>The sections that follow discuss both how to conduct
-your own communications, and how to make maintenance of communications
-mechanisms a priority for everyone in the project.<footnote><para>There
-has been some interesting academic research on this topic; for example,
-see <citetitle>Group Awareness in Distributed Software
-Development</citetitle> by Gutwin, Penner, and Schneider.  This paper
-was online for a while, then unavailable, then online again at <ulink
-url="http://www.st.cs.uni-sb.de/edu/empirical-se/2006/PDFs/gutwin04.pdf"
->http://www.st.cs.uni-sb.de/edu/empirical-se/2006/PDFs/gutwin04.pdf</ulink>.
-So try there first, but be prepared to use a search engine if it moves
-again.</para></footnote></para>
+<para>接下来的部分将讨论如何进行你自己的沟通，以及如何让维护沟通机制成为项目中每个人的优先事项。<footnote><para>关于这个主题有一些有趣的学术研究；例如，请参阅Gutwin、Penner和Schneider的<citetitle>分布式软件开发中的群体意识</citetitle>。这篇论文曾一度在线，然后不可用，然后又在<ulink url="http://www.st.cs.uni-sb.de/edu/empirical-se/2006/PDFs/gutwin04.pdf">http://www.st.cs.uni-sb.de/edu/empirical-se/2006/PDFs/gutwin04.pdf</ulink>再次在线。所以先试试那里，但如果它再次移动，请准备好使用搜索引擎。</para></footnote></para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="you-are-what-you-write">
-<title>You Are What You Write</title>
+<title>文如其人</title>
 
-<para>Consider this: most of what others know about you on the
-Internet comes from what you write.
-You may be brilliant, perceptive, and charismatic in person&nbsp;&mdash;&nbsp;but
-if your emails are rambling and unstructured, people will assume
-that's the real you.  Or perhaps you are rambling and
-unstructured in person, but no one need ever know that if your posts
-are lucid and informative.</para>
+<para>想一想：别人在网上对你的大部分了解都来自于你写的东西。你可能在现实生活中聪明、有洞察力、有魅力&nbsp;&mdash;&nbsp;但如果你的邮件杂乱无章、结构混乱，人们就会认为那才是真实的你。或者，你可能在现实生活中杂乱无章、结构混乱，但如果你的帖子清晰、信息丰富，就没人会知道这一点。</para>
 
-<para>Devoting some care to your writing will pay off hugely.
-Long-time free software hacker Jim Blandy tells the following
-story:</para>
+<para>花点心思在你的写作上会得到巨大的回报。资深的自由软件黑客Jim Blandy讲述了以下故事：</para>
 
 <blockquote>
-  <para>Back in 1993, I was working for the Free Software Foundation,
-  and we were beta-testing version 19 of GNU Emacs.  We'd make a beta
-  release every week or so, and people would try it out and send us
-  bug reports.  There was this one guy whom none of us had met in
-  person but who did great work: his bug reports were always clear and
-  led us straight to the problem, and when he provided a fix himself,
-  it was almost always right.  He was top-notch.</para>
+  <para>1993年，我在自由软件基金会工作，我们正在对GNU Emacs的19版进行beta测试。我们大约每周发布一个beta版本，人们会试用并给我们发送错误报告。有一个我们素未谋面的人，但他做得非常出色：他的错误报告总是清晰明了，能直接引导我们找到问题所在，当他自己提供修复时，也几乎总是正确的。他是一流的。</para>
 
-  <para>Now, before the FSF can use code written by someone else, we
-  have them do some legal paperwork to assign their copyright interest
-  to that code to the FSF.  Just taking code from complete strangers
-  and dropping it in is a recipe for legal disaster.</para>
+  <para>现在，在自由软件基金会可以使用别人编写的代码之前，我们会让他们签署一些法律文件，将他们对该代码的版权权益转让给自由软件基金会。仅仅从完全陌生的人那里拿来代码并直接使用，是法律灾难的根源。</para>
 
-  <para>So I emailed the guy the forms, saying, "Here's some paperwork
-  we need, here's what it means, you sign this one, have your employer
-  sign that one, and then we can start putting in your fixes.  Thanks
-  very much."</para>
+  <para>所以我把表格发邮件给他，说：“这里有一些我们需要的文件，这是它的意思，你签这个，让你雇主签那个，然后我们就可以开始加入你的修复了。非常感谢。”</para>
 
-  <para>He sent me back a message saying, "I don't have an
-  employer."</para>
+  <para>他回信说：“我没有雇主。”</para>
 
-  <para>So I said, "Okay, that's fine, just have your university sign
-  it and send it back."</para>
+  <para>所以我说：“好的，没关系，让你所在的大学签字然后寄回来就行。”</para>
 
-  <para>After a bit, he wrote me back again, and said, "Well,
-  actually...  I'm thirteen years old and I live with my
-  parents."</para>
+  <para>过了一会儿，他又给我写信说：“嗯，实际上……我十三岁，和父母住在一起。”</para>
 </blockquote>
 
-<para>Because that kid didn't write like a thirteen-year-old, no one
-knew that's what he was.  Following are some ways to make your writing
-give a good impression too.</para>
+<para>因为那个孩子写得不像一个十三岁的孩子，所以没人知道他就是。下面是一些让你的写作也能给人留下好印象的方法。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="structure-and-formatting">
-<title>Structure and Formatting</title>
+<title>结构与格式</title>
 
-<para>Don't fall into the trap of writing everything as though it were
-a cell phone text message.  Write in complete sentences, capitalizing
-the first word of each sentence, and use paragraph breaks where
-needed.  This is most important in emails and other composed writings.
-In chat rooms or similarly ephemeral forums, it's generally okay to leave out
-capitalization, use compressed forms of common expressions, etc.  Just
-don't carry those habits over into more formal, persistent forums.
-Emails, documentation, bug reports, and other pieces of writing that
-are intended to have a permanent life should be written using standard
-grammar and spelling, and have a coherent narrative structure.  This
-is not because there's anything inherently good about following
-arbitrary rules, but rather that these rules are
-<emphasis>not</emphasis> arbitrary: they evolved into their present
-forms because they make text more readable, and you should adhere to
-them for that reason.  Readability is desirable not only because it
-means more people will understand what you write, but because it makes
-you look like the sort of person who takes the time to communicate
-clearly: that is, someone worth paying attention to.</para>
+<para>不要陷入把所有东西都写得像手机短信的陷阱。要用完整的句子写作，每句话的第一个词大写，并在需要时使用段落分隔。这在电子邮件和其他正式写作中最为重要。在聊天室或类似的临时性论坛中，通常可以省略大写，使用常用表达的缩写形式等。只是不要把这些习惯带到更正式、更持久的论坛中。电子邮件、文档、错误报告以及其他旨在永久保存的文字，都应该使用标准的语法和拼写，并具有连贯的叙事结构。这并不是因为遵守任意规则有什么内在的好处，而是因为这些规则<emphasis>并非</emphasis>任意：它们演变成现在的形式，是因为它们使文本更易读，你应该为此而遵守它们。可读性之所以可取，不仅是因为它意味着更多的人会理解你写的东西，还因为它让你看起来像是那种会花时间清晰沟通的人：也就是说，一个值得关注的人。</para>
 
-<para>Good grammar also minimizes ambiguity.  This is especially
-important in technical writing, where plausible alternatives will
-often be juxtaposed, and the distinction between cause and effect may
-not be immediately clear from context alone.  A grammatical structure
-that represents things in precisely the way the writer intended
-helps everyone avoid confusion.</para>
+<para>良好的语法也能最大限度地减少歧义。这在技术写作中尤其重要，因为技术写作中常常会并列出现看似合理的替代方案，而因果关系的区别可能仅从上下文中并不明显。一个能精确地按照作者意图表达事物的语法结构，有助于大家避免混淆。</para>
 
-<para>For email in particular, experienced open source developers have
-settled on certain formatting conventions:</para>
+<para>尤其对于电子邮件，经验丰富的开源开发人员已经形成了一些格式约定：</para>
 
 <itemizedlist>
-  <listitem><para>Send plain text mails only, not HTML, RichText, or
-  other formats that might get mangled by certain online archives or
-  text-based mail readers.  When including screen output, snippets of
-  code, or other preformatted text, offset it clearly, so that even a
-  lazy eye can easily see the boundaries between your prose and the
-  material you're quoting.  If the overall structure of your post is
-  still visible from five meters away, you're doing it right. </para>
+  <listitem><para>只发送纯文本邮件，而不是HTML、富文本或其他可能被某些在线存档或基于文本的邮件阅读器弄乱的格式。当包含屏幕输出、代码片段或其他预格式化文本时，要清楚地将其隔开，这样即使不经意的一瞥，也能轻松区分你的文字和你引用的材料。如果你的帖子的整体结构从五米外仍然清晰可见，那么你就做对了。</para>
   </listitem>
-  <listitem><para>For preformatted blocks, such as quoted code or
-  error messages, try to stay under 80 columns wide, which has become
-  the <foreignphrase>de facto</foreignphrase> standard terminal width
-  (that is, some people may use wider displays, but no one uses a
-  narrower one).  By making your lines a little
-  <emphasis>less</emphasis> than 80 columns, you leave room for a few
-  levels of quoting characters to be added in others' replies without
-  forcing a rewrapping of your preformatted text.</para>
+  <listitem><para>对于预格式化的块，例如引用的代码或错误消息，尽量保持宽度在80列以内，这已成为事实上的标准终端宽度（也就是说，有些人可能会使用更宽的显示器，但没有人会使用更窄的）。通过使你的行宽略<emphasis>小于</emphasis>80列，你可以为他人回复中添加的几级引用字符留出空间，而不会强制重新换行你的预格式化文本。</para>
   </listitem>
   <!-- I'm not sure what the id on the paragraph below is for.
        I added it at some point when this was still a standalone
@@ -189,36 +72,9 @@ settled on certain formatting conventions:</para>
        refer to it from somewhere out on the Net, so I'm leaving
        it here just in case, even though I'm not actually even sure it
        works when the paragraph is in a listitem like this. -->
-  <listitem><para id="quoting-and-top-posting">When quoting someone
-  else's mail, insert your responses where they're most appropriate,
-  at several different places if necessary, and trim off the parts of
-  their mail you didn't use.  If you're writing a quick response that
-  applies to their entire post, and your response will be sensible
-  even to someone who hasn't read the original, then it's okay to
-  <firstterm>top-post</firstterm> (that is, to put your response above
-  the quoted text of their mail); otherwise, quote the relevant
-  portion of the original text first, followed by your
-  response.</para>
+  <listitem><para id="quoting-and-top-posting">在引用他人的邮件时，在最合适的地方插入你的回复，必要时可以在几个不同的地方插入，并删掉你没有使用的他们邮件的部分。如果你正在写一个适用于他们整个帖子的快速回复，并且即使没有读过原文的人也能理解你的回复，那么可以<firstterm>置顶回复</firstterm>（即，将你的回复放在他们邮件的引用文本之上）；否则，先引用原文的相关部分，然后是你的回复。</para>
   </listitem>
-  <listitem><para><emphasis>Construct the Subject lines of new mails
-  carefully.</emphasis> The Subject line is the most important line in your mail,
-  because it allows each other person in the project to decide whether
-  or not to read more.  Modern mail reading software organizes groups
-  of related messages into threads, which can be defined not only by a
-  common Subject, but by various other headers (which are sometimes
-  not displayed).  It follows that if a thread starts to drift to a
-  new topic, you can&nbsp;&mdash;&nbsp;and should&nbsp;&mdash;&nbsp;adjust the Subject line
-  accordingly when replying.  The thread's integrity will be
-  preserved, due to those other headers, but the new Subject will help
-  people looking at an overview of the thread know that the topic has
-  drifted.  Likewise, if you really want to start a new topic, do it
-  by posting a fresh mail, not by replying to an existing mail and
-  changing the Subject.  Otherwise, your mail would still be grouped
-  in to the same thread as what you're replying to, and thus fool
-  people into thinking it's about something it's not.  Again, the
-  penalty would not only be the waste of their time, but the slight
-  dent in your credibility as someone fluent in using communications
-  tools.</para>
+  <listitem><para><emphasis>仔细构思新邮件的主题行。</emphasis>主题行是你邮件中最重要的一行，因为它让项目中的每个人都能决定是否要阅读更多内容。现代邮件阅读软件会将相关消息组织成会话，这不仅可以通过共同的主题来定义，还可以通过各种其他（有时不显示的）标头来定义。因此，如果一个会话开始偏离到新的主题，你应该在回复时相应地调整主题行。会话的完整性会因为那些其他标头而得以保留，但新的主题会帮助查看会话概览的人知道主题已经偏离了。同样，如果你真的想开始一个新主题，应该通过发一封新邮件来实现，而不是回复一封现有邮件并更改主题。否则，你的邮件仍会与你回复的邮件归为同一个会话，从而误导人们以为它与实际内容不符。再次强调，这样做不仅会浪费他们的时间，还会让你作为一个熟练使用沟通工具的人的信誉受到轻微的损害。</para>
   </listitem>
 </itemizedlist>
 
@@ -226,419 +82,148 @@ settled on certain formatting conventions:</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="writing-content">
-<title>Content</title>
+<title>内容</title>
 
-<para>Well-formatted mails attract readers, but content keeps them.
-No set of fixed rules can guarantee good content, of course, but there
-are some principles that make it more likely.</para>
+<para>格式精美的邮件能吸引读者，但内容才能留住他们。当然，没有任何固定的规则能保证好的内容，但有一些原则可以让它更有可能出现。</para>
 
-<para><emphasis>Make things easy for your readers.</emphasis>
-There's a ton of information
-floating around in any active open source project, and readers cannot
-be expected to be familiar with most of it&nbsp;&mdash;&nbsp;indeed, they cannot
-always be expected to know how to become familiar.  Wherever possible,
-your posts should provide information in the form most convenient for
-readers.  If you have to spend an extra two minutes to dig up the URL
-to a particular thread in the mailing list archives, in order to save
-your readers the trouble of doing so, it's worth it.  If you have to
-spend an extra 5 or 10 minutes summarizing the conclusions so far
-of a complex thread, in order to give people context in which to
-understand your post, then do so.  Think of it this way: the more
-successful a project is, the higher the reader-to-writer ratio will be in any
-given forum.  If every post you make is seen by <emphasis>N</emphasis>
-people, then as <emphasis>N</emphasis> rises, the worthwhileness of
-expending extra effort to save those people time rises with it.  As
-people see you imposing this standard on yourself, they will work
-to match it in their own communications.  The result is, ideally, an
-increase in the global efficiency of the project: when there is a
-choice between <emphasis>N</emphasis> people making an effort and one
-person doing so, the project prefers the latter.</para>
+<para><emphasis>为你的读者提供便利。</emphasis>在一个活跃的开源项目中，信息量非常大，不能指望读者熟悉其中的大部分内容&nbsp;&mdash;&nbsp;事实上，甚至不能指望他们总知道如何去熟悉。只要有可能，你的帖子就应该以对读者最方便的形式提供信息。如果你需要多花两分钟去查找邮件列表存档中某个帖子的URL，以节省读者自己查找的麻烦，那么这是值得的。如果你需要多花5到10分钟来总结一个复杂帖子的结论，以便为人们提供理解你帖子的背景，那么就去做。可以这样想：一个项目越成功，在任何特定论坛中，读者与作者的比例就越高。如果你发的每一篇帖子都被<emphasis>N</emphasis>个人看到，那么随着<emphasis>N</emphasis>的增加，花额外精力为那些人节省时间的价值也随之增加。当人们看到你对自己施加这个标准时，他们也会努力在自己的沟通中达到这个标准。理想的结果是，项目的全球效率得到提高：当<emphasis>N</emphasis>个人付出努力和一个人付出努力之间有选择时，项目更倾向于后者。</para>
 
-<para><emphasis>Don't engage in hyperbole.</emphasis>
-Exaggerating in online posts is a
-classic arms race.  For example, a person reporting a bug may worry
-that the developers will not pay sufficient attention, so he'll
-describe it as a severe, showstopper problem that is preventing him
-(and all his friends/coworkers/cousins) from using the software
-productively, when it's actually only a mild annoyance.</para>
+<para><emphasis>不要夸大其词。</emphasis>在网上发帖时夸大其词是一种典型的军备竞赛。例如，一个报告错误的人可能会担心开发人员不会给予足够的重视，所以他会将其描述为一个严重的、阻碍性的问题，妨碍了他（以及他所有的朋友/同事/表兄弟）有效地使用该软件，而实际上这只是一个轻微的烦恼。</para>
 
-<para>But exaggeration is not limited to users&nbsp;&mdash;&nbsp;programmers often do the
-same thing during technical debates, particularly when the
-disagreement is over a matter of taste rather than correctness:</para>
+<para>但夸大其词并不局限于用户&nbsp;&mdash;&nbsp;程序员在技术辩论中也常常这样做，特别是当分歧在于品味而非正确性时：</para>
 
   <blockquote>
-     <para>"Doing it that way would make the code totally
-     unreadable.  It'd be a maintenance nightmare, compared to
-     J. Random's proposal..."</para>
+     <para>“那样做会让代码完全不可读。与J. Random的提议相比，这将是一场维护噩梦……”</para>
   </blockquote>
 
-<para>The same sentiment would actually be
-<emphasis>stronger</emphasis> if phrased less sharply:</para>
+<para>同样的观点如果用不那么尖锐的措辞表达，实际上会<emphasis>更有力</emphasis>：</para>
 
   <blockquote>
-     <para>"That works, but it's less than ideal in terms of
-     readability and maintainability, I think.  J. Random's proposal
-     avoids those problems because it..."</para>
+     <para>“那样可行，但我认为在可读性和可维护性方面并不理想。J. Random的提议避免了这些问题，因为它……”</para>
   </blockquote>
 
-<para>You will not be able to rid the project of hyperbole completely, and in
-general it's not necessary to do so.  Compared to other forms of
-miscommunication, hyperbole is not globally damaging&nbsp;&mdash;&nbsp;it hurts
-mainly the perpetrator.  The recipients can compensate, it's just that
-the sender loses a little more credibility each time.  Therefore, for
-the sake of your own influence in the project, try to err on the side
-of moderation.  That way, when you <emphasis>do</emphasis> need to
-make a strong point, people will take you seriously.</para>
+<para>你无法完全消除项目中的夸张，而且通常也没有必要这样做。与其他形式的沟通不畅相比，夸张并不会造成全局性的损害&nbsp;&mdash;&nbsp;它主要伤害的是夸张者本人。接收者可以加以弥补，只是发送者每次都会失去一点信誉。因此，为了你自己在项目中的影响力，尽量做到适度。这样，当你<emphasis>确实</emph>需要提出一个强有力的观点时，人们才会认真对待你。</para>
 
-<para><emphasis>Edit twice.</emphasis>  
-For any message longer than a medium-sized
-paragraph, reread it from top to bottom before sending it but after
-you think it's done the first time.  This is familiar advice to anyone
-who's taken a composition class, but it's especially important in
-online discussion.  Because the process of online composition tends to
-be highly discontinuous (in the course of writing a message, you may
-need to go back and check other mails, visit certain web pages, run a
-command to capture its output, etc), it's especially easy to
-lose your sense of narrative place.  Messages that were composed
-discontinuously and not checked before being sent are often
-recognizable as such, much to the chagrin (or so one would hope) of
-their authors.  Take the time to review what you send.  The more your
-posts hold together structurally, the more they will be read by others.</para>
+<para><emphasis>编辑两次。</emphasis>对于任何超过中等段落长度的消息，在你认为第一次完成后，在发送之前从头到尾再读一遍。这对于任何上过写作课的人来说都是熟悉的建议，但在在线讨论中尤其重要。因为在线写作的过程往往是高度不连续的（在写消息的过程中，你可能需要回去检查其他邮件、访问某些网页、运行一个命令来捕获其输出等），所以特别容易迷失叙事的节奏。那些在不连续的情况下撰写并且在发送前没有检查的消息，通常可以被识别出来，这让它们的作者（或者至少人们希望如此）感到懊恼。花时间审查你发送的内容。你的帖子结构越完整，就越会被别人阅读。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="writing-tone">
-<title>Tone</title>
+<title>语气</title>
 
-<para>After writing thousands of messages, you will probably find your
-style tending toward the terse.  This seems to be the norm in most
-technical forums, and there's nothing wrong with it per se.  A degree
-of terseness that would be unacceptable in normal social interactions
-is simply the default for free software hackers.  Here's a response I
-once drew on a mailing list about some free content management
-software, quoted in full:</para>
+<para>在写了几千条消息之后，你可能会发现自己的风格趋于简洁。这似乎是大多数技术论坛的常态，其本身并没有什么错。在正常的社交互动中不可接受的简洁程度，对于自由软件黑客来说简直就是默认设置。以下是我曾经在某个关于免费内容管理软件的邮件列表上得到的一个回复，全文引用：</para>
 
 <blockquote>
 
-<para>Can you possibly elaborate a bit more on exactly what problems
-you ran into, etc?</para>
+<para>你能不能详细说明一下你究竟遇到了什么问题，等等？</para>
 
-<para>Also:</para>
+<para>另外：</para>
 
-<para>What version of Slash are you using? I couldn't tell from your
-original message.</para>
+<para>你用的是哪个版本的Slash？我从你最初的消息里看不出来。</para>
 
-<para>Exactly how did you build the apache/mod_perl source?</para>
+<para>你到底是怎么构建apache/mod_perl源代码的？</para>
 
-<para>Did you try the Apache 2.0 patch that was posted about on
-slashcode.com?</para>
+<para>你试过slashcode.com上发布的那个Apache 2.0补丁吗？</para>
 
 <para>Shane</para>
 
 </blockquote>
 
 
-<para>Now <emphasis>that's</emphasis> terse!  No greeting, no sign-off
-other than his name, and the message itself is just a series of
-questions phrased as compactly as possible.  His one declarative
-sentence was an implicit criticism of my original message.  And yet, I
-was happy to see Shane's mail, and didn't take his terseness as a sign
-of anything other than him being a busy person.  The mere fact that he
-was asking questions, instead of ignoring my post, meant that he was
-willing to spend some time on my problem.</para>
+<para>现在，<emphasis>那</emphasis>真是简洁！没有问候，除了他的名字之外没有签名，消息本身只是一系列尽可能紧凑地措辞的问题。他唯一的一句陈述句是对我原始消息的含蓄批评。然而，我很高兴看到Shane的邮件，并没有把他的简洁看作是除了他很忙之外的任何迹象。他问问题这个事实本身，而不是忽略我的帖子，意味着他愿意花一些时间在我的问题上。</para>
 
-<para>Will all readers react positively to this style?  Not
-necessarily; it depends on the person and the context.  For example,
-if someone has just posted acknowledging that he made a mistake
-(perhaps he wrote a bug), and you know from past experience that
-this person tends to be a bit insecure, then while you may still write
-a compact response, you should make sure to leaven it with some sort
-of acknowledgement of his feelings.  The bulk of your response might
-be a brief, engineer's-eye analysis of the situation, as terse as you
-want.  But at the end, sign off with something indicating that your
-terseness is not to be taken as coldness.  For example, if you've just
-given reams of advice about exactly how the person should fix the bug,
-then sign off with "Good luck, &lt;your name here&gt;" to indicate
-that you wish him well and are not mad.  A strategically placed
-smiley face or other emoticlue can often be enough to reassure an
-interlocutor, too.</para>
+<para>所有读者都会对这种风格做出积极的反应吗？不一定；这取决于个人和具体情况。例如，如果有人刚刚发帖承认自己犯了一个错误（也许他写了一个bug），而你根据过去的经验知道这个人有点不自信，那么虽然你仍然可以写一个简洁的回复，但你应该确保用某种承认他感受的方式来加以调剂。你的回复主体可能是一个简短的、工程师视角的分析，可以随心所欲地简洁。但在结尾，用某种方式签名，表明你的简洁不应被视为冷漠。例如，如果你刚刚就如何修复这个bug给出了大量的建议，那么就用“祝你好运，&lt;你的名字&gt;”来签名，以表明你祝他顺利，并且没有生气。一个策略性地放置的笑脸或其他表情符号，也常常足以让对话者放心。</para>
 
-<para>It may seem odd to focus as much on the participant's feelings
-as on the surface of what they say, but, to put it baldly, feelings
-affect productivity.  Feelings are important for other reasons too,
-but even confining ourselves to purely utilitarian grounds, we may
-note that unhappy people write worse software and tackle fewer bugs.  Given
-the restricted nature of most electronic media, though, there will
-often be no overt clue about how a person is feeling.  You will have
-to make an educated guess based on a) how most people would feel in
-that situation, and b) what you know of this particular person from
-past interactions.</para>
+<para>把注意力同样放在参与者的感受和他们所说的话的表面上，这可能看起来很奇怪，但坦率地说，感受会影响生产力。当然，感受之所以重要还有其他原因，但即使我们只从功利的角度来看，我们也可以注意到，不快乐的人写的软件更差，解决的错误也更少。然而，鉴于大多数电子媒介的限制性，通常不会有关于一个人感受的公开线索。你将不得不根据a)大多数人在那种情况下会有什么感受，以及b)你从过去的互动中对这个特定的人的了解，来做一个有根据的猜测。</para>
 
-<para>Some people prefer a more hands-off attitude, and
-simply deal with everyone at face value, the idea being that if a
-participant doesn't say outright that he feels a particular way, then
-one has no business treating him as though he does.  I don't buy this
-approach, for a couple of reasons.  One, people don't behave that way
-in real life, so why would they online?  Two, since most interactions
-take place in public forums, people tend to be even more restrained in
-expressing emotions than they might be in private.  To be more
-precise, they are often willing to express emotions directed at
-others, such as gratitude or outrage, but not emotions directed
-inwardly, such as insecurity or pride.  Yet most humans work better
-when they know that others are aware of their state of mind.  By
-paying attention to small clues, you can usually guess right most of
-the time, and motivate people to stay involved to a greater degree
-than they otherwise might.</para>
+<para>有些人更喜欢一种不干涉的态度，只是按表面价值与每个人打交道，其想法是，如果一个参与者没有直接说他有某种感觉，那么就没有理由把他当作有这种感觉的人来对待。我不同意这种做法，有几个原因。一，人们在现实生活中不是那样行为的，所以为什么在网上会呢？二，由于大多数互动都发生在公共论坛，人们在表达情感方面往往比在私下里更加克制。更准确地说，他们常常愿意表达针对他人的情感，如感激或愤怒，但不愿意表达向内的情感，如不安全感或自豪感。然而，大多数人在知道别人了解他们的心态时工作得更好。通过注意一些小线索，你通常可以在大多数时候猜对，并激励人们比他们原本可能更积极地参与进来。</para>
 
-<para>I don't mean, of course, that your role is to be a group
-therapist, constantly helping everyone to get in touch with their
-feelings.  But by paying careful attention to long-term patterns in
-people's behavior, you will begin to get a sense of them as
-individuals even if you never meet them face-to-face.  And by being
-sensitive to the tone of your own writing, you can have a surprising
-amount of influence over how others feel, to the ultimate benefit of
-the project.</para>
+<para>当然，我并不是说你的角色是成为一个团体治疗师，不断帮助每个人接触他们的感受。但是通过仔细关注人们行为的长期模式，你将开始把他们视为个体，即使你从未与他们面对面。通过对你自己写作的语气的敏感，你可以对别人的感受产生惊人的影响，最终使项目受益。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="rudeness">
-<title>Recognizing Rudeness</title>
+<title>识别无礼行为</title>
 
-<para>One of the defining characteristics of open source culture is
-its distinctive notions of what does and does not constitute rudeness.
-While the conventions described below are not unique to free software
-development, nor even to software in general&nbsp;&mdash;&nbsp;they would be
-familiar to anyone working in mathematics, the hard sciences, or
-engineering disciplines&nbsp;&mdash;&nbsp;free software, with its porous
-boundaries and constant influx of newcomers, is an environment where
-these conventions are especially likely to be encountered by people
-unfamiliar with them.  (This is one reason why it's good to be
-generous when trying to figure out whether someone has violated the
-code of conduct, in a project that has one&nbsp;&mdash;&nbsp;see <xref
-linkend="code-of-conduct"/>.)</para>
+<para>开源文化的一个决定性特征是其对于什么构成和不构成无礼行为有着独特的观念。虽然下面描述的惯例并非自由软件开发所独有，甚至也并非软件领域所独有&nbsp;&mdash;&nbsp;任何在数学、硬科学或工程学科工作的人都会熟悉它们&nbsp;&mdash;&nbsp;但自由软件，以其多孔的边界和不断涌入的新人，是一个这些惯例特别容易被不熟悉它们的人遇到的环境。（这就是为什么在一个有行为准则的项目中，当试图判断某人是否违反了行为准则时，宽容是件好事&nbsp;&mdash;&nbsp;参见<xref linkend="code-of-conduct"/>。）</para>
 
-<para>Let's start with the things that are <emphasis>not</emphasis>
-rude:</para>
+<para>让我们从<emphasis>不</emphasis>无礼的事情开始：</para>
 
-<para>Technical criticism, even when direct and unpadded, is not rude.
-Indeed, it can be a form of flattery: the critic is saying, by
-implication, that the recipient is worth taking seriously&nbsp;&mdash;&nbsp;is worth
-spending some time on.  That is, the more viable it would have been to
-simply ignore someone's post, the more of a compliment it becomes to
-take the time to criticize it instead (unless the critique descends into an
-<foreignphrase>ad hominem</foreignphrase> attack or some other form of
-obvious rudeness, of course).</para>
+<para>技术批评，即使是直接而不加修饰的，也并非无礼。事实上，它可以是一种恭维：批评者通过暗示，表明被批评者是值得认真对待的&nbsp;&mdash;&nbsp;值得花时间在他身上。也就是说，越是可能直接忽略某人的帖子，花时间去批评它就越是一种赞美（当然，除非批评演变成人身攻击或其他形式的明显无礼）。</para>
 
-<para>Blunt, unadorned questions, such as Shane's questions to me in
-the previously quoted email, are not rude either.  Questions that in
-other contexts might seem cold, rhetorical, or even mocking, are often
-intended seriously, and have no hidden agenda other than eliciting
-information as quickly as possible.  The famous technical support
-question "Is your computer plugged in?" is a classic example of this.
-The support person really does need to know if your computer is
-plugged in, and after the first few days on the job, has gotten tired
-of prefixing her question with polite blandishments ("I beg your
-pardon, I just want to ask a few simple questions to rule out some
-possibilities.  Some of these might seem pretty basic, but bear with
-me...").  At this point, she doesn't bother with the padding anymore,
-she just asks straight out: is it plugged in or not?  Equivalent
-questions are asked all the time on free software mailing lists.  The
-intent is not to insult the recipient, but to quickly rule out the
-most obvious and most common explanations.  Recipients who
-understand this and react accordingly win points for taking a
-broad-minded view without prompting.  But recipients who react badly
-must not be reprimanded, either.  It's just a collision of cultures,
-not anyone's fault.  Explain amiably that your question (or criticism)
-had no hidden meanings; it was just meant to get (or transmit)
-information as efficiently as possible, nothing more.</para>
+<para>直率、不加修饰的问题，比如前面引用的邮件中Shane对我的提问，也并非无礼。在其他语境中可能显得冷漠、反问甚至嘲讽的问题，通常是认真提出的，除了尽快获取信息外没有其他隐藏议程。著名的技术支持问题“你的电脑插上电源了吗？”就是这方面的典型例子。支持人员确实需要知道你的电脑是否插上电源了，而在工作了几天后，她已经厌倦了在提问前加上礼貌的客套话（“不好意思，我只是想问几个简单的问题来排除一些可能性。其中一些可能看起来很基本，但请耐心听我说……”）。到了这个地步，她不再费心铺垫，而是直接问：插上了吗？在自由软件邮件列表上，类似的提问司空见惯。其意图并非侮辱接收者，而是快速排除最明显和最常见的原因。理解这一点并做出相应反应的接收者，会因为在没有提示的情况下表现出宽宏大量而赢得好感。但反应不佳的接收者也不应受到斥责。这只是文化冲突，不是任何人的错。友好地解释你的问题（或批评）没有隐藏含义；它只是为了尽可能高效地获取（或传递）信息，仅此而已。</para>
 
-<para>So what <emphasis>is</emphasis> rude?</para>
+<para>那么<emphasis>什么</emphasis>是粗鲁的呢？</para>
 
-<para>By the same principle under which detailed technical criticism
-is a form of flattery, failure to provide quality criticism can be a
-kind of insult.  I don't mean simply ignoring someone's work, be it a
-proposal, code change, new ticket filing, or whatever.  Unless you
-explicitly promised a detailed reaction in advance, it's usually okay
-to simply not react at all.  People will assume you just didn't have
-time to say anything.  But if you <emphasis>do</emphasis> react, don't
-skimp: take the time to really analyze things, provide concrete
-examples where appropriate, dig around in the archives to find related
-posts from the past, etc.  Or if you don't have time to put in that
-kind of effort, but still need to write some sort of brief response,
-then state the shortcoming openly in your message ("I think there's a
-ticket filed for this, but unfortunately didn't have time to search for
-it, sorry").  The main thing is to explicitly recognize the existence of the
-cultural norm, either by fulfilling it or by openly acknowledging
-that one has fallen short this time.  Either way, the norm is
-strengthened.  But failing to meet that norm while at the same time
-not explaining <emphasis>why</emphasis> you failed to meet it is like
-saying the topic (and those participating in it) was not worth much
-of your time&nbsp;&mdash;&nbsp;that your time is more valuable than theirs.
-Better to show that your time is valuable by being terse than by being
-lazy.</para>
+<para>根据详细的技术批评是一种恭维的原则，未能提供高质量的批评可能是一种侮辱。我不是指简单地忽略某人的工作，无论是提案、代码更改、新工单提交，还是其他任何东西。除非你事先明确承诺会做出详细反应，否则完全不反应通常是可以的。人们会认为你只是没有时间说什么。但是，如果你<emphasis>确实</emphasis>做出了反应，就不要吝啬：花时间真正分析事情，在适当的时候提供具体的例子，在档案中挖掘过去相关的帖子等。或者，如果你没有时间投入那么多精力，但仍然需要写一个简短的回复，那么就在你的消息中公开说明这个不足（“我认为这个已经有工单了，但不幸的是我没时间去搜索，抱歉”）。主要的是要明确承认文化规范的存在，要么通过履行它，要么通过公开承认这次没有做到。无论哪种方式，规范都得到了加强。但是在不履行该规范的同时又不解释<emphasis>为什么</emphasis>没有履行，就像是说这个话题（以及参与其中的人）不值得你花太多时间&nbsp;&mdash;&nbsp;你的时间比他们的更有价值。与其懒惰，不如通过简洁来表明你的时间宝贵。</para>
 
-<para>There are many other forms of rudeness, of course, but most of
-them are not specific to free software development, and common sense
-is a good enough guide to avoid them.  See also
-<xref linkend="prevent-rudeness"/>, if you haven't
-already.</para>
+<para>当然，还有许多其他形式的粗鲁，但它们中的大多数并非自由软件开发所特有，常识足以避免它们。另请参见<xref linkend="prevent-rudeness"/>，如果你还没有阅读的话。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="face">
-<title>Face</title>
+<title>面子</title>
 
-<para>There is a region in the human brain devoted specifically to
-recognizing faces.  It is known informally as the "fusiform face
-area" and apparently its capabilities are at least partly inborn, not
-learned.  It turns out that recognizing individual people is such a
-crucial survival skill that we have evolved specialized hardware to do
-it.</para>
+<para>人脑中有一个专门用于识别人脸的区域。它被非正式地称为“梭状回面部区”，显然它的能力至少部分是天生的，而不是后天学习的。事实证明，识别人类个体是一项如此重要的生存技能，以至于我们已经进化出了专门的硬件来完成这项工作。</para>
 
-<para>Internet-based collaboration is therefore psychologically odd,
-because it involves tight cooperation between human beings who almost
-never get to identify each other by the most natural, intuitive
-methods: facial recognition first of all, but also sound of voice,
-posture, etc.</para>
+<para>因此，基于互联网的协作在心理上是奇怪的，因为它涉及到人类之间的紧密合作，而这些人几乎从未通过最自然、最直观的方法来相互识别：首先是面部识别，还有声音、姿势等。</para>
 
-<para>To compensate for this, try to use a consistent
-<firstterm>screen name</firstterm> everywhere.  Ideally it would be the front
-part of your email address (the part before the @-sign), your chat
-handle, your repository committer name, your ticket tracker username,
-and so on.  This name is your online "face": a short identifying
-string that serves some of the same purpose as your real face,
-although it does not, unfortunately, stimulate the same built-in
-hardware in the brain.</para>
+<para>为了弥补这一点，尽量在各处使用一个一致的<firstterm>网名</firstterm>。理想情况下，它应该是你电子邮件地址的前缀（@符号之前的部分）、你的聊天句柄、你的代码库提交者名称、你的工单跟踪器用户名等等。这个名字是你的在线“面孔”：一个简短的识别字符串，其作用与你的真实面孔有几分类似，尽管不幸的是，它不会刺激大脑中相同的内置硬件。</para>
 
-<para>The screen name should be some intuitive permutation of your
-real name (mine, for example, is "kfogel").  In some situations it
-will be accompanied by your full name anyway, for example in mail
-headers:</para>
+<para>网名应该是你真实姓名的直观排列（例如，我的是“kfogel”）。在某些情况下，它无论如何都会与你的全名一起出现，例如在邮件头中：</para>
 
 <screen>
-From: "Karl Fogel" &lt;kfogel@whateverdomain.com&gt;
+发件人："Karl Fogel" &lt;kfogel@whateverdomain.com&gt;
 </screen>
 
-<para>Actually, there are two things going on in that example.  As
-mentioned earlier, the screen name matches the real name in an
-intuitive way.  But also, the real name is <emphasis>real</emphasis>.
-That is, it's not some made-up appellation like:</para>
+<para>实际上，那个例子里有两件事。如前所述，网名与真实姓名以一种直观的方式匹配。但同时，真实姓名是<emphasis>真实的</emphasis>。也就是说，它不是像这样的虚构称谓：</para>
 
 <screen>
-From: "Wonder Hacker" &lt;wonderhacker@whateverdomain.com&gt;
+发件人：“神奇黑客”&lt;wonderhacker@whateverdomain.com&gt;
 </screen>
 
-<para>There's a famous cartoon by Paul Steiner, from the July 5, 1993
-issue of <citetitle>The New Yorker</citetitle>, that shows one dog
-logged into a computer terminal, looking down and telling another
-conspiratorially: "On the Internet, nobody knows you're a dog."  This
-kind of thought probably lies behind a lot of the self-aggrandizing,
-meant-to-be-hip online identities people give themselves&nbsp;&mdash;&nbsp;as if
-calling oneself "Wonder Hacker" will actually cause people to believe
-one <emphasis>is</emphasis> a wondrous hacker.  But the fact remains:
-even if no one knows you're a dog, you're still a dog.  A fantastical
-online identity never impresses readers.  Instead, it makes them think
-you're more into image than substance, or that you're simply insecure.
-Use your real name for all interactions, or if for some reason you
-prefer pseudonymity, then make up a name and use it consistently.</para>
+<para>1993年7月5日出版的《纽约客》杂志上有一幅由Paul Steiner创作的著名漫画，画中一只狗登录了电脑终端，低头对另一只狗密谋道：“在互联网上，没人知道你是一条狗。”这种想法可能潜藏在许多人给自己起的自吹自擂、意在时髦的在线身份背后&nbsp;&mdash;&nbsp;仿佛自称“神奇黑客”就会真的让人们相信自己<emphasis>是</emphasis>一个了不起的黑客。但事实依然是：即使没人知道你是一条狗，你仍然是一条狗。一个虚构的在线身份永远不会给读者留下深刻印象。相反，它会让他们认为你更注重形象而非实质，或者你只是没有安全感。在所有互动中都使用你的真实姓名，或者如果出于某种原因你更喜欢匿名，那就编一个名字并始终如一地使用它。</para>
 
-<para>If you have an
-official title (e.g., "doctor", "professor", "director"), don't flaunt
-it, nor even mention it except when it's directly relevant to the
-conversation.  Hackerdom in general, and free software culture in
-particular, tends to view title displays as exclusionary and as a sign of
-insecurity.  It's okay if your title appears as part of a standard
-signature block at the end of every mail you send, but never use
-it as a tool to bolster your position in a discussion&nbsp;&mdash;&nbsp;the
-attempt is guaranteed to backfire.  You want folks to respect the
-person, not the title.</para>
+<para>如果你有正式的头衔（例如，“博士”、“教授”、“主任”），不要炫耀，甚至不要提及，除非它与谈话直接相关。黑客圈子，特别是自由软件文化，倾向于将炫耀头衔视为排外的表现和缺乏安全感的标志。如果你的头衔出现在你发送的每封邮件末尾的标准签名块中，那没关系，但绝不要用它来在讨论中支持你的立场&nbsp;&mdash;&nbsp;这种尝试注定会适得其反。你希望人们尊重的是人，而不是头衔。</para>
 
-<para>Speaking of signature blocks: keep them small and tasteful, or
-better yet, nonexistent.  Avoid large legal disclaimers tacked on to
-the end of every mail, especially when they express sentiments
-incompatible with participation in a free software project.  For
-example, the following classic of the genre appears at the end of
-every post a particular user makes to a certain project mailing list:</para>
+<para>说到签名块：保持它们小巧而有品位，或者更好的是，根本没有。避免在每封邮件末尾附加冗长的法律免责声明，特别是当它们表达的观点与参与自由软件项目不符时。例如，下面这个经典的例子出现在某个特定用户发到某个项目邮件列表的每一篇帖子末尾：</para>
 
 <blockquote>
 <para>
-IMPORTANT NOTICE
+重要通知
 </para>
 
 <para>
-If you have received this e-mail in error or wish to read our e-mail
-disclaimer statement and monitoring policy, please refer to the
-statement below or contact the sender.
+如果您错误地收到了此电子邮件，或者希望阅读我们的电子邮件免责声明和监控政策，请参阅以下声明或联系发件人。
 </para>
 
 <para>
-This communication is from Deloitte &amp; Touche LLP.  Deloitte &amp;
-Touche LLP is a limited liability partnership registered in England
-and Wales with registered number OC303675.  A list of members' names
-is available for inspection at Stonecutter Court, 1 Stonecutter
-Street, London EC4A 4TR, United Kingdom, the firm's principal place of
-business and registered office.  Deloitte &amp; Touche LLP is
-authorised and regulated by the Financial Services Authority.
+此通信来自德勤会计师事务所。德勤会计师事务所是一家在英格兰和威尔士注册的有限责任合伙企业，注册号为OC303675。成员名单可在英国伦敦EC4A 4TR的Stonecutter Court, 1 Stonecutter Street，即该公司的主要营业地和注册办事处查阅。德勤会计师事务所由金融服务管理局授权和监管。
 </para>
 
 <para>
-This communication and any attachments contain information which is
-confidential and may also be privileged.  It is for the exclusive use
-of the intended recipient(s).  If you are not the intended
-recipient(s) please note that any form of disclosure, distribution,
-copying or use of this communication or the information in it or in
-any attachments is strictly prohibited and may be unlawful.  If you
-have received this communication in error, please return it with the
-title "received in error" to IT.SECURITY.UK@deloitte.co.uk then delete
-the email and destroy any copies of it.
+此通信及其任何附件包含机密信息，也可能具有特权。它仅供预期的收件人使用。如果您不是预期的收件人，请注意，任何形式的披露、分发、复制或使用此通信或其信息或任何附件中的信息都是严格禁止的，并且可能是非法的。如果您错误地收到了此通信，请将其以“错误收到”为标题退回至IT.SECURITY.UK@deloitte.co.uk，然后删除该电子邮件并销毁其任何副本。
 </para>
 
 <para>
-E-mail communications cannot be guaranteed to be secure or error free,
-as information could be intercepted, corrupted, amended, lost,
-destroyed, arrive late or incomplete, or contain viruses.  We do not
-accept liability for any such matters or their consequences.  Anyone
-who communicates with us by e-mail is taken to accept the risks in
-doing so.
+无法保证电子邮件通信是安全的或没有错误的，因为信息可能被拦截、损坏、修改、丢失、销毁、迟到或不完整，或包含病毒。我们对此类事项或其后果不承担任何责任。任何通过电子邮件与我们通信的人都被视为接受这样做的风险。
 </para>
 
 <para>
-When addressed to our clients, any opinions or advice contained in
-this e-mail and any attachments are subject to the terms and
-conditions expressed in the governing Deloitte &amp; Touche LLP client
-engagement letter.
+当发给我们的客户时，此电子邮件及其任何附件中包含的任何意见或建议均受制于管辖的德勤会计师事务所客户聘用书中所述的条款和条件。
 </para>
 
 <para>
-Opinions, conclusions and other information in this e-mail and any
-attachments which do not relate to the official business of the firm
-are neither given nor endorsed by it.
+本电子邮件及其任何附件中与公司公务无关的意见、结论和其他信息，既非公司所提供，也非公司所认可。
 </para>
 </blockquote>
 
-<para>For someone who's just showing up to ask a question now and
-then, that huge disclaimer looks a bit silly but probably doesn't do
-any lasting harm.  However, if this person wanted to participate
-actively in the project, that legal boilerplate would start to have a
-more insidious effect.  It would send at least two potentially
-destructive signals: first, that this person doesn't have full control
-over his tools&nbsp;&mdash;&nbsp;he's trapped inside some corporate mailer that
-tacks an annoying message to the end of every email, and he hasn't got
-any way to route around it&nbsp;&mdash;&nbsp;and second, that he has little or no
-organizational support for his free software activities.  True, the
-organization has apparently not banned him outright from posting to
-public lists, but it has made his posts look distinctly unwelcoming,
-as though the risk of letting out confidential information must trump
-all other priorities.</para>
+<para>对于一个只是偶尔来问问题的人来说，那个巨大的免责声明看起来有点傻，但可能不会造成任何持久的伤害。然而，如果这个人想积极参与项目，那个法律样板文件就会开始产生更阴险的影响。它会发出至少两个潜在的破坏性信号：首先，这个人没有完全控制他的工具&nbsp;&mdash;&nbsp;他被困在某个公司邮件程序中，该程序在每封邮件的末尾附加一条烦人的消息，而且他没有任何办法绕过它&nbsp;&mdash;&nbsp;其次，他的自由软件活动几乎没有或根本没有组织支持。诚然，组织显然没有 outright 禁止他向公共列表发帖，但它使他的帖子看起来明显不受欢迎，仿佛泄露机密信息的风险必须压倒所有其他优先事项。</para>
 
-<para>If you work for an organization that insists on adding such
-signature blocks to all outgoing mail, and you can't get the policy
-changed, then consider using your personal email account to post, even
-if you're being paid by your employer for your participation in the
-project.</para>
+<para>如果你所在的公司坚持在所有外发邮件中添加此类签名块，而你又无法改变这项政策，那么可以考虑使用你的个人电子邮件账户发帖，即使你的雇主为你在项目中的参与支付了报酬。</para>
 
 </sect2>
 
@@ -647,467 +232,160 @@ project.</para>
 <!-- ======================== SECTION ============================== -->
 
 <sect1 id="common-pitfalls">
-<title>Avoiding Common Pitfalls</title>
+<title>避免常见陷阱</title>
 
-<para>Certain anti-patterns appear again and again in threaded
-discussion forums.  Below are the ones that seem to come up most often
-in open source project forums, and some advice on how to handle
-them.</para>
+<para>在 threaded 讨论论坛中，某些反模式会反复出现。下面列出了在开源项目论坛中最常出现的那些，以及一些处理它们的建议。</para>
 
 <!-- ======================== subsection ============================== -->
 
 <sect2 id="post-with-purpose">
-<title>Don't Post Without a Purpose</title>
+<title>不要无目的地发帖</title>
 
-<para>A common pitfall in online project participation is to think
-that you have to respond to everything.  You don't.  First of all,
-there will usually be more threads going on than you can keep track
-of, at least after the project really gets going.  Second,
-even in the threads that you have decided to engage in, much of what
-people say does not require a response.  Development forums in
-particular tend to be dominated by four kinds of messages:</para>
+<para>在线项目参与的一个常见陷阱是认为你必须回应所有事情。你不需要。首先，通常会有比你能跟上的更多的线程，至少在项目真正开始后是这样。其次，即使在你决定参与的线程中，人们说的大部分话也不需要回应。开发论坛尤其倾向于被四种类型的消息主导：</para>
 
 <orderedlist>
-  <listitem><para>Messages asking a question</para></listitem>
-  <listitem><para>Messages proposing something non-trivial</para></listitem>
-  <listitem><para>Messages expressing support or opposition to
-                  something someone else has said</para></listitem>
-  <listitem><para>Summing-up messages</para></listitem>
+  <listitem><para>提问的消息</para></listitem>
+  <listitem><para>提出非凡建议的消息</para></listitem>
+  <listitem><para>对他人言论表示支持或反对的消息</para></listitem>
+  <listitem><para>总结性消息</para></listitem>
 </orderedlist>
 
-<para>None of these inherently requires <emphasis>your</emphasis>
-response, particularly if you can be fairly sure, based on watching
-the thread so far, that someone else is likely to say what you would
-have said anyway.  (If you're worried that you'll be caught in a
-wait-wait loop because all the others are using this tactic too, don't
-be; there's almost always <emphasis>someone</emphasis> out there
-who'll feel like jumping into the fray.)  A response should be
-motivated by a definite purpose.  Ask yourself first: do you know what
-you want to accomplish?  And second: will it not get accomplished
-unless you say something?</para>
+<para>这些都不一定需要<emphasis>你的</emphasis>回应，特别是如果你根据对目前线程的观察可以相当确定，其他人很可能会说出你本来想说的话。（如果你担心会陷入等待-等待的循环，因为其他人也都在用这个策略，别担心；几乎总有<emphasis>某个人</emphasis>会愿意加入讨论。）一个回应应该由一个明确的目的驱动。首先问问自己：你知道你想达到什么目的吗？其次：如果不说点什么，这个目的就达不到了吗？</para>
 
-<para>Two good reasons to add your voice to a thread are a) when you
-see a flaw in a proposal and suspect that you're the only one who sees
-it, and b) when you see that miscommunication is happening between
-others, and know that you can fix it with a clarifying post.  It's
-also generally fine to post just to thank someone for doing something,
-or to say "Me too!" if you want to strengthen a developing consensus,
-because a reader can tell right away that such
-posts do not require any response or further action, and therefore the
-mental effort demanded by the post ends cleanly when the reader
-reaches the last line of the mail.  But even then, think twice before
-saying something; it's always better to leave people wishing you'd
-post more than wishing you'd post less.<footnote><para>The second half
-of Poul-Henning Kamp's "bikeshed" post, referenced from <xref
-linkend="bikeshed"/>, offers some further thoughts about how to behave
-on a busy mailing list.</para></footnote></para>
+<para>在某个主题中发表意见有两个很好的理由：a)当你发现一个提案中有缺陷，并怀疑自己是唯一看到它的人时；b)当你看到其他人之间发生了沟通不畅，并且知道你可以通过一个澄清的帖子来解决它时。通常，仅仅为了感谢某人做了某事，或者为了加强一个正在形成的共识而说“我也是”，也是可以的，因为读者可以立刻看出这样的帖子不需要任何回应或进一步的行动，因此帖子所要求的精神努力在读者读到邮件的最后一行时就干净地结束了。但即使那样，在说些什么之前也要三思；让人们希望你多发帖总是比希望你少发帖要好。<footnote><para>Poul-Henning Kamp的“自行车棚”帖子的后半部分，从<xref linkend="bikeshed"/>引用，提供了关于如何在繁忙的邮件列表上行为的进一步思考。</para></footnote></para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 
 <sect2 id="productive-threads">
-<title>Productive vs Unproductive Threads</title>
+<title>富有成效与徒劳无功的主题</title>
 
-<para>On a busy mailing list, you have two imperatives.  One,
-obviously, is to figure out what you need to pay attention to and what
-you can ignore.  The other is to behave in a way that
-avoids <emphasis>causing</emphasis> noise: not only do you want your
-own posts to have a high signal/noise ratio, you also want them to be
-the sorts of messages that stimulate <emphasis>other</emphasis> people
-to either post with a similarly high signal/noise ratio, or not post
-at all.</para>
+<para>在繁忙的邮件列表上，你有两个当务之急。一个，显然，是弄清楚你需要关注什么，可以忽略什么。另一个是，你的行为方式要避免<emphasis>制造</emphasis>噪音：不仅要让自己的帖子有高的信噪比，还要让它们是那种能激励<emphasis>其他人</emphasis>要么发具有同样高信噪比的帖子，要么根本不发帖的消息。</para>
 
-<para>To see how to do that, let's consider the context in which it is
-done.  What are some of the hallmarks of unproductive threads?</para>
+<para>要了解如何做到这一点，让我们考虑一下它是在什么背景下完成的。徒劳无功的主题有哪些标志？</para>
 
 <itemizedlist>
-  <listitem><para>Arguments that have already been made start to be
-            repeated in the same thread, as though the poster thinks
-            no one heard them the first time.</para>
+  <listitem><para>已经提出的论点开始在同一个主题中重复出现，仿佛发帖人认为第一次没人听到。</para>
   </listitem>
-  <listitem><para>Increasing levels of hyperbole and intensity as
-            the stakes get smaller and smaller.</para>
+  <listitem><para>随着赌注越来越小，夸张和激烈的程度越来越高。</para>
   </listitem>
-  <listitem><para>A majority of comments coming from people who do
-            little or nothing in the project, while the people who tend to get things
-            done are silent.</para>
+  <listitem><para>大多数评论来自在项目中很少或根本不做事的人，而那些倾向于把事情做成的人却保持沉默。</para>
   </listitem>
-  <listitem><para>Many ideas discussed without clear proposals ever
-            being made.  (Of course, any interesting idea starts out
-            as an imprecise vision; the important question is what
-            direction it goes from there.  Does the thread seem to be
-            turning the vision into something more concrete, or is it
-            spinning off into sub-visions, side-visions, and
-            ontological disputes?)</para>
+  <listitem><para>许多想法被讨论，但从未提出明确的提案。（当然，任何有趣的想法都始于一个不精确的愿景；重要的问题是它从那里走向何方。主题是否似乎正在将愿景变成更具体的东西，还是正在分支出子愿景、旁支愿景和本体论争议？）</para>
   </listitem>
 </itemizedlist>
 
-<para>Just because a thread is not productive at first doesn't mean
-it's a waste of time.  It might be about an important topic, in which
-case the fact that it's not making any headway is all the more
-troublesome.</para>
+<para>一个主题一开始没有成效，并不意味着它就是浪费时间。它可能是一个重要的话题，在这种情况下，它没有任何进展的事实就更麻烦了。</para>
 
-<para>Guiding a thread toward usefulness without being pushy is an
-art.  It won't work to simply admonish people to stop wasting their
-time, or to ask them not to post unless they have something constructive
-to say.  You may, of course, think these things privately, but if you
-say them out loud then you will be offensive&nbsp;&mdash;&nbsp;and
-ineffective.  Instead, you have to
-suggest conditions for further progress: give people a route, a
-path to follow that leads to the results you want, yet without
-sounding like you're dictating conduct.  The distinction is largely
-one of tone.  For example, this is bad:</para>
+<para>在不显得咄咄逼人的情况下，引导一个主题变得有用是一门艺术。仅仅告诫人们不要浪费时间，或者要求他们除非有建设性的话要说，否则不要发帖，是行不通的。当然，你私下里可以这么想，但如果你大声说出来，你就会冒犯别人&nbsp;&mdash;&nbsp;而且毫无效果。相反，你必须为进一步的进展提出条件：给人们一条路线，一条通向你想要的结果的路径，但听起来又不像你在发号施令。区别主要在于语气。例如，这样是不好的：</para>
 
   <blockquote>
-     <para><emphasis>This discussion is going nowhere.  Can we please
-     drop this topic until someone has a patch to implement one of
-     these proposals?  There's no reason to keep going around and
-     around saying the same things.  Code speaks louder than
-     words, folks.</emphasis></para>
+     <para><emphasis>这个讨论毫无进展。我们能不能先放下这个话题，等有人拿出一个实现这些提议之一的补丁再说？没有理由翻来覆去地说同样的话。伙计们，代码胜于雄辩。</emphasis></para>
   </blockquote>
 
-<para>Whereas this is good:</para>
+<para>而这样是好的：</para>
 
   <blockquote>
-     <para><emphasis>Several proposals have been floated in this
-     thread, but none have had all the details fleshed out, at least
-     not enough for an up-or-down vote.  Yet we're also not saying
-     anything new now; we're just reiterating what has been said
-     before.  So the best thing at this point would probably be for
-     further posts to contain either a complete specification for the
-     proposed behavior, or a patch.  Then at least we'd have a
-     definite action to take (i.e., get consensus on the
-     specification, or apply and test the patch).</emphasis></para>
+     <para><emphasis>这个主题中已经提出了几个建议，但没有一个的细节得到了充实，至少不足以进行赞成或反对的投票。而且我们现在也没有说任何新的东西；我们只是在重申之前说过的话。所以目前最好的办法可能是，接下来的帖子要么包含一个关于建议行为的完整规范，要么包含一个补丁。这样至少我们有一个明确的行动可以采取（即，就规范达成共识，或者应用并测试补丁）。</emphasis></para>
   </blockquote>
 
-<para>Contrast the second approach with the first.  The second way
-does not draw a line between you and the others, or accuse them of
-taking the discussion into a spiral.  It talks about "we", which is
-important whether or not you actually participated in the thread
-before now, because it reminds everyone that even those who have been
-silent thus far still have a stake in the thread's outcome.  It
-describes why the thread is going nowhere, but does so without
-pejoratives or judgements&nbsp;&mdash;&nbsp;it just dispassionately states
-some facts.  Most importantly, it offers a positive course of action,
-so that instead of people feeling like discussion is being closed off
-(a restriction against which they can only be tempted to rebel), they
-will feel as if they're being offered a way to take the conversation
-to a more constructive level, if they're willing to make the effort.
-This is a standard that most productive people will naturally want to
-meet.</para>
+<para>将第二种方法与第一种进行对比。第二种方式没有在你和其他人之间划清界限，也没有指责他们让讨论陷入了螺旋。它谈论的是“我们”，这很重要，无论你之前是否实际参与了该主题，因为它提醒每个人，即使是那些迄今为止一直保持沉默的人，也对该主题的结果有利害关系。它描述了为什么该主题毫无进展，但没有使用贬义词或判断&nbsp;&mdash;&nbsp;它只是冷静地陈述了一些事实。最重要的是，它提供了一个积极的行动方案，因此人们不会觉得讨论被关闭了（一个他们只能被诱惑去反抗的限制），他们会觉得自己被提供了一个将对话提升到更具建设性水平的方式，如果他们愿意付出努力的话。这是一个大多数有成效的人都会自然而然地想要达到的标准。</para>
 
-<para>Sometimes you'll be equally happy if a thread either makes it to
-the next level of constructiveness or just goes away.  The
-purpose of your post, then, is to make it do one or the other.  If you
-can tell from the way the thread has gone so far that no one is
-actually <emphasis>going</emphasis> to take the steps you suggested,
-then your post effectively shuts down the thread without seeming to do
-so.  Of course, there isn't any foolproof way to shut down a thread,
-and even if there were, you wouldn't want to use it.  But asking
-participants to either make visible progress or stop posting is
-perfectly defensible, if done diplomatically.  Be wary of quashing
-threads prematurely, however.  Some amount of speculative chatter can
-be productive, depending on the topic, and asking for it to be
-resolved too quickly will stifle the creative process, as well as make
-you look impatient.</para>
+<para>有时候，你可能对一个主题既希望它能更具建设性，又希望它能就此消失，两者皆可。那么，你发帖的目的就是让它二选一。如果你能从主题迄今为止的发展方式判断出，实际上<emphasis>不会</emphasis>有人采取你建议的步骤，那么你的帖子实际上就是在不显得如此的情况下关闭了该主题。当然，没有任何万无一失的方法可以关闭一个主题，即使有，你也不想使用它。但要求参与者要么取得可见的进展，要么停止发帖，如果做得圆滑，是完全可以辩护的。但是，要警惕过早地扼杀主题。一定量的推测性闲聊可能是有益的，这取决于主题，过快地要求解决它会扼杀创造性过程，也会让你显得不耐烦。</para>
 
-<para>Don't expect any thread to stop on a dime.  There will probably
-still be a few posts after yours, either because mails got crossed in
-the pipe, or because people want to have the last word.  This is
-nothing to worry about, and you don't need to post again.  Just let
-the thread peter out, or not peter out, as the case may be.  You can't
-have complete control; on the other hand, you can expect to have a
-statistically significant effect across many threads.</para>
+<para>不要指望任何主题会戛然而止。在你的帖子之后，可能还会有几篇帖子，要么是因为邮件在管道中交叉了，要么是因为人们想拥有最后一句话。这没什么好担心的，你也不需要再发帖。就让主题自然结束，或者不结束，视情况而定。你不可能完全控制；另一方面，你可以期望在许多主题中产生统计上显著的影响。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="bikeshed">
-<title>The Smaller the Topic, the Longer the Debate</title>
+<title>话题越小，争论越长</title>
 
-<para>Although discussion can meander in any topic, the probability of
-meandering goes up as the technical difficulty of the topic goes down.
-After all, the greater the technical complexity, the fewer
-participants can really follow what's going on.  Those who can are
-likely to be the most experienced developers, who have already taken
-part in such discussions many times before, and know what sort
-of behavior is likely to lead to a consensus everyone can live
-with.</para>
+<para>虽然任何话题的讨论都可能偏离，但随着话题技术难度的降低，偏离的可能性会增加。毕竟，技术复杂性越大，能真正跟上的人就越少。那些能跟上的人很可能是最有经验的开发人员，他们以前已经多次参与过这样的讨论，并且知道什么样的行为可能导致一个大家都能接受的共识。</para>
 
-<para>Thus, consensus is hardest to achieve in technical questions
-that are simple to understand and easy to have an opinion about, and
-in "soft" topics such as organization, publicity, funding, etc,
-people can participate in those arguments forever, because there are
-no qualifications necessary for doing so, no clear ways to decide (even
-afterward) if a decision was right or wrong, and because simply
-outwaiting or outposting other discussants is sometimes a successful tactic.</para>
+<para>因此，在技术问题上达成共识最困难的是那些简单易懂、容易发表意见的问题，而在组织、宣传、资金等“软”话题上，人们可以永远参与争论，因为这样做不需要任何资格，没有明确的方法来判断（即使是事后）一个决定是否正确，而且仅仅通过比其他讨论者更持久或发帖更多有时是一种成功的策略。</para>
 
-<para>The principle that the amount of discussion is inversely
-proportional to the complexity of the topic has been around for a long
-time, and is known informally as the <firstterm>Bikeshed
-Effect</firstterm>.  Here is Poul-Henning Kamp's explanation of it,
-from a now-famous post made to BSD developers:</para>
+<para>讨论量与主题复杂性成反比的原则由来已久，并被非正式地称为<firstterm>自行车棚效应</firstterm>。以下是Poul-Henning Kamp在一篇现已闻名的给BSD开发者的帖子中对此的解释：</para>
 
 <blockquote>
 
-<para>It's a long story, or rather it's an old story, but it is quite
-short actually.  C. Northcote Parkinson wrote a book in the early
-1960'ies, called "Parkinson's Law", which contains a lot of insight
-into the dynamics of management.</para>
+<para>这是一个很长的故事，或者更确切地说，这是一个古老的故事，但实际上它很短。C. Northcote Parkinson在20世纪60年代初写了一本书，名为《帕金森定律》，其中包含了许多关于管理动态的深刻见解。</para>
 
 <para>[...]</para>
 
-<para>In the specific example involving the bike shed, the other vital
-component is an atomic power-plant, I guess that illustrates the age
-of the book.</para>
+<para>在涉及自行车棚的具体例子中，另一个至关重要的组成部分是原子能发电厂，我想这说明了这本书的年代。</para>
 
-<para>Parkinson shows how you can go in to the board of directors and
-get approval for building a multi-million or even billion dollar
-atomic power plant, but if you want to build a bike shed you will be
-tangled up in endless discussions.</para>
+<para>帕金森展示了你如何能够进入董事会，并获得建造一个数百万甚至数十亿美元的原子能发电厂的批准，但如果你想建造一个自行车棚，你就会陷入无休止的讨论中。</para>
 
-<para>Parkinson explains that this is because an atomic plant is so
-vast, so expensive, and so complicated that people cannot grasp it, and
-rather than try, they fall back on the assumption that somebody else
-checked all the details before it got this far.  Richard P.  Feynmann
-gives a couple of interesting, and very much to the point, examples
-relating to Los Alamos in his books.</para>
+<para>帕金森解释说，这是因为一个原子能发电厂是如此庞大、昂贵和复杂，以至于人们无法理解它，他们宁愿不去尝试，而是退回到假设在它走到这一步之前已经有其他人检查了所有细节。理查德·P·费曼在他的书中举了几个有趣的、非常切题的、与洛斯阿拉莫斯有关的例子。</para>
 
-<para>A bike shed on the other hand.  Anyone can build one of those
-over a weekend, and still have time to watch the game on TV.  So no
-matter how well prepared, no matter how reasonable you are with your
-proposal, somebody will seize the chance to show that he is doing his
-job, that he is paying attention, that he
-is <emphasis>here</emphasis>.</para>
+<para>另一方面，一个自行车棚。任何人都可以在一个周末把它建起来，还有时间在电视上看比赛。所以，无论你准备得多么充分，无论你的提议多么合理，总会有人抓住机会表明他在做他的工作，他在注意，他<emphasis>在场</emphasis>。</para>
 
-<para>In Denmark we call it "setting your fingerprint".  It is about
-personal pride and prestige, it is about being able to point somewhere
-and say "There!  <emphasis>I</emphasis> did that."  It is a strong
-trait in politicians, but present in most people given the chance.
-Just think about footsteps in wet cement.</para>
+<para>在丹麦，我们称之为“留下你的指纹”。这关乎个人自豪感和声望，关乎能够指着某个地方说：“看！<emphasis>我</emphasis>做的。”这是政客们一个很强的特质，但只要有机会，大多数人都会有。想想湿水泥上的脚印就知道了。</para>
 
 </blockquote>
 
-<para>(Kamp's complete post is very much worth reading; see 
-<ulink url="https://bikeshed.com/" >https://bikeshed.com/</ulink>.)</para>
+<para>（Kamp的完整帖子非常值得一读；参见<ulink url="https://bikeshed.com/">https://bikeshed.com/</ulink>。）</para>
 
-<para>Anyone who's ever taken regular part in group decision-making
-will recognize what Kamp is talking about.  However, it is usually
-impossible to persuade <emphasis>everyone</emphasis> to avoid painting
-bikesheds.  The best you can do is point out that the phenomenon
-exists (when you see it happening) and persuade the senior
-developers&nbsp;&mdash;&nbsp;the people whose posts carry the most weight&nbsp;&mdash;&nbsp;to
-drop their paintbrushes early, so at least they're not contributing to
-the noise.  Bikeshed painting parties will never go away entirely, but
-you can make them shorter and less frequent by spreading an awareness
-of the phenomenon in the project's culture.</para>
+<para>任何经常参与集体决策的人都会认识到Kamp所说的。然而，通常不可能说服<emphasis>每个人</emphasis>都避免粉刷自行车棚。你最多能做的就是指出这种现象的存在（当你看到它发生时），并说服高级开发人员&nbsp;&mdash;&nbsp;那些帖子最有分量的人&nbsp;&mdash;&nbsp;尽早放下他们的画笔，这样至少他们不会制造噪音。粉刷自行车棚的派对永远不会完全消失，但你可以通过在项目的文化中传播对这种现象的认识来使它们更短、更不频繁。</para>
 
 </sect2>
 
 <!-- ======================== SECTION ============================== -->
 <sect2 id="holy-wars">
-<title>Avoid Holy Wars</title>
+<title>避免圣战</title>
 
-<para>A <firstterm>holy war</firstterm> is a dispute, often but not
-always over a relatively minor issue, which is not resolvable on the
-merits of the arguments, but about which people feel passionate enough to
-continue arguing anyway in the hope that their side will prevail.</para>
+<para>一场<firstterm>圣战</firstterm>是一场争论，通常但并非总是关于一个相对次要的问题，它无法根据论点的优劣来解决，但人们对此充满热情，以至于无论如何都要继续争论，希望自己的一方能获胜。</para>
 
-<para>Holy wars are not quite the same as bikeshed painting.  People
-painting bikesheds may be quick to jump in with an opinion, but they
-won't necessarily feel strongly about it,
-and indeed will sometimes express other, incompatible opinions, to
-show that they understand all sides of the issue.  In a holy war, on
-the other hand, understanding the other sides is a sign of weakness.
-In a holy war, everyone knows there is One Right Answer; they just
-don't agree on what it is.</para>
+<para>圣战与粉刷自行车棚不完全相同。粉刷自行车棚的人可能会很快发表意见，但他们不一定会对此有强烈的感受，事实上，他们有时会表达其他不相容的观点，以表明他们理解问题的各个方面。另一方面，在圣战中，理解其他方面是软弱的表现。在圣战中，每个人都知道只有一个正确答案；他们只是不同意它是什么。</para>
 
-<para>Once a holy war has started, it generally cannot be resolved to
-everyone's satisfaction.  It does no good to point out, in the midst
-of a holy war, that a holy war is going on.  Everyone knows that
-already.  Unfortunately, a common feature of holy wars is disagreement
-on the very question of <emphasis>whether</emphasis> the dispute is
-resolvable by continued discussion.  Viewed from outside, it is clear
-that neither side is changing the other's mind.  Viewed from inside,
-the other side is being obtuse and not thinking clearly, but they
-might come around if browbeaten enough.  Now, I am
-<emphasis>not</emphasis> saying there's never a right side in a holy
-war.  Sometimes there is&nbsp;&mdash;&nbsp;in the holy wars I've participated
-in, it's always been my side, of course.  But it doesn't matter,
-because there's no algorithm for convincingly demonstrating that one
-side or the other is right.</para>
+<para>一旦一场圣战开始，通常就无法让所有人都满意地解决。在圣战中指出正在进行一场圣战是无济于事的。每个人都已经知道了。不幸的是，圣战的一个共同特点是，对于<emphasis>是否</emphasis>可以通过继续讨论来解决争端存在分歧。从外部看，很明显任何一方都没有改变另一方的想法。从内部看，另一方是迟钝的，没有清晰地思考，但如果被足够地威逼，他们可能会改变主意。现在，我<emphasis>不是</emphasis>说圣战中从来没有正确的一方。有时是有的&nbsp;&mdash;&nbsp;在我参与过的圣战中，当然总是我的一方。但这无关紧要，因为没有算法可以令人信服地证明一方或另一方是正确的。</para>
 
-<para>A common, but unsatisfactory, way people try to resolve holy
-wars is to say "We've already spent far more time and energy
-discussing this than it's worth!  Can we please just drop it?"  There
-are two problems with this.  First, that time and energy has already
-been spent and can never be recovered.<footnote><para>
-<ulink url="https://en.wikipedia.org/wiki/Sunk_cost#Fallacy_effect"
->https://en.wikipedia.org/wiki/Sunk_cost#Fallacy_effect</ulink></para></footnote>
-The only question now is, how much <emphasis>more</emphasis> effort remains?  If some people
-feel that just a little more discussion will resolve the issue in
-their favor, then it still makes sense (from their point of view) to
-continue.</para>
+<para>人们试图解决圣战的一种常见但并不令人满意的方式是说：“我们已经在这个问题上花费了远远超过其价值的时间和精力！我们能不能就此打住？”这有两个问题。首先，那些时间和精力已经花掉了，永远也无法挽回。<footnote><para><ulink url="https://en.wikipedia.org/wiki/Sunk_cost#Fallacy_effect">https://en.wikipedia.org/wiki/Sunk_cost#Fallacy_effect</ulink></para></footnote>现在唯一的问题是，还剩下多少<emphasis>更多</emphasis>的努力？如果有些人觉得再多讨论一点就能让问题朝着对他们有利的方向解决，那么（从他们的角度来看）继续讨论仍然是有意义的。</para>
 
-<para>The second problem with asking for the matter to be dropped is
-that this is often equivalent to allowing one side, the status quo, to
-declare victory by inaction.  And in some cases, the status quo is
-known to be unacceptable anyway: everyone agrees that some decision
-must be made, some action taken.  Dropping the subject would be worse
-for everyone than simply giving up the argument would be for anyone.
-But since that dilemma applies to all equally, it's still possible to
-end up arguing forever about what to do.</para>
+<para>要求搁置此事的第二个问题是，这通常等同于允许一方，即现状，通过不作为宣布胜利。而在某些情况下，现状本来就是不可接受的：大家都同意必须做出某个决定，采取某个行动。搁置这个话题对所有人来说都比任何人放弃争论要糟糕。但由于这个困境对所有人都同样适用，所以最终还是可能为该做什么而永远争论下去。</para>
 
-<para>So how should you handle holy wars?</para>
+<para>那么你应该如何处理圣战呢？</para>
 
-<para>The first answer is, try to set things up so they don't happen.
-This is not as hopeless as it sounds:</para>
+<para>第一个答案是，尽量设法让它们不要发生。这并不像听起来那么绝望：</para>
 
-<para>You can anticipate certain standard holy wars: they tend to come
-up over programming languages, licenses (see
-<xref linkend="license-compatibility"/>), reply-to munging (see
-<xref linkend="reply-to"/>), and a few
-other topics.  Each project 
-usually has a holy war or two all of its own, which longtime
-developers will quickly become familiar with.  The techniques for
-stopping holy wars, or at least limiting their damage, are pretty much
-the same everywhere.  Even if you are positive your side is right, try
-to find <emphasis>some</emphasis> way to express sympathy and
-understanding for the points the other side is making.  Often the
-problem in a holy war is that because each side has built its walls
-as high as possible and made it clear that any other opinion is sheer
-foolishness, the act of surrendering or changing one's mind becomes
-psychologically unbearable: it would be an admission not just of being
-wrong, but of having been <emphasis>certain</emphasis> and still being
-wrong.  The way you can make this admission palatable for the other
-side is to express some uncertainty yourself&nbsp;&mdash;&nbsp;precisely by
-showing that you understand the arguments they are making and find
-them at least sensible, if not finally persuasive.  Make a gesture
-that provides space for a reciprocal gesture, and usually the
-situation will improve.  You are no more or less likely to get the
-technical result you wanted, but at least you can avoid unnecessary
-collateral damage to the project's morale.</para>
+<para>你可以预见到某些标准的圣战：它们往往出现在编程语言、许可证（参见<xref linkend="license-compatibility"/>）、回复-to篡改（参见<xref linkend="reply-to"/>）以及其他一些主题上。每个项目通常都有一两个自己的圣战，长期开发者会很快熟悉。制止圣战，或者至少限制其损害的技巧，在各地都大同小异。即使你肯定自己一方是正确的，也要试着找到<emphasis>某种</emphasis>方式来表达对另一方观点的同情和理解。圣战中的问题常常在于，因为每一方都已尽可能地筑高了壁垒，并明确表示任何其他观点都是纯粹的愚蠢，所以投降或改变主意的行为在心理上变得难以忍受：这不仅是承认错误，而且是承认<emphasis>曾经确信</emphasis>但仍然错了。你可以通过表达一些不确定性来让另一方更容易接受这个承认&nbsp;&mdash;&nbsp;具体来说，就是表明你理解他们提出的论点，并认为它们至少是合理的，即使最终不具说服力。做一个姿态，为对方的互惠姿态留出空间，通常情况下，情况就会好转。你得到你想要的技术结果的可能性并不会因此增加或减少，但至少你可以避免对项目的士气造成不必要的附带损害。</para>
 
-<para>When a holy war can't be avoided, decide early how much you
-care, and then be willing to publicly give up.  When you do so, you
-can say that you're backing out because the holy war isn't worth it,
-but don't express any bitterness and <emphasis>don't</emphasis> take
-the opportunity for a last parting shot at the opposing side's
-arguments.  Giving up is effective only when done gracefully.</para>
+<para>当圣战不可避免时，尽早决定你有多在乎，然后愿意公开放弃。当你这样做时，你可以说你退出是因为圣战不值得，但不要表现出任何怨恨，也<emphasis>不要</emphasis>趁机对对方的论点进行最后一次攻击。只有优雅地放弃才有效。</para>
 
-<para>Programming language holy wars are a bit of a special case,
-because they are often highly technical, yet many people feel
-qualified to take part in them, and the stakes are very high, since
-the result may determine what language a good portion of the project's
-code is written in.  The best solution is to choose the language
-early, with buy-in from influential initial developers, and then
-defend it on the grounds that it's what you are all comfortable
-writing in, <emphasis>not</emphasis> on the grounds that it's better
-than some other language that could have been used instead.  Never let
-the conversation degenerate into an academic comparison of programming
-languages; that's a death topic that you must simply
-refuse to be drawn into.</para>
+<para>编程语言圣战有点特殊，因为它们通常技术性很强，但许多人都觉得自己有资格参与其中，而且赌注非常高，因为结果可能决定项目的大部分代码将用哪种语言编写。最好的解决办法是尽早选择语言，并得到有影响力的初始开发人员的支持，然后以这是大家都熟悉的写作语言为由进行辩护，<emphasis>而不是</emphasis>以它比其他本可以使用的语言更好为由。永远不要让对话演变成对编程语言的学术性比较；那是一个你必须坚决拒绝卷入的死亡话题。</para>
 
-<para>For more historical background on holy wars, see <ulink
-url="http://catb.org/~esr/jargon/html/H/holy-wars.html"
->http://catb.org/~esr/jargon/html/H/holy-wars.html</ulink>, and the
-paper by Danny Cohen that popularized the term, <ulink
-url="https://www.ietf.org/rfc/ien/ien137.txt"
->https://www.ietf.org/rfc/ien/ien137.txt</ulink>.</para>
+<para>关于圣战的更多历史背景，请参阅<ulink url="http://catb.org/~esr/jargon/html/H/holy-wars.html">http://catb.org/~esr/jargon/html/H/holy-wars.html</ulink>，以及普及该术语的Danny Cohen的论文，<ulink url="https://www.ietf.org/rfc/ien/ien137.txt">https://www.ietf.org/rfc/ien/ien137.txt</ulink>。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 
 <sect2 id="noisy-minority">
-<title>The "Noisy Minority" Effect</title>
+<title>“喧闹的少数派”效应</title>
 
-<para>In any mailing list discussion, it's easy for a small minority
-to give the impression that there is a great deal of dissent, by
-flooding the list with numerous lengthy emails.  It's a bit like a
-filibuster, except that the illusion of widespread dissent is even
-more powerful, because it's divided across an arbitrary number of
-discrete posts and most people won't bother to keep track of who said
-what, when.  They'll just have a vague impression that the topic
-is very controversial and wait for the fuss to die down.</para>
+<para>在任何邮件列表的讨论中，一小部分人很容易通过大量冗长的邮件来给人一种存在大量异议的印象。这有点像阻挠议事，但 widespread dissent 的错觉甚至更强大，因为它分散在任意数量的离散帖子中，大多数人不会费心去追踪谁说了什么，什么时候说的。他们只会有一个模糊的印象，即这个话题非常有争议，并等待骚动平息。</para>
 
-<para>The best way to counteract this effect is to point it out very
-clearly and provide quantitative evidence showing how small the actual
-number of dissenters is, compared to those in agreement.  In order to
-increase the disparity, you may want to privately poll people who have
-been mostly silent, but who you suspect would agree with the majority.
-Don't say anything that suggests the dissenters were deliberately
-trying to inflate the impression they were making.  Chances are they
-weren't, and even if they were, there would be no strategic advantage
-to pointing it out.  All you need do is show the actual numbers in a
-side-by-side comparison, and people will realize that their impression
-of the situation does not match reality.</para>
+<para>抵制这种效应的最好方法是，非常清楚地指出它，并提供定量证据，显示实际持异议者的人数与同意者相比是多么少。为了增加这种差异，你可能需要私下征求那些大部分时间保持沉默，但你怀疑他们会同意大多数人意见的人的看法。不要说任何暗示持异议者是故意试图夸大他们所造成印象的话。他们很可能不是，即使他们是，指出这一点也没有任何战略优势。你只需要并排比较实际数字，人们就会意识到他们对情况的印象与现实不符。</para>
 
-<para>This advice doesn't just apply to issues with clear
-for-and-against positions.  It applies to any discussion where a fuss
-is being made but it's not clear that most people consider the issue
-under discussion to be a real problem.  After a while, if you agree that
-the issue is not worthy of action, and can see that it has failed to
-get much traction (even if it has generated a lot of mails), you can
-just observe publicly that it's not getting traction.  If the "Noisy
-Minority" effect has been at work, your post will seem like a breath of
-fresh air.  Most people's impression of the discussion up to that
-point will have been somewhat murky: "Huh, it sure feels like there's
-some big deal here, because there sure are a lot of posts, but I can't
-see any clear progress happening."  By explaining how the form of the
-discussion made it appear more turbulent than it really was, you
-retrospectively give it a new shape, through which people can recast
-their understanding of what transpired.</para>
+<para>这个建议不仅仅适用于有明确支持和反对立场的问题。它适用于任何正在引起骚动，但尚不清楚大多数人是否认为所讨论的问题是一个真正问题的讨论。一段时间后，如果你也认为这个问题不值得采取行动，并且看到它没有得到太多关注（即使它产生了很多邮件），你可以公开地观察到它没有得到关注。如果“喧闹的少数派”效应一直在起作用，你的帖子会像一股清新的空气。大多数人对到那时为止的讨论的印象会有些模糊：“嗯，感觉这里有什么大事，因为帖子确实很多，但我看不出有任何明确的进展。”通过解释讨论的形式如何使其看起来比实际更混乱，你回顾性地给了它一个新的形态，通过这个形态，人们可以重塑他们对所发生事情的理解。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="competing-products">
-<title>Don't Bash Competing Open Source Products</title>
+<title>不要抨击竞争的开源产品</title>
 
-<para>Refrain from giving negative opinions about competing open
-source software.  It's perfectly okay to give negative
-<emphasis>facts</emphasis>&nbsp;&mdash;&nbsp;that is, easily confirmable
-assertions of the sort often seen in honest comparison charts.  But
-negative characterizations of a less rigorous nature are best avoided,
-for two reasons.  First, they are liable to start flame wars that
-detract from productive discussion.  Second, and more importantly,
-some of the developers in <emphasis>your</emphasis> project
-may turn out to work on the competing project as well, or developers
-from the other project may be considering contributing in yours.</para>
+<para>避免对竞争的开源软件发表负面意见。发表负面的<emphasis>事实</emphasis>是完全可以的&nbsp;&mdash;&nbsp;即，在诚实的比较图表中常见的那种易于确认的断言。但最好避免不那么严谨的负面描述，原因有二。首先，它们容易引发口水战，从而偏离富有成效的讨论。其次，更重要的是，<emphasis>你的</emphasis>项目中的一些开发人员可能也会在竞争的项目中工作，或者其他项目的开发人员可能正在考虑为你的项目做贡献。</para>
 
-<para>This kind of crossover is more likely than it at first might
-seem.  The projects are already in the same domain (that's why they're
-in competition), and developers with expertise in a domain tend to
-make contributions wherever their expertise is applicable.  Even when
-there is no direct developer overlap, it is likely that developers on
-your project are at least acquainted with developers on related
-projects.  Their ability to maintain constructive personal ties could
-be hampered by overly negative marketing messages.</para>
+<para>这种交叉比乍看起来更可能发生。这些项目已经在同一个领域（这就是它们竞争的原因），而在一个领域有专长的开发人员倾向于在他们的专长适用的任何地方做出贡献。即使没有直接的开发人员重叠，你的项目中的开发人员也很可能至少与相关项目中的开发人员相识。他们维持建设性个人关系的能力可能会受到过于负面的营销信息的阻碍。</para>
 
-<para>Bashing competing closed-source products seems to be somewhat widely
-accepted in the open source world.  Personally, I deplore this tendency (though again,
-there's nothing wrong with straightforward factual comparisons), not
-merely because it's rude, but also because it's dangerous for a
-project to start believing its own hype and thereby ignore the ways in
-which the proprietary competition may be technically superior.</para>
+<para>抨击竞争的闭源产品在开源世界似乎被广泛接受。就我个人而言，我谴责这种倾向（尽管再次强调，直接的事实比较没有问题），不仅因为它粗鲁，还因为它对一个项目来说很危险，项目可能会开始相信自己的炒作，从而忽略专有竞争对手在技术上可能更优越的方面。</para>
 
-<para>In general, watch out for the effect that your project's
-marketing statements can have on your own
-development community.  People may be so excited at being backed by
-marketing dollars that they lose objectivity about their software's
-true strengths and weaknesses.  It is normal, and even expected, for a
-company's developers to exhibit a certain detachment toward marketing
-statements, even in public forums.  Clearly, they should not come out
-and contradict the marketing message directly (unless it's actually
-wrong, though one hopes that sort of thing would have been caught
-earlier).  But they may poke fun at it from time to time, as a way of
-bringing the rest of the development community back down to
-earth.</para>
+<para>总的来说，要注意你的项目的营销声明可能对你自己的开发社区产生的影响。人们可能会因为得到营销资金的支持而过于兴奋，从而对他们软件的真正优缺点失去客观性。一个公司的开发人员对营销声明表现出一定的疏离感，即使在公共论坛中，也是正常甚至可以预料的。显然，他们不应该直接出来反驳营销信息（除非它确实是错误的，尽管希望这种事情能早点被发现）。但他们可能会不时地拿它开玩笑，以此来让开发社区的其他人回到现实中来。</para>
 
-<para>See also the related advice in <xref
-linkend="competing-efforts"/>.</para>
+<para>另请参阅<xref linkend="competing-efforts"/>中的相关建议。</para>
 
 </sect2>
 
@@ -1116,222 +394,69 @@ linkend="competing-efforts"/>.</para>
 <!-- ======================== SECTION ==============================
      -->
 <sect1 id="difficult-people">
-<title>Difficult People</title>
+<title>难相处的人</title>
 
-<para>Difficult people are no easier to deal with in electronic forums
-than they are in person.  By "difficult" I don't mean "rude".  Rude
-people are annoying, but they're not necessarily difficult.  This book
-has already discussed how to handle them: comment on the rudeness the
-first time, and from then on, either ignore them or treat them the same
-as anyone else.  If they continue being rude, they will usually make
-themselves so unpopular as to have no influence on others in the
-project, so they are a self-containing problem.<footnote><para>
-<xref linkend="code-of-conduct"/> discusses how to handle people whose
-problematic behavior goes beyond mere rudeness.</para></footnote></para>
+<para>难相处的人在电子论坛中并不比在现实生活中更容易对付。我所说的“难相处”不是指“粗鲁”。粗鲁的人很烦人，但他们不一定难相处。本书已经讨论了如何对付他们：第一次评论他们的粗鲁，从那以后，要么忽略他们，要么像对待其他人一样对待他们。如果他们继续粗鲁，他们通常会变得不受欢迎，以至于对项目中的其他人没有影响力，所以他们是一个可以自我控制的问题。<footnote><para><xref linkend="code-of-conduct"/>讨论了如何处理那些问题行为超出单纯粗鲁的人。</para></footnote></para>
 
-<para>The really difficult cases are people who are not overtly rude,
-but who manipulate or abuse the project's processes in a way that ends
-up costing other people time and energy yet do not bring any benefit
-to the project.<footnote><para>For an extended discussion of one
-particular subspecies of difficult person, see Amy Hoy's hilariously
-on-target <citetitle><ulink
-url="https://slash7.com/2006/12/22/vampires/">https://slash7.com/2006/12/22/vampires/</ulink></citetitle>.  Quoting Hoy: "It's so regular you
-could set your watch by it. The decay of a community is just as
-predictable as the decay of certain stable nuclear isotopes. As soon
-as an open source project, language, or what-have-you achieves a
-certain notoriety&nbsp;&mdash;&nbsp;its half-life, if you
-will&nbsp;&mdash;&nbsp;<emphasis>they</emphasis> swarm in, seemingly
-draining the very life out of the community itself.
-<emphasis>They</emphasis> are the Help Vampires. And I'm here to stop
-them..."</para></footnote></para>
+<para>真正困难的情况是那些不公开粗鲁，但以一种最终浪费他人时间和精力，却对项目没有任何好处的方式操纵或滥用项目流程的人。<footnote><para>关于一个特定亚种的难相处的人的扩展讨论，请参阅Amy Hoy的极其切题的<citetitle><ulink url="https://slash7.com/2006/12/22/vampires/">https://slash7.com/2006/12/22/vampires/</ulink></citetitle>。引用Hoy的话：“这如此规律，你可以用它来校对你的手表。一个社区的衰败就像某些稳定的核同位素的衰变一样可以预测。一旦一个开源项目、语言或其他任何东西达到了一定的知名度&nbsp;&mdash;&nbsp;它的半衰期，如果你愿意的话&nbsp;&mdash;&nbsp;<emphasis>他们</emphasis>就会蜂拥而至，似乎在耗尽社区本身的生命力。<emphasis>他们</emphasis>是求助吸血鬼。而我在这里就是要阻止他们……”</para></footnote></para>
 
-<para>Often, such people look for wedgepoints in the project's
-procedures, to give themselves more influence than they might
-otherwise have.  This is much more insidious than mere rudeness,
-because neither the behavior nor the damage it causes is apparent to
-casual observers.  A classic example is the filibuster, in which
-someone (always sounding as reasonable as possible, of course) keeps
-claiming that the matter under discussion is not ready for
-resolution,<footnote><para>I recently learned the delightful and very
-useful term <firstterm>sealioning</firstterm>, which refers to a
-particular type of filibuster: repeated insistence that more evidence
-is needed, or asking endless questions with the alleged purpose of
-clarifying but with the actual purpose of delaying.  See <ulink
-url="https://en.wikipedia.org/wiki/Sealioning"
->https://en.wikipedia.org/wiki/Sealioning</ulink>.  Persons engaging
-in sealioning may not even be consciously aware that their behavior is
-not actually good-faith participation in debate.</para></footnote>
-and offers more and more possible solutions, or new viewpoints on old
-solutions, when what is really going on is that he senses that a
-consensus or a ballot is about to form and he doesn't like where it's
-headed.  Another example is when there's a debate that won't converge
-on consensus, but the group tries to at least clarify the points of
-disagreement and produce a summary for everyone to refer to from then
-on.  The obstructionist, who knows the summary may lead to a result he
-doesn't like, will often try to delay even the summary by
-relentlessly complicating the question of what should be in it, either
-by objecting to reasonable suggestions or by introducing unexpected
-new items.</para>
+<para>通常，这些人会在项目的程序中寻找切入点，以给自己比他们原本可能拥有的更大的影响力。这比单纯的粗鲁要阴险得多，因为无论是行为还是它造成的损害，对于随意的观察者来说都不明显。一个经典的例子是冗长辩论，其中某人（当然总是听起来尽可能合理）不断声称正在讨论的事情还没有准备好解决，<footnote><para>我最近学到了一个令人愉快且非常有用的术语<firstterm>海狮行为</firstterm>，它指的是一种特定类型的冗长辩论：反复坚持需要更多证据，或者提出无休止的问题，声称的目的是澄清，但实际目的是拖延。参见<ulink url="https://en.wikipedia.org/wiki/Sealioning">https://en.wikipedia.org/wiki/Sealioning</ulink>。从事海狮行为的人甚至可能没有意识到他们的行为实际上并非善意地参与辩论。</para></footnote>并提出越来越多可能的解决方案，或者对旧解决方案提出新的观点，而实际上发生的是他感觉到一个共识或投票即将形成，而他不喜欢它的走向。另一个例子是，当一场辩论无法达成共识，但小组试图至少澄清分歧点并为所有人制作一份摘要以供以后参考时。阻挠者，知道摘要可能会导致一个他不喜欢的结果，通常会试图通过无情地复杂化应该包含什么的问题来拖延摘要，要么反对合理的建议，要么引入意想不到的新项目。</para>
 
 <sect2 id="handling-difficult-people">
-<title>Handling Difficult People</title>
+<title>处理难相处的人</title>
 
-<para>To counteract such behavior, it helps to understand the
-mentality of those who engage in it.  People generally do not do it
-consciously.  No one wakes up in the morning and says to himself:
-"Today I'm going to cynically manipulate procedural forms in order to
-be an irritating obstructionist."</para>
+<para>为了抵制这种行为，了解从事这种行为的人的心态会有所帮助。人们通常不会有意识地这样做。没有人早上醒来会对自己说：“今天我要愤世嫉俗地操纵程序形式，以便成为一个令人讨厌的阻挠者。”</para>
 
-<para>Instead, such behavior is often prompted by a kind of insecurity, a
-feeling (not necessarily based in reality) of being shut out of group
-interactions and decisions.  The person feels he is not being taken
-seriously, or, in the more severe cases, that there is almost a
-conspiracy against him&nbsp;&mdash;&nbsp;that the other project members have decided to
-form an exclusive club, of which he is not a member.  This then
-justifies, in his mind, interpreting rules with maximum literalness and engaging in a
-formal manipulation of the project's procedures, in order
-to <emphasis>make</emphasis> everyone else take him seriously.  In
-extreme cases, the person can even believe that he is fighting a
-lonely battle to save the project from itself.</para>
+<para>相反，这种行为通常是由一种不安全感引起的，一种（不一定基于现实）被排斥在群体互动和决策之外的感觉。这个人觉得他没有被认真对待，或者，在更严重的情况下，几乎有一个针对他的阴谋&nbsp;&mdash;&nbsp;其他项目成员已经决定组成一个排外的俱乐部，而他不是成员。这在他看来，就为他以最大限度的字面意义解释规则和从事对项目程序的正式操纵提供了理由，以便<emphasis>让</emphasis>其他所有人都认真对待他。在极端情况下，这个人甚至可以相信他正在进行一场孤独的战斗，以拯救项目免于自毁。</para>
 
-<para>It is the nature of such an attack from within that not everyone
-will notice it at the same time, and some people may not see it at all
-unless presented with very strong evidence.  This means that
-neutralizing it can be quite a bit of work.  It's not enough to
-persuade yourself that it's happening; you have to marshal enough
-evidence to persuade others too, and then you have to distribute that
-evidence in a thoughtful way.</para>
+<para>这种来自内部的攻击的性质是，不是每个人都会同时注意到它，有些人除非有非常强有力的证据，否则可能根本看不到它。这意味着，消除它可能需要相当大的努力。仅仅说服自己它正在发生是不够的；你必须收集足够的证据来说服其他人，然后你必须以一种深思熟虑的方式分发这些证据。</para>
 
-<para>Given that it's so much work to fight, it's often better just to
-tolerate it for a while.  Think of it like a parasitic but mild
-disease: if it's not too debilitating, the project can afford to
-remain infected, and medicine might have harmful side effects.</para>
+<para>鉴于对抗如此费力，通常最好还是容忍一段时间。把它想象成一种寄生但温和的疾病：如果它不太 debilitating，项目可以承受被感染，而药物可能会有有害的副作用。</para>
 
-<para>However, when it gets too damaging to tolerate, then it's time for
-action.  Start gathering notes on the patterns you see.  Make sure to
-include references to public archives&nbsp;&mdash;&nbsp;this is one of the reasons
-projects keep records, so you should use them.  Once you've
-got a good case built, start having private conversations with other
-project participants.  Don't tell them what you've observed; instead,
-first ask them what they've observed.  This may be your last chance to
-get unfiltered feedback about how others see the troublemaker's
-behavior; once you start openly talking about it, opinion will
-become polarized and no one will be able to remember what they
-formerly thought about the matter.</para>
+<para>然而，当它变得太具破坏性而无法容忍时，就该采取行动了。开始收集你看到的模式的笔记。确保包括对公共档案的引用&nbsp;&mdash;&nbsp;这是项目保存记录的原因之一，所以你应该使用它们。一旦你建立了一个好的案例，就开始与其他项目参与者进行私人交谈。不要告诉他们你观察到了什么；相反，先问他们观察到了什么。这可能是你获得关于其他人如何看待这个麻烦制造者行为的未经过滤的反馈的最后机会；一旦你开始公开谈论它，观点就会变得两极分化，没有人会记得他们以前对这件事的看法。</para>
 
-<para>If private discussions indicate that at least some others see
-the problem too, then it's time to do something.  That's when you
-have to get <emphasis>really</emphasis> cautious, because it's very
-easy for this sort of person to make it appear as though you're
-picking on them unfairly.  Whatever you do, never accuse them of
-maliciously abusing the project's procedures, of behaving in a
-paranoid manner, or, in
-general, of any of the other things that you suspect are probably
-true.  Your strategy should be to look both more reasonable and more
-concerned with the overall welfare of the project than they are, with the goal of
-either reforming the person's behavior or getting them to go away
-permanently.  Depending on the other developers and your relationship
-with them, it may be advantageous to gather allies privately first.
-Or it may not; that might just create ill will behind the scenes, if
-people think you're engaging in an improper whispering
-campaign.</para>
+<para>如果私人讨论表明至少还有一些人也看到了问题，那么就该采取行动了。这时候你就必须<emphasis>非常</emphasis>谨慎，因为这种人很容易让人觉得你在不公平地挑剔他们。无论你做什么，都不要指责他们恶意滥用项目程序、行为偏执，或者，总之，任何你怀疑可能属实的其他事情。你的策略应该是，看起来比他们更理性和更关心项目的整体福祉，目标是要么改变这个人的行为，要么让他们永远离开。根据其他开发人员以及你与他们的关系，先私下里拉拢盟友可能是有利的。也可能不是；那可能只会在幕后造成恶意，如果人们认为你在进行不当的窃窃私语运动。</para>
 
-<para>Remember that although the other person may be the one behaving
-destructively, <emphasis>you</emphasis> will be the one who appears
-destructive if you make a public charge that you can't back up.  Be
-sure to have plenty of examples to demonstrate what you're saying, and
-say it as gently as possible while still being direct.  You may not
-persuade the person in question, but that's okay as long as you
-persuade everyone else.</para>
+<para>请记住，尽管另一个人可能正在进行破坏性行为，但如果你公开指控而无法证实，那么<emphasis>你</emphasis>将是那个看起来具有破坏性的人。确保有大量的例子来证明你所说的话，并在尽可能温和的同时直接说出来。你可能无法说服当事人，但这没关系，只要你说服了其他人。</para>
 
 </sect2>
 
 <sect2 id="difficult-people-case-study">
-<title>Case study</title>
+<title>案例研究</title>
 
-<para>I remember only a few situations, in almost 30 years of working
-in free software, where things got so bad that we actually had to ask
-someone to stop posting altogether.  In the example I'll use here, the
-person was not rude, and sincerely wanted only to be helpful.  He just
-didn't know when to post and when not to post.  Our forums were open to the
-public, and he was posting so often, and asking questions on so many
-different topics, that it was getting to be a noise problem for the
-community.  We'd already tried asking him nicely to do a little more
-research for answers before posting, but that had no effect.</para>
+<para>在近30年的自由软件工作中，我只记得少数几次情况 настолько 糟糕，以至于我们不得不要求某人完全停止发帖。在我将要使用的这个例子中，这个人并不粗鲁，并且真诚地只想提供帮助。他只是不知道什么时候该发帖，什么时候不该发帖。我们的论坛是向公众开放的，他发帖 настолько 频繁，并且在 настолько 多的不同主题上提问，以至于对社区来说已经成了一个噪音问题。我们已经试过好言相劝，请他在发帖前多做一些研究寻找答案，但这毫无效果。</para>
 
-<para>The strategy that finally worked is a perfect example of how to
-build a strong case on neutral, quantitative data.  One of the
-developers, Brian Fitzpatrick, did some digging in the archives, and
-then sent the
-following message privately to a few other developers.  The offender (the
-third name on the list below, shown here as "J. Random") had very
-little history with the project, and had contributed no code or
-documentation.  Yet he was the third most active poster on the mailing
-lists:</para>
+<para>最终奏效的策略是一个完美的例子，说明了如何基于中立的、定量的数据建立一个强有力的案例。其中一位开发人员Brian Fitzpatrick在档案中做了一些挖掘，然后将以下消息私下发送给了其他几位开发人员。这个违规者（下面列表中的第三个名字，这里显示为“J. Random”）在项目中几乎没有历史，也没有贡献过任何代码或文档。然而，他却是邮件列表上发帖最活跃的第三个人：</para>
 
 <screen>
-From: "Brian W. Fitzpatrick" &lt;fitz@collab.net&gt;
-To: [... recipient list omitted for anonymity ...]
-Subject: The Subversion Energy Sink
-Date: Wed, 12 Nov 2003 23:37:47 -0600
+发件人："Brian W. Fitzpatrick" &lt;fitz@collab.net&gt;
+收件人：[...为保护隐私省略收件人列表...]
+主题：Subversion的精力消耗源
+日期：2003年11月12日，星期三，23:37:47 -0600
 
-In the last 25 days, the top 6 posters to the svn
-[dev|users] list have been:
+在过去的25天里，svn [dev|users] 列表上发帖最多的前6个人是：
 
     294  Karl Fogel
     236  "C. Michael Pilato"
     220  "J. Random"
-    176  Branko Cibej  <!-- Branko's family name should really be written with a caron: "Čibej", which would be "&Ccaron;ibej" in the XML source.  That character code produces the right output in HTML, but not in PDF: the PDF output renders a "#" instead of a "Č".  But due to the half-broken state of the treeware-vs-web conditional as described in r3025, I can't even salvage the correct HTML output while falling back to plain "C" in the PDF; I have to use plain "C" in both.  This sucks, and I hereby apologize to Branko and to all Slovenians for the fragile inter-tool interactions that result in situations like this.  Oh, see also r2392 for an earlier occurrence of the Ccaron glyph not being available in Courier font; that might or might not be the problem that's still happening here.  I'd shave this yak right here and now if there weren't a hundred other furrier yaks already waiting in line. -->
+    176  Branko Cibej  <!-- Branko的姓氏实际上应该写成带抑扬符的：“Čibej”，在XML源中应该是“&Ccaron;ibej”。这个字符代码在HTML中能产生正确的输出，但在PDF中不行：PDF输出会渲染一个“#”而不是“Č”。但由于treeware-vs-web条件语句的半损坏状态，如r3025所述，我甚至无法在PDF中回退到普通“C”的同时挽救正确的HTML输出；我不得不在两者中都使用普通的“C”。这很糟糕，我在此为这种情况向Branko和所有斯洛文尼亚人道歉，因为这种脆弱的工具间交互导致了这种情况。哦，另请参见r2392，其中早期也出现了Courier字体中没有Ccaron字形的情况；这可能与这里仍然发生的问题有关，也可能没有。如果不是已经有一百只更毛茸茸的牦牛在排队等着，我早就把这只牦牛剃光了。 -->
     130  Philip Martin
     126  Ben Collins-Sussman
 
-I would say that five of these people are contributing to
-Subversion hitting 1.0 in the near future.
+我想说，这些人中有五个人正在为Subversion在不久的将来达到1.0版本做出贡献。
 
-I would also say that one of these people is consistently
-drawing time and energy from the other 5, not to mention the
-list as a whole, thus (albeit unintentionally) slowing the
-development of Subversion.  I did not do a threaded
-analysis, but vgrepping my Subversion mail spool tells me
-that every mail from this person is responded to at least
-once by at least 2 of the other 5 people on the above list.
+我还要说，这些人中有一个人持续地从其他5个人，更不用说整个列表，那里吸取时间和精力，从而（尽管是无意的）减慢了Subversion的开发。我没有进行线程分析，但vgrep我的Subversion邮件假脱机告诉我，来自这个人的每一封邮件都至少被上述列表中的其他5个人中的至少2个人回复过一次。
 
-I think some sort of radical intervention is necessary here,
-even if we do scare the aforementioned person away.
-Niceties and kindness have already proven to have no effect.
+我认为这里需要某种激进的干预，即使我们确实吓跑了上述那个人。客气和善意已经被证明是无效的。
 
-dev@subversion is a mailing list to facilitate development
-of a version control system, not a group therapy session.
+dev@subversion是一个促进版本控制系统开发的邮件列表，而不是一个团体治疗会议。
 
--Fitz, attempting to wade through three days of svn mail
- that he let pile up
+-Fitz，试图在他堆积了三天的svn邮件中跋涉
 </screen>
 
-<para>Though it might not seem so at first, J. Random's behavior was a
-classic case of abusing project procedures.  He wasn't doing something
-obvious like trying to filibuster a vote, but he was taking advantage
-of the mailing list's policy of relying on self-moderation by its
-members.  We left it to each individual's judgement when to post and
-on what topics.  Thus, we had no procedural recourse for dealing with
-someone who either did not have, or would not exercise, such judgement.
-There was no rule one could point to and say the person was violating
-it, yet everyone except him knew that his frequent posting was getting
-to be a serious problem.</para>
+<para>虽然乍一看可能不这么觉得，但J. Random的行为是一个滥用项目程序的典型案例。他没有做一些显而易见的事情，比如试图通过冗长辩论来阻挠投票，但他利用了邮件列表依赖其成员自我调节的政策。我们将何时发帖以及发帖主题的判断权留给了每个人。因此，我们没有程序上的追索权来处理一个要么没有，要么不会行使这种判断力的人。没有一条规则可以指出来说这个人违反了它，但除了他之外的每个人都知道，他频繁的发帖正在成为一个严重的问题。</para>
 
-<para>Fitz's strategy was, in retrospect, masterful.  He gathered
-damning quantitative evidence, but then distributed it discreetly,
-sending it first to a few people whose support would be key in any
-drastic action.  They agreed that some sort of action was necessary,
-and in the end we called J. Random on the phone, described the problem
-to him directly, and asked him to simply stop posting.  He never
-really did understand the reasons why; if he had been capable
-of understanding, he probably would have exercised appropriate
-judgement in the first place.  But he agreed to stop posting, and the
-mailing lists became useable again.  Part of the reason this strategy
-worked was, perhaps, the implicit threat that we could start
-restricting his posts via the forum's moderation features.  But the
-reason we were able to have that option in reserve was that Fitz had
-gathered the necessary support from key people first.</para>
+<para>Fitz的策略，事后看来，是 masterful。他收集了 damning 的定量证据，然后谨慎地分发，首先发给一些在任何激烈行动中支持至关重要的人。他们同意有必要采取某种行动，最后我们打电话给 J. Random，直接向他描述了问题，并要求他停止发帖。他从未真正理解原因；如果他有能力理解，他可能从一开始就会行使适当的判断。但他同意停止发帖，邮件列表又恢复了可用性。这个策略之所以奏效，部分原因可能是，我们有一个隐含的威胁，即我们可以通过论坛的审核功能来限制他的帖子。但我们之所以有这个备用选项，是因为 Fitz 首先从关键人物那里获得了必要的支持。</para>
 
 </sect2>
 
@@ -1339,251 +464,100 @@ gathered the necessary support from key people first.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="growth">
-<title>Handling Growth</title>
+<title>应对增长</title>
 
-<para>The price of success is heavy in the open source world.  As your
-software gets more popular, the number of people who show up looking
-for information increases dramatically, while the number of people
-able to provide information increases much more slowly.  Furthermore,
-even if the ratio were evenly balanced, there is still a fundamental
-scalability problem with the way most open source projects handle
-communications.  Consider mailing lists, for example.  Most projects
-have a mailing list for general user questions&nbsp;&mdash;&nbsp;sometimes the
-list's name is "users", "discuss", "help", or something else.
-Whatever its name, the purpose of the list is always the same: to
-provide a place where people can get their questions answered, while
-others watch and (presumably) absorb knowledge from observing these
-exchanges.</para>
+<para>在开源世界里，成功的代价是沉重的。随着你的软件越来越受欢迎，前来寻求信息的人数急剧增加，而能够提供信息的人数增加得慢得多。此外，即使比例均衡，大多数开源项目处理通信的方式也存在一个根本的可扩展性问题。以邮件列表为例。大多数项目都有一个用于一般用户问题的邮件列表&nbsp;&mdash;&nbsp;有时列表的名字是“users”、“discuss”、“help”或其他什么。不管它的名字是什么，列表的目的总是一样的：提供一个人们可以得到问题答案的地方，而其他人则在一旁观察并（大概）从这些交流中吸收知识。</para>
 
-<para>These mailing lists work very well up to a few thousand users
-and/or a couple of hundred posts a day.  But somewhere after that, the
-system starts to break down, because every subscriber sees every post;
-if the number of posts to the list begins to exceed what any
-individual reader can process in a day, the list becomes a burden to
-its members.  Imagine, for instance, if Microsoft had such a mailing
-list for Windows.  Windows has hundreds of millions of users; if
-even one-tenth of one percent of them had questions in a given
-twenty-four hour period, then this hypothetical list would get
-hundreds of thousands of posts per day!  Such a list could never
-exist, of course, because no one would stay subscribed to it.
-This problem is not limited to mailing lists; the same logic applies
-to chat rooms, other discussion forums, indeed to any system in
-which a group hears questions from individuals.  The implications are
-ominous: the usual open source model of massively parallelized support
-simply does not scale to the levels needed for world
-domination.<footnote><para>An interesting experiment would be a
-probablistic mailing list, that sends each new thread-originating post
-to a random subset of subscribers, based on the approximate traffic
-level they signed up for, and keeps just that subset subscribed to the
-rest of the thread; such a forum could in theory scale without limit.
-If you try it, let me know how it works out.</para></footnote></para>
+<para>这些邮件列表在用户数达到几千和/或每天几百篇帖子之前运作得很好。但在此之后，系统开始崩溃，因为每个订阅者都会看到每一篇帖子；如果列表中的帖子数量开始超过任何个人读者一天内能处理的数量，这个列表就成了其成员的负担。例如，想象一下，如果微软有一个用于Windows的这样的邮件列表。Windows有数亿用户；如果在给定的二十四小时内，即使只有千分之一的用户有问题，那么这个假设的列表每天也会收到数十万篇帖子！这样的列表当然不可能存在，因为没有人会继续订阅它。这个问题不仅限于邮件列表；同样的逻辑也适用于聊天室、其他讨论论坛，实际上适用于任何一个团体听取个人提问的系统。这意味着，通常的开源大规模并行支持模式根本无法扩展到统治世界所需的水平。<footnote><para>一个有趣的实验是一个概率性的邮件列表，它根据每个新主题的帖子随机发送给订阅者的一个子集，该子集基于他们注册的大致流量水平，并且只让该子集订阅该主题的其余部分；理论上，这样的论坛可以无限扩展。如果你尝试了，请告诉我结果如何。</para></footnote></para>
 
-<para>There is no explosion when forums reach the breaking point.
-There is just a quiet negative feedback effect: people unsubscribe
-from the lists, or leave the chat room, or at any rate stop
-bothering to ask questions, because they can see they won't be heard
-in all the noise.  As more and more people make this highly rational
-choice, the forum's activity will <emphasis>seem</emphasis> to stay at a manageable level.
-But it appears manageable precisely because the rational (or at
-least, experienced) people have started going elsewhere for
-information&nbsp;&mdash;&nbsp;while the inexperienced people stay behind and
-continue posting.  In other words, one side effect of continuing to
-use unscalable communications models as a project grows is that the
-average <emphasis>quality</emphasis> of communications tends to go
-down.  As the benefit/cost ratio of using high-population forums
-goes down, naturally those with the experience to do so start to look
-elsewhere for answers first.</para>
+<para>当论坛达到临界点时，并不会发生爆炸。只是会有一个安静的负反馈效应：人们取消订阅列表，或离开聊天室，或者至少不再费心提问，因为他们可以看到在所有的噪音中他们不会被听到。随着越来越多的人做出这种非常理性的选择，论坛的活动<emphasis>似乎</emphasis>会保持在一个可控的水平。但它之所以看起来可控，恰恰是因为理性的（或者至少是有经验的）人已经开始到别处寻找信息了&nbsp;&mdash;&nbsp;而没有经验的人则留下来继续发帖。换句话说，随着项目的增长，继续使用不可扩展的通信模式的一个副作用是，通信的平均<emphasis>质量</emphasis>往往会下降。随着使用高人口论坛的效益/成本比下降，那些有经验的人自然会开始先到别处寻找答案。</para>
 
-<para>Adjusting communications mechanisms to cope with project growth
-therefore involves two related strategies:</para>
+<para>因此，调整沟通机制以应对项目增长涉及两个相关的策略：</para>
 
 <orderedlist>
-  <listitem><para>Recognizing when particular parts of a forum are
-            <emphasis>not</emphasis> suffering unbounded growth, even
-            if the forum as a whole is, and separating those parts
-            off into new, more specialized forums (i.e., don't let
-            the good be dragged down by the bad).</para>
+  <listitem><para>认识到论坛的特定部分即使在整个论坛都在增长的情况下<emphasis>也</emphasis>没有遭受无限增长，并将这些部分分离到新的、更专业的论坛中（即，不要让好的被坏的拖累）。</para>
   </listitem>
-  <listitem><para>Making sure there are many automated sources
-            of information available, and that they are kept
-            organized, up-to-date, and easy to find.</para>
+  <listitem><para>确保有许多自动化的信息来源可用，并且它们保持组织良好、最新且易于查找。</para>
   </listitem>
 </orderedlist>
 
-<para>Strategy (1) is usually not too hard.  Most projects start out
-with one main forum: a general discussion mailing list, on which
-feature ideas, design questions, and coding problems can all be hashed
-out.  Everyone involved with the project is in that forum.  After a
-while, it usually becomes clear that the list has evolved into several
-distinct topic-based sublists.  For example, some threads are clearly
-about development and design; others are user questions of the "How do
-I do X?" variety; maybe there's a third topic family centered around
-processing bug reports and enhancement requests; and so on.  A given
-individual, of course, might participate in many different thread
-types, but the important thing is that there is not a lot of overlap
-between the types themselves.  They could be divided into separate
-forums without causing harmful balkanization, because the threads
-rarely cross topic boundaries.</para>
+<para>策略（1）通常不太难。大多数项目都从一个主要论坛开始：一个通用的讨论邮件列表，可以在上面讨论功能想法、设计问题和编码问题。所有与项目相关的人都在那个论坛里。一段时间后，通常会很明显，这个列表已经演变成几个不同的基于主题的子列表。例如，一些主题显然是关于开发和设计的；其他的是“我该如何做X？”之类的用户问题；也许还有第三个主题系列，围绕着处理错误报告和增强请求；等等。当然，一个特定的人可能会参与许多不同类型的主题，但重要的是，这些类型本身之间没有太多重叠。它们可以被分成不同的论坛，而不会造成有害的巴尔干化，因为主题很少跨越主题边界。</para>
 
-<para>Actually doing this division is a two-step process.  You create
-the new list (or chat room, or whatever it is to be), and then you
-spend whatever time is necessary gently nagging and reminding people
-to <emphasis>use</emphasis> the new forums appropriately.  That latter
-step can last for weeks, but eventually people will get the idea.  You
-simply have to make a point of always telling the sender when a post
-is sent to the wrong destination, and doing so visibly, so that other
-people are encouraged to help out with routing.  It's also useful to
-have a web page providing a guide to all the forums available; your
-responses can simply reference that web page and, as a bonus, the
-recipient may learn something about looking for guidelines before
-posting.</para>
+<para>实际进行这种划分是一个两步的过程。你创建新的列表（或聊天室，或其他任何形式），然后你花必要的时间温和地唠叨和提醒人们要恰当地<emphasis>使用</emphasis>新的论坛。后一步可能会持续数周，但最终人们会明白的。你只需要坚持在帖子发到错误的目的地时总是告诉发件人，并且要公开地这样做，这样其他人就会受到鼓励，也来帮助进行路由。有一个提供所有可用论坛指南的网页也很有用；你的回复可以简单地引用那个网页，而且，收件人可能会学到在发帖前寻找指南的一些东西。</para>
 
-<para>Strategy (2) is an ongoing process, lasting the lifetime of the
-project and involving many participants.  Of course it is partly a
-matter of having up-to-date documentation (see
-<xref linkend="documentation"/>) and making sure to
-point people there.  But it is also much more than that; the sections
-that follow discuss this strategy in detail.</para>
+<para>策略（2）是一个持续的过程，贯穿项目的整个生命周期，并涉及许多参与者。当然，这部分是关于拥有最新的文档（参见<xref linkend="documentation"/>）并确保向人们指出。但它远不止于此；接下来的部分将详细讨论这个策略。</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect2 id="using-archives">
-<title>Conspicuous Use of Archives</title>
+<title>显著使用档案</title>
 
-<para>Typically, all communications in an open source project, except
-private chat conversations, are archived.  The archives are public
-and searchable, and have referential stability: that is, once a given
-piece of information is recorded at a particular address (URL), it
-stays at that address forever.</para>
+<para>通常，一个开源项目中的所有通信，除了私人聊天对话，都会被存档。档案是公开的、可搜索的，并且具有引用稳定性：也就是说，一旦某条信息被记录在某个特定的地址（URL），它就会永远保留在该地址。</para>
 
-<para>Use those archives as much as possible, and as conspicuously as
-possible.  Even when you know the answer to some question off the top
-of your head, if you think there's a reference in the archives that
-contains the answer, spend the time to dig it up and present it.
-Every time you do that in a publicly visible way, some people learn
-for the first time that the archives are there, and that searching in
-them can produce answers.  Also, by referring to the archives instead
-of rewriting the advice, you reinforce the social norm against
-duplicating information.  Why have the same answer in two different
-places?  When the number of places it can be found is kept to a
-minimum, people who have found it before are more likely to remember
-what to search for to find it again.  Well-placed references also
-contribute to improving search results, because they
-strengthen the targeted resource's ranking in Internet search
-engines.</para>
+<para>尽可能多地、尽可能显眼地使用那些档案。即使你对某个问题了如指掌，如果你认为档案中有包含答案的参考资料，也要花时间去把它找出来并呈现出来。你每次以公开可见的方式这样做，都会有一些人第一次了解到档案的存在，并且知道在其中搜索可以找到答案。此外，通过引用档案而不是重写建议，你加强了反对重复信息的社会规范。为什么同一个答案要出现在两个不同的地方？当可以找到它的地方数量保持在最低限度时，以前找到过它的人更有可能记住要搜索什么来再次找到它。恰当的引用也有助于改善搜索结果，因为它们加强了目标资源在互联网搜索引擎中的排名。</para>
 
-<para>There are times when duplicating information makes sense,
-however.  For example, suppose there's a response already in the
-archives, not from you, saying:</para>
+<para>然而，有时重复信息是有意义的。例如，假设档案中已经有一个回复，不是你写的，内容是：</para>
 
 <screen>
-It appears that your Scanley indexes have become frobnicated.
-To unfrobnicate them, run these steps:
+看起来你的Scanley索引已经损坏了。
+要修复它们，请运行以下步骤：
 
-1. Shut down the Scanley server.
-2. Run the 'defrobnicate' program that ships with Scanley.
-3. Start up the server.
+1. 关闭Scanley服务器。
+2. 运行Scanley附带的'defrobnicate'程序。
+3. 启动服务器。
 </screen>
 
-<para>Then, months later, you see another post indicating that
-someone's indexes have become frobnicated.  You search the archives
-and come up with the old response above, but you realize it's missing
-some steps (perhaps by mistake, or perhaps because the software has
-changed since that post was written).  The classiest way to handle
-this is to post a new, more complete set of instructions, and
-explicitly obsolete the old post by mentioning it:</para>
+<para>然后，几个月后，你看到另一个帖子，表明某人的索引已经损坏了。你在档案中搜索，找到了上面那个旧的回复，但你意识到它缺少一些步骤（可能是错误的，也可能是因为自那个帖子发布以来软件已经发生了变化）。处理这种情况最优雅的方式是发布一个新的、更完整的指令集，并通过提及它来明确地废弃那个旧帖子：</para>
 
 <screen>
-It appears that your Scanley indexes have become frobnicated.
-We saw this problem back in July, and J. Random posted a 
-solution at http://blahblahblah/blah.  Below is a more 
-complete description of how to unfrobnicate your indexes, 
-based on J. Random's instructions but extending them a bit:
+看起来你的Scanley索引已经损坏了。
+我们在七月份也遇到过这个问题，J. Random在http://blahblahblah/blah上发布了一个解决方案。
+下面是关于如何修复你的索引的更完整的描述，
+基于J. Random的说明，但做了一些扩展：
 
-1. Shut down the Scanley server.
-2. Become the user the Scanley server normally runs as.
-3. Run the 'defrobnicate' program on the indexes.
-4. Run Scanley by hand to see if the indexes work now.
-5. Restart the server.
+1. 关闭Scanley服务器。
+2. 切换到Scanley服务器通常运行的用户。
+3. 在索引上运行'defrobnicate'程序。
+4. 手动运行Scanley，看看索引现在是否正常工作。
+5. 重启服务器。
 </screen>
 
-<para>(In an ideal world, it would be possible to attach a note to the
-old post, saying that there is newer information available and
-pointing to the new post.  However, I don't know of any archiving
-software that offers an "obsoleted by" tag.  This is another reason
-why creating dedicated web pages with answers to common questions is a
-good idea.<footnote><para>Many technical questions about open source
-software also have answers posted on Stack Overflow (<ulink
-url="https://stackoverflow.com/" >https://stackoverflow.com/</ulink>), a
-collaborative knowledge-sharing site.  If you happen to know about an
-item on Stack Overflow that needs to be updated due to changes in the
-software, then posting the new answer in that item may be worthwhile.
-Stack Overflow is often the first place people go to find answers, and
-its answers tend to rank <emphasis>very</emphasis> highly in search
-engines, at least as of this writing in early 2022 and for some years
-preceding.</para></footnote>
-)</para>
+<para>（在一个理想的世界里，应该可以在旧帖子上附加一个说明，说有更新的信息可用并指向新帖子。然而，我不知道有任何存档软件提供“被……取代”的标签。这是为什么创建专门的网页来回答常见问题是个好主意的另一个原因。<footnote><para>许多关于开源软件的技术问题在Stack Overflow（<ulink url="https://stackoverflow.com/">https://stackoverflow.com/</ulink>）上也有答案，这是一个协作知识共享网站。如果你恰好知道Stack Overflow上有一个项目因为软件变化而需要更新，那么在该项目中发布新答案可能是值得的。Stack Overflow通常是人们寻找答案的第一个地方，而且它的答案在搜索引擎中的排名往往<emphasis>非常</emphasis>高，至少在2022年初撰写本文时以及之前的几年是这样。</para></footnote>）</para>
 
-<para>Archives are probably most often searched for answers to
-technical questions, but their importance to the project goes well
-beyond that.  If a project's formal guidelines are its statutory law,
-the archives are its common law: a record of all decisions made and
-how they were arrived at.  In any recurring discussion, it's pretty
-much obligatory nowadays to start with an archive search.  This allows
-you to begin the discussion with a summary of the current state of
-things, anticipate objections, prepare rebuttals, and possibly
-discover angles you hadn't thought of.  Also, the other participants
-will <emphasis>expect</emphasis> you to have done an archive search.
-Even if the previous discussions went nowhere, you should include
-pointers to them when you re-raise the topic, so people can see for
-themselves a) that they went nowhere, and b) that you did your
-homework, and therefore are probably saying something now that has not
-been said before.</para>
+<para>档案可能最常被搜索来回答技术问题，但它们对项目的重要性远不止于此。如果一个项目的正式准则是它的成文法，那么档案就是它的判例法：所有做出决定的记录以及它们是如何达成的。在任何重复出现的讨论中，从档案搜索开始几乎是如今的强制性做法。这让你能够以对当前情况的总结来开始讨论，预见反对意见，准备反驳，并可能发现你没有想到的角度。此外，其他参与者会<emphasis>期望</emph>你已经做过档案搜索。即使之前的讨论毫无结果，你也应该在重新提出这个话题时包含指向它们的链接，这样人们可以自己看到a)它们毫无结果，以及b)你做了功课，因此你现在说的很可能是一些以前没有说过的话。</para>
 
 <sect3 id="all-as-archives">
-<title>Treat All Resources Like Archives</title>
+<title>像对待档案一样对待所有资源</title>
 
-<para>All of the preceding advice applies to more than just mailing
-list archives.  Having each particular piece of information be located
-at a stable, conveniently findable address (or
-<firstterm>permalink</firstterm>) should be an organizing principle
-for all of the project's information.  Let's take the project FAQ as a
-case study.</para>
+<para>以上所有建议都适用于邮件列表存档之外的更多领域。让每一条特定信息都位于一个稳定的、易于查找的地址（或<firstterm>永久链接</firstterm>）应该是项目所有信息的一个组织原则。让我们以项目常见问题解答（FAQ）为例。</para>
 
 <!-- If this section is ever modified to use something other than FAQs
      as the example, then go back and remove the reference to here
      from the sidebar "faq-maintenance" in Chapter 2. -->
 
-<para>How do people use a FAQ?</para>
+<para>人们如何使用常见问题解答？</para>
 
 <orderedlist>
 
   <listitem>
-    <para>They want to search in it for specific words and phrases.</para>
+    <para>他们希望在其中搜索特定的单词和短语。</para>
 
-    <para><emphasis>Therefore: the FAQ should be available in some
-    sort of textual format.</emphasis></para>
+    <para><emphasis>因此：常见问题解答应该以某种文本格式提供。</emphasis></para>
   </listitem>
 
   <listitem>
-    <para>They expect search engines such as Google to know about the
-          FAQ's content, so that searches can result in FAQ entries.</para>
+    <para>他们希望像谷歌这样的搜索引擎能够了解常见问题解答的内容，以便搜索可以得到常见问题解答的条目。</para>
 
-    <para><emphasis>Therefore: the FAQ should be available as a web
-    page.</emphasis></para>
+    <para><emphasis>因此：常见问题解答应该以网页的形式提供。</emphasis></para>
   </listitem>
 
   <listitem>
-    <para>They want to browse it, soaking up information without
-    necessarily looking for answers to specific questions.</para>
+    <para>他们希望能够浏览它，在不一定寻找特定问题答案的情况下吸收信息。</para>
 
-    <para><emphasis>Therefore: the FAQ should not only be available as
-    a web page, it should be designed for easy browsability and
-    have a table of contents.</emphasis></para>
+    <para><emphasis>因此：常见问题解答不仅应该以网页的形式提供，还应该设计得易于浏览，并有目录。</emphasis></para>
   </listitem>
 
   <listitem>
-    <para>They want to be able to refer other people directly to specific
-          items in the FAQ.</para>
+    <para>他们希望能够直接将他人引荐到常见问题解答中的特定条目。</para>
 
      <!-- This paragraph has an ID because of an old sidebar that used
           to be here (until r2691) discussing HTML named anchors and
@@ -1591,38 +565,17 @@ case study.</para>
           However, people may still have links to it, and this
           paragraph is the right place for someone to land if they
           follow such a link. -->
-    <para id="html-named-anchors-and-ids"><emphasis>Therefore: each
-    individual entry in the FAQ should be reachable via a
-    unique URL (e.g., using HTML IDs and named anchors, which are tags
-    that allow people to reach a particular location on the
-    page).</emphasis></para>
+    <para id="html-named-anchors-and-ids"><emphasis>因此：常见问题解答中的每个条目都应该可以通过一个唯一的URL访问（例如，使用HTML ID和命名锚点，这些标签允许人们到达页面上的特定位置）。</emphasis></para>
   </listitem>
 
   <listitem>
-    <para>They want to be able to add new material to the FAQ, though
-          note that this happens much less often than answers are
-          looked up&nbsp;&mdash;&nbsp;FAQs are far more often read from than
-          written to.</para>
+    <para>他们希望能够向常见问题解答中添加新材料，但请注意，这种情况发生的频率远低于查找答案的频率&nbsp;&mdash;&nbsp;常见问题解答被阅读的频率远高于被写入的频率。</para>
 
-    <para><emphasis>Therefore: the source files for the FAQ should be
-    conveniently available (see <xref
-    linkend="version-everything"/>), in a format that's
-    easy to edit.</emphasis></para>
+    <para><emphasis>因此：常见问题解答的源文件应该方便获取（参见<xref linkend="version-everything"/>），并且格式易于编辑。</emphasis></para>
   </listitem>
 </orderedlist>
 
-<para>Formatting the FAQ like this is just one example of how to make
-a resource presentable.  The same properties&nbsp;&mdash;&nbsp;direct
-searchability, availability to major Internet search engines,
-browsability, referential stability, and (where applicable)
-editability&nbsp;&mdash;&nbsp;apply to other web pages, to the source code tree,
-to the bug tracker, to Q&amp;A forums, etc.  It just happens that most
-mailing list archiving software long ago recognized the importance of
-these properties, which is why mailing lists tend to have this
-functionality natively, while other formats may require a little extra
-effort on the maintainer's part.  <xref
-linkend="managing-participants"/> discusses how to spread that
-maintenance burden across many participants.</para>
+<para>像这样格式化常见问题解答只是如何使资源具有良好呈现性的一个例子。相同的属性&nbsp;&mdash;&nbsp;直接可搜索性、对主要互联网搜索引擎的可用性、可浏览性、引用稳定性和（在适用的情况下）可编辑性&nbsp;&mdash;&nbsp;也适用于其他网页、源代码树、错误跟踪器、问答论坛等。只是大多数邮件列表归档软件很久以前就认识到了这些属性的重要性，这就是为什么邮件列表往往天生就具有这种功能，而其他格式可能需要维护者付出一些额外的努力。<xref linkend="managing-participants"/>讨论了如何将这种维护负担分散到许多参与者身上。</para>
 
 </sect3>
 
@@ -1630,189 +583,44 @@ maintenance burden across many participants.</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="codifying-tradition">
-<title>Codifying Tradition</title>
+<title>将传统编纂成文</title>
 
-<para>As a project acquires history and complexity, the amount of data
-each new incoming participant must absorb increases.  Those who have been
-with the project a long time were able to learn, and invent, the
-project's conventions as they went along.  They will often not be
-consciously aware of what a huge body of tradition has accumulated, and
-may be surprised at how many missteps recent newcomers seem to make.
-Of course, the issue is not that the newcomers are of any lower
-quality than before; it's that they face a bigger acculturation burden
-than newcomers did in the past.</para>
+<para>随着一个项目积累了历史和复杂性，每个新加入的参与者需要吸收的数据量也随之增加。那些长期与项目在一起的人能够边做边学，并创造了项目的惯例。他们通常不会意识到已经积累了多么庞大的传统，并可能对新近加入的人似乎犯了那么多错误感到惊讶。当然，问题不在于新人的质量比以前低；而在于他们面临着比过去的新人更大的文化适应负担。</para>
 
-<para>The traditions a project accumulates are as much about how to
-communicate and organize information as they are about coding
-standards and other technical minutiae.  We've already looked at both
-sorts of standards, in
-<xref linkend="developer-documentation"/> and
-<xref linkend="written-rules"/> respectively, and
-examples are given there.  What this section is about is how to keep
-such guidelines up-to-date as the project evolves, especially
-guidelines about how communications are managed, because those are the
-ones that change the most as the project grows in size and
-complexity.</para>
+<para>一个项目积累的传统，既关乎如何沟通和组织信息，也关乎编码标准和其他技术细节。我们已经在<xref linkend="developer-documentation"/>和<xref linkend="written-rules"/>中分别探讨了这两种标准，并给出了例子。本节是关于随着项目的发展，如何保持这些准则的更新，特别是关于如何管理沟通的准则，因为随着项目规模和复杂性的增长，这些准则变化最大。</para>
 
-<para>First, watch for patterns in how people get confused.  If you
-see the same situations coming up over and over, especially with new
-participants, chances are there is a guideline that needs to be
-documented but isn't.  Second, don't get tired of saying the same
-things over and over again, and don't <emphasis>sound</emphasis> like
-you're tired of saying them.  You and other project veterans will have
-to repeat yourselves often; this is an inevitable side effect of the
-arrival of newcomers.</para>
+<para>首先，注意人们感到困惑的模式。如果你看到同样的情况反复出现，特别是对于新参与者，那么很可能有一个需要被记录但尚未记录的准则。其次，不要厌倦一遍又一遍地说同样的话，也不要<emphasis>听起来</emphasis>像你厌倦了说它们。你和其他项目的老手将不得不经常重复自己；这是新人到来的必然副作用。</para>
 
-<para>Every web page, every mailing list message, and every chat room
-should be considered advertising space&nbsp;&mdash;&nbsp;not for commercial
-advertisements, but for ads about your project's own resources.  What
-you put in that space depends on the demographics of those likely to
-read it.  An chat room for user questions, for example, is likely to
-get people who have never interacted with the project
-before&nbsp;&mdash;&nbsp;often someone who has just installed the software, and
-has a question she'd like answered immediately (after all, if it
-could wait, she'd have sent it to a mailing list instead, which would
-probably use less of her total time, although it would take longer
-for an answer to come back).  Most people don't make a permanent
-investment in a support chat; they show up, ask their question,
-and leave.</para>
+<para>每个网页、每封邮件列表消息和每个聊天室都应被视为广告空间&nbsp;&mdash;&nbsp;不是商业广告，而是关于你项目自身资源的广告。你在那个空间里放什么，取决于可能阅读它的人群。例如，一个用于用户问题的聊天室，很可能会有从未与项目互动过的人&nbsp;&mdash;&nbsp;通常是刚刚安装了软件，并有一个想立即得到回答的问题的人（毕竟，如果可以等，她会把它发送到邮件列表，那可能会花费她更少的总时间，尽管得到答案需要更长的时间）。大多数人不会对一个支持聊天进行永久投资；他们出现，问他们的问题，然后离开。</para>
 
-<para>Therefore, the room's topic banner<footnote><para>Not all chat
-platforms support per-room topic banners.  The advice given here
-applies only to those that do.</para></footnote> should be aimed at people looking
-for technical answers about the software <emphasis>right
-now</emphasis>, rather than at, say, people who might get involved
-with the project in a long term way and for whom community interaction
-guidelines might be more appropriate.</para>
+<para>因此，房间的主题横幅<footnote><para>并非所有聊天平台都支持每个房间的主题横幅。此处给出的建议仅适用于那些支持的平台。</para></footnote>应针对那些正在寻找关于软件技术答案的人，<emphasis>而不是</emphasis>例如，那些可能长期参与项目并可能更适合社区互动准则的人。</para>
 
-<para>With mailing lists, the "ad space" is a tiny footer appended to
-every message.  Most projects put subscription/unsubscription
-instructions there, and perhaps a pointer to the project's home page
-or FAQ page as well.  You might think that anyone subscribed to the
-list would know where to find those things, and they probably
-do&nbsp;&mdash;&nbsp;but many more people than just subscribers see those mailing
-list messages.  An archived post may be linked to from many places;
-indeed, some posts become so widely known that they eventually have
-more readers off the list than on it.</para>
+<para>对于邮件列表，“广告空间”是附加在每条消息末尾的一个小页脚。大多数项目在那里放置订阅/退订说明，可能还有一个指向项目主页或常见问题解答页面的链接。你可能会认为，任何订阅了该列表的人都会知道在哪里找到这些东西，他们可能也确实知道&nbsp;&mdash;&nbsp;但看到那些邮件列表消息的人远不止订阅者。一个存档的帖子可能会被许多地方链接到；事实上，一些帖子变得如此广为人知，以至于最终在列表之外的读者比列表上的还多。</para>
 
-<para>Formatting can make a big difference.  For example, in the
-Subversion project, we were having limited success using the
-bug-filtering technique described in
-<xref linkend="bug-filtering"/>.  Many bogus
-bug reports were still being filed by inexperienced people, because
-Subversion was experiencing dramatic user growth, and each
-time it happened, the filer had to be educated in exactly the same way
-as the 500 people before him.  One day, after one of our developers had
-finally gotten to the end of his rope and flamed some poor user who
-didn't read the ticket tracker guidelines carefully enough, another
-developer decided this pattern had gone on long enough.  He suggested
-that we reformat the ticket tracker front page so that the most
-important part, the injunction to discuss the bug on the mailing lists
-or chat rooms before filing, would stand out in huge, bold red
-letters, on a bright yellow background, centered prominently above
-everything else on the page.  We did so (it's been reformatted a bit
-since then, but it's still very prominent&nbsp;&mdash;&nbsp;you can see the results at
-<ulink url="https://subversion.apache.org/reporting-issues.html"
->https://subversion.apache.org/reporting-issues.html</ulink>), and
-the result was a noticeable drop in the rate of bogus ticket filings.
-The project still got them, of course, but the rate
-slowed considerably, even as the number of users increased.  The
-outcome was not only that the bug database contained less junk, but that
-those who responded to ticket filings stayed in a better mood, and were more
-likely to remain friendly when responding to one of the now-rare bogus
-filings.  This improved both the project's image and the mental health
-of its participants.</para>
+<para>格式可以产生很大的不同。例如，在Subversion项目中，我们使用<xref linkend="bug-filtering"/>中描述的错误过滤技术取得的成功有限。许多由没有经验的人提交的虚假错误报告仍然存在，因为Subversion的用户正在急剧增长，每次发生这种情况，提交者都必须以与他之前的500人完全相同的方式接受教育。有一天，在我们的一位开发人员终于忍无可忍，对一个没有仔细阅读工单跟踪器指南的可怜用户大发雷霆之后，另一位开发人员决定这种模式已经持续太久了。他建议我们重新格式化工单跟踪器首页，以便最重要的部分，即在提交前在邮件列表或聊天室讨论错误的禁令，将以巨大的、粗体的红色字母，在鲜艳的黄色背景上，突出地居中于页面上其他所有内容之上。我们这样做了（从那以后它被重新格式化了一点，但它仍然非常突出&nbsp;&mdash;&nbsp;你可以在<ulink url="https://subversion.apache.org/reporting-issues.html">https://subversion.apache.org/reporting-issues.html</ulink>看到结果），结果是虚假工单提交率明显下降。项目当然仍然会收到它们，但即使在用户数量增加的情况下，速度也大大减慢了。结果不仅是错误数据库中的垃圾减少了，而且那些回应工单提交的人心情也更好了，在回应现在罕见的虚假提交时也更可能保持友好。这既改善了项目的形象，也改善了其参与者的心理健康。</para>
 
-<para>The lesson for us was that merely writing up the guidelines was
-not enough.  We also had to put them where they'd be seen by those who
-need them most, and format them in such a way that their status as
-introductory material would be immediately clear to people unfamiliar
-with the project.</para>
+<para>对我们来说，教训是仅仅写下指南是不够的。我们还必须将它们放在最需要它们的人能看到的地方，并以一种能让不熟悉项目的人立即清楚其作为入门材料的地位的方式来格式化它们。</para>
 
-<para>Static web pages are not the only venue for advertising the
-project's customs.  A certain amount of interactive monitoring (in the
-friendly-reminder sense, not the prison-panopticon sense) is also
-required.  All peer review, even the commit reviews described in
-<xref linkend="code-review"/>, should include review
-of people's adherence to project norms,
-especially with regard to communications conventions.</para>
+<para>静态网页并非宣传项目习俗的唯一场所。一定程度的互动监控（友好提醒意义上的，而非监狱全景监视意义上的）也是必要的。所有同行评审，甚至<xref linkend="code-review"/>中描述的提交评审，都应包括对人们遵守项目规范的评审，尤其是在沟通惯例方面。</para>
 
-<para>Another example from the Subversion project: we settled on a
-convention of "r12908" to mean "revision 12908 in the version control
-repository."  The lower-case "r" prefix is easy to type, and because
-it's half the height of the digits it makes an easily-recognizable
-block of text when combined with the digits.  Of course, settling on
-the convention doesn't mean that everyone will begin using it
-consistently right away.  Thus, when a change comes in with a commit
-message like this:</para>
+<para>另一个来自Subversion项目的例子：我们约定使用“r12908”来表示“版本控制仓库中的修订版12908”。小写的“r”前缀易于输入，而且由于它只有数字高度的一半，当与数字结合时，它会形成一个易于识别的文本块。当然，约定了并不意味着每个人都会立刻开始一致地使用它。因此，当一个带有如下提交消息的更改进来时：</para>
 
 <screen>
-Typo fixes from J. Random Contributor
+来自J. Random Contributor的错别字修正
 
 * trunk/contrib/client-side/psvn/psvn.el:
-  Fixed some typos from revision 12828.
+  修正了修订版12828中的一些错别字。
 </screen>
 
-<para>...part of reviewing that commit is to say "By the way, please
-use 'r12828', not 'revision 12828' when referring to past changes."
-This isn't just pedantry; it's important as much for automatic
-parsability as for human readership.<footnote><para> For more about
-how to write good commit messages, see Chris Beams' excellent post
-"How to Write a Git Commit Message" at <ulink
-url="https://chris.beams.io/posts/git-commit/"
->https://chris.beams.io/posts/git-commit/</ulink>.  Many projects refer to that
-post as their baseline standard for commit
-messages.</para></footnote></para>
+<para>……审查该提交的一部分是说：“顺便说一下，在引用过去的更改时，请使用‘r12828’，而不是‘修订版12828’。”这不仅仅是迂腐；它对于自动可解析性和人类可读性同样重要。<footnote><para>关于如何写出好的提交消息的更多信息，请参阅Chris Beams的优秀文章“如何写一个Git提交消息”，网址为<ulink url="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</ulink>。许多项目都将该文章作为其提交消息的基准标准。</para></footnote></para>
 
-<para>By following the general principle that there should be
-canonical referral methods for common entities, and that these
-referral methods should be used consistently everywhere, the project
-in effect exports certain standards.  Those standards enable people to
-write tools that present the project's communications in more useable
-ways&nbsp;&mdash;&nbsp;for example, a revision formatted as "r12828" could be
-transformed into a live link into the repository browsing system.
-This would be harder to do if the revision were written as "revision
-12828", both because that form could be divided across a line break,
-and because it's less distinct (the word "revision" will often appear
-alone, and groups of numbers will often appear alone, whereas the
-combination "r12828" can only mean a revision number).  Similar
-concerns apply to ticket numbers, FAQ items, etc.<footnote><para>A
-more extended example of the kinds of benefits such standards make
-possible is the Contribulyzer example mentioned in <xref
-linkend="automation"/>.</para></footnote>
-</para>
+<para>通过遵循一个普遍的原则，即对于常见的实体应该有规范的引用方法，并且这些引用方法应该在各处一致地使用，项目实际上是在输出某些标准。这些标准使得人们能够编写工具，以更有用的方式呈现项目的通信&nbsp;&mdash;&nbsp;例如，一个格式化为“r12828”的修订版可以被转换成一个指向代码库浏览系统的实时链接。如果修订版写成“revision 12828”，这将更难做到，因为该形式可能会被换行符分割，而且它的辨识度较低（“revision”这个词经常会单独出现，数字组也经常会单独出现，而“r12828”的组合只能表示一个修订号）。类似的问题也适用于工单号、常见问题解答项等。<footnote><para>一个更详细的例子，说明了这种标准可能带来的好处，是<xref linkend="automation"/>中提到的Contribulyzer例子。</para></footnote></para>
 
-<para>(Note that for Git commit IDs, the widely-accepted standard
-syntax is "<code>commit&nbsp;c03dd89305</code>, that is, the word
-"commit", followed by a space, followed by the first 8-10 characters
-of the commit hash.  Some very busy projects have standardized on 12
-characters, to avoid collisions; the only time all 40 characters of
-the hash are used is in non-human-readable contexts, like saving a
-commit ID in an automated release-tracking system or something.)</para>
+<para>（请注意，对于Git提交ID，广泛接受的标准语法是“<code>commit&nbsp;c03dd89305</code>”，即单词“commit”，后跟一个空格，再后跟提交哈希的前8-10个字符。一些非常繁忙的项目已经标准化为12个字符，以避免冲突；只有在非人类可读的上下文中，比如在自动发布跟踪系统中保存提交ID时，才会使用全部40个字符的哈希。）</para>
 
-<para>Even for entities where there is not an obvious short, canonical
-form, people should still be encouraged to provide key pieces of
-information consistently.  For example, when referring to a mailing
-list message, don't just give the sender and subject; also give the
-archive URL <emphasis>and</emphasis> the Message-ID header.  The last
-allows people who have their own copy of the mailing list (people
-sometimes keep offline copies, for example to use on a laptop while
-traveling) to unambiguously identify the right message in a search even if they
-don't have access to the online archives.  The sender and subject wouldn't be
-enough, because the same person might make several posts in the same
-thread, even on the same day.</para>
+<para>即使对于没有明显简短、规范形式的实体，也应该鼓励人们始终如一地提供关键信息。例如，在引用邮件列表消息时，不要只给出发送者和主题；还要给出存档URL<emphasis>和</emphasis>Message-ID头。后者允许拥有自己邮件列表副本的人（人们有时会保留离线副本，例如在旅行时在笔记本电脑上使用）在即使无法访问在线存档的情况下，也能在搜索中明确地识别出正确的邮件。仅凭发送者和主题是不够的，因为同一个人可能会在同一个主题中发多封帖子，甚至在同一天。</para>
 
-<para>The more a project grows, the more important this sort of
-consistency becomes.  Consistency means that everywhere people look,
-they see the same patterns being followed, and start to follow
-those patterns themselves.  This, in turn, reduces the number of
-questions they need to ask.  The burden of having a million readers is
-no greater than that of having one; scalability problems start to
-arise only when a certain percentage of those readers ask questions.
-As a project grows, therefore, it must reduce that percentage by
-increasing the density and findability of information, so that any
-given person is more likely to find what she needs without having to
-ask.</para>
+<para>一个项目发展得越大，这种一致性就变得越重要。一致性意味着人们无论在哪里看，都会看到相同的模式被遵循，并开始自己遵循这些模式。这反过来又减少了他们需要问的问题的数量。拥有一百万读者和拥有一个读者的负担并没有什么不同；可扩展性问题只有在一定比例的读者提问时才会出现。因此，随着项目的增长，它必须通过增加信息的密度和可查找性来降低这个百分比，这样任何特定的人就更有可能在不必提问的情况下找到她需要的东西。</para>
 
 <!--
 
@@ -1829,95 +637,24 @@ url="https://subversion.apache.org/mailing-list-guidelines.html"/>https://subver
 <sect1 id="choose-the-forum">
 <!-- For link compatibility with old section ID. -->
 <anchor id="bug-tracker-usage" />
-<title>Choose the Right Forum</title>
+<title>选择合适的论坛</title>
 
-<para>One of the trickiest things about managing an open source
-project is getting people to be thoughtful about which forum they
-choose for different kinds of communications.  It's tricky partly
-because it's not immediately obvious that it matters.  During any
-given conversation, the participants are mostly concerned with what
-the people involved are saying, and won't usually stop to think about
-whether or not the forum itself gives others who
-<emphasis>might</emphasis> want to take part the opportunity to do
-so.</para>
+<para>管理一个开源项目最棘手的事情之一就是让人们在为不同类型的沟通选择论坛时深思熟虑。这之所以棘手，部分原因在于它并不明显重要。在任何给定的对话中，参与者主要关心的是相关人员所说的话，通常不会停下来思考论坛本身是否给那些<emphasis>可能</emphasis>想参与的人提供了机会。</para>
 
-<para>For example, a real-time forum like chat is terrific for quick
-questions, for opportunistic synchronization of work, for reminding
-someone of something they promised to do, etc.  But it's not a good
-forum for making decisions that affect the whole project, because the
-people who take part in a conversation in chat are just whoever
-happened to be in the room at that moment&nbsp;&mdash;&nbsp;which is
-very dependent on work schedules, time zones, etc.  On the other hand,
-the development mailing list is a great place for making formal
-project-wide decisions, since it's archived and every interested party will have an
-opportunity to see and respond to the relevant posts, even though email is
-not as well-suited to quick, real-time interactions as chat is.</para>
+<para>例如，像聊天这样的实时论坛非常适合快速提问、机会性地同步工作、提醒某人他们承诺要做的事情等。但它不是一个做出影响整个项目的决定的好论坛，因为参与聊天对话的人只是碰巧在那一刻在房间里的人&nbsp;&mdash;&nbsp;这非常依赖于工作日程、时区等。另一方面，开发邮件列表是做出正式的全项目决定的好地方，因为它被存档，每个感兴趣的方面都有机会看到并回应相关的帖子，尽管电子邮件不像聊天那样适合快速、实时的互动。</para>
 
-<para>Another example comes up frequently in bug tracker usage,
-especially in the last decade or so as bug trackers have become
-well-integrated with email.  Sometimes people will be drawn into a
-discussion in a bug ticket<footnote><para>For example, on GitHub,
-simply mentioning someone's GitHub account name with an @-sign (e.g.,
-<code>@kfogel</code>) in a comment on a ticket will cause that person
-to be added to the email thread associated with that
-ticket.</para></footnote> and because they simply see project-related
-emails coming in to their email client, they treat the discussion as
-though it's happening on the real development list.  But it's not:
-anyone who wasn't watching that bug and who wasn't explicitly invited
-into the conversation usually won't even be aware it's happening.  If
-things are discussed in that bug ticket that go beyond the scope of
-just that one bug, those things will be discussed without input from
-people who should have had at least the chance to participate.</para>
+<para>另一个例子经常出现在错误跟踪器的使用中，尤其是在过去十年左右，错误跟踪器已经与电子邮件很好地集成。有时人们会被卷入一个错误工单中的讨论<footnote><para>例如，在GitHub上，在对一个工单的评论中简单地用@-符号提及某人的GitHub账户名（例如，<code>@kfogel</code>）就会导致该人被添加到与该工单关联的电子邮件线程中。</para></footnote>，因为他们只是看到与项目相关的电子邮件进入他们的电子邮件客户端，他们就将讨论视为发生在真正的开发列表上。但事实并非如此：任何没有关注该错误并且没有被明确邀请参与对话的人通常甚至不会意识到它的发生。如果在该错误工单中讨论的事情超出了仅该一个错误的范围，那么这些事情将在没有那些本应至少有机会参与的人的输入的情况下被讨论。</para>
 
-<para>The solution to this is to encourage conscious, intentional
-forum changes.  If a discussion starts to get into questions beyond
-the scope of its original forum, then at some point someone involved
-should ask that the conversation move over to the main development
-list or some other more appropriate forum.</para>
+<para>解决这个问题的方法是鼓励有意识、有目的的论坛变更。如果一个讨论开始涉及到超出其原始论坛范围的问题，那么在某个时候，某个相关人员应该要求将对话转移到主开发列表或其他更合适的论坛。</para>
 
-<para>It's not enough for you to do this on your own.  You have to
-create a culture where it's normal for everyone to do it, so everyone
-thinks about forum appropriateness as a matter of course, and feels
-comfortable raising questions of forum whenever necessary in any
-discussion.  Obviously, documenting the practice will help (see <xref
-linkend="written-rules" />), but you'll probably also
-need to remind people of it often, especially when your project is
-starting out.  A good rule of thumb is: if the conversation looks
-convergent, then it's okay to keep it in the bug ticket or other
-original forum.  But if it looks likely to diverge (e.g.,
-widening into philosophical issues about how the software should
-behave, or raising design issues that go beyond just the one bug)
-for a while before it converges, then ask that the discussion be moved
-to a better forum, usually the development mailing list.</para>
+<para>仅仅你自己这样做是不够的。你必须创造一种文化，让每个人都这样做成为常态，这样每个人都会自然而然地考虑论坛的适当性，并且在任何讨论中，只要有必要，都会觉得提出论坛问题是舒服的。显然，将这种做法记录下来会有帮助（参见<xref linkend="written-rules"/>），但你可能还需要经常提醒人们，尤其是在你的项目刚开始的时候。一个好的经验法则是：如果对话看起来是收敛的，那么将它保留在错误工单或其他原始论坛中是可以的。但如果它看起来很可能会发散（例如，扩大到关于软件应该如何行为的哲学问题，或者提出超出仅一个错误的设计问题），然后再收敛，那么就要求将讨论转移到一个更好的论坛，通常是开发邮件列表。</para>
 
 <sect2 id="cross-links">
-<title>Cross-Link Between Forums</title>
+<title>在论坛之间交叉链接</title>
 
-<para>When a discussion moves from one place to another, cross-link
-between the old and new place.  For example, if discussion moves from
-the ticket tracker to the mailing list, link to the mailing list
-thread from the ticket, and mention the original ticket at the start
-of the new list thread.  It's important for someone following the
-ticket to be able to reach the later discussion; it's also important
-for someone who encounters the ticket a year later to be able to
-follow to where the conversation went to in the mailing list archives.
-The person who does the move may find this cross-linking slightly
-laborious, but open source is fundamentally a writer-responsible
-culture.  It's more important to make things easy for the tens or
-hundreds of people who may read the bug than for the three or five
-people writing about it.</para>
+<para>当一个讨论从一个地方转移到另一个地方时，在旧的和新的地方之间进行交叉链接。例如，如果讨论从工单跟踪器转移到邮件列表，那么从工单链接到邮件列表的主题，并在新的列表主题的开头提及原始工单。对于一个正在跟踪工单的人来说，能够到达后来的讨论是很重要的；对于一个一年后遇到该工单的人来说，能够跟到对话在邮件列表存档中的去向也很重要。进行转移的人可能会觉得这种交叉链接有点费事，但开源从根本上说是一种作者负责的文化。让可能阅读该错误的数十或数百人方便，比让正在写它的三五个人方便更重要。</para>
 
-<para>It's also fine to take important conclusions or summaries from
-the list discussion and paste them into the ticket at the end, if that
-will make things convenient for readers.  A common idiom is to move
-discussion to the mailing list, put a link to that thread in the
-ticket, and then when the discussion finishes, paste the final summary
-into the ticket (along with a link to the message containing that
-summary), so someone browsing the ticket later can easily see what
-conclusion was reached without having to click to somewhere else or do
-detective work.  Note that the usual "two masters" data duplication
-problem does not exist here, because both archives and ticket comments
-are usually treated as static and unchangeable anyway.</para>
+<para>如果能让读者方便，将列表讨论中的重要结论或摘要粘贴到工单中也是可以的。一个常见的做法是，将讨论转移到邮件列表，在工单中放置一个指向该主题的链接，然后在讨论结束后，将最终摘要粘贴到工单中（连同一个指向包含该摘要的消息的链接），这样以后浏览工单的人就可以轻松地看到得出了什么结论，而无需点击到别处或进行侦探工作。请注意，这里不存在通常的“两个主人”数据重复问题，因为存档和工单评论通常都被视为静态和不可更改的。</para>
 
 </sect2>
 
@@ -1925,622 +662,231 @@ are usually treated as static and unchangeable anyway.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="publicity">
-<title>Publicity</title>
+<title>宣传</title>
 
-<para>In free software, there is a fairly smooth continuum between
-purely internal discussions and public relations statements.  This is
-partly because the target audience is not strictly bounded: because
-posts are publicly accessible, the project doesn't have
-full control over the impression the world gets.  Someone&nbsp;&mdash;&nbsp;say, a
-<ulink url="https://news.ycombinator.com/">https://news.ycombinator.com/</ulink>
-poster or <ulink url="https://slashdot.org/">https://slashdot.org/</ulink>
-editor&nbsp;&mdash;&nbsp;may draw millions of readers' attention to a post that no
-one ever expected to be seen outside the project.  This is a fact of
-life that all open source projects live with, but in practice, the
-risk is usually small.  In general, the announcements that the project
-wants most publicized most are the ones that will be most publicized,
-assuming you use the right mechanisms to indicate relative
-newsworthiness to the outside world.</para>
+<para>在自由软件中，纯粹的内部讨论和公共关系声明之间存在一个相当平滑的连续体。这部分是因为目标受众没有严格的界限：因为帖子是公开可访问的，所以项目无法完全控制世界对它的印象。某人&nbsp;&mdash;&nbsp;比如说，一个<ulink url="https://news.ycombinator.com/">https://news.ycombinator.com/</ulink>的发帖人或<ulink url="https://slashdot.org/">https://slashdot.org/</ulink>的编辑&nbsp;&mdash;&nbsp;可能会将数百万读者的注意力吸引到一个没有人预料到会在项目之外看到的帖子上。这是所有开源项目都必须面对的一个事实，但在实践中，风险通常很小。总的来说，项目最希望被宣传的公告，就是最会被宣传的公告，前提是你使用正确的机制向外界表明相对的新闻价值。</para>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="announcing-releases">
-<title>Announcing Releases and Other Major Events</title>
+<title>发布版本和其他重大事件的公告</title>
 
-<para>For major announcements, there tend to be a few main channels of
-distribution, in which announcements should be made as nearly
-simultaneously as possible:</para>
+<para>对于重大公告，通常有几个主要的分发渠道，公告应尽可能同时在这些渠道中发布：</para>
 
 <orderedlist>
 
-  <listitem><para>Your project's front page is probably seen by more
-            people than any other part of the project.  If you have a
-            really major announcement, put a blurb there.  The blurb
-            should be a very brief synopsis that links to the press
-            release (see below) for more information.</para>
+  <listitem><para>你的项目首页可能是项目中最受关注的部分。如果你有非常重要的公告，就在那里放一个简短的介绍。这个介绍应该是一个非常简短的概要，并链接到新闻稿（见下文）以获取更多信息。</para>
   </listitem>
 
-  <listitem><para>At the same time, you should also have a "News" or
-            "Press Releases" area of the web site, where the
-            announcement can be written up in detail.  Part of the
-            purpose of a press release is to provide a single,
-            canonical "announcement object" that other sites can link
-            to, so make sure it is structured accordingly: either as
-            one web page per release, as a discrete blog entry, or
-            as some other kind of entity that can be linked to while
-            still being kept distinct from other press releases in the
-            same area.</para>
+  <listitem><para>同时，你的网站也应该有一个“新闻”或“新闻稿”区域，可以在那里详细撰写公告。新闻稿的部分目的是提供一个单一的、规范的“公告对象”，其他网站可以链接到它，所以要确保它相应地结构化：要么是每个版本一个网页，要么是一个离散的博客条目，或者其他可以被链接同时又与同一区域的其他新闻稿保持区别的实体类型。</para>
   </listitem>
 
-  <listitem><para>Make sure the announcement gets broadcast by any
-            relevant Twitter or other microblog handles, and goes out on any news
-            channels and RSS feeds.  (The latter should happen
-            automatically when you publish the announcement, if things
-            are set up properly.)</para>
+  <listitem><para>确保公告通过任何相关的Twitter或其他微博账号广播，并发布到任何新闻频道和RSS源。（如果设置得当，后者应该在您发布公告时自动发生。）</para>
   </listitem>
 
-  <listitem><para>Post to forums as appropriate, in the manner
-            described in
-            <xref linkend="announcing"/>).</para>
+  <listitem><para>在适当的论坛中发帖，方式如<xref linkend="announcing"/>所述。</para>
   </listitem>
 
-  <listitem><para>Send a mail to your project's announcement mailing
-            list.  This list's name should actually be "announce",
-            that is, <literal>announce@yourprojectdomain.org</literal>,
-            because that's a fairly standard convention now, and the
-            list's charter should make it clear that it is very
-            low-traffic, reserved for major project announcements.
-            Most of those announcements will be about new releases of
-            the software, but occasionally other events, such as a
-            fundraising drive, the discovery of a security
-            vulnerability (see
-            <xref linkend="security"/>), or a
-            major shift in project direction may be posted there as
-            well.  Because it is low traffic and used only for
-            important things, the <literal>announce</literal> list
-            typically has the highest subscribership of any mailing
-            list in the project (of course, this means you shouldn't
-            abuse it&nbsp;&mdash;&nbsp;consider carefully before posting).  To
-            avoid random people making announcements, or worse, spam
-            getting through, the <literal>announce</literal> list must
-            always be moderated.</para>
+  <listitem><para>向你项目的公告邮件列表发送一封邮件。这个列表的名字实际上应该是“announce”，即<literal>announce@yourprojectdomain.org</literal>，因为这现在是一个相当标准的惯例，而且列表的章程应该明确说明它是一个非常低流量的列表，只用于重大的项目公告。这些公告中的大多数将是关于软件的新版本，但偶尔其他事件，如筹款活动、发现安全漏洞（参见<xref linkend="security"/>），或项目的重大方向转变也可能在那里发布。因为它流量低且只用于重要的事情，所以<literal>announce</literal>列表通常是项目中订阅人数最多的邮件列表（当然，这意味着你不应该滥用它&nbsp;&mdash;&nbsp;在发帖前要仔细考虑）。为了避免随机的人发布公告，或者更糟的是，垃圾邮件通过，<literal>announce</literal>列表必须始终被审核。</para>
   </listitem>
 
 </orderedlist>
 
-<para>Try to make the announcements in all these places at the same
-time, as nearly as possible.  People might get confused if they see an
-announcement on the mailing list but then don't see it reflected on
-the project's home page or in its press releases area.  If you get the
-various changes (emails, web page edits, etc) queued up and
-then send them all in a row, you can keep the window of inconsistency
-very small.</para>
+<para>尽量在所有这些地方同时发布公告，尽可能地接近。如果人们在邮件列表上看到一个公告，但随后在项目的主页或新闻稿区域没有看到反映，他们可能会感到困惑。如果你将各种更改（电子邮件、网页编辑等）排好队，然后连续发送，你可以将不一致的窗口保持得很小。</para>
 
-<para>For a less important event, you can eliminate some or all of the
-above outlets.  The event will still be noticed by the outside world
-in direct proportion to its importance.  For example, while a new
-release of the software is a major event, merely setting the date of
-the next release, while still somewhat newsworthy, is not nearly as
-important as the release itself.  Setting a date is worth an email to
-the daily mailing lists (not the announce list), and an update of the
-project's timeline or status web page, but no more.</para>
+<para>对于一个不太重要的事件，你可以省去上述部分或全部渠道。该事件仍然会因其重要性而被外界注意到。例如，虽然软件的新版本是一个重大事件，但仅仅设定下一个版本的日期，虽然仍然有些新闻价值，但远不如版本本身重要。设定日期值得向每日邮件列表（不是公告列表）发送一封电子邮件，并更新项目的日程表或状态网页，但仅此而已。</para>
 
-<para>However, you might still see that date appearing in discussions
-elsewhere on the Internet, wherever there are people interested in the
-project.  People who are lurkers on your mailing lists, just listening
-and never saying anything, are not necessarily silent elsewhere.  Word
-of mouth gives very broad distribution; you should count on it, and
-construct even minor announcements in such a way as to encourage
-accurate informal transmission.  Specifically, posts that you expect
-to be quoted should have a clearly meant-to-be-quoted portion, just as
-though you were writing a formal press release.  For example:</para>
+<para>然而，你可能仍然会在互联网上的其他地方的讨论中看到那个日期，只要那里有对项目感兴趣的人。你的邮件列表上的潜水者，只是听而不说，并不一定在其他地方也保持沉默。口碑传播非常广泛；你应该指望它，并以一种鼓励准确非正式传播的方式来构建即使是微小的公告。具体来说，你期望被引用的帖子应该有一个明确的旨在被引用的部分，就像你在写正式的新闻稿一样。例如：</para>
 
   <blockquote>
-     <para><emphasis>Just a progress update: we're planning to release
-     version 2.0 of Scanley in mid-August 2022.  You can always check
-     http://www.scanley.org/status.html for updates.  The major new
-     feature will be regular-expression searches.</emphasis></para>
+     <para><emphasis>只是一个进度更新：我们计划在2022年8月中旬发布Scanley 2.0版本。您可以随时访问http://www.scanley.org/status.html查看更新。主要的新功能将是正则表达式搜索。</emphasis></para>
 
-     <para><emphasis>Other new features include:&nbsp;... There will
-     also be various bugfixes, including:&nbsp;...</emphasis></para>
+     <para><emphasis>其他新功能包括：……还将有各种错误修复，包括：……</emphasis></para>
   </blockquote>
 
-<para>The first paragraph is short, gives the two most important
-pieces of information (the release date and the major new feature),
-and a URL to visit for further news.  If that paragraph is the only
-thing that crosses someone's screen, you're still doing pretty well.
-The rest of the mail could be lost without affecting the gist of the
-content.  Of course, sometimes people will link to the entire mail
-anyway, but just as often, they'll quote only a small part.  Given that
-the latter is a possibility, you might as well make it easy for them,
-and in the bargain get some influence over what gets quoted.</para>
+<para>第一段很短，给出了两个最重要的信息（发布日期和主要新功能），以及一个供进一步新闻的URL。如果这段话是某人屏幕上唯一看到的东西，那你也算做得不错了。邮件的其余部分即使丢失也不会影响内容的要点。当然，有时人们无论如何都会链接到整个邮件，但同样常见的是，他们只引用一小部分。鉴于后者是一种可能性，你还不如让他们方便一些，顺便还能对被引用的内容产生一些影响。</para>
 
 </sect2>
 
 <!-- ======================== subsection ============================== -->
 <sect2 id="security">
-<title>Announcing Security Vulnerabilities</title>
+<title>公布安全漏洞</title>
 
-<para>Handling a security vulnerability is different from handling any
-other kind of bug report.  In free software, doing things openly and
-transparently is normally almost a religious credo.  Every step of the
-standard bug-handling process is visible to all who care to watch: the
-arrival of the initial report, the ensuing discussion, and the
-eventual fix.</para>
+<para>处理安全漏洞与处理任何其他类型的错误报告都不同。在自由软件中，公开透明地做事通常几乎是一种宗教信条。标准错误处理过程的每一步都对所有关心的人可见：初始报告的到来、随后的讨论以及最终的修复。</para>
 
-<para>Security bugs are different.  They can compromise users' data,
-and possibly users' entire computers.  To discuss such a problem
-openly would be to advertise its existence to the entire
-world&nbsp;&mdash;&nbsp;including to all the parties who might make malicious use
-of the bug.  Even merely committing a fix effectively announces the
-bug's existence (there are organizations who watch the commit
-logs of public projects, systematically looking for changes that
-indicate security problems in the pre-change code; these organizations
-do not have your users' interests in mind).</para>
+<para>安全漏洞则不同。它们可能会泄露用户的数据，甚至可能泄露用户的整台计算机。公开讨论这样的问题，就等于是向全世界宣告它的存在&nbsp;&mdash;&nbsp;包括所有可能恶意利用该漏洞的方面。即使只是提交一个修复，实际上也等于宣告了该漏洞的存在（有些组织会监视公共项目的提交日志，系统地寻找那些表明旧代码中存在安全问题的更改；这些组织并不关心你的用户的利益）。</para>
 
-<para>Most open source projects have settled on approximately the same
-set of steps to handle this conflict between openness and secrecy,
-based on these basic guidelines:</para>
+<para>大多数开源项目都已就如何处理这种开放性与保密性之间的冲突达成了一套大致相同的步骤，其基本准则是：</para>
 
 <orderedlist>
-  <listitem><para>Don't talk about the bug publicly until a fix is
-            available, and then supply the fix publicly at the same
-            instant you announce the bug.</para>
+  <listitem><para>在有可用的修复方案之前，不要公开谈论该漏洞，然后在你宣布该漏洞的同时，公开提供该修复方案。</para>
 
-            <para>It may make sense to supply the fix by packaging it
-            as a release, or it may be enough to just commit it to the
-            project's public repository.  Whichever of those you you
-            do, doing it effectively announces the vulnerability, so
-            your formal announcement should go out in tandem with that
-            fix.</para>
+            <para>将修复打包成一个版本可能是有意义的，或者仅仅将其提交到项目的公共仓库也可能足够。无论你采取哪种方式，这样做都有效地宣布了漏洞，所以你的正式公告应该与该修复同步发出。</para>
   </listitem>
-  <listitem><para>Come up with that fix as fast as you
-            can&nbsp;&mdash;&nbsp;especially if someone outside the project
-            reported the bug, because then you know there's at least
-            one person outside the project who is able to exploit the
-            vulnerability.</para>
+  <listitem><para>尽快拿出那个修复方案&nbsp;&mdash;&nbsp;特别是如果漏洞是由项目外部的人报告的，因为那样你就知道项目外部至少有一个人能够利用这个漏洞。</para>
   </listitem>
 </orderedlist>
 
-<para>In practice, those principles lead to a fairly standardized
-series of steps, which are described in the sections below.</para>
+<para>在实践中，这些原则导致了一系列相当标准化的步骤，这些步骤将在下面的章节中描述。</para>
 
 <sect3 id="security-receiving">
-<title>Receive the Report</title>
+<title>接收报告</title>
 
-<para>Obviously, a project needs the ability to receive security bug
-reports from anyone.  But the regular bug reporting channels won't do,
-because they can be watched by anyone too.  Therefore, have a separate
-mailing list or contact form for receiving security bug reports.  That
-forum must not have publicly readable archives, and its subscribership
-must be strictly controlled&nbsp;&mdash;&nbsp;only long-time, trusted developers
-can be on the list, and people whom such developers have consensus
-that they trust.<footnote><para>E.g., a release manager who maybe isn't
-a core developer but who is already trusted to roll releases anyway.
-I've seen cases where companies who had been long involved in a project
-had managers as members of the project's security group, even though
-those managers had never committed a line of code, because by common
-consent the project's maintainers trusted them and felt it was to the
-project's benefit for them to see vulnerability reports as soon as
-possible.  There is no one rule that will be appropriate for all projects,
-but in general, the core maintainers should follow the principle that
-anyone who receives security reports must be trustable both in terms
-of intention and in terms of their technical ability to not
-accidentally leak information (e.g., someone whose email gets hacked
-regularly should probably not be on the security
-list).</para></footnote>  (If you need a formal definition of "trusted
-developer", you can use "anyone who has had commit access for two
-years or more" or something like that, to avoid favoritism.)  This is
-the group that will handle security bugs.</para>
+<para>显然，一个项目需要能够接收来自任何人的安全漏洞报告。但常规的漏洞报告渠道不行，因为它们也可能被任何人监视。因此，要有一个单独的邮件列表或联系表单来接收安全漏洞报告。该论坛的存档绝不能公开可读，其订阅者必须受到严格控制&nbsp;&mdash;&nbsp;只有长期的、受信任的开发人员才能加入该列表，以及那些此类开发人员一致信任的人。<footnote><para>例如，一个发布经理，他可能不是核心开发人员，但已经被信任来发布版本。我见过一些情况，长期参与一个项目的公司有经理作为项目安全小组成员，即使那些经理从未提交过一行代码，因为根据共同的同意，项目的维护者信任他们，并认为他们尽快看到漏洞报告对项目有利。没有一个规则对所有项目都适用，但总的来说，核心维护者应该遵循一个原则，即任何接收安全报告的人都必须在意图和技术能力方面都值得信赖，以避免意外泄露信息（例如，一个电子邮件经常被黑的人可能不应该在安全列表中）。</para></footnote>（如果你需要一个“受信任的开发人员”的正式定义，你可以使用“拥有两年或以上提交权限的任何人”之类的定义，以避免偏袒。）这个小组将处理安全漏洞。</para>
 
-<para>Ideally, that reporting gateway should not be spam-protected or
-moderated, since you don't want an urgent report to get filtered
-out or delayed just because no moderators happened to be online that
-weekend.  If you do use automated spam-protection software, try to
-configure it with high-tolerance settings; it's better to let a few spams
-through than to miss a vulnerability report.</para>
+<para>理想情况下，那个报告网关不应该有垃圾邮件防护或审核，因为你不希望一个紧急报告因为那个周末碰巧没有审核员在线而被过滤掉或延迟。如果你确实使用自动垃圾邮件防护软件，尽量将其配置为高容忍度设置；让一些垃圾邮件通过比错过一个漏洞报告要好。</para>
 
-<para>The submission mechanism should itself be secure.  That is, if
-it is a contact form, it should be on an <code>https://</code>
-(TLS-protected) page, or if it is an email address, there should be a
-well-advertised public key (digitally signed by as many of the core
-developers as possible) so people can send encrypted mails to that
-address.<footnote><para>If you don't know what all of these terms
-mean, find people you trust who do and get them to help your project.
-Handling security vulnerablities competently requires a working
-knowledge of these concepts.</para></footnote> A web form submission
-or an email sent to your project may travel over many Internet hops on
-its way there; you have no reason to trust whoever runs those
-intermediate servers, and there is a flourishing market for new
-security vulnerabilities.  Assume the worst and design
-accordingly.</para>
+<para>提交机制本身应该是安全的。也就是说，如果它是一个联系表单，它应该在一个<code>https://</code>（TLS保护）的页面上，或者如果它是一个电子邮件地址，应该有一个广为人知的公钥（由尽可能多的核心开发人员数字签名），这样人们就可以向该地址发送加密邮件。<footnote><para>如果你不知道所有这些术语的意思，找你信任的懂行的人来帮助你的项目。胜任地处理安全漏洞需要对这些概念有实际的了解。</para></footnote>一个网页表单提交或发送到你项目的电子邮件可能会在途中经过许多互联网中转站；你没有理由信任那些运营中间服务器的人，而且一个新的安全漏洞市场正在蓬勃发展。假设最坏的情况并相应地进行设计。</para>
 
 </sect3>
 
 <sect3 id="security-finding-a-fix">
-<title>Develop the Fix Quietly</title>
+<title>悄悄地开发修复方案</title>
 
-<para>So what does the security list do when it receives a report?
-The first task is to evaluate the problem's severity and
-urgency:</para>
+<para>那么，当安全列表收到一份报告时，它会做什么呢？第一个任务是评估问题的严重性和紧迫性：</para>
 
 <orderedlist>
-  <listitem><para>How serious is the vulnerability?  Does it allow a
-            malicious attacker to take over the computer of someone
-            who uses your software?  Or does it, say, merely leak
-            information about the sizes of some of their files?</para>
+  <listitem><para>这个漏洞有多严重？它是否允许恶意攻击者接管使用你软件的人的电脑？或者，比如说，它只是泄露了他们某些文件大小的信息？</para>
   </listitem>
 
-  <listitem><para>How easy is it to exploit the vulnerability?  Can
-            an attack be scripted, or does it require circumstantial
-            knowledge, educated guessing, and luck?</para>
+  <listitem><para>利用这个漏洞有多容易？攻击可以被脚本化吗，还是需要间接知识、有根据的猜测和运气？</para>
   </listitem>
 
-  <listitem><para><emphasis>Who</emphasis> reported the problem to
-            you?  The answer to this question doesn't change the
-            nature of the vulnerability, of course, but it does give
-            you an idea of how many other people might know about it.
-            If the report comes from one of the project's own
-            developers, you can breathe a little easier (but only a
-            little), because you can trust them not to have told
-            anyone else about it.  On the other hand, if it came in an
-            email from <literal>anonymous14@globalhackerz.net</literal>,
-            then you'd better act as fast as you can.  The person did
-            you a favor by informing you of the problem at all, but you
-            have no idea how many other people she's told, or how long
-            she'll wait before exploiting the vulnerability on live
-            installations.</para>
+  <listitem><para><emphasis>谁</emphasis>向你报告了这个问题？这个问题的答案当然不会改变漏洞的性质，但它确实能让你知道可能还有多少其他人知道它。如果报告来自项目自己的一个开发人员，你可以稍微松一口气（但只能稍微），因为你可以相信他们没有告诉其他人。另一方面，如果它来自一封<literal>anonymous14@globalhackerz.net</literal>的邮件，那你最好尽快行动。这个人告诉你这个问题，算是帮了你一个忙，但你不知道她还告诉了多少其他人，或者她会在利用这个漏洞在实际安装上之前等多久。</para>
   </listitem>
 </orderedlist>
 
-<para>Note that the difference we're talking about here is often just
-a narrow range between <emphasis>urgent</emphasis>
-and <emphasis>extremely&nbsp;urgent</emphasis>.  Even when the report
-comes from a known, friendly source, there could be other people on
-the Net who discovered the bug long ago and just haven't reported it.
-The only time things aren't urgent is when the bug inherently does not
-compromise security very severely.</para>
+<para>请注意，我们在这里谈论的差异通常只是<emphasis>紧急</emphasis>和<emphasis>极其紧急</emphasis>之间的狭窄范围。即使报告来自一个已知的、友好的来源，也可能有其他人在网上很久以前就发现了这个漏洞，只是没有报告。只有当漏洞本身不会非常严重地危及安全时，事情才不紧急。</para>
 
-<para>The "<literal>anonymous14@globalhackerz.net</literal>" example
-is not facetious, by the way (though that particular email address is).
-You really may get bug reports from
-identity-cloaked people who, by their words and behavior, never quite
-clarify whether they're on your side or not.  It doesn't matter: if
-they've reported the security hole to you, they'll feel they've done
-you a good turn, and you should respond in kind.  Thank them for the
-report, give them a date on or before which you plan to release a
-public fix, and keep them in the loop.  Sometimes they may
-give <emphasis>you</emphasis> a date&nbsp;&mdash;&nbsp;that is, an implicit threat
-to publicize the bug on a certain date, whether you're ready or not.
-This may feel like a bullying power play, but it's more likely a
-pre&euml;mptive action resulting from past disappointment with
-unresponsive software producers who didn't take security reports
-seriously enough.  Either way, you can't afford to tick this person
-off.  After all, if the bug is severe, she has knowledge that could
-cause your users big problems.  Treat such reporters well, and hope
-that they treat you well.</para>
+<para>顺便说一下，“<literal>anonymous14@globalhackerz.net</literal>”这个例子并非戏言（尽管那个特定的电子邮件地址是）。你真的可能会收到来自身份不明的人的错误报告，他们通过言行举止，从未明确表示他们是站在你这边还是不站在你这边。这无关紧要：如果他们向你报告了安全漏洞，他们会觉得他们帮了你一个忙，你也应该投桃报李。感谢他们的报告，给他们一个你计划发布公开修复的日期，并让他们随时了解情况。有时他们可能会给<emphasis>你</emphasis>一个日期&nbsp;&mdash;&nbsp;也就是说，一个隐含的威胁，即在某个日期公开该错误，无论你是否准备好。这可能感觉像是一种欺凌的权力游戏，但它更可能是一种先发制人的行动，源于过去对不负责任的软件生产商的失望，他们没有足够认真地对待安全报告。无论哪种方式，你都不能惹恼这个人。毕竟，如果错误很严重，她掌握的知识可能会给你的用户带来大麻烦。善待这样的报告者，并希望他们也善待你。</para>
 
-<para>Another frequent reporter of security bugs is the security
-professional, someone who audits code for a living and keeps up on the
-latest news of software vulnerabilities.  These people usually have
-experience on both sides of the fence&nbsp;&mdash;&nbsp;they've both received and
-sent reports, probably more than most developers in your project have.
-They too will usually give a deadline for fixing a vulnerability
-before going public.  The deadline may be somewhat negotiable, but
-that's up to the reporter; deadlines have become recognized among
-security professionals as pretty much the only reliable way to get
-organizations to address security problems promptly.  So don't treat
-the deadline as rude; it's a time-honored tradition, and there are
-good reasons for it.  Negotiate if you absolutely must, but remember
-that the reporter holds all the cards.</para>
+<para>另一个常见的安全漏洞报告者是安全专家，他们以审计代码为生，并随时了解最新的软件漏洞新闻。这些人通常在攻防两方面都有经验&nbsp;&mdash;&nbsp;他们既收到过也发送过报告，可能比你项目中的大多数开发人员都多。他们通常也会给出一个修复漏洞的最后期限，然后才会公开。这个最后期限可能有一定的协商余地，但这取决于报告者；在安全专家中，最后期限已经被认为是让组织迅速解决安全问题的唯一可靠方法。所以不要把最后期限看作是粗鲁的；这是一个历史悠久的传统，并且有其充分的理由。如果绝对必要，可以协商，但要记住，报告者掌握着所有的牌。</para>
 
-<para>Once you know the severity and urgency, you can start working on
-a fix.  There is sometimes a tradeoff between doing a fix elegantly
-and doing it speedily; this is why you must agree on the urgency
-before you start.  Keep discussion of the fix restricted to the
-security list members, of course, plus the original reporter (if she
-wants to be involved) and any developers who need to be brought in for
-technical reasons.</para>
+<para>一旦你知道了严重性和紧迫性，你就可以开始着手修复了。在优雅地修复和快速修复之间有时需要权衡；这就是为什么你必须在开始之前就紧迫性达成一致。当然，修复的讨论要限制在安全列表成员之间，加上原始报告者（如果她想参与）以及因技术原因需要引入的任何开发人员。</para>
 
-<para><emphasis>Do not commit the fix to any public
-repository</emphasis> before the go-public date.  If you were to
-commit it publicly, even with an
-innocent-looking log message, someone might notice and understand the
-change.  You never know who is watching your repository and why they
-might be interested.  Turning off commit emails wouldn't help; first
-of all, the gap in the commit mail sequence would itself look
-suspicious, and anyway, the data would still be in the repository.
-Just do all development in some private place known only to the people
-already aware of the bug.</para>
+<para><emphasis>在公开日期之前，不要将修复提交到任何公共仓库</emphasis>。如果你公开提交，即使日志消息看起来很无辜，也可能有人注意到并理解该更改。你永远不知道谁在监视你的仓库，以及他们为什么可能感兴趣。关闭提交邮件也无济于事；首先，提交邮件序列中的缺口本身就会显得可疑，而且无论如何，数据仍然在仓库中。只需在只有已经知道该漏洞的人知道的某个私密地方进行所有开发。</para>
 
 </sect3>
 
 <sect3 id="security-cve">
-<title>CVE Numbers</title>
+<title>CVE编号</title>
 
-<para>You may have seen a <firstterm>CVE number</firstterm> associated
-with a particular security problems&nbsp;&mdash;&nbsp;e.g., a number
-like "CVE-2014-0160", where the first numeric part is the year, and
-the second is an increasing sequence number (it may exceed four digits
-if more than 10,000 numbers are handed out in a given year).</para>
+<para>你可能见过与特定安全问题相关的<firstterm>CVE编号</firstterm>&nbsp;&mdash;&nbsp;例如，像“CVE-2014-0160”这样的编号，其中第一个数字部分是年份，第二个是递增的序列号（如果一年内发放的编号超过10,000个，它可能会超过四位数）。</para>
 
-<para>A CVE number is an entry in the "Common Vulnerabilities and
-Exposures" list maintained at <ulink url="https://www.cve.org/"
->https://www.cve.org/</ulink>.<footnote><para>Formerly at
-<ulink url="https://cve.mitre.org/" >https://cve.mitre.org/</ulink>,
-so if you're accustomed to the older URL, note that the site is
-transitioning to <emphasis>www.cve.org</emphasis>.  The transition
-started in late September 2021 and is planned to be completed within
-one year.</para></footnote>  The purpose of the list is to a provide
-standardized name for every known computer security problem, so that
-everyone has a unique, canonical name to use when discussing it, and a
-central place to go to find out more information.<footnote><para>In
-the past, a CVE number would start out as a CAN number ("CAN" for
-"candidate") until it was approved for inclusion in the official list,
-at which point the "CAN" would be replaced with "CVE" while the number
-portion remained the same.  However, nowadays they are just assigned a
-"CVE-" prefix from the start, although that prefix does not guarantee
-that the vulnerability will be included in the official list.  (For
-example, it might be later discovered to be a duplicate of an existing
-CVE, in which case the earlier one&nbsp;&mdash;&nbsp;the lower
-number&nbsp;&mdash;&nbsp;should be used.)</para></footnote></para>
+<para>CVE编号是“通用漏洞和暴露”列表中的一个条目，该列表维护在<ulink url="https://www.cve.org/">https://www.cve.org/</ulink>。<footnote><para>以前在<ulink url="https://cve.mitre.org/">https://cve.mitre.org/</ulink>，所以如果你习惯了旧的URL，请注意该网站正在过渡到<emphasis>www.cve.org</emphasis>。过渡于2021年9月下旬开始，计划在一年内完成。</para></footnote>该列表的目的是为每个已知的计算机安全问题提供一个标准化的名称，以便每个人在讨论它时都有一个唯一的、规范的名称，以及一个可以去获取更多信息的中心位置。<footnote><para>过去，一个CVE编号在被批准列入官方列表之前会以一个CAN编号（“CAN”代表“候选”）开始，一旦被批准，CAN就会被CVE取代，而数字部分保持不变。然而，如今它们从一开始就被分配一个“CVE-”前缀，尽管该前缀并不保证该漏洞会被列入官方列表。（例如，它后来可能被发现是现有CVE的重复，在这种情况下，应该使用较早的那个&nbsp;&mdash;&nbsp;即较小的数字。）</para></footnote></para>
 
-<para>A CVE entry does not itself contain a full description of the
-bug and how to protect against it.  Instead, it contains a brief
-summary, and a list of references to external resources (such as a
-announcement post from the project in question) where people can go to
-get more detailed information.  The real purpose of <ulink
-url="https://www.cve.org/" >https://www.cve.org/</ulink> is to provide a
-well-organized space in which every vulnerability has a single name,
-and people have a clear route to get more data about it.  See <ulink
-url="https://www.cve.org/CVERecord?id=CVE-2014-0160"
->https://www.cve.org/CVERecord?id=CVE-2014-0160</ulink> for an
-example of an entry.</para>
+<para>CVE条目本身并不包含对漏洞的完整描述以及如何防范它。相反，它包含一个简短的摘要，以及一个指向外部资源的参考列表（例如来自相关项目的公告帖子），人们可以去那里获取更详细的信息。www.cve.org的真正目的是提供一个组织良好的空间，其中每个漏洞都有一个唯一的名称，并且人们有明确的途径来获取有关它的更多数据。有关条目的示例，请参见<ulink url="https://www.cve.org/CVERecord?id=CVE-2014-0160">https://www.cve.org/CVERecord?id=CVE-2014-0160</ulink>。</para>
 
-<para>If your vulnerability meets the criteria, you may wish to obtain
-a CVE number for it.  You can request one using the instructions at
-<ulink url="https://www.cve.org/ResourcesSupport/ReportRequest"
->https://www.cve.org/ResourcesSupport/ReportRequest</ulink>, but if there is someone in
-your project who has already obtained CVE numbers, or who knows
-someone who has, let them do it. The CVE Program gets a lot of
-submissions, many of them spurious or poorly formed; by submitting
-through an experienced and trusted source, you will save everyone time
-and possibly get your CVE number assigned more quickly.  The other
-advantage of doing it this way is that somewhere along the chain,
-someone may know enough to tell you that a) it wouldn't count as a
-vulnerability or exposure according to the official criteria, so there is
-no point submitting it, or b) the vulnerability already
-<emphasis>has</emphasis> a CVE number.  The latter can happen if the
-bug has already been published on another security advisory list
-(and if that happened without your project hearing about it, then you
-should worry what else might be going on that you don't know
-about.)</para>
+<para>如果你的漏洞符合标准，你可能希望为其获取一个CVE编号。你可以按照<ulink url="https://www.cve.org/ResourcesSupport/ReportRequest">https://www.cve.org/ResourcesSupport/ReportRequest</ulink>的说明来申请，但如果你项目中已经有人获取过CVE编号，或者认识获取过的人，就让他们来做。CVE计划会收到大量提交，其中许多是虚假的或格式不佳的；通过一个有经验和可信赖的来源提交，可以节省大家的时间，并可能更快地获得你的CVE编号。这样做还有一个好处是，在这个过程中的某个环节，可能有人能告诉你a)根据官方标准，它不算是漏洞或暴露，所以没有提交的必要，或者b)该漏洞已经<emphasis>有</emphasis>一个CVE编号了。后者可能发生，如果该漏洞已经发布在另一个安全公告列表上（如果那是在你的项目不知情的情况下发生的，那么你就应该担心还有什么你不知道的事情正在发生）。</para>
 
-<para>If you get a CVE number at all, you usually want to get it in
-the early stages of your bug investigation, so that all further
-communications can refer to that number.  The entry won't become
-public right away&nbsp;&mdash;&nbsp;see <ulink
-url="https://www.cve.org/About/Process" >https://www.cve.org/About/Process</ulink>
-for how and when public disclosure happens&nbsp;&mdash;&nbsp;but the
-number will be reserved, and that in itself makes coordination and
-management of the vulnerability easier.</para>
+<para>如果你要获取CVE编号，通常应该在漏洞调查的早期阶段获取，这样所有后续的沟通都可以引用该编号。该条目不会立即公开&nbsp;&mdash;&nbsp;关于公开披露的方式和时间，请参见<ulink url="https://www.cve.org/About/Process">https://www.cve.org/About/Process</ulink>&nbsp;&mdash;&nbsp;但该编号会被保留，这本身就使得漏洞的协调和管理更加容易。</para>
 
 </sect3>
 
 <sect3 id="security-cvss">
-<title>Common Vulnerability Scoring System (CVSS) Scores</title>
+<title>通用漏洞评分系统（CVSS）评分</title>
 
-<para>Describing the severity of a vulnerability accurately is
-actually a difficult task.  Does the vulnerability require physical
-access to the computer, or is network access enough?  Does it require
-an authenticated user or not?  Is it technically difficult to exploit,
-or can any bored teenager with some coding skills run it?  Does it
-affect data integrity?  Does it cause the software to crash?</para>
+<para>准确描述一个漏洞的严重程度实际上是一项艰巨的任务。漏洞是否需要物理接触计算机，还是网络接触就足够了？它是否需要经过身份验证的用户？利用起来技术上是否困难，还是任何一个有一定编码技能的无聊少年都能做到？它是否影响数据完整性？它是否会导致软件崩溃？</para>
 
-<para>Therefore, don't try to improvise language for expressing
-severity.  Instead, use the <firstterm>Common Vulnerability Scoring
-System</firstterm> (<firstterm>CVSS</firstterm>) developed by the
-National Vulnerability Database at the U.S. National Institute of
-Standards: <ulink url="https://nvd.nist.gov/vuln-metrics/cvss"
->https://nvd.nist.gov/vuln-metrics/cvss</ulink></para>
+<para>因此，不要试图即兴地用语言来表达严重性。相反，使用美国国家标准与技术研究院国家漏洞数据库开发的<firstterm>通用漏洞评分系统</firstterm>（<firstterm>CVSS</firstterm>）：<ulink url="https://nvd.nist.gov/vuln-metrics/cvss">https://nvd.nist.gov/vuln-metrics/cvss</ulink></para>
 
-<para>NVD has thought very carefully about how to accurately and
-completely characterize severity for digital vulnerabilities, and
-their standardized expression format has become a standard in computer
-security.  You can see an example in the "Severity:" section of the
-sample pre-notification email in <xref
-linkend="security-prenotification"/> below.</para>
+<para>NVD对如何准确、完整地描述数字漏洞的严重性进行了非常仔细的思考，他们的标准化表达格式已成为计算机安全领域的标准。你可以在下面<xref linkend="security-prenotification"/>中的示例预通知邮件的“严重性：”部分看到一个例子。</para>
 
 </sect3>
 
 <sect3 id="security-prenotification">
-<title>Pre-Notification</title>
+<title>预先通知</title>
 
-<para>Once your security response team (that is, those developers who
-are on the security mailing list, or who have been brought in to deal
-with a particular report) has a fix ready, you need to decide how to
-distribute it.</para>
+<para>一旦你的安全响应团队（即安全邮件列表上的开发人员，或为处理特定报告而引入的开发人员）准备好了修复方案，你就需要决定如何分发它。</para>
 
-<para>If you simply commit the fix to your repository, or otherwise
-announce it to the world, you effectively force everyone using your
-software to upgrade immediately or risk being hacked.  It is sometimes
-appropriate, therefore, to do <firstterm>pre-notification</firstterm>
-for certain important users.</para>
+<para>如果你只是将修复提交到你的代码库，或者以其他方式向全世界宣布，你实际上是强迫所有使用你软件的人立即升级，否则就有被黑客攻击的风险。因此，对某些重要的用户进行<firstterm>预先通知</firstterm>有时是合适的。</para>
 
-<para>Pre-notification is somewhat controversial, because it
-privileges some users over others.  I personally think there are some
-circumstances where it is the right choice, particularly when there
-are well-known online services that use the software and that are
-tempting targets for attackers (perhaps because those services hold a
-lot of commercial or personal data about users).  Those service's
-administrators would appreciate having an extra day or two to do the
-upgrade, so that they are already protected by the time the exploit
-becomes public knowledge&nbsp;&mdash;&nbsp;and their users, if they
-knew about this at all, would appreciate it too.</para>
+<para>预先通知有点争议，因为它使一些用户比其他用户享有特权。我个人认为，在某些情况下，这是一个正确的选择，特别是当有知名的在线服务使用该软件，并且这些服务是攻击者的诱人目标时（也许因为那些服务持有大量关于用户的商业或个人数据）。那些服务的管理员会希望有一两天的时间来进行升级，这样当漏洞被公之于众时，他们已经受到了保护&nbsp;&mdash;&nbsp;而且他们的用户，如果他们知道这一切的话，也会希望如此。</para>
 
-<para>Pre-notification simply means contacting those administrators
-privately before the go-public date, telling them of the vulnerability
-and how to fix it.  You should send pre-notification only to people
-you trust to be discreet with the information, and with whom you can
-communicate securely.  That is, the qualification for receiving
-pre-notification is threefold: the recipient must run a large,
-important service where a compromise would be a serious matter; the
-recipient must be known to be someone who won't blab about the
-security problem before the go-public date; and you must have a way to
-communicate securely with the recipient, so that any eavesdroppers
-between you and your recipient can't read the
-message.<footnote><para>Remember that Subject lines in emails aren't
-encrypted, so don't put too much information about the vulnerability
-in a Subject line.</para></footnote></para>
+<para>预先通知仅仅意味着在公开日期之前私下联系那些管理员，告诉他们漏洞以及如何修复。你应该只向你信任的、能对信息保密的人发送预先通知，并且你必须能够安全地与他们沟通。也就是说，接收预先通知的资格有三点：接收者必须运行一个大型、重要的服务，其被攻破会是严重事件；接收者必须是已知不会在公开日期前泄露安全问题的人；并且你必须有办法与接收者安全地沟通，这样你和接收者之间的任何窃听者都无法读取消息。<footnote><para>记住，电子邮件中的主题行是不加密的，所以不要在主题行中放太多关于漏洞的信息。</para></footnote></para>
 
-<para>Pre-notification should be done via secure means.  If email,
-then encrypt it, for the same reasons explained in <xref
-linkend="security-receiving"/>, but if you have a phone number or
-other out-of-band secure way to contact the administrator, use that.
-When sending encrypted pre-notification emails, send them individually
-(one at a time) to each recipient.  Do <emphasis>not</emphasis> send
-to the entire list of recipients at once, because then they would see
-each others' names&nbsp;&mdash;&nbsp;meaning that you would essentially be
-alerting each recipient to the fact that each
-<emphasis>other</emphasis> recipient may have a security hole in her
-service.  Sending it to them all via blind CC (BCC) isn't a good
-solution either, because some admins protect their inboxes with spam
-filters that either block or reduce the priority of BCC'd mail, since
-so much spam is sent via BCC.</para>
+<para>预先通知应通过安全的方式进行。如果是电子邮件，则应加密，原因与<xref linkend="security-receiving"/>中解释的相同，但如果你有电话号码或其他带外安全方式联系管理员，则应使用该方式。发送加密的预先通知电子邮件时，应单独（一次一个）发送给每个收件人。切勿<emphasis>一次性</emphasis>发送给所有收件人，因为那样他们会看到彼此的名字&nbsp;&mdash;&nbsp;这意味着你实际上是在提醒每个收件人，每个<emphasis>其他</emphasis>收件人的服务可能存在安全漏洞。通过密送（BCC）发送给所有人也不是一个好的解决方案，因为一些管理员会用垃圾邮件过滤器来保护他们的收件箱，这些过滤器会阻止或降低密送邮件的优先级，因为很多垃圾邮件都是通过密送发送的。</para>
 
-<para>Here's a sample pre-notification mail:</para>
+<para>这是一封示例预通知邮件：</para>
 
 <screen>
-From: Your Name Here
-To: admin@large-famous-server.com
-Reply-to: Your Address Here (not the security list's address)
-Subject: Confidential notification regarding a security vulnerability.
+发件人：您的姓名
+收件人：admin@large-famous-server.com
+回复至：您的地址（而不是安全列表的地址）
+主题：关于一个安全漏洞的机密通知。
 
-[[[ BEGIN ENCRYPTED AND DIGITALLY-SIGNED MAIL ]]]
+[[[ 开始加密和数字签名的邮件 ]]]
 
-This email is a confidential pre-notification of a security
-alert in the Scanley server software.
+这封邮件是关于Scanley服务器软件安全警报的机密预通知。
 
-Please *do not forward* any part of this mail to anyone.
-The public announcement is not until May 19th, and we'd like
-to keep the information embargoed until then.
+请*不要*将这封邮件的任何部分转发给任何人。
+公开公告要到5月19日才会发布，我们希望在此之前对信息进行保密。
 
-You are receiving this mail because (we think) you run a
-Scanley server, and would want to have it patched before
-this security hole is made public on May 19th.
+您收到这封邮件是因为（我们认为）您运行着一个Scanley服务器，
+并且希望在5月19日这个安全漏洞被公开之前修复它。
 
-References:
+参考资料：
 ===========
 
-   CVE-2022-892346: Scanley stack overflow in queries
+   CVE-2022-892346：Scanley在查询中的堆栈溢出
 
-Vulnerability:
+漏洞：
 ==============
 
-   The server can be made to run arbitrary commands if the
-   server's locale is misconfigured and the client sends a
-   malformed query.
+   如果服务器的区域设置配置不当，并且客户端发送了一个格式错误的查询，
+   服务器可能会被用来运行任意命令。
 
-Severity:
+严重性：
 =========
 
-   CVSSv2 Base Score: 9.0
-   CVSSv2 Base Vector: AV:N/AC:L/Au:N/C:C/I:C/A:C
+   CVSSv2基础评分：9.0
+   CVSSv2基础向量：AV:N/AC:L/Au:N/C:C/I:C/A:C
 
-   (See https://nvd.nist.gov/CVSS/Vector-v2.aspx for how to
-   interpret these expressions.)
+   （有关如何解释这些表达式，请参阅https://nvd.nist.gov/CVSS/Vector-v2.aspx。）
 
-Workarounds:
+解决方法：
 ============
 
-   Setting the 'natural-language-processing' option to 'off'
-   in scanley.conf closes this vulnerability.
+   在scanley.conf中将'natural-language-processing'选项设置为'off'可以关闭此漏洞。
 
-Patch:
+补丁：
 ======
 
-   The patch below applies to Scanley 3.0, 3.1, and 3.2.
+   以下补丁适用于Scanley 3.0、3.1和3.2。
 
-   A new public release (Scanley 3.2.1) will be made on or
-   just before May 19th, so that it is available at the same
-   time as this vulnerability is made public.  You can patch
-   now, or just wait for the public release.  The only
-   difference between 3.2 and 3.2.1 will be this patch.
+   一个新的公开版本（Scanley 3.2.1）将在5月19日或之前发布，
+   以便在该漏洞被公开的同时可用。您可以现在打补丁，
+   或者等到公开版本发布。3.2和3.2.1之间的唯一区别就是这个补丁。
 
-[...patch goes here...]
+[...补丁放在这里...]
 </screen>
 
-<para>If you have a CVE number, include it in the pre-notification (as
-shown above), even though the information is still embargoed and
-therefore the corresponding MITRE page will show nothing at the time
-of pre-notification.  Including the CVE number allows the recipient to
-know with certainty that the bug they were pre-notified about is the
-same one they later hear about through public channels, so they don't
-have to worry whether further action is necessary or not, which is
-precisely the point of CVE numbers.</para>
+<para>如果你有一个CVE编号，请在预通知中包含它（如上所示），即使信息仍然是保密的，因此在预通知时相应的MITRE页面将不会显示任何内容。包含CVE编号可以让接收者确定他们被预通知的漏洞与他们后来通过公共渠道听到的漏洞是同一个，这样他们就不必担心是否需要采取进一步的行动，这正是CVE编号的意义所在。</para>
 
 </sect3>
 
 <sect3 id="security-announcing">
-<title>Distribute the Fix Publicly</title>
+<title>公开发布修复方案</title>
 
-<para>The last step in handling a security bug is to distribute the
-fix publicly.  In a single, comprehensive announcement, you should
-describe the problem, give the CVE number if any, describe how to
-work around it, and how to permanently fix it.  Usually "fix" means
-upgrading to a new version of the software, though sometimes it can
-mean applying a patch, particularly if the software is normally run in
-source form anyway.  If you do make a new release, it should differ
-from some existing release by exactly the security patch.  That way,
-conservative admins can upgrade without worrying about what else they
-might be affecting; they also don't have to worry about future upgrades,
-because the security fix will be in all future releases as a matter of
-course.  (Details of release procedures are discussed in
-<xref linkend="security-releases"/>.)</para>
+<para>处理安全漏洞的最后一步是公开发布修复方案。在一个全面的公告中，你应该描述问题，提供CVE编号（如果有的话），描述如何绕过它，以及如何永久修复它。通常“修复”意味着升级到软件的新版本，尽管有时它也可能意味着应用一个补丁，特别是如果软件通常是以源代码形式运行的话。如果你确实发布了新版本，它应该与某个现有版本只有一个安全补丁的区别。这样，保守的管理员可以升级，而不用担心他们可能会影响到其他什么；他们也不必担心未来的升级，因为安全修复将理所当然地包含在所有未来的版本中。（发布程序的细节在<xref linkend="security-releases"/>中讨论。）</para>
 
-<para>Whether or not the public fix involves a new release, do the
-announcement with roughly the same priority as you would a new
-release: send a mail to the project's <literal>announce</literal>
-list, make a new press release, etc.  While you should never try to
-play down the existence of a security bug out of concern for the
-project's reputation, you may certainly set the tone and prominence of
-a security announcement to match the actual severity of the problem.
-If the security hole is just a minor information exposure, not an
-exploit that allows the user's entire computer to be taken over, then
-it may not warrant a lot of fuss.  See <ulink
-url="https://www.cve.org/ResourcesSupport/Glossary"
->https://www.cve.org/ResourcesSupport/Glossary</ulink> for a good
-introduction to how to think about and discuss vulnerabilities.</para>
+<para>无论公开修复是否涉及新版本，都要以与发布新版本大致相同的优先级进行公告：向项目的<literal>announce</literal>列表发送邮件，发布新的新闻稿等。虽然你不应该出于对项目声誉的担忧而试图淡化安全漏洞的存在，但你当然可以根据问题的实际严重性来设定安全公告的基调和显眼程度。如果安全漏洞只是一个微小的信息泄露，而不是一个允许用户整个计算机被接管的漏洞，那么它可能不值得大惊小怪。有关如何思考和讨论漏洞的良好介绍，请参阅<ulink url="https://www.cve.org/ResourcesSupport/Glossary">https://www.cve.org/ResourcesSupport/Glossary</ulink>。</para>
 
-<para>In general, if you're unsure how to treat a security problem,
-find someone with experience and talk to them about it.  Assessing and
-handling vulnerabilities is very much an acquired skill, and it's easy
-to make missteps the first few times.</para>
+<para>总的来说，如果你不确定如何处理一个安全问题，找一个有经验的人和他们谈谈。评估和处理漏洞是一项非常需要后天习得的技能，前几次很容易出错。</para>
 
 </sect3>
 
 <sect3 id="security-further-reading">
-<title>Further Reading on Handling Security Vulnerabilities</title>
+<title>关于处理安全漏洞的进一步阅读</title>
 
 <itemizedlist>
 
-  <listitem><para><ulink url="https://www.cve.org/" >https://www.cve.org/</ulink>
-  is the official source of information about the CVE process.</para></listitem>
+  <listitem><para><ulink url="https://www.cve.org/">https://www.cve.org/</ulink>是关于CVE流程的官方信息来源。</para></listitem>
 
-  <listitem><para><ulink url="https://www.debian.org/security/cve-compatibility"
-  >https://www.debian.org/security/cve-compatibility</ulink> is a particularly
-  clear exposition of one open source project's use of CVE numbers.</para></listitem>
+  <listitem><para><ulink url="https://www.debian.org/security/cve-compatibility">https://www.debian.org/security/cve-compatibility</ulink>是一个开源项目如何使用CVE编号的特别清晰的说明。</para></listitem>
 
-  <listitem><para>The post "A minimal security response process" at
-  <ulink url="https://access.redhat.com/blogs/766093/posts/1975833"
-  >https://access.redhat.com/blogs/766093/posts/1975833</ulink>
-  is a good writeup from a security engineer at RedHat.</para></listitem>
+  <listitem><para>RedHat的一位安全工程师在<ulink url="https://access.redhat.com/blogs/766093/posts/1975833">https://access.redhat.com/blogs/766093/posts/1975833</ulink>上发表的“一个最小的安全响应流程”是一篇很好的文章。</para></listitem>
 
-  <listitem><para>The Apache Software Foundation's guidelines on
-  handling security vulnerabilities at <ulink
-  url="https://www.apache.org/security/committers.html"
-  >https://www.apache.org/security/committers.html</ulink> are are an
-  excellent checklist that you can compare against to see if you're
-  doing everything carefully.</para></listitem>
+  <listitem><para>Apache软件基金会关于处理安全漏洞的指南位于<ulink url="https://www.apache.org/security/committers.html">https://www.apache.org/security/committers.html</ulink>，是一个很好的清单，你可以用它来比较，看看你是否都做得小心翼翼。</para></listitem>
 
 </itemizedlist>
 
