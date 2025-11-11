@@ -405,44 +405,20 @@ url="https://subversion.apache.org/docs/community-guide/"
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="license-quickstart">
-<title>Choosing a License and Applying It</title>
+<title>选择许可证并让它真正生效</title>
 
-<para>This section is intended to be a very quick, very rough guide to
-choosing a license.  Read <xref linkend="legal"/> to understand
-the detailed legal implications of the different licenses, and how the
-license you choose can affect people's ability to mix your software
-with other software.</para>
+<para>本节只是一个非常快速、非常粗略的选项指南。想弄清不同许可证在法律上的细微差别，以及你的选择会如何影响别人把你的软件与其他软件混用，请参阅<xref linkend="legal"/>。</para>
 
 <sidebar id="fsf-and-osi-approved">
-  <title>Synonyms: "free software license", "FSF-approved", "open
-  source license", and "OSI-approved"</title>
+  <title>术语对照：“自由软件许可证”“FSF 批准”“开源许可证”“OSI 批准”</title>
 
-  <para>The terms "free software license" and "open source license"
-  are essentially synonymous, and I treat them so throughout this
-  book.</para>
+  <para>“自由软件许可证”和“开源许可证”基本上是同义词，本书始终把它们当作等价概念来讨论。</para>
 
-  <para>Technically, the former term refers to licenses confirmed by
-  the Free Software Foundation as meeting the "four freedoms"
-  of the Free Software Definition (FSD, see <ulink
+  <para>严格来说，前者指的是获得自由软件基金会确认、符合“自由软件定义”（FSD，见<ulink
   url="https://www.gnu.org/philosophy/free-sw.html"
-  >https://www.gnu.org/philosophy/free-sw.html</ulink>), while the latter term refers
-  to licenses approved by the Open Source Initiative as meeting the
-  Open Source Definition (OSD, see <ulink url="https://opensource.org/osd"
-  >https://opensource.org/osd</ulink>).  However, if you read the FSD
-  and the OSD, it becomes obvious that the two definitions delineate the
-  same freedoms&nbsp;&mdash;&nbsp;which is not surprising, given the
-  historical background explained in <xref
-  linkend="free-vs-open-source"/>.  The inevitable, and in
-  some sense deliberate, result is that the two organizations have
-  approved the same set of licenses.<footnote><para>There actually <emphasis>are</emphasis>
-  some minor differences between the sets of approved licenses, but
-  they are not significant for our purposes&nbsp;&mdash;&nbsp;or
-  indeed for most practical purposes.  In some cases, one or the other
-  organization has simply not gotten around to considering a given
-  license, usually a license that is not widely-used anyway.  There
-  are also a few rarely-used licenses that have clauses that formally
-  conflict with the letter, if not the spirit, of one or the other
-  definition.
+  >https://www.gnu.org/philosophy/free-sw.html</ulink>）四项自由的许可证；后者指的是获得开源促进会批准、符合“开源定义”（OSD，见<ulink url="https://opensource.org/osd"
+  >https://opensource.org/osd</ulink>）的许可证。不过，只要读过 FSD 和 OSD，你就会发现它们描述的是同一组自由——考虑到<xref
+  linkend="free-vs-open-source"/>中介绍的历史渊源，这一点并不奇怪。结果就是，这两个组织批准的许可证集合在有意无意之间高度一致。<footnote><para>两个审批列表之间确实存在一些小差别，但对我们而言几乎没有实际影响。很多时候只是某一方还没来得及审议某个鲜为人知的许可证；也确实有极少数许可证在文字上与其中一个定义存在冲突，虽然精神上未必如此。
   <!--
   I don't want to take up space in the book with it, but for the
   record, here is the conversation in which Alexandre Oliva provided
@@ -1276,4 +1252,3 @@ local variables:
 sgml-parent-document: ("book.xml" "chapter")
 end:
 -->
-

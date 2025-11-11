@@ -535,125 +535,81 @@ Section 5 -- Disclaimer of Warranties and Limitation of Liability.
 
 <sect3>
 <title>
-Section 6 -- Term and Termination.
+第 6 条——期限与终止
 </title>
 
 <orderedlist numeration="loweralpha">
   <listitem><para>
-     This Public License applies for the term of the Copyright and
-     Similar Rights licensed here. However, if You fail to comply with
-     this Public License, then Your rights under this Public License
-     terminate automatically.
+     本公共许可证在此处所许可的著作权及类似权利的有效期内持续有效。但如果你违反本公共许可证，你在本许可证下的权利将自动终止。
   </para></listitem>
   <listitem>
     <para>
-     Where Your right to use the Licensed Material has terminated under
-     Section 6(a), it reinstates:
+     如果你依据第 6(a) 条被终止了对许可素材的使用权，则在以下情况下恢复：
     </para>
     <orderedlist numeration="arabic">
       <listitem><para>
-          automatically as of the date the violation is cured, provided
-          it is cured within 30 days of Your discovery of the
-          violation; or
+          在你发现违约之日起 30 天内纠正的，自纠正之日自动恢复；或
       </para></listitem>
       <listitem><para>
-          upon express reinstatement by the Licensor.
+          经许可人明确表示恢复的。
       </para></listitem>
     </orderedlist>
     <para>
-     For the avoidance of doubt, this Section 6(b) does not affect any
-     right the Licensor may have to seek remedies for Your violations
-     of this Public License.
+     为避免疑义，第 6(b) 条并不影响许可人就你的违约行为寻求救济的任何权利。
     </para>
   </listitem>
   <listitem><para>
-     For the avoidance of doubt, the Licensor may also offer the
-     Licensed Material under separate terms or conditions or stop
-     distributing the Licensed Material at any time; however, doing so
-     will not terminate this Public License.
+     为避免疑义，许可人也可以在任何时候以其他条款或条件提供许可素材，或停止分发该素材；不过，这么做不会终止本公共许可证。
   </para></listitem>
   <listitem><para>
-     Sections 1, 5, 6, 7, and 8 survive termination of this Public
-     License.
+     第 1、5、6、7、8 条在本公共许可证终止后仍继续有效。
   </para></listitem>
 </orderedlist>
 </sect3>
 
 <sect3>
 <title>
-Section 7 -- Other Terms and Conditions.
+第 7 条——其他条款与条件
 </title>
 
 <orderedlist numeration="loweralpha">
   <listitem><para>
-     The Licensor shall not be bound by any additional or different
-     terms or conditions communicated by You unless expressly agreed.
+     除非许可人明确同意，否则不会受你另行提出的任何附加或不同条款、条件所拘束。
   </para></listitem>
   <listitem><para>
-     Any arrangements, understandings, or agreements regarding the
-     Licensed Material not stated herein are separate from and
-     independent of the terms and conditions of this Public License.
+     任何关于许可素材、但未在本公共许可证中写明的安排、谅解或协议，都与本许可证的条款和条件相互独立。
   </para></listitem>
 </orderedlist>
 </sect3>
 
 <sect3>
 <title>
-Section 8 -- Interpretation.
+第 8 条——解释
 </title>
 
 <orderedlist numeration="loweralpha">
   <listitem><para>
-     For the avoidance of doubt, this Public License does not, and
-     shall not be interpreted to, reduce, limit, restrict, or impose
-     conditions on any use of the Licensed Material that could lawfully
-     be made without permission under this Public License.
+     为避免疑义，本公共许可证不应被理解为减少、限制、约束或附加任何使用许可素材的条件，只要该等使用在没有本许可证的情况下本就合法。
   </para></listitem>
   <listitem><para>
-     To the extent possible, if any provision of this Public License is
-     deemed unenforceable, it shall be automatically reformed to the
-     minimum extent necessary to make it enforceable. If the provision
-     cannot be reformed, it shall be severed from this Public License
-     without affecting the enforceability of the remaining terms and
-     conditions.
+     在可能的范围内，如果本公共许可证的任何条款被认定无法执行，应自动将其调整到足以使其可执行的最低程度；若无法调整，应将其从本许可证中剔除，而不影响其余条款的效力。
   </para></listitem>
   <listitem><para>
-     No term or condition of this Public License will be waived and no
-     failure to comply consented to unless expressly agreed to by the
-     Licensor.
+     除非许可人明确同意，本公共许可证的任何条款或条件均不得视为被放弃，许可人也不得被视为默许任何不遵守行为。
   </para></listitem>
   <listitem><para>
-     Nothing in this Public License constitutes or may be interpreted
-     as a limitation upon, or waiver of, any privileges and immunities
-     that apply to the Licensor or You, including from the legal
-     processes of any jurisdiction or authority.
+     本公共许可证中的任何内容都不构成、也不应被理解为对适用于许可人或你的特权与豁免（包括来自任何司法管辖或机构的法律程序）的限制或放弃。
   </para></listitem>
 </orderedlist>
 </sect3>
 
 <sect3>
 <para>
-Creative Commons is not a party to its public
-licenses. Notwithstanding, Creative Commons may elect to apply one of
-its public licenses to material it publishes and in those instances
-will be considered the “Licensor.” The text of the Creative Commons
-public licenses is dedicated to the public domain under the CC0 Public
-Domain Dedication. Except for the limited purpose of indicating that
-material is shared under a Creative Commons public license or as
-otherwise permitted by the Creative Commons policies published at
-creativecommons.org/policies, Creative Commons does not authorize the
-use of the trademark "Creative Commons" or any other trademark or logo
-of Creative Commons without its prior written consent including,
-without limitation, in connection with any unauthorized modifications
-to any of its public licenses or any other arrangements,
-understandings, or agreements concerning use of licensed material. For
-the avoidance of doubt, this paragraph does not form part of the
-public licenses.
+Creative Commons 不是其公共许可证的缔约方。不过，Creative Commons 可以选择将其中一份公共许可证适用于它发布的内容，在这种情况下它将被视为“许可人”。Creative Commons 公共许可证的文本已经通过 CC0 公共领域奉献声明进入公有领域。除非用于说明某项内容是依据 Creative Commons 公共许可证共享，或符合 Creative Commons 在 creativecommons.org/policies 上公布的其他政策，否则未经书面许可，Creative Commons 不授权任何人使用“Creative Commons”商标或其任何其他商标、标识——包括但不限于将这些商标与对公共许可证的未授权修改或任何其他有关许可素材使用的安排、谅解、协议相结合。为避免疑义，本段落不构成公共许可证的一部分。
 </para>
 
 <para>
-  Creative Commons may be contacted at
-  <ulink url="https://creativecommons.org/"/>.
+  可以通过<ulink url="https://creativecommons.org/"/>联系 Creative Commons。
 </para>
 
 </sect3>

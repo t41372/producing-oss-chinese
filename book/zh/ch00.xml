@@ -89,98 +89,33 @@ url="http://www.collab.net/" >http://www.collab.net/</ulink>）于 2000 年初�
 
 <para>Brian Fitzpatrick 在我写作时审阅了几乎所有的材料，这不仅使书变得更好，而且在我想去世界上任何地方而不是坐在电脑前时，让我继续写作。Ben Collins-Sussman 和 Mike Pilato 也会检查进度，并且总是乐于讨论——有时会详细讨论——我那周试图涵盖的任何话题。他们还注意到我放慢速度时，并在必要时温和地督促。谢谢你们，伙计们。</para>
 
-<para>Biella Coleman was writing her dissertation at the same time
-I was writing this book. She knows what it means to sit down and
-write every day, and provided an inspiring example as well as a
-sympathetic ear. She also has a fascinating anthropologist's-eye view
-of the free software movement, giving both ideas and references that I
-was able use in the book. Alex Golub&nbsp;&mdash;&nbsp;another anthropologist
-with one foot in the free software world, and also finishing his
-dissertation at the same time&nbsp;&mdash;&nbsp;was exceptionally supportive early
-on, which helped a great deal.</para>
+<para>Biella Coleman 和我几乎同时在写各自的大作品。她特别清楚“每天坐下来写作”意味着什么，不仅以身作则，也随时倾听。她从人类学视角观察自由软件运动，提供了不少观点和参考资料。Alex Golub——另一位在人类学与自由软件之间脚踩两条船的人——那时也在赶论文，他在早期给予了极大的支持，对我帮助甚大。</para>
 
-<para>Micah Anderson somehow never seemed too oppressed by his own
-writing gig, which was inspiring in a sick, envy-generating sort of
-way, but he was ever ready with friendship, conversation, and (on at
-least one occasion) technical support. Thanks, Micah!</para>
+<para>Micah Anderson 看上去从不被自己的写作任务压垮，这种状态既令人嫉妒也让人振奋。他始终带着友谊与话题，必要时还提供技术支援。谢谢你，Micah！</para>
 
-<para>Jon Trowbridge and Sander Striker gave both encouragement and
-concrete help&nbsp;&mdash;&nbsp;their broad experience in free software provided
-material I couldn't have gotten any other way.</para>
+<para>Jon Trowbridge 和 Sander Striker 不仅鼓励我，也动手帮忙；他们在自由软件世界积累的广泛经验，让我能够引用许多别处得不到的素材。</para>
 
-<para>Thanks to Greg Stein not only for friendship and well-timed
-encouragement, but for showing the Subversion project how important
-regular code review is in building a programming community. Thanks
-also to Brian Behlendorf, who tactfully drummed into our heads the
-importance of having discussions publicly; I hope that principle is
-reflected throughout this book.</para>
+<para>感谢 Greg Stein 的友谊与恰到好处的鼓劲，也感谢他让 Subversion 项目真正理解例行代码评审对于建立开发社群的重要性。同时也要谢谢 Brian Behlendorf，他耐心地把“讨论要公开”这条原则敲进我们脑子里；希望你能在本书各处看到这一点。</para>
 
-<para>Thanks to Benjamin "Mako" Hill and Seth Schoen, for various
-conversations about free software and its politics; to Zack Urlocker
-and Louis Suarez-Potts for taking time out of their busy schedules to
-be interviewed; to Shane on the Slashcode list for allowing his post
-to be quoted; and to Haggen So for his enormously helpful comparison
-of canned hosting sites.</para>
+<para>感谢 Benjamin “Mako” Hill 和 Seth Schoen，和我聊了很多自由软件与其政治议题；感谢 Zack Urlocker 和 Louis Suarez-Potts 百忙之中接受访谈；感谢 Slashcode 列表上的 Shane 允许引用他的帖子；也感谢 Haggen So 提供非常有用的托管服务比较。</para>
 
-<para>Thanks to Alla Dekhtyar, Polina, and Sonya for their unflagging
-and patient encouragement. I'm very glad that I will no longer have
-to end (or rather, try unsuccessfully to end) our evenings early to go
-home and work on "The Book."</para>
+<para>感谢 Alla Dekhtyar、Polina 和 Sonya 从不间断、充满耐心的鼓励。我终于不用再（或者说，不用再徒劳地尝试）提前结束我们的晚上聚会，只为了回家写“那本书”了。</para>
 
-<para>Thanks to Jack Repenning for friendship, conversation, and a
-stubborn refusal to ever accept an easy wrong analysis when a harder
-right one is available. I hope that some of his long experience with
-both software development and the software industry rubbed off on this
-book.</para>
+<para>感谢 Jack Repenning 的友谊与对话，他从不接受轻率却错误的分析，总要找到更艰难但正确的结论。我也希望他在软件开发与软件产业里的丰富经验，多少能在这本书里留下些痕迹。</para>
 
-<para>CollabNet was exceptionally generous in allowing me a flexible
-schedule to write, and didn't complain when it went on far longer than
-originally planned. I don't know all the intricacies of how
-management arrives at such decisions, but I suspect Sandhya Klute, and
-later Mahesh Murthy, had something to do with it&nbsp;&mdash;&nbsp;my thanks to
-them both.</para>
+<para>CollabNet 非常慷慨，给了我灵活的时间安排，让我可以抽身写作，即使进度远远超出原计划也从未抱怨。我不清楚管理层如何做出这种决定，但我猜 Sandhya Klute 与后来接手的 Mahesh Murthy 功不可没——衷心感谢他们。</para>
 
-<para>The entire Subversion development team has been an inspiration
-for the past five years, and much of what is in this book I learned
-from working with them. I won't thank them all by name here, because
-there are too many, but I implore any reader who runs into a
-Subversion committer to immediately buy that committer the drink of
-their choice&nbsp;&mdash;&nbsp;I certainly plan to.</para>
+<para>整个 Subversion 开发团队在过去五年里一直激励着我。我在书里写的许多东西都来自与他们协作的经验。人数太多，无法逐一列名；请读者务必记得，只要遇到 Subversion committer，就请他或她喝一杯——我自己一定会这么做。</para>
 
-<para>Many times I ranted to Rachel Scollon about the state of the
-book; she was always willing to listen, and somehow managed to make
-the problems seem smaller than before we talked. That helped a
-lot&nbsp;&mdash;&nbsp;thanks.</para>
+<para>我无数次向 Rachel Scollon 倾诉本书的进度，她总能耐心倾听，并且神奇地让问题显得没那么可怕。这帮了我大忙——谢谢。</para>
 
-<para>Thanks (again) to Noel Taylor, who must surely have wondered why
-I wanted to write another book given how much I complained the last
-time, but whose friendship and leadership of Golos&aacute; helped keep
-music and good fellowship in my life even in the busiest times.
-Thanks also to Matthew Dean and Dorothea Samtleben, friends and
-long-suffering musical partners, who were very understanding as my
-excuses for not practicing piled up. Megan Jennings was constantly
-supportive, and genuinely interested in the topic even though it was
-unfamiliar to her&nbsp;&mdash;&nbsp;a great tonic for an insecure writer. Thanks,
-pal!</para>
+<para>再次感谢 Noel Taylor——在我上一本书抱怨得那么厉害的情况下，他大概很难理解我为什么还想再写一本。但他的友谊以及对 Golosá 的领导，让音乐和伙伴情谊在我最忙的时候也没有缺席。同样感谢 Matthew Dean 和 Dorothea Samtleben 这两位长久受我拖累的乐队伙伴，他们对我“没练习”的借口始终十分体谅。Megan Jennings 也一直支持我，对这个本来不熟悉的主题保持真正的兴趣——对一个缺乏自信的作者来说，这是极好的良药。谢谢你，朋友！</para>
 
-<para>I had four knowledgeable and diligent reviewers for this book:
-Yoav Shapira, Andrew Stellman, Davanum Srinivas, and Ben Hyde. If I
-had been able to incorporate all of their excellent suggestions, this
-would be a better book. As it was, time constraints forced me to pick
-and choose, but the improvements were still significant. Any errors
-that remain are entirely my own.</para>
+<para>本书有四位既专业又勤勉的审稿人：Yoav Shapira、Andrew Stellman、Davanum Srinivas 以及 Ben Hyde。如果我能把他们所有精彩的建议都实现，这会是一本更好的书。受限于时间我只能取舍，但书稿依然因为他们而大幅提升。剩下的所有错误都由我负责。</para>
 
-<para>My parents, Frances and Henry, were wonderfully supportive as
-always, and as this book is less technical than the previous one, I
-hope they'll find it somewhat more readable.</para>
+<para>我的父母 Frances 和 Henry 一如既往地支持我。这本书的技术味比前一本淡，希望他们读起来更轻松。</para>
 
-<para>Finally, I would like to thank the dedicatees, Karen Underhill
-and Jim Blandy. Karen's friendship and understanding have meant
-everything to me, not only during the writing of this book but for the
-last seven years. I simply would not have finished without her help.
-Likewise for Jim, a true friend and a hacker's hacker, who first
-taught me about free software, much as a bird might teach an airplane
-about flying.</para>
+<para>最后，要感谢献辞里的两位：Karen Underhill 和 Jim Blandy。Karen 的友谊与理解在写作期间乃至过去七年里对我意义重大；若没有她，我不可能完成此书。同样的还有 Jim，他是真正的挚友，也是黑客中的黑客，当年就是他带我认识自由软件，仿佛鸟儿教飞机如何飞翔。</para>
 
 </sect2>
 
@@ -191,129 +126,41 @@ about flying.</para>
 
 <para>O'Reilly Media 的 Andy Oram 作为编辑再次超越了职责范围。他仔细阅读并提出了许多出色的建议；他在说明性写作以及特别是在开源方面的专业知识在他的所有评论中都显而易见。我对他感激不尽，这本书因他的关注而大大改进。</para>
 
-<para>James Vasile has been my friend and colleague for well over a decade
-now, yet not a week goes in which I don't learn something new from
-him. Despite having a busy job&nbsp;&mdash;&nbsp;I know firsthand,
-because we're business partners&nbsp;&mdash;&nbsp;and young children at
-home, he unhesitatingly volunteered to read through the manuscript and
-provide feedback. Money can't buy that, and even if it could, I could
-never afford James. Thanks, pal.</para>
+<para>James Vasile 已经是我十多年的朋友兼同事了，几乎没有一周不让我学到新东西。虽然他工作忙——我深有体会，因为我们是事业伙伴——家里还有年幼的孩子，但他仍然毫不犹豫地答应通读手稿并提供反馈。这种帮助不是花钱就能买到的，即便能，我也买不起。谢谢你，兄弟。</para>
 
-<para>Cecilia Donnelly is both a wonderful friend and was a supremely
-capable Open Source Specialist at the Open Tech Strategies office in
-Chicago. It's a delight to be working with her, as our clients know
-too, and her clear thinking and sharp observations have influenced
-many parts of this book.</para>
+<para>Cecilia Donnelly 既是好友，也是我们 Open Tech Strategies 芝加哥办公室里出色的开源专家。和她共事是一种享受，客户也有同感；她清晰的思路和敏锐的观察影响了书中的许多部分。</para>
 
-<para>Karen Sandler has been unfailingly supportive, and provided
-thoughtful and patient discussion about many of the topics (and even
-some of the specific examples) in this book. As with James, I usually
-learn something from Karen when we talk about free software, and when
-we talk about other things too.</para>
+<para>Karen Sandler 一直不遗余力地支持我，对本书的许多主题（甚至个别实例）都提出了周到且耐心的讨论。和 James 一样，只要与 Karen 谈起自由软件，乃至其他话题，我几乎每次都能学到东西。</para>
 
-<para>Bradley Kuhn's name appears several times in the commit logs for
-this book, because he provided highly expert feedback on multiple
-occasions, in one case practically writing the patch himself. As I
-wrote in the log message for one of the commits, he is someone "whose
-contributions to free software have been immeasurable and whose
-dedication to our shared cause is a constant inspiration".</para>
+<para>Bradley Kuhn 的名字多次出现在本书提交日志里，因为他在很多场合都给出了极为专业的反馈，有一次甚至几乎直接把补丁写好了。正如我在某条提交说明中写的那样，他是“对自由软件贡献无可估量、对我们共同事业始终充满热情”的人。</para>
 
-<para>Karen and Bradley both work at the Software Freedom Conservancy
-(<ulink url="https://sfconservancy.org/" >https://sfconservancy.org/</ulink>).
-If you like this book and you want to help free software, donating to
-the Conservancy is a fine first step. It's also a fine second
-step.</para>
+<para>Karen 和 Bradley 都就职于 Software Freedom Conservancy（<ulink url="https://sfconservancy.org/" >https://sfconservancy.org/</ulink>）。如果你喜欢这本书，也想为自由软件尽一份力，向 Conservancy 捐款是很棒的第一步，也是极佳的第二步。</para>
 
-<para>Ben Reser provided a super-detailed and expert review of Chapters
-6 and 7 that resulted in many improvements. Ben, thank you so much.</para>
+<para>Ben Reser 为第 6、7 章做了极其细致、专业的审阅，让它们得到许多改进。Ben，衷心感谢。</para>
 
-<para>Michael Bernstein not only provided some detailed feedback
-during the interregnum between the first and second editions, he also
-helped a lot with organizing the Kickstarter campaign that made the
-latter possible. Thank you, Michael.</para>
+<para>Michael Bernstein 不仅在两版之间持续提供具体反馈，还帮忙组织了促成新版的重要 Kickstarter 活动。谢谢你，Michael。</para>
 
-<para>Danese Cooper always keeps me on my toes, and in particular
-brought me the message (which I was not at first willing to hear) that
-innersourcing <emphasis>can</emphasis> work as a means of helping
-organizations learn open source practices and eventually produce open
-source software themselves. Thanks for that, Danese, and much
-else.</para>
+<para>Danese Cooper 总能让我保持警觉。尤其要感谢她传达的讯息——我一开始并不想听——那就是 innersourcing <emphasis>确实</emphasis>可以帮助组织学习开源实践，并最终产出开源软件。谢谢你，Danese，以及你给予的所有其他支持。</para>
 
-<para>Between the two editions, I spent a very educational stretch of
-time working at O'Reilly Media, Code for America / Civic Commons
-(while ensconced in the Open Plans office in New York City, thanks to
-their very kind offer of desk space), and the New America Foundation
-as Open Internet Tools Project Fellow. Much of what I learned through
-that work ended up in the book, and in addition to the organizations
-themselves I thank Tim O'Reilly, Jen Pahlka, Andrew McLaughlin, Philip
-Ashlock, Abhi Nemani, Nick Grossman, Chris Holmes, Frank Hebbert, and
-Andrew Hoppin for the ideas and perspectives they shared.</para>
+<para>在两版之间，我有幸先后在 O'Reilly Media、Code for America / Civic Commons（感谢 Open Plans 在纽约办公室提供工位）以及新美国基金会担任 Open Internet Tools Project 研究员。这段经历让我收获颇多，也让本书受益良多。除了这些机构本身，我特别感谢 Tim O'Reilly、Jen Pahlka、Andrew McLaughlin、Philip Ashlock、Abhi Nemani、Nick Grossman、Chris Holmes、Frank Hebbert 和 Andrew Hoppin 分享的想法与视角。</para>
 
-<para>Sumana Harihareswara and Leonard Richardson have given frank and
-helpful commentary about various open source goings-on over the years;
-the book is better for their input, and I am the better for their
-friendship.</para>
+<para>Sumana Harihareswara 和 Leonard Richardson 多年来坦率地点评开源圈的各种动静。本书因为他们的意见而更好，我也因为他们的友谊而受益。</para>
 
-<para>Eben Moglen at the Software Freedom Law Center (<ulink
-url="https://softwarefreedom.org/" >https://softwarefreedom.org/</ulink>)
-taught me a lot about how to look at free software as a large-scale
-social and economic phenomenon, and about how companies view free
-software. He also provided a private working space on a few occasions
-when it really made a difference. Thank you, Eben.</para>
+<para>Software Freedom Law Center（<ulink url="https://softwarefreedom.org/" >https://softwarefreedom.org/</ulink>）的 Eben Moglen 教会我如何把自由软件放在宏观的社会与经济脉络中观察，也让我更理解公司是如何看待自由软件的。几次关键时刻，他还借给我私人工作空间，效果显著。谢谢你，Eben。</para>
 
-<para>I do not understand how Dr. David A. Wheeler makes time to
-answer my occasional questions when he is in demand from so many other
-people as well, but he does, and his answers are always spot-on and
-authoritative. Thanks as always, David.</para>
+<para>我一直搞不懂 David A. Wheeler 博士是怎么挤出时间回答我偶尔的问题的——毕竟那么多人都在找他——但他总能做到，而且回答永远准确权威。像往常一样，感谢你，David。</para>
 
-<para>Breena Xie's interest in open source led swiftly to trenchant
-questions about it. Those questions were helpful to me in thinking
-through certain topics in the book, but so was her patience on those
-occasions when the book demanded more time than it should have (by
-which I mean "than I said it would"). Thank you, Breena.</para>
+<para>Breena Xie 对开源的兴趣很快转化成犀利的问题，这些问题帮助我理清书里的一些话题。同样重要的是，当写作耗费的时间远超我原先承诺时，她依旧保持耐心。谢谢你，Breena。</para>
 
-<para>Many thanks to Radhir Kothuri and the rest of the HackIllinois
-2017 crew, who provided a very timely motivational boost when they
-proposed doing a print run of the new edition for their event at the
-University of Illinois at Urbana-Champaign, Illinois in February 2017.
-I appreciate the vote of confidence in the book, and hope the
-HackIllinois attendees will be pleased with the results.</para>
+<para>非常感谢 Radhir Kothuri 以及 2017 年 HackIllinois 的全体伙伴。他们决定在 2017 年 2 月伊利诺伊大学厄巴纳-香槟分校的活动上印制新版时，给了我莫大的激励。我非常感激他们对本书的信任，也希望与会者喜欢这份成果。</para>
 
-<para>Camille Bégnis of <ulink url="http://neodoc.biz/"
->http://neodoc.biz/</ulink> provided expert DocBook help in real time
-one day, solving a long-standing technical problem in the online
-version of the book that I'd been unable to fix for years. Merci
-beaucoup, Camille.</para>
+<para><ulink url="http://neodoc.biz/" >http://neodoc.biz/</ulink> 的 Camille Bégnis 曾在某天实时指导我处理 DocBook，解决了线上版本多年未解的技术难题。Merci beaucoup，Camille。</para>
 
-<para>My friend Jason A. Owen also provided timely and wonderfully
-thorough help with some DocBook formatting issues and with the build
-process, and is the reason it is now possible to generate PDFs of this
-book suitable for printing on different page sizes.  Independently of
-that, Jason has been a valued collaborator on many open source
-projects, and raises standards wherever he's involved.  Thank you,
-Jason.</para>
+<para>我的朋友 Jason A. Owen 也适时、细致地帮我处理 DocBook 排版以及构建流程上的问题。如今我们可以生成适配不同纸张尺寸的 PDF，很大程度要感谢他。此外，Jason 在许多开源项目里都是值得信赖的合作者，他所到之处标准都会被拉高。谢谢你，Jason。</para>
 
-<para>Near the end of the preparation of the second edition, I
-realized that the text badly needed a complete read-through, for typos
-of the sort that can't easily be caught by automated means, and for
-various expressive infelicities that I knew had crept in but couldn't
-detect myself.  Corin Duey undertook this task with good cheer and
-magnificent attention to detail, and the book is noticeably improved
-as a result.  Corin, thank you so much.
-</para>
+<para>第二版接近尾声时，我意识到书稿需要一次彻底的通读，抓出自动化工具难以发现的错字以及我自己察觉不到的表达瑕疵。Corin Duey 带着好心情和惊人的细致接下这项工作，书稿因此明显更好。Corin，非常感谢。</para>
 
-<para>The hardest part of these acknowledgements is realizing there
-will never be enough space to do justice to all the knowledge people
-have shared in the decade and a half since the first edition came out. I've been
-working in open source the whole time since then, and have had
-illuminating conversations with many clients, partners, interviewees,
-expert consultants, and fellow travelers; some of them have
-occasionally sent in concrete improvements to the book, too. I can't
-imagine what this new edition would be without the benefit of that
-collective mind, and will try to list some of those people below. I'm
-sure the list is incomplete, and I apologize for that. For what it's
-worth, I used a program to randomize the order, and accepted its first
-output:</para>
+<para>写这段致谢最困难的地方，是意识到篇幅永远不足以充分感谢自第一版问世以来十几年里与我共享知识的所有人。那段时间我始终活跃在开源领域，与无数客户、伙伴、受访者、专家和同路人交流；他们之中还有人直接为本书贡献了改进。若没有这股集体智慧，新版绝不会是现在的模样。下面我会尽量列出其中一些名字。这个名单肯定不完整，请原谅。为了公平，我写了个程序随机排序，并接受它输出的第一个结果：</para>
 
 <para>
 Nithya Ruff,
