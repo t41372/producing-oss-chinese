@@ -148,7 +148,7 @@ Karl Fogel 的写作风格是这本书的“味道”。翻译时请尽量对齐
 ### 方法 1: 使用 docker 构建书籍 (如果你是 Jules，docker 在你的环境里不可用):
 
 ```sh
-BUILD_TARGETS="html" ./scripts/build-book.sh
+BUILD_TARGETS="html" ./scripts/build-book.sh 
 ```
 
 ### 方法 2: 不使用 docker 构建数据 (请先按照 README 的指示配置环境)
