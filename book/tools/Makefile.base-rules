@@ -36,7 +36,7 @@ $(EPUB_CHUNK_DIR): $(ALL_SOURCE) $(VERSION_SOURCE) $(STYLESHEET) $(IMAGES)
 html: $(HTML_TARGET)
 $(HTML_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(STYLESHEET) $(IMAGES)
 	$(ENSURE_XSL)
-	$(XSLTPROC) $(HTML_XSLTPROC_OPTS) --output $(HTML_TARGET) \
+	LC_ALL=en_US.UTF-8 $(XSLTPROC) $(HTML_XSLTPROC_OPTS) --output $(HTML_TARGET) \
 	  $(TOOLS_DIR)/html-stylesheet.xsl $(XML_SOURCE)
 
 # The trailing slash on the xsltproc --output option is essential to
@@ -46,7 +46,7 @@ $(HTML_CHUNK_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(STYLESHEET) $(IMAGES)
 	mkdir -p $(HTML_CHUNK_DIR)
 	$(IFIMAGES) mkdir -p $(HTML_CHUNK_DIR)/images $(ENDIF)
 	$(ENSURE_XSL)
-	$(XSLTPROC) $(HTML_XSLTPROC_OPTS) \
+	LC_ALL=en_US.UTF-8 $(XSLTPROC) $(HTML_XSLTPROC_OPTS) \
            --output $(HTML_CHUNK_DIR)/ \
 	   $(TOOLS_DIR)/chunk-stylesheet.xsl $(XML_SOURCE)
 	cp $(STYLESHEET) $(HTML_CHUNK_DIR)
