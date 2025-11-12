@@ -129,3 +129,32 @@ Karl Fogel 的写作风格是这本书的“味道”。翻译时请尽量对齐
 > * 在开工前先拉取最新主分支，避免冲突；合并他人更新时，注意**术语表**与**格式**是否一致。
 > * 本地开启 XML/拼写/链接校验（若有 CI 更佳），减少机械性错误。
 > * 彼此评审时，关注**术语统一、语气一致、格式对齐**三件事。
+
+
+
+## 关于编辑文件
+书本的正文文件 `chxx.xml` 几乎都相当长，请注意。
+
+## 完成翻译后的自检
+
+1. `make -C book/zh -f ../lang-makefile valid`（或替换成对应语言目录）——底层会用 `xmllint` 做 DocBook DTD 校验，能快速发现标签未闭合、实体缺失等语法错误。
+2. 如果只改了少量章节，也可以点对点执行 `xmllint --noout --nonet --valid book/zh/chXX.xml` 先自检，再把整本书跑一遍。
+
+## 关于测试
+构建书籍，确认翻译过后格式没有炸。
+
+测试时，不用构建所有目标，只要构建 html 版，确认可以跑就行。
+
+### 方法 1: 使用 docker 构建书籍 (如果你是 Jules，docker 在你的环境里不可用):
+
+```sh
+BUILD_TARGETS="html" ./scripts/build-book.sh
+```
+
+### 方法 2: 不使用 docker 构建数据 (请先按照 README 的指示配置环境)
+> 如果你不是 Jules，请在安装了依赖之前明确通知用户。
+
+- 优先尝试本地脚本：`BUILD_TARGETS="html" ./scripts/build-book-local.sh zh`（或替换语言代码）。
+- 如果环境缺依赖/无法运行，再 fallback 至 Docker：`BUILD_TARGETS="html" ./scripts/build-book.sh zh`。
+
+通过这些检查即可提交；遇到结构性错误优先修复再提 PR。
