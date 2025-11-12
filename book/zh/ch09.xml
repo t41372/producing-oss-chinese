@@ -1,29 +1,12 @@
 <chapter id="legal">
 
-<title>Legal Matters: Licenses, Copyrights, Trademarks and Patents</title>
+<title>法律事务：许可证、版权、商标和专利</title>
 
 <simplesect>
 
-<para>Legal questions have assumed a somewhat more prominent role in
-free software projects over the last decade or so.  It is still the
-case that the most important things about your project are its the
-quality of its code, its features, and the health of its developer
-community.  However, although all open source licenses share the same
-basic guarantees of freedom, their terms are not exactly the same in
-all details.  The particular license your project uses can affect
-which entities decide to get involved in it and how.  You will
-therefore need a basic understanding of free software licensing, both
-to ensure that the project's license is compatible with its goals, and
-to be able to discuss licensing decisions with others.</para>
+<para>在过去的十年左右，法律问题在自由软件项目中扮演了越来越重要的角色。项目的代码质量、功能以及开发者社区的健康状况仍然是最重要的。尽管所有开源许可证都共享自由的基本保障，但它们的条款在所有细节上并非完全相同。你的项目使用的特定许可证会影响哪些实体决定参与其中以及如何参与。因此，你需要对自由软件许可有基本的了解，以确保项目的许可证与其目标兼容，并能够与他人讨论许可决策。</para>
 
-<para>Please note that I am not a lawyer, and that nothing in this
-book should be construed as formal legal advice.  For that, you'll
-need to hire a lawyer or be one.<footnote><para>For a deeper
-understanding of how copyright law relates to free software, see
-<ulink
-url="https://softwarefreedom.org/resources/2012/ManagingCopyrightInformation.html"
->https://softwarefreedom.org/resources/2012/ManagingCopyrightInformation.html</ulink>, published by the Software Freedom Law
-Center.</para></footnote>
+<para>请注意，我不是律师，本书中的任何内容都不应被解释为正式的法律建议。为此，你需要聘请一名律师，或者自己就是一名律师。<footnote><para>要更深入地了解版权法与自由软件的关系，请参阅由软件自由法律中心发布的 <ulink url="https://softwarefreedom.org/resources/2012/ManagingCopyrightInformation.html">https://softwarefreedom.org/resources/2012/ManagingCopyrightInformation.html</ulink>。</para></footnote>
 
 </para>
 
@@ -31,533 +14,148 @@ Center.</para></footnote>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="licenses-terminology">
-<title>Terminology</title>
+<title>术语</title>
 
-<para>In any discussion of open source licensing, the first thing that
-becomes apparent is that there seem to be many different words for the
-same thing: <firstterm>free&nbsp;software</firstterm>,
-<firstterm>open&nbsp;source</firstterm>,
-<firstterm>FOSS</firstterm>, <firstterm>F/OSS</firstterm>, and
-<firstterm>FLOSS</firstterm>.  Let's start by sorting those
-out, along with a few other terms.</para>
+<para>在任何关于开源许可的讨论中，首先显而易见的是，对于同一事物似乎有许多不同的说法：<firstterm>自由软件</firstterm> (free&nbsp;software)、<firstterm>开源</firstterm> (open&nbsp;source)、<firstterm>FOSS</firstterm>、<firstterm>F/OSS</firstterm> 以及 <firstterm>FLOSS</firstterm>。让我们从理清这些术语以及其他一些术语开始。</para>
 
 <variablelist>
-  <varlistentry><term><firstterm>free software</firstterm></term>
-    <listitem><para>Software that can be freely shared and modified,
-              including in source code form.  The term was first
-              coined by Richard Stallman, who codified it in the GNU
-              General Public License (GPL), and who founded the Free
-              Software Foundation (<ulink url="https://www.fsf.org/"
-              >https://www.fsf.org/</ulink>) to promote the concept.</para>
+  <varlistentry><term><firstterm>自由软件</firstterm></term>
+    <listitem><para>可以自由共享和修改的软件，包括源代码形式。这个术语最初由 Richard Stallman 创造，他在 GNU 通用公共许可证 (GPL) 中将其编纂成文，并创立了自由软件基金会 (<ulink url="https://www.fsf.org/">https://www.fsf.org/</ulink>) 来推广这一概念。</para>
 
-              <para>Although "free software" covers the
-              same set of software<footnote><para>Technically, there
-              are certain uncommon situations in which software can be
-              distributed in a way that meets only one of the Free
-              Software Definition and the Open Source Definition.
-              These are very rare edge cases, however; they do not
-              affect anything in this chapter, so I won't go into
-              detail about them here.  To learn more about them, one
-              place to start is a conversation Alexandre Oliva
-              and I had in 2020, at <ulink
-              url="https://identi.ca/lxoliva/comment/FzE-8xdyS1au9z22QKA-TA"
-              >https://identi.ca/lxoliva/comment/FzE-8xdyS1au9z22QKA-TA</ulink>,
-              in which he gives some examples.</para></footnote>
-              as "open source", the FSF,
-              among others, prefers the former term because it
-              emphasizes the idea of freedom, and the concept of
-              freely redistributable software as primarily a social
-              movement rather than a technical one.  The FSF
-              acknowledges that the term is ambiguous&nbsp;&mdash;&nbsp;it could
-              mean "free" as in "zero-cost", instead of "free" as in
-              "freedom"&nbsp;&mdash;&nbsp;but feels that it's still the best term,
-              all things considered, and that the other possibilities
-              in English have their own ambiguities.  (Throughout this
-              book, "free" is used in the "freedom" sense, not the
-              "zero-cost" sense.)</para>
+              <para>尽管“自由软件”涵盖了与“开源”相同的软件集合<footnote><para>技术上讲，在某些不常见的情况下，软件的分发方式可能只满足自由软件定义或开源定义中的一个。然而，这些都是非常罕见的边缘情况；它们不影响本章的任何内容，因此我不会在这里详细介绍。要了解更多信息，可以从 Alexandre Oliva 和我在 2020 年的一段对话开始，见 <ulink url="https://identi.ca/lxoliva/comment/FzE-8xdyS1au9z22QKA-TA">https://identi.ca/lxoliva/comment/FzE-8xdyS1au9z22QKA-TA</ulink>，其中他举了一些例子。</para></footnote>，但自由软件基金会等人更喜欢使用前者，因为它强调自由的理念，并将可自由再分发的软件概念主要视为一场社会运动而非技术运动。自由软件基金会承认这个术语有歧义——它可能意味着“免费”（零成本），而不是“自由”（freedom）——但认为考虑到所有因素，它仍然是最好的术语，而且英语中的其他可能性也有其自身的歧义。（在本书中，“free”用于“自由”的意义，而非“零成本”的意义。）</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><firstterm>open source software</firstterm></term>
+  <varlistentry><term><firstterm>开源软件</firstterm></term>
 
-    <listitem><para>Free software under another name.  The
-              different name is sometimes used to indicate a philosophical
-              difference, however.  In fact, the term "open source"
-              was coined, by the group that founded the Open Source 
-              Initiative (<ulink url="https://www.opensource.org/"
-              >https://www.opensource.org/</ulink>),
-              as alternative labeling for "free software".  Their
-              goal at the time was largely to make such software a
-              more palatable choice for
-              corporations, by presenting it as a development
-              methodology rather than as a political
-              movement.<footnote><para>Disclosure: Long after these
-              events, I served as a member of the Board of Directors
-              of the Open Source Initiative for three years, from
-              2011-2014.  The ideological gap between the OSI and the
-              FSF was much smaller by then than it was when the OSI
-              was founded, in my opinion, and the two
-              organizations have increasingly found common ground on
-              which to cooperate.  I remain a happy member of both,
-              and urge you to join them too: <ulink
-              url="https://opensource.org/join"
-              >https://opensource.org/join</ulink> and <ulink
-              url="https://fsf.org/join"
-              >https://fsf.org/join</ulink>.</para></footnote></para>
+    <listitem><para>自由软件的别称。然而，这个不同的名称有时被用以表示哲学上的差异。事实上，“开源”这个术语是由创立开源促进会 (<ulink url="https://www.opensource.org/">https://www.opensource.org/</ulink>) 的团体创造的，作为“自由软件”的替代标签。他们当时的目标主要是通过将其呈现为一种开发方法论而非政治运动，来使这类软件更容易被公司所接受。<footnote><para>披露：在这些事件发生很久之后，我于 2011 年至 2014 年担任了开源促进会董事会成员三年。在我看来，当时 OSI 和 FSF 之间的意识形态差距比 OSI 成立时要小得多，两个组织也越来越多地找到了合作的共同点。我至今仍然是这两个组织的愉快成员，并敦促你也加入它们：<ulink url="https://opensource.org/join">https://opensource.org/join</ulink> 和 <ulink url="https://fsf.org/join">https://fsf.org/join</ulink>。</para></footnote></para>
 
-              <para>While any license that is free is also open
-              source, and vice versa (with a few minor exceptions that
-              have no practical consequences),
-              people tend to pick one term and stick with it.  In
-              general, those who prefer "free software" are more
-              likely to have a philosophical or moral stance on the
-              issue, while those who prefer "open source" either don't
-              view it as a matter of freedom, or are not interested in
-              advertising the fact that they do.  See
-              <xref linkend="free-vs-open-source"/> for a more
-              detailed history of this terminological schism.</para>
+              <para>虽然任何自由的许可证也都是开源的，反之亦然（除了一些没有实际后果的微小例外），但人们倾向于选择一个术语并坚持使用。总的来说，那些偏爱“自由软件”的人更可能在这个问题上持有哲学或道德立场，而那些偏爱“开源”的人要么不将其视为自由问题，要么不愿宣扬自己持有这种看法。关于这个术语分裂的更详细历史，请参见 <xref linkend="free-vs-open-source"/>。</para>
 
-              <para>The Free Software Foundation has an
-              excellent&nbsp;&mdash;&nbsp;utterly unobjective, but nuanced and
-              quite fair&nbsp;&mdash;&nbsp;exegesis of the two terms, at <ulink
-              url="https://www.fsf.org/licensing/essays/free-software-for-freedom.html"
-              >https://www.fsf.org/licensing/essays/free-software-for-freedom.html</ulink>.
-              The Open Source Initiative's take on it can be found at
-              <ulink url="https://opensource.org/faq#free-software"
-              >https://opensource.org/faq#free-software</ulink>.</para>
+              <para>自由软件基金会对这两个术语有一篇极好——虽然完全不客观，但细致入微且相当公平——的诠释，见 <ulink url="https://www.fsf.org/licensing/essays/free-software-for-freedom.html">https://www.fsf.org/licensing/essays/free-software-for-freedom.html</ulink>。开源促进会的看法可以在 <ulink url="https://opensource.org/faq#free-software">https://opensource.org/faq#free-software</ulink> 找到。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><firstterm>FOSS</firstterm>,
-                      <firstterm>F/OSS</firstterm>,
-                      <firstterm>FLOSS</firstterm></term>
+  <varlistentry><term><firstterm>FOSS</firstterm>、<firstterm>F/OSS</firstterm>、<firstterm>FLOSS</firstterm></term>
 
-    <listitem><para>Where there are two of anything, there will soon
-              be three, and that is exactly what is happening with
-              terms for free software.  Many people have started
-              using "FOSS" (or, more rarely, "F/OSS"), standing
-              for "Free / Open Source Software".  Another variant
-              gaining momentum is "FLOSS", which
-              stands for "Free / Libre Open Source Software"
-              (<foreignphrase>libre</foreignphrase> is familiar from
-              many Romance languages and does not suffer from the ambiguities
-              of "free"; see
-              <ulink url="https://en.wikipedia.org/wiki/FLOSS"
-              >https://en.wikipedia.org/wiki/FLOSS</ulink> for more).</para>
+    <listitem><para>凡有二者，必有三者，自由软件的术语正是如此。许多人开始使用“FOSS”（或更少见的“F/OSS”），即“自由/开源软件”的缩写。另一个正在普及的变体是“FLOSS”，代表“自由/自由（Libre）开源软件”(<foreignphrase>libre</foreignphrase> 在许多罗曼语系语言中很常见，没有“free”的歧义；更多信息请参见 <ulink url="https://en.wikipedia.org/wiki/FLOSS">https://en.wikipedia.org/wiki/FLOSS</ulink>）。</para>
 
-              <para>All these terms mean the same thing:
-              software that can be modified and redistributed by
-              everyone, sometimes&nbsp;&mdash;&nbsp;but not always&nbsp;&mdash;&nbsp;with the
-              requirement that derivative works be freely
-              redistributable under the same terms.</para>
+              <para>所有这些术语都意味着同一件事：人人可以修改和再分发的软件，有时——但并非总是——要求衍生作品在相同条款下自由再分发。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><firstterm>DFSG-compliant</firstterm></term>
-    <listitem><para>Compliant with the Debian Free Software Guidelines
-              (<ulink
-              url="https://www.debian.org/social_contract#guidelines"
-              >https://www.debian.org/social_contract#guidelines</ulink>).
-              This is a widely-used test for whether a given license
-              is truly open source
-              (free, <foreignphrase>libre</foreignphrase>, etc).  The
-              Debian Project's mission is to maintain an entirely free
-              operating system, such that someone installing it need
-              never doubt that she has the right to modify and
-              redistribute any or all of the system.  The Debian Free
-              Software Guidelines are the requirements that a software
-              package's license must meet in order to be included in
-              Debian.  Because the Debian Project spent a good deal of
-              time thinking about how to construct such a test, the
-              guidelines they came up with have proven very robust
-              (see <ulink url="https://www.debian.org/social_contract#guidelines"
-              >https://www.debian.org/social_contract#guidelines</ulink>),
-              and as far as I'm aware, no serious objection to them has
-              been raised either by the Free Software Foundation or
-              the Open Source Initiative.  If you know that a given
-              license is DFSG-compliant, you know that it guarantees
-              all the important freedoms (such as forkability even
-              against the original author's wishes) required to
-              sustain the dynamics of an open source project.  Since
-              2004, the Debian Project has maintained a list of known
-              DFSG-compliant licenses at <ulink
-              url="https://wiki.debian.org/DFSGLicenses"
-              >https://wiki.debian.org/DFSGLicenses</ulink>.  All of the licenses
-              discussed in this chapter are DFSG-compliant.</para>
+  <varlistentry><term><firstterm>DFSG 兼容</firstterm></term>
+    <listitem><para>兼容 Debian 自由软件指导方针 (<ulink url="https://www.debian.org/social_contract#guidelines">https://www.debian.org/social_contract#guidelines</ulink>)。这是一个广泛使用的测试，用以判断一个许可证是否真正是开源的（自由的、<foreignphrase>libre</foreignphrase>的，等等）。Debian 项目的使命是维护一个完全自由的操作系统，使得安装者永远不必怀疑自己拥有修改和再分发系统的任何或所有部分的权利。Debian 自由软件指导方针是一个软件包的许可证必须满足的要求，以便被包含在 Debian 中。由于 Debian 项目花费了大量时间思考如何构建这样一个测试，他们提出的指导方针已被证明非常稳健（参见 <ulink url="https://www.debian.org/social_contract#guidelines">https://www.debian.org/social_contract#guidelines</ulink>），据我所知，自由软件基金会或开源促进会都没有对它们提出过严重反对。如果你知道一个许可证是 DFSG 兼容的，你就知道它保证了所有重要的自由（比如即使违背原作者意愿也能进行分支），这是维持一个开源项目动态所必需的。自 2004 年以来，Debian 项目一直在 <ulink url="https://wiki.debian.org/DFSGLicenses">https://wiki.debian.org/DFSGLicenses</ulink> 维护一个已知的 DFSG 兼容许可证列表。本章讨论的所有许可证都是 DFSG 兼容的。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><firstterm>OSI-approved</firstterm></term>
-    <listitem><para>Approved by the Open Source Initiative.  This is
-              another widely-used test of whether a license permits
-              all the necessary freedoms.  The OSI's definition of
-              open source software is based on the Debian Free
-              Software Guidelines, and any license that meets one
-              definition almost always meets the other.  There have
-              been a few exceptions over the years, but only involving
-              niche licenses and none of any relevance
-              here.<footnote><para>There is one relatively new
-              license, the Cryptographic Autonomy License, version 1.0
-              (<ulink url="https://opensource.org/licenses/CAL-1.0"
-              >https://opensource.org/licenses/CAL-1.0</ulink>, approved by
-              the OSI in 2020), that has unusual provisions regarding
-              data portability and that has caused some disagreement
-              over whether it truly meets the Open Source Definition.
-              Two good overviews of CAL-1.0 are Heather Meeker's at
-              <ulink
-                  url="https://heathermeeker.com/2020/02/15/cryptographic-autonomy-license-approved-by-osi/"
-                  >https://heathermeeker.com/2020/02/15/cryptographic-autonomy-license-approved-by-osi/</ulink>
-              and Jonathan Corbet's in Linux Weekly News at
-              <ulink url="https://lwn.net/Articles/797065/"
-                     >https://lwn.net/Articles/797065/</ulink>.</para></footnote>
-              The OSI maintains a list of all
-              licenses it has ever approved, at
-              <ulink url="https://www.opensource.org/licenses/"
-              >https://www.opensource.org/licenses/</ulink>, so
-              that being "OSI-approved" is an unambiguous state: a
-              license either is or isn't on the list.</para>
+  <varlistentry><term><firstterm>OSI 批准</firstterm></term>
+    <listitem><para>由开源促进会批准。这是另一个广泛使用的测试，用以判断一个许可证是否允许所有必要的自由。OSI 的开源软件定义基于 Debian 自由软件指导方针，任何满足一个定义的许可证几乎总是满足另一个。多年来有过一些例外，但都只涉及小众许可证，与此处无关。<footnote><para>有一个相对较新的许可证，即加密自治许可证 1.0 版（<ulink url="https://opensource.org/licenses/CAL-1.0">https://opensource.org/licenses/CAL-1.0</ulink>，于 2020 年由 OSI 批准），其中包含关于数据可移植性的不寻常条款，这在它是否真正符合开源定义上引起了一些争议。关于 CAL-1.0 的两个很好的概述是 Heather Meeker 的 <ulink url="https://heathermeeker.com/2020/02/15/cryptographic-autonomy-license-approved-by-osi/">https://heathermeeker.com/2020/02/15/cryptographic-autonomy-license-approved-by-osi/</ulink> 和 Jonathan Corbet 在 Linux Weekly News 上的 <ulink url="https://lwn.net/Articles/797065/">https://lwn.net/Articles/797065/</ulink>。</para></footnote> OSI 在 <ulink url="https://www.opensource.org/licenses/">https://www.opensource.org/licenses/</ulink> 维护着一份它曾批准过的所有许可证的列表，因此“OSI 批准”是一个明确的状态：一个许可证要么在列表上，要么不在。</para>
 
-              <para>The Free Software Foundation also maintains a list
-              of licenses at <ulink
-              url="https://www.fsf.org/licensing/licenses/license-list.html"
-              >https://www.fsf.org/licensing/licenses/license-list.html</ulink>.
-              The FSF categorizes licenses not only by whether they
-              are free, but whether they are compatible with the GNU
-              General Public License.  GPL compatibility is an
-              important topic, covered in
-              <xref
-              linkend="license-compatibility"/>.</para>
+              <para>自由软件基金会也在 <ulink url="https://www.fsf.org/licensing/licenses/license-list.html">https://www.fsf.org/licensing/licenses/license-list.html</ulink> 维护一份许可证列表。FSF 不仅根据许可证是否自由来分类，还根据它们是否与 GNU 通用公共许可证兼容。GPL 兼容性是一个重要的话题，在 <xref linkend="license-compatibility"/> 中有涉及。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><firstterm>proprietary</firstterm>,
-                      <firstterm>closed-source</firstterm></term>
-    <listitem><para>The opposite of "free" or "open source."  It means
-              software distributed under traditional, royalty-based
-              licensing terms, where users pay per copy, or under any
-              other terms sufficiently restrictive to prevent open
-              source dynamics from operating.  Even software
-              distributed at no charge can still be proprietary, if
-              its license does not permit free redistribution and
-              modification.</para>
+  <varlistentry><term><firstterm>专有的</firstterm> (proprietary)、<firstterm>闭源的</firstterm> (closed-source)</term>
+    <listitem><para>“自由”或“开源”的反义词。它指在传统的、基于版税的许可条款下分发的软件，用户按拷贝付费，或在任何其他足以阻止开源动态运作的限制性条款下分发的软件。即使是免费分发的软件，如果其许可证不允许自由再分发和修改，它仍然是专有的。</para>
 
-              <para>Generally "proprietary" and "closed-source" are
-              synonyms.  However, "closed-source" additionally implies
-              that the source code cannot even be seen.  Since the
-              source code cannot be seen with most proprietary
-              software, this is normally a distinction without a
-              difference.  However, occasionally someone releases
-              proprietary software under a license that allows others
-              to view the source code.  Confusingly, they sometimes
-              call this "open source" or "nearly open source," etc,
-              but that's misleading. The
-              <emphasis>visibility</emphasis> of the source code is
-              not the issue; the important question is what you're
-              allowed to do with it: if you can't copy, modify, and
-              redistribute, then it's not open source.  Thus, the
-              difference between proprietary and closed-source is
-              mostly irrelevant; generally, the two can be treated
-              as synonyms.</para>
+              <para>通常，“专有的”和“闭源的”是同义词。然而，“闭源的”还额外意味着源代码甚至无法被看到。由于大多数专有软件的源代码都无法看到，这通常是一个无关紧要的区别。然而，偶尔有人会发布专有软件，其许可证允许他人查看源代码。令人困惑的是，他们有时称之为“开源”或“接近开源”等，但这是误导性的。源代码的<emphasis>可见性</emphasis>不是问题所在；重要的问题是你被允许用它做什么：如果你不能复制、修改和再分发，那么它就不是开源的。因此，专有和闭源之间的区别大多是无关紧要的；通常，两者可以被视为同义词。</para>
 
-              <para>Sometimes <firstterm>commercial</firstterm> is
-              used as a synonym for "proprietary," but this is
-              carelessness: the two are not the same.  Free software
-              is always commercial software.  After all, free software
-              can be sold, as long as the buyers are not restricted
-              from giving away copies themselves.  It can be
-              commercialized in other ways as well, for example by
-              selling support, services, and certification.  There are
-              billion-dollar companies built on free software
-              today, so it is clearly neither inherently
-              anti-commercial nor anti-corporate.  It is merely
-              anti-proprietary, or if you prefer anti-monopoly,
-              and this is the key way in which it differs from
-              per-copy license models.</para>
+              <para>有时<firstterm>商业的</firstterm> (commercial) 被用作“专有的”的同义词，但这是一种不严谨的用法：两者并不相同。自由软件完全可以是商业软件。毕竟，自由软件可以被出售，只要买家不被限制自己赠送拷贝。它也可以通过其他方式商业化，例如出售支持、服务和认证。今天有建立在自由软件之上的数十亿美元的公司，所以它显然既不是天生反商业的，也不是反公司的。它仅仅是反专有的，或者如果你愿意，可以说是反垄断的，这是它与按拷贝许可模式的关键区别。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><firstterm>public domain</firstterm></term>
-    <listitem><para>Having no copyright holder, meaning that there is
-              no one who has the right to restrict copying of the
-              work.  Being in the public domain is not the same as
-              having no author.  Everything has an author, and even if a
-              work's author or authors choose to put it in the public
-              domain, that doesn't change the fact that they wrote
-              it.</para>
+  <varlistentry><term><firstterm>公共领域</firstterm> (public domain)</term>
+    <listitem><para>没有版权所有者，意味着没有人有权限制作品的复制。处于公共领域与没有作者不同。所有作品皆有作者，即使作品的作者或作者们选择将其置于公共领域，这也不会改变他们创作了它的事实。</para>
 
-              <para>When a work is in the public domain, material from
-              it can be incorporated into a copyrighted work, and the
-              derivative is thus under the same overall copyright as
-              the original copyrighted work.  But this does not affect
-              the availability of the original public domain work.
-              Thus, releasing something into the public domain is
-              technically one way to make it "free," according to the
-              guidelines of most free software certifying
-              organizations (see <ulink
-              url="https://opensource.org/faq#public-domain"
-              >https://opensource.org/faq#public-domain</ulink> for more).
-              However, there are usually good reasons to use a license
-              instead of just releasing into the public domain: even
-              with free software, certain terms and conditions can be
-              useful, not only to the copyright holder but to
-              recipients as well, as the next section makes clear.</para>
+              <para>当一个作品处于公共领域时，其中的材料可以被整合到一个受版权保护的作品中，因此衍生作品与原始受版权保护的作品享有相同的整体版权。但这并不影响原始公共领域作品的可用性。因此，根据大多数自由软件认证组织的指导方针，将某物发布到公共领域技术上是使其“自由”的一种方式（更多信息请参见 <ulink url="https://opensource.org/faq#public-domain">https://opensource.org/faq#public-domain</ulink>）。然而，通常有充分的理由使用许可证而不是仅仅发布到公共领域：即使是自由软件，某些条款和条件也可能很有用，不仅对版权所有者如此，对接收者也同样如此，正如下一节所阐明的。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><firstterm>reciprocal</firstterm></term> or <term><firstterm>copyleft</firstterm></term>
-    <listitem><para>A license that not only grants the freedoms under
-              discussion here but furthermore requires that those
-              freedoms apply to any derivative works.</para>
+  <varlistentry><term><firstterm>互惠</firstterm> (reciprocal)</term> 或 <term><firstterm>copyleft</firstterm></term>
+    <listitem><para>一种不仅授予此处讨论的自由，而且还要求这些自由适用于任何衍生作品的许可证。</para>
 
-              <para>The canonical example of a copyleft license is
-              still the GNU General Public License, which stipulates
-              that any derivative works must also be licensed under
-              the GPL; see <xref
-              linkend="license-compatibility"/> for
-              more.</para>
+              <para>copyleft 许可证的典型例子仍然是 GNU 通用公共许可证，它规定任何衍生作品也必须在 GPL 下许可；更多信息请参见 <xref linkend="license-compatibility"/>。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><firstterm>non-reciprocal</firstterm>, <firstterm>non-copyleft</firstterm> or <firstterm>permissive</firstterm></term>
-    <listitem><para>A license that grants the freedoms under
-              discussion here but that does <emphasis>not</emphasis>
-              have a clause requiring that they apply to distributed
-              derivative works as well.</para>
-              <para>Two early and well-known examples of non-reciprocal
-              licenses are the BSD and MIT licenses, but the more
-              recent Apache Software License version 2
-              (<ulink
-              url="https://www.apache.org/licenses/LICENSE-2.0"
-              >https://www.apache.org/licenses/LICENSE-2.0</ulink>) is
-              also very popular&nbsp;&mdash;&nbsp;increasingly so&nbsp;&mdash;&nbsp;and
-              somewhat better adapted to the legal landscape of modern
-              open source software development.</para>
+  <varlistentry><term><firstterm>非互惠</firstterm> (non-reciprocal)、<firstterm>非 copyleft</firstterm> (non-copyleft) 或 <firstterm>宽容</firstterm> (permissive)</term>
+    <listitem><para>一种授予此处讨论的自由，但<emphasis>不</emphasis>包含要求这些自由也适用于分发的衍生作品的条款的许可证。</para>
+              <para>两个早期且著名的非互惠许可证的例子是 BSD 和 MIT 许可证，但较新的 Apache 软件许可证 2.0 版 (<ulink url="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</ulink>) 也非常受欢迎——而且越来越受欢迎——并且在某种程度上更适应现代开源软件开发的法律环境。</para>
     </listitem>
   </varlistentry>
 
 </variablelist>
 
 <sidebar id="free-open-same">
-<title>"Free Software" and "Open Source" Are the Same Licenses</title>
+<title>“自由软件”和“开源”是同一类许可证</title>
 
-<para>Occasionally people will make the mistake of thinking that
-copyleft licenses (like the GPL) comprise "free software", while the
-non-reciprocal licenses comprise "open source".  This is wrong, but it
-comes up just often enough to be worth mentioning here.  Both free
-software and open source include <emphasis>both</emphasis> the
-copyleft and non-copyleft licenses&nbsp;&mdash;&nbsp;this is something
-that all the license-certifying organizations, including the FSF, the
-OSI, and the Debian Project, have always agreed on.  If you see
-someone, particularly a journalist, making this mistake, please
-politely correct them, perhaps by pointing them to this note (
-<ulink url="https://producingoss.com/en/legal.html#free-open-same"
->https://producingoss.com/en/legal.html#free-open-same</ulink>).
-The last thing we need is yet more terminological confusion in the
-free and open source software movement.</para>
+<para>偶尔人们会错误地认为，像 GPL 这样的 copyleft 许可证构成“自由软件”，而非互惠许可证构成“开源”。这是错误的，但它出现的频率足以值得在这里一提。自由软件和开源都<emphasis>同时</emphasis>包括 copyleft 和非 copyleft 许可证——这是所有许可证认证组织，包括 FSF、OSI 和 Debian 项目，一直都同意的。如果你看到有人，特别是记者，犯了这个错误，请礼貌地纠正他们，或许可以指引他们看这个说明 (<ulink url="https://producingoss.com/en/legal.html#free-open-same">https://producingoss.com/en/legal.html#free-open-same</ulink>)。自由和开源软件运动最不需要的就是更多的术语混淆。</para>
 
 </sidebar>
 
 </sect1>
-
 <!-- ======================== SECTION ============================== -->
 <sect1 id="license-aspects">
-<title>Aspects of Licenses</title>
+<title>许可证的各个方面</title>
 
-<para>Although there are many different free software licenses
-available, in the important respects they all say the same things:
-that anyone can see and use the code, that anyone can modify the code,
-that anyone can redistribute it both in original and modified form,
-and that the copyright holders and authors provide no warranties
-whatsoever (avoiding liability is especially important given that
-downstream recipients might run modified versions without even knowing
-it).  The differences between licenses boil down to a few
-oft-recurring issues:</para>
+<para>尽管有许多不同的自由软件许可证可供选择，但在重要的方面它们都表达了相同的内容：任何人都可以查看和使用代码，任何人都可以修改代码，任何人都可以以原始和修改后的形式重新分发它，并且版权所有者和作者不提供任何形式的保证（鉴于下游接收者可能会在不知情的情况下运行修改过的版本，避免责任尤为重要）。许可证之间的差异可以归结为几个经常出现的问题：</para>
 
 <variablelist>
-  <varlistentry><term><emphasis>compatibility with proprietary licenses</emphasis></term>
-    <listitem><para>The non-reciprocal (non-copyleft) free licenses allow the covered code to be
-              used in proprietary programs.  This does not affect the
-              licensing terms of the proprietary program: it is still
-              as proprietary as ever, it just happens to contain some
-              code from a non-proprietary source.  The Apache License,
-              X Consortium License, BSD-style license, and the
-              MIT-style license are all examples of
-              proprietary-compatible licenses.</para> 
+  <varlistentry><term><emphasis>与专有许可证的兼容性</emphasis></term>
+    <listitem><para>非互惠（non-copyleft）的自由许可证允许所覆盖的代码在专有程序中使用。这不影响专有程序的许可条款：它仍然和以前一样是专有的，只是碰巧包含了一些来自非专有来源的代码。Apache 许可证、X Consortium 许可证、BSD-style 许可证和 MIT-style 许可证都是与专有许可证兼容的例子。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><emphasis>compatibility with other types of free licenses</emphasis></term>
-    <listitem><para>Most of the commonly-used non-reciprocal free licenses
-              are compatible with each other, meaning that code under
-              one license can be combined with code under another, and
-              the result distributed under either license without
-              violating the terms of the other.  Some of them are also
-              compatible with some of the copyleft licenses, meaning
-              that a work comprised of code under the non-reciprocal
-              license and code under the copyleft license can be
-              distributed as a combined work under the copyleft
-              license (since that's the license that places more
-              conditions), with the original code in each case
-              remaining under its original license.  Typically these
-              compatibility issues come up between some non-reciprocal
-              license and the GNU General Public
-              License.<footnote><para>Or its variant, the GNU Affero
-              GPL (see <xref
-              linkend="gnu-affero-gpl">AGPL</xref>).</para></footnote>
-              This topic is discussed in more detail in
-              <xref linkend="license-compatibility"/>.</para> 
+  <varlistentry><term><emphasis>与其他类型自由许可证的兼容性</emphasis></term>
+    <listitem><para>大多数常用的非互惠自由许可证彼此兼容，这意味着在一个许可证下的代码可以与另一个许可证下的代码结合，并且结果可以在任一许可证下分发，而不会违反另一方的条款。其中一些还与某些 copyleft 许可证兼容，这意味着由非互惠许可证下的代码和 copyleft 许可证下的代码组成的作品可以作为一个组合作品在 copyleft 许可证下分发（因为该许可证施加了更多条件），而每种情况下的原始代码仍保留其原始许可证。通常，这些兼容性问题出现在某些非互惠许可证和 GNU 通用公共许可证之间。<footnote><para>或其变体，GNU Affero GPL（见 <xref linkend="gnu-affero-gpl">AGPL</xref>）。</para></footnote> 这个话题在 <xref linkend="license-compatibility"/> 中有更详细的讨论。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><emphasis>attribution requirements</emphasis></term>
-    <listitem><para>Some free licenses stipulate that any use of the
-              covered code be accompanied by a notice, whose placement
-              and display is usually specified, giving credit to the
-              authors or copyright holders of the code.  These
-              licenses are often still proprietary-compatible: they do
-              not necessarily demand that the derivative work be free,
-              itself, merely that credit be given for its free parts.</para>
+  <varlistentry><term><emphasis>署名要求</emphasis></term>
+    <listitem><para>一些自由许可证规定，任何对所覆盖代码的使用都必须附带一个通知，其位置和显示方式通常有具体规定，以注明代码的作者或版权所有者。这些许可证通常仍然与专有许可证兼容：它们不一定要求衍生作品本身是自由的，只要求对其自由部分给予署名。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><emphasis>protection of trademark</emphasis></term>
-    <listitem><para>This is a type of attribution requirement.
-              Trademark-protecting licenses specify that the name of
-              the original software (or its copyright holders, or
-              their institution, etc) may <emphasis>not</emphasis> be
-              used to identify derivative works, at least not without
-              prior written permission.  This restriction can be
-              implemented purely via trademark law anyway, whether or
-              not it is also stipulated in the copyright license, so
-              such clauses are somewhat legally
-              redundant&nbsp;&mdash;&nbsp;in effect, they amplify a
-              trademark infringement into a copyright infringement as
-              well.</para>
+  <varlistentry><term><emphasis>商标保护</emphasis></term>
+    <listitem><para>这是一种署名要求。保护商标的许可证规定，原始软件的名称（或其版权所有者、或其机构等）<emphasis>不得</emphasis>用于标识衍生作品，至少在没有事先书面许可的情况下不行。无论版权许可证中是否规定，这项限制都可以纯粹通过商标法来实施，因此这类条款在法律上有些多余——实际上，它们将商标侵权行为同时放大为版权侵权。</para>
 
-              <para>Although attribution requirements insist that a certain
-              name be used, while trademark protections insist that it
-              not be used, they are both expressions of the same
-              concept: that the original code's reputation be
-              preserved, and not tarnished by associations beyond its
-              control.</para>
+              <para>尽管署名要求坚持使用某个名称，而商标保护则坚持不使用它，但它们都是同一概念的表达：即保护原始代码的声誉，不让其因超出其控制范围的联想而受损。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><emphasis>patent snapback</emphasis></term>
-    <listitem><para>Certain licenses (e.g., the GNU General Public
-              License version 3, the Apache License version 2, the
-              Mozilla Public License 2.0, and a few others) contain
-              language designed
-              to prevent people from using patent law to take away the
-              rights granted under copyright law by the
-              licenses.  They require contributors to grant patent
-              licenses along with their contribution, covering any
-              patents licenseable by the contributor that would be
-              infringed by their contribution (or by the incorporation
-              of their contribution into the work as a whole).  Then
-              they go further: if someone using software under the
-              license initiates patent litigation against another party,
-              claiming that the covered work infringes, the initiator
-              automatically <emphasis>loses</emphasis> all the
-              patent grants otherwise provided for that work by the
-              license, and in the case of the GPL-3.0 loses their right
-              to distribute under the license altogether.</para>
+  <varlistentry><term><emphasis>专利报复条款</emphasis></term>
+    <listitem><para>某些许可证（例如，GNU 通用公共许可证第 3 版、Apache 许可证第 2 版、Mozilla 公共许可证 2.0 版以及其他少数几个）包含旨在防止人们利用专利法剥夺许可证根据版权法授予的权利的语言。它们要求贡献者在贡献的同时授予专利许可，涵盖贡献者可许可的、会因其贡献（或因其贡献被并入整个作品）而受到侵犯的任何专利。然后它们更进一步。如果使用该许可证下软件的某人对另一方提起专利诉讼，声称所覆盖的作品侵权，那么该发起人将自动<emphasis>失去</emphasis>许可证为该作品提供的所有专利授权。在 GPL-3.0 的情况下，该发起人将完全失去在该许可证下分发的权利。</para>
     </listitem>
   </varlistentry>
 </variablelist>
 
-<para>Most of these stipulations are not mutually exclusive, and some
-licenses include several.  The common thread among them is that they
-place certain easily satisfiable demands on the recipient in exchange
-for the recipient's right to use the code under the freedoms granted
-by the license.</para>
+<para>这些规定大多不是相互排斥的，有些许可证包含了其中多个条款。它们之间的共同点是，它们都对接收方提出了一些容易满足的要求，以换取接收方在使用代码时享有许可证授予的自由权利。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="license-compatibility">
-<title>The GPL and License Compatibility</title>
+<title>GPL 和许可证兼容性</title>
 
-<para>The sharpest dividing line in licensing is that between
-proprietary-incompatible and proprietary-compatible licenses, that is,
-between the copyleft licenses and everything else.</para>
+<para>在许可领域，最明显的分界线在于专有不兼容和专有兼容许可证之间，也就是 copyleft 许可证和其他所有许可证之间。</para>
 
-<para>The canonical
-example of a copyleft license is the GNU General Public License (along
-with its newer descendant, the Affero GNU General Public
-License or AGPL, introduced later in this chapter in <xref
-linkend="gnu-affero-gpl"/>), and one of the most important
-considerations in choosing the GPL (or AGPL) is the extent to which it
-is compatible with other licenses.  For brevity, I'll refer just to
-the GPL below, but most of this section applies to the AGPL as
-well.</para>
+<para>copyleft 许可证的典型例子是 GNU 通用公共许可证（及其较新的后继者 Affero GNU 通用公共许可证或 AGPL，本章稍后的 <xref linkend="gnu-affero-gpl"/> 将介绍），选择 GPL（或 AGPL）时最重要的考虑之一是它与其他许可证的兼容程度。为简洁起见，下文我将仅指 GPL，但本节大部分内容也适用于 AGPL。</para>
 
-<para>Because the primary goal of the GPL's authors is the promotion
-of free software, they deliberately crafted the license to prevent
-proprietary programs from being distributed with GPLed code in them.
-Specifically, among the GPL's requirements (see <ulink
-url="https://www.fsf.org/licensing/licenses/gpl.html"
->https://www.fsf.org/licensing/licenses/gpl.html</ulink> for its full text) are
-these two:</para>
+<para>由于 GPL 作者的主要目标是推广自由软件，他们特意设计了该许可证，以防止专有程序与 GPLed 代码一同分发。具体来说，GPL 的要求中（其全文见 <ulink url="https://www.fsf.org/licensing/licenses/gpl.html">https://www.fsf.org/licensing/licenses/gpl.html</ulink>）包括这两条：</para>
 
 <orderedlist>
-  <listitem><para>Any derivative work&nbsp;&mdash;&nbsp;that is, any work
-            containing a nontrivial amount of GPLed code&nbsp;&mdash;&nbsp;must
-            itself be distributed under the GPL.</para> 
+  <listitem><para>任何衍生作品——即任何包含不可忽略数量的 GPLed 代码的作品——其本身也必须在 GPL 下分发。</para>
   </listitem>
-  <listitem><para>No additional restrictions may be placed on the
-            redistribution of either the original work or a derivative
-            work.  (The exact language is: "You may not impose any
-            further restrictions on the exercise of the rights granted
-            or affirmed under this License.")</para>
+  <listitem><para>不得对原始作品或衍生作品的再分发施加额外限制。（确切的措辞是：“您不得对行使本许可证授予或确认的权利施加任何进一步的限制。”）</para>
   </listitem>
 </orderedlist>
 
-<para>Through these two conditions, the GPL makes freedom
-contagious.  Once a program is copyrighted under the GPL, its terms of
-redistribution are
-<firstterm>reciprocal</firstterm><footnote><para>Some people use the
-term <firstterm>viral</firstterm> to describe the GPL's
-contagiousness; they do not always mean this pejoratively, but I still
-prefer "reciprocal" because it's more descriptive and less connotative
-of disease.</para></footnote>&nbsp;&mdash;&nbsp;they are passed
-on to anything else the code gets incorporated into, making it
-effectively impossible to use GPLed code in closed-source programs.
-However, these same clauses also make the GPL incompatible with
-certain other free licenses.  The usual way this happens is that the
-other license imposes a requirement&nbsp;&mdash;&nbsp;for example, a credit clause
-requiring the original authors to be mentioned in some way&nbsp;&mdash;&nbsp;that
-is incompatible with the GPL's "You may not impose any further
-restrictions..." language.  From the point of view of the Free
-Software Foundation, these second-order consequences are desirable, or
-at least not regrettable.  The GPL not only keeps your software free,
-but effectively makes your software an agent in pushing
-<emphasis>other</emphasis> software to enforce freedom as well, by
-encouraging them to use the GPL.</para>
+<para>通过这两个条件，GPL 使自由具有传染性。一旦一个程序以 GPL 作为其许可证发布，其再分发条款就具有<firstterm>互惠</firstterm><footnote><para>有些人用<firstterm>病毒式</firstterm>一词来形容 GPL 的传染性；他们并不总是带有贬义，但我仍然更喜欢“互惠”，因为它更具描述性，且较少带有疾病的联想。</para></footnote>——它们会传递给代码被整合进去的任何其他东西，从而有效地使得在闭源程序中使用 GPLed 代码成为不可能。然而，这些相同的条款也使得 GPL 与某些其他自由许可证不兼容。通常发生这种情况的方式是，另一个许可证施加了一项要求——例如，一个要求以某种方式提及原始作者的署名条款——这与 GPL 的“您不得施加任何进一步限制……”的语言不兼容。从自由软件基金会的角度来看，这些二阶后果是可取的，或者至少是不可惜的。GPL 不仅保持你的软件自由，而且有效地使你的软件成为一个媒介，推动<emphasis>其他</emphasis>软件也强制执行自由，通过鼓励它们使用 GPL。</para>
 
-<para>The question of whether or not this is a good way to
-promote free software is one of the most persistent holy wars on the
-Internet (see <xref linkend="holy-wars"/>), and we won't
-investigate it here.  What's important for our purposes is that
-GPL compatibility is something to consider when choosing a license.  The
-GPL is a popular open source license, and some important open source
-packages are licensed under it.  If you want your code to be able to be
-mixed freely with GPLed code, then you should pick a GPL-compatible
-license.  Most of the GPL-compatible open source licenses are also
-proprietary-compatible: that is, code under such a license can be used
-in a GPLed program, and it can be used in a proprietary program.  Of
-course, the <emphasis>results</emphasis> of these mixings would not be
-compatible with each other, since one would be under the GPL and the
-other would be under a closed-source license.  But that concern
-applies only to the derivative works, not to the code you distribute
-in the first place.</para>
+<para>这是否是推广自由软件的好方法，是互联网上最持久的圣战之一（见 <xref linkend="holy-wars"/>），我们在此不作探讨。对我们而言重要的是，GPL 兼容性是选择许可证时需要考虑的一个因素。GPL 是一个流行的开源许可证，一些重要的开源软件包也在其下许可。如果你希望你的代码能够自由地与 GPLed 代码混合，那么你应该选择一个与 GPL 兼容的许可证。大多数与 GPL 兼容的开源许可证也与专有软件兼容：也就是说，这类许可证下的代码可以用在 GPLed 程序中，也可以用在专有程序中。当然，这些混合的<emphasis>结果</emphasis>将互不兼容，因为一个将在 GPL 下，另一个将在闭源许可证下。但这种担忧只适用于衍生作品，而不适用于你最初分发的代码。</para>
 
-<para>Fortunately, the Free Software Foundation maintains a list
-showing which licenses are compatible with the GPL and which are not,
-at <ulink url="https://www.gnu.org/licenses/license-list.html"
->https://www.gnu.org/licenses/license-list.html</ulink>.  All
-of the licenses discussed in this chapter are present on that list, on
-one side or the other.</para>
+<para>幸运的是，自由软件基金会维护着一个列表，显示了哪些许可证与 GPL 兼容，哪些不兼容，网址是 <ulink url="https://www.gnu.org/licenses/license-list.html">https://www.gnu.org/licenses/license-list.html</ulink>。本章讨论的所有许可证都出现在该列表上，无论在哪一边。</para>
 
 </sect1>
 
@@ -566,266 +164,88 @@ one side or the other.</para>
 <!-- For link compatibility with now-obsolete IDs from older editions. -->
 <anchor id="license-choosing-mit-x" />
 <anchor id="license-bsd" />
-<title>Choosing a License</title>
+<title>选择许可证</title>
 
-<para>When choosing a license to apply to your project, use an
-existing license instead of making up a new one.  And don't just use
-any existing license&nbsp;&mdash;&nbsp;use one of the widely-used,
-well-recognized existing licenses.</para>
+<para>在为你的项目选择许可证时，应使用现有的许可证，而不是自己创造一个新的。而且不要只使用任何现有的许可证——要使用那些广泛使用、广为人知的现有许可证。</para>
 
-<para>Such licenses are familiar to many people already.  If you use
-one of them, people won't feel they have to read the legalese in order
-to use your code, because they'll have already read that
-license a long time ago.  Thus, you reduce or remove one possible
-barrier to entry for your project.  These licenses are also of a high quality:
-they are the products of much thought and experience; indeed most
-of them are revisions of previous versions of themselves, and the
-modern versions represent a great deal of accumulated legal and
-technical wisdom.  Unless your project has truly unusual needs, it is
-unlikely you could do better even with a team of lawyers at your
-disposal.</para>
+<para>这样的许可证对许多人来说已经很熟悉。如果你使用其中之一，人们就不会觉得为了使用你的代码而必须阅读法律术语，因为他们很久以前就已经读过那个许可证了。因此，你为你的项目减少或移除了一个可能的进入壁垒。这些许可证质量也很高：它们是深思熟虑和丰富经验的产物；实际上，它们中的大多数都是自身先前版本的修订版，现代版本代表了大量积累的法律和技术智慧。除非你的项目有真正不寻常的需求，否则即使有律师团队在你身边，你也不太可能做得更好。</para>
 
-<para>Below is a list of licenses that in my opinion meet these
-criteria; in parentheses is the standard formal
-abbreviation<footnote><para>The Software Package Data Exchange (SPDX)
-project maintains a canonical list of licenses abbreviations, along
-with whether the given license is OSI-approved, FSF-approved, or both,
-at <ulink url="https://spdx.org/licenses/"
->https://spdx.org/licenses/</ulink>.</para></footnote> for each license.  If you have
-nothing else to guide you and you want a copyleft license, then choose
-either the GPL-3.0 or the AGPL-3.0&nbsp;&mdash;&nbsp;the difference
-between them will be discussed below&nbsp;&mdash;&nbsp;and if you want
-a non-copyleft license, choose the MIT license.  I've put those
-licenses <emphasis role="bold" >in boldface</emphasis> to reflect
-this.</para>
+<para>以下是我认为符合这些标准的许可证列表；括号内是每个许可证的标准正式缩写<footnote><para>软件包数据交换（SPDX）项目维护着一个权威的许可证缩写列表，以及给定许可证是否获得 OSI 批准、FSF 批准或两者兼有，网址为 <ulink url="https://spdx.org/licenses/">https://spdx.org/licenses/</ulink>。</para></footnote>。如果你没有其他指导，并且想要一个 copyleft 许可证，那么选择 GPL-3.0 或 AGPL-3.0——它们之间的区别将在下文讨论——如果你想要一个非 copyleft 许可证，则选择 MIT 许可证。我将这些许可证<emphasis role="bold">以粗体显示</emphasis>以反映这一点。</para>
 
-<para>This list is not in order of preference, but rather in roughly
-descending order from strong copyleft at the top to completely
-non-copyleft at the bottom:</para>
+<para>这个列表并非按偏好排序，而是大致从顶部的强 copyleft 到底部的完全非 copyleft 的降序排列：</para>
 
 <itemizedlist>
-  <listitem><emphasis role="bold" >GNU General Public License version 3 (<code>GPL-3.0</code>)</emphasis></listitem>
-  <listitem><emphasis role="bold" >GNU Affero General Public License version 3 (<code>AGPL-3.0</code>)</emphasis></listitem>
-  <listitem>Mozilla Public License 2.0 (<code>MPL-2.0</code>)</listitem>
-  <listitem>GNU Library or "Lesser" General Public License version 3 (<code>LGPL-3.0</code>)</listitem>
-  <listitem>Eclipse Public License 1.0 (<code>EPL-1.0</code>)</listitem>
-  <listitem>Apache License 2.0 (<code>Apache-2.0</code>)</listitem>
-  <listitem><emphasis role="bold" >MIT license (<code>MIT</code>)</emphasis></listitem>
-  <listitem>BSD 2-Clause ("Simplified" or "FreeBSD") license (<code>BSD-2-Clause</code>)</listitem>
+  <listitem><emphasis role="bold">GNU 通用公共许可证第 3 版 (<code>GPL-3.0</code>)</emphasis></listitem>
+  <listitem><emphasis role="bold">GNU Affero 通用公共许可证第 3 版 (<code>AGPL-3.0</code>)</emphasis></listitem>
+  <listitem>Mozilla 公共许可证 2.0 (<code>MPL-2.0</code>)</listitem>
+  <listitem>GNU 宽通用公共许可证（或称“次”通用公共许可证）第 3 版 (<code>LGPL-3.0</code>)</listitem>
+  <listitem>Eclipse 公共许可证 1.0 (<code>EPL-1.0</code>)</listitem>
+  <listitem>Apache 许可证 2.0 (<code>Apache-2.0</code>)</listitem>
+  <listitem><emphasis role="bold">MIT 许可证 (<code>MIT</code>)</emphasis></listitem>
+  <listitem>BSD 2-Clause (“简化版”或“FreeBSD”) 许可证 (<code>BSD-2-Clause</code>)</listitem>
 </itemizedlist>
 
-<para>The exact provisions of each license differ in various interesting
-ways (except for MIT and BSD, which differ only in uninteresting
-ways and are basically interchangeable).  There isn't space here to
-explore all the possible ramifications of each license for your
-project, but many good discussions of that sort are easily findable
-on the Internet; in particular the Wikipedia pages for these licenses
-tend to give good overviews.</para>
+<para>每个许可证的具体条款在各种有趣的方面有所不同（除了 MIT 和 BSD，它们只在不重要的方面有差异，基本上可以互换）。这里没有空间探讨每个许可证对你的项目可能产生的所有影响，但许多好的这类讨论在互联网上很容易找到；特别是这些许可证的维基百科页面往往提供了很好的概述。</para>
 
-<para>Note that there are some arguments for choosing the Apache
-License 2.0 as a default non-copyleft license, and they are nearly as
-compelling as those for choosing MIT.  In the end, I come down in
-favor of MIT because it is extremely short, and both widely used and
-widely recognized.  While the
-Apache License 2.0 has the advantage of containing some explicit
-defenses against misuse of software patents, which might be important
-to your organization depending on the kind of project you're
-launching, the MIT license is fully compatible with all versions of
-the GNU General Public License, meaning that you can distributed,
-under any version of the GPL, mixed-provenance works that contain
-MIT-licensed code.  The GPL-compatibility situation for the Apache
-License, on the other hand, is more complicated&nbsp;&mdash;&nbsp;by
-some interpretations, it is compatible with GPL version 3 only.
-Therefore, to avoid giving your downstream redistributors the headache
-of having to read sentences like the preceding ones, I recommend
-the MIT license as the default non-copyleft license for anyone who
-doesn't have a reason to choose otherwise.</para>
+<para>请注意，选择 Apache 许可证 2.0 作为默认的非 copyleft 许可证也有一些论据，它们几乎和选择 MIT 的一样有说服力。最终，我倾向于 MIT，因为它非常简短，并且被广泛使用和认可。虽然 Apache 许可证 2.0 的优点是包含了一些针对滥用软件专利的明确防御措施，这可能对你的组织很重要，取决于你启动的项目类型，但 MIT 许可证与所有版本的 GNU 通用公共许可证完全兼容，这意味着你可以在任何版本的 GPL 下分发包含 MIT 许可代码的混合来源作品。另一方面，Apache 许可证的 GPL 兼容性情况更为复杂——根据某些解释，它仅与 GPL 第 3 版兼容。因此，为了避免给你的下游再分发者带来阅读像前面那样的句子的头痛，我推荐 MIT 许可证作为任何没有理由选择其他的人的默认非 copyleft 许可证。</para>
 
-<para>The mechanics of applying a license to your project are
-discussed in <xref linkend="license-quickstart-applying"/>.</para>
+<para>将许可证应用于你的项目的具体方法在 <xref linkend="license-quickstart-applying"/> 中讨论。</para>
 
 <sect2 id="license-choosing-gpl">
-<title>The GNU General Public License</title>
+<title>GNU 通用公共许可证</title>
 
-<para>If you prefer that your project's code not be used in
-proprietary programs, or if you at least don't care whether or not it
-can be used in proprietary programs, the GNU General Public License,
-version 3, is a good choice.</para>
+<para>如果你希望你的项目代码不被用于专有程序，或者你至少不关心它是否能被用于专有程序，那么 GNU 通用公共许可证第 3 版是一个不错的选择。</para>
 
-<para>When writing a code library that is meant mainly to be used as
-part of other programs, consider carefully whether the restrictions
-imposed by the GPL are in line with your project's goals.  In some
-cases&nbsp;&mdash;&nbsp;for example, when you're trying to unseat a
-competing, proprietary library that offers the same
-functionality<footnote><para>Once again, the report <citetitle>Open
-Source Archetypes: A Framework For Purposeful Open Source</citetitle>
-(<ulink url="https://opentechstrategies.com/archetypes"
->https://opentechstrategies.com/archetypes</ulink>), mentioned in <xref
-linkend="introduction"/>, may be worth consulting if you want a
-strategic view of potential purposes for an open source project and
-how purpose affects structure.</para></footnote>&nbsp;&mdash;&nbsp;it
-may make more strategic sense to license your code in such a way that
-it can be mixed into proprietary programs, even though you would
-otherwise not wish this.  The Free Software Foundation even fashioned
-an alternative to the GPL for such circumstances: the <firstterm>GNU
-Lesser GPL</firstterm><footnote><para>Originally named the
-<firstterm>GNU Library GPL</firstterm>, and later renamed by the
-FSF.</para></footnote> The LGPL has weaker reciprocity requirements
-than the GPL, and can be mixed more easily with non-free code.  The
-FSF's page about the LGPL, <ulink
-url="https://www.gnu.org/licenses/lgpl.html"
->https://www.gnu.org/licenses/lgpl.html</ulink>, has a good discussion
-of when to use it.</para>
+<para>在编写一个主要用作其他程序一部分的代码库时，请仔细考虑 GPL 施加的限制是否符合你的项目目标。在某些情况下——例如，当你试图取代一个提供相同功能的竞争性专有库时<footnote><para>再次，报告 <citetitle>开源原型：一个有目的的开源框架</citetitle> (<ulink url="https://opentechstrategies.com/archetypes">https://opentechstrategies.com/archetypes</ulink>)，在 <xref linkend="introduction"/> 中提到，如果你想从战略角度看待一个开源项目的潜在目的以及目的如何影响结构，可能值得一读。</para></footnote>——从战略上讲，以一种可以被混合到专有程序中的方式许可你的代码可能更有意义，即使你本来不希望这样。自由软件基金会甚至为这种情况设计了 GPL 的一个替代方案：<firstterm>GNU 宽通用公共许可证</firstterm> (Lesser General Public License)，或称<firstterm>GNU 次通用公共许可证</firstterm><footnote><para>最初名为 <firstterm>GNU 库 GPL</firstterm>，后来由 FSF 更名。</para></footnote> LGPL 的互惠要求比 GPL 弱，并且可以更容易地与非自由代码混合。FSF 关于 LGPL 的页面 <ulink url="https://www.gnu.org/licenses/lgpl.html">https://www.gnu.org/licenses/lgpl.html</ulink>，对何时使用它有很好的讨论。</para>
 
 <sect3 id="gpl-future-proofing">
-<title>The "or any later version" Option: Future-Proofing the GPL</title>
+<title>“或任何更新版本”选项：未来保障 GPL</title>
 
-<para>The GPL has a well-known optional recommendation that you
-release software under the current version of the GPL while giving
-downstream recipients the option to redistribute it under any
-<emphasis>later</emphasis> (i.e., future) version of the license.  The way to offer
-this option is to put language like this in the license headers (see
-<xref linkend="license-quickstart-applying"/>) of the actual source
-files:</para>
+<para>GPL 有一个众所周知的可选建议，即你在当前版本的 GPL 下发布软件，同时给予下游接收者选择在任何<emphasis>更新</emphasis>（即未来）版本的许可证下重新分发它的选项。提供此选项的方法是在实际源文件的许可证标题（参见 <xref linkend="license-quickstart-applying"/>）中加入如下语言：</para>
 
 <blockquote>
-<para><emphasis>This program is free software: you can redistribute it
-and/or modify it under the terms of the GNU General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, <emphasis role="bold">or (at your option) any later
-version.</emphasis></emphasis></para>
+<para><emphasis>本程序是自由软件：你可以根据自由软件基金会发布的 GNU 通用公共许可证的条款重新分发和/或修改它，无论是许可证的第 3 版，<emphasis role="bold">或（由你选择）任何更新的版本。</emphasis></emphasis></para>
 </blockquote>
 
-<para>(Emphasis added.)</para>
+<para>（重点添加。）</para>
 
-<para>Whether you want to offer this option depends largely on how
-likely you think the Free Software Foundation is to make GPL revisions
-that you would approve of.  I think the FSF has done a good job of
-that so far, and I generally do include that option when I use the
-GPL.  That way I don't have to be responsible for updating my software's
-licenses forever&nbsp;&mdash;&nbsp;which is good, since I won't
-be around forever.  Others can do it, either just to keep the software
-license up-to-date with legal developments, or to solve some future
-license compatibility problem that couldn't have been anticipated now
-(for example, see the compatibility discussion in <xref
-linkend="gnu-affero-gpl"/> below).</para>
+<para>你是否希望提供此选项，很大程度上取决于你认为自由软件基金会进行你所赞同的 GPL 修订的可能性有多大。我认为 FSF 迄今为止在这方面做得很好，我通常在使用 GPL 时会包含该选项。这样我就不必永远负责更新我的软件的许可证——这很好，因为我不会永远都在。其他人可以做到这一点，无论是为了让软件许可证与法律发展保持同步，还是为了解决未来某个无法预料的许可证兼容性问题（例如，参见下面 <xref linkend="gnu-affero-gpl"/> 中的兼容性讨论）。</para>
 
-<para>Not everyone feels the same way, however; most notably, the
-Linux kernel is famously licensed under the GNU GPL version 2
-<emphasis>without</emphasis> the "or any later version" clause, and
-influential kernel copyright holders, especially Linus Torvalds, have
-expressed clearly that they do not intend to move its license to
-version 3.0.</para>
+<para>然而，并非所有人都持相同看法；最著名的是，Linux 内核著名地是在 GNU GPL 第 2 版下许可，<emphasis>没有</emphasis>“或任何更新版本”条款，并且有影响力的内核版权所有者，特别是 Linus Torvalds，已明确表示他们不打算将其许可证迁移到 3.0 版。</para>
 
-<para>This book cannot answer the question of whether you should
-include the option or not.  You now know that you have the choice
-and that different people come to different conclusions about
-it.</para>
+<para>本书无法回答你是否应该包含该选项的问题。你现在知道了你有这个选择，并且不同的人对此有不同的结论。</para>
 
 </sect3>
 
 <sect3 id="gnu-affero-gpl">
-<title>The GNU Affero GPL: A Version of the GNU GPL for Server-Side Code</title>
+<title>GNU Affero GPL：一个适用于服务器端代码的 GNU GPL 版本</title>
 
-<para>In 2007, the Free Software Foundation released a variant of the
-GPL called the <firstterm>GNU Affero GPL</firstterm>.  Its purpose was to bring
-copyleft-style sharing provisions to the increasing amount of code
-being run as hosted services&nbsp;&mdash;&nbsp;that is, software that
-runs "in the cloud" on remote servers owned by someone other than the
-user.  This is software that users interact with only
-over the network and that therefore is not directly distributed to its
-users as executable or source code in the normal course of usage.
-Many such services use GPLed
-software, often with extensive modifications, yet could avoid
-publishing their changes because they weren't actually distributing
-code.</para>
+<para>2007 年，自由软件基金会发布了 GPL 的一个变体，称为<firstterm>GNU Affero GPL</firstterm>。其目的是将 copyleft 风格的共享条款引入到日益增多的作为托管服务运行的代码中——即在用户以外的某人拥有的远程服务器上“云端”运行的软件。这是一种用户仅通过网络与之交互的软件，因此在正常使用过程中不会直接以可执行文件或源代码的形式分发给用户。许多此类服务使用 GPLed 软件，通常经过大量修改，但却可以避免发布他们的更改，因为他们实际上并未分发代码。</para>
 
-<para>The AGPL's solution to this was to take the GPL (version 3) and add a
-"Remote Network Interaction" clause, stating "<emphasis>...if you
-modify the Program, your modified version must prominently offer all
-users interacting with it remotely through a computer network ... an
-opportunity to receive the Corresponding Source of your version ... at
-no charge, through some standard or customary means of facilitating
-copying of software.</emphasis>" This expanded the GPL's enforcement
-powers into the new world of remote application service providers.  The Free
-Software Foundation recommends that the GNU AGPL 3.0 be used for any
-software that will commonly be run over a network.</para>
+<para>AGPL 对此的解决方案是采用 GPL（第 3 版）并增加一个“远程网络交互”条款，规定“<emphasis>……如果你修改程序，你的修改版本必须显著地向所有通过计算机网络远程与之交互的用户……提供一个机会，以……免费的方式，通过一些标准或惯用的软件复制方式，接收你版本的相应源代码。</emphasis>” 这将 GPL 的执行力扩展到了远程应用服务提供商的新世界。自由软件基金会建议，对于通常会在网络上运行的任何软件，都应使用 GNU AGPL 3.0。</para>
 
-<para>Note that the AGPL-3.0 is not directly compatible with GPL-2.0,
-though it is compatible with GPL-3.0.  Since most software licensed
-under GPL-2.0 includes the "or any later version" clause anyway, that
-software can just be shifted to GPL-3.0 if and when you need to mix it
-with AGPL-3.0 code.  However, if you need to mix with programs
-licensed strictly under the GPL-2.0 (that is, programs licensed
-without the "or any later version" clause), the AGPL3.0 wouldn't be
-compatible with that.</para>
+<para>请注意，AGPL-3.0 与 GPL-2.0 不直接兼容，但与 GPL-3.0 兼容。由于大多数在 GPL-2.0 下许可的软件无论如何都包含了“或任何更新版本”的条款，因此当需要将其与 AGPL-3.0 代码混合时，这些软件可以直接转换为 GPL-3.0。但是，如果你需要与严格在 GPL-2.0 下许可的程序（即没有“或任何更新版本”条款的程序）混合，AGPL-3.0 将与此不兼容。</para>
 
-<para>Although the history of the AGPL-3.0 is a bit complicated, the
-license itself is simple: it's just the GPL-3.0 with one extra clause
-about network interaction.  The Wikipedia article on the AGPL is
-excellent: <ulink
-url="https://en.wikipedia.org/wiki/Affero_General_Public_License"
->https://en.wikipedia.org/wiki/Affero_General_Public_License</ulink></para>
+<para>虽然 AGPL-3.0 的历史有点复杂，但许可证本身很简单：它只是在 GPL-3.0 的基础上增加了一个关于网络交互的额外条款。维基百科上关于 AGPL 的文章非常出色：<ulink url="https://en.wikipedia.org/wiki/Affero_General_Public_License">https://en.wikipedia.org/wiki/Affero_General_Public_License</ulink></para>
 </sect3>
 
 <sect3 id="copyright-holder-is-special">
-<title>The Copyright Holder Is Special, Even In Copyleft Licenses</title>
+<title>即使在 Copyleft 许可下，版权所有者仍然是特殊的</title>
 
-<para>One common misunderstanding is that licensing your software
-under the GPL or AGPL requires you to provide source code to anyone
-who requests it under the terms of the license.  But that's not quite
-how it works.  If you are the <emphasis>sole</emphasis> copyright
-holder in a piece of software, then you are not bound by the copyright
-terms you chose, because (essentially) you can't be forced to sue
-yourself for copyright infringement.  You can enforce the terms on
-others, but it's up to you to decide whether and when those terms
-apply to you.  After all, because you had the software originally, you
-never "distributed" it to yourself and thus are not bound by the
-redistribution requirements of the license.</para>
+<para>一个常见的误解是，在 GPL 或 AGPL 下许可你的软件，就要求你向任何索取者提供源代码。但这并非完全如此。如果你是一段软件的<emphasis>唯一</emphasis>版权所有者，那么你就不受自己所选择的版权许可条款的约束。你可以对他人强制执行这些条款，但是否以及何时将这些条款应用于你自己，则由你决定。毕竟，许可证的再分发要求仅在“分发”时触发，而作为版权所有者，你从未将软件“分发”给自己。</para>
 
-<para>Of course, this only applies to situations where you own the
-whole copyright.  If you include others' GPL- or AGPL-licensed code in
-your project and then distribute the result, you are no longer the sole
-copyright holder, and so you are as bound by the original terms as
-anyone else who uses and redistributes that code, either unmodified or
-as part of a derivative work.</para>
+<para>当然，这只适用于你拥有全部版权的情况。如果你在你的项目中包含了他人 GPL 或 AGPL 许可的代码，然后分发了结果，你就不再是唯一的版权所有者，因此你和其他任何使用和再分发该代码的人一样，受到原始条款的约束，无论是未经修改还是作为衍生作品的一部分。</para>
 
 </sect3>
 
 <sect3 id="is-the-gpl-free">
-<title>Is the GPL Free or Not Free?</title>
+<title>GPL 是“自由”的还是“不自由”的？</title>
 
-<para>One consequence of choosing the GPL (or AGPL) is the small
-possibility of finding
-yourself or your project embroiled in a dispute about whether or not
-the GPL is truly "free", given that it places some restrictions on
-how you redistribute the code&nbsp;&mdash;&nbsp;namely, the restriction that the
-code cannot be distributed under any other license.  For some people,
-the existence of this restriction means the GPL is therefore "less
-free" than non-reciprocal licenses.  Where this
-argument usually goes, of course, is that since "more free" must be
-better than "less free" (after all, who's not in favor of freedom?),
-it follows that those licenses are better than the GPL.</para>
+<para>选择 GPL（或 AGPL）的一个后果是，你或你的项目有很小的可能会卷入一场关于 GPL 是否真正“自由”的争论中，因为它对你如何再分发代码施加了一些限制——即代码不能在任何其他许可证下分发的限制。对某些人来说，这个限制的存在意味着 GPL 因此比非互惠许可证“更不自由”。当然，这个论点通常的走向是，既然“更自由”必然比“更不自由”好（毕竟，谁不赞成自由呢？），那么那些许可证就比 GPL 好。</para>
 
-<para>This debate is another popular holy war (see
-<xref linkend="holy-wars"/>).  Avoid participating
-in it, at least in project forums.  Don't attempt to prove that the
-GPL is less free, as free, or more free than other licenses.  Instead,
-emphasize the specific reasons your project chose the GPL.  If the
-recognizability of license was a reason, say that.  If the enforcement
-of free licensing on derivative works was also a reason, say that too,
-but refuse to be drawn into discussion about whether this makes the
-code more or less "free".  Freedom is a complex topic, and there is
-little point talking about it if terminology is going to be used as a
-stalking horse for substance.</para>
+<para>这场辩论是另一个流行的圣战（见 <xref linkend="holy-wars"/>）。避免参与其中，至少在项目论坛中如此。不要试图证明 GPL 比其他许可证更不自由、同样自由或更自由。相反，要强调你的项目选择 GPL 的具体原因。如果许可证的可识别性是一个原因，就说出来。如果对衍生作品强制执行自由许可是另一个原因，也说出来，但要拒绝被卷入关于这是否使代码“更自由”或“更不自由”的讨论。自由是一个复杂的话题，如果术语被用作实质问题的掩护，那么谈论它就没有什么意义了。</para>
 
-<para>Since this is a book and not a mailing list thread, however, I
-will admit that I've never understood the "GPL is not free" argument.
-The only restriction the GPL imposes is that it prevents people from
-imposing <emphasis>further</emphasis> restrictions.  To say that this
-results in less freedom has always seemed perverse to me.  If the
-retention of monopoly is somehow a freedom to be protected, then the
-word "freedom" is no longer meaningful.</para>
+<para>不过，因为这里是著书立说，而不是邮件列表，所以请允许我“夹带私货”：我从未理解“GPL 不自由”的论点。GPL 施加的唯一限制，是阻止人们施加<emphasis>进一步的</emphasis>限制。在我看来，说这会导致更少的自由，似乎是本末倒置了。如果垄断能力也是某种需要保护的自由，那“自由”这个词就毫无意义了。</para>
 
 </sect3>
 
@@ -839,127 +259,42 @@ word "freedom" is no longer meaningful.</para>
 <anchor id="copyright-assignment" />
 <!-- For link compatibility with a deprecated subsection ID. -->
 <anchor id="copyright-assignment-transfer" />
-<title>Contributor Agreements</title>
+<title>贡献者协议</title>
 
-<para>There are three ways to handle copyright ownership for free code
-and documentation that were contributed to by many people.  The first
-is to ignore the issue of copyright entirely (I don't recommend this).
-The second is to collect a <firstterm>contributor license
-agreement</firstterm> (<firstterm>CLA</firstterm>) from each person
-who works on the project, explicitly granting the project the right to
-use that person's contributions.  This is usually enough for most
-projects, and the nice thing is that in some jurisdictions, CLAs can
-be sent in electronically.  The third way is to get actual
-<firstterm>copyright assignment</firstterm> (<firstterm>CA</firstterm>
-from contributors, so that the project (i.e., some legal entity,
-usually a nonprofit) is the copyright owner for everything.  This way
-is the most burdensome for contributors, and some contributors simply
-refuse to do it; only a few projects still ask for assignment, and I don't
-recommend that any project require it these days.<footnote><para>Also,
-actual copyright transferal is subject to national law, and licenses
-designed for the United States may encounter problems elsewhere (e.g.,
-in Germany, where it's apparently not possible to fully transfer
-copyright).</para></footnote></para>
+<para>对于由多人贡献的自由代码和文档，有三种处理版权所有权的方式。第一种是完全忽略版权问题（我不推荐这样做）。第二种是从每个参与项目的人那里收集一份<firstterm>贡献者许可协议</firstterm>（<firstterm>CLA</firstterm>），明确授予项目使用该人贡献的权利。这对于大多数项目来说通常足够了，而且好处是在某些司法管辖区，CLA 可以通过电子方式发送。第三种方式是从贡献者那里获得实际的<firstterm>版权转让</firstterm>（<firstterm>CA</firstterm>），这样项目（即某个法律实体，通常是非营利组织）就成为所有内容的版权所有者。这种方式对贡献者来说最麻烦，有些贡献者干脆拒绝这样做；如今只有少数项目仍要求转让，我不建议任何项目要求这样做。<footnote><para>此外，实际的版权转让受国家法律的约束，为美国设计的许可证在其他地方可能会遇到问题（例如，在德国，完全转让版权显然是不可能的）。</para></footnote></para>
 
-<para>Note that even under centralized copyright ownership, the
-code<footnote><para>I'll use "code" to refer to both code and
-documentation from now on.</para></footnote> remains free, because
-open source licenses do not give the copyright holder the right to
-retroactively proprietize all copies of the code.  So even if the
-project, as a legal entity, were to suddenly turn around and start
-distributing all the code under a restrictive license, that wouldn't
-necessarily cause a problem for the public community.  The other
-developers could start a fork based on the latest free copy of the code
-and continue as if nothing had happened.</para>
+<para>请注意，即使在集中版权所有权下，代码<footnote><para>从现在起，我将用“代码”来指代代码和文档。</para></footnote>仍然是自由的，因为开源许可证不给予版权所有者追溯性地将所有代码副本专有化的权利。因此，即使项目作为一个法律实体，突然转向并开始在一个限制性许可证下分发所有代码，这也不一定会给公共社区带来问题。其他开发者可以基于代码的最新自由副本启动一个分支，然后像什么都没发生一样继续。</para>
 
 <sect2 id="copyright-assignment-none">
-<title>Doing Nothing</title>
+<title>什么都不做</title>
 
-<para>Some projects never collect CLAs or CAs from
-their contributors.  Instead, they accept code whenever it seems
-reasonably clear that the contributor intended it to be incorporated
-into the project.</para>
+<para>一些项目从不向其贡献者收集 CLA 或 CA。相反，只要贡献者意图将其代码并入项目的意图看起来相当明确，他们就接受代码。</para>
 
-<para>This can seem to work for a long time, as long as the project
-has no enemies.  But I don't recommend it.  Someone may eventually
-decide to sue for copyright infringement, alleging that they are the
-true owner of the code in question and that they never agreed to its
-being distributed by the project under an open source license.  For
-example, the SCO Group did something like this to the Linux project (see
-<ulink url="https://en.wikipedia.org/wiki/SCO-Linux_controversies"
->https://en.wikipedia.org/wiki/SCO-Linux_controversies</ulink>
-for details).  When this happens, the project will have no
-documentation showing that the contributor formally granted the right
-to use the code, which could make some legal defenses more
-difficult.</para>
+<para>只要项目没有敌人，这似乎可以长期奏效。但我不推荐这样做。最终可能会有人决定以版权侵权为由提起诉讼，声称他们是相关代码的真正所有者，并且他们从未同意项目在一个开源许可证下分发该代码。例如，SCO 集团就对 Linux 项目做过类似的事情（详情参见 <ulink url="https://en.wikipedia.org/wiki/SCO-Linux_controversies">https://en.wikipedia.org/wiki/SCO-Linux_controversies</ulink>）。当这种情况发生时，项目将没有任何文件证明贡献者已正式授予使用该代码的权利，这可能会使某些法律辩护变得更加困难。</para>
 
 </sect2>
 
 <sect2 id="copyright-assignment-cla">
-<title>Contributor License Agreements</title>
+<title>贡献者许可协议</title>
 
-<para>CLAs probably offer the best tradeoff between safety and
-convenience.  A CLA is typically an electronic form that a developer
-fills out and sends in to the project, or even a web-based checkbox
-that the developer checks before completing their first contribution
-to the project.  In many jurisdictions, such email
-submission or an online form is enough, though you should consult with
-a lawyer to see what method would be best for your project.</para>
+<para>CLA 可能在安全性和便利性之间提供了最佳的权衡。CLA 通常是开发者填写并发送给项目的电子表格，甚至是开发者在完成对项目的首次贡献前勾选的基于网络的复选框。在许多国家或地区，这样的电子邮件提交或在线表格就足够了，不过你应该咨询律师，看看哪种方法最适合你的项目。</para>
 
-<para>Some projects use two slightly different CLAs, one for
-individuals, and one for corporate contributors.  But in both types,
-the core language is the same: the contributor grants the
-project a <emphasis>"...perpetual, worldwide, non-exclusive, no-charge,
-royalty-free, irrevocable copyright license to reproduce, prepare
-derivative works of, publicly display, publicly perform, sublicense,
-and distribute [the] Contributions and such derivative
-works."</emphasis> Again, you should have a lawyer approve any CLA,
-but if you get all those adjectives into it, you're off to a good start.</para>
+<para>一些项目使用两种略有不同的 CLA，一种针对个人，一种针对企业贡献者。但在两种类型中，核心语言是相同的：贡献者授予项目一份<emphasis>“……永久、全球性、非排他性、免费、免版税、不可撤销的版权许可，以复制、准备衍生作品、公开展示、公开表演、再许可和分发[该]贡献及其衍生作品。”</emphasis> 再次强调，你应该让律师批准任何 CLA，但如果你把所有这些形容词都加进去，你就开了一个好头。</para>
 
-<para>When you request CLAs from contributors, make sure to emphasize
-that you are <emphasis>not</emphasis> asking for actual copyright
-assignment.  In fact, many CLAs start out by reminding the reader of
-this, for example like so:</para>
+<para>当你向贡献者请求 CLA 时，一定要强调你<emphasis>不是</emphasis>在要求实际的版权转让。事实上，许多 CLA 一开始就提醒读者这一点，例如这样：</para>
 
 <blockquote>
-<para><emphasis>This is a license agreement only; it does not transfer
-copyright ownership and does not change your rights to use your own
-Contributions for any other purpose.</emphasis></para>
+<para><emphasis>这只是一份许可协议；它不转让版权所有权，也不改变你为任何其他目的使用自己贡献的权利。</emphasis></para>
 </blockquote>
 
 <sect3 id="developer-certificate-of-origin">
-<title>Developer Certificate of Origin (DCO): An Easier Style of CLA</title>
+<title>开发者原创声明 (DCO)：一种更简单的 CLA 风格</title>
 
-<para>More and more projects are now using a particularly convenient
-style of simple CLA known as a <firstterm>Developer Certificate of
-Origin</firstterm> (<firstterm>DCO</firstterm>).</para>
+<para>现在越来越多的项目开始使用一种特别方便的简单 CLA 风格，称为<firstterm>开发者原创声明</firstterm>（<firstterm>DCO</firstterm>）。</para>
 
-<para>A DCO is essentially an attestation that the contributor intends
-to contribute the enclosed code under the project's license, and that
-the contributor has the right to do so.  The contributor indicates her
-understanding of the DCO once, early on, for example by emailing its
-text from her usual contribution address to a special archive at the
-project.<footnote><para>The DCO text is provided by the project, but
-you don't have to write your own from scratch; see <ulink
-url="https://developercertificate.org/"
->https://developercertificate.org/</ulink> for example.</para></footnote>
-Thereafter, the contributor includes a "Signed-Off-By:" line in her
-patches or commits, using the same identity, to indicate that the
-corresponding contribution is certified under the DCO.  This gives the
-project the legal cover it needs, while giving contributors a
-low-bureaucracy process for submitting their contributions.  The DCO
-relies on the project's native open source license for any trademark
-or patent provisions, which in most cases is fine.</para>
+<para>DCO 本质上是一份声明，表明贡献者意图在项目的许可证下贡献所附代码，并且贡献者有权这样做。贡献者在早期一次性地表明其对 DCO 的理解，例如通过其通常的贡献地址将 DCO 的文本发送到项目的专门存档。<footnote><para>DCO 文本由项目提供，但你不必从头开始编写自己的；例如，参见 <ulink url="https://developercertificate.org/">https://developercertificate.org/</ulink>。</para></footnote> 此后，贡献者在其补丁或提交中使用相同的身份包含一个“Signed-Off-By:”行，以表明相应的贡献已在 DCO 下认证。这为项目提供了所需的法律保障，同时为贡献者提供了一个低官僚主义的贡献提交流程。DCO 依赖于项目的原生开源许可证来处理任何商标或专利条款，这在大多数情况下是没问题的。</para>
 
-<para>The simplification that makes DCOs work so well is that they set
-the inbound license of the contribution to be the same as the outbound
-license of the project.  This avoids the sticky issues that a more
-complex CLA can create, whereby the recipient of the CLA might reserve
-the right to relicense the project (and thus all the past
-contributions) under some different license in the future, possibly
-even a proprietary license.  DCOs are probably the minimum amount of
-CLA a free software project should adopt, but for some circumstances a
-more complex CLA may still be the better course.</para>
+<para>使 DCO 如此有效运作的简化之处在于，它们将贡献的入站许可证设置为与项目的出站许可证相同。这避免了更复杂的 CLA 可能产生的棘手问题，即 CLA 的接收方可能保留将来在某个不同许可证下重新许可项目（以及所有过去的贡献）的权利，甚至可能是一个专有许可证。DCO 可能是自由软件项目应采用的最低限度的 CLA，但在某些情况下，更复杂的 CLA 可能仍然是更好的选择。</para>
 
 </sect3>
 
@@ -971,179 +306,36 @@ more complex CLA may still be the better course.</para>
 <sect1 id="proprietary-relicensing">
 <!-- For link compatibility with a deprecated section ID. -->
 <anchor id="dual-licensing" />
-<title>Proprietary Relicensing</title>
+<title>专有再授权</title>
 
-<para>Some companies offer open source code with a
-<firstterm>proprietary relicensing</firstterm>
-scheme,<footnote><para>This is sometimes also called <firstterm>dual
-licensing</firstterm>, but that term is ambiguous, as it has
-historically also referred to releasing open source software under two
-or more open source licenses simultaneously.  I am grateful to Bradley
-Kuhn for pointing out this ambiguity and suggesting the more accurate
-term.</para></footnote> in which an open source version of the
-software is available under the usual open source terms, while a
-proprietary version is available for a fee.</para>
+<para>一些公司在提供开源代码时会采用一种<firstterm>专有再授权</firstterm>方案<footnote><para>该方案有时也被称为<firstterm>双重授权</firstterm>，但这个术语有歧义，因为它在历史上也指同时在两种或多种开源许可证下发布开源软件。我感谢 Bradley Kuhn 指出这种歧义并建议使用更准确的术语。</para></footnote>，即软件的开源版本在通常的开源条款下可用，而专有版本则需付费。</para>
 
-<para>Why would anyone want a proprietary version, when an open source
-version is already out there?  There are two separate answers,
-reflecting the two different kinds of proprietary relicensing.</para>
+<para>既然已经有了开源版本，为什么还会有人想要专有版本呢？有两个独立的答案，反映了两种不同类型的专有再授权。</para>
 
-<para>The first kind is about <firstterm>selling
-exceptions</firstterm> to copyleft requirements, and is typically used
-with code libraries rather than with standalone applications.  The way
-it works is that the library's owner (i.e., copyright holder), seeing
-that some of the library's users want to incorporate it into their own
-proprietary applications, sells them a promise to
-<emphasis>not</emphasis> enforce the redistribution requirements of
-the open source version's license.  This only works when the open
-source code is under a copyleft-style license, of
-course&nbsp;&mdash;&nbsp;in practice it is usually the GPL or
-AGPL.</para>
+<para>第一种是出售针对 copyleft 要求的例外条款，通常用于代码库而非独立应用程序。其运作方式是，库的所有者（即版权持有者），看到库的一些用户想将其整合到他们自己的专有应用程序中，便向他们出售一个承诺，即<emphasis>不</emphasis>执行开源版本许可证的再分发要求。这当然只在开源代码是 copyleft 风格的许可证下才有效——实际上通常是 GPL 或 AGPL。</para>
 
-<para>With this promise in hand, the downstream users can use the
-library in their proprietary product without worry that they might be
-forced to share the source code to their full product under the copyleft
-license.  One well-known example of "selling exceptions" is the MySQL
-database engine, which is distributed under the GPL version 2, but
-with a proprietary license offering available for many years, first
-from the Swedish company MySQL AB, and later from Oracle, Inc, which
-purchased MySQL AB in 2008.</para>
+<para>有了这个承诺，下游用户就可以在他们的专有产品中使用该库，而不用担心他们可能会被迫在 copyleft 许可证下共享他们整个产品的源代码。一个众所周知的“出售例外”的例子是 MySQL 数据库引擎，它是在 GPL 第 2 版下分发的，但多年来一直提供专有许可证选项，最初由瑞典公司 MySQL AB 提供，后来由 2008 年收购 MySQL AB 的 Oracle 公司提供。</para>
 
-<para>The second kind of proprietary relicensing, sometimes called the
-<firstterm>freemium</firstterm> or <firstterm>open core</firstterm>
-model, uses an open source version to
-drive sales of a presumably fancier proprietary version (see
-<xref linkend="commercial-vs-proprietary"/> for a discussion of some
-marketing pitfalls to avoid in this situation).  Usually the
-company offering the proprietary version is also the primary
-maintainer of the open source version, in the sense of supplying most
-of the developer attention (this is usually inevitable, for reasons
-we'll get to in a moment).  Furthermore, although in theory the
-company <emphasis>could</emphasis> offer paid support for both the
-open source and proprietary versions,<footnote><para>In both cases usually hosted
-as Software-as-a-Service (SaaS), just to be clear.</para></footnote>
-in practice they almost
-always offer it only for the proprietary version, because then they
-can charge two fees: a subscription fee for the software itself and a
-fee for the support services, with only the latter having any marginal
-cost to the supplier.</para>
+<para>第二种专有再授权，有时被称为<firstterm>免费增值模式</firstterm> (freemium) 或<firstterm>开放核心</firstterm> (open core) 模式，使用一个开源版本来推动一个想必更高级的专有版本的销售（关于在这种情况下应避免的一些营销陷阱，请参见 <xref linkend="commercial-vs-proprietary"/> 的讨论）。通常，提供专有版本的公司也是开源版本的主要维护者，即提供大部分开发者关注（这通常是不可避免的，原因我们稍后会谈到）。此外，尽管理论上该公司<emphasis>可以</emphasis>为开源和专有版本都提供付费支持，<footnote><para>需要明确的是，这两种情况通常都是作为软件即服务（SaaS）托管的。</para></footnote>但在实践中，他们几乎总是只为专有版本提供支持，因为这样他们就可以收取两项费用：软件本身的订阅费和支持服务费，而只有后者对供应商有边际成本。</para>
 
-<para>You might be wondering: how can the copyright holder offer the
-software under a proprietary license if the terms of the GNU GPL
-stipulate that the code must be available under less restrictive
-terms?  The answer is that the GPL's terms are something the copyright
-holder imposes on everyone else; the owner is therefore free to decide
-<emphasis>not</emphasis> to apply those terms to itself.  In other
-words, one always has the right to not sue one's self for copyright
-infringement.  This right is not tied to the GPL or any other open
-source license; it is simply in the nature of copyright law.</para>
+<para>你可能想知道：如果 GNU GPL 的条款规定代码必须在限制性较小的条款下可用，版权持有者怎么能在一个专有许可证下提供软件呢？答案是，GPL 的条款是版权持有者强加给其他所有人的；因此，所有者可以自由决定<emphasis>不</emphasis>将这些条款应用于自身。换句话说，一个人总是有权不起诉自己侵犯版权。这项权利与 GPL 或任何其他开源许可证无关；它只是版权法的本质。</para>
 
 <sect2 id="proprietary-relicensing-problems" >
-<title>Problems with Proprietary Relicensing</title>
+<title>专有再授权的问题</title>
 
-<para>Proprietary relicensing, of both varieties, tends to suffer from
-several problems.</para>
+<para>专有再授权，无论是哪种类型，都往往会遇到几个问题。</para>
 
-<para>First, it discourages the normal dynamics of open source
-projects, because any code contributors from outside the company are
-now effectively contributing to two distinct entities: the free
-version of the code and the proprietary version.  While the
-contributor will be comfortable helping the free version, since that's
-the norm in open source projects, she may feel less enthusiastic about
-her contributions being useable in a monopolized proprietary product.
-That is, unlike a straight non-copyleft license by which anyone has
-the right to use the code as part of a proprietary work, here only
-<emphasis>one</emphasis> party has that right, and other participants
-in the project are thus being asked to contribute to an asymmetric
-result.</para>
+<para>首先，它抑制了开源项目的正常动态，因为任何来自公司外部的代码贡献者现在实际上是在为两个不同的实体做贡献：代码的免费版本和专有版本。虽然贡献者会很乐意帮助免费版本，因为这是开源项目的常态，但她可能会对自己的贡献能被用于一个垄断的专有产品感到不那么热情。也就是说，与一个直接的非 copyleft 许可证（任何人都有权将代码用作专有作品的一部分）不同，在这里只有<emphasis>一方</emphasis>拥有该权利，因此项目的其他参与者被要求为一个权利不对等的结果做出贡献。</para>
 
-<para>This awkwardness is reflected and in some ways amplified by
-the fact that in a proprietary relicensing scheme, the copyright owner
-must collect some kind of formal agreement from each contributor (see
-<xref linkend="contributor-agreements"/> earlier in this chapter), in
-order to have the right to redistribute that contributor's code under
-a proprietary license.  Because such an agreement needs to give the
-collecting entity special, one-sided rights that a typical open source
-contributor agreement doesn't include, the process of collecting
-agreements starkly confronts contributors with the imbalance of the
-situation, and some of them may decline to sign.  (Remember, they
-don't need to sign a contribution agreement in order to distribute
-their own changes along with the original code; rather, the
-<emphasis>company</emphasis> needs the agreement in order to
-redistribute the contributor's changes under a proprietary
-license.  Asymmetry cuts both ways.)</para>
+<para>这种尴尬在某种程度上因一个事实而得到反映和放大，即在专有再授权方案中，版权所有者必须从每个贡献者那里收集某种正式协议（参见本章前面的 <xref linkend="contributor-agreements"/>），以便有权在一个专有许可证下重新分发该贡献者的代码。因为这样的协议需要给予收集实体一些特殊的、单方面的权利，而典型的开源贡献者协议不包括这些权利，所以收集协议的过程让贡献者们鲜明地面对了这种不平衡的情况，他们中的一些人可能会拒绝签署。（请记住，他们不需要签署贡献协议来分发他们自己的更改以及原始代码；相反，是<emphasis>公司</emphasis>需要该协议来在一个专有许可证下重新分发贡献者的更改。这种不对称性是双向的。）</para>
 
-<para>Historically, many companies that have started out offering a
-seemingly clear proprietary relicensing option&nbsp;&mdash;&nbsp;use
-our product under open source terms, or buy a proprietary license so
-you can use it under proprietary terms&nbsp;&mdash;&nbsp;have eventually
-graduated to something closer to a "shakedown" model instead, in which
-anyone who makes commercially significant use of the code ends up
-being pressured to purchase a proprietary license as a way of
-protecting their commercial revenue stream from harassment.  The
-precise legal bases on which this pressure rests differ from case to
-case, but the overall pattern of behavior has been remarkably
-consistent.</para>
+<para>从历史上看，许多最初提供看似清晰的专有再授权选项的公司——在开源条款下使用我们的产品，或者购买一个专有许可证以便在专有条款下使用它——最终都逐渐转向了一种更接近于“敲诈勒索式”的模式，即任何对代码进行商业上重要使用的人最终都会被施压购买专有许可证，作为保护其商业收入流免受骚扰的一种方式。这种压力所依据的确切法律基础因案例而异，但总体行为模式却惊人地一致。</para>
 
-<para>Naturally, neither the companies initiating these shakedowns nor
-the parties who are its targets (most of whom eventually capitulate)
-have anything to gain from going on the record about it, so I can only
-tell you that I have heard of it informally and off-the-record from
-multiple sources, at different projects and different companies.
-One reason I generally advise companies who are serious about open
-source development to stay away from proprietary relicensing is that,
-if history is a reliable guide, the temptation to undermine the open
-source license will be overwhelming to the point of being impossible
-to resist.</para>
+<para>当然，无论是发起这些敲诈的公司，还是其目标方（其中大多数最终都会屈服），都无法从公开谈论此事中获益，所以我只能告诉你，我是从多个来源，在不同的项目和不同的公司，非正式地、非公开地听说此事的。我通常建议那些认真对待开源开发的公司远离专有再授权的一个原因是，如果历史是可靠的指引，那么破坏开源许可证的诱惑将会变得势不可挡。</para>
 
-<para>Finally, there is a deep motivational problem for open source
-projects that operate in the shadow of a proprietarily relicensed
-version: the sense that most of the salaried development attention is
-going to the proprietary version anyway, and that therefore spending
-time contributing to the open source version is a fool's
-game&nbsp;&mdash;&nbsp;that one is just helping a commercial entity
-free up its own developers to work on features that the open source
-community will never see.  This fear is reasonable on its face, but it
-also becomes a self-fulfilling prophecy: as more outside developers
-stay away, the company sees less reason to invest in the open source
-codebase, because they're not getting a community multiplier effect
-anyway.  Their disengagement in turn discourages outside developers,
-and so on.</para>
+<para>最后，在一个专有再授权版本的阴影下运作的开源项目存在一个深层次的动机问题：感觉大部分受薪的开发注意力都流向了专有版本，因此花时间为开源版本做贡献是一种得不偿失的行为——你只是在帮助一个商业实体解放自己的开发者去从事开源社区永远看不到的功能。这种担忧看似合理，但它也成了一个自我实现的预言：随着越来越多的外部开发者远离，公司看到投资开源代码库的理由越来越少，因为他们无论如何也得不到社区的乘数效应。他们的脱离反过来又劝退了外部开发者，如此循环。</para>
 
-<para>What seems to happen in practice is that companies that offer
-proprietarily relicensed software do not get truly active development
-communities with external participants.  They get occasional
-small-scale bug fixes and cleanup patches from the outside, but end up
-doing most of the hard work themselves.  Since this book
-is about running free software projects, I will just say that in my
-experience, proprietary relicensing schemes inevitably have a negative
-effect on the level of community engagement and the level of technical
-quality on the open source side.  If you conclude that for business
-reasons you want to try it anyway, then I hope this section will at
-least help you mitigate some of those effects.<footnote
-id="app-store-terms-and-proprietary-relicensing"><para>Sometimes the
-terms-of-service agreements for online software distribution
-services&nbsp;&mdash;&nbsp;the Apple App Store, for
-example&nbsp;&mdash;&nbsp;effectively force you to use proprietary
-relicensing if you want to distribute copylefted software.  I won't go
-into detail here, but if you're distributing GPL-licensed or other
-copylefted code from a place that restricts users from redistributing
-what they download, you may be in this situation.  For more
-information, see Steven J. Vaughan-Nichols' article <citetitle>No GPL
-Apps for Apple's App Store</citetitle> (<ulink
-url="https://www.zdnet.com/article/no-gpl-apps-for-apples-app-store/"
->https://www.zdnet.com/article/no-gpl-apps-for-apples-app-store/</ulink>),
-Richard Gaywood's followup article <citetitle>The GPL, the App Store,
-and you</citetitle> (<ulink
-url="https://www.engadget.com/2011/01/09/the-gpl-the-app-store-and-you/"
->https://www.engadget.com/2011/01/09/the-gpl-the-app-store-and-you/</ulink>),
-and Pieter Colpaert's explanation of how the iRail and BeTrains projects used <emphasis>pro
-forma</emphasis> dual-licensing to get around the problem,
-<citetitle>About Apple store, GPL’s, VLC and BeTrains</citetitle>
-(<ulink
-url="https://bonsansnom.wordpress.com/2011/01/08/about-apple-store-gpls-vlc-and-betrains/"
->https://bonsansnom.wordpress.com/2011/01/08/about-apple-store-gpls-vlc-and-betrains/</ulink>).
-Thanks to reader Nathan Toone for pointing out this problem.</para>
+<para>实践中似乎发生的情况是，提供专有再授权软件的公司并没有得到真正活跃的、有外部参与者的开发社区。他们偶尔会从外部获得小规模的错误修复和清理补丁，但最终大部分的艰苦工作都得自己完成。由于这本书是关于运营自由软件项目的，我只想说，根据我的经验，专有再授权方案不可避免地会对开源方面的社区参与度和技术质量水平产生负面影响。如果你出于商业原因决定无论如何都要尝试，那么我希望本节能至少帮助你减轻其中的一些影响。<footnote id="app-store-terms-and-proprietary-relicensing"><para>有时，在线软件分发服务——例如苹果应用商店——的服务条款协议实际上会迫使你使用专有再授权，如果你想分发 copylefted 软件。我不会在这里详细说明，但如果你从一个限制用户重新分发他们下载内容的地方分发 GPL 许可或其他 copylefted 代码，你可能就处于这种情况。更多信息，请参阅 Steven J. Vaughan-Nichols 的文章 <citetitle>No GPL Apps for Apple’s App Store</citetitle> (<ulink url="https://www.zdnet.com/article/no-gpl-apps-for-apples-app-store/">https://www.zdnet.com/article/no-gpl-apps-for-apples-app-store/</ulink>)，Richard Gaywood 的后续文章 <citetitle>The GPL, the App Store, and you</citetitle> (<ulink url="https://www.engadget.com/2011/01/09/the-gpl-the-app-store-and-you/">https://www.engadget.com/2011/01/09/the-gpl-the-app-store-and-you/</ulink>)，以及 Pieter Colpaert 对 iRail 和 BeTrains 项目如何使用<emphasis>形式上的</emphasis>双重许可来解决该问题的解释，<citetitle>About Apple store, GPL’s, VLC and BeTrains</citetitle> (<ulink url="https://bonsansnom.wordpress.com/2011/01/08/about-apple-store-gpls-vlc-and-betrains/">https://bonsansnom.wordpress.com/2011/01/08/about-apple-store-gpls-vlc-and-betrains/</ulink>)。感谢读者 Nathan Toone 指出这个问题。</para>
 </footnote></para>
 
 </sect2>
@@ -1152,355 +344,108 @@ Thanks to reader Nathan Toone for pointing out this problem.</para>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="trademarks">
-<title>Trademarks</title>
+<title>商标</title>
 
-<para>Trademark law as applied to open source projects does not differ
-significantly from trademark law as applied elsewhere.  This sometimes
-surprises people: they think that if the code can be copied freely,
-then that can't possibly be consistent with some entity controlling a
-trademark on the project's name or logo.  It is consistent, however,
-and below I'll explain why, and give some examples.</para>
+<para>适用于开源项目的商标法与适用于其他地方的商标法没有显著区别。这有时会让人感到惊讶：他们认为，如果代码可以自由复制，那么这不可能与某个实体控制项目名称或徽标的商标相一致。然而，这是相容的，下面我将解释原因，并给出一些例子。</para>
 
-<para>First, understand what trademarks are about: they are about
-truth in labeling and, to some degree, about endorsement.  A trademarked
-name or symbol is a way for an entity&nbsp;&mdash;&nbsp;the entity who
-owns or controls that trademark&nbsp;&mdash;&nbsp;to signal, in an
-easily recognizable way, that they approve of a particular product.
-Often they are signaling their approval because they are the source of
-the product, and purchases of that product provide a revenue stream
-for them.  But that is not the only circumstance under which someone
-might want to enforce accurate attribution.  For example,
-certification marks are trademarked names or symbols that an entity
-applies to <emphasis>someone else's</emphasis> product, in order to
-signal that the product meets the certifying entity's
-standards.</para>
+<para>首先，要理解商标是关于什么的：它们是关于<emphasis>标签真实性</emphasis>的，在某种程度上也是关于<emphasis>背书</emphasis>的。一个带商标的名称或符号是某个实体——拥有或控制该商标的实体——以一种易于识别的方式，表明他们批准某个特定产品的方式。通常他们表明批准是因为他们是该产品的来源，并且购买该产品为他们提供了收入来源。但这不是某人可能希望强制执行准确归-属的唯一情况。例如，认证标志是某个实体应用于<emphasis>他人</emphasis>产品的带商标的名称或符号，以表明该产品符合认证实体的标准。</para>
 
-<para>Importantly, <emphasis>trademarks do not restrict copying,
-modification, or redistribution</emphasis>.  I cannot emphasize this
-enough: trademark is unrelated to copyright, and does not govern the
-same actions that copyright governs.  Trademark is about what you may
-publicly <emphasis>call</emphasis> things, not about what you may do with those things nor
-with whom you may share them.</para>
+<para>重要的是，<emphasis>商标不限制复制、修改或再分发</emphasis>。我怎么强调这一点都不过分：商标与版权无关，其管辖的行为也与版权所管辖的不同。商标是关于你可以公开<emphasis>称呼</emphasis>事物的，而不是关于你可以对这些事物做什么，也不是关于你可以与谁分享它们。</para>
 
-<para>One famous example of trademark enforcement in free and open
-source software demonstrates these distinctions clearly.</para>
+<para>自由和开源软件中一个著名的商标执法例子清楚地展示了这些区别。</para>
 
 <sect2 id="mozilla-firefox-debian-iceweasel">
-<title>Case study: Mozilla Firefox, the Debian Project, and Iceweasel</title>
+<title>案例研究：Mozilla Firefox、Debian 项目和冰鼬 (Iceweasel)</title>
 
-<para>The Mozilla Foundation owns the trademarked name "Firefox",
-which it uses to refer to its popular free software web browser of the
-same name.  The Debian Project, which maintains a long-running and
-also quite popular GNU/Linux distribution, wanted to package Firefox
-for users of Debian GNU/Linux.</para>
+<para>Mozilla 基金会拥有商标名称“Firefox”，用于其同名的流行自由软件网页浏览器。Debian 项目，维护着一个长期运行且也相当流行的 GNU/Linux 发行版，希望为 Debian GNU/Linux 用户打包 Firefox。</para>
 
-<para>So far, so good: Debian does not need Mozilla's permission to
-package Firefox, since Firefox is free software.  However,
-Debian does need Mozilla's permission to <emphasis>call</emphasis> the
-packaged browser "Firefox" and to use the widely-recognized Firefox
-logo (you've probably seen it: a long reddish fox curling its body and
-tail around a blue globe) as the icon for the program, because those
-are trademarks owned by Mozilla.</para>
+<para>到目前为止，一切顺利：Debian 不需要 Mozilla 的许可来打包 Firefox，因为 Firefox 是自由软件。然而，Debian 确实需要 Mozilla 的许可来<emphasis>称呼</emphasis>打包的浏览器为“Firefox”，并使用广为人知的 Firefox 徽标（你可能见过：一只长长的红狐狸将其身体和尾巴卷曲在一个蓝色地球周围）作为程序的图标，因为这些是 Mozilla 拥有的商标。</para>
 
-<para>Normally, Mozilla would have happily given its permission.
-After all, having Firefox distributed in Debian is good for Mozilla's
-mission of promoting openness on the Web.  However, various technical
-and policy effects of the Debian packaging process left Debian unable
-to fully comply with Mozilla's trademark usage requirements, and as a
-result, Mozilla informed Debian that their Firefox package could not
-use the Firefox name or branding.  No doubt Mozilla did so with some
-reluctance, as it is not ideal for them to have their software used
-without clear attribution.  However, they could have given Debian a
-trademark license and yet chose not to; presumably, this is because
-Debian was doing something with the code that Mozilla did not want
-affecting their own reputation.<footnote><para>In fact, that was
-indeed the reason, though we do not need to go into the details here
-of exactly what changes Debian made to the Firefox code that Mozilla
-disagreed with strongly enough to want to dissociate their name from
-the result.  The entire saga is recounted in more detail at <ulink
-url="https://en.wikipedia.org/wiki/Mozilla_software_rebranded_by_Debian"
->https://en.wikipedia.org/wiki/Mozilla_software_rebranded_by_Debian</ulink>.
-Coincidentally, I'm writing these words on a Debian GNU/Linux system,
-where Iceweasel, now fortunately able to be called Firefox again, has
-long been my default browser&nbsp;&mdash;&nbsp;I just used it to check
-that URL.</para></footnote></para>
+<para>通常情况下，Mozilla 会很乐意给予许可。毕竟，在 Debian 中分发 Firefox 有利于 Mozilla 推广网络开放性的使命。然而，Debian 打包过程的各种技术和政策影响使得 Debian 无法完全遵守 Mozilla 的商标使用要求，结果，Mozilla 通知 Debian，他们的 Firefox 软件包不能使用 Firefox 的名称或品牌。毫无疑问，Mozilla 这样做是有些不情愿的，因为让他们的软件在没有明确归属的情况下被使用对他们来说并不理想。然而，他们本可以给予 Debian 一个商标许可，但却选择不这样做；据推测，这是因为 Debian 对代码做了一些 Mozilla 不希望影响到他们自己声誉的事情。<footnote><para>事实上，这确实是原因，尽管我们不需要在这里详细说明 Debian 对 Firefox 代码究竟做了哪些更改，以至于 Mozilla 强烈反对并希望将他们的名字与结果分离开来。整个事件在 <ulink url="https://en.wikipedia.org/wiki/Mozilla_software_rebranded_by_Debian">https://en.wikipedia.org/wiki/Mozilla_software_rebranded_by_Debian</ulink> 有更详细的叙述。巧合的是，我正在一个 Debian GNU/Linux 系统上写下这些文字，在这个系统上，Iceweasel，现在幸运地又能被称为 Firefox 了，长期以来一直是我的默认浏览器——我刚刚就用它来检查那个 URL。</para></footnote></para>
 
-<para>This decision by Mozilla did not mean that Debian had to remove
-Firefox from their package list, of course.  Debian simply changed
-the name to "Iceweasel" and used a different logo.  The underlying
-code is still the Mozilla Firefox code, except for the minor bits
-Debian had to change to integrate the different name and
-logo&nbsp;&mdash;&nbsp;changes they were perfectly free to make, of
-course, because of the code's open source license.</para>
+<para>Mozilla 的这个决定当然不意味着 Debian 必须从他们的软件包列表中移除 Firefox。Debian 只是将名称更改为“Iceweasel”并使用了不同的徽标。底层的代码仍然是 Mozilla Firefox 的代码，除了 Debian 为了整合不同的名称和徽标而必须更改的微小部分——当然，由于代码的开源许可证，他们完全可以自由地进行这些更改。</para>
 
 </sect2>
 
-<para>It is even consistent to license your project's logo artwork
-files under a fully free license while still retaining a trademark on
-the logo, as the following story of the GNOME logo and the fish
-pedicure shop (I'm not making this up) illustrates.</para>
+<para>甚至将你项目的徽标艺术作品文件在一个完全自由的许可证下许可，同时仍然保留该徽标的商标，也是相容的，如下面 GNOME 徽标和鱼足疗店的故事（我不是在编造）所示。</para>
 
 <sect2 id="gnome-fish-pedicure">
-<title>Case study: The GNOME Logo and the Fish Pedicure Shop</title>
+<title>案例研究：GNOME 徽标和鱼足疗店</title>
 
-<para>The GNOME project (<ulink url="https://gnome.org/" >https://gnome.org/</ulink>), which
-produces one of the major free software desktop environments, is
-represented legally by the GNOME Foundation (<ulink
-url="https://www.gnome.org/foundation/" >https://www.gnome.org/foundation/</ulink>),
-which owns and enforces trademarks on behalf of the project.  Their
-best-known trademark is the GNOME logo: a curved, stylized foot with
-four toes floating close above it.<footnote><para>You can see examples
-at <ulink url="https://www.gnome.org/foundation/legal-and-trademarks/"
->https://www.gnome.org/foundation/legal-and-trademarks/</ulink>.</para></footnote></para>
+<para>GNOME 项目 (<ulink url="https://gnome.org/">https://gnome.org/</ulink>)，制作了主要的自由软件桌面环境之一，由 GNOME 基金会 (<ulink url="https://www.gnome.org/foundation/">https://www.gnome.org/foundation/</ulink>) 在法律上代表，该基金会代表项目拥有并执行商标。他们最著名的商标是 GNOME 徽标：一个弯曲的、风格化的脚，上面漂浮着四个脚趾。<footnote><para>你可以在 <ulink url="https://www.gnome.org/foundation/legal-and-trademarks/">https://www.gnome.org/foundation/legal-and-trademarks/</ulink> 看到例子。</para></footnote></para>
 
-<para>One day, Karen Sandler, then the Executive Director of the GNOME
-Foundation, heard from a GNOME contributor that a mobile fish-pedicure
-van (fish pedicure is a technique in which one places one's feet in
-water so that small fish can nibble away dead skin) was using a
-modified version of the GNOME logo.  The central foot part of the
-image had been slightly modified to look like a fish, and a fifth toe
-had been added above, so that the overall logo looked even more like a
-human foot but cleverly made reference to fish as well.  You can see
-it, along with discussion of other trademark issues GNOME has dealt
-with, in the Linux Weekly News article where this story is told in
-full: <ulink url="https://lwn.net/Articles/491639/"
->https://lwn.net/Articles/491639/</ulink>.</para>
+<para>一天，时任 GNOME 基金会执行董事的 Karen Sandler 从一位 GNOME 贡献者那里听说，一辆移动鱼足疗车（鱼足疗是一种将脚放入水中，让小鱼啃食死皮的技术）正在使用 GNOME 徽标的修改版本。图像的中心脚部被轻微修改，看起来像一条鱼，上面增加了一个第五个脚趾，使得整个徽标看起来更像人脚，但又巧妙地提到了鱼。你可以在讲述这个故事的 Linux Weekly News 文章中看到它，以及 GNOME 处理过的其他商标问题的讨论：<ulink url="https://lwn.net/Articles/491639/">https://lwn.net/Articles/491639/</ulink>。</para>
 
-<para>Although GNOME does actively enforce its trademarks, Sandler did
-not see any infringement in this case: the fish-pedicure business is
-so distant from what the GNOME Project does that there was no
-possibility of confusion in the mind of the public or dilution (if
-you'll pardon the expression) of the mark.  Furthermore, because the
-<emphasis>copyright</emphasis> license on GNOME's images is an open
-source license, the fish pedicure company was free to make their
-modifications to the graphic and display the results.  There was no
-trademark violation, because there was no infringement within GNOME's
-domain of activity, and there was no copyright violation, because
-GNOME's materials are released under free licenses.</para>
+<para>尽管 GNOME 积极执行其商标，但 Sandler 在这种情况下并未发现任何侵权行为：鱼足疗业务与 GNOME 项目所做的事情相去甚远，公众不可能产生混淆，也不会稀释该商标的品牌价值（双关语意）。此外，因为 GNOME 图像的<emphasis>版权</emphasis>许可证是一个开源许可证，所以鱼足疗公司可以自由地对图形进行修改并展示结果。没有商标侵权，因为在 GNOME 的活动领域内没有侵权行为，也没有版权侵权，因为 GNOME 的材料是在自由许可证下发布的。</para>
 
 </sect2>
 
-<para>The point of these examples is to merely show that there is no
-inherent contradiction in registering and maintaining trademarks
-related to open source projects.  This does not mean that a trademark
-owner should do whatever they want with the marks, ignoring what other
-participants in the project have to say.  Trademarks are like any
-other centrally-controlled non-forkable resource: if you use them in a way that
-harms a significant portion of the project's community, then expect
-complaints and pushback in return; if you use them in a way that
-supports the goals of the project, then most participants will be glad
-and will consider that use to be itself a form of contribution.</para>
+<para>这些例子的目的仅仅是表明，注册和维护与开源项目相关的商标并没有内在的矛盾。这并不意味着商标所有者可以随心所欲地使用这些标志，而忽略项目中其他参与者的意见。商标就像任何其他集中控制的、不可分支的资源一样：如果你以一种损害项目社区相当一部分人的方式使用它们，那么就要准备好接受抱怨和反击；如果你以一种支持项目目标的方式使用它们，那么大多数参与者都会很高兴，并将这种使用本身视为一种贡献形式。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="patents">
-<title>Patents</title>
+<title>专利</title>
 
-<para>Software patents have long been a lightning rod issue in
-free software, because they pose the only real threat against which
-the free software community cannot defend itself.  Copyright and
-trademark problems can always be gotten around.  If part of your code
-looks like it may infringe on someone else's copyright, you can just
-rewrite that part while continuing to use the same underlying
-algorithm.  If it turns out someone has a trademark on your
-project's name, at the very worst you can just rename the project.
-Although changing names would be a temporary inconvenience, it
-wouldn't matter in the long run, since the code itself would still do
-what it always did.</para>
+<para>长期以来，软件专利一直是自由软件领域一个备受争议的问题，因为它们是自由软件社区唯一无法自卫的真正威胁。版权和商标问题总是可以解决的。如果你的代码的某一部分看起来可能侵犯了他人的版权，你可以重写那部分，同时继续使用相同的底层算法。如果事实证明有人对你的项目名称拥有商标，最坏的情况下，你只需重命名项目。尽管更改名称会带来暂时的不便，但从长远来看，这并不重要，因为代码本身仍然会做它一直做的事情。</para>
 
-<para>But a patent is a blanket injunction against implementing a
-certain idea.  It doesn't matter who writes the code, nor even what
-programming language is used.  Once someone has accused a free
-software project of infringing a patent, the project must either stop
-implementing that particular feature, or expose the project
-<emphasis>and its users</emphasis> to expensive and
-time-consuming lawsuits.  Since the instigators of such lawsuits are
-usually corporations with deep pockets&nbsp;&mdash;&nbsp;that's who has the
-resources and inclination to acquire patents in the first
-place&nbsp;&mdash;&nbsp;most free software projects cannot afford either to defend
-themselves nor to indemnify their users, and must capitulate
-immediately even if they think it
-highly likely that the patent would be unenforceable in court.  To
-avoid getting into such a situation in the first place, free software
-projects have sometimes had to code defensively, avoiding patented
-algorithms in advance even when they are the best or only available
-solution to a programming problem.</para>
+<para>但是，专利是对实施某个特定想法的全面禁令。谁编写代码，甚至使用什么编程语言都无关紧要。一旦有人指控一个自由软件项目侵犯了专利，该项目要么必须停止实施该特定功能，要么就得让项目<emphasis>及其用户</emphasis>面临昂贵且耗时的诉讼。由于这类诉讼的发起者通常是财力雄厚的公司——毕竟，正是它们才有资源和意愿去获取专利——大多数自由软件项目既无力为自己辩护，也无力为其用户提供赔偿，因此即使他们认为该专利在法庭上很可能无法执行，也必须立即投降。为了从一开始就避免陷入这种境地，自由软件项目有时不得不采取防御性的开发策略，预先避免使用受专利保护的算法，即使它们是解决编程问题的最佳或唯一可用方案。</para>
 
-<para>Surveys and anecdotal evidence show that the vast
-majority of not only open source programmers but
-of <emphasis>all</emphasis> programmers think that software patents
-should be abolished entirely.<footnote><para>See
-<ulink
-url="https://groups.csail.mit.edu/mac/projects/lpf/Whatsnew/survey.html"
->https://groups.csail.mit.edu/mac/projects/lpf/Whatsnew/survey.html</ulink>
-for one such survey.</para></footnote> Open source programmers tend to feel
-particularly strongly about it, and may refuse to work on projects
-that are too closely associated with the collection or enforcement of
-software patents.  If your organization collects software patents,
-then make it clear, in a public and legally enforceable way, that the patents
-would never be enforced when the infringement comes from open source
-code, and that the patents are 
-only to be used as a defense in case some other party initiates an
-infringement suit against your organization.  This is not only the
-right thing to do, it's also good open source public relations.<footnote>
-<para>For example, RedHat pledged that open source projects are
-safe from its patents, see
-<ulink url="https://www.redhat.com/en/about/patent-promise"
->https://www.redhat.com/en/about/patent-promise</ulink>.</para>
+<para>调查和轶事证据表明，绝大多数不仅是开源程序员，而且是<emphasis>所有</emphasis>程序员都认为应该完全废除软件专利。<footnote><para>关于这样一项调查，请参见 <ulink url="https://groups.csail.mit.edu/mac/projects/lpf/Whatsnew/survey.html">https://groups.csail.mit.edu/mac/projects/lpf/Whatsnew/survey.html</ulink>。</para></footnote> 开源程序员对此的感受尤其强烈，他们可能会拒绝参与那些与收集或执行软件专利关系过于密切的项目。如果你的组织收集软件专利，那么请以公开且具有法律约束力的方式明确表示，当侵权行为来自开源代码时，绝不会执行这些专利，并且这些专利仅用于在其他方对你的组织提起侵权诉讼时作为防御。这不仅是正确的做法，也是良好的开源公共关系。<footnote>
+<para>例如，红帽公司承诺，开源项目不受其专利的威胁，请参见 <ulink url="https://www.redhat.com/en/about/patent-promise">https://www.redhat.com/en/about/patent-promise</ulink>。</para>
 </footnote></para>
 
-<para>Unfortunately, collecting patents purely for defensive purposes
-is rational.  The current patent system, at least in the United
-States, is by its nature an arms race: if your competitors have
-acquired a lot of patents, then your best defense is to acquire a lot
-of patents yourself, so that if you're ever hit with a patent
-infringement suit you can respond with a similar threat&nbsp;&mdash;&nbsp;then the
-two parties usually sit down and work out a cross-licensing deal so
-that neither of them has to pay anything, except to their patent 
-lawyers of course.</para>
+<para>不幸的是，纯粹出于防御目的收集专利是理性的。当前的专利制度，至少在美国，其本质是一场军备竞赛：如果你的竞争对手已经获得了大量专利，那么你最好的防御就是自己也获得大量专利，这样一来，如果你被提起专利侵权诉讼，你就可以用类似的威胁来回应——然后双方通常会坐下来，达成一项交叉许可协议，这样他们就都不用支付任何费用，当然，除了给他们的专利律师的费用。</para>
 
-<para>The harm done to free software by software patents is more
-insidious than just direct threats to code development, however.
-Software patents encourage an atmosphere of secrecy among firmware
-designers, who justifiably worry that by publishing details of their
-interfaces they will be making it easier for competitors to find ways
-to slap them with patent infringement suits.  This is not just a
-theoretical danger; it has apparently been happening for a long time
-in the video card industry, for example.  Many video card
-manufacturers are reluctant to release the detailed programming
-specifications needed to produce high-performance open source drivers
-for their cards, thus making it impossible for free operating systems
-to support those cards to their full potential.  Why would the
-manufacturers withold these specs?  It doesn't make sense for them to
-work <emphasis>against</emphasis> software support; after all,
-compatibility with more operating systems can only mean more card
-sales.  But it turns out that, behind the design room door, these
-shops are all violating one another's patents, sometimes knowingly and
-sometimes accidentally.  The patents are so unpredictable and so
-potentially broad that no card manufacturer can ever be certain it's
-safe, even after doing a patent search.  Thus, manufacturers dare not
-publish their full interface specifications, since that would make it
-much easier for competitors to figure out whether any patents are
-being infringed.  (Of course, the nature of this situation is such
-that you will not find a written admission from a primary source that
-it is going on; I learned it through a personal communication.)</para>
+<para>然而，软件专利对自由软件的损害，其方式比直接威胁代码开发更为阴险。软件专利在固件设计者中助长了一种保密气氛，他们有理由担心，公布其接口的细节会使竞争对手更容易找到借口对他们提起专利侵权诉讼。这不仅仅是一个理论上的危险；例如，在显卡行业，这种情况显然已经持续了很长时间。许多显卡制造商不愿意发布为他们的显卡制作高性能开源驱动程序所需的详细编程规范，从而使得自由操作系统无法充分支持这些显卡。为什么制造商要扣留这些规范呢？他们与软件支持作对是没有道理的；毕竟，与更多操作系统的兼容性只会意味着更多的显卡销量。但事实证明，在设计室的门后，这些公司都在互相侵犯对方的专利，有时是故意的，有时是无意的。专利是如此不可预测，其范围又如此之广，以至于没有哪家显卡制造商能够确定自己是安全的，即使在进行了专利检索之后也是如此。因此，制造商不敢公布他们的全部接口规范，因为那会使竞争对手更容易地弄清楚是否有任何专利被侵犯。（当然，这种情况的性质决定了你不会找到来自第一手来源的书面承认；我是通过个人交流得知的。）</para>
 
-<para>Modern free software licenses generally have clauses to combat,
-or at least mitigate, the dangers arising from software patents.
-Usually these clauses work by automatically revoking the overall open
-source license for any party who makes a patent infringement claim
-based on either the work as a whole<footnote><para>Remember that a
-patent may cover&nbsp;&mdash;&nbsp;or "read on", in patent
-jargon&nbsp;&mdash;&nbsp;code that the patent
-owner did not themselves write.  It is thus not necessary for a party
-to have contributed code to an open source project in order to claim patent
-infringement <emphasis>by</emphasis> that project.</para></footnote>
-or on the claimant's contributions to the project.  But
-though it is useful, both legally and politically, to build patent
-defenses into free software licenses in this way, in the end these
-protections are not enough to dispel the chilling effect that the
-threat of patent lawsuits has on free software.  Only changes in the
-substance or interpretation of international patent law will do
-that.</para>
+<para>现代自由软件许可证通常包含旨在对抗或至少减轻软件专利带来的危险的条款。通常，这些条款的运作方式是，对于任何基于整个作品<footnote><para>请记住，一项专利可能涵盖——或者用专利术语来说，“覆盖”——专利所有者自己没有编写的代码。因此，一方无需为开源项目贡献代码，就可以声称<emphasis>该</emphasis>项目侵犯了其专利。</para></footnote>或索赔人对项目的贡献提出专利侵权索赔的一方，自动撤销其总体的开源许可证。但是，尽管以这种方式在自由软件许可证中建立专利防御在法律上和政治上都是有用的，但最终这些保护措施并不足以消除专利诉讼威胁对自由软件产生的寒蝉效应。只有国际专利法的实质或解释发生变化，才能做到这一点。</para>
 
-<para>Recent developments, such as the 2014 decision by the
-U.S. Supreme Court against the patentability of abstract ideas, in
-<citetitle>Alice Corp. v. CLS Bank</citetitle> (<ulink
-url="https://en.wikipedia.org/wiki/Alice_Corp._v._CLS_Bank_International"
->https://en.wikipedia.org/wiki/Alice_Corp._v._CLS_Bank_International</ulink>),
-have made the future of software patents unpredictable.  But there is
-so much money to be extracted via infringement claims, in particular
-by "patent trolls" (<ulink url="https://en.wikipedia.org/wiki/Patent_troll" 
->https://en.wikipedia.org/wiki/Patent_troll</ulink>) but in general by any entity with a large patent
-portfolio and a lack of other revenue sources, that I am not
-optimistic this fight will be over any time soon.  If you want to
-learn more about the problem, there are good links in
-the Wikipedia article <ulink
-url="https://en.wikipedia.org/wiki/Software_patent"
->https://en.wikipedia.org/wiki/Software_patent</ulink>.  I've also written
-some blog posts summarizing the arguments against software patents,
-collected at <ulink url="https://www.rants.org/patent-posts/"
->https://www.rants.org/patent-posts/</ulink>.  As of this writing it's been
-about ten years since the main posts there were published, but all the
-reasons why software patents are a bad idea are just as true now as
-they were then.</para>
+<para>最近的发展，例如 2014 年美国最高法院在 <citetitle>Alice Corp. v. CLS Bank</citetitle> (<ulink url="https://en.wikipedia.org/wiki/Alice_Corp._v._CLS_Bank_International">https://en.wikipedia.org/wiki/Alice_Corp._v._CLS_Bank_International</ulink>) 案中反对抽象思想可专利性的裁决，使得软件专利的未来变得不可预测。但是，通过侵权索赔可以榨取的金钱如此之多，特别是通过“专利流氓”（又称“专利投机者”或“专利主张实体”）(<ulink url="https://en.wikipedia.org/wiki/Patent_troll">https://en.wikipedia.org/wiki/Patent_troll</ulink>)，但总的来说，任何拥有庞大专利组合且缺乏其他收入来源的实体都会这样做，因此我并不乐观这场斗争会很快结束。如果你想了解更多关于这个问题的信息，维基百科文章 <ulink url="https://en.wikipedia.org/wiki/Software_patent">https://en.wikipedia.org/wiki/Software_patent</ulink> 中有一些很好的链接。我也写了一些博客文章，总结了反对软件专利的论点，收录在 <ulink url="https://www.rants.org/patent-posts/">https://www.rants.org/patent-posts/</ulink>。截至本文撰写之时，那里的主要文章已经发表了大约十年，但所有关于软件专利为何是一个坏主意的理由，现在和当时一样真实。</para>
 
-<para>Since 2005, the Open Invention Network (<ulink
-url="https://openinventionnetwork.com/"
->https://openinventionnetwork.com/</ulink>) has been providing a "patent
-non-aggression community" for open source software.  OIN members agree
-to provide royalty-free cross-licensing for a broad set of patents
-that read on widely-used open source software.  Oversimplifying a bit,
-joining OIN is essentially a way to say "Our company doesn't want to
-enforce software patents on anyone else, at least not ones that affect
-open source software, and we don't want anyone enforcing them on us
-either."  Membership is free and anyone may join.  My company is a
-member, and I encourage you to consider OIN membership for your
-organization (if any) as well.</para>
+<para>自 2005 年以来，开放发明网络 (<ulink url="https://openinventionnetwork.com/">https://openinventionnetwork.com/</ulink>) 一直在为开源软件提供一个“专利互不侵犯社区”。OIN 成员同意为广泛覆盖广泛使用的开源软件的专利提供免版税的交叉许可。简单来说，加入 OIN 本质上是说：“我们公司不想对任何人强制执行软件专利，至少是那些影响开源软件的专利，我们也不希望任何人对我们强制执行它们。” 会员资格是免费的，任何人都可以加入。我的公司是会员，我也鼓励你考虑让你的组织（如果有的话）也加入 OIN。</para>
 
 </sect1>
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="licensing-further-resources">
-<title>Further Resources</title>
+<title>更多资源</title>
 
-<para>This chapter has only been an introduction to free software
-licensing, trademark, and patent issues.  Although I hope it contains
-enough information to get you started on your own open source project,
-any serious investigation of legal issues will quickly exhaust what
-this book can provide.  Here are some other resources:</para>
+<para>本章仅是对自由软件许可、商标和专利问题的介绍。虽然我希望它包含足够的信息，让你能够开始自己的开源项目，但任何对法律问题的严肃调查都会很快超出本书所能提供的范围。以下是一些其他资源：</para>
 
 <itemizedlist>
-  <listitem><para><ulink url="https://opensource.org/licenses"
-                         >https://opensource.org/licenses</ulink></para>
+  <listitem><para><ulink url="https://opensource.org/licenses">https://opensource.org/licenses</ulink></para>
 
-            <para>The OSI license introduction page is a
-            well-maintained source of information about widely used
-            open source licenses, and offers answers to frequently
-            asked questions.  It's a good place to start if you have a
-            general idea of what open source licenses do, but now need
-            more information, for example to choose a license for your
-            project.</para>
+            <para>OSI 许可证介绍页面是一个维护良好的信息来源，内容涉及广泛使用的开源许可证，并提供常见问题的解答。如果你对开源许可证的作用有了大致了解，但现在需要更多信息，例如为你的项目选择一个许可证，那么这是一个很好的起点。</para>
   </listitem>
 
   <listitem><para><citetitle>Open (Source) for Business: A Practical
-            Guide to Open Source Software Licensing</citetitle> by 
+            Guide to Open Source Software Licensing</citetitle> by
             Heather Meeker.  Published April 2015.  <ulink
-            url="https://www.amazon.com/Open-Source-Business-Practical-Licensing/dp/1511617772" 
+            url="https://www.amazon.com/Open-Source-Business-Practical-Licensing/dp/1511617772"
             >https://www.amazon.com/Open-Source-Business-Practical-Licensing/dp/1511617772</ulink></para>
 
-            <para>Although organized around licensing and open source
-            legal concepts, this is a general guide to open source and
-            business, and the author has a lot of experience in the
-            field.</para>
+            <para>尽管本书围绕许可和开源法律概念展开，但它是一本关于开源和商业的通用指南，作者在该领域拥有丰富的经验。</para>
   </listitem>
 
-  <listitem><para><citetitle> Intellectual Property and Open Source:
-            A Practical Guide to Protecting Code</citetitle> by Van
+  <listitem><para><citetitle>《知识产权与开源：保护代码实用指南》</citetitle> by Van
             Lindberg.  Published by O'Reilly Media, first edition
             July 2008, ISBN:&nbsp;978-0-596-51796-0</para>
 
-            <para>This is a full-length book on open source licensing,
-            trademarks, patents, contracting, and more.  It goes into
-            much deeper detail than I could in this chapter.
+            <para>这是一本关于开源许可、商标、专利、合同等的全长书籍。它比我在本章中能提供的细节要深入得多。详情请见
             <ulink url="https://www.oreilly.com/library/view/intellectual-property-and/9780596517960/"
             >https://www.oreilly.com/library/view/intellectual-property-and/9780596517960/</ulink>
-            for details.</para>
+            。</para>
   </listitem>
 
-  <listitem><para><citetitle>Make Your Open Source Software
-            GPL-Compatible.  Or Else.</citetitle> by Dr. David
+  <listitem><para><citetitle>《让你的开源软件兼容 GPL。否则。》</citetitle> by Dr. David
             A. Wheeler, at
             <ulink
             url="https://dwheeler.com/essays/gpl-compatible.html"
             >https://dwheeler.com/essays/gpl-compatible.html</ulink>.</para>
 
-            <para>This is a detailed and well-written article on why
-            it is important to use a GPL-compatible license even if
-            you don't use the GPL itself.  The article also touches on
-            many other licensing questions, and has a high density of
-            excellent links.</para>
+            <para>这是一篇详细且写得很好的文章，阐述了为什么即使你不使用 GPL 本身，使用一个与 GPL 兼容的许可证也很重要。文章还涉及了许多其他许可问题，并包含了大量高质量的链接。</para>
   </listitem>
 
 </itemizedlist>
