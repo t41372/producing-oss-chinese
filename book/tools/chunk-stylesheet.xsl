@@ -3,6 +3,8 @@
   <xsl:import href="xsl/html/chunk.xsl"/>
   <xsl:import href="xsl/html/profile-chunk.xsl"/>
 
+  <xsl:output method="html" encoding="UTF-8" indent="no"/>
+
   <xsl:param name="use.id.as.filename">1</xsl:param>
 
   <xsl:param name="html.stylesheet">styles.css</xsl:param>
