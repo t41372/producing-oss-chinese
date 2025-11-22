@@ -28,7 +28,7 @@
 
   <varlistentry><term><firstterm>开源软件</firstterm></term>
 
-    <listitem><para>自由软件的别称。然而，这个不同的名称有时被用以表示哲学上的差异。事实上，“开源”这个术语是由创立开源促进会 (<ulink url="https://www.opensource.org/">https://www.opensource.org/</ulink>) 的团体创造的，作为“自由软件”的替代标签。他们当时的目标主要是通过将其呈现为一种开发方法论而非政治运动，来使这类软件更容易被公司所接受。<footnote><para>披露：在这些事件发生很久之后，我于 2011 年至 2014 年担任了开源促进会董事会成员三年。在我看来，当时 OSI 和 FSF 之间的意识形态差距比 OSI 成立时要小得多，两个组织也越来越多地找到了合作的共同点。我至今仍然是这两个组织的愉快成员，并敦促你也加入它们：<ulink url="https://opensource.org/join">https://opensource.org/join</ulink> 和 <ulink url="https://fsf.org/join">https://fsf.org/join</ulink>。</para></footnote></para>
+    <listitem><para>自由软件的别称。然而，这个不同的名称有时被用以表示哲学上的差异。事实上，“开源”这个术语是由创立开源促进会 (<ulink url="https://www.opensource.org/">https://www.opensource.org/</ulink>) 的团体创造的，作为“自由软件”的替代标签。他们当时的目标主要是通过将其呈现为一种开发方法论而非政治运动，来使这类软件更容易被企业接纳。<footnote><para>利益相关声明：在这些事件发生很久之后，我于 2011 年至 2014 年担任了开源促进会董事会成员三年。在我看来，当时 OSI 和 FSF 之间的意识形态差距比 OSI 成立时要小得多，两个组织也越来越多地找到了合作的共同点。我至今仍然是这两个组织的愉快成员，并敦促你也加入它们：<ulink url="https://opensource.org/join">https://opensource.org/join</ulink> 和 <ulink url="https://fsf.org/join">https://fsf.org/join</ulink>。</para></footnote></para>
 
               <para>虽然任何自由的许可证也都是开源的，反之亦然（除了一些没有实际后果的微小例外），但人们倾向于选择一个术语并坚持使用。总的来说，那些偏爱“自由软件”的人更可能在这个问题上持有哲学或道德立场，而那些偏爱“开源”的人要么不将其视为自由问题，要么不愿宣扬自己持有这种看法。关于这个术语分裂的更详细历史，请参见 <xref linkend="free-vs-open-source"/>。</para>
 
@@ -124,7 +124,7 @@
     </listitem>
   </varlistentry>
 
-  <varlistentry><term><emphasis>专利报复条款</emphasis></term>
+  <varlistentry><term><emphasis>专利反制条款 (Patent Snapback)</emphasis></term>
     <listitem><para>某些许可证（例如，GNU 通用公共许可证第 3 版、Apache 许可证第 2 版、Mozilla 公共许可证 2.0 版以及其他少数几个）包含旨在防止人们利用专利法剥夺许可证根据版权法授予的权利的语言。它们要求贡献者在贡献的同时授予专利许可，涵盖贡献者可许可的、会因其贡献（或因其贡献被并入整个作品）而受到侵犯的任何专利。然后它们更进一步。如果使用该许可证下软件的某人对另一方提起专利诉讼，声称所覆盖的作品侵权，那么该发起人将自动<emphasis>失去</emphasis>许可证为该作品提供的所有专利授权。在 GPL-3.0 的情况下，该发起人将完全失去在该许可证下分发的权利。</para>
     </listitem>
   </varlistentry>
@@ -230,7 +230,7 @@
 </sect3>
 
 <sect3 id="copyright-holder-is-special">
-<title>即使在 Copyleft 许可下，版权所有者仍然是特殊的</title>
+<title>即使在 Copyleft 许可下，版权所有者享有特权</title>
 
 <para>一个常见的误解是，在 GPL 或 AGPL 下许可你的软件，就要求你向任何索取者提供源代码。但这并非完全如此。如果你是一段软件的<emphasis>唯一</emphasis>版权所有者，那么你就不受自己所选择的版权许可条款的约束。你可以对他人强制执行这些条款，但是否以及何时将这些条款应用于你自己，则由你决定。毕竟，许可证的再分发要求仅在“分发”时触发，而作为版权所有者，你从未将软件“分发”给自己。</para>
 
@@ -439,7 +439,7 @@
             。</para>
   </listitem>
 
-  <listitem><para><citetitle>《让你的开源软件兼容 GPL。否则。》</citetitle> by Dr. David
+  <listitem><para><citetitle>《让你的开源软件兼容 GPL，否则后果自负》</citetitle> by Dr. David
             A. Wheeler, at
             <ulink
             url="https://dwheeler.com/essays/gpl-compatible.html"

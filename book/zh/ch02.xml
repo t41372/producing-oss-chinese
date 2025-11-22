@@ -868,7 +868,7 @@ url="https://www.gnu.org/licenses/gpl.html"
 url="https://subfictional.com/2016/01/25/the-complex-reality-of-adopting-a-meaningful-code-of-conduct/"
 >https://subfictional.com/2016/01/25/the-complex-reality-of-adopting-a-meaningful-code-of-conduct/</ulink> 有一篇优秀的帖子更深入地讨论了这一点。</para></footnote></para>
 
-<para>在某些项目中，可能还需要专门针对组织或商业参与者的行为准则&nbsp;&mdash;&nbsp;通常一个意味着另一个，但并非总是如此。如果你看到组织参与者以可能不利于项目长期健康的方式参与你的项目，请考虑创建<firstterm>商业行为准则</firstterm>（<firstterm>CCoC</firstterm>，有时也扩展为<firstterm>企业行为准则</firstterm>）或<firstterm>组织行为准则</firstterm>（<firstterm>OCoC</firstterm>）。两个例子<footnote><para>披露：我的公司参与了两者的起草。</para></footnote>是<citetitle>商业实体和其他部署 Arches 的一般准则</citetitle>（在 <ulink url="https://www.archesproject.org/code-of-conduct/"
+<para>在某些项目中，可能还需要专门针对组织或商业参与者的行为准则&nbsp;&mdash;&nbsp;通常一个意味着另一个，但并非总是如此。如果你看到组织参与者以可能不利于项目长期健康的方式参与你的项目，请考虑创建<firstterm>商业行为准则</firstterm>（<firstterm>CCoC</firstterm>，有时也扩展为<firstterm>企业行为准则</firstterm>）或<firstterm>组织行为准则</firstterm>（<firstterm>OCoC</firstterm>）。两个例子<footnote><para>利益相关声明：我的公司参与了两者的起草。</para></footnote>是<citetitle>商业实体和其他部署 Arches 的一般准则</citetitle>（在 <ulink url="https://www.archesproject.org/code-of-conduct/"
 >https://www.archesproject.org/code-of-conduct/</ulink>）和 Bytecode Alliance 的<citetitle>组织行为准则</citetitle>（截至本文撰写时，它似乎仍然是一个正在考虑的草案，但草案文本可在 <ulink
     url="https://github.com/bytecodealliance/rfcs/blob/main/ORG_CODE_OF_CONDUCT.md"
 >https://github.com/bytecodealliance/rfcs/blob/main/ORG_CODE_OF_CONDUCT.md</ulink> 获得，是一个代表性的例子）。</para>
@@ -1177,7 +1177,7 @@ url="https://www.reddit.com/r/software/" >https://www.reddit.com/r/software/</ul
 项目自己的讨论区进行后续讨论（通过电子邮件发帖时，
 你可以通过设置
 <systemitem>Reply-to</systemitem> 头来做到这一点）。你的公告应该
-简短并直奔主题，主题行应该清楚地表明
+简短并直奔主题，邮件标题应该清楚地表明
 它是一个新项目的公告：</para>
 
 <screen>
