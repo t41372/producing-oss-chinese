@@ -1,0 +1,64 @@
+<fop version="1.0">
+  <renderers>
+    <renderer mime="application/pdf">
+      <fonts>
+        <substitutions>
+           <!-- WenQuanYi Zen Hei (with spaces) -->
+           <substitution>
+              <from font-family="WenQuanYi Zen Hei" font-style="italic"/>
+              <to font-family="WenQuanYi Zen Hei" font-style="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="WenQuanYi Zen Hei" font-style="oblique"/>
+              <to font-family="WenQuanYi Zen Hei" font-style="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="WenQuanYi Zen Hei" font-weight="bold"/>
+              <to font-family="WenQuanYi Zen Hei" font-weight="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="WenQuanYi Zen Hei" font-weight="bold" font-style="italic"/>
+              <to font-family="WenQuanYi Zen Hei" font-style="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="WenQuanYi Zen Hei" font-weight="bold" font-style="oblique"/>
+              <to font-family="WenQuanYi Zen Hei" font-style="normal"/>
+           </substitution>
+
+           <!-- WenQuanYiZenHei (no spaces) -->
+           <substitution>
+              <from font-family="WenQuanYiZenHei" font-style="italic"/>
+              <to font-family="WenQuanYiZenHei" font-style="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="WenQuanYiZenHei" font-style="oblique"/>
+              <to font-family="WenQuanYiZenHei" font-style="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="WenQuanYiZenHei" font-weight="bold"/>
+              <to font-family="WenQuanYiZenHei" font-weight="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="WenQuanYiZenHei" font-weight="bold" font-style="italic"/>
+              <to font-family="WenQuanYiZenHei" font-style="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="WenQuanYiZenHei" font-weight="bold" font-style="oblique"/>
+              <to font-family="WenQuanYiZenHei" font-style="normal"/>
+           </substitution>
+
+           <!-- Noto -->
+           <substitution>
+              <from font-family="Noto Sans CJK SC" font-style="italic"/>
+              <to font-family="Noto Sans CJK SC" font-style="normal"/>
+           </substitution>
+           <substitution>
+              <from font-family="Noto Sans CJK SC" font-style="oblique"/>
+              <to font-family="Noto Sans CJK SC" font-style="normal"/>
+           </substitution>
+        </substitutions>
+        <auto-detect/>
+      </fonts>
+    </renderer>
+  </renderers>
+</fop>

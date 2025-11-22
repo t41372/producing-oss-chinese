@@ -60,7 +60,7 @@ $(FO_A4_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(IMAGES)
 
 pdf-a4: $(PDF_A4_TARGET)
 $(PDF_A4_TARGET): $(FO_A4_TARGET) $(IMAGES)
-	$(TOOLS_DIR)/bin/run-fop.sh -fo $(FO_A4_TARGET) -pdf $(PDF_A4_TARGET)
+	$(TOOLS_DIR)/bin/run-fop.sh -c $(TOOLS_DIR)/fop.xconf -fo $(FO_A4_TARGET) -pdf $(PDF_A4_TARGET)
 
 fo-b5: $(FO_B5_TARGET)
 $(FO_B5_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(IMAGES)
@@ -70,7 +70,7 @@ $(FO_B5_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(IMAGES)
 
 pdf-b5: $(PDF_B5_TARGET)
 $(PDF_B5_TARGET): $(FO_B5_TARGET) $(IMAGES)
-	$(TOOLS_DIR)/bin/run-fop.sh -fo $(FO_B5_TARGET) -pdf $(PDF_B5_TARGET)
+	$(TOOLS_DIR)/bin/run-fop.sh -c $(TOOLS_DIR)/fop.xconf -fo $(FO_B5_TARGET) -pdf $(PDF_B5_TARGET)
 
 fo-c5: $(FO_C5_TARGET)
 $(FO_C5_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(IMAGES)
@@ -80,7 +80,7 @@ $(FO_C5_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(IMAGES)
 
 pdf-c5: $(PDF_C5_TARGET)
 $(PDF_C5_TARGET): $(FO_C5_TARGET) $(IMAGES)
-	$(TOOLS_DIR)/bin/run-fop.sh -fo $(FO_C5_TARGET) -pdf $(PDF_C5_TARGET)
+	$(TOOLS_DIR)/bin/run-fop.sh -c $(TOOLS_DIR)/fop.xconf -fo $(FO_C5_TARGET) -pdf $(PDF_C5_TARGET)
 
 fo-letter: $(FO_LETTER_TARGET)
 $(FO_LETTER_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(IMAGES)
@@ -90,25 +90,25 @@ $(FO_LETTER_TARGET): $(ALL_SOURCE) $(VERSION_SOURCE) $(IMAGES)
 
 pdf-letter: $(PDF_LETTER_TARGET)
 $(PDF_LETTER_TARGET): $(FO_LETTER_TARGET) $(IMAGES)
-	$(TOOLS_DIR)/bin/run-fop.sh -fo $(FO_LETTER_TARGET) -pdf $(PDF_LETTER_TARGET)
+	$(TOOLS_DIR)/bin/run-fop.sh -c $(TOOLS_DIR)/fop.xconf -fo $(FO_LETTER_TARGET) -pdf $(PDF_LETTER_TARGET)
 
 pdf: pdf-a4 pdf-b5 pdf-c5 pdf-letter
 
 ps-a4: $(PS_A4_TARGET)
 $(PS_A4_TARGET): $(FO_A4_TARGET) $(IMAGES)
-	$(TOOLS_DIR)/bin/run-fop.sh -fo $(FO_A4_TARGET) -ps $(PS_A4_TARGET)
+	$(TOOLS_DIR)/bin/run-fop.sh -c $(TOOLS_DIR)/fop.xconf -fo $(FO_A4_TARGET) -ps $(PS_A4_TARGET)
 
 ps-b5: $(PS_B5_TARGET)
 $(PS_B5_TARGET): $(FO_B5_TARGET) $(IMAGES)
-	$(TOOLS_DIR)/bin/run-fop.sh -fo $(FO_B5_TARGET) -ps $(PS_B5_TARGET)
+	$(TOOLS_DIR)/bin/run-fop.sh -c $(TOOLS_DIR)/fop.xconf -fo $(FO_B5_TARGET) -ps $(PS_B5_TARGET)
 
 ps-c5: $(PS_C5_TARGET)
 $(PS_C5_TARGET): $(FO_C5_TARGET) $(IMAGES)
-	$(TOOLS_DIR)/bin/run-fop.sh -fo $(FO_C5_TARGET) -ps $(PS_C5_TARGET)
+	$(TOOLS_DIR)/bin/run-fop.sh -c $(TOOLS_DIR)/fop.xconf -fo $(FO_C5_TARGET) -ps $(PS_C5_TARGET)
 
 ps-letter: $(PS_LETTER_TARGET)
 $(PS_LETTER_TARGET): $(FO_LETTER_TARGET) $(IMAGES)
-	$(TOOLS_DIR)/bin/run-fop.sh -fo $(FO_LETTER_TARGET) -ps $(PS_LETTER_TARGET)
+	$(TOOLS_DIR)/bin/run-fop.sh -c $(TOOLS_DIR)/fop.xconf -fo $(FO_LETTER_TARGET) -ps $(PS_LETTER_TARGET)
 
 ps: ps-a4 ps-b5 ps-c5 ps-letter
 

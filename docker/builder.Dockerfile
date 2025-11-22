@@ -20,6 +20,7 @@ RUN apt-get update \
         wget \
         ca-certificates \
         fonts-noto-cjk \
+        fonts-wqy-zenhei \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
