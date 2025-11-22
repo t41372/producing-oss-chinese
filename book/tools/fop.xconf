@@ -2,61 +2,28 @@
   <renderers>
     <renderer mime="application/pdf">
       <fonts>
-        <substitutions>
-           <!-- WenQuanYi Zen Hei (with spaces) -->
-           <substitution>
-              <from font-family="WenQuanYi Zen Hei" font-style="italic"/>
-              <to font-family="WenQuanYi Zen Hei" font-style="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="WenQuanYi Zen Hei" font-style="oblique"/>
-              <to font-family="WenQuanYi Zen Hei" font-style="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="WenQuanYi Zen Hei" font-weight="bold"/>
-              <to font-family="WenQuanYi Zen Hei" font-weight="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="WenQuanYi Zen Hei" font-weight="bold" font-style="italic"/>
-              <to font-family="WenQuanYi Zen Hei" font-style="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="WenQuanYi Zen Hei" font-weight="bold" font-style="oblique"/>
-              <to font-family="WenQuanYi Zen Hei" font-style="normal"/>
-           </substitution>
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSansSC-Regular.otf" embedding-mode="subset">
+          <font-triplet name="Noto Sans SC" style="normal" weight="400"/>
+          <font-triplet name="Noto Sans SC" style="italic" weight="400"/>
+          <font-triplet name="Noto Sans SC" style="oblique" weight="400"/>
+        </font>
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSansSC-Bold.otf" embedding-mode="subset">
+          <font-triplet name="Noto Sans SC" style="normal" weight="700"/>
+          <font-triplet name="Noto Sans SC" style="italic" weight="700"/>
+          <font-triplet name="Noto Sans SC" style="oblique" weight="700"/>
+        </font>
 
-           <!-- WenQuanYiZenHei (no spaces) -->
-           <substitution>
-              <from font-family="WenQuanYiZenHei" font-style="italic"/>
-              <to font-family="WenQuanYiZenHei" font-style="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="WenQuanYiZenHei" font-style="oblique"/>
-              <to font-family="WenQuanYiZenHei" font-style="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="WenQuanYiZenHei" font-weight="bold"/>
-              <to font-family="WenQuanYiZenHei" font-weight="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="WenQuanYiZenHei" font-weight="bold" font-style="italic"/>
-              <to font-family="WenQuanYiZenHei" font-style="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="WenQuanYiZenHei" font-weight="bold" font-style="oblique"/>
-              <to font-family="WenQuanYiZenHei" font-style="normal"/>
-           </substitution>
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSansMonoCJKsc-Regular.otf" embedding-mode="subset">
+          <font-triplet name="Noto Sans Mono CJK SC" style="normal" weight="400"/>
+          <font-triplet name="Noto Sans Mono CJK SC" style="italic" weight="400"/>
+          <font-triplet name="Noto Sans Mono CJK SC" style="oblique" weight="400"/>
+        </font>
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSansMonoCJKsc-Bold.otf" embedding-mode="subset">
+          <font-triplet name="Noto Sans Mono CJK SC" style="normal" weight="700"/>
+          <font-triplet name="Noto Sans Mono CJK SC" style="italic" weight="700"/>
+          <font-triplet name="Noto Sans Mono CJK SC" style="oblique" weight="700"/>
+        </font>
 
-           <!-- Noto -->
-           <substitution>
-              <from font-family="Noto Sans CJK SC" font-style="italic"/>
-              <to font-family="Noto Sans CJK SC" font-style="normal"/>
-           </substitution>
-           <substitution>
-              <from font-family="Noto Sans CJK SC" font-style="oblique"/>
-              <to font-family="Noto Sans CJK SC" font-style="normal"/>
-           </substitution>
-        </substitutions>
         <auto-detect/>
       </fonts>
     </renderer>

@@ -1,4 +1,5 @@
 # producing-oss-chinese
+> This repository is an attempt to translate the book "[Producing Open Source Software](https://producingoss.com/)" by [Karl Fogel](http://www.red-bean.com/kfogel/) into Chinese with LLMs. The rest of the docs will be written in Chinese.
 
 ## Introduction
 The goal of this repository is to translate the book "[Producing Open Source Software](https://producingoss.com/)" by [Karl Fogel](http://www.red-bean.com/kfogel/) into Chinese with LLMs.
@@ -96,6 +97,14 @@ sudo apt-get update && sudo apt-get install -y make subversion xsltproc docbook-
 
 如需发布到网站，可直接将 `html-chunk/` 与 `producingoss.html` 上传到静态站或 GitHub Pages。
 
+
+## 协议
+翻译版保持原书协议，以 Creative Commons Attribution-ShareAlike License 开源，具体请查看 LICENSE 文件或原书仓库中的协议文件。
+
+### 关于字体
+中文版的 pdf 采用[思源黑体 (Source Han Sans) 字体](https://github.com/adobe-fonts/source-han-sans)，该字体以 SIL OPEN FONT LICENSE Version 1.1 开源。
+
+---
 
 ## 一些相关的 prompt
 
