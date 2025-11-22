@@ -1,0 +1,31 @@
+<fop version="1.0">
+  <renderers>
+    <renderer mime="application/pdf">
+      <fonts>
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSansSC-Regular.otf" embedding-mode="subset">
+          <font-triplet name="Noto Sans SC" style="normal" weight="400"/>
+          <font-triplet name="Noto Sans SC" style="italic" weight="400"/>
+          <font-triplet name="Noto Sans SC" style="oblique" weight="400"/>
+        </font>
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSansSC-Bold.otf" embedding-mode="subset">
+          <font-triplet name="Noto Sans SC" style="normal" weight="700"/>
+          <font-triplet name="Noto Sans SC" style="italic" weight="700"/>
+          <font-triplet name="Noto Sans SC" style="oblique" weight="700"/>
+        </font>
+
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSansMonoCJKsc-Regular.otf" embedding-mode="subset">
+          <font-triplet name="Noto Sans Mono CJK SC" style="normal" weight="400"/>
+          <font-triplet name="Noto Sans Mono CJK SC" style="italic" weight="400"/>
+          <font-triplet name="Noto Sans Mono CJK SC" style="oblique" weight="400"/>
+        </font>
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSansMonoCJKsc-Bold.otf" embedding-mode="subset">
+          <font-triplet name="Noto Sans Mono CJK SC" style="normal" weight="700"/>
+          <font-triplet name="Noto Sans Mono CJK SC" style="italic" weight="700"/>
+          <font-triplet name="Noto Sans Mono CJK SC" style="oblique" weight="700"/>
+        </font>
+
+        <auto-detect/>
+      </fonts>
+    </renderer>
+  </renderers>
+</fop>

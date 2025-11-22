@@ -15,7 +15,7 @@
 <!ENTITY copyright  SYSTEM "copy.xml">
 ]>
 
-<book id="poss" lang="en">
+<book id="poss" lang="zh">
 <title>Producing Open Source Software</title>
 <subtitle>How to Run a Successful Free Software Project</subtitle>
 <subtitle>2nd Edition</subtitle>

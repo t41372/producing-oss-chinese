@@ -19,8 +19,15 @@ RUN apt-get update \
         git \
         wget \
         ca-certificates \
-        fonts-noto-cjk \
     && rm -rf /var/lib/apt/lists/*
+
+# Download Noto Sans SC (Simplified Chinese) fonts manually to avoid FOP issues with TTC/CFF
+RUN mkdir -p /usr/share/fonts/opentype/noto && \
+    wget -P /usr/share/fonts/opentype/noto \
+    https://github.com/notofonts/noto-cjk/raw/main/Sans/SubsetOTF/SC/NotoSansSC-Regular.otf \
+    https://github.com/notofonts/noto-cjk/raw/main/Sans/SubsetOTF/SC/NotoSansSC-Bold.otf \
+    https://github.com/notofonts/noto-cjk/raw/main/Sans/Mono/NotoSansMonoCJKsc-Regular.otf \
+    https://github.com/notofonts/noto-cjk/raw/main/Sans/Mono/NotoSansMonoCJKsc-Bold.otf
 
 WORKDIR /workspace
 
