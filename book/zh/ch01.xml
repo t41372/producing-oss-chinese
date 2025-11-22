@@ -115,7 +115,7 @@ url="https://opensource.org/faq#copyleft"
 <sect3 id="history-accidental-resistance">
 <title>偶然的抵抗</title>
 
-<para>然而，新生的自由软件领域还发生着许多其他事，并非都像 Stallman 的 GNU 项目那样具有鲜明的意识形态。其中最重要的当属 <firstterm>Berkeley Software Distribution</firstterm>（<firstterm>BSD</firstterm>）。这是由加州大学伯克利分校 (University of California at Berkeley) 的程序员对 Unix 操作系统进行的逐步重写……BSD 团队没有就“程序员团结共享”发表任何公开的政治声明，但他们以热情和才华<emphasis>践行</emphasis>了这一理念。他们协调了大规模的分布式开发，主要依靠志愿者从头重写了 Unix 命令行工具、代码库，乃至操作系统内核本身。BSD 项目成为了非意识形态自由软件开发的早期典范，也是许多开发者的练兵场，这些人后来继续活跃在开源世界中。</para>
+<para>然而，新生的自由软件领域还发生着许多其他事，并非都像 Stallman 的 GNU 项目那样具有鲜明的意识形态。其中最重要的当属 <firstterm>Berkeley Software Distribution</firstterm>（<firstterm>BSD</firstterm>）。这是由加州大学伯克利分校 (University of California at Berkeley) 的程序员对 Unix 操作系统进行的逐步重写。BSD 团队没有就“程序员团结共享”发表任何公开的政治声明，但他们以热情和才华<emphasis>践行</emphasis>了这一理念。他们协调了大规模的分布式开发，主要依靠志愿者从头重写了 Unix 命令行工具、代码库，乃至操作系统内核本身。BSD 项目成为了非意识形态自由软件开发的早期典范，也是许多开发者的练兵场，这些人后来继续活跃在开源世界中。</para>
 
 <para>另一个合作开发的熔炉是 <firstterm>X Window System</firstterm>——一个自由、网络透明的图形计算环境。它由 MIT 在 80 年代中期与硬件供应商合作开发，这些供应商都希望为客户提供窗口系统，因而有着共同利益。X 许可证绝非反对专有软件，而是特意允许在自由核心之上进行专有扩展——联盟成员都希望有机会增强默认的 X 发行版，从而获得竞争优势。X Windows<footnote><para>他们更喜欢称其为"X Window System"，但实际上，人们通常称其为"X Windows"。</para></footnote>本身是自由软件，但这主要是为了平衡商业利益、促进标准化，而非为了终结专有软件的主导地位。</para>
 
