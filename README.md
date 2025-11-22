@@ -2,16 +2,8 @@
 > This repository is an attempt to translate the book "[Producing Open Source Software](https://producingoss.com/)" by [Karl Fogel](http://www.red-bean.com/kfogel/) into Chinese with LLMs. The rest of the docs will be written in Chinese.
 
 ## Introduction
-The goal of this repository is to translate the book "[Producing Open Source Software](https://producingoss.com/)" by [Karl Fogel](http://www.red-bean.com/kfogel/) into Chinese with LLMs.
 
-The reason to do this despite the existence of an official translation is because the official Chinese translation is a hot trash. That translation is so bad, calling it 'pre-LLM machine translation' would be an insult to machine translation. I was on a flight when I read that book, and I was so furious that I figured reading the English version would be much faster than demystifying the Chinese translation like climbing up the babel tower (I'm a chinese native speaker). The garbage translation feel so pathetic, because we are at the age where the Chinese open source community is rising. A new generation of developers are growing up. This book is pure gold, but the translation is pure garbage. I decided to fix it.
-
-I'm no where near a good translator. If I were to translate the book myself, it would merely be a bit better than the original version and still far from acceptable. I decided to use a combination of LLMs to translate the book.
-
-LLMs are not perfect. Actually, they are quite bad. I used some guardrails like linters and LLM code review from Gemini 2.5, GPT-5-High, and Claude 4.5 Sonnet with extended thinking to mitigate problems, but errors can still occur. Please feel free to open issues whenever you encounter errors.
-
-这个仓库的目的是使用 AI，将 Karl Fogel 的 生产开源软件 一书翻译成中文。
-
+本仓库的目标是利用 LLM 将 Karl Fogel 的著作《制造开源软件》([Producing Open Source Software](https://producingoss.com/)") 翻译成中文。
 
 
 <img width="145" height="190" alt="image" src="https://github.com/user-attachments/assets/8467c206-4d2e-4811-9e8a-0bb06a732eff" />
@@ -31,6 +23,46 @@ LLMs are not perfect. Actually, they are quite bad. I used some guardrails like 
 
 原作者: Karl Fogel
 
+
+
+## 协议
+翻译版保持原书协议，以 Creative Commons Attribution-ShareAlike License 开源，具体请查看 LICENSE 文件或原书仓库中的协议文件。
+
+### 关于字体
+中文版的 pdf 采用[思源黑体 (Source Han Sans) 字体](https://github.com/adobe-fonts/source-han-sans)，该字体以 SIL OPEN FONT LICENSE Version 1.1 开源。详情请参考它们的仓库。
+
+
+## 碎碎念和为什么做这个工作
+尽管这本书已经有了官方译本，但我对那个版本并不满意。我本人中文阅读水平较低，对翻译质量十分敏感。我是在飞机上读到这本书的，当时气得不行，心想与其费劲巴拉地去研究那如同攀登巴别塔般的中文翻译，还不如直接读英文版来得快，然后我就去读英文版了。下飞机之后气不过，就开始了这个项目。
+
+我们正处于华人开源社区崛起的时代，新一代开发者正在成长。这本书本身是无价之宝，但翻译却十分不理想。我们得做点什么才行。
+
+但我的中文文学水平实在不敢恭维 (简单来说就是不如机翻)。如果让我自己翻译这本书，远达不到令人满意的程度。不如用 LLM 来翻译这本书。我恰好有一些 AI coding assistant 的订阅，连 API 钱都不用付。
+
+LLM 并不完美。实际上，它们相当糟糕。为了省钱，我没用 LLM API。我使用了以下工具来完成这本书
+- Google Jules (Gemini 2.5 Pro 和 3.0 Pro)，基本整本书都是用 jules 写的。Gemini 3.0 负责了后期的审核和润色。
+- Claude 4.5 Sonnet (Claude code web 限时送了 250 刀，拿来用了会儿，但满意度一般)
+- GPT5, GPT5.1, GPT5-Codex, GPT5.1-Codex 用来配置环境，搭建配套设施，写一些脚本，做代码审核。这玩意儿的中文写作能力比较难评，而且在本次任务中，长上下文出现了严重的幻觉，做审核时结果错的很离谱。但写代码还是相当可靠的。
+
+> 如果你想说我用这些工具跟省钱没关系，噢我的朋友，你还太年轻了(
+
+为了避免 AI 翻译 xml 把格式搞烂，我让 AI 弄了些 github actions 检查。除此之外，有各种 AI 审核机制，但我发现代码审核工具在此次任务下并不理想。于是我让 AI 写了个 Python 脚本来生成用来审核翻译结果的提示词文本 (是的调用 API 是不可能调用的。我一分钱也不会花的)。为了应对 Gemini-3-Pro-Preview 的上下文问题，我额外进行了优化。
+
+这个 GitHub 仓库中的工具链大多是从原始 svn 仓库拉回来的，有些是我自己 (我让AI) 写的。由于原始项目太大，而且我不会用 svn (也没打算学)，我只选择性的从原项目仓库拿了一些必要的东西。坦白说，不知道之后原书更新之后要怎么处理变化，不过总有办法的。
+
+整体流程
+0. 让各种 AI coding assistant 尝试进行翻译，但效果不佳。
+1. 让 Jules 做了第一版翻译，让 jules 和其他 AI 助手做了一些 code review。翻译效果不错，审核效果较差。
+2. 用脚本生成中英文对照的审核材料，提交给 gemini 3.0 审核。
+3. 之后继续重复审核和修改的流程，直到质量达标到可以发布的程度
+
+#### 为什么不贡献回原始仓库？
+因为我不会用 svn。
+
+另外，原版那边就有一个中文翻译版了。虽然质量一般，但终归是人类翻译出来的成果。LLM 输出的成果本身不算可靠，还需要更多审核工作来确保成果的可靠性。
+
+---
+---
 
 ## 构建指南
 
@@ -97,16 +129,9 @@ sudo apt-get update && sudo apt-get install -y make subversion xsltproc docbook-
 
 如需发布到网站，可直接将 `html-chunk/` 与 `producingoss.html` 上传到静态站或 GitHub Pages。
 
-
-## 协议
-翻译版保持原书协议，以 Creative Commons Attribution-ShareAlike License 开源，具体请查看 LICENSE 文件或原书仓库中的协议文件。
-
-### 关于字体
-中文版的 pdf 采用[思源黑体 (Source Han Sans) 字体](https://github.com/adobe-fonts/source-han-sans)，该字体以 SIL OPEN FONT LICENSE Version 1.1 开源。
-
----
-
 ## 一些相关的 prompt
+
+<details>
 
 一些跟 setup 相关的 prompt 在下面。翻译用的 prompt 在 agents.md 里面。
 
@@ -154,8 +179,6 @@ You can use the ViewVC tool here just to check if your work is there or to see t
 ```
 
 
-
-
-
+</details>
 
 
