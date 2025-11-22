@@ -256,7 +256,7 @@ url="http://www.rants.org/2008/03/06/thread_theory/"
     <emphasis role="bold">&lt;&lt;&lt;订阅链接&gt;&gt;&gt;</emphasis>。
   </para>
   <para>
-    （有时线程会在 <literal>users@</literal> 和 <literal>dev@</literal> 之间交叉，Scanley 的开发者经常会参与两个列表的讨论。通常，如果你不确定问题或帖子应该放在哪里，就在 <literal>users@</literal> 上开始。如果它应该是开发讨论，有人会建议将其移至 <literal>dev@</literal>。）
+    （有时讨论会在 <literal>users@</literal> 和 <literal>dev@</literal> 之间交叉，Scanley 的开发者经常会参与两个列表的讨论。通常，如果你不确定问题或帖子应该放在哪里，就在 <literal>users@</literal> 上开始。如果它应该是开发讨论，有人会建议将其移至 <literal>dev@</literal>。）
   </para>
 
   <para>
@@ -298,7 +298,7 @@ linkend="message-forum-software"/> 中）至少提供以下功能：</para>
 
   <varlistentry><term>基于电子邮件和 Web 的访问</term>
     <listitem>
-      <para>用户应该能够通过电子邮件订阅论坛，并在 Web 上阅读它们（在那里它们被组织成对话或"线程"，就像在邮件阅读器中一样）。</para>
+      <para>用户应该能够通过电子邮件订阅论坛，并在 Web 上阅读它们（在那里它们被组织成对话或"讨论串 (thread)"，就像在邮件阅读器中一样）。</para>
     </listitem>
   </varlistentry>
 
@@ -450,7 +450,7 @@ url="http://www.nisto.com/listspec/list-manager-intro.html"
 <sect3 id="reply-to">
 <title>伟大的 Reply-to 辩论</title>
 
-<para>早些时候，在 <xref linkend="avoid-private-discussions"/> 中，我强调了确保讨论留在公共论坛的重要性，并谈到了有时需要采取积极措施来防止对话转向私人电子邮件线程；此外，本章都是关于设置项目通信软件以尽可能多地为人们完成工作。因此，如果邮件列表管理软件提供了一种自动使讨论留在列表上的方法，你会认为打开该功能将是显而易见的选择。</para>
+<para>早些时候，在 <xref linkend="avoid-private-discussions"/> 中，我强调了确保讨论留在公共论坛的重要性，并谈到了有时需要采取积极措施来防止对话转向私人电子邮件讨论串；此外，本章都是关于设置项目通信软件以尽可能多地为人们完成工作。因此，如果邮件列表管理软件提供了一种自动使讨论留在列表上的方法，你会认为打开该功能将是显而易见的选择。</para>
 
 <para>好吧，并非完全如此。确实有这样一个功能，但它有一些相当严重的缺点。是否使用它的问题是邮件列表管理中最热门的辩论之一——诚然，这不是一个可能会登上你所在城市晚间新闻的争议，但它会在自由软件项目中不时爆发。下面，我将描述该功能，给出双方的主要论点，并提出我能提出的最佳建议。</para>
 
@@ -540,16 +540,16 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
 
   <varlistentry><term>引用稳定性</term>
     <listitem>
-      <para>一旦消息被归档到特定的 URL，它就应该永远可以在那个完全相同的 URL 访问。即使归档被重建、从备份恢复或以其他方式修复，任何已经公开的 URL 都应该保持不变。稳定的引用使互联网搜索引擎可以索引归档，这对寻找答案的用户来说是一个巨大的好处。稳定的引用也很重要，因为 mailing list 的帖子和线程经常会从其他地方链接过来，比如从 bug tracker（见 <xref
+      <para>一旦消息被归档到特定的 URL，它就应该永远可以在那个完全相同的 URL 访问。即使归档被重建、从备份恢复或以其他方式修复，任何已经公开的 URL 都应该保持不变。稳定的引用使互联网搜索引擎可以索引归档，这对寻找答案的用户来说是一个巨大的好处。稳定的引用也很重要，因为 mailing list 的帖子和讨论串经常会从其他地方链接过来，比如从 bug tracker（见 <xref
             linkend="bug-tracker"/>）或其他项目文档。</para>
 
       <para>理想情况下，mailing list 软件在向收件人分发消息时，应该在标头或页脚中包含消息的归档 URL，或至少包含 URL 中消息特定的部分。这样，拥有消息副本的人就能立即知道它的归档位置，而无需真的访问归档，这会很有帮助，因为任何涉及网页浏览的操作都会自动变得耗时。我不知道是否有任何 mailing list 软件真的提供了这个功能；不幸的是，我用过的那些都没有。但这是一个值得寻找的功能（或者，如果你编写 mailing list 软件，请考虑实现这个功能）。</para>
     </listitem>
   </varlistentry>
 
-  <varlistentry><term>线程支持</term>
+  <varlistentry><term>讨论串支持 (Thread Support)</term>
     <listitem>
-      <para>应该能够从任何单个消息跳转到原始消息所属的<firstterm>线程</firstterm>（一组相关消息）。每个线程也应该有自己的 URL，与线程中各个消息的 URL 分开。</para>
+      <para>应该能够从任何单个消息跳转到原始消息所属的<firstterm>讨论串 (thread)</firstterm>（一组相关消息）。每个讨论串也应该有自己的 URL，与讨论串中各个消息的 URL 分开。</para>
     </listitem>
   </varlistentry>
 
@@ -1031,7 +1031,7 @@ linkend="issue-manager"/>）&nbsp;&mdash;&nbsp;这可以极大地影响他们掌
     <para>如果 ticket 明显有效且不是重复的，无论如何都要批准它，并开始它的正常生命周期。毕竟，报告者现在已经被告知结伴了，所以关闭一个有效的 ticket 并浪费迄今为止完成的工作是没有意义的。</para>
   </listitem>
   <listitem>
-    <para>否则，如果 ticket 不是明显有效的，请关闭它，但要求报告者如果从伙伴那里得到确认，可以重新打开它。当他们这样做时，他们应该引用确认线程（例如，邮件列表档案的 URL）。</para>
+    <para>否则，如果 ticket 不是明显有效的，请关闭它，但要求报告者如果从伙伴那里得到确认，可以重新打开它。当他们这样做时，他们应该引用确认讨论串（例如，邮件列表档案的 URL）。</para>
   </listitem>
 </orderedlist>
 
