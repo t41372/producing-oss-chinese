@@ -10,3 +10,5 @@ book/*/producingoss-*.ps
 book/tools/xsl
 
 .DS_Store
+
+reviews

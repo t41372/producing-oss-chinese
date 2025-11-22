@@ -1,5 +1,23 @@
 # producing-oss-chinese
-Use AI to translate the entire book
+
+## Introduction
+The goal of this repository is to translate the book "[Producing Open Source Software](https://producingoss.com/)" by [Karl Fogel](http://www.red-bean.com/kfogel/) into Chinese with LLMs.
+
+The reason to do this despite the existence of an official translation is because the official Chinese translation is a hot trash. That translation is so bad, calling it 'pre-LLM machine translation' would be an insult to machine translation. I was on a flight when I read that book, and I was so furious that I figured reading the English version would be much faster than demystifying the Chinese translation like climbing up the babel tower (I'm a chinese native speaker). The garbage translation feel so pathetic, because we are at the age where the Chinese open source community is rising. A new generation of developers are growing up. This book is pure gold, but the translation is pure garbage. I decided to fix it.
+
+I'm no where near a good translator. If I were to translate the book myself, it would merely be a bit better than the original version and still far from acceptable. I decided to use a combination of LLMs to translate the book.
+
+LLMs are not perfect. Actually, they are quite bad. I used some guardrails like linters and LLM code review from Gemini 2.5, GPT-5-High, and Claude 4.5 Sonnet with extended thinking to mitigate problems, but errors can still occur. Please feel free to open issues whenever you encounter errors.
+
+这个仓库的目的是使用 AI，将 Karl Fogel 的 生产开源软件 一书翻译成中文。
+
+
+
+<img width="145" height="190" alt="image" src="https://github.com/user-attachments/assets/8467c206-4d2e-4811-9e8a-0bb06a732eff" />
+
+
+这本书翻译时，我们 (我和 AI) 的假设是你至少看得懂一些英文，因此我们会保留人名和许多术语的英文原文，这对程序员来说可能比奇怪的翻译更熟悉。我认为这本书的目标受众是看得懂英文的 - 甚至能看得懂英文原版，只是读原文书太累。
+
 
 
 原始 svn 仓库
