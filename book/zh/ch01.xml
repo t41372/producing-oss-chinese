@@ -144,7 +144,7 @@ url="https://www.mozilla.org/" >https://www.mozilla.org/</ulink>。</para></foot
 
 <para>这些困境降临到了一个正面临身份危机的社区。实际上，自由软件开发者对运动的总体目标（如果有的话）从未有过统一看法。甚至不能简单地说观点是从一个极端到另一个极端，因为这暗示了一种线性光谱，而实际上观点是多维发散的。然而，如果我们愿意暂时忽略细微差别，可以区分出两大类信念。一派持 Stallman 的观点，认为共享和修改的自由至关重要，停止谈论自由就是忽略了核心。另一派则认为软件质量才是最有力的论据，并且反感将专有软件妖魔化。部分自由软件程序员认为，作者（或雇主）<emphasis>应该</emphasis>有权控制分发条款，这无关于道德。其他人则不以为然。</para>
 
-<para>很长一段时间里，这些差异无需被深究，但自由软件在商业上的成功使问题避无可避。1998 年，Christine Peterson 创造了 <firstterm>open source</firstterm>（开源）一词作为 "free" 的替代。这是在一个最终演变成开放源代码促进会（OSI）的联盟会议上提出的。<footnote><para>OSI 的网站主页是<ulink
+<para>很长一段时间里，这些差异无需被深究，但自由软件在商业上的成功使问题避无可避。1998 年，Christine Peterson 创造了 <firstterm>open source</firstterm>（开源）一词作为 "free" 的替代。这是在一个最终演变成开放源代码促进会（Open Source Initiative, OSI）的联盟会议上提出的。<footnote><para>OSI 的网站主页是<ulink
 url="https://www.opensource.org/"
 >https://www.opensource.org/</ulink>。</para></footnote>OSI 认为，不仅 "free software" 令人困惑，而且 "free" 只是问题的冰山一角：该运动需要向企业界推销，而道德和共享的说辞在董事会里行不通。用他们当时自己的话来说：</para>
 
