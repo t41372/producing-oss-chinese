@@ -138,7 +138,7 @@ url="https://opensource.org/faq#copyleft"
 <para>随着企业界日益关注自由软件，程序员面临着新的公关难题。首当其冲的就是 "free" 这个词。初听 "free software" 时，许多人误以为它仅指“零成本软件”。的确，所有自由软件都是零成本的<footnote><para>人们可以为发放自由软件的副本收费，但由于之后无法阻止接收者免费提供它，价格实际上会立即降至零。</para></footnote>，但并非所有零成本软件都拥有“自由”——即出于任何目的共享和修改的自由。例如，在 90 年代浏览器大战期间，Netscape 和 Microsoft 都免费赠送浏览器以争夺市场。这两款浏览器都不具备“自由软件”的自由。你无法获得源代码；即便能获得，也无权修改或分发。<footnote><para>Netscape Navigator 的源代码<emphasis>最终</emphasis>在 1998 年以开源许可证发布，并成为 Mozilla Firefox web 浏览器的基础。参见<ulink
 url="https://www.mozilla.org/" >https://www.mozilla.org/</ulink>。</para></footnote>你唯一能做的就是下载并运行。这些浏览器并不比商店里的盒装软件更自由，仅仅是价格更低罢了。</para>
 
-<para>对"free"这个词的混淆完全是由于英语中一个不幸的歧义。大多数语言都区分低价和自由（例如，对罗曼语系使用者来说，<emphasis>gratis</emphasis> 和 <emphasis>libre</emphasis> 的区别一目了然）。但英语作为互联网通用语的地位，意味着英语的问题在某种程度上也是全球的问题。围绕"free"这个词的误解如此普遍，以至于自由软件程序员最终形成了一个标准的回应公式："这里的 <emphasis>Free</emphasis> 指的是<emphasis>自由</emphasis>（freedom），而非<emphasis>免费</emphasis>——就像“言论自由”（free speech），而不是“免费啤酒”（free beer）。"然而，一遍遍解释着实累人。许多程序员有理由认为，模糊的 "free" 阻碍了公众的理解。</para>
+<para>对"free"这个词的混淆完全是由于英语中一个不幸的歧义。大多数语言都区分低价和自由（例如，对罗曼语系使用者来说，<emphasis>gratis</emphasis> 和 <emphasis>libre</emphasis> 的区别一目了然）。但英语作为互联网通用语的地位，意味着英语的问题在某种程度上也是全球的问题。围绕"free"这个词的误解如此普遍，以至于自由软件程序员最终形成了一个标准的回应公式："这里的 <emphasis>free</emphasis> 指的是<emphasis>自由</emphasis>（freedom），而非<emphasis>免费</emphasis>——就像“言论自由”（free speech），而不是“免费啤酒”（free beer）。"然而，一遍遍解释着实累人。许多程序员有理由认为，模糊的 "free" 阻碍了公众的理解。</para>
 
 <para>但问题远不止于此。"free" 带有不可避免的道德内涵：如果自由本身就是目的，那么软件是否更好用、是否有利可图，都变得无关紧要。这些只是某种道德动机带来的令人愉悦的副作用，而非根源于技术或商业。此外，“自由”的立场会让那些既想支持自由软件、又想继续销售专有软件的公司感到尴尬。</para>
 
