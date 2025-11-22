@@ -610,7 +610,7 @@ dev@subversion 是一个促进版本控制系统开发的邮件列表，不是�
   修复了 revision 12828 中的一些拼写错误。
 </screen>
 
-<para>…评审该提交的一部分工作就是说："顺便说一下，在引用过去的变更时，请使用'r12828'，而不是'revision 12828'。" 这不仅仅是学究气；它对于自动可解析性和人类可读性同样重要。<footnote><para>关于如何写好提交信息的更多内容，见 Chris Beams 的优秀文章“如何写一个 Git 提交信息”，网址是 <ulink url="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</ulink>。许多项目都将该文章作为其提交信息的基本标准。</para></footnote></para>
+<para>…评审该提交的一部分工作就是说：「顺便说一下，在引用过去的变更时，请使用『r12828』，而不是『revision 12828』。」这不仅仅是学究气；它对于自动可解析性和人类可读性同样重要。<footnote><para>关于如何写好提交信息的更多内容，见 Chris Beams 的优秀文章“如何写一个 Git 提交信息”，网址是 <ulink url="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</ulink>。许多项目都将该文章作为其提交信息的基本标准。</para></footnote></para>
 
 <para>通过遵循一个总原则，即对于常见实体应该有规范的引用方法，并且这些引用方法应该在任何地方都得到一致的使用，项目实际上输出了某些标准。这些标准使得人们可以编写工具，以更可用的方式呈现项目的沟通信息——例如，一个格式化为「r12828」的修订版可以被转换成一个指向代码库浏览系统的实时链接。如果修订版写成「revision 12828」，这就更难做到了，既因为那种形式可能会被分在两行，也因为它不那么独特（「revision」这个词经常会单独出现，数字串也经常会单独出现，而「r12828」的组合只能表示一个修订号）。类似的考虑也适用于工单号、FAQ 条目等。<footnote><para>关于这类标准能带来的好处的一个更扩展的例子，是 <xref linkend="automation"/> 中提到的 Contribulyzer 例子。</para></footnote>
 </para>
