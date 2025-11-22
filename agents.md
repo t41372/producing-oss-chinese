@@ -158,3 +158,10 @@ BUILD_TARGETS="html" ./scripts/build-book.sh
 - 如果环境缺依赖/无法运行，再 fallback 至 Docker：`BUILD_TARGETS="html" ./scripts/build-book.sh zh`。
 
 通过这些检查即可提交；遇到结构性错误优先修复再提 PR。
+
+
+## 关于 python 工具脚本
+所有和 python 相关的东西，使用 astral uv 管理依赖。
+- `uv run xxx.py`
+- `uv add xxx`
+

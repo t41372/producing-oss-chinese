@@ -12,3 +12,5 @@ book/tools/xsl
 .DS_Store
 
 reviews
+
+__pycache__
