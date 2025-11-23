@@ -23,7 +23,26 @@
 
 原作者: Karl Fogel
 
+## 版本
+中文翻译目前基于英文版:
+- last changed revision: `3312`
+- `2024-09-26T19:24:18.100647Z`
 
+<details>
+<summary>
+在不安装 svn 的状况下快速检查英文当前版本的命令:
+</summary>
+可以用下面这个命令获取 svn 仓库 en 版本的最新 revision 号，以此检查我们的翻译是否需要更新。
+
+```sh
+curl -i -s -X PROPFIND \
+     -H "Depth: 0" \
+     -H "Content-Type: text/xml" \
+     -d '<?xml version="1.0"?><D:propfind xmlns:D="DAV:"><D:prop><D:version-name/><D:creationdate/></D:prop></D:propfind>' \
+     https://svn.red-bean.com/repos/producingoss/trunk/en/ \
+     | grep -E "SVN-Repository-Revision|version-name|creationdate"
+```
+</details>
 
 ## 协议
 翻译版保持原书协议，以 Creative Commons Attribution-ShareAlike License 开源，具体请查看 LICENSE 文件或原书仓库中的协议文件。
@@ -69,6 +88,16 @@ LLM 并不完美。实际上，它们相当糟糕。为了省钱，我没用 LLM
 翻译内容完成后，可以借助项目内置的 Docker 化工具链把整本书打包为 HTML、EPUB 与 PDF。整个流程不会在宿主机上安装 DocBook/FOP，只需要 Docker。
 
 如果你更希望直接使用本机已经安装好的 DocBook/FOP 工具链，也可以运行新的 `scripts/build-book-local.sh`，完全跳过 Docker（见下文“本地工具链”）。
+
+<details>
+<summary>
+关于帮 AI 配环境
+</summary>
+如果你使用的远程 AI 恰好不能用 docker，恰好使用 debian/ubuntu 系的虚拟机，可以使用下面这个简单命令一键帮他配环境。
+```sh
+sudo apt-get update && sudo apt-get install -y make subversion xsltproc docbook-xsl docbook-xsl-ns fop default-jre-headless zip python3 libxml2-utils
+```
+<details>
 
 ### 快速开始
 

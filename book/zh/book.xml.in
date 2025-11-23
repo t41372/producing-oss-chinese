@@ -16,9 +16,9 @@
 ]>
 
 <book id="poss" lang="zh">
-<title>Producing Open Source Software</title>
-<subtitle>How to Run a Successful Free Software Project</subtitle>
-<subtitle>2nd Edition</subtitle>
+<title>制造开源软件</title>
+<subtitle>如何运作一个成功的自由软件项目</subtitle>
+<subtitle>第二版</subtitle>
 
 <bookinfo>
   <!-- For some reason, the cdata in the 'edition' element doesn't
