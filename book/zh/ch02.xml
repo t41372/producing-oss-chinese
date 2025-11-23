@@ -405,20 +405,20 @@ url="https://subversion.apache.org/docs/community-guide/"
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="license-quickstart">
-<title>选择许可证并应用它</title>
+<title>选择并应用许可证</title>
 
-<para>本节旨在作为选择许可证的非常快速、非常粗略的指南。阅读<xref linkend="legal"/>以了解不同许可证的详细法律含义，以及你选择的许可证如何影响人们将你的软件与其他软件混合使用的能力。</para>
+<para>本节旨在提供一份非常快速且粗略的许可证选择指南。阅读<xref linkend="legal"/>以了解不同许可证的详尽法律效力，以及所选许可证将如何影响你的软件与其他软件的集成。</para>
 
 <sidebar id="fsf-and-osi-approved">
   <title>同义词："自由软件许可证"、"FSF 批准"、"开源许可证" 和 "OSI 批准"</title>
 
-  <para>术语"free software license"（自由软件许可证）和"open source license"（开源许可证）本质上是同义词，我在本书中将它们视为同义词。</para>
+  <para>术语 "free software license"（自由软件许可证）和 "open source license"（开源许可证）本质上是同义词，本书后续内容中也将不作区分。</para>
 
-  <para>严格来说，前一个术语指的是被自由软件基金会（FSF）确认为符合自由软件定义（FSD，参见 <ulink
+  <para>严格来说，前者指经自由软件基金会（Free Software Foundation，简称 FSF）认证，符合自由软件定义（FSD，参见 <ulink
   url="https://www.gnu.org/philosophy/free-sw.html"
-  >https://www.gnu.org/philosophy/free-sw.html</ulink>）中"四大自由"的许可证，而后一个术语指的是被开放源代码促进会（OSI）批准为符合开源定义（OSD，参见 <ulink url="https://opensource.org/osd"
-  >https://opensource.org/osd</ulink>）的许可证。然而，如果你阅读 FSD 和 OSD，就会发现这两个定义显然描述了相同的自由&nbsp;&mdash;&nbsp;这并不奇怪，考虑到 <xref
-  linkend="free-vs-open-source"/> 中解释的历史背景。不可避免且在某种意义上是故意的结果是，这两个组织批准了同一组许可证。<footnote><para>实际上，获批的许可证集合之间确实<emphasis>存在</emphasis>一些细微差异，但对我们的目的而言&nbsp;&mdash;&nbsp;或者实际上对大多数实际目的而言&nbsp;&mdash;&nbsp;这并不重要。在某些情况下，某个组织只是还没有来得及考虑给定的许可证，通常是因为该许可证无论如何也没有被广泛使用。还有少数很少使用的许可证，其条款在形式上与其中一个定义的字面意思（如果不是精神）相冲突。
+  >https://www.gnu.org/philosophy/free-sw.html</ulink>）中"四大自由"的许可证，而后者则指经开放源代码促进会（Open Source Initiative，简称 OSI）批准，符合开源定义（OSD，参见 <ulink url="https://opensource.org/osd"
+  >https://opensource.org/osd</ulink>）的许可证。然而，只要对比 FSD 和 OSD 就会发现，这两个定义所界定的自由显然是一致的&nbsp;&mdash;&nbsp;鉴于 <xref
+  linkend="free-vs-open-source"/> 中解释的历史背景，这并不令人意外。这就导致了一个必然的结果（在某种意义上也是有意为之）：这两个组织批准的是同一套许可证。<footnote><para>实际上，这两组获批的许可证之间确实<emphasis>存在</emphasis>一些细微差异，但这并不妨碍我们的讨论，实际上也不影响大多数实际应用。在某些情况下，某个组织只是还没来得及审查某个特定的许可证，通常是因为该许可证本来就没被广泛使用。还有少数很少使用的许可证，其条款即便符合定义的精神，但在字面上仍与二者定义之一存在冲突。
   <!--
   I don't want to take up space in the book with it, but for the
   record, here is the conversation in which Alexandre Oliva provided
