@@ -405,20 +405,20 @@ url="https://subversion.apache.org/docs/community-guide/"
 
 <!-- ======================== SECTION ============================== -->
 <sect1 id="license-quickstart">
-<title>选择并应用许可证</title>
+<title>许可证的选择与应用</title>
 
-<para>本节旨在提供一份非常快速且粗略的许可证选择指南。阅读<xref linkend="legal"/>以了解不同许可证的详尽法律效力，以及所选许可证将如何影响你的软件与其他软件的集成。</para>
+<para>这一节只是一份非常简略、粗线条的许可证选择指南。请阅读<xref linkend="legal"/>以了解不同许可证在法律层面的详细影响，特别是要注意，你选的许可证会直接决定别人能不能把你的代码和其他软件混着用。</para>
 
 <sidebar id="fsf-and-osi-approved">
-  <title>同义词："自由软件许可证"、"FSF 批准"、"开源许可证" 和 "OSI 批准"</title>
+  <title>同义词：“自由软件许可证” (free software license)、“FSF 批准” (FSF-approved)、“开源许可证” (open source license) 和 “OSI 批准” (OSI-approved)</title>
 
-  <para>术语 "free software license"（自由软件许可证）和 "open source license"（开源许可证）本质上是同义词，本书后续内容中也将不作区分。</para>
+  <para>术语 “free software license”（自由软件许可证）和 “open source license”（开源许可证）本质上是同义词，我在本书中也会将二者视为同义词。</para>
 
-  <para>严格来说，前者指经自由软件基金会（Free Software Foundation，简称 FSF）认证，符合自由软件定义（FSD，参见 <ulink
+  <para>从技术上讲，"Free software license" 指的是被自由软件基金会 (Free Software Foundation, FSF) 认可的许可证，即符合其“自由软件定义” (FSD, 参见 <ulink
   url="https://www.gnu.org/philosophy/free-sw.html"
-  >https://www.gnu.org/philosophy/free-sw.html</ulink>）中"四大自由"的许可证，而后者则指经开放源代码促进会（Open Source Initiative，简称 OSI）批准，符合开源定义（OSD，参见 <ulink url="https://opensource.org/osd"
-  >https://opensource.org/osd</ulink>）的许可证。然而，只要对比 FSD 和 OSD 就会发现，这两个定义所界定的自由显然是一致的&nbsp;&mdash;&nbsp;鉴于 <xref
-  linkend="free-vs-open-source"/> 中解释的历史背景，这并不令人意外。这就导致了一个必然的结果（在某种意义上也是有意为之）：这两个组织批准的是同一套许可证。<footnote><para>实际上，这两组获批的许可证之间确实<emphasis>存在</emphasis>一些细微差异，但这并不妨碍我们的讨论，实际上也不影响大多数实际应用。在某些情况下，某个组织只是还没来得及审查某个特定的许可证，通常是因为该许可证本来就没被广泛使用。还有少数很少使用的许可证，其条款即便符合定义的精神，但在字面上仍与二者定义之一存在冲突。
+  >https://www.gnu.org/philosophy/free-sw.html</ulink>) 中“四大自由”精神的条款；而 "Open source license" 指的是被开放源代码促进会 (Open Source Initiative, OSI) 批准的许可证，即符合“开源定义” (OSD, 参见 <ulink url="https://opensource.org/osd"
+  >https://opensource.org/osd</ulink>) 的条款。不过，只要对比一下 FSD 和 OSD 就会发现，这两个定义里说的“自由”本质上是一回事——考虑到 <xref
+  linkend="free-vs-open-source"/> 中解释的历史背景，这完全在情理之中。这就导致了一个必然结果——某种意义上也是故意为之——那就是这两个组织认可的许可证实际上是同一套。<footnote><para>实际上，这两组获批的许可证之间确实<emphasis>存在</emphasis>一些细微差异，但这对本书要讨论的内容来说无关紧要，实际上也不影响大多数实际应用。有些时候，这仅仅是因为某家机构还没腾出手来审查某个许可证，通常是因为该许可证本来就没被广泛使用。还有极少数冷门许可证，其条款即便精神上相符，但在字面上确实与某一方的定义有冲突。
   <!--
   I don't want to take up space in the book with it, but for the
   record, here is the conversation in which Alexandre Oliva provided
