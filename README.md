@@ -9,7 +9,7 @@
 本仓库的目标是利用 LLM 将 Karl Fogel 的著作《制造开源软件: 如何运作一个成功的自由软件项目》([Producing Open Source Software: How to Run a Successful Free Software Project](https://producingoss.com/)") 翻译成中文。
 
 
-<img width="145" height="190" alt="image" src="./book.png" href="https://producingoss.com/" />
+<img width="145" height="190" alt="image" src="./docs/book.png" href="https://producingoss.com/" />
 
 
 这本书翻译时，我们 (我和 AI) 的假设是你至少看得懂一些英文，因此我们会保留人名和许多术语的英文原文，这对程序员来说可能比奇怪的翻译更熟悉。我认为这本书的目标受众是看得懂英文的 - 甚至能看得懂英文原版，只是读原文书太累。
