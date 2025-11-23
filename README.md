@@ -1,12 +1,15 @@
 # producing-oss-chinese
 > This repository is an attempt to translate the book "[Producing Open Source Software](https://producingoss.com/)" by [Karl Fogel](http://www.red-bean.com/kfogel/) into Chinese with LLMs. The rest of the docs will be written in Chinese.
 
-## Introduction
 
-本仓库的目标是利用 LLM 将 Karl Fogel 的著作《制造开源软件》([Producing Open Source Software](https://producingoss.com/)") 翻译成中文。
+## 介绍
+
+> 下载 epub, 不同尺寸的 pdf 和 html 版本的电子书 [请点我](https://github.com/t41372/producing-oss-chinese/releases/latest)。也可以直接看[在线版](https://t41372.github.io/producing-oss-chinese/)。
+
+本仓库的目标是利用 LLM 将 Karl Fogel 的著作《制造开源软件: 如何运作一个成功的自由软件项目》([Producing Open Source Software: How to Run a Successful Free Software Project](https://producingoss.com/)") 翻译成中文。
 
 
-<img width="145" height="190" alt="image" src="https://github.com/user-attachments/assets/8467c206-4d2e-4811-9e8a-0bb06a732eff" />
+<img width="145" height="190" alt="image" src="./book.png" href="https://producingoss.com/" />
 
 
 这本书翻译时，我们 (我和 AI) 的假设是你至少看得懂一些英文，因此我们会保留人名和许多术语的英文原文，这对程序员来说可能比奇怪的翻译更熟悉。我认为这本书的目标受众是看得懂英文的 - 甚至能看得懂英文原版，只是读原文书太累。
@@ -30,7 +33,7 @@
 
 <details>
 <summary>
-在不安装 svn 的状况下快速检查英文当前版本的命令:
+在不安装 svn 的状况下快速检查 svn 原版仓库当前版本的命令:
 </summary>
 可以用下面这个命令获取 svn 仓库 en 版本的最新 revision 号，以此检查我们的翻译是否需要更新。
 
@@ -44,6 +47,7 @@ curl -i -s -X PROPFIND \
 ```
 </details>
 
+
 ## 协议
 翻译版保持原书协议，以 Creative Commons Attribution-ShareAlike License 开源，具体请查看 LICENSE 文件或原书仓库中的协议文件。
 
@@ -51,7 +55,14 @@ curl -i -s -X PROPFIND \
 中文版的 pdf 采用[思源黑体 (Source Han Sans) 字体](https://github.com/adobe-fonts/source-han-sans)，该字体以 SIL OPEN FONT LICENSE Version 1.1 开源。详情请参考它们的仓库。
 
 
-## 碎碎念和为什么做这个工作
+
+## 为什么不贡献回原始仓库？
+因为我不会用 svn (而且没打算学)。
+
+另外，原版那边就有一个中文翻译版了。虽然质量一般，但终归是人类翻译出来的成果。LLM 输出的成果本身不算可靠，还需要更多审核工作来确保成果的可靠性。
+
+<details>
+<summary>碎碎念和为什么做这个工作</summary>
 尽管这本书已经有了官方译本，但我对那个版本并不满意。我本人中文阅读水平较低，对翻译质量十分敏感。我是在飞机上读到这本书的，当时气得不行，心想与其费劲巴拉地去研究那如同攀登巴别塔般的中文翻译，还不如直接读英文版来得快，然后我就去读英文版了。下飞机之后气不过，就开始了这个项目。
 
 我们正处于华人开源社区崛起的时代，新一代开发者正在成长。这本书本身是无价之宝，但翻译却十分不理想。我们得做点什么才行。
@@ -63,22 +74,18 @@ LLM 并不完美。实际上，它们相当糟糕。为了省钱，我没用 LLM
 - Claude 4.5 Sonnet (Claude code web 限时送了 250 刀，拿来用了会儿，但满意度一般)
 - GPT5, GPT5.1, GPT5-Codex, GPT5.1-Codex 用来配置环境，搭建配套设施，写一些脚本，做代码审核。这玩意儿的中文写作能力比较难评，而且在本次任务中，长上下文出现了严重的幻觉，做审核时结果错的很离谱。但写代码还是相当可靠的。
 
-> 如果你想说我用这些工具跟省钱没关系，噢我的朋友，你还太年轻了(
-
 为了避免 AI 翻译 xml 把格式搞烂，我让 AI 弄了些 github actions 检查。除此之外，有各种 AI 审核机制，但我发现代码审核工具在此次任务下并不理想。于是我让 AI 写了个 Python 脚本来生成用来审核翻译结果的提示词文本 (是的调用 API 是不可能调用的。我一分钱也不会花的)。为了应对 Gemini-3-Pro-Preview 的上下文问题，我额外进行了优化。
 
 这个 GitHub 仓库中的工具链大多是从原始 svn 仓库拉回来的，有些是我自己 (我让AI) 写的。由于原始项目太大，而且我不会用 svn (也没打算学)，我只选择性的从原项目仓库拿了一些必要的东西。坦白说，不知道之后原书更新之后要怎么处理变化，不过总有办法的。
 
-整体流程
+整体流程:
+
 0. 让各种 AI coding assistant 尝试进行翻译，但效果不佳。
 1. 让 Jules 做了第一版翻译，让 jules 和其他 AI 助手做了一些 code review。翻译效果不错，审核效果较差。
 2. 用脚本生成中英文对照的审核材料，提交给 gemini 3.0 审核。
 3. 之后继续重复审核和修改的流程，直到质量达标到可以发布的程度
 
-#### 为什么不贡献回原始仓库？
-因为我不会用 svn。
-
-另外，原版那边就有一个中文翻译版了。虽然质量一般，但终归是人类翻译出来的成果。LLM 输出的成果本身不算可靠，还需要更多审核工作来确保成果的可靠性。
+</details>
 
 ---
 ---
@@ -87,19 +94,23 @@ LLM 并不完美。实际上，它们相当糟糕。为了省钱，我没用 LLM
 
 翻译内容完成后，可以借助项目内置的 Docker 化工具链把整本书打包为 HTML、EPUB 与 PDF。整个流程不会在宿主机上安装 DocBook/FOP，只需要 Docker。
 
+这个仓库中的 GitHub action 使用 docker 工具链构建书籍并更新 GitHub page。
+
 如果你更希望直接使用本机已经安装好的 DocBook/FOP 工具链，也可以运行新的 `scripts/build-book-local.sh`，完全跳过 Docker（见下文“本地工具链”）。
 
 <details>
-<summary>
-关于帮 AI 配环境
-</summary>
+<summary>关于帮 AI 配环境</summary>
+
 如果你使用的远程 AI 恰好不能用 docker，恰好使用 debian/ubuntu 系的虚拟机，可以使用下面这个简单命令一键帮他配环境。
+
 ```sh
 sudo apt-get update && sudo apt-get install -y make subversion xsltproc docbook-xsl docbook-xsl-ns fop default-jre-headless zip python3 libxml2-utils
 ```
-<details>
 
-### 快速开始
+</details>
+
+<details>
+<summary>快速开始</summary>
 
 1. 确保本机已安装并启动 Docker Desktop（或其他兼容的 Docker 守护进程）。
 2. 在仓库根目录执行：
@@ -157,6 +168,8 @@ sudo apt-get update && sudo apt-get install -y make subversion xsltproc docbook-
 - 多种纸张规格的 PDF：`producingoss-*.pdf`
 
 如需发布到网站，可直接将 `html-chunk/` 与 `producingoss.html` 上传到静态站或 GitHub Pages。
+
+</details>
 
 ## 一些相关的 prompt
 
