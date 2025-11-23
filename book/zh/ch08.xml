@@ -22,7 +22,7 @@
 <sect1 id="community-and-motivation">
 <title>社区与动机</title>
 
-<para>人们为什么要参与自由软件项目？<footnote><para>Karim Lakhani 和 Robert G. Wolf 在一篇题为《黑客为何如此行事：理解自由/开源软件项目的动机与努力》（<emphasis>Why Hackers Do What They Do: Understanding Motivation and Effort in Free/Open Source Software Projects</emphasis>）的论文中对此问题进行了详细研究，并得出了有趣的结论。请见 <ulink url="http://flosshub.org/node/53">http://flosshub.org/node/53</ulink>。</para></footnote> 当然，在某些情况下，答案是“这是他们的工作”——他们的经理要求他们这么做。但即便如此，大多数参与者或多或少都有超越简单管理要求的内在动机。正如每位经理都了解的，当人们有自己的成功动机时，他们会比仅仅为了薪水而工作时要成功得多。大多数开源开发者——我甚至敢说他们中的绝大多数——并不仅仅是为了薪水。这背后还有更多的东西。</para>
+<para>人们为什么要参与自由软件项目？<footnote><para>Karim Lakhani 和 Robert G. Wolf 在一篇题为《黑客为何如此行事：理解自由/开源软件项目的动机与努力》（<citetitle>Why Hackers Do What They Do: Understanding Motivation and Effort in Free/Open Source Software Projects</citetitle>）的论文中对此问题进行了详细研究，并得出了有趣的结论。请见 <ulink url="http://flosshub.org/node/53">http://flosshub.org/node/53</ulink>。</para></footnote> 当然，在某些情况下，答案是“这是他们的工作”——他们的经理要求他们这么做。但即便如此，大多数参与者或多或少都有超越简单管理要求的内在动机。正如每位经理都了解的，当人们有自己的成功动机时，他们会比仅仅为了薪水而工作时要成功得多。大多数开源开发者——我甚至敢说他们中的绝大多数——并不仅仅是为了薪水。这背后还有更多的东西。</para>
 
 <para>当被问及时，许多人声称他们参与是因为想创造出优秀的软件，或者希望亲自修复那些对他们而言重要的问题。但这些理由通常并非全部。毕竟，你能想象一个参与者，即使从没有人对她的工作表示过一句赞赏，或在讨论中倾听她的意见，她还会继续留在项目里吗？当然不能。显然，人们花时间在自由软件上，其原因不仅仅是出于创造优秀代码的抽象愿望。理解人们的真实动机会帮助你更好地安排事务，以吸引并留住他们。创造优秀软件的愿望可能是这些动机之一，解决难题带来的挑战和教育价值亦然。但人类天生渴望与他人合作，并通过合作活动给予并赢得尊重。从事合作活动的团体必须演化出行为规范，使得地位是通过有助于实现团体目标的行动来获得和维持的。</para>
 
