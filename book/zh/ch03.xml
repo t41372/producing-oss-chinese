@@ -4,9 +4,9 @@
 
 <simplesect>
 
-<para>自由软件项目依赖于<firstterm>协作技术</firstterm>：支持选择性捕获和整合人们对共享项目以数字方式表达的意图的工具。你越善于使用这些工具，越善于说服他人使用它们，你的项目就会越成功。</para>
+<para>自由软件项目依赖于<firstterm>协作技术</firstterm>：这些工具能够帮助我们将人们针对共享项目的各种想法和意图，以数字化的形式进行有选择的捕获与整合。你越善于使用这些工具，越善于说服他人使用它们，你的项目就会越成功。</para>
 
-<para>随着项目的增长，这一点变得更加真实。聪明的信息管理正是防止开源项目在 Brooks 定律<footnote><para>出自他的著作《人月神话》（<citetitle>The Mythical Man
+<para>随着项目的增长，这一点变得更加真实。明智的信息管理，正是防止开源项目在布鲁克斯定律（Brooks' Law）<footnote><para>出自他的著作《人月神话》（<citetitle>The Mythical Man
 Month</citetitle>），1975 年。参见 <ulink
 url="https://en.wikipedia.org/wiki/The_Mythical_Man-Month"
 >https://en.wikipedia.org/wiki/The_Mythical_Man-Month</ulink>、<ulink
@@ -15,11 +15,11 @@ url="https://en.wikipedia.org/wiki/Brooks_Law"
 <ulink url="https://en.wikipedia.org/wiki/Fred_Brooks"
 >https://en.wikipedia.org/wiki/Fred_Brooks</ulink>。</para></footnote>的重压下崩溃的关键，该定律指出，向一个延期的软件项目增加更多人手会让它更加延期。Fred Brooks 观察到，项目中沟通的复杂度会随着参与者数量的<emphasis>平方</emphasis>而增长。当只有几个人参与时，每个人都能轻松地和其他人交流，但当有数百人参与时，每个人就不可能时刻了解其他人在做什么了。如果良好的自由软件项目管理是让每个人都感觉像是在同一个房间里一起工作，那么显而易见的问题是：当一个拥挤房间里的所有人试图同时说话时会发生什么？</para>
 
-<para>这个问题并不新鲜。在现实世界的拥挤房间里，解决方案是<firstterm>议事规则</firstterm>（parliamentary procedure）：关于如何在大型团体中进行实时讨论、如何确保重要的不同意见不会淹没在大量"我也是"式评论的洪流中、如何组建小组委员会、如何识别和记录决策何时做出等的正式指南。议事规则的一个重要部分是明确团队如何与其信息管理系统交互。有些言论是"正式记录在案"的，有些则不是。记录本身可以被直接修改，并且被理解为不是对所发生事情的逐字转录，而是团队愿意<emphasis>同意</emphasis>发生了什么的一种表述。记录并非单一的；它针对不同目的采取不同形式。它包括个别会议的会议记录、所有会议记录的完整集合、摘要、议程及其注释、委员会报告、未到场的通讯员的报告、行动项列表等。</para>
+<para>这个问题并不新鲜。在现实世界的拥挤房间里，解决方案是<firstterm>议事规则（Parliamentary Procedure）</firstterm>：关于如何在大型团体中进行实时讨论、如何确保重要的不同意见不会淹没在大量"我也是"式评论的洪流中、如何组建小组委员会、如何识别和记录决策何时做出等的正式指南。议事规则的一个重要部分是明确团队如何与其信息管理系统交互。有些言论是"正式记录在案"的，有些则不是。记录本身是可以直接修改的。大家也都理解，它并非对所发生之事的逐字转录，而是团队所<emphasis>认可</emphasis>的关于发生了什么的表述。记录并非单一的；它针对不同目的采取不同形式。它包括个别会议的会议记录、所有会议记录的完整集合、摘要、议程及其注释、委员会报告、未到场的通讯员的报告、行动项列表等。</para>
 
-<para>因为互联网并非真正的房间，我们可以省去议事规则中那些在别人说话时让某些人保持安静的部分。但说到信息管理技术，运营良好的开源项目简直就是加强版的议事规则。由于开源项目中几乎所有沟通都以书面形式进行，已经演化出了精细的系统，用于恰当地路由和标记数据、尽量减少重复以避免虚假分歧、存储和检索数据、纠正错误或过时的信息，以及在观察到新连接时将零散的信息关联起来。</para>
+<para>互联网并非真正的房间，因此我们可以省去议事规则中那些在别人说话时让某些人保持安静的部分。但在信息管理技术方面，运营良好的开源项目简直就是加强版的议事规则。由于开源项目中几乎所有沟通都以书面形式进行，已经演化出了精细的系统，用于恰当地分发和标记数据、尽量减少重复以避免虚假分歧、存储和检索数据、纠正错误或过时的信息，以及在观察到新连接时将零散的信息关联起来。</para>
 
-<para>开源项目的活跃参与者会内化这些技术中的许多，并且经常执行复杂的手动任务以确保信息被正确路由。但整个工作最终依赖于复杂的软件支持。应尽可能让沟通媒介本身完成路由、标记和记录，并以最便捷的方式向人类提供信息。当然，在实践中，人类仍然需要在过程中的许多点进行干预，软件也要让这种干预变得便捷。但总的来说，如果人类在信息首次进入系统时就小心地对其进行标记和路由，那么软件应该配置为尽可能多地利用这些元数据。</para>
+<para>开源项目的活跃参与者会内化这些技术中的许多，并且经常执行复杂的手动任务以确保信息被正确分发。但整个工作最终依赖于完善的软件支持。此外，本章的核心在于如何设置项目通信软件，尽可能地替人分担工作，即应尽可能让沟通媒介本身完成分发、标记和记录，并以最便捷的方式向人类提供信息。当然，在实践中，人类仍然需要在过程中的许多点进行干预，软件也要让这种干预变得便捷。但总的来说，如果人类在信息首次进入系统时就小心地对其进行标记和分发，那么软件应该配置为尽可能多地利用这些元数据。</para>
 
 <para>本章的建议极具实践性，基于特定软件和使用模式的经验。但重点不仅仅是教授一系列特定技术，还通过许多小例子来展示最能促进项目中良好信息管理的整体态度。推广这种态度需要技术技能和人际技能的结合。技术技能至关重要，因为信息管理软件总是需要配置，加上随着新需求的出现需要进行一定程度的持续维护和调整（例如，参见 <xref linkend="bug-filtering"/> 中关于如何处理项目增长的讨论）。人际技能也是必需的，因为人类社区也需要维护：如何充分利用这些工具并不总是一目了然，而且在某些情况下项目会有相互冲突的惯例（例如，参见 <xref linkend="message-forums"/> 中关于在发出的邮件列表帖子上设置 <systemitem>Reply-to</systemitem> 标头的讨论）。项目中的每个人都需要在合适的时间以合适的方式被鼓励，尽自己的一份力来保持项目信息井然有序。贡献者越感兴趣，他们就越愿意学习更复杂和专业的技术。</para>
 
@@ -53,7 +53,7 @@ url="https://en.wikipedia.org/wiki/Brooks_Law"
 
    <varlistentry><term>版本控制</term>
      <listitem>
-       <para>使开发者能够方便地管理代码变更，包括回退和"变更移植"。使每个人都能看到代码发生了什么。参见 <xref linkend="vc"/>。</para>
+       <para>使开发者能够方便地管理代码变更，包括回退和"变更移植（Change Porting）"。使每个人都能看到代码发生了什么。参见 <xref linkend="vc"/>。</para>
      </listitem>
    </varlistentry>
 
@@ -73,7 +73,7 @@ url="https://en.wikipedia.org/wiki/Brooks_Law"
 
 <para>这套工具中的每个工具都解决了一个独特的需求，但它们的功能也相互关联，必须让这些工具协同工作。下面我们将研究它们如何协同工作，更重要的是，如何让人们使用它们。</para>
 
-<para>通过使用<firstterm>打包托管</firstterm>（canned hosting）站点，你可能能够避免选择和配置许多这些工具的大量麻烦：一种在线服务，提供预打包的、模板化的 Web 服务，包含运行自由软件项目所需的部分或全部协作工具。关于打包托管的优缺点的讨论，参见 <xref linkend="canned-hosting"/>。</para>
+<para>通过使用<firstterm>集成式托管</firstterm>（Canned Hosting）站点，你可能能够避免选择和配置许多这些工具的大量麻烦：一种在线服务，提供预打包的、模板化的 Web 服务，包含运行自由软件项目所需的部分或全部协作工具。关于集成式托管的优缺点的讨论，参见 <xref linkend="canned-hosting"/>。</para>
 
 </sect1>
 
@@ -97,29 +97,29 @@ url="https://wiki.documentfoundation.org/Development"
 
 <para>这种分成两个面向贡献者的入口——一个面向所有类型的贡献，另一个专门面向编码者——对于像 LibreOffice 这样的大型多面项目来说可能是正确的。你需要判断这种细分是否适合你的项目；至少在开始时，可能不适合。最好从一个统一的贡献者入口开始，面向你期望的所有类型的贡献者，如果该页面变得足够大或足够复杂以至于感到笨重——请仔细倾听关于它的抱怨，因为你和其他长期参与者会自然地对介绍页面中的弱点脱敏！——那么你可以按照最合适的方式进行分割。</para>
 
-<para>从技术角度来看，关于设置项目网站没有太多可说的。Web 托管很容易获得，关于布局和安排的大多数重要事项在上一章已经涵盖。网站的主要功能是展示项目的清晰和友好的概述，并将各种协作工具（版本控制系统、bug tracker 等）整合在一起。为了节省时间和精力，许多项目只使用下面描述的打包托管服务之一。</para>
+<para>从技术角度来看，关于设置项目网站没有太多可说的。Web 托管很容易获得，关于布局和安排的大多数重要事项在上一章已经涵盖。网站的主要功能是展示项目的清晰和友好的概述，并将各种协作工具（版本控制系统、bug tracker 等）整合在一起。为了节省时间和精力，许多项目只使用下面描述的集成式托管服务之一。</para>
 
 <sect2 id="canned-hosting">
-<title>打包托管</title>
+<title>集成式托管</title>
 
-<para><firstterm>打包托管</firstterm>（canned hosting）站点是一种在线服务，提供运行自由软件项目所需的部分或全部在线协作工具。打包托管站点至少提供公共版本控制 repository 和 bug tracking；大多数还提供 wiki 空间，许多提供邮件列表托管<footnote><para>请注意，即使打包托管站点不提供独立的消息论坛功能，它通常也会提供附加到其 bug tracker 和版本控制系统的丰富通知和订阅/关注功能，使参与者可以有效地围绕特定 bug 或变更进行消息论坛风格的讨论。虽然这些功能非常有用，但它们不是 <xref linkend="message-forums"/> 中描述的一流消息论坛的完全替代品。</para></footnote>，有些还提供持续集成测试<footnote><para>参见 <ulink
+<para><firstterm>集成式托管</firstterm>（Canned Hosting）站点是一种在线服务，提供运行自由软件项目所需的部分或全部在线协作工具。集成式托管站点至少提供公共版本控制 repository 和 bug tracking；大多数还提供 wiki 空间，许多提供邮件列表托管<footnote><para>请注意，即使托管平台不提供独立的消息论坛功能，它通常也会提供附加到其 bug tracker 和版本控制系统的丰富通知和订阅/关注功能，使参与者可以有效地围绕特定 bug 或变更进行消息论坛风格的讨论。虽然这些功能非常有用，但它们不是 <xref linkend="message-forums"/> 中描述的一流消息论坛的完全替代品。</para></footnote>，有些还提供持续集成测试<footnote><para>参见 <ulink
 url="automated-testing" >automated-testing</ulink>。</para></footnote>和其他服务<footnote><para>请注意，对于成功的自由软件项目，感兴趣的商业实体最终通常会出资资助其中许多服务；有关此问题的进一步讨论，请参见 <xref
-linkend="fund-servers"/>。</para></footnote>。对于许多项目，打包托管提供了一个完全足够的面向开发者的项目入口点，无需设置单独的网站。</para>
+linkend="fund-servers"/>。</para></footnote>。对于许多项目，集成式托管提供了一个完全足够的面向开发者的项目入口点，无需设置单独的网站。</para>
 
-<para>使用打包站点有两个主要优势。第一个是服务器维护：正常运行时间监控、操作系统升级等。让别人处理这些是少一件需要担心的事。第二个优势是简单性。他们已经选择了 bug tracker、版本控制系统、可能还有讨论论坛软件，以及你运行项目所需的其他一切。他们已经配置了工具，在适当的地方安排了单点登录认证，负责备份存储在工具中的所有数据等。你不需要做很多决定。你所要做的就是填写一份注册表格，按一个按钮，突然你就有了一个项目开发网站。</para>
+<para>使用托管平台有两个主要优势。第一个是服务器维护：正常运行时间监控、操作系统升级等。让别人处理这些是少一件需要担心的事。第二个优势是简单性。他们已经选择了 bug tracker、版本控制系统、可能还有讨论论坛软件，以及你运行项目所需的其他一切。他们已经配置了工具，在适当的地方安排了单点登录认证，负责备份存储在工具中的所有数据等。你不需要做很多决定。你所要做的就是填写一份注册表格，按一个按钮，突然你就有了一个项目开发网站。</para>
 
-<para>这些都是相当显著的好处。当然，缺点是你必须接受<emphasis>他们的</emphasis>选择和配置，即使某些不同的东西对你的项目会更好。通常打包站点可以在某些狭窄的参数范围内进行调整，但你永远无法获得如果自己设置站点并拥有完整服务器管理访问权限时所拥有的细粒度控制。</para>
+<para>这些都是相当显著的好处。当然，缺点是你必须接受<emphasis>他们的</emphasis>选择和配置，即使某些不同的东西对你的项目会更好。通常托管平台可以在某些狭窄的参数范围内进行调整，但你永远无法获得如果自己设置站点并拥有完整服务器管理访问权限时所拥有的细粒度控制。</para>
 
 <para>一个很好的例子是生成文件的处理。某些项目网页可能是生成文件——例如，有些系统可以将 FAQ 数据保存为易于编辑的主格式，然后从中生成 HTML、PDF 和其他展示格式。如 <xref linkend="version-everything"/> 中所述，你不会想对生成的格式进行版本控制，只需对主文件进行版本控制。但当你的网站托管在别人的服务器上时，可能很难设置自定义 hook 来在主文件更改时重新生成在线的 HTML 版本 FAQ。</para>
 
-<para>如果你选择了打包站点，试着通过使用自定义域名作为项目的开发主页地址，为以后切换到不同站点留出选项。你可以将该 URL 转发到打包站点，或者在主 URL 上拥有一个完全自定义的开发主页，并链接到打包站点以获取特定功能。只要设法安排好，这样如果你以后决定使用不同的托管解决方案，项目的主地址就不需要更改。</para>
+<para>如果你选择了托管平台，试着通过使用自定义域名作为项目的开发主页地址，为以后切换到不同站点留出选项。你可以将该 URL 转发到托管平台，或者在主 URL 上拥有一个完全自定义的开发主页，并链接到托管平台以获取特定功能。只要设法安排好，这样如果你以后决定使用不同的托管解决方案，项目的主地址就不需要更改。</para>
 
-<para>如果你不确定是否使用打包托管，那么你可能应该使用打包托管。这些站点以无数种方式集成了它们的服务（仅举一例：如果 commit 以某种格式提及了 bug ticket 编号，那么稍后浏览该 commit 的人会发现它自动链接到该 ticket），这些方式对你来说复现起来很费劲，特别是如果这是你第一次运行开源项目的话。协作工具的可能配置空间是广阔而复杂的，但运行开源项目的每个人都面临着同样的选择集，现在已经有了一些成熟的解决方案。每个打包托管站点都实现了该解决方案空间的一个合理子集，除非你有理由相信你能做得更好，否则你的项目可能通过使用其中一个站点运行得最好。</para>
+<para>如果你不确定是否使用集成式托管，那么你可能应该使用它。这些站点以无数种方式集成了它们的服务（仅举一例：如果 commit 以某种格式提及了 bug ticket 编号，那么稍后浏览该 commit 的人会发现它自动链接到该 ticket），要靠你自己去复现这些集成方式会非常费劲，特别是当你初次运行开源项目时。协作工具的可能配置空间是广阔而复杂的，但运行开源项目的每个人都面临着同样的选择集，现在已经有了一些成熟的解决方案。每个托管平台都实现了该解决方案空间的一个合理子集，除非你有理由相信你能做得更好，否则你的项目可能通过使用其中一个站点运行得最好。</para>
 
 <sect3 id="canned-hosting-choosing">
-<title>选择打包托管站点</title>
+<title>选择集成式托管站点</title>
 
-<para>现在有太多站点为以开源许可证发布的项目提供免费的打包托管，这里没有空间逐一评述。</para>
+<para>现在有太多站点为以开源许可证发布的项目提供免费的集成式托管，这里没有空间逐一评述。</para>
 
 <para>所以我让这件事变得简单：</para>
 
@@ -135,9 +135,9 @@ url="https://en.wikipedia.org/wiki/Comparison_of_open_source_software_hosting_fa
 <sect3 id="hosting-on-freedom">
 <title>在完全开源基础设施上托管</title>
 
-<para>尽管所有打包托管站点都在其技术栈中使用了大量自由软件，但它们中的大多数也编写了一些专有代码来将所有东西粘合在一起。在这些情况下，托管环境本身并非完全开源，因此不能被他人轻易复现。例如，虽然 Git 本身是自由软件，但 GitHub 是一个部分运行专有软件的托管服务——如果你离开 GitHub，你无法带走他们基础设施的副本，至少不是全部。</para>
+<para>尽管所有托管平台都在其技术栈中使用了大量自由软件，但它们中的大多数也编写了一些专有代码来将所有东西粘合在一起。在这些情况下，托管环境本身并非完全开源，因此不能被他人轻易复现。例如，虽然 Git 本身是自由软件，但 GitHub 是一个部分运行专有软件的托管服务——如果你离开 GitHub，你无法带走他们基础设施的副本，至少不是全部。</para>
 
-<para>一些项目更喜欢运行完全自由软件基础设施的打包托管站点。这可能是为了保持和表明他们对软件自由的承诺，在某些情况下也可能是出于直接的实用考虑——例如，担心被取消平台的政治敏感项目希望知道，如果有必要，他们可以独立地复现项目的托管。</para>
+<para>一些项目更喜欢运行完全自由软件基础设施的托管平台。这可能是为了保持和表明他们对软件自由的承诺，在某些情况下也可能是出于直接的实用考虑——例如，担心被平台封杀的政治敏感项目希望知道，如果有必要，他们可以独立地复现项目的托管。</para>
 
 <para>幸运的是，有一些地方可以获得完全自由软件的商业托管。我将在下面列出几个例子（截至 2020 年初），尽管并不完整。</para>
 
@@ -187,16 +187,16 @@ url="https://en.wikipedia.org/wiki/Comparison_of_open_source_software_hosting_fa
 
 <para>无论托管平台本身是否是自由软件，能够以可自动化的方式与项目数据交互，以及有办法将数据导出托管平台，这都是至关重要的。满足这些标准的站点永远不会真正锁住你，甚至会通过其编程接口在某种程度上可扩展。</para>
 
-<para>当然，以上所有内容仅适用于托管站点的服务器。你的项目本身绝不应该要求参与者在他们自己的机器上运行专有软件。<footnote><para>这个规则的例外是从托管站点接收并在用户浏览器的一个标签页中受限或"沙箱化"运行的专有 Javascript 代码。这种代码在概念上是服务器的扩展，还是应该被视为在客户端机器上运行（尽管在某些意义上它对服务器资源的访问权限多于对客户端资源的访问权限），这是一个深入且持续的辩论。我们不会在这里解决它，但这个问题至少比仅仅是哪个 CPU 在执行指令更复杂。</para></footnote></para>
+<para>当然，以上所有内容仅适用于托管站点的服务器。你的项目本身绝不应该要求参与者在他们自己的机器上运行专有软件。<footnote><para>唯一的例外是从托管站点接收并在用户浏览器的一个标签页中受限或"沙箱化"运行的专有 Javascript 代码。这种代码在概念上是服务器的扩展，还是应该被视为在客户端机器上运行（尽管在某些意义上它对服务器资源的访问权限多于对客户端资源的访问权限），这是一个深入且持续的辩论。我们不会在这里解决它，但这个问题至少比仅仅是哪个 CPU 在执行指令更复杂。</para></footnote></para>
 
 </sect3>
 
 <sect3 id="anonymity">
 <title>匿名性与参与度</title>
 
-<para>一个不严格限于打包站点但最常在那里发现的问题是，过度要求用户注册才能参与项目的各个方面。适当的要求程度有点像是判断的问题。一方面，用户注册有助于防止垃圾信息，即使每个 commit 都经过审查，你可能仍然不希望匿名<footnote><para>假名是另一回事。只要一个一致的身份积累了声誉，你可能不需要知道它实际上是谁。</para></footnote>陌生人将更改推送到你的 repository，例如。</para>
+<para>一个不严格限于托管平台但最常在那里发现的问题是，过度要求用户注册才能参与项目的各个方面。适当的要求程度有点像是判断的问题。一方面，用户注册有助于防止垃圾信息，即使每个 commit 都经过审查，你可能仍然不希望匿名<footnote><para>假名是另一回事。只要一个一致的身份积累了声誉，你可能不需要知道它实际上是谁。</para></footnote>陌生人将更改推送到你的 repository，例如。</para>
 
-<para>但有时用户注册最终被要求用于那些应该允许未注册访客执行的任务，特别是在 bug tracker 中提交 ticket 以及对现有 ticket 发表评论的能力。通过要求登录用户名来执行此类操作，项目提高了本应快速、方便的任务的参与门槛。它还改变了谁提交 bug 的人口统计特征，因为那些费心在项目站点设置用户账号的人，即使在愿意提交 bug 的用户中也很难说是随机样本（而这些用户本身已经是所有项目用户的有偏子集）。当然，人们希望能够联系到在 ticket tracker 中输入数据的人，但让她可以输入她的电子邮件地址（如果她愿意的话）的字段就足够了。如果一个新用户发现了一个 bug 并想报告它，她只会对在将 bug 输入 tracker 之前必须填写账号创建表单感到恼火。她可能会干脆决定根本不提交 bug。</para>
+<para>但有时用户注册最终被要求用于那些应该允许未注册访客执行的任务，特别是在 bug tracker 中提交 ticket 以及对现有 ticket 发表评论的能力。通过要求登录用户名来执行此类操作，项目提高了本应快速、方便的任务的参与门槛。它还改变了提交 bug 的群体特征（Demographics），因为那些费心在项目站点设置用户账号的人，即使在愿意提交 bug 的用户中也很难说是随机样本（而这些用户本身已经是所有项目用户的有偏子集）。当然，人们希望能够联系到在 ticket tracker 中输入数据的人，但让她可以输入她的电子邮件地址（如果她愿意的话）的字段就足够了。如果一个新用户发现了一个 bug 并想报告它，她只会对在将 bug 输入 tracker 之前必须填写账号创建表单感到恼火。她可能会干脆决定根本不提交 bug。</para>
 
 <para>如果你能够控制哪些操作可以匿名完成，确保至少<emphasis>所有</emphasis>只读操作都允许未登录的访客执行，并且如果可能的话，倾向于将信息从用户带给开发者的数据输入门户（如 bug tracker）也可以匿名使用，尽管当然反垃圾信息技术（如验证码）可能仍然是必要的。</para>
 
@@ -212,11 +212,11 @@ url="https://en.wikipedia.org/wiki/Comparison_of_open_source_software_hosting_fa
 <anchor id="mailing-lists" />
 <title>消息论坛 / 邮件列表</title>
 
-<para>并非所有项目都需要使用讨论论坛软件。对于围绕单个代码 repository 组织的相对较小、专注的项目，bug tracker 的邮件网关功能（如本章后面 <xref linkend="bug-tracker"/> 中讨论的）可能足以维持大多数对话。当需要讨论非技术主题时，有人可以创建一个 issue ticket——本质上是一个虚假的 bug 报告——用于该主题并在那里进行讨论。所以如果你认为你的项目没有论坛也能很好地运作，你可以跳过本节并尝试一下。如果你确实需要它们，很快就会变得明显。</para>
+<para>并非所有项目都需要使用讨论论坛软件。对于围绕单个代码 repository 组织的相对较小、专注的项目，bug tracker 的邮件网关功能（如本章后面 <xref linkend="bug-tracker"/> 中讨论的）可能足以维持大多数对话。当需要讨论非技术主题时，有人可以创建一个 issue ticket——本质上是一个虚拟的 bug 报告——用于该主题并在那里进行讨论。所以如果你认为你的项目没有论坛也能很好地运作，你可以跳过本节并尝试一下。如果你确实需要它们，很快就会变得明显。</para>
 
 <para>然而，更大、更复杂的项目几乎总是会从拥有专门的讨论论坛中受益。这部分是因为会有许多不附加到特定 bug 的对话，部分是因为项目越大，将 bug tracker 专注于实际 bug 并为其他类型的讨论提供单独的地方就越重要。</para>
 
-<para>很长一段时间以来，讨论论坛主要是邮件列表，但谢天谢地，邮件列表和基于 Web 的论坛之间的区别正在慢慢消失。像 Google Groups（<ulink
+<para>很长一段时间以来，讨论论坛主要是邮件列表（Mailing List），但谢天谢地，邮件列表和基于 Web 的论坛之间的区别正在慢慢消失。像 Google Groups（<ulink
 url="https://groups.google.com/" >https://groups.google.com/</ulink>）这样的服务（它本身不是开源的）和 Discourse（<ulink url="http://www.discourse.org/"
 >http://www.discourse.org/</ulink>）（它是开源的）已经确立了消息论坛作为邮件列表的交叉可访问性（反之亦然）是要达到的最低标准，现代讨论管理系统反映了这一点。
 <!-- I used to list GMane here, but its status was a little fuzzy as
@@ -233,7 +233,7 @@ url="http://www.rants.org/2008/03/06/thread_theory/"
 
 <blockquote>
   <para>
-    邮件列表是 Scanley 社区的主要日常沟通渠道。你不必订阅就可以向列表发帖，但如果这是你第一次发帖（无论你是否订阅），你的消息可能会被保留在审核队列中，直到人工审核员有机会确认该消息不是垃圾信息。我们对此延迟感到抱歉；要怪就怪那些使这成为必要的垃圾信息发送者吧。
+    邮件列表是 Scanley 社区的主要日常沟通渠道。你不必订阅就可以向列表发帖，但如果这是你第一次发帖（无论你是否订阅），你的消息可能会被保留在审核队列中，直到人工审核员有机会确认该消息不是垃圾信息。我们对此延迟感到抱歉；要怪只能怪那些逼得我们不得不这么做的垃圾邮件发送者。
   </para>
 
   <para>
@@ -334,7 +334,7 @@ linkend="message-forum-software"/> 中）至少提供以下功能：</para>
 <sect3 id="spam-prevention">
 <title>垃圾信息预防</title>
 
-<para>一个完全不采取垃圾信息预防措施的邮件列表将很快被垃圾邮件淹没，以至于无法使用。垃圾信息预防是强制性的。它实际上是两个不同的功能：防止垃圾信息帖子出现在你的邮件列表上，以及防止你的邮件列表成为垃圾信息发送者的爬虫程序的新电子邮件地址来源。</para>
+<para>一个完全不采取垃圾信息预防措施的邮件列表将很快被垃圾邮件淹没，以至于无法使用。垃圾信息预防是强制性的。它实际上是两个不同的功能：防止垃圾信息帖子出现在你的邮件列表上，以及防止你的邮件列表成为垃圾信息发送者的邮件采集机器人的新电子邮件地址来源。</para>
 
 <sect4 id="spam-filtering">
 <title>过滤帖子</title>
@@ -450,9 +450,9 @@ url="http://www.nisto.com/listspec/list-manager-intro.html"
 <sect3 id="reply-to">
 <title>伟大的 Reply-to 辩论</title>
 
-<para>早些时候，在 <xref linkend="avoid-private-discussions"/> 中，我强调了确保讨论留在公共论坛的重要性，并谈到了有时需要采取积极措施来防止对话转向私人电子邮件讨论；此外，本章都是关于设置项目通信软件以尽可能多地为人们完成工作。因此，如果邮件列表管理软件提供了一种自动使讨论留在列表上的方法，你会认为打开该功能将是显而易见的选择。</para>
+<para>早些时候，在 <xref linkend="avoid-private-discussions"/> 中，我强调了确保讨论留在公共论坛的重要性，并谈到了有时需要采取积极措施来防止对话转向私人电子邮件讨论；此外，本章的核心在于如何设置项目通信软件，尽可能地替人分担工作。因此，如果邮件列表管理软件提供了一种自动使讨论留在列表上的方法，你会觉得开启该功能是顺理成章的选择。</para>
 
-<para>好吧，并非完全如此。确实有这样一个功能，但它有一些相当严重的缺点。是否使用它的问题是邮件列表管理中最热门的辩论之一——诚然，这不是一个可能会登上你所在城市晚间新闻的争议，但它会在自由软件项目中不时爆发。下面，我将描述该功能，给出双方的主要论点，并提出我能提出的最佳建议。</para>
+<para>好吧，并非完全如此。确实有这样一个功能，但它有一些相当严重的缺点。关于是否应该使用该功能，是邮件列表管理中最热门的争论之一——诚然，这不是一个可能会登上你所在城市晚间新闻的争议，但它会在自由软件项目中不时爆发。下面，我将描述该功能，给出双方的主要论点，并提出我能提出的最佳建议。</para>
 
 <para>该功能本身非常简单：如果你愿意，邮件列表软件可以自动设置每个帖子的 Reply-to 标头以将回复重定向到邮件列表。也就是说，无论原始发件人在 Reply-to 标头中放入什么（或者即使他们根本不包含一个），当列表订阅者看到帖子时，标头将包含列表地址：</para>
 
@@ -462,16 +462,16 @@ Reply-to: discuss@lists.example.org
 
 <para>从表面上看，这似乎是一件好事。因为几乎所有邮件阅读软件都关注 Reply-to 标头，现在当任何人回复帖子时，他们的回复将自动发送到整个列表，而不仅仅是发送到被回复消息的发件人。当然，响应者仍然可以手动更改消息去向，但重要的是<emphasis>默认情况下</emphasis>回复被定向到列表。这是使用技术鼓励协作的完美例子。</para>
 
-<para>不幸的是，有一些缺点。第一个被称为<firstterm>"找不到回家的路"</firstterm>问题：有时原始发件人会将他们的"真实"电子邮件地址放在 Reply-to 字段中，因为由于某种原因，他们从不同于他们接收邮件的地址发送电子邮件。始终从同一位置读取和发送的人没有这个问题，并且可能会对它的存在感到惊讶。但对于那些电子邮件配置不寻常的人，或者无法控制他们的邮件上的 From 地址看起来如何的人（也许是因为他们从工作场所发送并且对 IT 部门没有任何影响），使用 Reply-to 可能是他们确保响应到达他们的唯一方法。当这样的人发帖到她没有订阅的邮件列表时，她设置的 Reply-to 就成了必要信息。如果列表软件覆盖它，<footnote><para>理论上，列表软件可以将列表的地址<emphasis>添加</emphasis>到已经存在的任何 Reply-to 目的地（如果有的话），而不是覆盖。实际上，出于我不知道的原因，大多数列表软件覆盖而不是附加。</para></footnote>她可能永远看不到对她帖子的响应。</para>
+<para>不幸的是，有一些缺点。第一个被称为<firstterm>"找不到回家的路"</firstterm>问题：有时原始发件人会将他们的"真实"电子邮件地址放在 Reply-to 字段中，因为出于某种原因，他们的发件地址和收信地址并不一致。始终从同一位置读取和发送的人没有这个问题，并且可能会对它的存在感到惊讶。但对于那些电子邮件配置不寻常的人，或者无法控制他们的邮件上的 From 地址看起来如何的人（也许是因为他们从工作场所发送并且对 IT 部门没有任何影响），使用 Reply-to 可能是他们确保响应到达他们的唯一方法。当这样的人发帖到她没有订阅的邮件列表时，她设置的 Reply-to 就成了必要信息。如果列表软件覆盖它，<footnote><para>理论上，列表软件可以将列表的地址<emphasis>添加</emphasis>到已经存在的任何 Reply-to 目的地（如果有的话），而不是覆盖。实际上，出于我不知道的原因，大多数列表软件覆盖而不是附加。</para></footnote>她可能永远看不到对她帖子的响应。</para>
 
-<para>第二个缺点与期望有关，在我看来，这是反对 Reply-to 破坏的最有力论据。大多数有经验的邮件用户习惯于两种基本的回复方法：<firstterm>回复全部</firstterm>和<firstterm>回复作者</firstterm>。所有现代邮件阅读软件都有针对这两个操作的单独按键。用户知道要回复所有人（即包括列表），他们应该选择回复全部，要私下回复作者，他们应该选择回复作者。虽然你希望鼓励人们尽可能回复列表，但肯定有些情况下私人回复是响应者的特权——例如，他们可能想对原始消息的作者说一些机密的话，一些在公共列表上不合适的话。</para>
+<para>第二个缺点与期望有关，在我看来，这是反对 Reply-to 改写的最有力论据。大多数有经验的邮件用户习惯于两种基本的回复方法：<firstterm>回复全部</firstterm>和<firstterm>回复作者</firstterm>。所有现代邮件阅读软件都有针对这两个操作的单独按键。用户知道要回复所有人（即包括列表），他们应该选择回复全部，要私下回复作者，他们应该选择回复作者。虽然你希望鼓励人们尽可能回复列表，但肯定有些情况下私人回复是响应者的特权——例如，他们可能想对原始消息的作者说一些机密的话，一些在公共列表上不合适的话。</para>
 
 <para>现在考虑当列表覆盖了原始发件人的 Reply-to 时会发生什么。响应者按下回复作者键，期望向原始作者发送私人消息。因为这是预期的行为，他可能不会费心仔细查看新消息中的收件人地址。他撰写了他的私人、机密消息，其中可能说了关于列表上某人的尴尬事情，然后按下发送键。出乎意料的是，几分钟后他的消息出现<emphasis>在邮件列表上！</emphasis>确实，理论上他应该仔细查看收件人字段，并且不应该对 Reply-to 标头做任何假设。但作者几乎总是将 Reply-to 设置为他们自己的个人地址（或者更确切地说，他们的邮件软件为他们设置），许多长期的电子邮件用户已经开始期待这一点。事实上，当一个人故意将 Reply-to 设置为其他地址（例如列表）时，她通常会在她的消息正文中特别提到这一点，这样人们在回复时就不会对发生的事情感到惊讶。</para>
 
-<para>由于这种意外行为可能产生的严重后果，我自己的偏好是配置列表管理软件永远不要触碰 Reply-to 标头。在我看来，这是一个使用技术鼓励协作可能具有潜在危险副作用的例子。然而，这场辩论的另一方也有一些有力的论据。无论你选择哪种方式，你偶尔会遇到人们在你的列表上发帖询问你为什么不选择另一种方式。由于这不是你希望成为列表上主要讨论主题的事情，因此准备好一个罐装回复可能是个好主意，这种回复更有可能阻止讨论而不是鼓励它。确保你<emphasis>不要</emphasis>坚持认为你的决定（无论是什么）显然是唯一正确和明智的决定（即使你认为是这样）。相反，指出这是一个非常古老的辩论，双方都有很好的论据，没有选择能够满足所有用户，因此你只是做了你能做的最好决定。礼貌地要求除非有人有真正新的东西要说，否则不要重新审视这个主题，然后退出线程并希望它自然死亡。（另见 <xref
+<para>由于这种意外行为可能产生的严重后果，我自己的偏好是配置列表管理软件永远不要触碰 Reply-to 标头。在我看来，这是一个使用技术鼓励协作可能具有潜在危险副作用的例子。然而，这场辩论的另一方也有一些有力的论据。无论你选择哪种方式，你偶尔会遇到人们在你的列表上发帖询问你为什么不选择另一种方式。由于这不是你希望成为列表上主要讨论主题的事情，因此准备好一个预设回复可能是个好主意，这种回复更有可能阻止讨论而不是鼓励它。确保你<emphasis>不要</emphasis>坚持认为你的决定（无论是什么）显然是唯一正确和明智的决定（即使你认为是这样）。相反，指出这是一个非常古老的辩论，双方都有很好的论据，没有选择能够满足所有用户，因此你只是做了你能做的最好决定。礼貌地要求除非有人有真正新的东西要说，否则不要重新审视这个主题，然后退出线程并希望它自然死亡。（另见 <xref
 linkend="holy-wars"/>。）</para>
 
-<para>有人可能会建议投票选择一种或另一种方式。如果你愿意，你可以这样做，但我个人不认为在这种情况下计算人数是一个令人满意的解决方案。对于被这种行为惊讶的人的惩罚是如此巨大（不小心将私人邮件发送到公共列表），而对其他人的不便相当轻微（偶尔不得不提醒某人回复整个列表而不仅仅是回复你），因此不清楚多数人应该能够将少数人置于如此危险之中。</para>
+<para>有人可能会建议投票选择一种或另一种方式。如果你愿意，你可以这样做，但我个人不认为在这种情况下计算人数是一个令人满意的解决方案。对于这种行为感到措手不及的人来说，代价是巨大的（不小心将私人邮件发送到公共列表），而对其他人来说，不便之处则微乎其微（偶尔不得不提醒某人回复整个列表而不仅仅是回复你）。因此，让多数人为了这点便利而将少数人置于如此风险之中，显然是不合理的。</para>
 
 <para>我在这里并没有涵盖这个问题的所有方面，只是讲了那些看起来最重要的部分。要了解全面的讨论，请参阅下面这两份经典文档，它们是人们在争论这个话题时总会引用的：
 
@@ -509,7 +509,7 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
 <sidebar id="reply-fantasies">
 <title>两个幻想</title>
 
-<para>有一天，有人会产生一个绝妙的想法，在邮件阅读器中实现一个<firstterm>回复到列表</firstterm>的按键。它会使用前面提到的一些自定义列表标头来找出 mailing list 的地址，然后将回复直接发送到列表，忽略其他所有收件人地址，因为大多数人反正可能已经订阅了列表。最终，其他邮件阅读器也会采用这个功能，这整场辩论就会消失。</para>
+<para>有一天，有人会产生一个绝妙的想法，在邮件阅读器中实现一个<firstterm>回复到列表</firstterm>的按键。它会使用前面提到的一些自定义列表标头来找出邮件列表（mailing list）的地址，然后将回复直接发送到列表，忽略其他所有收件人地址，因为大多数人反正可能已经订阅了列表。最终，其他邮件阅读器也会采用这个功能，这整场辩论就会消失。</para>
 
 <para>（实际上，Mutt (<ulink url="http://www.mutt.org/"
 >http://www.mutt.org/</ulink>) 邮件阅读器确实提供了这个功能。然后在本书第一版发布后不久，Michael Bernstein 写信告诉我："除了 Mutt 之外，还有其他电子邮件客户端实现了回复到列表的功能。例如，Evolution 把这个功能做成了键盘快捷键，但没有做成按钮（Ctrl+L）。"）</para>
@@ -526,7 +526,7 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
 <sect3 id="archiving">
 <title>归档</title>
 
-<para>每个讨论论坛都应该完整归档。新讨论经常会引用旧的讨论，而且人们在互联网上搜索时，常常会偶然发现某个陌生人随意发到 mailing list 的消息，从而找到问题的解决方案。归档还为新用户和正在更深入参与项目的开发者提供了历史和上下文。</para>
+<para>每个讨论论坛都应该完整归档。新讨论经常会引用旧的讨论，而且人们在互联网上搜索时，常常会偶然发现某个陌生人随意发到邮件列表的消息，从而找到问题的解决方案。归档还为新用户和正在更深入参与项目的开发者提供了历史和上下文。</para>
 
 <para>设置归档的技术细节取决于运行论坛的具体软件，超出了本书的范围。如果你需要选择或配置归档工具，请考虑以下这些特性：</para>
 
@@ -534,16 +534,16 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
 
   <varlistentry><term>及时更新</term>
     <listitem>
-      <para>人们经常想要引用最近发布的归档消息。如果可能，归档工具应该即时归档每个帖子，这样当帖子出现在 mailing list 上时，它就已经存在于归档中了。如果这个选项不可用，那么至少尝试将归档工具设置为每小时左右更新一次。（默认情况下，某些归档工具每晚运行一次更新进程，但实际上对于活跃的 mailing list 来说，这个延迟时间太长了。）</para>
+      <para>人们经常想要引用最近发布的归档消息。如果可能，归档工具应该即时归档每个帖子，这样当帖子出现在邮件列表上时，它就已经存在于归档中了。如果这个选项不可用，那么至少尝试将归档工具设置为每小时左右更新一次。（默认情况下，某些归档工具每晚运行一次更新进程，但实际上对于活跃的邮件列表来说，这个延迟时间太长了。）</para>
     </listitem>
   </varlistentry>
 
   <varlistentry><term>引用稳定性</term>
     <listitem>
-      <para>一旦消息被归档到特定的 URL，它就应该永远可以在那个完全相同的 URL 访问。即使归档被重建、从备份恢复或以其他方式修复，任何已经公开的 URL 都应该保持不变。稳定的引用使互联网搜索引擎可以索引归档，这对寻找答案的用户来说是一个巨大的好处。稳定的引用也很重要，因为 mailing list 的帖子和讨论串经常会从其他地方链接过来，比如从 bug tracker（见 <xref
+      <para>一旦消息被归档到特定的 URL，它就应该永远可以在那个完全相同的 URL 访问。即使归档被重建、从备份恢复或以其他方式修复，任何已经公开的 URL 都应该保持不变。稳定的引用使互联网搜索引擎可以索引归档，这对寻找答案的用户来说是一个巨大的好处。稳定的引用也很重要，因为邮件列表的帖子和讨论串经常会从其他地方链接过来，比如从 bug tracker（见 <xref
             linkend="bug-tracker"/>）或其他项目文档。</para>
 
-      <para>理想情况下，mailing list 软件在向收件人分发消息时，应该在标头或页脚中包含消息的归档 URL，或至少包含 URL 中消息特定的部分。这样，拥有消息副本的人就能立即知道它的归档位置，而无需真的访问归档，这会很有帮助，因为任何涉及网页浏览的操作都会自动变得耗时。我不知道是否有任何 mailing list 软件真的提供了这个功能；不幸的是，我用过的那些都没有。但这是一个值得寻找的功能（或者，如果你编写 mailing list 软件，请考虑实现这个功能）。</para>
+      <para>理想情况下，邮件列表软件在向收件人分发消息时，应该在标头或页脚中包含消息的归档 URL，或至少包含 URL 中消息特定的部分。这样，拥有消息副本的人就能立即知道它的归档位置，而无需真的访问归档，这会很有帮助，因为任何涉及网页浏览的操作都会自动变得耗时。我不知道是否有任何邮件列表软件真的提供了这个功能；不幸的是，我用过的那些都没有。但这是一个值得寻找的功能（或者，如果你编写邮件列表软件，请考虑实现这个功能）。</para>
     </listitem>
   </varlistentry>
 
@@ -568,7 +568,7 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
 <sect3 id="message-forum-software">
 <!-- For link compatibility with the old section ID. -->
 <anchor id="mailing-list-software" />
-<title>Mailing List / 消息论坛软件</title>
+<title>邮件列表 / 消息论坛软件</title>
 
 <para>以下是一些用于运行消息论坛的工具。如果你托管项目的网站已经有默认设置，那么你可以直接使用它，避免不得不做选择。但如果你需要自己安装一个，下面是一些可能的选项。（当然，可能还有其他我碰巧没有发现的工具，所以不要把这当作完整列表。）</para>
 
@@ -576,7 +576,7 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
  <listitem>
    <para><emphasis role="bold">Discourse</emphasis>&nbsp;&mdash;&nbsp;<ulink
          url="https://discourse.org/" >https://discourse.org/</ulink></para>
-   <para>Discourse 被打造为 Web 和移动端的唯一真正讨论系统，到目前为止它似乎兑现了它的承诺。它是开源的，支持基于浏览器和基于电子邮件的讨论参与，正在积极开发中，并有商业支持可用。如果你不想自己搭建，可以购买托管的 Discourse。</para>
+   <para>Discourse 致力于打造 Web 和移动端"唯一的终极"讨论系统，到目前为止它似乎兑现了它的承诺。它是开源的，支持基于浏览器和基于电子邮件的讨论参与，正在积极开发中，并有商业支持可用。如果你不想自己搭建，可以购买托管的 Discourse。</para>
  </listitem>
  <listitem>
    <para><emphasis role="bold">Sympa</emphasis>&nbsp;&mdash;&nbsp;<ulink
@@ -586,7 +586,7 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
  <listitem>
    <para><emphasis role="bold">Mailman</emphasis>&nbsp;&mdash;&nbsp;<ulink
          url="http://www.list.org/" >http://www.list.org/</ulink></para>
-   <para>多年来，Mailman 一直是开源项目 mailing list 的标准。它自带归档工具，并有钩子可以插入外部归档工具。Mailman 在消息传递和其他底层功能方面非常可靠，但它的声誉一度受损，因为在其老化的 2.x 代码库中存在各种用户界面问题（特别是垃圾邮件审核和订阅审核），以及期待已久的 3.0 版本发布延迟。</para>
+   <para>多年来，Mailman 一直是开源项目邮件列表的标准。它自带归档工具，并有钩子可以插入外部归档工具。Mailman 在消息传递和其他底层功能方面非常可靠，但它的声誉一度受损，因为在其老化的 2.x 代码库中存在各种用户界面问题（特别是垃圾邮件审核和订阅审核），以及期待已久的 3.0 版本发布延迟。</para>
    <para>然而，Mailman 3.0 现在已经发布了，值得一看。它应该解决了 Mailman 2 的许多问题，可能会让 Mailman 再次成为一个合理的选择。Sumana Harihareswara 的这篇优秀文章描述了主要改进：<ulink url="https://lwn.net/Articles/638090/"
          >https://lwn.net/Articles/638090/</ulink>。</para>
  </listitem>
@@ -604,21 +604,21 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
 
 <!-- ========================== SECTION =========================== -->
 <sect1 id="vc">
-<title>Version Control</title>
+<title>版本控制 (Version Control)</title>
 
-<para><firstterm>Version control 系统</firstterm>（或<firstterm>修订控制系统</firstterm>）是一组技术和实践的组合，用于跟踪和控制项目文件的变更，特别是源代码、文档和网页。如果你以前从未使用过 version control，你应该做的第一件事是找一个用过的人，让他们加入你的项目。如今，每个人都会期待至少你的项目源代码在 version control 之下，如果项目没有至少以最低限度的能力使用 version control，人们可能不会认真对待它。</para>
+<para><firstterm>版本控制系统</firstterm>（Version Control System，或<firstterm>修订控制系统</firstterm>）是一组技术和实践的组合，用于跟踪和控制项目文件的变更，特别是源代码、文档和网页。如果你以前从未使用过版本控制，你应该做的第一件事是找一个用过的人，让他们加入你的项目。如今，每个人都会期待至少你的项目源代码在版本控制之下，如果项目没有至少以最低限度的能力使用版本控制，人们可能不会认真对待它。</para>
 
-<para>Version control 如此普遍的原因是它几乎有助于运行项目的每个方面：开发者之间的沟通、release 管理、bug 管理、代码稳定性和实验性开发工作，以及特定开发者所做变更的归属和授权。Version control 系统在所有这些领域提供了一种中心协调力量。Version control 的核心是<firstterm>变更管理</firstterm>：识别对项目文件所做的每个离散变更，用元数据（如变更日期和作者）标注每个变更，然后以任何被询问的方式向询问者重放这些事实。它是一种通信机制，其中变更是信息的基本单位。</para>
+<para>版本控制如此普遍的原因是它几乎有助于运行项目的每个方面：开发者之间的沟通、release 管理、bug 管理、代码稳定性和实验性开发工作，以及特定开发者所做变更的归属和授权。版本控制系统在所有这些领域提供了一种中心协调力量。版本控制的核心是<firstterm>变更管理</firstterm>：识别对项目文件所做的每个独立的（discrete）变更，用元数据（如变更日期和作者）标注每个变更，然后以任何被询问的方式向询问者重放这些事实。它是一种通信机制，其中变更是信息的基本单位。</para>
 
-<para>本节不会讨论使用 version control 系统的所有方面。它涵盖的范围太广，必须在整本书中逐个主题讨论。在这里，我们将集中讨论如何选择和设置 version control 系统，以促进未来的协作开发。</para>
+<para>本节不会讨论使用版本控制系统的所有方面。它涵盖的范围太广，必须在整本书中逐个主题讨论。在这里，我们将集中讨论如何选择和设置版本控制系统，以促进未来的协作开发。</para>
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="vc-vocabulary">
-<title>Version Control 词汇</title>
+<title>版本控制词汇</title>
 
-<para>如果你以前从未使用过 version control，本书无法教你如何使用它，但如果不了解几个关键术语，就不可能讨论这个主题。这些术语独立于任何特定的 version control 系统都很有用：它们是网络协作的基本名词和动词，将在本书的其余部分通用使用。即使世界上没有 version control 系统，变更管理的问题仍然存在，而这些词语为我们提供了一种简洁讨论该问题的语言。</para>
+<para>如果你以前从未使用过版本控制，本书无法教你如何使用它，但如果不了解几个关键术语，就不可能讨论这个主题。这些术语独立于任何特定的版本控制系统都很有用：它们是网络协作的基本名词和动词，将在本书的其余部分通用使用。即使世界上没有版本控制系统，变更管理的问题仍然存在，而这些词语为我们提供了一种简洁讨论该问题的语言。</para>
 
-<para>如果你已经对 version control 很有经验了，你可能可以跳过本节。如果你不确定，那么至少通读一次本节。某些 version control 术语自 2000 年代初以来逐渐改变了含义，你可能偶尔会发现人们在同一对话中以不兼容的方式使用它们。能够在讨论早期发现这种现象通常会很有帮助。</para>
+<para>如果你已经对版本控制很有经验了，你可能可以跳过本节。如果你不确定，那么至少通读一次本节。某些版本控制术语自 2000 年代初以来逐渐改变了含义，你可能偶尔会发现人们在同一对话中以不兼容的方式使用它们。能够在讨论早期发现这种现象通常会很有帮助。</para>
 
 <variablelist>
 
@@ -686,9 +686,9 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
         <firstterm>change</firstterm>、
         <firstterm>changeset</firstterm>
         或（再次）<emphasis>commit</emphasis></term>
-  <listitem><para>"Revision" 是项目在某个时间点的精确指定的化身，或项目中特定文件或目录在该时间的化身。如今，大多数系统也使用 "revision"、"change"、"changeset" 或 "commit" 来指作为一个概念单元一起 commit 的一组变更，如果涉及多个文件的话，尽管通俗地说，大多数人会将 changeset 12 对文件 F 的影响称为 "F 的 revision 12"。</para>
+  <listitem><para>"Revision" 是项目在某个时间点的精确指定的形态（或快照），或项目中特定文件或目录在该时间的形态。如今，大多数系统也使用 "revision"、"change"、"changeset" 或 "commit" 来指作为一个概念单元一起 commit 的一组变更，如果涉及多个文件的话，尽管通俗地说，大多数人会将 changeset 12 对文件 F 的影响称为 "F 的 revision 12"。</para>
 
-  <para>这些术语在不同的 version control 系统中偶尔有不同的技术含义，但总体思想始终是相同的：它们提供了一种方式来精确地谈论文件或文件集历史中的确切时间点（例如，在 bug 被修复之前和之后）。例如："哦是的，她在 revision 10 中修复了那个" 或 "她在 commit fa458b1fac 中修复了那个"。</para>
+  <para>这些术语在不同的版本控制系统中偶尔有不同的技术含义，但总体思想始终是相同的：它们提供了一种方式来精确地谈论文件或文件集历史中的确切时间点（例如，在 bug 被修复之前和之后）。例如："哦是的，她在 revision 10 中修复了那个" 或 "她在 commit fa458b1fac 中修复了那个"。</para>
 
   <para>当谈论文件或文件集合而不指定特定 revision 时，通常假定是指可用的最新 revision。</para></listitem>
  </varlistentry>
@@ -705,12 +705,12 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
 
  <varlistentry id="vc-vocabulary-tag">
   <term><firstterm>tag</firstterm>&nbsp;<emphasis>或</emphasis>&nbsp;<firstterm>snapshot</firstterm></term>
-  <listitem><para>项目在某个时间点的特定状态的标签。Tag 通常用于标记项目的有趣快照。例如，通常会为每个公开 release 创建一个 tag，这样就可以直接从 version control 系统获取构成该 release 的精确文件/revision 集。Tag 名称通常是像 <literal>Release_2_0</literal>、<literal>Delivery_20211009</literal> 这样的东西。</para></listitem>
+  <listitem><para>项目在某个时间点的特定状态的标签。Tag 通常用于标记项目的有趣快照。例如，通常会为每个公开 release 创建一个 tag，这样就可以直接从版本控制系统获取构成该 release 的精确文件/revision 集。Tag 名称通常是像 <literal>Release_2_0</literal>、<literal>Delivery_20211009</literal> 这样的东西。</para></listitem>
  </varlistentry>
 
  <varlistentry id="vc-vocabulary-branch">
   <term><firstterm>branch</firstterm></term>
-  <listitem><para>项目的副本，在 version control 之下但是被隔离的，因此对 branch 所做的变更不会影响项目的其他 branch，反之亦然，除非变更被故意从一个 branch "merge" 到另一个（见下文）。Branch 也被称为"开发线"。即使项目没有明确的 branch，开发仍被认为是在 "<firstterm>main branch</firstterm>"上进行的，也称为 "<firstterm>main line</firstterm>" 或 "<firstterm>trunk</firstterm>"，有时称为 "<firstterm>master</firstterm>"。</para>
+  <listitem><para>项目的副本，在版本控制之下但是被隔离的，因此对 branch 所做的变更不会影响项目的其他 branch，反之亦然，除非变更被故意从一个 branch "merge" 到另一个（见下文）。Branch 也被称为"开发线"。即使项目没有明确的 branch，开发仍被认为是在 "<firstterm>main branch</firstterm>"上进行的，也称为 "<firstterm>main line</firstterm>" 或 "<firstterm>trunk</firstterm>"，有时称为 "<firstterm>master</firstterm>"。</para>
 
   <para>Branch 是一种防止不同开发线相互干扰的方法。例如，短期 branch 通常用于 bugfix 或小的增强。长期 branch 也可以用于对主线来说过于不稳定的实验性开发。</para>
 
@@ -723,27 +723,27 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
   <term><firstterm>merge</firstterm>&nbsp;<emphasis>或</emphasis>&nbsp;<firstterm>port</firstterm></term>
   <listitem><para>将变更从一个 branch 移动到另一个。这包括从主 branch merge 到其他 branch，或反之。实际上，这些是最常见的 merge 类型；在两个非主 branch 之间 port 变更则不太常见。有关变更 port 的更多信息，请参阅 <xref linkend="vc-singularity"/>。</para>
 
-  <para>"Merge" 有第二个相关的含义：这是一些 version control 系统在看到两个人更改了同一个文件但以不重叠的方式时所做的事情。由于这两个变更不会相互干扰，当其中一个人更新他们的文件副本时（已包含他们自己的未 commit 变更），另一个人的变更将自动 merge 进来。这非常常见，特别是在多人在同一代码上工作的项目中。当两个不同的变更<emphasis>确实</emphasis>重叠时，结果就是"冲突"；见下文。</para>
+  <para>"Merge" 有第二个相关的含义：这是一些版本控制系统在看到两个人更改了同一个文件但以不重叠的方式时所做的事情。由于这两个变更不会相互干扰，当其中一个人更新他们的文件副本时（已包含他们自己的未 commit 变更），另一个人的变更将自动 merge 进来。这非常常见，特别是在多人在同一代码上工作的项目中。当两个不同的变更<emphasis>确实</emphasis>重叠时，结果就是"冲突"；见下文。</para>
   </listitem>
  </varlistentry>
 
  <varlistentry id="vc-vocabulary-conflict">
   <term><firstterm>conflict</firstterm></term>
-  <listitem><para>当两个人试图对代码中的同一位置进行不同变更时发生的情况。所有 version control 系统都会自动检测冲突，并通知至少一个相关的人，他们的变更与其他人的变更冲突。然后由那个人<firstterm>解决</firstterm>冲突，并将该解决方案传达给 version control 系统。</para></listitem>
+  <listitem><para>当两个人试图对代码中的同一位置进行不同变更时发生的情况。所有版本控制系统都会自动检测冲突，并通知至少一个相关的人，他们的变更与其他人的变更冲突。然后由那个人<firstterm>解决</firstterm>冲突，并将该解决方案传达给版本控制系统。</para></listitem>
  </varlistentry>
 
  <varlistentry id="vc-vocabulary-revert">
   <term><firstterm>revert</firstterm>&nbsp;<emphasis>或</emphasis>&nbsp;<firstterm>reversion</firstterm></term>
-  <listitem><para>撤销已经 commit 到软件的变更。撤销本身是一个版本化的事件，通常是通过要求 version control 系统反转所讨论的变更来完成的，而不是手动进行编辑并 commit 它们。</para></listitem>
+  <listitem><para>撤销已经 commit 到软件的变更。撤销本身是一个版本化的事件，通常是通过要求版本控制系统反转所讨论的变更来完成的，而不是手动进行编辑并 commit 它们。</para></listitem>
  </varlistentry>
 
  <varlistentry id="vc-vocabulary-lock">
   <term><firstterm>lock</firstterm></term>
-  <listitem><para>一种声明更改特定文件或目录的独占意图的方式。例如，"我现在无法 commit 对网页的任何更改。看来 Alfred 把它们都 lock 了，他正在修复它们的背景图像。"并非所有 version control 系统都提供 lock 的能力，而在提供的系统中，并非所有都要求使用 lock 功能。这是因为并行、同时开发是常态，而把人们锁在文件之外（通常）与这个理想相悖。</para>
+  <listitem><para>一种声明更改特定文件或目录的独占意图的方式。例如，"我现在无法 commit 对网页的任何更改。看来 Alfred 把它们都 lock 了，他正在修复它们的背景图像。"并非所有版本控制系统都提供 lock 的能力，而在提供的系统中，并非所有都要求使用 lock 功能。这是因为并行、同时开发是常态，而把人们锁在文件之外（通常）与这个理想相悖。</para>
 
-  <para>需要 lock 才能进行 commit 的 version control 系统被称为使用 <firstterm>lock-modify-unlock</firstterm> 模型。不需要的被称为使用 <firstterm>copy-modify-merge</firstterm> 模型。可以在 <ulink
+  <para>需要 lock 才能进行 commit 的版本控制系统被称为使用 <firstterm>lock-modify-unlock</firstterm> 模型。不需要的被称为使用 <firstterm>copy-modify-merge</firstterm> 模型。可以在 <ulink
   url="https://svnbook.red-bean.com/nightly/en/svn.basic.version-control-basics.html#svn.basic.vsn-models"
-  >https://svnbook.red-bean.com/nightly/en/svn.basic.version-control-basics.html#svn.basic.vsn-models</ulink> 找到对这两种模型的出色深入解释和比较。一般来说，copy-modify-merge 模型更适合开源开发，本书讨论的所有 version control 系统都支持该模型。</para></listitem>
+  >https://svnbook.red-bean.com/nightly/en/svn.basic.version-control-basics.html#svn.basic.vsn-models</ulink> 找到对这两种模型的出色深入解释和比较。一般来说，copy-modify-merge 模型更适合开源开发，本书讨论的所有版本控制系统都支持该模型。</para></listitem>
  </varlistentry>
 
 </variablelist>
@@ -753,39 +753,39 @@ url="http://www.ietf.org/rfc/rfc2822.txt"
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="vc-choosing">
-<title>选择 Version Control 系统</title>
+<title>选择版本控制系统</title>
 
-<para>如果你还没有关于项目应该使用哪个 version control 系统的看法，那么选择 Git（<ulink
+<para>如果你还没有关于项目应该使用哪个版本控制系统的看法，那么选择 Git（<ulink
 url="https://git-scm.com/" >https://git-scm.com/</ulink>），并将你的项目 repository 托管在 GitHub（<ulink url="https://github.com/"
 >https://github.com/</ulink>），它为开源项目提供无限制的免费托管。</para>
 
 <para>Git 现在是开源世界中的<foreignphrase>事实标准</foreignphrase>，在 GitHub 上托管 repository 也是如此。因为这么多开发者已经习惯了这种组合，选择它发出的信号是你的项目已经准备好接纳参与者了。但 Git-at-GitHub 不是唯一可行的组合。许多项目将他们的权威 Git repository 托管在其他地方，要么在另一个公共托管网站（见 <xref
 linkend="canned-hosting"/>），要么在他们自己的服务器上（可能使用 <xref
-linkend="hosting-on-freedom"/> 中列出的开源 forge 系统之一）。一些项目使用完全不同的 version control 系统，比如 Mercurial（<ulink
+linkend="hosting-on-freedom"/> 中列出的开源 forge 系统之一）。一些项目使用完全不同的版本控制系统，比如 Mercurial（<ulink
 url="https://www.mercurial-scm.org/"
 >https://www.mercurial-scm.org/</ulink>）。</para>
 
-<para>这里没有空间深入探讨为什么你可能选择 Git 之外的东西。如果你有理由这样做，那么你已经知道那个理由是什么了。如果你没有，那就使用 Git（在 GitHub 或 GitLab 上）。如果你发现自己使用 Git 或 Mercurial 之外的东西，问问自己为什么&nbsp;&mdash;&nbsp;因为无论那个其他 version control 系统是什么，大多数其他开发者都不会熟悉它，而且它周围的支持社区可能比这两个小。</para>
+<para>这里没有空间深入探讨为什么你可能选择 Git 之外的东西。如果你有理由这样做，那么你已经知道那个理由是什么了。如果你没有，那就使用 Git（在 GitHub 或 GitLab 上）。如果你发现自己使用 Git 或 Mercurial 之外的东西，问问自己为什么&nbsp;&mdash;&nbsp;因为无论那个其他版本控制系统是什么，大多数其他开发者都不会熟悉它，而且它周围的支持社区可能比这两个小。</para>
 
 </sect2>
 
 
 <!-- ========================== subsection =========================== -->
 <sect2 id="vc-using">
-<title>使用 Version Control 系统</title>
+<title>使用版本控制系统</title>
 
-<para>本节中的建议不针对特定的 version control 系统，应该可以在任何系统中实现。有关详细信息，请查阅你的特定系统的文档。</para>
+<para>本节中的建议不针对特定的版本控制系统，应该可以在任何系统中实现。有关详细信息，请查阅你的特定系统的文档。</para>
 
 <sect3 id="version-everything">
 <title>版本化一切</title>
 
-<para>不仅要将项目的源代码置于 version control 之下，还要包括其网页、文档、FAQ、设计笔记以及人们可能想要编辑的任何其他内容。将它们与源代码放在一起，在同一个 repository 树中。任何值得写下来的信息都值得版本化&nbsp;&mdash;&nbsp;即任何可能改变的信息。不会改变的东西应该归档，而不是版本化。例如，一封电子邮件一旦发布就不会改变；因此，对其进行版本化是没有意义的（除非它成为某个更大的、不断演变的文档的一部分）。</para>
+<para>不仅要将项目的源代码置于版本控制之下，还要包括其网页、文档、FAQ、设计笔记以及人们可能想要编辑的任何其他内容。将它们与源代码放在一起，在同一个 repository 树中。任何值得写下来的信息都值得版本化&nbsp;&mdash;&nbsp;即任何可能改变的信息。不会改变的东西应该归档，而不是版本化。例如，一封电子邮件一旦发布就不会改变；因此，对其进行版本化是没有意义的（除非它成为某个更大的、不断演变的文档的一部分）。</para>
 
 <para>将所有内容一起版本化在一个地方的原因是，这样人们只需要学习一种提交变更的机制。通常，贡献者会从编辑网页或文档开始，然后再转向小的代码贡献，例如。当项目对所有类型的提交使用相同的系统时，人们只需要学习一次。将所有内容一起版本化还意味着新功能可以与其文档更新一起 commit，对代码进行 branch 也会同时 branch 文档，等等。</para>
 
-<para>不要将<firstterm>生成的文件</firstterm>置于 version control 之下。它们不是真正可编辑的数据，因为它们是从其他文件以编程方式生成的。例如，一些构建系统会根据 <filename>configure.in</filename> 中的模板创建一个名为 <filename>configure</filename> 的文件。要更改 <filename>configure</filename>，需要编辑 <filename>configure.in</filename> 然后重新生成；因此，只有模板 <filename>configure.in</filename> 才是"可编辑文件"。只对模板进行版本化&nbsp;&mdash;&nbsp;如果你也对生成的文件进行版本化，人们在 commit 对模板的更改时不可避免地会忘记重新生成它们，由此产生的不一致将导致无尽的混乱。</para>
+<para>不要将<firstterm>生成的文件</firstterm>置于版本控制之下。它们不是真正可编辑的数据，因为它们是从其他文件以编程方式生成的。例如，一些构建系统会根据 <filename>configure.in</filename> 中的模板创建一个名为 <filename>configure</filename> 的文件。要更改 <filename>configure</filename>，需要编辑 <filename>configure.in</filename> 然后重新生成；因此，只有模板 <filename>configure.in</filename> 才是"可编辑文件"。只对模板进行版本化&nbsp;&mdash;&nbsp;如果你也对生成的文件进行版本化，人们在 commit 对模板的更改时不可避免地会忘记重新生成它们，由此产生的不一致将导致无尽的混乱。</para>
 
-<para>关于所有可编辑数据都应保存在与代码相同的 version control 系统中的规则，存在技术例外。例如，项目的 bug tracker 和其 wiki 保存了大量可编辑数据，但通常不会将这些数据存储在主 version control 系统中。<footnote><para>一些开发环境试图将所有内容集成到一个统一的、version-controlled 的世界中，例如
+<para>关于所有可编辑数据都应保存在与代码相同的版本控制系统中的规则，存在技术例外。例如，项目的 bug tracker 和其 wiki 保存了大量可编辑数据，但通常不会将这些数据存储在主版本控制系统中。<footnote><para>一些开发环境试图将所有内容集成到一个统一的、受版本控制的（version-controlled）世界中，例如
 <ulink url="https://fossil-scm.org/" >https://fossil-scm.org/</ulink> 和
 <ulink url="http://veracity-scm.com/" >http://veracity-scm.com/</ulink>，但到目前为止，它们都没有在开源世界中获得广泛采用。</para></footnote>然而，它们仍然应该有自己的版本化系统，例如 bug ticket 中的评论历史，以及在 wiki 中浏览过去 revision 和查看它们之间差异的能力。</para>
 
@@ -822,14 +822,14 @@ linkend="pull-requests"/>）。如果每个人都同意结果很好，她或其�
 <sect3 id="vc-singularity">
 <title>信息的唯一性</title>
 
-<para>Merging 有一个重要的推论：永远不要 commit 同一个变更两次。也就是说，给定的变更应该只进入 version control 系统一次。变更进入的 revision（或一组 revision）从那时起就是它的唯一标识符。如果它需要应用到除了它进入的 branch 之外的其他 branch，那么它应该从其原始进入点 merge 到那些其他目的地&nbsp;&mdash;&nbsp;而不是 commit 一个文本上相同的变更，这在代码中会有相同的效果，但会使准确的簿记和 release 管理变得更加困难。</para>
+<para>Merging 有一个重要的推论：永远不要 commit 同一个变更两次。也就是说，给定的变更应该只进入版本控制系统一次。变更进入的 revision（或一组 revision）从那时起就是它的唯一标识符。如果它需要应用到除了它进入的 branch 之外的其他 branch，那么它应该从其原始进入点 merge 到那些其他目的地&nbsp;&mdash;&nbsp;而不是 commit 一个文本上相同的变更，这在代码中会有相同的效果，但会使准确的事务记录和 release 管理变得更加困难。</para>
 
-<para>这个建议的实际效果因 version control 系统而异。在某些系统中，merge 是特殊事件，从根本上不同于 commit，并带有自己的元数据。在其他系统中，merge 的结果以与其他变更 commit 相同的方式 commit，因此区分"merge commit"和"新变更 commit"的主要方法是在 log message 中。在 merge 的 log message 中，不要重复原始变更的 log message。相反，只需指出这是一个 merge，并给出原始变更的标识 revision，最多加上其效果的一句话摘要。如果有人想看完整的 log message，她应该查阅原始 revision。不重复使得更容易确定何时已经追踪到变更的原始来源：当你看到一个完整的 log message 没有引用其他某个 merge 源时，你可以知道它必定是原始变更，并相应地处理它。</para>
+<para>这个建议的实际效果因版本控制系统而异。在某些系统中，merge 是特殊事件，从根本上不同于 commit，并带有自己的元数据。在其他系统中，merge 的结果以与其他变更 commit 相同的方式 commit，因此区分"merge commit"和"新变更 commit"的主要方法是在 log message 中。在 merge 的 log message 中，不要重复原始变更的 log message。相反，只需指出这是一个 merge，并给出原始变更的标识 revision，最多加上其效果的一句话摘要。如果有人想看完整的 log message，她应该查阅原始 revision。不重复使得更容易确定何时已经追踪到变更的原始来源：当你看到一个完整的 log message 没有引用其他某个 merge 源时，你可以知道它必定是原始变更，并相应地处理它。</para>
 
 <para>同样的原则适用于 revert 变更。如果从代码中撤回一个变更，那么 reversion 的 log message 应该只说明正在 revert 某些特定的 revision，并解释原因。它不应该描述 reversion 导致的语义代码变更，因为这可以通过查阅原始 log message 和 diff 来得出。（而且如果你使用的系统可以编辑或标注过去的 log message，请回去修复原始变更的 log message 以提及未来的 reversion。）</para>
 
-<para>以上这些都意味着你应该使用一致的语法来引用变更。这不仅在 log message 中有用，在邮件、bug tracker 以及其他地方也同样重要。在 Git 和 Mercurial 中，语法通常是"commit c39fcac089"（右边的 commit hash code 足够长以在相关上下文中唯一）。在 Subversion 中，revision 号是线性递增的整数，例如 revision 1729 的标准语法是"r1729"（你会在本书的一些示例中看到这种语法）。其他系统有自己表达 changeset 名称的标准语法。无论你的系统适合什么语法，都应该鼓励人们在引用变更时保持一致使用。一致地表达变更名称会让项目簿记工作变得容易得多（我们将在 <xref
-linkend="communications"/> 和 <xref linkend="development-cycle"/> 中看到）。由于很多簿记工作可能由开发者完成，而他们在公司的内部项目中也必须使用某种不同的簿记方法，因此这需要尽可能简单。</para>
+<para>以上这些都意味着你应该使用一致的语法来引用变更。这不仅在 log message 中有用，在邮件、bug tracker 以及其他地方也同样重要。在 Git 和 Mercurial 中，语法通常是"commit c39fcac089"（右边的 commit hash code 足够长以在相关上下文中唯一）。在 Subversion 中，revision 号是线性递增的整数，例如 revision 1729 的标准语法是"r1729"（你会在本书的一些示例中看到这种语法）。其他系统有自己表达 changeset 名称的标准语法。无论你的系统适合什么语法，都应该鼓励人们在引用变更时保持一致使用。一致地表达变更名称会让项目事务记录（bookkeeping）工作变得容易得多（我们将在 <xref
+linkend="communications"/> 和 <xref linkend="development-cycle"/> 中看到）。由于很多事务记录工作可能由开发者完成，而他们在公司的内部项目中也必须使用某种不同的记录方法，因此这需要尽可能简单。</para>
 
 <para>另请参阅
 <xref
@@ -840,11 +840,11 @@ linkend="releases-and-daily-development"/>。</para>
 <sect3 id="vc-authz">
 <title>授权</title>
 
-<para>即使你的项目的 version control 系统或托管站点允许对开发者的活动区域进行技术强制&nbsp;&mdash;&nbsp;例如，允许他们在某些地方 push commit 但在其他地方不行&nbsp;&mdash;&nbsp;通常最好不要使用它。自动化强制执行很少是必要的，甚至可能是有害的。</para>
+<para>即使你的项目的版本控制系统或托管站点允许对开发者的活动区域进行技术强制&nbsp;&mdash;&nbsp;例如，允许他们在某些地方 push commit 但在其他地方不行&nbsp;&mdash;&nbsp;通常最好不要使用它。自动化强制执行很少是必要的，甚至可能是有害的。</para>
 
-<para>相反，大多数项目使用信任制度：当一个人被授予 commit 权限时，即使只是项目的一个子区域，他们实际获得的是在权威 repository 的任何地方 commit 的物理能力。只是要求他们将 commit 保持在自己的区域内。（参见 <xref linkend="committers"/> 了解项目如何决定谁可以在哪里进行变更。）</para>
+<para>相反，大多数项目使用信任制度：当一个人被授予 commit 权限时，即使只是项目的一个子区域，他们实际获得的是在权威 repository 的任何地方 commit 的实际权限（或技术上的能力）。只是要求他们将 commit 保持在自己的区域内。（参见 <xref linkend="committers"/> 了解项目如何决定谁可以在哪里进行变更。）</para>
 
-<para>记住这里几乎没有真正的风险：repository 提供了审计跟踪，而且在一个活跃的项目中，所有 commit 都会被审查。如果有人在不应该的地方 commit，其他人会注意到并提出来。如果需要撤销一个变更，这很简单&nbsp;&mdash;&nbsp;反正一切都在 version control 下，只需 revert 即可。</para>
+<para>记住这里几乎没有真正的风险：repository 提供了审计跟踪，而且在一个活跃的项目中，所有 commit 都会被审查。如果有人在不应该的地方 commit，其他人会注意到并提出来。如果需要撤销一个变更，这很简单&nbsp;&mdash;&nbsp;反正一切都在版本控制下，只需 revert 即可。</para>
 
 <para>这种更宽松的方法有几个优势。首先，当开发者扩展到其他领域时（如果他们留在项目中通常会这样），授予他们更广泛的权限没有管理开销。一旦做出决定，这个人就可以立即开始在新领域 commit。</para>
 
@@ -852,10 +852,10 @@ linkend="releases-and-daily-development"/>。</para>
 
 <para>最后，也许是最重要的，使用信任制度会营造一种信任和相互尊重的氛围。给某人一个子领域的 commit 权限是对其技术准备程度的声明&nbsp;&mdash;&nbsp;它说："我们看到你有在某个领域进行 commit 的专业知识，所以放手去做吧。"但施加严格的授权控制则说："我们不仅断言你的专业知识有限，我们对你的<emphasis>意图</emphasis>也有点怀疑。"如果你能避免的话，这不是你想要发出的声明。把某人作为 committer 引入项目是一个让他们进入相互信任圈的机会。一个好的做法是给他们比他们应该使用的更多的权力，然后告知他们由他们自己来保持在约定的限度内。</para>
 
-<para>Subversion 项目以这种信任制度的方式运作了二十多年，截至本文撰写时，有 50 多名完全 committer 和 100 多名部分 committer。（并非所有人在任何给定时间都活跃，但这恰恰强化了我在这里要表达的观点。）系统通过技术手段强制执行的唯一区分是 committer 和其他所有人之间的全局区分。所有进一步的细分都仅由人为判断来维护。然而，项目从未遇到过有人故意在其领域之外 commit 的严重问题。曾经有一两次关于某人 commit 权限范围的无辜误解，但总是能快速友好地解决。</para>
+<para>Subversion 项目以这种信任制度的方式运作了二十多年，截至本文撰写时，有 50 多名完全 committer 和 100 多名部分 committer。（并非所有人在任何给定时间都活跃，但这恰恰强化了我在这里要表达的观点。）系统通过技术手段强制执行的唯一区分是 committer 和其他所有人之间的全局区分。所有进一步的细分都仅由人为判断来维护。然而，项目从未遇到过有人故意在其领域之外 commit 的严重问题。曾经有一两次关于某人 commit 权限范围的无心之失（或善意的误会），但总是能快速友好地解决。</para>
 
-<para>显然，在自我监管不切实际的情况下，你必须依赖严格的授权控制。但这种情况很少见。即使有数百万行代码和数百或数千名开发者，对任何给定代码模块的 commit 仍应由在该模块上工作的人审查，<footnote><para>参见
-<xref linkend="code-review"/>。</para></footnote> 而且他们能够识别是否有不应该在那里 commit 的人进行了 commit。如果定期 commit 审查<emphasis>没有</emphasis>进行，那么项目有比授权系统更大的问题需要处理。</para>
+<para>显然，在自我监管不切实际的情况下，你必须依赖严格的授权控制。但这种情况很少见。即使有数百万行代码和数百或数千名开发者，对任何给定代码模块的 commit 仍应由负责该模块的人进行审查，<footnote><para>参见
+<xref linkend="code-review"/>。</para></footnote> 如果发现有人越权 commit，他们一眼就能看出来。如果定期 commit 审查<emphasis>没有</emphasis>进行，那么项目有比授权系统更大的问题需要处理。</para>
 
 <para>总之，除非你有特定的理由，否则不要花太多时间摆弄技术强制的授权控制。它通常不会带来太多实际好处，而依赖人为控制反而有优势。</para>
 
@@ -898,7 +898,7 @@ url="https://www.reviewboard.org/"
 <para>commit 通知最常见的形式是直接订阅 repository 本身，因为托管平台会为有趣的活动发送通知&nbsp;&mdash;&nbsp;通常通过邮件，有时也通过其他方式。每个开发者可以自定义什么对他们来说算作有趣。或者，一些项目有专门用于 commit 通知的邮件列表。每个 commit（或 push，或对主 branch 的 merge）都会向该列表发送一封自动邮件。请注意，这是一个专门用于 commit 邮件的特殊邮件列表，与人类发帖的邮件列表是分开的。无论你的项目安排了什么形式的 commit 通知，每个通知都应该让开发者从那里轻松进行审查该 commit 或 changeset（参见 <xref
 linkend="code-review"/>）。</para>
 
-<para>你的项目是否应该使用邮件列表&nbsp;&mdash;&nbsp;无论是作为补充还是代替或其他某种可订阅通知&nbsp;&mdash;&nbsp;取决于你的开发者的人口统计特征，但如果有疑问，邮件通常是一个好的默认选择。设置通知的具体细节因 version control 系统而异，但通常有一个脚本或其他打包设施来完成它。如果你难以找到它，试着查找关于 <firstterm>hook</firstterm>（有时称为 <firstterm>trigger</firstterm>）的文档，特别是 <firstterm>post-merge hook</firstterm> 或 <firstterm>post-commit
+<para>你的项目是否应该使用邮件列表&nbsp;&mdash;&nbsp;无论是作为补充还是代替或其他某种可订阅通知&nbsp;&mdash;&nbsp;取决于你的开发者的人员构成与习惯（demographics），但如果有疑问，邮件通常是一个好的默认选择。设置通知的具体细节因版本控制系统而异，但通常会有脚本或其他现成的工具来完成它。如果你难以找到它，试着查找关于 <firstterm>hook</firstterm>（有时称为 <firstterm>trigger</firstterm>）的文档，特别是 <firstterm>post-merge hook</firstterm> 或 <firstterm>post-commit
 hook</firstterm>。这些 hook 是响应接收变更而启动自动化任务的通用手段。hook 会被提供关于 merge 的所有信息，然后可以自由使用该信息做任何事情&nbsp;&mdash;&nbsp;例如，发送邮件。</para>
 
 <para>对于预打包的 commit 邮件系统，你可能想要修改一些默认行为：</para>
@@ -946,13 +946,13 @@ tracker</firstterm> 等。</para>
   <listitem><para>有人提交 ticket。他们提供一个摘要、一个初始描述（如果适用，包括重现步骤；参见 <xref
             linkend="users-to-participants"/> 了解如何鼓励良好的 bug 报告），以及 tracker 要求的任何其他信息。提交 ticket 的人可能对项目完全不了解&nbsp;&mdash;&nbsp;bug 报告和功能请求可能来自用户社区，也可能来自开发者。</para>
 
-            <para>一旦提交，ticket 就处于所谓的 <firstterm>open</firstterm> 状态。因为还没有采取任何行动，一些 tracker 还会将其标记为 <firstterm>unverified</firstterm> 和/或 <firstterm>unstarted</firstterm>。它没有分配给任何人；或者，在某些系统中，它被分配给一个假用户以表示缺乏真正的分配。此时，它处于一个临时区域：ticket 已被记录，但尚未整合到项目的意识中。</para>
+            <para>一旦提交，ticket 就处于所谓的 <firstterm>open</firstterm> 状态。因为还没有采取任何行动，一些 tracker 还会将其标记为 <firstterm>unverified</firstterm> 和/或 <firstterm>unstarted</firstterm>。它没有分配给任何人；或者，在某些系统中，它被分配给一个假用户以表示缺乏真正的分配。此时，它处于一个临时区域：ticket 已被记录，但尚未进入项目组的视野。</para>
   </listitem>
   <listitem><para>其他人阅读 ticket，添加评论，也许会就某些问题向原始提交者寻求澄清。</para>
   </listitem>
-  <listitem><para>bug 被<firstterm>重现</firstterm>了。这可能是其生命周期中最重要的时刻。虽然 bug 实际上还没有被修复，但除了原始提交者之外还有其他人能够重现它这一事实证明了它是真实的，而且同样重要的是，向原始提交者确认了他们通过报告一个真实的 bug 对项目做出了贡献。（当然，这一步和其他一些步骤不适用于功能提案、任务 ticket 等。但大多数提交都是针对真实的 bug，所以我们在这里关注这一点。）</para>
+  <listitem><para><firstterm>重现</firstterm> bug。这可能是其生命周期中最重要的时刻。虽然 bug 实际上还没有被修复，但除了原始提交者之外还有其他人能够重现它这一事实证明了它是真实的，而且同样重要的是，向原始提交者确认了他们通过报告一个真实的 bug 对项目做出了贡献。（当然，这一步和其他一些步骤不适用于功能提案、任务 ticket 等。但大多数提交都是针对真实的 bug，所以我们在这里关注这一点。）</para>
   </listitem>
-  <listitem><para>bug 被<firstterm>诊断</firstterm>：确定了其原因，如果可能的话，估计修复它所需的工作量。确保这些东西被记录在 ticket 中；如果诊断 bug 的人突然不得不暂时离开，其他人应该能够从她离开的地方继续。</para>
+  <listitem><para><firstterm>诊断</firstterm> bug：确定了其原因，如果可能的话，估计修复它所需的工作量。确保这些东西被记录在 ticket 中；如果诊断 bug 的人突然不得不暂时离开，其他人应该能够从她离开的地方继续。</para>
 
             <para>在这个阶段，或有时在前一个阶段，开发者可能会"取得所有权"并将 ticket <firstterm>分配</firstterm>给自己（<xref
             linkend="delegation-assignment"/>
@@ -975,7 +975,7 @@ tracker</firstterm> 等。</para>
 <para>除了这些变化之外，生命周期可能还有其他小细节因 tracking 软件而异。但基本形状是相同的，虽然生命周期本身不是开源软件特有的，但它对开源项目如何使用其 bug tracker 有影响。</para>
 
 <para>tracker 与 repository、邮件列表或网页一样，是项目的公开面孔。<footnote><para>实际上，正如 <xref
-linkend="evaluating-oss-projects"/> 讨论的那样，当你试图评估项目的整体健康状况时，bug tracker 实际上是首先要看的地方，甚至在 repository 之前。</para></footnote>任何人都可以提交 ticket，任何人都可以查看 ticket，任何人都可以浏览当前 open 的 ticket 列表。由此可见，你永远不知道有多少人在等待看到给定 ticket 的进展。虽然开发社区的规模和技能限制了 ticket 的解决速度，但项目至少应该尝试在 ticket 出现的那一刻就予以确认。即使 ticket 停留一段时间，回复也会鼓励报告者保持参与，因为她感到有人已经注意到了她所做的事情（记住，提交 ticket 通常比发送邮件需要更多的努力）。此外，一旦开发者看到 ticket，它就进入了项目的意识，从某种意义上说，开发者可以留意 ticket 的其他实例，可以与其他开发者讨论它，等等。</para>
+linkend="evaluating-oss-projects"/> 讨论的那样，当你试图评估项目的整体健康状况时，bug tracker 实际上是首先要看的地方，甚至在 repository 之前。</para></footnote>任何人都可以提交 ticket，任何人都可以查看 ticket，任何人都可以浏览当前 open 的 ticket 列表。由此可见，你永远不知道有多少人在等待看到给定 ticket 的进展。虽然开发社区的规模和技能限制了 ticket 的解决速度，但项目至少应该尝试在 ticket 出现的那一刻就予以确认。即使 ticket 停留一段时间，回复也会鼓励报告者保持参与，因为她感到有人已经注意到了她所做的事情（记住，提交 ticket 通常比发送邮件需要更多的努力）。此外，一旦开发者看到 ticket，它就被纳入了项目的关注范围，从某种意义上说，开发者可以留意 ticket 的其他实例，可以与其他开发者讨论它，等等。</para>
 
 <para>这种对项目生活的中心地位意味着关于 tracker 技术功能的几件事：
 
@@ -1019,16 +1019,16 @@ linkend="issue-manager"/>）&nbsp;&mdash;&nbsp;这可以极大地影响他们掌
 
 <para>第一种技术似乎被普遍使用。即使是拥有庞大 ticket 数据库的项目（比如 Debian bug tracker <ulink url="https://bugs.debian.org/" >https://bugs.debian.org/</ulink>，截至本文撰写时包含 996,003 个 ticket）仍然安排事情，以便<emphasis>有人</emphasis>看到每个进来的 ticket。根据 ticket 的类别，可能是不同的人。例如，Debian 项目是软件包的集合，因此 Debian 会自动将每个 ticket 路由到相应的包维护者。当然，用户有时可能会错误识别 ticket 的类别，结果是 ticket 最初被发送给错误的人，然后可能不得不重新路由它。然而，重要的是负担仍然是共享的&nbsp;&mdash;&nbsp;无论用户在提交时猜对还是猜错，ticket 观察仍然或多或少均匀地分布在开发者之间，因此每个 ticket 都能够得到及时响应。</para>
 
-<para>第二种技术不太普遍，可能是因为它更难自动化。基本思想是每个新 ticket 都要"结伴"进入数据库。当用户认为他发现了一个问题时，他被要求在一个邮件列表或聊天室中描述它，并从某人那里得到确认它确实是一个 bug。早期引入第二双眼睛可以防止许多虚假报告。有时第二方能够识别该行为不是 bug，或在最近的 release 中已修复。或者她可能熟悉以前 ticket 的症状，并可以通过将用户指向较旧的 ticket 来防止重复提交。通常只需问用户"你有没有搜索 bug tracker 看看它是否已经被报告过？"就足够了。许多人根本没有想到这一点，但一旦他们知道有人<emphasis>期望</emphasis>他们这样做，就很乐意进行搜索。</para>
+<para>第二种技术不太普遍，可能是因为它更难自动化。基本思想是每个新 ticket 都要"结伴"（buddy）进入数据库。当用户认为他发现了一个问题时，他被要求在一个邮件列表或聊天室中描述它，并从某人那里得到确认它确实是一个 bug。早期引入第二双眼睛可以防止许多虚假报告。有时第二方能够识别该行为不是 bug，或在最近的 release 中已修复。或者她可能熟悉以前 ticket 的症状，并可以通过将用户指向较旧的 ticket 来防止重复提交。通常只需问用户"你有没有搜索 bug tracker 看看它是否已经被报告过？"就足够了。许多人根本没有想到这一点，但一旦他们知道有人<emphasis>期望</emphasis>他们这样做，就很乐意进行搜索。</para>
 
-<para>结伴系统确实可以保持 ticket 数据库的清洁，但它也有一些缺点。许多人无论如何都会单独提交，要么是因为没有看到指示，要么是因为无视为新 ticket 寻找伙伴的指示。因此，仍然需要一些有经验的参与者观察 ticket 数据库。此外，因为大多数新报告者不了解维护 ticket 数据库的任务有多困难，所以因为他们忽略指南而过于严厉地责备他们是不公平的。观察者必须保持警惕，但在如何将未结伴的 ticket 退回给他们的报告者时要保持克制。目标是训练每个报告者在未来使用结伴系统，这样就会有一个不断增长的理解 ticket 过滤系统的人员池。在看到未结伴的 ticket 时，理想的步骤是：</para>
+<para>搭档机制（Buddy System）确实可以保持 ticket 数据库的清洁，但它也有一些缺点。许多人无论如何都会单独提交，要么是因为没有看到指示，要么是因为无视为新 ticket 寻找伙伴的指示。因此，仍然需要一些有经验的参与者观察 ticket 数据库。此外，因为大多数新报告者不了解维护 ticket 数据库的任务有多困难，所以因为他们忽略指南而过于严厉地责备他们是不公平的。观察者必须保持警惕，但在如何将未结伴的 ticket 退回给他们的报告者时要保持克制。目标是训练每个报告者在未来使用搭档机制，这样就会有一个不断增长的理解 ticket 过滤系统的人员池。在看到未结伴的 ticket 时，理想的步骤是：</para>
 
 <orderedlist>
   <listitem>
-    <para>立即回复 ticket，礼貌地感谢用户的提交，但将他们指向结伴指南（当然，这些指南应该在网站上显著发布）。</para>
+    <para>立即回复 ticket，礼貌地感谢用户的提交，但将他们指向搭档机制指南（当然，这些指南应该在网站上显著发布）。</para>
   </listitem>
   <listitem>
-    <para>如果 ticket 明显有效且不是重复的，无论如何都要批准它，并开始它的正常生命周期。毕竟，报告者现在已经被告知结伴了，所以关闭一个有效的 ticket 并浪费迄今为止完成的工作是没有意义的。</para>
+    <para>如果 ticket 明显有效且不是重复的，无论如何都要批准它，并开始它的正常生命周期。毕竟，报告者现在已经被告知要找搭档确认了，所以关闭一个有效的 ticket 并浪费迄今为止完成的工作是没有意义的。</para>
   </listitem>
   <listitem>
     <para>否则，如果 ticket 不是明显有效的，请关闭它，但要求报告者如果从伙伴那里得到确认，可以重新打开它。当他们这样做时，他们应该引用确认讨论（例如，邮件列表档案的 URL）。</para>
@@ -1085,7 +1085,7 @@ linkend="growth"/> 讨论了何时以及如何划分更多房间。</para>
 <anchor id="irc-archiving" />
 <title>昵称标记与通知</title>
 
-<para>刚接触这类聊天系统的用户通常需要一些时间来学习实时文字交流的惯例。虽然每个项目都有自己的本地习俗，但至少有一个惯例似乎在几乎所有项目中都很常见：用于通知的<firstterm>昵称标记</firstterm>（nick-flagging）。</para>
+<para>刚接触这类聊天系统的用户通常需要一些时间来学习实时文字交流的惯例。虽然每个项目都有自己的本地习俗，但至少有一个惯例似乎在几乎所有项目中都很常见：用于通知的<firstterm>昵称标记</firstterm>（nick-flagging，即现在的“艾特”或“提及”）。</para>
 
 <para>用户的 <firstterm>nick</firstterm>（昵称）是他们在聊天系统中的昵称或代号。它可能是也可能不是他们真实姓名的某种形式，但无论如何，这就是他们在聊天中的身份标识。当你想对某人说话时，你会在消息前面加上她的昵称（可能后跟一个分隔符如冒号）。她的聊天客户端在看到消息中使用了她的昵称时，会以她配置的方式通知她&nbsp;&mdash;&nbsp;可能是在屏幕上弹出通知窗口（即使她当时没有打开聊天窗口），或者通过声音信号。</para>
 
@@ -1098,9 +1098,9 @@ url="http://www.rants.org/2013/01/09/the-irc-curmudgeon/"
 <sidebar id="paste-sites">
 <title>粘贴房间和粘贴站点</title>
 
-<para>通常情况下，聊天室作为共享空间是件好事，它允许人们在认为自己有贡献时跳入对话，也允许旁观者通过观看来学习。但当有人需要一次提供大量信息时，比如一个很长的错误消息或调试会话的记录，就会出现问题，因为向房间粘贴太多行输出可能会干扰其他对话。</para>
+<para>通常情况下，聊天室作为共享空间是件好事，它允许人们在认为自己有贡献时跳入对话，也允许旁观者通过观看来学习。但当有人需要一次提供大量信息时，比如一个很长的错误消息或调试会话的日志输出，就会出现问题，因为向房间粘贴太多行输出可能会干扰其他对话。</para>
 
-<para>一个解决方案是专门设立一个聊天室用于粘贴。用户在那里发布他们的记录，然后获取该特定消息的 URL<footnote><para>在线聊天中发布的每条消息都有自己唯一的 URL 永久链接，就像比如说 bug 工单中的每条评论一样。关于这一原则及其影响的更多信息，请参阅 <xref linkend="all-as-archives"/>。</para></footnote>，并在原始聊天室中发布该 URL，同时用昵称标记应该看到它的人。</para>
+<para>一个解决方案是专门设立一个聊天室用于粘贴。用户在那里发布他们的日志，然后获取该特定消息的 URL<footnote><para>在线聊天中发布的每条消息都有自己唯一的 URL 永久链接，就像比如说 bug 工单中的每条评论一样。关于这一原则及其影响的更多信息，请参阅 <xref linkend="all-as-archives"/>。</para></footnote>，并在原始聊天室中发布该 URL，同时用昵称标记应该看到它的人。</para>
 
 <para>另一个解决方案是建立一个独立的 <firstterm>pastebin</firstterm> 站点，它与聊天服务分离，但基本按上述方式运作：用户将他们的记录发布到 pastebin 站点以创建一个新的 <firstterm>paste</firstterm>（粘贴），它拥有自己的唯一 URL，然后用户在聊天室中提供这个 URL。历史上也有许多公共 pastebin 站点，所以你可能不需要为项目专门设置一个，但要注意公共 pastebin 站点往往寿命较短（我猜测它们受到大量垃圾信息攻击，维护成本很高）。截至 2022 年初本书写作时，<ulink
 url="https://hastebin.com/" >https://hastebin.com/</ulink> 还在运行。如果你确实需要建立自己的，有许多开源代码库可用（包括支撑 hastebin 的代码：参见 <ulink url="https://hastebin.com/about.md"
@@ -1169,14 +1169,14 @@ url="https://www.emacswiki.org/" >https://www.emacswiki.org/</ulink>）允许任
 
 <para>如果你的项目在 GitHub 或其他免费托管站点上，通常最好使用大多数此类站点提供的内置 wiki 功能。这样你的 wiki 将自动与你的仓库或其他项目权限集成，你可以依赖站点的用户账户系统，而不必为 wiki 设置单独的注册系统。</para>
 
-<para>如果你要建立自己的 wiki，那么你可以自由选择使用哪一个，幸运的是有许多优秀的自由软件 wiki 实现可用。我在 DokuWiki（<ulink url="https://www.dokuwiki.org/dokuwiki"
+<para>如果你要建立自己的 wiki，那么你可以自由选择使用哪一个，好在市面上有许多优秀的自由软件 wiki 可供选择。我在 DokuWiki（<ulink url="https://www.dokuwiki.org/dokuwiki"
 >https://www.dokuwiki.org/dokuwiki</ulink>）上有很好的体验，但还有许多其他选择。有一个很棒的工具叫做 Wiki Choice Wizard，位于 <ulink
-url="http://www.wikimatrix.org/" >http://www.wikimatrix.org/</ulink>，它允许你指定你关心的功能（开源许可证可以是其中之一），然后查看比较所有满足这些标准的 wiki 软件的图表。另一个很好的资源是 Wikipedia 自己的比较不同 wiki 的页面：<ulink
+url="http://www.wikimatrix.org/" >http://www.wikimatrix.org/</ulink>，你可以指定关注的功能（比如是否开源），然后生成一张图表，对比所有符合这些标准的 Wiki 软件。另一个很好的资源是 Wikipedia 自己的比较不同 wiki 的页面：<ulink
 url="https://en.wikipedia.org/wiki/Comparison_of_wiki_software"
 >https://en.wikipedia.org/wiki/Comparison_of_wiki_software</ulink>。</para>
 
 <para>我不建议大多数项目使用 MediaWiki（<ulink
-url="https://www.mediawiki.org" >https://www.mediawiki.org</ulink>）作为 wiki 软件。MediaWiki 是 Wikipedia 本身运行的软件，虽然它在那方面做得很好，但它的管理设施是针对一个与网络上任何其他 wiki 都不同的站点的需求调整的&nbsp;&mdash;&nbsp;实际上并没有很好地调整到较小编辑社区的需求。许多项目很想选择 MediaWiki，因为他们认为这会让那些已经在 Wikipedia 上编辑过、熟悉其编辑语法的用户更容易上手，但事实证明这几乎是一个不存在的优势，原因有几个。首先，包括 Wikipedia 在内的 wiki 通常都倾向于富文本浏览器内编辑，所以除非有人想成为高级用户，否则没有人真正需要学习底层的 wiki 语法。其次，许多其他 wiki 提供 MediaWiki 语法插件，所以如果你真的想要那种语法，无论如何都可以拥有。第三，对于那些将使用纯文本语法而不是富文本编辑的人来说，最好使用标准化的通用标记格式，如 Markdown（<ulink url="https://daringfireball.net/projects/markdown/"
+url="https://www.mediawiki.org" >https://www.mediawiki.org</ulink>）作为 wiki 软件。MediaWiki 是 Wikipedia 本身运行的软件，虽然它在那方面做得很好，但它的管理设施专为满足维基百科（Wikipedia）这一独特站点的需求而设计，与网络上其他 Wiki 截然不同&nbsp;&mdash;&nbsp;实际上并不太适合小型编辑社区。许多项目很想选择 MediaWiki，因为他们认为这会让那些已经在 Wikipedia 上编辑过、熟悉其编辑语法的用户更容易上手，但事实证明这一优势几乎可以忽略不计，原因有几个。首先，包括 Wikipedia 在内的 wiki 通常都倾向于富文本浏览器内编辑，所以除非他们想成为高阶用户，否则没有人真正需要学习底层的 wiki 语法。其次，许多其他 wiki 提供 MediaWiki 语法插件，所以如果你真的想要那种语法，无论如何都可以拥有。第三，对于那些将使用纯文本语法而不是富文本编辑的人来说，最好使用标准化的通用标记格式，如 Markdown（<ulink url="https://daringfireball.net/projects/markdown/"
 >https://daringfireball.net/projects/markdown/</ulink>），它在许多 wiki 中原生可用或通过插件可用，而不是使用任何风格的 wiki 语法。如果你支持 Markdown，那么人们可以使用他们已经从 GitHub 和其他流行工具中了解的相同标记语法在你的 wiki 中编辑。</para>
 
 </sect2>
@@ -1187,12 +1187,12 @@ url="https://www.mediawiki.org" >https://www.mediawiki.org</ulink>）作为 wiki
 <sect1 id="translation-infrastructure">
 <title>翻译基础设施</title>
 
-<para>现在存在各种在线平台，帮助在开源项目中自动化组织和集成人类语言翻译工作。这里的"翻译工作"不仅指翻译软件文档的过程，还包括将其运行时用户界面、错误消息等翻译成不同的语言，以便每个用户可以用他们喜欢的语言与软件交互。（关于这个过程的更多信息，请参阅 <xref linkend="translation-manager"/>。）</para>
+<para>现在存在各种在线平台，帮助在开源项目中自动化组织和集成人类语言翻译工作。这里的"翻译工作"（Translation work）不仅指翻译软件文档的过程，还包括将其运行时用户界面、错误消息等翻译成不同的语言，以便每个用户可以用他们喜欢的语言与软件交互。（关于这个过程的更多信息，请参阅 <xref linkend="translation-manager"/>。）</para>
 
 <para>使用单独的翻译平台并非绝对必要。你的翻译者可以像任何其他开发者一样直接在项目的仓库中工作。但因为翻译是一项专门技能，而且翻译者的方法在项目之间基本相同，所以这个过程非常适合通过使用专门的工具来提高效率。基于 Web 的翻译平台使翻译者更容易参与，因为它消除了翻译者（可能具有语言专业知识但不具备开发专业知识）需要熟悉项目开发工具的要求，并提供了一个专门为翻译而非通用代码开发优化的工作环境。</para>
 
-<para>直到 2013 年，显而易见的平台推荐本应是 <ulink url="https://transifex.com/"
->https://transifex.com/</ulink>，它既是首屈一指的软件翻译站点，本身也是开源软件。然而，它的主要企业赞助商在 2013 年 3 月转向了一个封闭的专有版本，<footnote><para>更多信息请参阅 <ulink
+<para>在 2013 年之前，Transifex（<ulink url="https://transifex.com/"
+>https://transifex.com/</ulink>）无疑是首选推荐，它既是首屈一指的软件翻译站点，本身也是开源软件。然而，它的主要企业赞助商在 2013 年 3 月转向了一个封闭的专有版本，<footnote><para>更多信息请参阅 <ulink
 url="https://github.com/transifex/transifex-old-core/issues/206#issuecomment-15243207"
 >https://github.com/transifex/transifex-old-core/issues/206#issuecomment-15243207</ulink>。</para></footnote>从那时起开源版本的开发就停止了。Transifex 仍然为开源项目提供零成本服务，一个名为 Lokalise 的竞争专有平台也是如此。但你的翻译者可能更愿意投入时间学习一个完全开源的平台，有几个可供选择：<ulink url="https://weblate.org/" >https://weblate.org/</ulink>、<ulink url="http://zanata.org/" >http://zanata.org/</ulink>、<ulink
 url="https://translatewiki.net/" >https://translatewiki.net/</ulink> 和 <ulink url="https://translations.launchpad.net/"
@@ -1203,9 +1203,9 @@ url="https://translatewiki.net/" >https://translatewiki.net/</ulink> 和 <ulink 
 
 <para>为不同人群调整软件用户界面的过程涉及两个容易混淆的术语："国际化"和"本地化"。</para>
 
-<para><firstterm>国际化</firstterm>（Internationalization）是指将软件源代码放入一种形式，使程序能够被翻译（或"本地化"&nbsp;&mdash;&nbsp;见下文）。它包括标记所有用户可见的字符串（界面文本、错误消息等），以便当软件部署在某个"locale"（区域设置）时可以自动替换为翻译版本。翻译由人类提供，但国际化是允许这些翻译自动集成到软件中的过程。</para>
+<para><firstterm>国际化</firstterm>（Internationalization）是指调整软件源代码的结构，使程序能够被翻译（或"本地化"&nbsp;&mdash;&nbsp;见下文）。它包括标记所有用户可见的字符串（界面文本、错误消息等），以便当软件部署在某个"locale"（区域设置）时可以自动替换为翻译版本。翻译由人类提供，但国际化是允许这些翻译自动集成到软件中的过程。</para>
 
-<para>因此，国际化不涉及执行任何实际翻译。相反，它是关于将程序放入一种形式，使翻译者或"本地化人员"能够开始工作。</para>
+<para>因此，国际化并不包含任何实际的翻译工作。相反，它的核心在于将程序放入一种形式，使翻译者或"本地化人员"能够开始工作。</para>
 
 <para><firstterm>i18n</firstterm> 是"internationalization"的常见缩写，因为这个词太长了。"18"指的是首字母"i"和末字母"n"之间的字母数量。</para>
 
@@ -1225,14 +1225,14 @@ url="https://en.wikipedia.org/wiki/Internationalization_and_localization"
 <sect1 id="social-networking">
 <title>社交网络服务</title>
 
-<para>对于如此具有社交性的事业来说，可能令人惊讶的是，开源项目通常只有限地使用大多数人认为的"社交网络"服务。但这种看似遗漏实际上是定义问题：开源项目几十年来一直在使用的大部分基础设施，远在"社交网络"成为公认术语之前，实际上就是社交网络软件，即使它不这么叫。开源项目倾向于不在比如 Facebook 上<emphasis>作为项目</emphasis>有太多存在感，原因只是 Facebook 提供的服务并没有很好地调整到开源项目所需的东西。另一方面，正如你所料，这些项目多年来一直在使用和改进的基础设施<emphasis>确实</emphasis>很好地调整到了他们的需求。</para>
+<para>对于如此具有社交性的事业来说，可能令人惊讶的是，开源项目通常很少使用大多数人眼中的"社交网络"服务。但这种看似遗漏实际上是定义问题：开源项目几十年来一直在使用的大部分基础设施，远在"社交网络"成为公认术语之前，实际上就是社交网络软件，即便当时不叫这个名字。开源项目倾向于不在比如 Facebook 上<emphasis>作为项目</emphasis>有太多存在感，原因只是 Facebook 提供的服务并未针对开源项目的需求进行优化。另一方面，正如你所料，这些项目多年来一直在使用和改进的基础设施<emphasis>确实</emphasis>很好地满足了他们的需求。</para>
 
-<para>大多数项目确实使用 Twitter 和类似的微博服务，因为发送可以轻松转发和回复的简短俏皮话和公告是项目与其社区对话的好方法；可以参考 LibreOffice 的"@AskLibreOffice" tweet 流 <ulink url="https://twitter.com/AskLibreOffice"
+<para>大多数项目确实使用 Twitter 和类似的微博服务，因为发布可以轻松转发和回复的简短评论和公告是项目与其社区对话的好方法；可以参考 LibreOffice 的"@AskLibreOffice" tweet 流 <ulink url="https://twitter.com/AskLibreOffice"
 >https://twitter.com/AskLibreOffice</ulink> 作为例子。项目有时也使用诸如 <ulink
 url="https://www.eventbrite.com/" >https://www.eventbrite.com/</ulink> 和 <ulink
 url="https://www.Meetup.com/" >https://www.Meetup.com/</ulink> 之类的服务来安排用户和开发者的面对面会议。</para>
 
-<para>但除了这些轻量级服务之外，大多数自由软件项目不会在主流社交媒体平台上保持大量存在（当然，个别开发者有时会这样做，并经常在那里讨论项目）。项目为这种时间和注意力投资所得到的回报似乎不够高，不值得付出努力。</para>
+<para>但除了这些轻量级服务之外，大多数自由软件项目在主流社交媒体平台上并不活跃（当然，个别开发者有时会这样做，并经常在那里讨论项目）。项目为这种时间和注意力投资所得到的回报似乎不够高，不值得付出努力。</para>
 
 </sect1>
 
