@@ -27,4 +27,5 @@
 - 2025-11-11: 完成 ch07.xml 翻译
 - 2025-11-11: 完成 ch08.xml 翻译
 - 2025-11-11: 完成 ch09.xml 翻译
+- 2025-11-11: 补充 ch02.xml 中遗漏的 "Choosing a License and Applying It" 部分翻译
 
