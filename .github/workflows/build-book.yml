@@ -4,18 +4,19 @@ on:
   push:
     paths:
       - 'book/zh/**'
-      - 'scripts/**'
+      - 'scripts/build-book.sh'
       - 'docker/**'
       - '.github/workflows/build-book.yml'
-      - 'README.md'
-  pull_request:
-    paths:
-      - 'book/zh/**'
-      - 'scripts/**'
-      - 'docker/**'
-      - '.github/workflows/build-book.yml'
-      - 'README.md'
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build-zh:
@@ -38,3 +39,19 @@ jobs:
             book/zh/producingoss-*.pdf
             book/zh/html-chunk
           if-no-files-found: error
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: book/zh/html-chunk
+
+  deploy-pages:
+    needs: build-zh
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
