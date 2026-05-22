@@ -13,6 +13,17 @@
           <font-triplet name="Noto Sans SC" style="oblique" weight="700"/>
         </font>
 
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSerifSC-Regular.otf" embedding-mode="subset">
+          <font-triplet name="Noto Serif SC" style="normal" weight="400"/>
+          <font-triplet name="Noto Serif SC" style="italic" weight="400"/>
+          <font-triplet name="Noto Serif SC" style="oblique" weight="400"/>
+        </font>
+        <font embed-url="/usr/share/fonts/opentype/noto/NotoSerifSC-Bold.otf" embedding-mode="subset">
+          <font-triplet name="Noto Serif SC" style="normal" weight="700"/>
+          <font-triplet name="Noto Serif SC" style="italic" weight="700"/>
+          <font-triplet name="Noto Serif SC" style="oblique" weight="700"/>
+        </font>
+
         <font embed-url="/usr/share/fonts/opentype/noto/NotoSansMonoCJKsc-Regular.otf" embedding-mode="subset">
           <font-triplet name="Noto Sans Mono CJK SC" style="normal" weight="400"/>
           <font-triplet name="Noto Sans Mono CJK SC" style="italic" weight="400"/>

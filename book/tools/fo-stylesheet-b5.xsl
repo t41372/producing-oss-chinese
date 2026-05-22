@@ -15,16 +15,18 @@
   <xsl:param name="body.start.indent">5mm</xsl:param>
   <xsl:param name="paper.type" select="'B5'"></xsl:param>
 
-  <xsl:param name="body.font.family">Noto Sans SC, sans-serif</xsl:param>
+  <xsl:param name="body.font.family">Noto Serif SC, serif</xsl:param>
   <xsl:param name="title.font.family">Noto Sans SC, sans-serif</xsl:param>
   <xsl:param name="monospace.font.family">Noto Sans Mono CJK SC, monospace</xsl:param>
 
   <xsl:attribute-set name="component.title.properties">
     <xsl:attribute name="font-style">normal</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="section.title.properties">
     <xsl:attribute name="font-style">normal</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:template name="inline.italicseq">
