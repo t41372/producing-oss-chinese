@@ -5,6 +5,11 @@
 
   <xsl:output method="html" encoding="UTF-8" indent="no"/>
 
+  <!-- Force chunk files (and their <meta charset>) to UTF-8.  Without this,
+       DocBook XSL falls back to chunker.output.encoding=ISO-8859-1, which
+       leaks raw 0xA0/0xA9 bytes (nbsp, ©) into the page; under a server
+       that serves the chunked dir as UTF-8 those bytes render as �. -->
+  <xsl:param name="chunker.output.encoding">UTF-8</xsl:param>
   <xsl:param name="use.id.as.filename">1</xsl:param>
 
   <xsl:param name="html.stylesheet">styles.css</xsl:param>
